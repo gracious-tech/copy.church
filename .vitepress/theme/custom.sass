@@ -1,0 +1,48 @@
+
+
+// Theme
+:root
+    --vp-c-brand: #aaaa00
+    --vp-c-brand-light: #cccc22
+    --vp-c-brand-lighter: #dddd33
+    --vp-c-brand-dark: #888800
+    --vp-c-brand-darker: #777700
+    --vp-home-hero-name-color: #cccc00
+
+
+// Don't show header anchors (most users won't understand them)
+.header-anchor
+    display: none
+
+
+// Hide navbar whenever sidebar also hidden (just intended for homepage)
+// Workaround due to https://github.com/vuejs/vitepress/issues/522
+.VPNav.no-sidebar
+    display: none
+
+// Hide prev/next footer whenever aside also hidden (just intended for Quiz)
+.VPDoc:not(.has-aside) .VPDocFooter
+    display: none
+
+
+// Show icon on homepage
+.VPHomeHero .container
+    background-image: url(/icon.svg)
+    background-repeat: no-repeat
+    background-position-x: center
+    background-size: 12vw
+    padding-top: 18vw
+
+
+
+.good
+    color: hsla(120, 50%, 50%)
+.bad
+    color: hsla(0, 50%, 50%)
+.mixed
+    color: hsla(30, 50%, 50%)
+
+
+q
+    opacity: 0.7
+    font-style: italic
