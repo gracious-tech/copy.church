@@ -4,8 +4,6 @@
 import {onBeforeMount, ref, computed} from 'vue'
 
 
-const show_all_memes = ref(false)
-
 const have_share = ref(false)
 const have_clipboard = ref(false)
 const show_copied = ref(false)
@@ -88,11 +86,6 @@ onBeforeMount(() => {
     display: flex
     flex-direction: column
 
-    &:not(.all)
-
-        img:nth-child(n+4)
-            display: none
-
     img
         margin-bottom: 24px
         cursor: pointer
@@ -138,7 +131,7 @@ Sometimes it takes a bit of humor to better understand why something is importan
 
 __{{ share_meme_instruct }}__
 
-<div class='memes' :class='{all: show_all_memes}'>
+<div class='memes'>
     <img src='/memes/jesus_give.jpg' @click='share_img'>
     <img src='/memes/paul_preaching.jpg' @click='share_img'>
     <img src='/memes/jesus_temple.jpg' @click='share_img'>
@@ -158,10 +151,6 @@ __{{ share_meme_instruct }}__
     <img src='/memes/other_church.jpg' @click='share_img'>
     <img src='/memes/jesus_charge.jpg' @click='share_img'>
 </div>
-
-<p v-if='!show_all_memes' style='text-align: center'>
-    <VPButton text="Show more memes" @click='show_all_memes = true'></VPButton>
-</p>
 
 
 ## Talk to people
