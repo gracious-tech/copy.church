@@ -132,24 +132,24 @@ Sometimes it takes a bit of humor to better understand why something is importan
 __{{ share_meme_instruct }}__
 
 <div class='memes'>
-    <img src='/memes/jesus_give.jpg' @click='share_img'>
-    <img src='/memes/paul_preaching.jpg' @click='share_img'>
-    <img src='/memes/jesus_temple.jpg' @click='share_img'>
-    <img src='/memes/other_singing.jpg' @click='share_img'>
-    <img src='/memes/paul_terms.jpg' @click='share_img'>
-    <img src='/memes/paul_read.jpg' @click='share_img'>
-    <img src='/memes/jesus_ascension.jpg' @click='share_img'>
-    <img src='/memes/other_share.jpg' @click='share_img'>
-    <img src='/memes/other_beginning.jpg' @click='share_img'>
-    <img src='/memes/other_burden.jpg' @click='share_img'>
-    <img src='/memes/other_ministry.jpg' @click='share_img'>
-    <img src='/memes/paul_trainings.jpg' @click='share_img'>
-    <img src='/memes/other_access.jpg' @click='share_img'>
-    <img src='/memes/other_purpose.jpg' @click='share_img'>
-    <img src='/memes/other_owner.jpg' @click='share_img'>
-    <img src='/memes/other_copyright.jpg' @click='share_img'>
-    <img src='/memes/other_church.jpg' @click='share_img'>
-    <img src='/memes/jesus_charge.jpg' @click='share_img'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_give.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/paul_preaching.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_temple.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_singing.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/paul_terms.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/paul_read.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_ascension.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_share.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_beginning.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_burden.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_ministry.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/paul_trainings.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_access.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_purpose.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_owner.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_copyright.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_church.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_charge.jpg'>
 </div>
 
 
