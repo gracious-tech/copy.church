@@ -37,6 +37,8 @@ While many songs tell of <q>giving everything to Jesus</q> in various wording, a
 Some artists tell of how encouraged they are that their songs are being sung by believers all around the world, even by persecuted Christians. But what they don't realise is that by maintaining copyright of their songs they are making all those believers lawbreakers. Copyright is not widely understood or enforced outside Western countries, and many believers are unintentionally breaking the law by using copyrighted Christian resources.
 
 > "In South-East Asia, young people especially love singing Western songs, even if missionaries try to encourage them to sing in local styles. So they'll translate the lyrics and sing them in churches, almost certainly without permission, without a license, and without paying any royalties. In other words, they do it illegally. Not out of bad motives, but because they don't understand copyright or even realise that they are breaking the law. Many of these churches face persecution, and are already considered "illegal" in that sense."
+>
+> &mdash; Missionary in South-East Asia
 
 
 ## Asking permission
