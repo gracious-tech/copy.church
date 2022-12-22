@@ -40,7 +40,7 @@ Others may also need to adapt your resource to their situation. Perhaps they nee
 ## Risking corruption
 While it might seem like many Christian resources we rely on are easily available through apps and websites, we forget that they can be taken away in a moment without notice. As copyright holders, the owners of these resources can retract them at any time and make them permanently unavailable. This wasn't such an issue in the past, because when you buy a printed copy of something you own that particular copy. But with digital resources you often don't own a copy at all and can only access them via an app or website.
 
-We all know it is not uncommon for believers to lose their faith, adopt heresies, become lovers of money, or morally corrupt. Christian organisations are not immune from this. Their leaders are not immune and their staff are not immune. While it may be infrequent, there have been prominent Christian resources that many relied on that are now no longer available because their owners have retracted them and refuse to republish them.
+We all know it is not uncommon for believers to lose their faith, adopt heresies, become lovers of money, or morally corrupt. Christian organizations are not immune from this. Their leaders are not immune and their staff are not immune. While it may be infrequent, there have been prominent Christian resources that many relied on that are now no longer available because their owners have retracted them and refuse to republish them.
 
 Releasing resources from copyright protects against this as it allows anyone to continue distributing useful resources even if their creators abandon their faith or change their mind about the resources they've created.
 

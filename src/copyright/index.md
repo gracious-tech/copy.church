@@ -23,7 +23,7 @@ Almost all copyright eventually expires 50-70 years after the death of the autho
 
 
 ## Public licensing
-An alternative to disabling copyright completely is licencing, where you give someone permission to do something with the resource that they wouldn't normally be allowed to do. When done commercially, this is usually a private agreement with individuals or organisations. But licenses don't have to be private, instead they can be granted to the public to allow anyone to do certain things with the resource.
+An alternative to disabling copyright completely is licencing, where you give someone permission to do something with the resource that they wouldn't normally be allowed to do. When done commercially, this is usually a private agreement with individuals or organizations. But licenses don't have to be private, instead they can be granted to the public to allow anyone to do certain things with the resource.
 
 "Public licensing" refers to granting broad permissions to the public to use a resource without having to ask the owner for permission. Public licenses will allow anyone to use a resource as they wish, but the owner can still enforce some conditions on the use such as requiring it to be non-commercial or preventing the resource from being modified. Public licenses that only require you to attribute the creator and have no other conditions are called "open licenses".
 

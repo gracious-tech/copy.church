@@ -41,7 +41,7 @@ If you won't be freely sharing your resource you should at least consider allowi
 ## Software
 It is generally recommended to use a software license for sharing software, rather than a public domain dedication or a Creative Commons license. This is because of [complicated issues](https://en.wikipedia.org/wiki/Unlicense#Reception) to do with copyright laws and patents. We recommend using the [MIT No Attribution](https://choosealicense.com/licenses/mit-0/) license, which essentially operates the same as a public domain dedication.
  * It's well known and trusted (especially the original MIT license)
- * It's accepted by companies and standards organisations
+ * It's accepted by companies and standards organizations
  * It has no restrictions (not even attribution)
 
 However, there are [lots of other licenses](https://choosealicense.com/) to choose from, including copyleft licenses.
@@ -58,4 +58,4 @@ The dedications and licenses we recommend are permanent so that people can use y
 
 We don't recommend sharing:
  * Personal photos and other very personal materials
- * Logos and other IP that identify you or your organisation
+ * Logos and other IP that identify you or your organization
