@@ -29,13 +29,13 @@ const flash_copied = () => {
 }
 
 
-const share = event => {
+const share = async event => {
     // Share link to site
     const url = 'https://copy.church/'
     if (have_share.value){
         self.navigator.share({url})
     } else if (have_clipboard.value){
-        self.navigator.clipboard.writeText(url)
+        await self.navigator.clipboard.writeText(url)
         flash_copied()
     }
 }
@@ -44,17 +44,23 @@ const share = event => {
 const share_img = async event => {
     // Share meme clicked on
 
-    // Prepare data to be shared
-    const url = event.target.src
+    // Get PNG form for higher quality, and because some browsers don't support writing jpg yet
+    // e.g. Chrome 108 desktop couldn't write a jpg to clipboard
+    const url = event.target.src.replace('.jpg', '.png')  // NOTE Browser returns absolute URL
     const blob = await (await fetch(url)).blob()
-    const file = new File([blob], 'lets_copy_church_meme.jpg', {type: blob.type})
-    const data = {
-        url: 'https://copy.church',
-        title: "Let's copy, church",
-        files: [file],
-    }
 
+    // Use Share API if available, otherwise fallback on clipboard
     if (have_share.value){
+
+        // Prepare data to share
+        const file = new File([blob], 'lets_copy_church_meme.png', {type: blob.type})
+        const data = {
+            url: 'https://copy.church',
+            title: "Let's copy, church",
+            files: [file],
+        }
+
+        // Try to share image data, otherwise fallback on sharing a link to the image
         if (self.navigator.canShare(data)){
             self.navigator.share(data)
         } else {
@@ -63,8 +69,10 @@ const share_img = async event => {
                 title: "Let's copy, church",
             })
         }
+
     } else if (have_clipboard.value){
-        self.navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})])
+        // Can't use Share API so write to clipboard and notify user
+        await self.navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})])
         flash_copied()
     }
 }
