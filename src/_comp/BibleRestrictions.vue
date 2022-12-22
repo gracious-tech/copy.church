@@ -15,7 +15,7 @@ table.translations(ref='table' :class='{advanced}')
             th Unlimited
             th By itself
             th Book
-            th Quote
+            th Open
             th Commercial
             th Attribute
             th Audio
