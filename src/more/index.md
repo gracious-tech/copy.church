@@ -46,3 +46,4 @@ While this site is designed to be succinct, others have written and spoken more 
 
  * [AD Robles with Conley Owens](https://www.youtube.com/watch?v=k7LqSf7W-V8)
  * [Trinity Apologetics with Conley Owens](https://www.youtube.com/watch?v=qxBaB1N3JBI)
+ * [Joe Ensley with Conley Owens](https://www.youtube.com/watch?v=LrM4BIz2G3w)
