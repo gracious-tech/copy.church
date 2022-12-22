@@ -10,6 +10,14 @@ interface Person {
 
 
 export const people:Record<string, Person> = {
+    alan_bunning: {
+        name: "Alan Bunning",
+        title: "Founder of the Center for New Testament Restoration",
+        education: "D.Litt.",
+        site: 'https://greekcntr.org/',
+        bio: "Alan is the creator of the first New Testament critical text to use purely scientific textual criticism. He received his D.Litt. degree from the Kensington Theological Academy for his work in Greek New Testament textual criticism. Alan was previously an Assistant Professor in Computer Information Systems at Ivy Tech Community College and a Senior Lecturer in Computer Science at Purdue University. He has also authored several books and is an accomplished musician.",
+        quote: "I want everyone to be able to access all of the biblical resources for free that I wish I would have had access to when I first became a Christian.",
+    },
     jon_here: {
         name: "Jon Here",
         title: "Founder of Gracious Tech",
