@@ -46,6 +46,7 @@ export default defineConfig({
                     {text: "Biblical basis", link: '/biblical/'},
                     {text: "Alternate funding", link: '/funding/'},
                     {text: "Common objections", link: '/objections/'},
+                    {text: "Real examples", link: '/examples/'},
                     {text: "More depth", link: '/more/'},
                 ],
             },
