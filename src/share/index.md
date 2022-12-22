@@ -49,7 +49,7 @@ const share_img = async event => {
     // Prepare data to be shared
     const url = event.target.src
     const blob = await (await fetch(url)).blob()
-    const file = new File([blob], 'lets_copy_church_meme.png', {type: blob.type})
+    const file = new File([blob], 'lets_copy_church_meme.jpg', {type: blob.type})
     const data = {
         url: 'https://copy.church',
         title: "Let's copy, church",
@@ -139,24 +139,24 @@ Sometimes it takes a bit of humor to better understand why something is importan
 __{{ share_meme_instruct }}__
 
 <div class='memes' :class='{all: show_all_memes}'>
-    <img src='/memes/jesus_give.png' @click='share_img'>
-    <img src='/memes/paul_preaching.png' @click='share_img'>
-    <img src='/memes/jesus_temple.png' @click='share_img'>
-    <img src='/memes/other_singing.png' @click='share_img'>
-    <img src='/memes/paul_terms.png' @click='share_img'>
-    <img src='/memes/paul_read.png' @click='share_img'>
-    <img src='/memes/jesus_ascension.png' @click='share_img'>
-    <img src='/memes/other_share.png' @click='share_img'>
-    <img src='/memes/other_beginning.png' @click='share_img'>
-    <img src='/memes/other_burden.png' @click='share_img'>
-    <img src='/memes/other_ministry.png' @click='share_img'>
-    <img src='/memes/paul_trainings.png' @click='share_img'>
-    <img src='/memes/other_access.png' @click='share_img'>
-    <img src='/memes/other_purpose.png' @click='share_img'>
-    <img src='/memes/other_owner.png' @click='share_img'>
-    <img src='/memes/other_copyright.png' @click='share_img'>
-    <img src='/memes/other_church.png' @click='share_img'>
-    <img src='/memes/jesus_charge.png' @click='share_img'>
+    <img src='/memes/jesus_give.jpg' @click='share_img'>
+    <img src='/memes/paul_preaching.jpg' @click='share_img'>
+    <img src='/memes/jesus_temple.jpg' @click='share_img'>
+    <img src='/memes/other_singing.jpg' @click='share_img'>
+    <img src='/memes/paul_terms.jpg' @click='share_img'>
+    <img src='/memes/paul_read.jpg' @click='share_img'>
+    <img src='/memes/jesus_ascension.jpg' @click='share_img'>
+    <img src='/memes/other_share.jpg' @click='share_img'>
+    <img src='/memes/other_beginning.jpg' @click='share_img'>
+    <img src='/memes/other_burden.jpg' @click='share_img'>
+    <img src='/memes/other_ministry.jpg' @click='share_img'>
+    <img src='/memes/paul_trainings.jpg' @click='share_img'>
+    <img src='/memes/other_access.jpg' @click='share_img'>
+    <img src='/memes/other_purpose.jpg' @click='share_img'>
+    <img src='/memes/other_owner.jpg' @click='share_img'>
+    <img src='/memes/other_copyright.jpg' @click='share_img'>
+    <img src='/memes/other_church.jpg' @click='share_img'>
+    <img src='/memes/jesus_charge.jpg' @click='share_img'>
 </div>
 
 <p v-if='!show_all_memes' style='text-align: center'>

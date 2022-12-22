@@ -64,9 +64,9 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 ### 1. Raise awareness of this issue
 
 <a class='memes' href='/share/'>
-    <img src='/memes/other_purpose.png'>
-    <img src='/memes/jesus_ascension.png'>
-    <img src='/memes/paul_trainings.png'>
+    <img src='/memes/other_purpose.jpg'>
+    <img src='/memes/jesus_ascension.jpg'>
+    <img src='/memes/paul_trainings.jpg'>
 </a>
 
 <p><VPButton href='/share/' text="Start discussions"></VPButton></p>
