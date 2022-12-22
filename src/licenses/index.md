@@ -10,14 +10,14 @@ It is very easy to free your resource from copyright. You simply need to attach 
 ## Applying conditions
 It is highly recommended to not apply any legal conditions to the use of your resource as:
 
- 1. It would no longer truly be ["given freely" (Matthew 10:8)](/biblical/)
+ 1. It would no longer truly be ["freely given" (Matthew 10:8)](/biblical/)
  2. It makes it more complicated for people to legally use your resource
  3. The only way to enforce conditions is to [sue in secular courts (see 1 Corinthians 6:7)](/biblical/)
 
 An alternative is to simply state your wishes when sharing the resource. For example, you can express your hope that any translations would be freely shared as well.
 
 ### Legally enforced conditions
-While resources with conditions can't be considered "freely given" in the biblical sense, we do appreciate that many believers choosing to use such licenses have good intentions.
+While resources with conditions can't be considered "freely given" in a strict sense, we do appreciate that many believers choosing to use such licenses have good intentions.
 
 The following conditions are available:
 

@@ -2,7 +2,7 @@
 # Common objections
 
 ## People have a right to fair compensation
-Yes, this is not a condemnation of fair compensation, rather it is a call to go beyond what we might have a right to in response to Jesus' generosity to us. It is important to financially support ministries, as long as the actual ministry is given freely.
+Yes, this is not a condemnation of fair compensation, rather it is a call to go beyond what we might have a right to in response to Jesus' generosity to us. It is important to financially support ministries, as long as the actual ministry is freely given.
 
 Please also see the pages on the [biblical basis](/biblical/) and [alternate funding](/funding/).
 

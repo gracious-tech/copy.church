@@ -19,7 +19,7 @@ Freely giving resources does not mean you can't receive any funding for them. Th
 The following funding methods do not go against the principle of giving freely.
 
 ### Church-based funding
-Ask your church or a group of churches to fund a new project so that it can be given freely when completed.
+Ask your church or a group of churches to fund a new project so that it can be freely given when completed.
 
 ### Crowd funding
 Use a crowd funding platform to gather funds from individuals who also believe in your cause.
