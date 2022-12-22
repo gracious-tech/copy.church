@@ -11,11 +11,11 @@ Groups that have formed with the goal of freely sharing resources.
 Organisation | Purpose
 | - | - |
 [The Copenhagen Alliance](http://copenhagen-alliance.org/) | Organisations with a common interest in making biblical language data free and openly accessible
-[Open Components](https://opencomponents.io/) | Collaborative creation of open source bible technology
+[Open Components](https://opencomponents.io/) | Collaborative creation of open source Bible technology
 
 
 ## Bibles
-Several organisations have openly licensed a large volume of bible translations they own. Most of them are not in English (see [the bibles page](/resources/bibles/) for open English translations).
+Several organisations have openly licensed a large volume of Bible translations they own. Most of them are not in English (see [the bibles page](/resources/bibles/) for open English translations).
 
 Organisation | Resources
 | - | - |

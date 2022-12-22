@@ -56,7 +56,7 @@ This is hindering ministry in various ways:
 
 ## What does the Bible say?
 
-Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of scripture also testifies to this command](/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
+Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of Scripture also testifies to this command](/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
 
 
 ## What can I do?

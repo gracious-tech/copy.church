@@ -30,7 +30,7 @@ Yes, there are lots of Christian resources that can already be accessed for free
 
 
 ## Some resources are already public domain
-Yes, some resources are already public domain. So you could for example just sing public domain songs at church and not have to deal with [CCLI](https://ccli.com/) and copyright. And there are [public domain bible translations](https://fetch.bible/content/bibles/) available in many languages already as well. But in the real world very few people want to sing only old hymns at church, and most public domain bible translations use archaic language.
+Yes, some resources are already public domain. So you could for example just sing public domain songs at church and not have to deal with [CCLI](https://ccli.com/) and copyright. And there are [public domain Bible translations](https://fetch.bible/content/bibles/) available in many languages already as well. But in the real world very few people want to sing only old hymns at church, and most public domain Bible translations use archaic language.
 
 
 ## Just ask for permission
@@ -53,7 +53,7 @@ Yes, it is usually possible to ask for permission to use any copyrighted resourc
 
 As you can see, there are many possible barriers to simply "asking permission", and these barriers are all possible for any resource your require. Now apply that to situations where you need to not just ask permission from one copyright owner but multiple. Bibles are an excellent example of this. There are thousands of Bible translations in the world, however a majority of them are under restrictive copyright. If you want to make a resource, such as a Bible app, that has as many languages and translations as possible, you will need to literally form thousands of legal agreements with hundreds of organisations. And each organisation has a chance of either being uncontactable or simply not granting your request because of the reasons above. So it would take many years and intensive labour just to form such agreements.
 
-Which is why there is only one Bible app available that has most of the world's bible translations in it, and few other options.
+Which is why there is only one Bible app available that has most of the world's Bible translations in it, and few other options.
 
 
 

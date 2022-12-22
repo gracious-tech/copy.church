@@ -16,6 +16,6 @@ h1 + h1
 # Is it legal to share God's Word?
 # _It depends on your translation..._
 
-While about 81% of the world has a complete bible, only [41% of the world has a legally shareable one](https://fetch.bible/content/need/). Here are the details for English Bible translations:
+While about 81% of the world has a complete Bible, only [41% of the world has a legally shareable one](https://fetch.bible/content/need/). Here are the details for English Bible translations:
 
 <BibleRestrictions/>

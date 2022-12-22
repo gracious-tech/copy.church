@@ -64,7 +64,7 @@ Paul's own ethic was to always preach the Gospel free of charge (and often be fi
 
 <BibleQuote passage='1 Corinthians 9:18' :options='passage_1cor9_18'></BibleQuote>
 
-All the examples Paul gives of the right to finance in 1 Corinthians 9 are examples of _support_, not the sale of ministry. The pattern then throughout scripture is that ministry is to be supported financially through donations and other means, but not sold.
+All the examples Paul gives of the right to finance in 1 Corinthians 9 are examples of _support_, not the sale of ministry. The pattern then throughout Scripture is that ministry is to be supported financially through donations and other means, but not sold.
 
 
 ## From secular law to Christian accountability
@@ -78,11 +78,11 @@ The behaviour encouraged by Paul then is to handle disputes within the church, a
 
 
 ## Servants of a common master
-Believers are frequently referred to as servants in scripture, servants of a common master. We have freely received from our master and are to work together to proclaim him. The early church lived out this vision:
+Believers are frequently referred to as servants in Scripture, servants of a common master. We have freely received from our master and are to work together to proclaim him. The early church lived out this vision:
 
 <BibleQuote passage='Acts 4:32' :options='passage_act4_32'></BibleQuote>
 
-However, modern Christianity has instead become a competitive commercial industry where servants do not share their master's resources without charging one another. And they rely on secular courts to protect the wealth the master has entrusted to them. We have severely strayed from the vision of scripture and it's time to get back on track.
+However, modern Christianity has instead become a competitive commercial industry where servants do not share their master's resources without charging one another. And they rely on secular courts to protect the wealth the master has entrusted to them. We have severely strayed from the vision of Scripture and it's time to get back on track.
 
 
 ## More depth

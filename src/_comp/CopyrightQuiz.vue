@@ -13,18 +13,18 @@ transition
 
     div(v-else-if='slide === 1')
         h3 How it works
-        p Simply answer whether a use of scripture is permitted or not.
+        p Simply answer whether a use of Scripture is permitted or not.
         h3 The rules (most bibles have these)
         ol
             li {{ rule_verses }}
             li {{ rule_book }}
             li {{ rule_ratio }}
         h3 For example...
-        p Question: "Can you photocopy the whole bible?"
+        p Question: "Can you photocopy the whole Bible?"
         p Answer: No
         p &nbsp;
         p
-            small (for the purpose of this quiz we'll just be considering the license of bible translations, and not fair use law which varies by country)
+            small (for the purpose of this quiz we'll just be considering the license of Bible translations, and not fair use law which varies by country)
 
     //- Questions
 
@@ -81,7 +81,7 @@ transition
                 li {{ rule_ratio }}
 
     div(v-else-if='slide === 8')
-        h3 Can you film your Sunday school acting out Jonah with scripture narration?
+        h3 Can you film your Sunday school acting out Jonah with Scripture narration?
         img(src='@/_assets/quiz/sunday_school.svg')
         div.breaks(v-if='guesses[slide] !== null')
             p You can't do this, as it breaks rule:

@@ -12,7 +12,7 @@ head: [[meta, {property: 'og:image', content: '/social_music.png'}]]
 We are in the process of building a collection of worship songs that are:
 
  1. Designed for congregational singing
- 2. Faithful to scripture
+ 2. Faithful to Scripture
  3. Modern
  4. Free
 
@@ -43,7 +43,7 @@ Just send us a quick email if you'd like to be notified when the collection is a
 ## Who can contribute
 We welcome all artists, regardless if you have ever had a song published or not. As long as you own the rights to the song, you can submit it to our collection.
 
-While we are primarily seeking congregational songs, you are welcome to submit other music too. But all music must be faithful to scripture (not contradictory or confusing).
+While we are primarily seeking congregational songs, you are welcome to submit other music too. But all music must be faithful to Scripture (not contradictory or confusing).
 
 You'll need to ensure you own the rights and have already [freed the song](/licenses/) from copyright restrictions.
 

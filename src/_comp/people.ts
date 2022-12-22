@@ -16,7 +16,7 @@ export const people:Record<string, Person> = {
         education: "MDiv",
         site: 'https://gracious.tech',
         bio: "Jon has served as a pastor, a missionary in South-East Asia, and went on to start his own company for creating apps for mission. Every app his company makes is free to use and open source.",
-        quote: "The first app I made was for evangelizing using plain scripture. It was almost done when I realised bible translations forbid sharing plain scripture! Copyright has been the number one barrier to my ministry ever since.",
+        quote: "The first app I made was for evangelizing using plain Scripture. It was almost done when I realised Bible translations forbid sharing plain Scripture! Copyright has been the number one barrier to my ministry ever since.",
     },
     conley_owens: {
         name: "Conley Owens",

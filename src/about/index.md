@@ -12,7 +12,7 @@ If you have questions regarding this site, feel free to [get in touch with Graci
 
 ## Beliefs
 
-We are Reformed Evangelical in theology. We will publish any resources that attempt to interpret scripture in a faithful way, even if we disagree with the conclusions. But we will not publish anything that directly contradicts or manipulates scripture. Examples being:
+We are Reformed Evangelical in theology. We will publish any resources that attempt to interpret Scripture in a faithful way, even if we disagree with the conclusions. But we will not publish anything that directly contradicts or manipulates Scripture. Examples being:
  * Relativism
  * Prosperity theology
  * Non-biblical sexuality and/or gender identity
@@ -28,7 +28,7 @@ We affirm the right to financial support for ministry, but like Paul in 1 Corint
 All content on this site, except:
 
  * The name and logo
- * Some scripture quotations
+ * Some Scripture quotations
  * Anything else belonging to a third party
 
 is [dedicated to the public domain](/free/) and can be used as you like without attribution. The source code is also [open source](https://github.com/gracious-tech/copy.church).

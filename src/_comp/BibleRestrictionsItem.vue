@@ -59,11 +59,11 @@ table
             div(v-html='b(bible.can.quote_ratio)')
             img(src='@/_assets/ill_ratio.svg')
         td
-            p The ability to share plain quotations of scripture, instead of only being able to quote scripture as a smaller part of a resource filled with other commentary.
+            p The ability to share plain quotations of Scripture, instead of only being able to quote Scripture as a smaller part of a resource filled with other commentary.
             p(v-html='can(bible.can.quote_ratio)')
             ul
-                li(v-if='bible.can.quote_ratio === true') Create a resource that is plain scripture
-                li(v-else) Create a resource that is {{ bible.can.quote_ratio }}% or more plain scripture
+                li(v-if='bible.can.quote_ratio === true') Create a resource that is plain Scripture
+                li(v-else) Create a resource that is {{ bible.can.quote_ratio }}% or more plain Scripture
                 li Create a study guide that asks a few questions in response to a passage
                 li Share some parables Jesus told
     tr
@@ -144,7 +144,7 @@ table
             p When translating the Bible for a people group that doesn't have it yet, it is sometimes better to translate from a language they already know (such as English) than from the Bible's original languages, until someone can be taught them.
             p(v-html='can(bible.can.translate)')
             ul
-                li Translate this bible translation into a language that doesn't have the Bible yet
+                li Translate this Bible translation into a language that doesn't have the Bible yet
     tr
         th
             | Modify
