@@ -4,9 +4,21 @@ title: Overview
 
 <script lang='ts' setup>
 
+import {onBeforeMount} from 'vue'
+
 import {people} from '@/_comp/people'
 
+
+const people_ids = Object.keys(people)
+
+onBeforeMount(() => {
+    // Randomize order of people (ignored for SSR)
+    const random_nums = Object.fromEntries(people_ids.map(id => [id, Math.random()]))
+    people_ids.sort((a, b) => random_nums[a] - random_nums[b])
+})
+
 </script>
+
 
 <style lang='sass' scoped>
 
@@ -80,7 +92,7 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 ### 3. Join those committed to freely giving
 
 <a class='people' href='/join/'>
-    <img v-for='person of Object.keys(people)' :src='`/people/${person}.webp`' :title='people[person].title'>
+    <img v-for='person of people_ids' :src='`/people/${person}.webp`' :title='people[person].title'>
 </a>
 
 <p><VPButton href='/join/' text="Join the community"></VPButton></p>
