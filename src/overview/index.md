@@ -59,7 +59,7 @@ onBeforeMount(() => {
 
 A vast amount of Christian resources exist (books, songs, trainings, etc) to further God's kingdom, and yet most of them are restricted to paying customers. Copyright also automatically applies to new resources, making them illegal to share, whether the authors intend it or not.
 
-This is hindering ministry in various ways:
+This is [hindering ministry](/examples/) in various ways:
 
  1. __Helpful resources are not being shared__ as widely as they could be
  2. __Many unintentionally break the law__ by sharing copyrighted resources
