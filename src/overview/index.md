@@ -86,6 +86,8 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 
 ### 2. Release anything you have created from copyright
 
+<img src='@/_assets/ill_unlock.svg' width=120>
+
 <p><VPButton href='/licenses/' text="Free your resources"></VPButton></p>
 
 
