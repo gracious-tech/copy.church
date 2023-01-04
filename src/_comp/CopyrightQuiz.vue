@@ -101,7 +101,7 @@ transition
     div(v-else-if='slide === 10')
         h3 Can you write an article that includes a passage from Ephesians?
         img(src='@/_assets/quiz/article.svg')
-        p(v-if='guesses[slide] !== null') Yes, you can likely do this.
+        p(v-if='guesses[slide] !== null') You can usually do this, as long as the passage is short.
 
     div(v-else-if='slide === 11')
         h3 Can you print and share Mark with someone who's intimidated by the size of the Bible?
