@@ -7,7 +7,7 @@ blockquote
             a(:href='`https://www.biblegateway.com/passage/?search=${encodeURIComponent(passage)}&version=ESV`' target='_blank')
                 | Read this passage somewhere else
         p.unsupportive
-            | We have #[a(href='/resources/bibles/open/') chosen not to quote this translation] directly.
+            | We have #[a(href='/initiatives/bibles/open/') chosen not to quote this translation] directly.
     template(v-else)
         p {{ text }}
     div.info

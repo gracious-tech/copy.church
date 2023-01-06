@@ -9,4 +9,4 @@ Openly licensing a resource has no affect on any content contained within it tha
 
 It should be noted that this restriction cannot nullify the right to still quote such translations under "fair use" law, so resources can safely ignore this restriction in many cases. However, it does reflect the will of the translation owner, and because of that we have chosen to voluntarily abide by it and not quote such translations in this website.
 
-<VPButton href='/resources/bibles/' text="Bible restrictions" theme='alt'></VPButton>
+<VPButton href='/initiatives/bibles/' text="Bible restrictions" theme='alt'></VPButton>

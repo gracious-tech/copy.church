@@ -54,8 +54,8 @@ export default defineConfig({
             {
                 text: "Initiatives",
                 items: [
-                    {text: "English Bible ratings", link: '/resources/bibles/'},
-                    {text: "Freedom to worship", link: '/resources/music/'},
+                    {text: "English Bible ratings", link: '/initiatives/bibles/'},
+                    {text: "Freedom to worship", link: '/initiatives/music/'},
                 ],
             },
             {

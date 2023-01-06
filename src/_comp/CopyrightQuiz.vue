@@ -118,7 +118,7 @@ transition
 
     div.last(v-else-if='slide === 12')
         h3 You scored... {{ total }} / 10
-        p These rules are the same as what is currently used in #[a(href='/resources/bibles/') most Bible translations today], worldwide. The rules were made before the Internet existed and yet have remained largely unchanged.
+        p These rules are the same as what is currently used in #[a(href='/initiatives/bibles/') most Bible translations today], worldwide. The rules were made before the Internet existed and yet have remained largely unchanged.
 
 div.guess(v-if='guesses[slide] === null')
     VPButton(text="Yes" @click='yes')

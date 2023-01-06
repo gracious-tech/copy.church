@@ -26,7 +26,7 @@ See [The Dorean Principle](https://thedoreanprinciple.org/) for further biblical
 ## You can already access resources for free
 Yes, there are lots of Christian resources that can already be accessed for free. However, that is not the same as having the right to copy them. For example, you may be able to listen to Christian music for free on Youtube but that doesn't mean you can use the song at church for free.
 
-[Bibles are a very good example](/resources/bibles/) of how they can all be accessed for free _somewhere_ but cannot be freely shared.
+[Bibles are a very good example](/initiatives/bibles/) of how they can all be accessed for free _somewhere_ but cannot be freely shared.
 
 
 ## Some resources are already public domain

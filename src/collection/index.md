@@ -17,7 +17,7 @@ Organization | Purpose
 
 
 ## Bibles
-Several organizations have openly licensed a large volume of Bible translations they own. Most of them are not in English (see [the bibles page](/resources/bibles/) for open English translations).
+Several organizations have openly licensed a large volume of Bible translations they own. Most of them are not in English (see [the bibles page](/initiatives/bibles/) for open English translations).
 
 Organization | Resources
 | - | - |
