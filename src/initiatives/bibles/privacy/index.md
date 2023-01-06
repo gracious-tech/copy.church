@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 
 # Offline use & privacy
 
@@ -7,4 +11,4 @@ The most popular Bible app in the world, YouVersion, hands your personal informa
 
 Extracted from [YouVersion's Privacy Policy](https://www.bible.com/en-GB/privacy#section6) (emphasis added)
 
-<VPButton href='/initiatives/bibles/' text="Return to Bibles" theme='alt'></VPButton>
+<VPButton href='/initiatives/bibles/' text="See Bible ratings" theme='alt'></VPButton>
