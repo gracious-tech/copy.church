@@ -51,10 +51,10 @@ export default defineConfig({
                 ],
             },
             {
-                text: "Resources",
+                text: "Initiatives",
                 items: [
-                    {text: "Bibles", link: '/resources/bibles/'},
-                    {text: "Music", link: '/resources/music/'},
+                    {text: "English Bible ratings", link: '/resources/bibles/'},
+                    {text: "Freedom to worship", link: '/resources/music/'},
                     {text: "Other", link: '/resources/other/'},
                 ],
             },
