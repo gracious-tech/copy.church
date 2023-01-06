@@ -34,6 +34,14 @@ export const people:Record<string, Person> = {
         bio: "Conley is a software engineer, a pastor at Silicon Valley Reformed Baptist Church, and a father of eight kids.  He is also the author of The Dorean Principle: A Biblical Response to the Commercialization of Christianity.",
         quote: "I began exploring issues with licensing back in college, and over time I witnessed the substantial friction it created in ministry. I was convicted regarding the harm commercial practices cause the church, but for a long time, I was never sure if the Bible had much to say directly about the matter. It turns out it does!",
     },
+    beth_case: {
+        name: "Bethany Case",
+        title: "Cofounder of Aleph with Beth",
+        education: "MA in Linguistics",
+        site: 'https://freehebrew.online/',
+        bio: "Bethany is a linguist, mother, artist, and Hebrew teacher with Aleph with Beth, which offers free Biblical Hebrew learning resources worldwide.",
+        quote: "I've seen firsthand that many Christians around the world have little to no access to biblical language resources and in-depth Bible study tools, so we are creating public domain Hebrew resources for free translation and sharing. Copyrights and legal restrictions on Christian images, films, books, etc. often prevent me from using them to enhance the learning experience of Hebrew.",
+    },
     andrew_case: {
         name: "Andrew Case",
         title: "Cofounder of Aleph with Beth",
