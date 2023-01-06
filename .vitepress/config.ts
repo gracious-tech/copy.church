@@ -55,7 +55,7 @@ export default defineConfig({
                 items: [
                     {text: "English Bible ratings", link: '/resources/bibles/'},
                     {text: "Freedom to worship", link: '/resources/music/'},
-                    {text: "Other", link: '/resources/other/'},
+                    {text: "Examples of resources", link: '/resources/other/'},
                 ],
             },
             {
