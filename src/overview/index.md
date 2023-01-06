@@ -59,7 +59,7 @@ onBeforeMount(() => {
 
 A vast amount of Christian resources exist (books, songs, trainings, etc) to further God's kingdom, and yet most of them are restricted to paying customers. Copyright also automatically applies to new resources, making them illegal to share, whether the authors intend it or not.
 
-This is [hindering ministry](/examples/) in various ways:
+This is [hindering ministry](/explain/examples/) in various ways:
 
  1. __Helpful resources are not being shared__ as widely as they could be
  2. __Many unintentionally break the law__ by sharing copyrighted resources
@@ -68,7 +68,7 @@ This is [hindering ministry](/examples/) in various ways:
 
 ## What does the Bible say?
 
-Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of Scripture also testifies to this command](/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
+Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of Scripture also testifies to this command](/explain/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
 
 
 ## What can I do?
@@ -122,7 +122,7 @@ Almost any form of intellectual property:
 
 
 ## But...
-Yes, copyright has some positive benefits and is often used with good intentions. However, we believe in most cases the negatives far outweigh the positives and also go against the biblical ethic of "giving freely". It may be tempting to have a knee-jerk reaction to this, however we'd encourage you to first carefully consider the [biblical basis](/biblical/) and [common objections](/objections/).
+Yes, copyright has some positive benefits and is often used with good intentions. However, we believe in most cases the negatives far outweigh the positives and also go against the biblical ethic of "giving freely". It may be tempting to have a knee-jerk reaction to this, however we'd encourage you to first carefully consider the [biblical basis](/explain/biblical/) and [common objections](/explain/objections/).
 
 
 ## Learn more

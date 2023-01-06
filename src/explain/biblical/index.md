@@ -48,7 +48,7 @@ When Jesus told his disciples to go out and proclaim the kingdom of heaven, he c
 
 <BibleQuote passage='Matthew 10:7-8' :options='passage_mat10_7_8'></BibleQuote>
 
-The implication being, a great many Christian resources, whether bibles, gospel presentations, books, worship music, etc. should be freely given. While this is hard to imagine today, it is only because we have become so accustomed to [the commercialization of ministry](/importance/#the-commercialization-of-ministry). For most of the church's history there was no copyright or sale of Christian teaching and worship. Present day circumstances do not excuse us from obeying this biblical command.
+The implication being, a great many Christian resources, whether bibles, gospel presentations, books, worship music, etc. should be freely given. While this is hard to imagine today, it is only because we have become so accustomed to [the commercialization of ministry](/explain/importance/#the-commercialization-of-ministry). For most of the church's history there was no copyright or sale of Christian teaching and worship. Present day circumstances do not excuse us from obeying this biblical command.
 
 The exact scope of this command and what it applies to is a matter the church urgently needs to discuss.
 

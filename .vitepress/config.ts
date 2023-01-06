@@ -42,13 +42,13 @@ export default defineConfig({
             {
                 text: "Explanation",
                 items: [
-                    {text: "How copyright works", link: '/copyright/'},
-                    {text: "Why this is important", link: '/importance/'},
-                    {text: "Biblical basis", link: '/biblical/'},
-                    {text: "Alternate funding", link: '/funding/'},
-                    {text: "Common objections", link: '/objections/'},
-                    {text: "Real examples", link: '/examples/'},
-                    {text: "More depth", link: '/more/'},
+                    {text: "How copyright works", link: '/explain/copyright/'},
+                    {text: "Why this is important", link: '/explain/importance/'},
+                    {text: "Biblical basis", link: '/explain/biblical/'},
+                    {text: "Alternate funding", link: '/explain/funding/'},
+                    {text: "Common objections", link: '/explain/objections/'},
+                    {text: "Real examples", link: '/explain/examples/'},
+                    {text: "More depth", link: '/explain/more/'},
                 ],
             },
             {

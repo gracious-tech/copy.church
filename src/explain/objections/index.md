@@ -4,7 +4,7 @@
 ## People have a right to fair compensation
 Yes, this is not a condemnation of fair compensation, rather it is a call to go beyond what we might have a right to in response to Jesus' generosity to us. It is important to financially support ministries, as long as the actual ministry is freely given.
 
-Please also see the pages on the [biblical basis](/biblical/) and [alternate funding](/funding/).
+Please also see the pages on the [biblical basis](/explain/biblical/) and [alternate funding](/explain/funding/).
 
 
 ## Most Christian resources wouldn't exist without payment
@@ -74,6 +74,6 @@ Copying resources is also only plagiarism when they are "presented as one's own"
 ## Copyright is good for innovation
 Copyright is indeed good for innovation, as it motivates people to create new resources knowing that they will be financially compensated if it succeeds. If there was no copyright then no one would need to pay the creator for their work and creators would be hesitant to spend a lot of time creating new resources if there's no guarantee they'd be reimbursed for their time.
 
-However, unlike the rest of the world, Christians are not motivated just by financial gain or personal fulfillment but by serving their creator. Financial gain should never be of primary concern to us, and we can instead consider [other methods of funding](/funding/) for it to still be financially feasible to invest time in new resources.
+However, unlike the rest of the world, Christians are not motivated just by financial gain or personal fulfillment but by serving their creator. Financial gain should never be of primary concern to us, and we can instead consider [other methods of funding](/explain/funding/) for it to still be financially feasible to invest time in new resources.
 
-Copyright often instead [slows innovation](/importance/#slowing-innovation) by restricting (1) access to resources and (2) the ability to improve existing resources (innovate).
+Copyright often instead [slows innovation](/explain/importance/#slowing-innovation) by restricting (1) access to resources and (2) the ability to improve existing resources (innovate).

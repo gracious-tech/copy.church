@@ -30,7 +30,7 @@ The pay-to-use model doesn't just ensure that the owner gets paid for their work
 
 <img src='@/_assets/ill_reach.svg'>
 
-If Christian resources are really intended to benefit God's kingdom then we should consider [other methods of funding](/funding/) that don't block many people from accessing them.
+If Christian resources are really intended to benefit God's kingdom then we should consider [other methods of funding](/explain/funding/) that don't block many people from accessing them.
 
 ## Slowing innovation
 Copyright not only prevents someone from sharing your resource without your permission, it also prevents them from making changes to it. Often people do not consider this an issue as when a resource is created it should already be as well made as possible. However, that is what innovation is... other people coming up with ideas you originally didn't think of. Instead of thinking our way is best, we should instead be having the humility to think "maybe someone will improve this in ways I never thought of".
@@ -49,4 +49,4 @@ Most Christian resources are reasonably priced and easily accessible in Western 
 
 Take for example the numerous Christian worship songs that have been (often illegally) translated into other languages and used in churches. Many resource owners won't mind that such things are taking place, but legally speaking, by retaining copyright, millions of brothers and sisters around the world are being made unintentional law breakers.
 
-Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also [letting ourselves be wronged](/biblical/) rather than making other believers criminals in the sight of secular law.
+Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also [letting ourselves be wronged](/explain/biblical/) rather than making other believers criminals in the sight of secular law.
