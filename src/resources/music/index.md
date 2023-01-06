@@ -21,7 +21,13 @@ We are in the process of building a collection of worship songs that are:
 
 Up till now, churches have been limited to either singing old hymns or paying for licenses to sing modern worship music. For most churches that has not really been a choice. Almost all modern music is copyrighted and churches that don't want to be left in the past have had no choice but to pay royalties each year for the privilege of worshipping God through modern song.
 
-That is until now.
+There are several problems with this:
+
+ 1. __It creates a barrier to worship__ &mdash; Churches must allocate funds and navigate copyright, licensing, and reporting requirements, to avoid worshipping God illegally.
+ 2. __Global allocation of funding__ &mdash; The Christian music industry receives billions of dollars and has created over half a million songs (of which most churches will use less than ~100/year), while many parts of the world remain unreached and without Scripture in their own language.
+ 3. __Funding problematic ministries__ &mdash; Some of the most popular songs are owned by churches with problematic beliefs and/or practices, and get much of their wealth from other churches through song royalties.
+ 4. __Lack of accountability__ &mdash; The main licensing facilitator is a private for-profit company that doesn't publicly release financial statements, and many artists are for-profit as well with no limitations on how much they can earn for a single song.
+ 5. __It is incompatible with Jesus' command__ &mdash; "Freely you have received, freely give" (Matt 10:8)
 
 We believe churches should have the right to sing to God without restriction, and to be able to do so with modern music. So we're partnering with a new generation of musicians who freely give their music, rather than profit from it.
 
