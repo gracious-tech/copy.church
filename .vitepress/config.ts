@@ -36,6 +36,7 @@ export default defineConfig({
                     {text: "Raise awareness", link: '/share/'},
                     {text: "Free your resources", link: '/licenses/'},
                     {text: "Join the community", link: '/join/'},
+                    {text: "Explore free resources", link: '/collection/'},
                 ],
             },
             {
@@ -55,7 +56,6 @@ export default defineConfig({
                 items: [
                     {text: "English Bible ratings", link: '/resources/bibles/'},
                     {text: "Freedom to worship", link: '/resources/music/'},
-                    {text: "Examples of resources", link: '/resources/other/'},
                 ],
             },
             {

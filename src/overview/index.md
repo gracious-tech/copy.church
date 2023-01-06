@@ -73,7 +73,7 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 
 ## What can I do?
 
-### 1. Raise awareness of this issue
+### [1. Raise awareness of this issue](/share/)
 
 <a class='memes' href='/share/'>
     <img src='/memes/other_purpose.jpg'>
@@ -81,24 +81,26 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
     <img src='/memes/paul_trainings.jpg'>
 </a>
 
-<p><VPButton href='/share/' text="Start discussions"></VPButton></p>
+
+### [2. Free anything you have created from copyright](/licenses/)
+
+<a href='/licenses/'>
+    <img src='@/_assets/ill_unlock.svg' width=120>
+</a>
 
 
-### 2. Release anything you have created from copyright
-
-<img src='@/_assets/ill_unlock.svg' width=120>
-
-<p><VPButton href='/licenses/' text="Free your resources"></VPButton></p>
-
-
-### 3. Join those committed to freely giving
+### [3. Join those committed to freely giving](/join/)
 
 <a class='people' href='/join/'>
     <img v-for='person of people_ids' :src='`/people/${person}.webp`' :title='people[person].title'>
 </a>
 
-<p><VPButton href='/join/' text="Join the community"></VPButton></p>
 
+### [4. Explore our collection of free resources](/collection/)
+
+<a href='/collection/'>
+    <img src='@/_assets/ill_collection.svg' width=120>
+</a>
 
 
 ## What's an example?

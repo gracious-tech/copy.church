@@ -2,7 +2,9 @@
 # Examples of resources
 This is a non-exhaustive list of the most significant resources that have been freely given and/or openly licensed.
 
-_NonCommercial licenses are usually not considered "open licenses" but are included for the purpose of this list._
+::: warning We'll soon be publishing a proper collection
+Coming early 2023
+:::
 
 
 ## Initiatives
