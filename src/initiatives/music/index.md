@@ -23,17 +23,17 @@ Up till now, churches have been limited to either singing old hymns or paying fo
 
 There are several problems with this:
 
- 1. __It creates a barrier to worship__ &mdash; Churches must allocate funds and navigate copyright, licensing, and reporting requirements, to avoid worshipping God illegally.
- 2. __Global allocation of funding__ &mdash; The Christian music industry receives billions of dollars and has created over half a million songs (of which most churches will use less than ~100/year), while many parts of the world remain unreached and without Scripture in their own language.
+ 1. __It creates a barrier to worship__ &mdash; Churches must pay hundreds and/or thousands of dollars and navigate copyright, licensing, and reporting requirements, to avoid worshipping God illegally.
+ 2. __Global allocation of funding__ &mdash; The Christian music industry receives billions of dollars and has created over half a million songs (of which most churches will use less than 100/year), while many parts of the world remain unreached and without Scripture in their own language.
  3. __Funding problematic ministries__ &mdash; Some of the most popular songs are owned by churches with problematic beliefs and/or practices, and get much of their wealth from other churches through song royalties.
  4. __Lack of accountability__ &mdash; The main licensing facilitator is a private for-profit company that doesn't publicly release financial statements, and many artists are for-profit as well with no limitations on how much they can earn for a single song.
  5. __It is incompatible with Jesus' command__ &mdash; "Freely you have received, freely give" (Matt 10:8)
 
-We believe churches should have the right to sing to God without restriction, and to be able to do so with modern music. So we're partnering with a new generation of musicians who freely give their music, rather than profit from it.
+We believe churches should have the right to sing to God without restriction, and to be able to do so with modern music. So we're partnering with a new generation of musicians who freely give their music, rather than commercialize it.
 
 
 ### But artists deserve compensation...
-Yes, we greatly encourage financially supporting artists so they can give their music to the church for free.
+Yes, we greatly encourage financially supporting artists so they can give their music to the church for free. We are not opposed to biblical funding of ministry, but that is very different to selling it.
 
 Our goal isn't to condemn existing artists either. Rather, our goal is to ensure churches have a realistic choice to sing freely if they wish to.
 
