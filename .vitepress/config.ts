@@ -22,6 +22,9 @@ export default defineConfig({
     },
     themeConfig: {
         logo: '/icon.svg',
+        socialLinks: [
+            {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
+        ],
         sidebar: [
             {
                 text: "Introduction",
