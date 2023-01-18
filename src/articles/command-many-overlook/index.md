@@ -1,6 +1,7 @@
 ---
 description: Jesus told his disciples to freely give, so why isn't that happening today?
 head: [[meta, {property: 'og:image', content: '/_assets/articles/command-many-overlook.png'}]]
+titleTemplate: false
 ---
 
 <script lang='ts' setup>
