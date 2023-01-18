@@ -84,7 +84,8 @@ const person = computed(() => people[props.id])
             font-size: 2.2em
             opacity: 0.4
             font-weight: bold
-            vertical-align: text-top
+            vertical-align: middle
+            line-height: 0
 
             &.q1
                 margin-right: 12px

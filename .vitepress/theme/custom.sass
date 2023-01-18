@@ -46,3 +46,24 @@
 q
     opacity: 0.7
     font-style: italic
+
+
+// Customise font-size/line-height (for content only)
+.vp-doc
+    font-size: 16px
+    line-height: 1.65
+
+    @media (min-width: 800px)
+        font-size: 17px
+
+    p
+        line-height: inherit  // Prevent VP from overriding
+
+
+// Custom classes for use in articles
+.article-meta
+    margin: 1em 0 1em 2em
+    opacity: 0.8
+
+.article-hero
+    margin: 24px 0
