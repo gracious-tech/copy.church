@@ -20,7 +20,8 @@
 .VPNav.no-sidebar
     display: none
 
-// Hide prev/next footer whenever aside also hidden (just intended for Quiz)
+// Hide prev/next footer whenever aside also hidden
+// Used for quiz and articles
 .VPDoc:not(.has-aside) .VPDocFooter
     display: none
 
@@ -48,16 +49,20 @@ q
     font-style: italic
 
 
-// Customise font-size/line-height (for content only)
 .vp-doc
-    font-size: 16px
-    line-height: 1.65
 
-    @media (min-width: 800px)
-        font-size: 17px
+    &[class*='_articles_']
+        max-width: 720px  // Account for missing aside
 
-    p
-        line-height: inherit  // Prevent VP from overriding
+    // Increase font-size/line-height for body text on wide screens
+    p, li, blockquote > p
+        line-height: 1.65
+        font-size: 16px
+        @media (min-width: 800px)
+            font-size: 18px
+
+    blockquote > p
+        margin: 16px  // Stop VP from removing p margins in blockquotes
 
 
 // Custom classes for use in articles

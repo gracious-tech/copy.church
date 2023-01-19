@@ -2,6 +2,7 @@
 description: Jesus told his disciples to freely give, so why isn't that happening today?
 head: [[meta, {property: 'og:image', content: '/_assets/articles/command-many-overlook.png'}]]
 titleTemplate: false
+aside: false
 ---
 
 <script lang='ts' setup>
@@ -11,7 +12,7 @@ import CommittedPerson from '@/_comp/CommittedPerson.vue'
 
 # The Command Many Ministries Overlook
 
-<h4 class='article-meta'>18 Jan 2023 | Jon Here</h4>
+<h4 class='article-meta'>18 Jan 2023 · Jon Here · 6 min read</h4>
 
 <img src='/_assets/articles/command-many-overlook.png' width='1200' height='630' class='article-hero'>
 

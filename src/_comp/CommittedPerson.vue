@@ -40,6 +40,10 @@ const person = computed(() => people[props.id])
     border-radius: 12px
     padding: 12px
     margin: 24px 0
+    font-size: 16px  // Don't increase on desktop like content text does
+
+    p
+        font-size: inherit
 
     .identity
         display: flex
