@@ -12,7 +12,7 @@ import CommittedPerson from '@/_comp/CommittedPerson.vue'
 
 # The Command Many Ministries Overlook
 
-<h4 class='article-meta'>18 Jan 2023 · Jon Here · 6 min read</h4>
+<h4 class='article-meta'>Draft · Jon Here · 6 min read</h4>
 
 <img src='/_assets/articles/command-many-overlook.png' width='1200' height='630' class='article-hero'>
 
