@@ -9,6 +9,6 @@ import CriticalRestrictions from '@/_comp/restrictions/CriticalRestrictions.vue'
 
 # New Testament Critical Text Ratings
 
-Critical Texts are reconstructions of the original writings of the New Testament. Most are under copyright and can't even be translated without permission.
+Critical Texts are reconstructions of the original writings of the New Testament. Here's how they rate for legal accessibility.
 
 <CriticalRestrictions/>
