@@ -1,0 +1,77 @@
+
+// Common styles for Restrictions components
+
+
+.translations
+    cursor: pointer
+    display: table  // Vitepress defaults to block for tables for some reason
+    width: 100%
+
+    tr
+        background-color: transparent !important
+
+        th, td
+            white-space: nowrap
+            text-align: center
+
+        td.trim
+            // Trim name if needed to prevent horizontal scroll
+            max-width: 45vw
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+
+        td.condensed
+            font-size: 0.8em
+
+        &:hover
+            background-color: rgba(#dbc600, 0.1) !important
+
+        &.selected
+            background-color: rgba(#dbc600, 0.2) !important
+
+    .rating
+        text-align: right
+
+        .score
+            font-family: monospace
+            font-size: 1.5em
+            font-weight: bold
+
+        .total
+            font-size: 0.8em
+
+
+// Condense table for narrow screens
+@media (max-width: 600px)
+    .translations
+
+        .total
+            display: none
+
+        td, th
+            font-size: 14px
+            padding: 6px 8px
+
+        // Hide year column in narrow screens to prevent horizontal scroll
+        .year
+            display: none
+
+    // Hide ability to show advanced columns since won't have room
+    .advanced-toggle
+        display: none !important
+
+
+.advanced-toggle
+    font-size: 0.8rem
+    opacity: 0.8
+    display: flex
+    padding-left: 24px
+
+    input
+        margin: 0  // Prevents click
+        cursor: pointer
+
+    label
+        padding-left: 12px
+        cursor: pointer

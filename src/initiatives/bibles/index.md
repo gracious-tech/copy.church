@@ -3,7 +3,7 @@ head: [[meta, {property: 'og:image', content: '/social_bibles.png'}]]
 ---
 
 <script lang='ts' setup>
-import BibleRestrictions from '@/_comp/BibleRestrictions.vue'
+import BibleRestrictions from '@/_comp/restrictions/BibleRestrictions.vue'
 </script>
 
 <style lang='sass' scoped>
