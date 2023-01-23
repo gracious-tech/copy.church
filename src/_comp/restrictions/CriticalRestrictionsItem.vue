@@ -35,15 +35,26 @@ table
 
     tr
         th
-            | Use commercially
-            div(v-html='b(bible.can.use_commercially)')
-            img(src='@/_assets/restrictions/ill_commercial.svg')
+            | Translate
+            div(v-html='b(bible.can.translate)')
+            img(src='@/_assets/restrictions/ill_translate.svg')
         td
-            p Whether this critical text can be used commercially in full, such as by charging to use it or including it in a paid product.
-            p(v-html='can(bible.can.use_commercially)')
+            p The purpose of critical texts is to be the basis of translations of Scripture, and yet many do not actually allow it without royalty agreements.
+            p(v-html='can(bible.can.translate)')
             ul
-                li Use this critical text in a paid Bible commentary
-                li Use this critical text in paid Bible study software
+                li Use this critical text for a new Bible translation
+
+    tr
+        th
+            | Modify
+            div(v-html='b(bible.can.modify)')
+            img(src='@/_assets/restrictions/ill_derivatives.svg')
+        td
+            p Most critical texts forbid anyone from changing them, even if they were to publish such changes under a different name and not associate them with the source critical texts' brand.
+            p(v-html='can(bible.can.modify)')
+            ul
+                li Correct or improve any parts of the critical text
+                li Account for new manuscript discoveries
 
     tr
         th
@@ -59,25 +70,15 @@ table
 
     tr
         th
-            | Translate
-            div(v-html='b(bible.can.translate)')
-            img(src='@/_assets/restrictions/ill_translate.svg')
+            | Use commercially
+            div(v-html='b(bible.can.use_commercially)')
+            img(src='@/_assets/restrictions/ill_commercial.svg')
         td
-            p The purpose of critical texts is to be the basis of translations of Scripture, and yet many do not actually allow it without royalty agreements.
-            p(v-html='can(bible.can.translate)')
+            p Whether this critical text can be used commercially in full, such as by charging to use it or including it in a paid product.
+            p(v-html='can(bible.can.use_commercially)')
             ul
-                li Use this critical text for a new Bible translation
-    tr
-        th
-            | Modify
-            div(v-html='b(bible.can.modify)')
-            img(src='@/_assets/restrictions/ill_derivatives.svg')
-        td
-            p Most critical texts forbid anyone from changing them, even if they were to publish such changes under a different name and not associate them with the source critical texts' brand.
-            p(v-html='can(bible.can.modify)')
-            ul
-                li Correct or improve any parts of the critical text
-                li Account for new manuscript discoveries
+                li Use this critical text in a paid Bible commentary
+                li Use this critical text in paid Bible study software
 
     tr
         th
