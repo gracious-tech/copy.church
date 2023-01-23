@@ -100,11 +100,10 @@ table
             div(v-html='b(bible.can.use_commercially)')
             img(src='@/_assets/ill_commercial.svg')
         td
-            p Whether this translation can be used commercially in full, whether charging to use it or including it in a paid product.
-            p Some books/apps/etc are commercial to fund non-profit ministries and not just to make a profit.
+            p Whether this translation can be used commercially in full, such as by charging to use it or including it in a paid product.
             p(v-html='can(bible.can.use_commercially)')
             ul
-                li Use this translation for a Bible commentary book
+                li Use this translation in a paid Bible commentary
                 li Use this translation in paid Bible study software
 
     tr
