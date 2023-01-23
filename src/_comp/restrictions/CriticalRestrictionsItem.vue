@@ -13,7 +13,7 @@ table
         th
             | Read for free
             div(v-html='b(bible.can.read)')
-            img(src='@/_assets/ill_read.svg')
+            img(src='@/_assets/restrictions/ill_read.svg')
         td
             p Almost every critical text can be read for free somewhere on the Internet, whether it is on the owner's website or in a popular Bible app.
             p(v-html='can(bible.can.read)')
@@ -24,7 +24,7 @@ table
         th
             | Distribute
             div(v-html='b(bible.can.distribute)')
-            img(src='@/_assets/ill_quote.svg')
+            img(src='@/_assets/restrictions/ill_quote.svg')
         td
             p The ability to use verses and passages from the critical text without limitation in any other kind of work, such as an article, a book, or an app.
             p(v-html='can(bible.can.distribute)')
@@ -37,7 +37,7 @@ table
         th
             | Use commercially
             div(v-html='b(bible.can.use_commercially)')
-            img(src='@/_assets/ill_commercial.svg')
+            img(src='@/_assets/restrictions/ill_commercial.svg')
         td
             p Whether this critical text can be used commercially in full, such as by charging to use it or including it in a paid product.
             p(v-html='can(bible.can.use_commercially)')
@@ -49,7 +49,7 @@ table
         th
             | Use without attribution
             div(v-html='b(bible.can.not_attribute)')
-            img(src='@/_assets/ill_attribution.svg')
+            img(src='@/_assets/restrictions/ill_attribution.svg')
         td
             p The ability to use a critical text without always adding some form of attribution to acknowledge its ownership.
             p(v-html='can(bible.can.not_attribute)')
@@ -61,7 +61,7 @@ table
         th
             | Translate
             div(v-html='b(bible.can.translate)')
-            img(src='@/_assets/ill_translate.svg')
+            img(src='@/_assets/restrictions/ill_translate.svg')
         td
             p The purpose of critical texts is to be the basis of translations of Scripture, and yet many do not actually allow it without royalty agreements.
             p(v-html='can(bible.can.translate)')
@@ -71,7 +71,7 @@ table
         th
             | Modify
             div(v-html='b(bible.can.modify)')
-            img(src='@/_assets/ill_derivatives.svg')
+            img(src='@/_assets/restrictions/ill_derivatives.svg')
         td
             p Most critical texts forbid anyone from changing them, even if they were to publish such changes under a different name and not associate them with the source critical texts' brand.
             p(v-html='can(bible.can.modify)')
@@ -83,7 +83,7 @@ table
         th
             | Transparent
             div(v-html='b(bible.can.transparent)')
-            img(src='@/_assets/ill_other.svg')
+            img(src='@/_assets/restrictions/ill_other.svg')
         td
             p Most critical texts will list differences between manuscripts and explain the general principles behind why they choose certain variants over others. But when it comes to knowing why any one particular decision was made, only the Statistical Restoration provides such transparency.
             p(v-html='can(bible.can.transparent)')

@@ -19,7 +19,7 @@ table
         th
             | Read for free
             div(v-html='b(bible.can.read_for_free)')
-            img(src='@/_assets/ill_read.svg')
+            img(src='@/_assets/restrictions/ill_read.svg')
         td
             p Almost every translation can be read for free somewhere on the Internet, whether it is on the translation owner's website or in a popular Bible app.
             p(v-html='can(bible.can.read_for_free)')
@@ -29,7 +29,7 @@ table
         th
             | Read anonymously
             div(v-html='b(bible.can.read_anonymously)')
-            img(src='@/_assets/ill_privacy.svg')
+            img(src='@/_assets/restrictions/ill_privacy.svg')
         td
             p Some translation owners require you to #[a(href='./privacy/') hand over your personal information] to them in exchange for being allowed to read it offline.
             p(v-html='can(bible.can.read_anonymously)')
@@ -44,7 +44,7 @@ table
         th
             | Share unlimited verses
             div(v-html='b(bible.can.quote)')
-            img(src='@/_assets/ill_quote.svg')
+            img(src='@/_assets/restrictions/ill_quote.svg')
         td
             p The ability to use verses and passages from the translation without limitation in any other kind of work, such as an article, a book, or an app.
             p(v-html='can(bible.can.quote)')
@@ -57,7 +57,7 @@ table
         th
             | Share by itself
             div(v-html='b(bible.can.quote_ratio)')
-            img(src='@/_assets/ill_ratio.svg')
+            img(src='@/_assets/restrictions/ill_ratio.svg')
         td
             p The ability to share plain quotations of Scripture, instead of only being able to quote Scripture as a smaller part of a resource filled with other commentary.
             p(v-html='can(bible.can.quote_ratio)')
@@ -70,7 +70,7 @@ table
         th
             | Share an entire book
             div(v-html='b(bible.can.quote_book)')
-            img(src='@/_assets/ill_book.svg')
+            img(src='@/_assets/restrictions/ill_book.svg')
         td
             p The ability to share a whole book of the Bible (regardless if within quotation limits).
             p(v-html='can(bible.can.quote_book)')
@@ -86,7 +86,7 @@ table
         th
             | Quote in open resources
             div(v-html='b(bible.can.use_quote_openly)')
-            img(src='@/_assets/ill_open.svg')
+            img(src='@/_assets/restrictions/ill_open.svg')
         td
             p Some translations #[a(href='./open/') forbid even being quoted at all] in resources that are openly licensed (free to share with others), such as resources that use a Creative Commons license.
             p(v-html='can(bible.can.use_quote_openly)')
@@ -98,7 +98,7 @@ table
         th
             | Use commercially
             div(v-html='b(bible.can.use_commercially)')
-            img(src='@/_assets/ill_commercial.svg')
+            img(src='@/_assets/restrictions/ill_commercial.svg')
         td
             p Whether this translation can be used commercially in full, such as by charging to use it or including it in a paid product.
             p(v-html='can(bible.can.use_commercially)')
@@ -110,7 +110,7 @@ table
         th
             | Use without attribution
             div(v-html='b(bible.can.not_attribute)')
-            img(src='@/_assets/ill_attribution.svg')
+            img(src='@/_assets/restrictions/ill_attribution.svg')
         td
             p The ability to use a translation without always adding some form of attribution to acknowledge its ownership.
             p(v-html='can(bible.can.not_attribute)')
@@ -126,7 +126,7 @@ table
         th
             | Audio / Video
             div(v-html='b(bible.can.audio)')
-            img(src='@/_assets/ill_audio.svg')
+            img(src='@/_assets/restrictions/ill_audio.svg')
         td
             p Whether this translation can be recorded as audio and used in audiobooks or videos to be more accessible to audio-visual learners, in addition to any recordings already available.
             p(v-html='can(bible.can.audio)')
@@ -138,7 +138,7 @@ table
         th
             | Translate
             div(v-html='b(bible.can.translate)')
-            img(src='@/_assets/ill_translate.svg')
+            img(src='@/_assets/restrictions/ill_translate.svg')
         td
             p When translating the Bible for a people group that doesn't have it yet, it is sometimes better to translate from a language they already know (such as English) than from the Bible's original languages, until someone can be taught them.
             p(v-html='can(bible.can.translate)')
@@ -148,7 +148,7 @@ table
         th
             | Modify
             div(v-html='b(bible.can.modify)')
-            img(src='@/_assets/ill_derivatives.svg')
+            img(src='@/_assets/restrictions/ill_derivatives.svg')
         td
             p Most translations forbid anyone from changing them, even if they were to publish such changes under a different name and not associate them with the source translations' brand.
             p(v-html='can(bible.can.modify)')
@@ -164,7 +164,7 @@ table
         th
             | Owner supportive
             div(v-html='b(bible.can.owner_supportive)')
-            img(src='@/_assets/ill_other.svg')
+            img(src='@/_assets/restrictions/ill_other.svg')
         td
             p Whether the owner of this translation supports allowing Bible translations to be freely shared without much restriction.
             p Some translation owners use profits of restricted translations to fund more openly licensed translations in other languages.
