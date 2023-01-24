@@ -354,6 +354,31 @@ const bibles_raw = {
             owner_supportive: false,
         },
     },
+    lsb: {
+        abbrev: "LSB",
+        name: "Legacy Standard Bible",
+        year: 2021,
+        type: "Very literal",
+        source: "Alexandrian",
+        info: 'https://lsbible.org/',
+        license: 'https://lsbible.org/permission-to-quote-the-lsb/',
+        read: 'https://read.lsbible.org/',
+        credit: "",
+        can: {
+            read_for_free: true,
+            read_anonymously: false,
+            quote: 1000,
+            quote_ratio: 50,
+            quote_book: false,
+            not_attribute: false,
+            use_quote_openly: true,
+            use_commercially: false,
+            audio: false,
+            translate: false,
+            modify: false,
+            owner_supportive: false,
+        },
+    },
 }
 
 
