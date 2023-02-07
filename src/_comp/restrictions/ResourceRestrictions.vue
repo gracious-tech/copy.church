@@ -11,6 +11,7 @@ select(v-model='choice_payment')
 
 h3 2. Are you using a public license?
 
+//- WARN Always have different ids (even if same conditions) so URL remembers choice correctly
 select(v-model='choice_license')
     option(value='')
     option(value='by-nc-nd-private') No
@@ -22,8 +23,8 @@ select(v-model='choice_license')
     option(value='by-nc-sa') Attribution-NonCommercial-ShareAlike
     option(value='by-nc-nd') Attribution-NonCommercial-NoDerivatives
     option(value='by-nc-nd-private-translate') Free Translate
-    option(value='by-sa') Open source software
-    option(value='by-nc-nd-private') Custom conditions and limits
+    option(value='by-os') Open source software
+    option(value='by-nc-nd-private-custom') Custom conditions and limits
 
 p.note A public license gives everyone permission to use your resource (often with conditions)
 
