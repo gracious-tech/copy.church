@@ -158,7 +158,7 @@ const checks = computed(() => {
     const conditions = [...choice_payment.value.split('-'), ...choice_license.value.split('-')]
 
     // Work out what points are affected by the conditions
-    const results = {
+    return {
         free: !conditions.includes('paywall'),
         non_profit: !conditions.includes('profit'),
         distribute: !conditions.includes('private'),
@@ -166,13 +166,8 @@ const checks = computed(() => {
         translate: !conditions.includes('nd') || conditions.includes('translate'),
         not_attribute: !conditions.includes('by'),
         no_copyright: !conditions.includes('by'),
-        no_asking: true,  // tmp
+        no_asking: !conditions.includes('nc') && !conditions.includes('nd'),
     }
-
-    // This point is easier to calculate from the others
-    results.no_asking = results.free && results.distribute && results.modify && results.translate
-
-    return results
 })
 
 
