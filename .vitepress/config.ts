@@ -10,9 +10,9 @@ export default defineConfig({
     title: "Let's copy, church",
     description: "A call to freely share Christian resources to further God's kingdom",
     head: [
-        ['link', {rel: 'icon', href: '/icon.png'}],
+        ['link', {rel: 'icon', href: '/_assets/icon.png'}],
         // WARN WhatsApp requires a URL with domain included
-        ['meta', {property: 'og:image', content: 'https://copy.church/social.png'}],
+        ['meta', {property: 'og:image', content: 'https://copy.church/_assets/social/site.png'}],
         ['meta', {property: 'og:image:width', content: '1200'}],
         ['meta', {property: 'og:image:height', content: '630'}],
     ],
@@ -22,7 +22,7 @@ export default defineConfig({
         },
     },
     themeConfig: {
-        logo: '/icon.svg',
+        logo: '/_assets/icon.svg',
         nav: [
             {text: "About", link: '/about/'},
         ],

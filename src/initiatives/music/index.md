@@ -1,5 +1,5 @@
 ---
-head: [[meta, {property: 'og:image', content: 'https://copy.church/social_music.png'}]]
+head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/music.png'}]]
 ---
 
 

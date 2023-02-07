@@ -4,7 +4,7 @@
 div.person
 
     div.identity
-        img(:src='`/people/${id}.webp`')
+        img(:src='`/_assets/people/${id}.webp`')
         div.cred
             h3 {{ person.name }}
             h4 {{ person.title }} #[span.edu {{ person.education }}]

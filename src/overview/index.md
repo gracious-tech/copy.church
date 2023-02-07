@@ -92,7 +92,7 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 ### [3. Join those committed to freely giving](/join/)
 
 <a class='people' href='/join/'>
-    <img v-for='person of people_ids' :src='`/people/${person}.webp`' :title='people[person].title'>
+    <img v-for='person of people_ids' :src='`/_assets/people/${person}.webp`' :title='people[person].title'>
 </a>
 
 
