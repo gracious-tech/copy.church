@@ -1,7 +1,7 @@
 
 <template lang='pug'>
 
-h3 1. Do you expect payment?
+h3 1. Do you expect payment/donation?
 
 select(v-model='choice_payment')
     option(value='')
