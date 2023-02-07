@@ -1,6 +1,7 @@
 ---
 description: See which reconstructions of Scripture are actually allowed to be translated.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/critical.png'}]]
+aside: false
 ---
 
 <script lang='ts' setup>
