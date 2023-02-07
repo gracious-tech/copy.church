@@ -1,4 +1,5 @@
 ---
+description: How English bibles rate in their ability to be shared.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/bibles.png'}]]
 ---
 

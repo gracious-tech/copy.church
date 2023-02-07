@@ -1,4 +1,6 @@
 ---
+title: Freedom to worship
+description: We're building a collection of free modern worship music
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/music.png'}]]
 ---
 
