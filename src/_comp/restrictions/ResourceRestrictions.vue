@@ -217,6 +217,8 @@ select
     margin: 12px
     border-radius: 12px
     font-size: 16px
+    width: 100%
+    max-width: 350px
 
 .note
     opacity: 0.6
