@@ -30,7 +30,8 @@ p.note A public license gives everyone permission to use your resource (often wi
 
 
 
-h3(v-if='choice_payment && choice_license' :class='score_class') You scored {{ score }} out of 8
+h3(v-if='choice_payment && choice_license' :class='score_class')
+    | The resource scored {{ score }} out of 8
 
 
 table(v-if='choice_payment && choice_license')
@@ -44,8 +45,8 @@ table(v-if='choice_payment && choice_license')
             p This resource #[span(v-html='can(checks.free)')] be obtained for free.
             ul
                 li Jesus explicitly commanded his disciples to "freely give" in the context of ministry (Matt 10:8)
+                li Scripture permits receiving financial support for ministry, not selling it (1 Cor 9)
                 li Selling ministry treats people as customers rather than partners in ministry
-                li Scripture permits receiving financial support for ministry, but not selling it
                 li Selling ministry communicates that you are self-employed rather than serving God, who would expect his servants to freely share resources amongst each other
 
     tr
@@ -54,7 +55,7 @@ table(v-if='choice_payment && choice_license')
             div(v-html='b(checks.non_profit)')
             img(src='@/_assets/restrictions/ill_commercial.svg')
         td
-            p Profits #[span(v-html='do_(checks.non_profit)')] get invested back into ministry (whether payment or donations).
+            p Any profits #[span(v-html='do_(checks.non_profit)')] get invested back into ministry (whether payment or donations).
             ul
                 li Using ministry for profit is condemned in scripture (2 Cor 2:17, Luke 16:13)
                 li Even if not much money is made, having no limit on what can be earned is opening oneself up to profit from ministry
@@ -80,7 +81,7 @@ table(v-if='choice_payment && choice_license')
             ul
                 li God's people should have the humility to assume someone may improve their resource in ways they hadn't thought of
                 li It is helpful to be able to adapt resources to different ministry contexts, such as different demographics, levels of education, etc
-                li Being able to adapt existing resources is far more effecient than requiring everyone to make their own
+                li Forbidding modifications does not prevent your resource from being abused (copyright is easy to ignore) but does prevent the possibility of many helpful adaptations
 
     tr
         th
@@ -90,9 +91,9 @@ table(v-if='choice_payment && choice_license')
         td
             p This resource #[span(v-html='can(checks.translate)')] be translated by anyone.
             ul
-                li There are plentiful ministry resources in English but barely anything in most other languages
-                li Most people will look for resources that can be freely translated than bother asking permission from resources that don't specify the permission
-                li There are around 7000 languages in the world and managing the translations of even 100 of them would be too much for most organisations to oversee
+                li There are plenty of ministry resources in English but barely anything in most other languages
+                li Most people will look for resources that can be freely translated rather than bother asking permission, not knowing if it will be granted
+                li There are around 7000 languages in the world and managing the translations of even 100 of them would be too great a task for most authors
 
     tr
         th
@@ -104,7 +105,7 @@ table(v-if='choice_payment && choice_license')
             ul
                 li Attribution is not appropriate in some circumstances, such as in graphic designs or brief quotes
                 li The attribution required by many public licenses is overly verbose
-                li Attribution of people can in some circumstances distract from giving glory to God (such as in Bible translations and worship music)
+                li Attribution can in some circumstances distract from giving glory to God (such as in Bible translations and worship music)
 
     tr
         th
