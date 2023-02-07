@@ -1,5 +1,5 @@
 ---
-head: [[meta, {property: 'og:image', content: '/social_critical.png'}]]
+head: [[meta, {property: 'og:image', content: 'https://copy.church/social_critical.png'}]]
 ---
 
 <script lang='ts' setup>

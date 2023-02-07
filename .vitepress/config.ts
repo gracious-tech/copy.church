@@ -11,7 +11,8 @@ export default defineConfig({
     description: "A call to freely share Christian resources to further God's kingdom",
     head: [
         ['link', {rel: 'icon', href: '/icon.png'}],
-        ['meta', {property: 'og:image', content: '/social.png'}],
+        // WARN WhatsApp requires a URL with domain included
+        ['meta', {property: 'og:image', content: 'https://copy.church/social.png'}],
         ['meta', {property: 'og:image:width', content: '1200'}],
         ['meta', {property: 'og:image:height', content: '630'}],
     ],
