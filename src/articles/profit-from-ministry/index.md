@@ -1,6 +1,6 @@
 ---
 description: Who's to say those in ministry can't generate wealth for their hard work?
-head: [[meta, {property: 'og:image', content: '/_assets/articles/profit-from-ministry.jpg'}]]
+head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/profit-from-ministry.jpg'}]]
 titleTemplate: false
 aside: false
 ---
