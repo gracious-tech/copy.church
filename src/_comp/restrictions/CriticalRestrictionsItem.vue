@@ -86,10 +86,12 @@ table
             div(v-html='b(bible.can.transparent)')
             img(src='@/_assets/restrictions/ill_other.svg')
         td
-            p Most critical texts will list differences between manuscripts and explain the general principles behind why they choose certain variants over others. But when it comes to knowing why any one particular decision was made, only the Statistical Restoration provides such transparency.
+            p Most critical texts will list differences between manuscripts and explain the general principles behind why they choose certain variants over others. But when it comes to knowing why any one particular decision was made, very few provide such transparency.
             p(v-html='can(bible.can.transparent)')
             ul
                 li See exactly why variants were chosen over others
+            p(v-if='bible.abbrev === "UBS"' class='mixed')
+                small Some versions of the UBS have a commentary that lists the reasons for the most significant textual choices, but it is sold as a separate product.
 
 p
     small You may be able to ask the copyright owner for additional permissions. Though, <a href='/explain/objections/#just-ask-for-permission'>there is no guarantee</a> your request will be accepted.
