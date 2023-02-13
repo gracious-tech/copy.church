@@ -38,7 +38,7 @@ Let's consider some options for interpreting this command of Jesus:
  1. **Is it hyperbole?** No, there is nothing wrong with taking this command literally.
  2. **Is it aspirational?** Not this either, as giving the gospel freely is easy to achieve and millions of churches do it every week.
  3. **Was it only for the twelve disciples?** If only the twelve had to freely give, then it would be permissible for modern believers to charge for evangelism, which can't possibly be ethical.
- 4. **Does it only apply to essential ministries (i.e. Sunday services & evangelism)?** This seems to be how most ministries currently interpret this command, but there is little in the passage to suggest it. Rather it's the opposite. Jesus' disciples weren't just to freely proclaim the kingdom, but were also to freely "Heal the sick, raise the dead, cleanse lepers, cast out demons" (Matt 10:8). All the blessings that come with the gospel were to be freely given as well.
+ 4. **Does it only apply to essential ministries (i.e. Sunday services & evangelism)?** This seems to be how most ministries currently interpret this command, but there is little in the passage to suggest it. Rather it's the opposite. Jesus' disciples weren't just to freely proclaim the kingdom, but were also to freely <q>Heal the sick, raise the dead, cleanse lepers, cast out demons</q>. All the blessings that come with the gospel were to be freely given as well.
 
 So this appears to simply be a straightforward command of Jesus, to freely give in the context of gospel ministry.
 
@@ -52,7 +52,7 @@ While this passage (and the whole of 1 Corinthians 9) absolutely does affirm a r
 
 ## 1. Paul's Point is that He Didn't Make Use of the Right
 
-After giving strong arguments and numerous examples regarding the right to financial support, one would expect to hear Paul say "and that's why I accepted support while with you." But instead, Paul follows them with: "Nevertheless, we have not made use of this right" (1 Cor 9:12).
+After giving strong arguments and numerous examples regarding the right to financial support, one would expect to hear Paul say <q>and that's why I accepted support while with you.</q> But instead, Paul follows them with: <q>But we have not made use of this right</q> (1 Cor 9:12).
 
 So Paul is not promoting the exercising of financial rights but rather modelling an ethic of free giving. He does not argue for the right to financial support to justify himself, but rather to demonstrate restraint for the sake of the gospel.
 
@@ -64,7 +64,7 @@ Paul's argument in regard to food sacrificed to idols is that while one may have
 
 <BibleQuote passage="1 Cor 8:9"></BibleQuote>
 
-Likewise, Paul at times didn't exercise his right to financial support because it is not a right that is always justified, it too can be misused. After declaring that he didn't make use of his right to support, he gives the clear reason why: "we endure anything rather than put an obstacle in the way of the gospel of Christ" (1 Cor 9:12).
+Likewise, Paul at times didn't exercise his right to financial support because it is not a right that is always justified, it too can be misused. After declaring that he didn't make use of his right to support, he gives the clear reason why: <q>so that we may not be a hindrance to the gospel of Christ</q> (1 Cor 9:12).
 
 This explains why Paul sometimes accepted support (Phil 2:18) and at other times did not, and also why he justifies the other disciples' acceptance of hospitality (1 Cor 9:5) yet refused it himself (9:18). The right to support can get in the way of the gospel depending on the context and how it is exercised.
 
@@ -79,9 +79,9 @@ There is no question that ministers have a right to financial support, but these
 
 Are such "rights" justified in Scripture? Let's consider the examples Paul gives in 1 Corithians 9. There are examples of hospitality (1 Cor 9:4-5), an example of being freed from secular work to minister (9:6), an example of being employed as a soldier (9:7), examples of sharing in a harvest (9:7-11), and finally some examples of serving in the temple (9:13-14). All of these examples affirm the right to financial support, but do they affirm a "right" to restrict ministry to only paying customers?
 
-It's important to remember that these are all illustrations of those in service to God. God is the army's king, and the owner of the vineyard and flock. It would be inappropriate for a soldier to charge citizens he protects, rather he is paid by the king to whom taxes are owed. Farm hands tending vines or shepherding a flock are not owed payment from the produce itself, rather their employer supplies them by granting them "some of the milk", "sharing in the crop".
+It's important to remember that these are all illustrations of those in service to God. God is the army's king, and the owner of the vineyard and flock. It would be inappropriate for a soldier to charge citizens he protects, rather he is paid by the king to whom taxes are owed. Farm hands tending vines or shepherding a flock are not owed payment from the produce itself, rather their employer is the one to grant them some of the harvest.
 
-But the most significant example is of those who serve in the temple. As it was inappropriate for priests to directly receive payment from those they served (1 Sam 2:12-17), they were to receive some of the offerings from God himself (Num 18:8-20). Paul then says "in the same way" proclaimers of the gospel should also be supported.
+But the most significant example is of those who serve in the temple. As it was inappropriate for priests to directly receive payment from those they served (1 Sam 2:12-17), rather they were to receive some of the offerings from God himself (Num 18:8-20). Paul then says <q>in the same way</q> proclaimers of the gospel should also be supported. That is, by the offerings God's people give to God and not as direct payment for services.
 
 ## A Right within the Bounds of Freely Giving
 
