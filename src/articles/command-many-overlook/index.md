@@ -13,10 +13,10 @@ import BibleQuote from '@/_comp/BibleQuote.vue'
 const date = new Date(2023, 2-1, 14).toLocaleDateString(undefined, {dateStyle: 'medium'})
 
 const passage_mat10_7_8 = {
-    net: "As you go, preach this message: ‘The kingdom of heaven is near!’ Heal the sick, raise the dead, cleanse lepers, cast out demons. Freely you received, freely give.",
-    esv: "And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay.",
-    niv: "As you go, proclaim this message: ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give.",
-    csb: "As you go, proclaim, ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those with leprosy, drive out demons. Freely you received, freely give.",
+    net: "“As you go, preach this message: ‘The kingdom of heaven is near!’ Heal the sick, raise the dead, cleanse lepers, cast out demons. Freely you received, freely give.”",
+    esv: "“And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay.”",
+    niv: "“As you go, proclaim this message: ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give.”",
+    csb: "“As you go, proclaim, ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those with leprosy, drive out demons. Freely you received, freely give.”",
 }
 const passage_1co9_3_7 = {
     net: "This is my defense to those who examine me. Do we not have the right to financial support? Do we not have the right to the company of a believing wife, like the other apostles and the Lord’s brothers and Cephas? Or do only Barnabas and I lack the right not to work? Who ever serves in the army at his own expense? Who plants a vineyard and does not eat its fruit? Who tends a flock and does not consume its milk?",
