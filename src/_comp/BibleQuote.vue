@@ -7,7 +7,7 @@ blockquote
             a(:href='`https://www.biblegateway.com/passage/?search=${encodeURIComponent(passage)}&version=ESV`' target='_blank')
                 | Read this passage somewhere else
         p.unsupportive
-            | We have #[a(href='/initiatives/bibles/open/') chosen not to quote this translation] directly.
+            | We have #[a(href='/initiatives/bibles/open/' target='_blank') chosen not to quote this translation] directly.
     template(v-else)
         p {{ text }}
     div.info
@@ -16,7 +16,7 @@ blockquote
             div.option(v-for='option of options' :class='{selected: option === TRANS}' @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
         div.credit(v-if='TRANS !== "esv"')
-            a(:href='bible.license' target='_blank') {{ bible.name }} - {{ bible.credit }}
+            a(:href='bible.license' target='_blank') {{ bible.credit }}
 
 </template>
 
