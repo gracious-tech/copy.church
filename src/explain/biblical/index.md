@@ -44,7 +44,7 @@ Paul rebuked the Corinthian church for relying on secular law courts to settle d
 
 <BibleQuote passage='1 Cor 6:7'></BibleQuote>
 
-The behaviour encouraged by Paul then is to handle disputes within the church, and to not guarantee that all your rights will be respected but <q>Why not rather let yourselves be wronged?</q>.
+The behaviour encouraged by Paul then is to handle disputes within the church, and to not guarantee that all your rights will be respected but <q>Why not rather be wronged?</q>.
 
 
 ## Servants of a common master
