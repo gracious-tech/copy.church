@@ -3,13 +3,6 @@
 
 import BibleQuote from '@/_comp/BibleQuote.vue'
 
-const passage_rev22_12 = {
-    net: "“Look! I am coming soon, and my reward is with me to pay each one according to what he has done!”",
-    esv: "“Behold, I am coming soon, bringing my recompense with me, to repay each one for what he has done.”",
-    niv: "“Look, I am coming soon! My reward is with me, and I will give to each person according to what they have done.”",
-    csb: "“Look, I am coming soon, and my reward is with me to repay each person according to his work.”",
-}
-
 </script>
 
 
@@ -40,7 +33,7 @@ New technology has made it easier and more cost-effective than ever to distribut
 Charge only to cover production expenses but make clear that the actual teaching in your resource is freely given, and make it available online for free as well.
 
 ### Wait for Jesus
-<BibleQuote passage='Rev 22:12' :options='passage_rev22_12'></BibleQuote>
+<BibleQuote passage='Rev 22:12'></BibleQuote>
 
 
 

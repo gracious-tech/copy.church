@@ -6,7 +6,7 @@ blockquote
     div.info
         a.passage(:href='read_url' target='_blank') {{ passage }}
         div.options
-            div.option(v-for='option of Object.keys(options)' :class='{selected: option === TRANS}' @click='change_trans(option)')
+            div.option(v-for='option of options' :class='{selected: option === TRANS}' @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
         a.credit(:href='bible.license' target='_blank') {{ bible.credit }}
 
@@ -18,8 +18,12 @@ blockquote
 import {computed} from 'vue'
 import {TRANS} from './state'
 import {BIBLES} from './bibles'
+import {scripture} from './scripture'
 
-const props = defineProps({passage: String, options: Object})
+
+const props = defineProps({passage: String})
+
+const options = ['net', 'esv', 'niv', 'csb']
 
 const bible = computed(() => BIBLES[TRANS.value])
 
@@ -27,7 +31,7 @@ const change_trans = trans => {
     TRANS.value = trans
 }
 
-const text = computed(() => props.options[TRANS.value])
+const text = computed(() => scripture[props.passage][TRANS.value])
 
 const read_url = computed(() => {
     const p = encodeURIComponent(props.passage)
@@ -57,6 +61,7 @@ const read_url = computed(() => {
         display: flex
         align-items: center
         margin-right: 12px
+        user-select: none
 
         .option
             opacity: 0.6
