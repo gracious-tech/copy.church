@@ -1,18 +1,42 @@
 ---
-description: Jesus told his disciples to freely give, so why isn't that happening today?
+description: The Bible gives us a clear command regarding money and ministry, but do we still follow it today?
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/command-many-overlook.png'}]]
 titleTemplate: false
 aside: false
 ---
 
 <script lang='ts' setup>
+
 import CommittedPerson from '@/_comp/CommittedPerson.vue'
+import BibleQuote from '@/_comp/BibleQuote.vue'
+
+const date = new Date(2023, 2-1, 14).toLocaleDateString(undefined, {dateStyle: 'medium'})
+
+const passage_mat10_7_8 = {
+    net: "As you go, preach this message: ‘The kingdom of heaven is near!’ Heal the sick, raise the dead, cleanse lepers, cast out demons. Freely you received, freely give.",
+    esv: "And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay.",
+    niv: "As you go, proclaim this message: ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give.",
+    csb: "As you go, proclaim, ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those with leprosy, drive out demons. Freely you received, freely give.",
+}
+const passage_1co9_3_7 = {
+    net: "This is my defense to those who examine me. Do we not have the right to financial support? Do we not have the right to the company of a believing wife, like the other apostles and the Lord’s brothers and Cephas? Or do only Barnabas and I lack the right not to work? Who ever serves in the army at his own expense? Who plants a vineyard and does not eat its fruit? Who tends a flock and does not consume its milk?",
+    esv: "This is my defense to those who would examine me. Do we not have the right to eat and drink? Do we not have the right to take along a believing wife, as do the other apostles and the brothers of the Lord and Cephas? Or is it only Barnabas and I who have no right to refrain from working for a living? Who serves as a soldier at his own expense? Who plants a vineyard without eating any of its fruit? Or who tends a flock without getting some of the milk?",
+    niv: "This is my defense to those who sit in judgment on me. Don’t we have the right to food and drink? Don’t we have the right to take a believing wife along with us, as do the other apostles and the Lord’s brothers and Cephas? Or is it only I and Barnabas who lack the right to not work for a living? Who serves as a soldier at his own expense? Who plants a vineyard and does not eat its grapes? Who tends a flock and does not drink the milk?",
+    csb: "My defense to those who examine me is this: Don’t we have the right to eat and drink? Don’t we have the right to be accompanied by a believing wife like the other apostles, the Lord’s brothers, and Cephas? Or do only Barnabas and I have no right to refrain from working? Who serves as a soldier at his own expense? Who plants a vineyard and does not eat its fruit? Or who shepherds a flock and does not drink the milk from the flock?",
+}
+const passage_1co8_9 = {
+    net: "But be careful that this liberty of yours does not become a hindrance to the weak.",
+    esv: "But take care that this right of yours does not somehow become a stumbling block to the weak.",
+    niv: "Be careful, however, that the exercise of your rights does not become a stumbling block to the weak.",
+    csb: "But be careful that this right of yours in no way becomes a stumbling block to the weak.",
+}
+
 </script>
 
 
 # The Command Many Ministries Overlook
 
-<h4 class='article-meta'>Draft · Jon Here · 6 min read</h4>
+<h4 class='article-meta'>{{ date }} · Jon Here · 6 min read</h4>
 
 <img src='/_assets/articles/command-many-overlook.png' width='1200' height='630' class='article-hero'>
 
@@ -24,9 +48,9 @@ But Scripture does already provide us with a clearly defined boundary for minist
 
 ## Freely You Have Received, Freely Give
 
-When Jesus sent out the twelve disciples to minister to Israelite towns, he commanded them to "give without pay", which is rendered as "freely give" in some other translations:
+When Jesus sent out the twelve disciples to minister to Israelite towns, he commanded them to "freely give":
 
-> And proclaim as you go, saying, 'The kingdom of heaven is at hand.' Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay. &mdash; Matt 10:7-8
+<BibleQuote passage="Matt 10:7-8" :options='passage_mat10_7_8'></BibleQuote>
 
 Let's consider some options for interpreting this command of Jesus:
 
@@ -41,7 +65,7 @@ So this appears to simply be a straightforward command of Jesus, to freely give 
 
 If Jesus' command to freely give is to be obeyed, then how do we make sense of Paul's teachings on the right to payment? Let's consider one of the most significant passages regarding this matter:
 
-> This is my defense to those who would examine me. Do we not have the right to eat and drink? Do we not have the right to take along a believing wife, as do the other apostles and the brothers of the Lord and Cephas? Or is it only Barnabas and I who have no right to refrain from working for a living? Who serves as a soldier at his own expense? Who plants a vineyard without eating any of its fruit? Or who tends a flock without getting some of the milk? &mdash; 1 Cor 9:3-7
+<BibleQuote passage="1 Cor 9:3-7" :options='passage_1co9_3_7'></BibleQuote>
 
 While this passage (and the whole of 1 Corinthians 9) absolutely does affirm a right to financial support, that is not the take-home message Paul intended.
 
@@ -57,7 +81,7 @@ This is not the only section of the letter to talk about "rights". Paul has alre
 
 Paul's argument in regard to food sacrificed to idols is that while one may have a right to eat it, that right is not a permissive license to do as you please, rather it can be misused to the detriment of others:
 
-> But take care that this right of yours does not somehow become a stumbling block to the weak. &mdash; 1 Cor 8:9
+<BibleQuote passage="1 Cor 8:9" :options='passage_1co8_9'></BibleQuote>
 
 Likewise, Paul at times didn't exercise his right to financial support because it is not a right that is always justified, it too can be misused. After declaring that he didn't make use of his right to support, he gives the clear reason why: "we endure anything rather than put an obstacle in the way of the gospel of Christ" (1 Cor 9:12).
 
