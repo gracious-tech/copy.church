@@ -144,6 +144,7 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/paul_preaching.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_temple.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_singing.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_terms.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_read.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_ascension.jpg'>
