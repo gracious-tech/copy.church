@@ -34,15 +34,14 @@ onBeforeMount(() => {
 
 .people
     display: flex
+    align-items: center
     margin: 12px 0
-    overflow: hidden
 
     img
-        width: 80px
-        height: 80px
-        border-radius: 40px
+        width: 0
+        flex-grow: 1
+        border-radius: 50%
         margin-right: 12px
-        cursor: pointer
 
 </style>
 
@@ -92,7 +91,8 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 ### [3. Join those committed to freely giving](/join/)
 
 <a class='people' href='/join/'>
-    <img v-for='person of people_ids' :src='`/_assets/people/${person}.webp`' :title='people[person].title'>
+    <img v-for='person of people_ids.slice(0, 6)' :src='`/_assets/people/${person}.webp`' :title='people[person].title'>
+    <div title="View all">❯</div>
 </a>
 
 
