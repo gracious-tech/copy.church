@@ -13,7 +13,7 @@ const bibles_raw = {
         info: 'https://www.esv.org/',
         license: 'https://www.crossway.org/permissions/',
         read: 'https://www.bible.com/bible/59/JHN.1.ESV',
-        credit: "",
+        credit: "© Crossway",
         can: {
             read_for_free: true,
             read_anonymously: false,
@@ -163,7 +163,7 @@ const bibles_raw = {
         info: 'https://csbible.com/',
         license: 'https://csbible.com/about-the-csb/faqs/#faq/may-i-use-the-christian-standard-bible-in-my-writing',
         read: 'https://www.bible.com/bible/1713/JHN.1.CSB',
-        credit: "",
+        credit: "© Holman Bible Publishers",
         can: {
             read_for_free: true,
             read_anonymously: false,
