@@ -58,4 +58,12 @@ export const people:Record<string, Person> = {
         bio: "Jon has served as a pastor, a missionary in South-East Asia, and went on to start his own company for creating apps for mission. Every app his company makes is free to use and open source.",
         quote: "The first app I made was for evangelizing using plain Scripture. It was almost done when I realised Bible translations forbid sharing plain Scripture! Copyright has been the number one barrier to my ministry ever since.",
     },
+    jack: {
+        name: "Jack",
+        title: "Missionary in remote Asia",
+        education: "",
+        site: '',
+        bio: "Jack lives and works with a minority people group in a remote location of Asia. Sometimes he helps film parables for them in their language or encourages those that translate their scriptures. Other times he is just with them, talking goats and sheep.",
+        quote: "How can we give to God more than we receive from him? If I burnt out or became poor for his sake, it would be worth it, but it still wouldn't come close to what he's given me. The least I can do is also give freely.",
+    },
 }
