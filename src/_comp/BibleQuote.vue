@@ -2,20 +2,13 @@
 <template lang='pug'>
 
 blockquote
-    template(v-if='TRANS === "esv"')
-        p
-            a(:href='read_url' target='_blank')
-                | Read this passage somewhere else
-        p.unsupportive
-            | We have #[a(href='/initiatives/bibles/open/' target='_blank') chosen not to quote this translation] directly.
-    template(v-else)
-        p {{ text }}
+    p {{ text }}
     div.info
         a.passage(:href='read_url' target='_blank') {{ passage }}
         div.options
-            div.option(v-for='option of options' :class='{selected: option === TRANS}' @click='change_trans(option)')
+            div.option(v-for='option of Object.keys(options)' :class='{selected: option === TRANS}' @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
-        a.credit(v-if='TRANS !== "esv"' :href='bible.license' target='_blank') {{ bible.credit }}
+        a.credit(:href='bible.license' target='_blank') {{ bible.credit }}
 
 </template>
 
@@ -27,8 +20,6 @@ import {TRANS} from './state'
 import {BIBLES} from './bibles'
 
 const props = defineProps({passage: String, options: Object})
-
-const options = computed(() => [...Object.keys(props.options), 'esv'])
 
 const bible = computed(() => BIBLES[TRANS.value])
 
@@ -47,14 +38,6 @@ const read_url = computed(() => {
 
 
 <style lang='sass' scoped>
-
-.unsupportive
-    font-size: 0.9rem
-
-    a
-        color: inherit
-        text-decoration: underline
-        font-weight: normal
 
 .info
     display: flex
