@@ -4,19 +4,18 @@
 blockquote
     template(v-if='TRANS === "esv"')
         p
-            a(:href='`https://www.biblegateway.com/passage/?search=${encodeURIComponent(passage)}&version=ESV`' target='_blank')
+            a(:href='read_url' target='_blank')
                 | Read this passage somewhere else
         p.unsupportive
             | We have #[a(href='/initiatives/bibles/open/' target='_blank') chosen not to quote this translation] directly.
     template(v-else)
         p {{ text }}
     div.info
-        div.passage {{ passage }}
+        a.passage(:href='read_url' target='_blank') {{ passage }}
         div.options
             div.option(v-for='option of options' :class='{selected: option === TRANS}' @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
-        div.credit(v-if='TRANS !== "esv"')
-            a(:href='bible.license' target='_blank') {{ bible.credit }}
+        a.credit(v-if='TRANS !== "esv"' :href='bible.license' target='_blank') {{ bible.credit }}
 
 </template>
 
@@ -39,6 +38,11 @@ const change_trans = trans => {
 
 const text = computed(() => props.options[TRANS.value])
 
+const read_url = computed(() => {
+    const p = encodeURIComponent(props.passage)
+    return `https://www.biblegateway.com/passage/?search=${p}&version=${bible.value.abbrev}`
+})
+
 </script>
 
 
@@ -58,22 +62,18 @@ const text = computed(() => props.options[TRANS.value])
     align-items: center
     margin-top: 12px
 
-    > *
-        margin-right: 24px
-
     .passage
         font-weight: bold
         font-size: 0.8rem
         opacity: 0.6
-
-    .credit a
-        font-size: 0.7rem
+        margin-right: 24px
         color: inherit
-        opacity: 0.6
+        line-height: 3
 
     .options
         display: flex
         align-items: center
+        margin-right: 12px
 
         .option
             opacity: 0.6
@@ -87,5 +87,10 @@ const text = computed(() => props.options[TRANS.value])
                 background-color: rgba(#f0df0f, 0.5)
             &:last-child
                 border-right-style: none
+
+    .credit
+        font-size: 0.7rem
+        color: inherit
+        opacity: 0.6
 
 </style>
