@@ -88,7 +88,7 @@ const bibles_raw = {
         info: 'https://netbible.com/',
         license: 'https://netbible.com/copyright/',
         read: 'https://www.bible.com/bible/107/JHN.1.NET',
-        credit: "",
+        credit: "© Biblical Studies Press, L.L.C.",
         can: {
             read_for_free: true,
             read_anonymously: true,
@@ -113,7 +113,7 @@ const bibles_raw = {
         info: 'https://worldenglish.bible/',
         license: 'https://worldenglish.bible/',
         read: 'https://www.bible.com/bible/206/JHN.1.WEBUS',
-        credit: "public domain",
+        credit: "Public domain",
         can: {
             read_for_free: true,
             read_anonymously: true,
