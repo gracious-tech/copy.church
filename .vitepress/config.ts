@@ -37,12 +37,12 @@ export default defineConfig({
                         {text: "← Project Overview", link: '/overview/'},
                     ],
                 },
-                {
-                    text: "Articles",
-                    items: [
-                        {text: "The Command Many Ministries Overlook", link: '/articles/command-many-overlook/'},
-                    ],
-                },
+                // {
+                //     text: "Articles",
+                //     items: [
+                //         {text: "The Command Many Ministries Overlook", link: '/articles/command-many-overlook/'},
+                //     ],
+                // },
             ],
             '/': [
                 {
