@@ -67,7 +67,7 @@ We have now completed the picture of the biblical model of financial support. Wh
 
 
 ## A consistent biblical model
-This biblical model of funding is not just theory. Aside from the New Testament evidence, it was also fairly clearly articulated in Levitical Law (Num 18:8-20). As Paul says:
+This biblical model of funding is not just theory. Aside from the New Testament evidence, it was also fairly clearly articulated in Levitical law (Num 18:8-20). As Paul says:
 
 <BibleQuote passage="1 Cor 9:13-14"></BibleQuote>
 
@@ -75,7 +75,7 @@ Let's apply the model to the example of the temple:
 
 <img src='./diagram_temple.svg' alt="Sacrifices go from Israelites to God to priests">
 
-Paul isn't saying that we follow Levitical Law today; just that the biblical model for funding ministry is consistent and hasn't changed. This is how churches have been funded for thousands of years and is still the case today:
+Paul isn't saying that we follow Levitical law today; just that the biblical model for funding ministry is consistent and hasn't changed. This is how churches have been funded for thousands of years and is still the case today:
 
 <img src='./diagram_church.svg' alt="Offerings go from church regulars to God to the pastor">
 
@@ -103,9 +103,13 @@ While many have good intentions and are just utilising commercial practices for 
 
 <BibleQuote passage="2 Cor 2:17"></BibleQuote>
 
+## Decommercialising ministry
+
+Much credit goes to [The Dorean Principle](https://thedoreanprinciple.org/) by Conley Owens, which provides an even deeper analysis of Scripture, and from which much of this article is derived.
+
 Ministry has become increasingly commercialised over many decades, and so decommercialising it will not be easy or pleasant. Providers of ministry are not alone to blame, and in many ways the first step is to start financially supporting ministries that have otherwise had to rely on sales to survive.
 
-Discussion is needed. Much credit goes to [The Dorean Principle](https://thedoreanprinciple.org/) from which most of this article has been derived. But as Conley Owens writes, it is just "a launching pad for further biblical exploration, application, and discussion".
+Wisdom is needed. However, inaction is not an option, as in Jesus' own words: <q>You cannot serve both God and money.</q>
 
 
 &nbsp;
