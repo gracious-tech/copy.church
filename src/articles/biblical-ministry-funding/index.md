@@ -41,7 +41,7 @@ Paul starts off describing how he himself has received support but then moves to
 
 We'll represent this obligation via a diagram that will become more meaningful later:
 
-<img src='diagram_colabor1.svg' alt="Giver is obligated to give to God">
+<img src='./diagram_colabor1.svg' alt="Giver is obligated to give to God">
 
 
 ## Provision from God
@@ -55,13 +55,13 @@ As we can see, freely giving and being financially supported goes hand-in-hand w
 
  God is the employer and it is he who provides for his workers, which he often does through other believers. Let's add this insight to our diagram:
 
-<img src='diagram_colabor2.svg' alt="God provides for the minister">
+<img src='./diagram_colabor2.svg' alt="God provides for the minister">
 
 
 ## Free ministry
 In accordance with the free giving ethic, the minister will never charge for service and the offering is voluntary. Those who financially support the minister may be recipients of the service or may not be. For example, members of a congregation would be recipients of the ministry they fund, where as those supporting missionaries would not be.
 
-<img src='diagram_colabor3.svg' alt="Minister gives ministry for free">
+<img src='./diagram_colabor3.svg' alt="Minister gives ministry for free">
 
 We have now completed the picture of the biblical model of financial support. While in human terms money may change hands between believers, at a spiritual level this exchange is mediated by God.
 
@@ -73,11 +73,11 @@ This biblical model of funding is not just theory. Aside from the New Testament 
 
 Let's apply the model to the example of the temple:
 
-<img src='diagram_temple.svg' alt="Sacrifices go from Israelites to God to priests">
+<img src='./diagram_temple.svg' alt="Sacrifices go from Israelites to God to priests">
 
 Paul isn't saying that we follow Levitical Law today; just that the biblical model for funding ministry is consistent and hasn't changed. This is how churches have been funded for thousands of years and is still the case today:
 
-<img src='diagram_church.svg' alt="Offerings go from church regulars to God to the pastor">
+<img src='./diagram_church.svg' alt="Offerings go from church regulars to God to the pastor">
 
 Believers are not obligated to pay their pastor for their sermon but they are obligated to give offerings to God. And the minister is not to demand payment from those he serves but is to rely on God's provision, which will often come from the hands of other believers. Those who do the ministry and those who fund the ministry are then partners in ministry (Phil 4:15), working together for the sake of the Gospel. They give and serve out of obligation to God and not out of obligation to each other.
 
@@ -91,7 +91,7 @@ Firstly, believers give primarily out of obligation to the minister rather than 
 Secondly, the ministry is restricted to only paying customers. The person giving money and the person receiving ministry is often the same person, and the receiver of ministry cannot usually share it with others. Some ministry providers will give for free to those who can't afford to pay, but that is the exception rather than the norm.
 
 
-<img src='diagram_reciprocity.svg' alt="Giver is obligated to pay the minister for restricted ministry">
+<img src='./diagram_reciprocity.svg' alt="Giver is obligated to pay the minister for restricted ministry">
 
 The commercial model is also in the bible, but not in a positive way:
 
