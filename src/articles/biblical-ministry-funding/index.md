@@ -1,5 +1,5 @@
 ---
-description: The Dorean Principle provides a model for the biblical funding of ministry.
+description: How biblical funding differs from the commercial practices many use today.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/biblical-ministry-funding.jpg'}]]
 titleTemplate: false
 aside: false
