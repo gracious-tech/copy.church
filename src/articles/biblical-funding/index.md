@@ -1,6 +1,6 @@
 ---
 description: How biblical funding differs from the commercial practices many use today.
-head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/biblical-ministry-funding.jpg'}]]
+head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/biblical-funding.jpg'}]]
 titleTemplate: false
 aside: false
 ---
@@ -20,7 +20,7 @@ const date = nice_date(2023, 2, 21)
 
 <h4 class='article-meta'>{{ date }} · Jon Here · 6 min read</h4>
 
-<img src='/_assets/articles/biblical-ministry-funding.jpg' width='1200' height='630' class='article-hero'>
+<img src='/_assets/articles/biblical-funding.jpg' width='1200' height='630' class='article-hero'>
 
 
 When we give offerings at church, who are we giving them to? Practically speaking we are giving them to a legal entity (a local church) which then pools what is "offered" to pay for rent, wages, and other expenses. But the fact we use the term "offering" and not just "donation" should remind us that there is a spiritual dimension going on, even if the secular world cannot see it.
