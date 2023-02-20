@@ -9,8 +9,9 @@ aside: false
 
 import CommittedPerson from '@/_comp/CommittedPerson.vue'
 import BibleQuote from '@/_comp/BibleQuote.vue'
+import {nice_date} from '@/_comp/utils'
 
-const date = "Draft"  // new Date(2023, 2-1, 14).toLocaleDateString(undefined, {dateStyle: 'medium'})
+const date = nice_date(2023, 2, 21)
 
 </script>
 
