@@ -147,6 +147,7 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_terms.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_read.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_giving.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_ascension.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_share.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_beginning.jpg'>
@@ -159,6 +160,7 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_copyright.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_church.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_charge.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_plans.jpg'>
 </div>
 
 
