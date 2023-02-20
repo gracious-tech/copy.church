@@ -60,7 +60,7 @@ As we can see, freely giving and being financially supported goes hand-in-hand w
 
 
 ## Free ministry
-In accordance with the free giving ethic, the minister will never charge for service and the offering is voluntary. Those who financially support the minister may be recipients of the service or may not be. For example, members of a congregation would be recipients of the ministry they fund, where as those supporting missionaries would not be.
+In accordance with [the free giving ethic](https://copy.church/articles/command-many-overlook/), the minister will never charge for service and the offering is voluntary. Those who financially support the minister may be recipients of the service or may not be. For example, members of a congregation would be recipients of the ministry they fund, where as those supporting missionaries would not be.
 
 <img src='./diagram_colabor3.svg' alt="Minister gives ministry for free">
 
