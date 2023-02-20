@@ -106,7 +106,7 @@ While many have good intentions and are just utilising commercial practices for 
 
 ## Decommercialising ministry
 
-Much credit goes to [The Dorean Principle](https://thedoreanprinciple.org/) by Conley Owens, which provides an even deeper analysis of Scripture, and from which much of this article is derived.
+[The Dorean Principle](https://thedoreanprinciple.org/) by Conley Owens provides an even deeper analysis of this topic and is highly recommended for those wanting even more evidence from Scripture.
 
 Ministry has become increasingly commercialised over many decades, and so decommercialising it will not be easy or pleasant. Providers of ministry are not alone to blame, and in many ways the first step is to start financially supporting ministries that have otherwise had to rely on sales to survive.
 
