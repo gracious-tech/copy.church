@@ -108,9 +108,9 @@ While many have good intentions and are just utilising commercial practices for 
 
 [The Dorean Principle](https://thedoreanprinciple.org/) by Conley Owens provides an even deeper analysis of this topic and is highly recommended for those wanting even more evidence from Scripture.
 
-Ministry has become increasingly commercialised over many decades, and so decommercialising it will not be easy or pleasant. Providers of ministry are not alone to blame, and in many ways the first step is to start financially supporting ministries that have otherwise had to rely on sales to survive.
+Ministry has become increasingly commercialised over many decades, and so decommercialising it will not be easy or pleasant. Providers of ministry are not alone to blame, as we have all been urging the sale of ministry on, churches and individuals alike. In many ways the first step is to start financially supporting ministries that have otherwise had to rely on sales to survive.
 
-Wisdom is needed. However, inaction is not an option, as in Jesus' own words: <q>You cannot serve both God and money.</q>
+Wisdom and grace is needed. However, inaction is not an option, as in Jesus' own words, <q>you cannot serve both God and money.</q>
 
 
 &nbsp;
