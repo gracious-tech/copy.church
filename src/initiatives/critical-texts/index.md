@@ -9,8 +9,8 @@ import CriticalRestrictions from '@/_comp/restrictions/CriticalRestrictions.vue'
 </script>
 
 
-# New Testament Critical Text Ratings
+# Critical Text Ratings
 
-Critical Texts are reconstructions of the original writings of the New Testament. Here's how they rate for legal accessibility.
+Critical Texts are reconstructions of the original writings of the Old & New Testaments. Here's how they rate for legal accessibility.
 
 <CriticalRestrictions/>

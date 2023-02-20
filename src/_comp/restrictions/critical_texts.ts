@@ -1,6 +1,25 @@
 
 const critical_texts = {
+    bhq: {
+        testament: "OT",
+        abbrev: "BHQ",
+        name: "Biblia Hebraica Quinta",
+        year: 2020,
+        info: 'https://www.academic-bible.com/en/bible-society-and-biblical-studies/current-projects/biblia-hebraica-quinta-bhq/',
+        license: 'https://www.academic-bible.com/en/bible-society-and-biblical-studies/copyright/',
+        read: 'https://www.academic-bible.com/en/bible-society-and-biblical-studies/current-projects/biblia-hebraica-quinta-bhq/',
+        can: {
+            read: false,
+            distribute: false,
+            translate: false,
+            modify: false,
+            not_attribute: false,
+            use_commercially: false,
+            transparent: true,
+        },
+    },
     sr: {
+        testament: "NT",
         abbrev: "SR",
         name: "Statistical Restoration",
         year: 2022,
@@ -18,6 +37,7 @@ const critical_texts = {
         },
     },
     na: {
+        testament: "NT",
         abbrev: "NA",
         name: "Novum Testamentum Graece",
         year: 2012,
@@ -35,6 +55,7 @@ const critical_texts = {
         },
     },
     ubs: {
+        testament: "NT",
         abbrev: "UBS",
         name: "UBS Greek New Testament",
         year: 2014,
@@ -52,6 +73,7 @@ const critical_texts = {
         },
     },
     sbl: {
+        testament: "NT",
         abbrev: "SBL",
         name: "SBL Greek New Testament",
         year: 2010,
@@ -69,6 +91,7 @@ const critical_texts = {
         },
     },
     tyndale: {
+        testament: "NT",
         abbrev: "TH",
         name: "Tyndale Greek New Testament",
         year: 2017,
@@ -86,6 +109,7 @@ const critical_texts = {
         },
     },
     byzantine: {
+        testament: "NT",
         abbrev: "RP",
         name: "Byzantine Textform",
         year: 2018,

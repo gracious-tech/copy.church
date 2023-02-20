@@ -5,6 +5,7 @@ table.translations(ref='table' :class='{advanced}')
     tr
         th ID
         th(v-if='!advanced') Name
+        th(v-if='!advanced') T.
         th.year(v-if='!advanced') Latest
         th Score
         template(v-if='advanced')
@@ -19,6 +20,7 @@ table.translations(ref='table' :class='{advanced}')
             @click='() => change_text(item.id)')
         td {{ item.abbrev }}
         td(v-if='!advanced' class='condensed trim') {{ item.name }}
+        td(v-if='!advanced') {{ item.testament }}
         td.year(v-if='!advanced') {{ item.year }}
         td.rating
             span.score(:class='item.rating_class') {{ item.rating }}
