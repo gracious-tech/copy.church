@@ -1,11 +1,11 @@
 
 export const scripture:Record<string, {net:string, esv:string, niv:string, csb:string}> = {
 
-"Micah 3:11": {
-    net: "Her leaders take bribes when they decide legal cases, her priests proclaim rulings for profit, and her prophets read omens for pay. Yet they claim to trust the Lord and say, “The Lord is among us. Disaster will not overtake us!”",
-    esv: "Its heads give judgment for a bribe; its priests teach for a price; its prophets practice divination for money; yet they lean on the Lord and say, “Is not the Lord in the midst of us? No disaster shall come upon us.”",
-    niv: "Her leaders judge for a bribe, her priests teach for a price, and her prophets tell fortunes for money. Yet they look for the Lord’s support and say, “Is not the Lord among us? No disaster will come upon us.”",
-    csb: "Her leaders issue rulings for a bribe, her priests teach for payment, and her prophets practice divination for silver. Yet they lean on the Lord, saying, “Isn’t the Lord among us? No disaster will overtake us.”",
+"Micah 3:11b": {
+    net: "her priests proclaim rulings for profit, and her prophets read omens for pay. Yet they claim to trust the Lord and say, “The Lord is among us. Disaster will not overtake us!”",
+    esv: "its priests teach for a price; its prophets practice divination for money; yet they lean on the Lord and say, “Is not the Lord in the midst of us? No disaster shall come upon us.”",
+    niv: "her priests teach for a price, and her prophets tell fortunes for money. Yet they look for the Lord’s support and say, “Is not the Lord among us? No disaster will come upon us.”",
+    csb: "her priests teach for payment, and her prophets practice divination for silver. Yet they lean on the Lord, saying, “Isn’t the Lord among us? No disaster will overtake us.”",
 },
 
 "Matt 9:37-38": {
