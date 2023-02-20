@@ -96,4 +96,6 @@ There are many theological and practical matters at play here that need further 
 
 &nbsp;
 
+__Next:__ [Biblical Funding of Ministry](/articles/biblical-funding/)
+
 <CommittedPerson id='jon_here'></CommittedPerson>

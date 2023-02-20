@@ -18,6 +18,7 @@ While this site is designed to be succinct, others have written and spoken more 
 ## Articles
 
  * [The Command Many Ministries Overlook](/articles/command-many-overlook/) &mdash; Jon Here
+ * [Biblical Funding of Ministry](/articles/biblical-funding/) &mdash; Jon Here
  * [Free and Open](https://www.missionfrontiers.org/issue/article/free-and-open) &mdash; Tim Jore
  * [How To Navigate The Crossroad Of Ministry And Money](https://africa.thegospelcoalition.org/reviews/how-to-navigate-the-crossroad-of-ministry-and-money/) &mdash; Eleazar Maduka
 

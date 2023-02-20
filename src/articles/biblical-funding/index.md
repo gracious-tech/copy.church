@@ -25,7 +25,7 @@ const date = nice_date(2023, 2, 21)
 
 When we give offerings at church, who are we giving them to? Practically speaking we are giving them to a legal entity (a local church) which then pools what is "offered" to pay for rent, wages, and other expenses. But the fact we use the term "offering" and not just "donation" should remind us that there is a spiritual dimension going on, even if the secular world cannot see it.
 
-In [_The Command Many Ministries Overlook_](https://copy.church/articles/command-many-overlook/), it was established that:
+In [_The Command Many Ministries Overlook_](/articles/command-many-overlook/), it was established that:
  1. Jesus commanded free giving in the context of ministry
  2. Paul endorsed financial support for ministry, not commerce
  3. Paul modelled free giving himself
@@ -60,7 +60,7 @@ As we can see, freely giving and being financially supported goes hand-in-hand w
 
 
 ## Free ministry
-In accordance with [the free giving ethic](https://copy.church/articles/command-many-overlook/), the minister will never charge for service and the offering is voluntary. Those who financially support the minister may be recipients of the service or may not be. For example, members of a congregation would be recipients of the ministry they fund, where as those supporting missionaries would not be.
+In accordance with [the free giving ethic](/articles/command-many-overlook/), the minister will never charge for service and the offering is voluntary. Those who financially support the minister may be recipients of the service or may not be. For example, members of a congregation would be recipients of the ministry they fund, where as those supporting missionaries would not be.
 
 <img src='./diagram_colabor3.svg' alt="Minister gives ministry for free">
 
