@@ -100,7 +100,7 @@ The commercial model is also in the bible, but not in a positive way:
 
 Selling ministry is a tell-tale sign of a false teacher. Please don't take this as an accusation that all who currently sell ministry resources are false teachers; that would be a wrong and absurd accusation. But by commercialising ministry we have blurred the lines and allowed false teachers to flourish since they can't be identified by trying to profit from ministry, as they use the same financial practices many respected Evangelicals do.
 
-While many have good intentions and are just utilising commercial practices for practical reasons, nevertheless, the sincerity of ministry is still at stake. As who is to know where the minister's heart is at? What they do know is that they had to pay for the ministry.
+While many have good intentions and are just utilising commercial practices for practical reasons, nevertheless, the sincerity of ministry is still at stake. As who is to know where the minister's heart is at? What they do know is that they had to pay for the ministry. Paul always ensured he preached for free so that his hearers would know of his sincerity:
 
 <BibleQuote passage="2 Cor 2:17"></BibleQuote>
 
@@ -110,7 +110,7 @@ While many have good intentions and are just utilising commercial practices for 
 
 Ministry has become increasingly commercialised over many decades, and so decommercialising it will not be easy or pleasant. Providers of ministry are not alone to blame, as we have all been urging the sale of ministry on, churches and individuals alike. In many ways the first step is to start financially supporting ministries that have otherwise had to rely on sales to survive.
 
-Wisdom and grace is needed. However, inaction is not an option, as in Jesus' own words, <q>you cannot serve both God and money.</q>
+Wisdom and grace is needed. However, things must not continue the way they are. As Jesus said, <q>you cannot serve both God and money.</q>
 
 
 &nbsp;
