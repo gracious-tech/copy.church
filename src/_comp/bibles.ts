@@ -379,6 +379,31 @@ const bibles_raw = {
             owner_supportive: false,
         },
     },
+    berean: {
+        abbrev: "BSB",
+        name: "Berean Study Bible",
+        year: 2016,
+        type: "Dynamic",
+        source: "Alexandrian",
+        info: 'https://bereanbibles.com/',
+        license: 'https://berean.bible/terms.htm',
+        read: 'https://www.bible.com/en-GB/bible/3034/JHN.1.BSB',
+        credit: "",
+        can: {
+            read_for_free: true,
+            read_anonymously: true,
+            quote: 2000,
+            quote_ratio: true,
+            quote_book: true,
+            not_attribute: false,
+            use_quote_openly: true,
+            use_commercially: false,
+            audio: false,
+            translate: false,
+            modify: false,
+            owner_supportive: false,
+        },
+    },
 }
 
 
