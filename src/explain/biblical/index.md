@@ -57,4 +57,22 @@ However, modern Christianity has instead become a competitive commercial industr
 
 ## More depth
 
-This brief overview only scratches the surface of what the Bible has to say about giving freely. We recommend reading [The Dorean Principle](https://thedoreanprinciple.org/) which goes into much more depth.
+The following articles cover the most important aspects of the theology:
+
+<a class='article-preview' href='/articles/command-many-overlook/'>
+    <img src='/_assets/articles/command-many-overlook.png'>
+    <div>
+        <h3>The freely giving ethic</h3>
+        <p>How Jesus' command to freely give works with Paul's teaching on financial support.</p>
+    </div>
+</a>
+
+<a class='article-preview' href='/articles/biblical-funding/'>
+    <img src='/_assets/articles/biblical-funding.jpg'>
+    <div>
+        <h3>Biblical funding of ministry</h3>
+        <p>The spiritual dimension to funding ministry and how it differs to commercial models.</p>
+    </div>
+</a>
+
+For even more depth, see [The Dorean Principle](https://thedoreanprinciple.org/).
