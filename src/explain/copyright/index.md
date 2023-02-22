@@ -1,11 +1,17 @@
 
 # How copyright works
 
-As we all know, it is illegal to steal, you cannot take someone else's property. However, sometimes the value of property isn't contained in a physical object but in the intellect used to create it. The value of a song isn't contained in the single page it was originally written on but in all copies ever made of it. This is called intellectual property, and this is what copyright protects. Like any kind of property, it is automatically illegal to steal intellectual property, you don't have to apply for protection or even include a copyright notice on it. This applies not just to the original work but to all copies ever made of it.
+As we all know, it is illegal to steal, you cannot take someone else's property. However, sometimes the value of property isn't contained in a physical object but in the intellect used to create it. The value of a song isn't contained in the single page it was originally written on but in all copies ever made of it. This is called intellectual property, and this is what copyright protects.
 
-However, because intellectual property can be easily copied, it is perfect for sharing when you want to bless other people. Unlike physical property, intellectual property can often be reproduced at virtually no cost.
+There are many types of resources that are protected by copyright:
 
-But the only way intellectual property can be shared is if either you pay for every copy from the owner (such as printed books) or if the owner gives you permission to make copies yourself.
+ * __Textual resources:__ books, bibles, articles, trainings, ...
+ * __Artistic resources:__ music, poems, photos, artwork, ...
+ * __And others like:__ sermons, software, ...
+
+Like any kind of property, it is automatically illegal to steal intellectual property, you don't have to apply for protection or even include a copyright notice on it. This applies not just to the original work but to all copies ever made of it.
+
+However, because intellectual property can be easily copied, it is perfect for sharing when you want to bless other people. Unlike physical property, intellectual property can often be reproduced at virtually no cost. But the only way intellectual property can be shared is if either you pay for every copy from the owner (such as printed books) or if the owner gives you permission to make copies yourself.
 
 
 ## Fair use

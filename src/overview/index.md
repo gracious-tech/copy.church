@@ -48,7 +48,7 @@ onBeforeMount(() => {
 
 # This is a call<br>to further God's kingdom<br>by freely sharing resources
 
-“Freely you received, so freely give” &mdash; __Jesus__
+“Freely you received, freely give” &mdash; __Jesus__
 
 <img src='@/_assets/ill_share.svg'>
 
@@ -101,24 +101,6 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 <a href='/collection/'>
     <img src='@/_assets/ill_collection.svg' width=120>
 </a>
-
-
-## What's an example?
-Say you wrote a Bible study on Ephesians for a youth group. Another youth leader thought the study was helpful so they asked you for a copy, which they then made some changes to and also shared it with some other leaders.
-
-You are totally fine with how your resource was used, but they actually broke the law. Your resource was copyrighted the moment you created it. While you permitted the leader to make a copy for themselves, you did not initially give them permission to share it with others or to modify it.
-
-Your resource then ends up in the hands of some other leaders, who know a bit about copyright, and they decide they'll have to write their own study on Ephesians because they don't know whether the original author (you) would permit them to use it or not.
-
-So copyright in this example (1) unnecessarily made other believers lawbreakers and (2) prevented the resource from being further shared.
-
-
-## What resources get copyrighted?
-
-Almost any form of intellectual property:
- * __Textual resources:__ books, bibles, articles, trainings, ...
- * __Artistic resources:__ music, poems, photos, artwork, ...
- * __And others like:__ sermons, software, ...
 
 
 ## But...

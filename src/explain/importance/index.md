@@ -17,6 +17,16 @@ Christians have become so used to paying for resources, and so trusting of resou
 It is a simple fact that ministry has become thoroughly commercialized. Are good intentions really enough to justify it?
 
 
+## How copyright affects everyday ministry
+Say you wrote a Bible study on Ephesians for a youth group. Another youth leader thought the study was helpful so they asked you for a copy, which they then made some changes to and also shared it with some other leaders.
+
+You are totally fine with how your resource was used, but they actually broke the law. Your resource was copyrighted the moment you created it. While you permitted the leader to make a copy for themselves, you did not initially give them permission to share it with others or to modify it.
+
+Your resource then ends up in the hands of some other leaders, who know a bit about copyright, and they decide they'll have to write their own study on Ephesians because they don't know whether the original author (you) would permit them to use it or not.
+
+So copyright in this example (1) unnecessarily made other believers lawbreakers and (2) prevented the resource from being further shared.
+
+
 ## The difference of the digital age
 In the time of the early church, sharing and distributing Christian resources was very costly. Teachings were shared verbally face-to-face or every copy written by hand. Distributing resources involved lengthy dangerous journeys.
 
