@@ -145,13 +145,13 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_temple.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_singing.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_stop.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_terms.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_read.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_giving.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_ascension.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_share.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_beginning.jpg'>
-    <img @click='share_img' width='1024' height='848' src='/memes/other_burden.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_ministry.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_trainings.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_access.jpg'>
@@ -160,6 +160,7 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_copyright.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_church.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_charge.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_burden.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_plans.jpg'>
 </div>
 
