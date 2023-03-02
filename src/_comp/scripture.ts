@@ -1,6 +1,20 @@
 
 export const scripture:Record<string, {net:string, esv:string, niv:string, csb:string}> = {
 
+"1 Sam 2:15-17": {
+    net: "Also, before they burned the fat the priest’s attendant would come and say to the person who was making the sacrifice, “Give some meat for the priest to roast! He won’t accept boiled meat from you, but only raw.” If the individual said to him, “They should certainly burn the fat away first, then take for yourself whatever you wish,” then he would say, “No! Give it now! If not, I’ll take it by force!” The sin of these young men was very great in the Lord’s sight, for they treated the Lord’s offering with contempt.",
+    esv: "Moreover, before the fat was burned, the priest's servant would come and say to the man who was sacrificing, “Give meat for the priest to roast, for he will not accept boiled meat from you but only raw.” And if the man said to him, “Let them burn the fat first, and then take as much as you wish,” he would say, “No, you must give it now, and if not, I will take it by force.” Thus the sin of the young men was very great in the sight of the Lord, for the men treated the offering of the Lord with contempt.",
+    niv: "But even before the fat was burned, the priest’s servant would come and say to the person who was sacrificing, “Give the priest some meat to roast; he won’t accept boiled meat from you, but only raw.” If the person said to him, “Let the fat be burned first, and then take whatever you want,” the servant would answer, “No, hand it over now; if you don’t, I’ll take it by force.” This sin of the young men was very great in the Lord’s sight, for they were treating the Lord’s offering with contempt.",
+    csb: "Even before the fat was burned, the priest’s servant would come and say to the one who was sacrificing, “Give the priest some meat to roast, because he won’t accept boiled meat from you—only raw.” If that person said to him, “The fat must be burned first; then you can take whatever you want for yourself,” the servant would reply, “No, I insist that you hand it over right now. If you don’t, I’ll take it by force!” So the servants’ sin was very severe in the presence of the Lord, because the men treated the Lord’s offering with contempt.",
+},
+
+"2 Kings 5:15-16": {
+    net: "He and his entire entourage returned to the prophet. Naaman came and stood before him. He said, “For sure I know that there is no God in all the earth except in Israel! Now, please accept a gift from your servant.” But Elisha replied, “As certainly as the Lord lives (whom I serve), I will take nothing from you.” Naaman insisted that he take it, but he refused.",
+    esv: "Then he returned to the man of God, he and all his company, and he came and stood before him. And he said, “Behold, I know that there is no God in all the earth but in Israel; so accept now a present from your servant.” But he said, “As the Lord lives, before whom I stand, I will receive none.” And he urged him to take it, but he refused.",
+    niv: "Then Naaman and all his attendants went back to the man of God. He stood before him and said, “Now I know that there is no God in all the world except in Israel. So please accept a gift from your servant.” The prophet answered, “As surely as the Lord lives, whom I serve, I will not accept a thing.” And even though Naaman urged him, he refused.",
+    csb: "Then Naaman and his whole company went back to the man of God, stood before him, and declared, “I know there’s no God in the whole world except in Israel. Therefore, please accept a gift from your servant.” But Elisha said, “As the Lord lives, in whose presence I stand, I will not accept it.” Naaman urged him to accept it, but he refused.",
+},
+
 "Micah 3:11b": {
     net: "her priests proclaim rulings for profit, and her prophets read omens for pay. Yet they claim to trust the Lord and say, “The Lord is among us. Disaster will not overtake us!”",
     esv: "its priests teach for a price; its prophets practice divination for money; yet they lean on the Lord and say, “Is not the Lord in the midst of us? No disaster shall come upon us.”",
@@ -34,6 +48,13 @@ export const scripture:Record<string, {net:string, esv:string, niv:string, csb:s
     esv: "Now the full number of those who believed were of one heart and soul, and no one said that any of the things that belonged to him was his own, but they had everything in common.",
     niv: "All the believers were one in heart and mind. No one claimed that any of their possessions was their own, but they shared everything they had.",
     csb: "Now the entire group of those who believed were of one heart and mind, and no one claimed that any of his possessions was his own, but instead they held everything in common.",
+},
+
+"Acts 8:18-21": {
+    net: "Now Simon, when he saw that the Spirit was given through the laying on of the apostles’ hands, offered them money, saying, “Give me this power too, so that everyone I place my hands on may receive the Holy Spirit.” But Peter said to him, “May your silver perish with you, because you thought you could acquire God’s gift with money! You have no share or part in this matter because your heart is not right before God!",
+    esv: "Now when Simon saw that the Spirit was given through the laying on of the apostles' hands, he offered them money, saying, “Give me this power also, so that anyone on whom I lay my hands may receive the Holy Spirit.” But Peter said to him, “May your silver perish with you, because you thought you could obtain the gift of God with money! You have neither part nor lot in this matter, for your heart is not right before God.",
+    niv: "When Simon saw that the Spirit was given at the laying on of the apostles’ hands, he offered them money and said, “Give me also this ability so that everyone on whom I lay my hands may receive the Holy Spirit.” Peter answered: “May your money perish with you, because you thought you could buy the gift of God with money! You have no part or share in this ministry, because your heart is not right before God.",
+    csb: "When Simon saw that the Spirit was given through the laying on of the apostles’ hands, he offered them money, saying, “Give me this power also so that anyone I lay hands on may receive the Holy Spirit.” But Peter told him, “May your silver be destroyed with you, because you thought you could obtain the gift of God with money! You have no part or share in this matter, because your heart is not right before God.",
 },
 
 "1 Cor 6:7": {
@@ -78,11 +99,32 @@ export const scripture:Record<string, {net:string, esv:string, niv:string, csb:s
     csb: "For we do not market the word of God for profit like so many. On the contrary, we speak with sincerity in Christ, as from God and before God.",
 },
 
+"1 Tim 6:5b-8": {
+    net: "people corrupted in their minds and deprived of the truth, who suppose that godliness is a way of making a profit. Now godliness combined with contentment brings great profit. For we have brought nothing into this world and so we cannot take a single thing out either. But if we have food and shelter, we will be satisfied with that.",
+    esv: "people who are depraved in mind and deprived of the truth, imagining that godliness is a means of gain. But godliness with contentment is great gain, for we brought nothing into the world, and we cannot take anything out of the world. But if we have food and clothing, with these we will be content.",
+    niv: "people of corrupt mind, who have been robbed of the truth and who think that godliness is a means to financial gain. But godliness with contentment is great gain. For we brought nothing into the world, and we can take nothing out of it. But if we have food and clothing, we will be content with that.",
+    csb: "people whose minds are depraved and deprived of the truth, who imagine that godliness is a way to material gain. But godliness with contentment is great gain. For we brought nothing into the world, and we can take nothing out. If we have food and clothing, we will be content with these.",
+},
+
+"Titus 1:10-11": {
+    net: "For there are many rebellious people, idle talkers, and deceivers, especially those with Jewish connections, who must be silenced because they mislead whole families by teaching for dishonest gain what ought not to be taught.",
+    esv: "For there are many who are insubordinate, empty talkers and deceivers, especially those of the circumcision party. They must be silenced, since they are upsetting whole families by teaching for shameful gain what they ought not to teach.",
+    niv: "For there are many rebellious people, full of meaningless talk and deception, especially those of the circumcision group. They must be silenced, because they are disrupting whole households by teaching things they ought not to teach—and that for the sake of dishonest gain.",
+    csb: "For there are many rebellious people, full of empty talk and deception, especially those from the circumcision party. It is necessary to silence them; they are ruining entire households by teaching what they shouldn’t in order to get money dishonestly.",
+},
+
 "Phil 4:18": {
     net: "For I have received everything, and I have plenty. I have all I need because I received from Epaphroditus what you sent—a fragrant offering, an acceptable sacrifice, very pleasing to God.",
     esv: "I have received full payment, and more. I am well supplied, having received from Epaphroditus the gifts you sent, a fragrant offering, a sacrifice acceptable and pleasing to God.",
     niv: "I have received full payment and have more than enough. I am amply supplied, now that I have received from Epaphroditus the gifts you sent. They are a fragrant offering, an acceptable sacrifice, pleasing to God.",
     csb: "But I have received everything in full, and I have an abundance. I am fully supplied, having received from Epaphroditus what you provided—a fragrant offering, an acceptable sacrifice, pleasing to God.",
+},
+
+"1 Peter 5:1-2": {
+    net: "So as your fellow elder and a witness of Christ’s sufferings and as one who shares in the glory that will be revealed, I urge the elders among you: Give a shepherd’s care to God’s flock among you, exercising oversight not merely as a duty but willingly under God’s direction, not for shameful profit but eagerly.",
+    esv: "So I exhort the elders among you, as a fellow elder and a witness of the sufferings of Christ, as well as a partaker in the glory that is going to be revealed: shepherd the flock of God that is among you, exercising oversight, not under compulsion, but willingly, as God would have you; not for shameful gain, but eagerly;",
+    niv: "To the elders among you, I appeal as a fellow elder and a witness of Christ’s sufferings who also will share in the glory to be revealed: Be shepherds of God’s flock that is under your care, watching over them—not because you must, but because you are willing, as God wants you to be; not pursuing dishonest gain, but eager to serve;",
+    csb: "I exhort the elders among you as a fellow elder and witness to the sufferings of Christ, as well as one who shares in the glory about to be revealed: Shepherd God’s flock among you, not overseeing out of compulsion but willingly, as God would have you; not out of greed for money but eagerly;",
 },
 
 "Rev 22:12": {
