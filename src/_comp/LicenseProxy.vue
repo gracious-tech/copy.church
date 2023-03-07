@@ -24,7 +24,7 @@ VPButton(:href='license.url' :text='`View actual ${type}`' theme='alt')
 
 p &nbsp;
 
-div(class='warning custom-block')
+div(class='tip custom-block')
     h3(style='margin-top: 0') How to use this {{ type }} for a new resource
     ol
         li(v-if='code === "cc-0"')
@@ -46,7 +46,7 @@ div(class='warning custom-block')
     p If your resource will be printed, put the URL below the text instead of linking to it.<br>If your resource is audio/visual, the text can be next to it on a webpage or somewhere else easy to find.
 
 
-div(class='custom-block')
+div(class='custom-block disclaimer')
     p We (copy.church) are not a law firm and do not provide legal services or legal advice. Distribution of licenses does not create a lawyer-client or other relationship. We make licenses and related information available on an “as-is” basis. We give no warranties regarding licenses, any material licensed under their terms and conditions, or any related information. We disclaim all liability for damages resulting from their use to the fullest extent possible.
 
 
@@ -78,5 +78,12 @@ ul, ol
     margin-bottom: 12px !important
     li
         margin: 0 !important
+
+.custom-block
+    p, li
+        font-size: inherit
+
+    &.disclaimer
+        font-size: 0.8em
 
 </style>

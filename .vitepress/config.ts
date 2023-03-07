@@ -22,7 +22,7 @@ export default defineConfig({
         },
     },
     themeConfig: {
-        logo: '/_assets/icon.svg',
+        logo: '/_assets/icon_round.svg',
         nav: [
             {text: "About", link: '/about/'},
         ],

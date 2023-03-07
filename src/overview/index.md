@@ -1,5 +1,6 @@
 ---
 title: Overview
+aside: false
 ---
 
 <script lang='ts' setup>
@@ -21,6 +22,28 @@ onBeforeMount(() => {
 
 
 <style lang='sass' scoped>
+
+h1:nth-child(1)
+    font-size: 80px
+    font-weight: bold
+    line-height: 1.1 // Fix VP's pixel value
+    color: var(--brand)
+    margin: 36px 0
+    text-align: center
+
+h1:nth-child(2)
+    font-size: 30px
+    text-align: center
+
+h1 + h4
+    text-align: center
+    margin-top: 32px
+    font-weight: normal
+
+.icon
+    width: 100%
+    max-width: 300px
+    margin: 50px auto
 
 .memes
     display: flex
@@ -45,12 +68,13 @@ onBeforeMount(() => {
 
 </style>
 
+# Let's copy, church
+# Give up your rights for the sake of the kingdom
 
-# This is a call<br>to further God's kingdom<br>by freely sharing resources
+#### “Freely you received, freely give” &mdash; __Jesus__
 
-“Freely you received, freely give” &mdash; __Jesus__
+<img class='icon' src='@/_assets/icon_round.svg'>
 
-<img src='@/_assets/ill_share.svg'>
 
 ## What's the problem?
 
@@ -63,6 +87,8 @@ This is [hindering ministry](/explain/examples/) in various ways:
  1. __Helpful resources are not being shared__ as widely as they could be
  2. __Many unintentionally break the law__ by sharing copyrighted resources
  3. __We're being taught to pay for ministry__ rather than partner in it
+
+<img src='@/_assets/ill_share.svg'>
 
 
 ## What does the Bible say?
