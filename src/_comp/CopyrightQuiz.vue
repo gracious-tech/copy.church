@@ -133,7 +133,7 @@ div.nav
     VPButton(text="Next" :disabled='slide === 12' @click='next')
 
 div.leave
-    VPButton(href='/share/' text="Exit Quiz" theme='alt')
+    VPButton(href='/' text="Exit Quiz" theme='alt')
 
 </template>
 

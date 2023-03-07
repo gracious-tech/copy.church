@@ -33,26 +33,14 @@ export default defineConfig({
         sidebar: {
             '/articles/': [
                 {
-                    text: "",
+                    text: "Articles",
                     items: [
-                        {text: "← Project Overview", link: '/overview/'},
+                        {text: "The Command Many Ministries Overlook", link: '/articles/command-many-overlook/'},
+                        {text: "Biblical Funding of Ministry", link: '/articles/biblical-funding/'},
                     ],
                 },
-                // {
-                //     text: "Articles",
-                //     items: [
-                //         {text: "The Command Many Ministries Overlook", link: '/articles/command-many-overlook/'},
-                //     ],
-                // },
             ],
             '/': [
-                {
-                    text: "Introduction",
-                    items: [
-                        {text: "Overview", link: '/overview/'},
-                        {text: "Quiz", link: '/quiz/'},
-                    ],
-                },
                 {
                     text: "Join the movement",
                     items: [
@@ -77,6 +65,7 @@ export default defineConfig({
                 {
                     text: "Initiatives",
                     items: [
+                        {text: "Quiz", link: '/initiatives/quiz/'},
                         {text: "Am I being generous?", link: '/initiatives/assess/'},
                         {text: "English Bible ratings", link: '/initiatives/bibles/'},
                         {text: "Critical Text ratings", link: '/initiatives/critical-texts/'},
