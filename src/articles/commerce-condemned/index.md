@@ -16,13 +16,13 @@ const date = "Draft"  // nice_date(2023, 3, 2)
 </script>
 
 
-# 8 times commercialising ministry is condemned
+# 10 times commercialising ministry is condemned
 
 <h4 class='article-meta'>{{ date }} · Jon Here · 6 min read</h4>
 
 <img src='/_assets/articles/commerce-condemned.jpg' width='1200' height='630' class='article-hero'>
 
-The Bible has a lot to say about greed and love of money. Almost all Christians know it should be avoided. But how about misuse of money in ministry? While a more specific subcategory, the Bible too has much to say on this topic. It isn't limited to those who sell ministry either, but also those who offer to buy it. Here are eight passages that condemn commercialising ministry.
+The Bible has a lot to say about greed and love of money. Almost all Christians know it should be avoided. But how about misuse of money in ministry? While a more specific subcategory, the Bible too has much to say on this topic. It isn't limited to those who sell ministry either, but also those who offer to buy it. Here are ten passages that condemn commercialising ministry.
 
 
 ## Expecting payment
@@ -75,9 +75,11 @@ Note that Simon's sin wasn't obtaining salvation for himself through money; he w
 In addition to actual examples of people commercialising ministry, the Bible has several things to say about those who make a profit from doing ministry.
 
 ### 5. The Super Apostles
+
 In 2 Corinthians Paul responds to the "super apostles" who were not just leading the church astray but were also seeking to profit from their "ministry". Unlike the super apostles, Paul never charged for ministry (2 Cor 11:7), he only accepted voluntary financial support (Phil 2:18).
 
 <BibleQuote passage="2 Cor 2:17"></BibleQuote>
+
 
 ### 6. Paul's warning to Timothy
 
@@ -99,7 +101,25 @@ Peter also talks about those who minister for "shameful profit". Again, it is un
 
 <BibleQuote passage="1 Peter 5:1-2"></BibleQuote>
 
-While these are the clearest examples, the Bible does have much more to say on the subject. While seeking to profit from ministry is clearly condemned, even profiting (without seeking to) is in view. Ministers are to be content with being financially supported. If someone is profiting from ministry, it must be asked why they are receiving more than they need in the first place. Is their ministry being freely given?
+
+## Mixing commerce with ministry
+It is fine to engage in commerce in society at large, but Jesus himself warns us of the danger of mixing commerce and ministry together.
+
+
+### 9. The inability to serve both God and money
+Seeking to serve God and pursue money at the same time is not possible according to Jesus, as it will render one or the other insincere.
+
+<BibleQuote passage="Luke 16:13"></BibleQuote>
+
+
+### 10. Jesus cleanses the Temple
+Last and most memorable is Jesus' anger at those who tried to profit from people who came to worship God in the Temple, as recorded in all four Gospels:
+
+<BibleQuote passage="John 2:14-16"></BibleQuote>
+
+Obviously Jesus was not opposed to the general sale of animals in a normal market. But people were seeking to do commerce in a place of ministry and worship, God's very own Temple. While the holiness of the Temple is important context, we should remember that God's Word is also holy, and all ministry deals with that which is holy.
+
+We too have turned ministry into a marketplace, and the Lord is not likely to be pleased.
 
 
 &nbsp;

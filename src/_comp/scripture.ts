@@ -43,6 +43,20 @@ export const scripture:Record<string, {net:string, esv:string, niv:string, csb:s
     csb: "“Don’t acquire gold, silver, or copper for your money-belts. Don’t take a traveling bag for the road, or an extra shirt, sandals, or a staff, for the worker is worthy of his food.”",
 },
 
+"Luke 16:13": {
+    net: "No servant can serve two masters, for either he will hate the one and love the other, or he will be devoted to the one and despise the other. You cannot serve God and money.”",
+    esv: "No servant can serve two masters, for either he will hate the one and love the other, or he will be devoted to the one and despise the other. You cannot serve God and money.”",
+    niv: "“No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other. You cannot serve both God and money.”",
+    csb: "No servant can serve two masters, since either he will hate one and love the other, or he will be devoted to one and despise the other. You cannot serve both God and money.”",
+},
+
+"John 2:14-16": {
+    net: "He found in the temple courts those who were selling oxen and sheep and doves, and the money changers sitting at tables. So he made a whip of cords and drove them all out of the temple courts, with the sheep and the oxen. He scattered the coins of the money changers and overturned their tables. To those who sold the doves he said, “Take these things away from here! Do not make my Father’s house a marketplace!”",
+    esv: "In the temple he found those who were selling oxen and sheep and pigeons, and the money-changers sitting there. And making a whip of cords, he drove them all out of the temple, with the sheep and oxen. And he poured out the coins of the money-changers and overturned their tables. And he told those who sold the pigeons, “Take these things away; do not make my Father's house a house of trade.”",
+    niv: "In the temple courts he found people selling cattle, sheep and doves, and others sitting at tables exchanging money. So he made a whip out of cords, and drove all from the temple courts, both sheep and cattle; he scattered the coins of the money changers and overturned their tables. To those who sold doves he said, “Get these out of here! Stop turning my Father’s house into a market!”",
+    csb: "In the temple he found people selling oxen, sheep, and doves, and he also found the money changers sitting there. After making a whip out of cords, he drove everyone out of the temple with their sheep and oxen. He also poured out the money changers’ coins and overturned the tables. He told those who were selling doves, “Get these things out of here! Stop turning my Father’s house into a marketplace!”",
+},
+
 "Acts 4:32": {
     net: "The group of those who believed were of one heart and mind, and no one said that any of his possessions was his own, but everything was held in common.",
     esv: "Now the full number of those who believed were of one heart and soul, and no one said that any of the things that belonged to him was his own, but they had everything in common.",
