@@ -5,6 +5,7 @@ import {defineConfig} from 'vitepress'
 
 
 export default defineConfig({
+    cleanUrls: true,  // Don't force `.html` on urls
     outDir: 'dist',
     srcDir: 'src',
     title: "Let's copy, church",
