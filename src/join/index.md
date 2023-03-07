@@ -7,6 +7,13 @@ import {people} from '@/_comp/people'
 
 </script>
 
+<style lang='sass' scoped>
+.custom-block
+    padding: 16px
+    p
+        font-size: 0.9em
+</style>
+
 
 # Join the community
 
@@ -26,8 +33,6 @@ A great many believers are already freely giving their resources; here's just a 
 <CommittedPerson v-for='id of Object.keys(people)' :id='id'></CommittedPerson>
 
 
-::: warning Are you freely giving quality resources?
-
-[Let us know](/about/) so we can add you.
+::: info Are you also freely giving? [Submit your profile](/join/apply/)
 
 :::
