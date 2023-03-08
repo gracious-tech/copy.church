@@ -381,7 +381,7 @@ const bibles_raw = {
     },
     berean: {
         abbrev: "BSB",
-        name: "Berean Study Bible",
+        name: "Berean Standard Bible",
         year: 2016,
         type: "Dynamic",
         source: "Alexandrian",
