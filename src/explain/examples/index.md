@@ -52,3 +52,16 @@ It's often argued that anyone wanting to use a resource should simply ask permis
 > There was one time we couldn't even contact a Bible translation owner because they didn't publish any means of contact, and their website's contact form was broken, so we gave up.
 >
 > In sum, we usually expect to either not receive any reply or to be denied access to resources. To be granted access to something is definitely the less common outcome in our experience."
+
+
+## Testimonies
+
+The [Digital Bible Society was founded](https://dbs.org/about/overview/history) in response to the issue of copyright and the lack of resources for places like China:
+
+> Ken, a Bible enthusiast and self-taught computer programmer agreed to meet with Jon [a Chinese missionary]. He introduced him to commercial Bible software of the time: PC Study Bible and Logos. Jon, seeing the abundance of resources began weeping. He then asked Ken to give him copies of these programs for distribution across China. Ken said, “No, that’s illegal. It’s against copyright law.”
+>
+> Jon questioned this line of reasoning by asking, “What do you care about American copyright law when we are going to jail for distributing Bibles?”
+>
+> Ken told him it was a matter of conscience and asked, “Why would you even want Bibles and books in English? Would it not be better to distribute in Chinese?”
+>
+> “Of course, it would.” Jon said, “But, English is better than nothing and that is what we have in China, nothing!”
