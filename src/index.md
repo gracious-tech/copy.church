@@ -78,7 +78,7 @@ h1 + h4
 
 #### “Freely you received, freely give” &mdash; __Jesus__
 
-<img class='icon' src='@/_assets/icon_round.svg'>
+<img class='icon' src='/_assets/icon.svg'>
 
 
 ## What's the problem?
