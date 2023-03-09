@@ -71,6 +71,11 @@ h1 + h4
         border-radius: 50%
         margin-right: 12px
 
+.more
+    @media (max-width: 600px)
+        display: flex
+        flex-direction: column
+
 </style>
 
 # Let's copy, church
@@ -140,7 +145,7 @@ Yes, copyright has some positive benefits and is often used with good intentions
 
 ## Learn more
 
-<p>
+<p class='more'>
     <VPButton href='/initiatives/quiz/' theme='alt' text="Take a quiz"></VPButton>
     &nbsp;
     <VPButton href='/share/' theme='alt' text="Scroll some memes"></VPButton>
