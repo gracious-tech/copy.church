@@ -43,7 +43,7 @@ Some artists tell of how encouraged they are that their songs are being sung by 
 
 ## Asking permission
 
-It's often argued that anyone wanting to use a resource should simply ask permission. There are [many problems with that](/explain/objections/#just-ask-for-permission), both in principle and in practice.
+It's often argued that anyone wanting to use a resource should simply ask permission. There are [many problems with that](/objections/permission/), both in principle and in practice.
 
 [Gracious Tech](https://gracious.tech/) has contacted many different Christian organizations, requesting permission for many different types of resources, and this was their experience:
 

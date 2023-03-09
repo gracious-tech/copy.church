@@ -31,6 +31,65 @@ export default defineConfig({
             {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
         ],
         sidebar: {
+            '/objections/': [
+                {
+                    text: "",
+                    items: [
+                        {text: "All Objections", link: '/explain/objections/'},
+                    ],
+                },
+                {
+                    text: "Scripture",
+                    items: [
+                        {text: "It's not a command", link: '/objections/not-command/'},
+                        {text: "Worker deserves wages", link: '/objections/deserves-wages/'},
+                        {text: "Only greed condemned", link: '/objections/only-greed/'},
+                    ],
+                },
+                {
+                    text: "Theology",
+                    items: [
+                        {text: "There's only one verse", link: '/objections/one-verse/'},
+                        {text: "This is political ideology", link: '/objections/political/'},
+                        {text: "We're in a different era", link: '/objections/different-era/'},
+                        {text: "You can't force generosity", link: '/objections/generosity/'},
+                        {text: "Everything belongs to God", link: '/objections/everything/'},
+                    ],
+                },
+                {
+                    text: "Application",
+                    items: [
+                        {text: "Some can't give freely", link: '/objections/feasibility/'},
+                        {text: "What about authors", link: '/objections/authors/'},
+                        {text: "What about publishers", link: '/objections/publishers/'},
+                        {text: "Why target parachurch", link: '/objections/parachurch/'},
+                        {text: "There's lots already free", link: '/objections/already-free/'},
+                        {text: "What can't be sold", link: '/objections/scope/'},
+                        {text: "Free works not valued", link: '/objections/not-valued/'},
+                    ],
+                },
+                {
+                    text: "Copyright",
+                    items: [
+                        {text: "Prevents theft", link: '/objections/theft/'},
+                        {text: "Prevents heresy", link: '/objections/heresy/'},
+                        {text: "Prevents plagiarism", link: '/objections/plagiarism/'},
+                        {text: "Fosters innovation", link: '/objections/innovation/'},
+                        {text: "Just ask permission", link: '/objections/permission/'},
+                    ],
+                },
+                {
+                    text: "Licenses",
+                    items: [
+                        {text: "Forbidding commercial use", link: '/objections/non-commercial/'},
+                        {text: "Forbidding derivatives", link: '/objections/no-derivatives/'},
+                        {text: "Requiring share-alike", link: '/objections/share-alike/'},
+                        {text: "Requiring attribution", link: '/objections/attribution/'},
+                        {text: "Why public domain", link: '/objections/public-domain/'},
+                    ],
+                },
+            ],
+
             '/articles/': [
                 {
                     text: "Articles",
@@ -40,6 +99,7 @@ export default defineConfig({
                     ],
                 },
             ],
+
             '/': [
                 {
                     text: "Join the movement",

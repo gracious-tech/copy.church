@@ -94,7 +94,7 @@ table
                 small Some versions of the UBS have a commentary that lists the reasons for the most significant textual choices, but it is sold as a separate product.
 
 p
-    small You may be able to ask the copyright owner for additional permissions. Though, <a href='/explain/objections/#just-ask-for-permission'>there is no guarantee</a> your request will be accepted.
+    small You may be able to ask the copyright owner for additional permissions. Though, <a href='/objections/permission/'>there is no guarantee</a> your request will be accepted.
 
 </template>
 
