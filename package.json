@@ -3,6 +3,7 @@
   "devDependencies": {
     "@volar/vue-language-plugin-pug": "^1.2.0",
     "flexsearch": "^0.7.31",
+    "npm-check-updates": "^16.7.12",
     "pug": "^3.0.2",
     "sass": "^1.58.3",
     "stopword": "^2.0.7",
@@ -10,8 +11,5 @@
     "vitepress": "^1.0.0-alpha.51",
     "vitepress-plugin-search": "^1.0.4-alpha.19",
     "wink-porter2-stemmer": "^2.0.1"
-  },
-  "dependencies": {
-    "npm-check-updates": "^16.7.12"
   }
 }
