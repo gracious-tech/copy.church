@@ -25,13 +25,13 @@ We affirm the right to financial support for ministry, but like Paul in 1 Corint
 ## Legal matters
 
 ### Copyright
-All content on this site, except:
+All content on this site (except content belonging to a third-party) is [dedicated to the public domain](/free/) and all code is [open source](https://github.com/gracious-tech/copy.church).
 
- * The name and logo
- * Some Scripture quotations
- * Anything else belonging to a third party
+Anything belonging to a third-party is attributed as so, except when attribution isn't required (such as with [Unsplash images](https://unsplash.com/license)).
 
-is [dedicated to the public domain](/free/) and can be used as you like without attribution. The source code is also [open source](https://github.com/gracious-tech/copy.church).
+We give up all legal rights, but request for the benefit of others:
+ * You avoid using our brand (name, logo, colors, etc.) for adaptations not associated with us
+ * Consider working with us before creating duplicate sites or translations
 
 
 ### Disclaimer
