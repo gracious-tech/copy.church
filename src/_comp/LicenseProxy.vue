@@ -7,7 +7,7 @@ p Resources {{ type_past }} and linked here have been shared for the furthering 
 h3 {{ license.creator }} {{ license.name }} {{ type }}
 
 p
-    strong(class='good') You can use and share the resource,&nbsp;
+    strong(class='good') You can copy + modify + translate the resource,&nbsp;
     span(v-if='code === "cc-0"') without restriction
     span(v-else) however:
 
