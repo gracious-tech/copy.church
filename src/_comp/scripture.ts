@@ -15,6 +15,13 @@ export const scripture:Record<string, {net:string, esv:string, niv:string, csb:s
     csb: "Then Naaman and his whole company went back to the man of God, stood before him, and declared, “I know there’s no God in the whole world except in Israel. Therefore, please accept a gift from your servant.” But Elisha said, “As the Lord lives, in whose presence I stand, I will not accept it.” Naaman urged him to accept it, but he refused.",
 },
 
+"Ecc 8:14a": {
+    net: "Here is another enigma that occurs on earth: Sometimes there are righteous people who get what the wicked deserve, and sometimes there are wicked people who get what the righteous deserve.",
+    esv: "There is a vanity that takes place on earth, that there are righteous people to whom it happens according to the deeds of the wicked, and there are wicked people to whom it happens according to the deeds of the righteous.",
+    niv: "There is something else meaningless that occurs on earth: the righteous who get what the wicked deserve, and the wicked who get what the righteous deserve.",
+    csb: "There is a futility that is done on the earth: there are righteous people who get what the actions of the wicked deserve, and there are wicked people who get what the actions of the righteous deserve.",
+},
+
 "Micah 3:11b": {
     net: "her priests proclaim rulings for profit, and her prophets read omens for pay. Yet they claim to trust the Lord and say, “The Lord is among us. Disaster will not overtake us!”",
     esv: "its priests teach for a price; its prophets practice divination for money; yet they lean on the Lord and say, “Is not the Lord in the midst of us? No disaster shall come upon us.”",
