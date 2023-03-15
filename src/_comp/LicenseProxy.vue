@@ -2,23 +2,19 @@
 <template lang='pug'>
 
 h1 Copy for the kingdom
-p Resources {{ type_past }} and linked here have been generously shared for the furthering of God's kingdom. This is an easy to understand description of the following {{ type }} that applies to them:
+p Resources {{ type_past }} and linked here have been shared for the furthering of God's kingdom. This is an easy to understand description of the following {{ type }} that applies to them:
 
 h3 {{ license.creator }} {{ license.name }} {{ type }}
 
-template(v-if='code === "uw-ft"')
-    p
-        strong(class='mixed') You can only translate this resource, the original cannot be shared
-template(v-else-if='code.startsWith("cc-")')
-    p
-        strong(class='good') You can use and share the resource,&nbsp;
-        span(v-if='code === "cc-0"') without restriction
-        span(v-else) however:
+p
+    strong(class='good') You can use and share the resource,&nbsp;
+    span(v-if='code === "cc-0"') without restriction
+    span(v-else) however:
 
-    ul
-        li(v-if='code.includes("by")') #[strong(class='mixed') Attribution] &mdash; You must credit the author, link to this license, and indicate if changes were made
-        li(v-if='code.includes("nc")') #[strong(class='mixed') NonCommercial] &mdash; You cannot use the resource for commercial purposes
-        li(v-if='code.includes("sa")') #[strong(class='mixed') ShareAlike] &mdash; You must use this license when sharing any changes
+ul
+    li(v-if='code.includes("by")') #[strong(class='mixed') Attribution] &mdash; You must credit the author, link to this license, and indicate if changes were made
+    li(v-if='code.includes("nc")') #[strong(class='mixed') NonCommercial] &mdash; You cannot use the resource for commercial purposes
+    li(v-if='code.includes("sa")') #[strong(class='mixed') ShareAlike] &mdash; You must use this license when sharing any changes
 
 VPButton(:href='license.url' :text='`View actual ${type}`' theme='alt')
 

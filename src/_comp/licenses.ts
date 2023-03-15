@@ -31,10 +31,4 @@ export const LICENSES = {
         name: "Attribution-NonCommercial-ShareAlike",
         url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode',
     },
-    'uw-ft': {
-        abbrev: 'Free Translate',
-        creator: "unfoldingWord",
-        name: "Free Translate",
-        url: '/licenses/uw-ft/license/',
-    },
 }
