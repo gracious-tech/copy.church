@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="60"
+   viewBox="0 0 79.374999 15.875"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="badges.svg"
+   inkscape:export-filename="subtle/open-source.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2"
+     inkscape:cx="142"
+     inkscape:cy="34.25"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="360"
+     inkscape:window-y="1440"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer7"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="bg"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       id="rect49976"
+       width="259.01492"
+       height="184.47742"
+       x="-97.963997"
+       y="-86.539291" />
+  </g>
+  <g
+     inkscape:label="bg_color"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       id="rect892"
+       style="opacity:1;fill:#f0df0f;stroke-width:0.999999;stop-color:#000000"
+       d="M 12,0 C 5.352,0 0,5.352 0,12 v 36 c 0,6.648 5.352,12 12,12 H 24 L 60,0 Z"
+       transform="scale(0.26458333)" />
+    <path
+       id="rect892-5"
+       style="fill:#ffeeaa;stroke-width:0.264583;stop-color:#000000"
+       d="M 15.875,0 H 76.2 c 1.75895,0 3.175,1.41605 3.175,3.175 V 12.7 c 0,1.75895 -1.41605,3.175 -3.175,3.175 H 15.875 Z"
+       sodipodi:nodetypes="csssscc" />
+    <path
+       id="rect26866-5-3"
+       style="display:inline;fill:#635c06;stroke-width:0.475512;stop-color:#000000"
+       d="M 15.875,-3.6666667e-7 6.3499999,15.875 H 15.875 Z"
+       sodipodi:nodetypes="cccc" />
+    <g
+       id="g868"
+       transform="scale(0.26458333)">
+      <g
+         id="g852">
+        <g
+           transform="matrix(0.81127,0,0,0.77005,5.1663,6.2558)"
+           stop-color="#000000"
+           stroke-opacity="0.13739"
+           stroke-width="1.8898"
+           aria-label="©"
+           id="g850">
+          <path
+             d="m 5.9583,24.315 c 0,11.016 8.2812,19.505 18.49,19.505 10.182,0 18.49,-8.4896 18.49,-19.505 0,-11.016 -8.3073,-19.453 -18.49,-19.453 -10.208,0 -18.49,8.4375 -18.49,19.453 z m 3.1771,0 c 0,-9.1927 6.849,-16.198 15.312,-16.198 8.4375,0 15.286,7.0052 15.286,16.198 0,9.1927 -6.849,16.25 -15.286,16.25 -8.4635,0 -15.312,-7.0573 -15.312,-16.25 z m 19.609,3.4635 c 0,3.3854 -1.5885,4.6615 -4.6615,4.6615 -3.3333,0 -5.0521,-2.6823 -5.0521,-6.5625 v -3.125 c 0,-3.8281 1.7187,-6.5365 5.0521,-6.5365 3.0729,0 4.6875,1.3281 4.6875,4.6615 h 4.0625 c 0,-5.4427 -3.3854,-8.1771 -8.75,-8.1771 -5.599,0 -9.0885,4.1146 -9.0885,10.078 v 3.099 c 0,5.9896 3.4896,10.078 9.0885,10.078 5.3646,0 8.724,-2.7083 8.724,-8.1771 z"
+             id="path848" />
+        </g>
+      </g>
+      <path
+         d="m 40.988,43.967 -2.0251,-0.80079 -1.268,3.2063 c -0.11568,0.29251 -0.1157,0.57221 -10e-5,0.8391 0.11562,0.26689 0.31969,0.45817 0.6122,0.57385 0.27,0.10682 0.54408,0.10458 0.82223,-0.0066 0.27814,-0.11118 0.47505,-0.31302 0.59072,-0.60553 z m 5.4002,2.1356 -2.0251,-0.80079 -1.2679,3.2064 c -0.11568,0.29251 -0.11569,0.57221 -10e-5,0.8391 0.11562,0.26689 0.31969,0.45817 0.6122,0.57385 0.26999,0.10682 0.54408,0.10458 0.82222,-0.0066 0.27814,-0.11118 0.47505,-0.31302 0.59073,-0.60553 z m 3.4189,-4.6975 c 0.25807,-0.65251 0.21389,-1.314 -0.13246,-1.9843 -0.34636,-0.67037 -0.8908,-1.1524 -1.6333,-1.446 l 1.268,-3.2063 -4.7252,-1.8686 -1.268,3.2063 c -0.7425,-0.29369 -1.4694,-0.31438 -2.1806,-0.06222 -0.71118,0.25216 -1.1958,0.7045 -1.4538,1.357 l -1.6684,4.2189 10.125,4.0042 z m -0.2462,-11.221 c 0.59614,-1.5076 0.57101,-2.9968 0.0134,-4.327 -0.615,-1.4671 -1.9361,-2.7454 -3.4135,-3.3353 -1.5025,-0.60007 -3.3742,-0.58808 -4.8533,0.06771 -1.3185,0.58461 -2.3535,1.6582 -2.9497,3.1658 l -0.8676,2.1938 2.0251,0.80079 0.86759,-2.1938 c 0.37378,-0.94501 0.98341,-1.6013 1.7918,-1.9649 0.96842,-0.43559 2.1999,-0.4399 3.1853,-0.04432 0.9603,0.38548 1.8194,1.2203 2.2126,2.1774 0.33684,0.81992 0.33697,1.714 -0.03675,2.659 l -1.2012,3.0376 2.0251,0.80079 z"
+         stroke-width="0.72589"
+         id="path854" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="bg_grey"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <path
+       id="rect892-6"
+       style="display:inline;fill:#808080;fill-opacity:0.8;stroke-width:0.999999;stop-color:#000000"
+       d="M 12,0 C 5.352,0 0,5.352 0,12 v 36 c 0,6.648 5.352,12 12,12 H 24 L 60,0 Z"
+       transform="scale(0.26458333)" />
+    <path
+       id="rect892-5-5"
+       style="display:inline;fill:#b3b3b3;fill-opacity:0.8;stroke-width:0.264583;stop-color:#000000"
+       d="M 15.875,0 H 76.2 c 1.75895,0 3.175,1.41605 3.175,3.175 V 12.7 c 0,1.75895 -1.41605,3.175 -3.175,3.175 H 15.875 Z"
+       sodipodi:nodetypes="csssscc" />
+    <path
+       id="rect26866-5-6"
+       style="display:inline;fill:#4d4d4d;fill-opacity:0.8;stroke-width:0.475512;stop-color:#000000"
+       d="M 15.875,-3.6666667e-7 6.3499999,15.875 H 15.875 Z"
+       sodipodi:nodetypes="cccc" />
+    <g
+       id="g868-3"
+       transform="scale(0.26458333)"
+       style="display:inline">
+      <g
+         id="g852-9">
+        <g
+           transform="matrix(0.81127,0,0,0.77005,5.1663,6.2558)"
+           stop-color="#000000"
+           stroke-opacity="0.13739"
+           stroke-width="1.8898"
+           aria-label="©"
+           id="g850-4">
+          <path
+             d="m 5.9583,24.315 c 0,11.016 8.2812,19.505 18.49,19.505 10.182,0 18.49,-8.4896 18.49,-19.505 0,-11.016 -8.3073,-19.453 -18.49,-19.453 -10.208,0 -18.49,8.4375 -18.49,19.453 z m 3.1771,0 c 0,-9.1927 6.849,-16.198 15.312,-16.198 8.4375,0 15.286,7.0052 15.286,16.198 0,9.1927 -6.849,16.25 -15.286,16.25 -8.4635,0 -15.312,-7.0573 -15.312,-16.25 z m 19.609,3.4635 c 0,3.3854 -1.5885,4.6615 -4.6615,4.6615 -3.3333,0 -5.0521,-2.6823 -5.0521,-6.5625 v -3.125 c 0,-3.8281 1.7187,-6.5365 5.0521,-6.5365 3.0729,0 4.6875,1.3281 4.6875,4.6615 h 4.0625 c 0,-5.4427 -3.3854,-8.1771 -8.75,-8.1771 -5.599,0 -9.0885,4.1146 -9.0885,10.078 v 3.099 c 0,5.9896 3.4896,10.078 9.0885,10.078 5.3646,0 8.724,-2.7083 8.724,-8.1771 z"
+             id="path848-8" />
+        </g>
+      </g>
+      <path
+         d="m 40.988,43.967 -2.0251,-0.80079 -1.268,3.2063 c -0.11568,0.29251 -0.1157,0.57221 -10e-5,0.8391 0.11562,0.26689 0.31969,0.45817 0.6122,0.57385 0.27,0.10682 0.54408,0.10458 0.82223,-0.0066 0.27814,-0.11118 0.47505,-0.31302 0.59072,-0.60553 z m 5.4002,2.1356 -2.0251,-0.80079 -1.2679,3.2064 c -0.11568,0.29251 -0.11569,0.57221 -10e-5,0.8391 0.11562,0.26689 0.31969,0.45817 0.6122,0.57385 0.26999,0.10682 0.54408,0.10458 0.82222,-0.0066 0.27814,-0.11118 0.47505,-0.31302 0.59073,-0.60553 z m 3.4189,-4.6975 c 0.25807,-0.65251 0.21389,-1.314 -0.13246,-1.9843 -0.34636,-0.67037 -0.8908,-1.1524 -1.6333,-1.446 l 1.268,-3.2063 -4.7252,-1.8686 -1.268,3.2063 c -0.7425,-0.29369 -1.4694,-0.31438 -2.1806,-0.06222 -0.71118,0.25216 -1.1958,0.7045 -1.4538,1.357 l -1.6684,4.2189 10.125,4.0042 z m -0.2462,-11.221 c 0.59614,-1.5076 0.57101,-2.9968 0.0134,-4.327 -0.615,-1.4671 -1.9361,-2.7454 -3.4135,-3.3353 -1.5025,-0.60007 -3.3742,-0.58808 -4.8533,0.06771 -1.3185,0.58461 -2.3535,1.6582 -2.9497,3.1658 l -0.8676,2.1938 2.0251,0.80079 0.86759,-2.1938 c 0.37378,-0.94501 0.98341,-1.6013 1.7918,-1.9649 0.96842,-0.43559 2.1999,-0.4399 3.1853,-0.04432 0.9603,0.38548 1.8194,1.2203 2.2126,2.1774 0.33684,0.81992 0.33697,1.714 -0.03675,2.659 l -1.2012,3.0376 2.0251,0.80079 z"
+         stroke-width="0.72589"
+         id="path854-1" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="heading_free"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.739019"
+       y="7.40833"
+       id="text272359-9"><tspan
+         sodipodi:role="line"
+         id="tspan272357-0"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Medium';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.739019"
+         y="7.40833">Freely given</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g19931"
+     inkscape:label="heading_copy"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-decoration-color:#000000;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.816189"
+       y="7.40833"
+       id="text19929"><tspan
+         sodipodi:role="line"
+         id="tspan19927"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Medium';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.816189"
+         y="7.40833">Copy | Modify | Translate</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g15631"
+     inkscape:label="heading_lets"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-decoration-color:#000000;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.785873"
+       y="7.40833"
+       id="text15629"><tspan
+         sodipodi:role="line"
+         id="tspan15627"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Medium';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.785873"
+         y="7.40833">Let's copy, church</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g333154"
+     inkscape:label="text_os"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.901627"
+       y="12.700002"
+       id="text333152"><tspan
+         sodipodi:role="line"
+         id="tspan333150"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.901627"
+         y="12.700002">Open source</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g330670"
+     inkscape:label="text_pde"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.901627"
+       y="12.700002"
+       id="text330668"><tspan
+         sodipodi:role="line"
+         id="tspan330666"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.901627"
+         y="12.700002">Public domain equivalent</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="text_pd"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="19.901627"
+       y="12.700002"
+       id="text10099-3-75-6"><tspan
+         sodipodi:role="line"
+         id="tspan10097-6-922-73"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="19.901627"
+         y="12.700002">Public domain</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="text_by"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="20.030819"
+       y="12.700002"
+       id="text10099-3-75-1"><tspan
+         sodipodi:role="line"
+         id="tspan10097-6-922-5"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="20.030819"
+         y="12.700002">Attribution</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="text_bysa"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="20.030819"
+       y="12.700002"
+       id="text10099-3-75-7"><tspan
+         sodipodi:role="line"
+         id="tspan10097-6-922-2"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="20.030819"
+         y="12.700002">Attribution ShareAlike</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="text_bync"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="20.030819"
+       y="12.700002"
+       id="text10099-3-75-4"><tspan
+         sodipodi:role="line"
+         id="tspan10097-6-922-8"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="20.030819"
+         y="12.700002">Attribution NonCommercial</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="text_byncsa"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;line-height:normal;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';text-decoration-color:#000000;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stop-color:#000000"
+       x="20.030819"
+       y="12.700002"
+       id="text10099-3-75"><tspan
+         sodipodi:role="line"
+         id="tspan10097-6-922"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.52778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Light';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="20.030819"
+         y="12.700002">Attribution NonCommercial ShareAlike</tspan></text>
+  </g>
+</svg>
