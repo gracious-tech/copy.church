@@ -6,10 +6,14 @@ p Resources {{ type_past }} and linked here have been shared for the furthering 
 
 h3 {{ license.creator }} {{ license.name }} {{ type }}
 
-p
-    strong(class='good') You can copy + modify + translate the resource,&nbsp;
-    span(v-if='code === "cc-0"') without restriction
-    span(v-else) however:
+p You can:
+
+ul
+    li #[strong(class='good') Share] &mdash; Copy and distribute the resource
+    li #[strong(class='good') Modify] &mdash; Improve or adapt the resource to a new context
+    li #[strong(class='good') Translate] &mdash; Make the resource available in a new language
+
+p(v-if='code !== "cc-0"') Under the following conditions:
 
 ul
     li(v-if='code.includes("by")') #[strong(class='mixed') Attribution] &mdash; You must credit the author, link to this license, and indicate if changes were made
