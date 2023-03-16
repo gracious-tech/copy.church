@@ -25,9 +25,9 @@ export default {
             if (!import.meta.env.SSR){
                 // NOTE URL base probably not actually needed, just to be safe
                 const url = new URL(to, 'https://copy.church')
-                if (!to.endsWith('/')){
+                if (!url.pathname.endsWith('/')){
                     // Redirect if url is missing trailing slash, overwise VP will show a 404
-                    ctx.router.go(to + '/')
+                    ctx.router.go(url.pathname + '/')
                 } else if (url.pathname === '/overview/'){
                     // Overview page has been removed
                     ctx.router.go('/')
