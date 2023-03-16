@@ -14,22 +14,7 @@ a(:href='`/articles/${id}/`')
 
 import {computed} from 'vue'
 
-
-// NOTE While these might duplicate article meta data, they can also be different if desired
-const articles = {
-    'command-many-overlook': {
-        title: "The freely giving ethic",
-        desc: "How Jesus' command to freely give works with Paul's teaching on financial support.",
-    },
-    'biblical-funding': {
-        title: "Biblical funding of ministry",
-        desc: "The spiritual dimension to funding ministry and how it differs to commercial models.",
-    },
-    'commerce-condemned': {
-        title: "Condemnation of commercial ministry",
-        desc: "There are many passages that directly condemn commercializing ministry.",
-    },
-}
+import {articles} from './articles'
 
 
 const props = defineProps({id: String})

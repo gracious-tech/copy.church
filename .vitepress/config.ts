@@ -4,7 +4,7 @@ import path from 'path'
 import stemmer from 'wink-porter2-stemmer'
 import {eng as stopwords} from 'stopword'
 import {defineConfig} from 'vitepress'
-import {SearchPlugin} from 'vitepress-plugin-search'
+import {articles} from '../src/_comp/articles'
 
 
 export default defineConfig({
@@ -109,10 +109,10 @@ export default defineConfig({
             '/articles/': [
                 {
                     text: "Articles",
-                    items: [
-                        {text: "The Command Many Ministries Overlook", link: '/articles/command-many-overlook/'},
-                        {text: "Biblical Funding of Ministry", link: '/articles/biblical-funding/'},
-                    ],
+                    items: Object.entries(articles).map(([id, meta]) => ({
+                        text: meta.title,
+                        link: `/articles/${id}/`,
+                    })),
                 },
             ],
 

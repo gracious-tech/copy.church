@@ -1,4 +1,15 @@
 
+<script lang='ts' setup>
+
+import {articles} from '@/_comp/articles'
+
+const lcc_articles = Object.entries(articles).map(([id, meta]) => ({
+    title: meta.title,
+    url: `/articles/${id}/`,
+}))
+
+</script>
+
 # More depth
 
 While this site is designed to be succinct, others have written and spoken more extensively on the topic.
@@ -17,8 +28,15 @@ While this site is designed to be succinct, others have written and spoken more 
 
 ## Articles
 
- * [The Command Many Ministries Overlook](/articles/command-many-overlook/) &mdash; Jon Here
- * [Biblical Funding of Ministry](/articles/biblical-funding/) &mdash; Jon Here
+<ul>
+    <li v-for='article of lcc_articles' :key='article.url'>
+        <a :href='article.url'>{{ article.title }}</a>
+    </li>
+</ul>
+
+
+## Articles (external)
+
  * [Free and Open](https://www.missionfrontiers.org/issue/article/free-and-open) &mdash; Tim Jore
  * [How To Navigate The Crossroad Of Ministry And Money](https://africa.thegospelcoalition.org/reviews/how-to-navigate-the-crossroad-of-ministry-and-money/) &mdash; Eleazar Maduka
 
