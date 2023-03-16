@@ -22,10 +22,4 @@ Thirdly, there is lots of Scripture that directly and indirectly speaks on this 
 
 [The Dorean Principle](https://thedoreanprinciple.org/) also draws out many other relevant insights from Scripture, such as the free nature of the gospel, the behavior of the apostles, the behavior of false teachers, etc.
 
-<a class='article-preview' href='/articles/commerce-condemned/'>
-    <img src='/_assets/articles/commerce-condemned.jpg'>
-    <div>
-        <h3>10 times commercialising ministry is condemned</h3>
-        <p>Many have tried to profit from ministry, including in biblical times.</p>
-    </div>
-</a>
+<ArticlePreview id='commerce-condemned'></ArticlePreview>

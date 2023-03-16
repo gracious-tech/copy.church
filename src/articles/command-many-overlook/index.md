@@ -1,6 +1,6 @@
 ---
 description: The Bible gives us a clear command regarding money and ministry, but do we still follow it today?
-head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/command-many-overlook.png'}]]
+head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/command-many-overlook.jpg'}]]
 titleTemplate: false
 aside: false
 ---
@@ -20,7 +20,7 @@ const date = nice_date(2023, 2, 14)
 
 <h4 class='article-meta'>{{ date }} · Jon Here · 6 min read</h4>
 
-<img src='/_assets/articles/command-many-overlook.png' width='1200' height='630' class='article-hero'>
+<img src='/_assets/articles/command-many-overlook.jpg' width='1200' height='630' class='article-hero'>
 
 Two sins that are thoroughly condemned in Scripture are sexual immorality and greed. The church has rightly spent a lot of time and effort debating sexual sin, and we have some clearly defined boundaries as a result. But what about greed? What clearly defined boundaries do we have to stop it seeping into ministry?
 

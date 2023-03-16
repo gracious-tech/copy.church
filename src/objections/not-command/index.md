@@ -9,10 +9,4 @@ Paul also ensured his own ministry was always free (1 Cor 9:18).
 
 The reason Jesus told us to "freely give" was because we have "freely received" God's grace in our own lives. That has not changed for us, and so neither has Jesus' command.
 
-<a class='article-preview' href='/articles/command-many-overlook/'>
-    <img src='/_assets/articles/command-many-overlook.png'>
-    <div>
-        <h3>The freely giving ethic</h3>
-        <p>How Jesus' command to freely give works with Paul's teaching on financial support.</p>
-    </div>
-</a>
+<ArticlePreview id='command-many-overlook'></ArticlePreview>

@@ -19,12 +19,6 @@ Why don't authors sell until the costs of their labor have been covered, and the
 
 On top of that, Scripture also condemns the general commercialising of ministry, whether it makes a profit or not:
 
-<a class='article-preview' href='/articles/commerce-condemned/'>
-    <img src='/_assets/articles/commerce-condemned.jpg'>
-    <div>
-        <h3>10 times commercialising ministry is condemned</h3>
-        <p>Many have tried to profit from ministry, including in biblical times.</p>
-    </div>
-</a>
+<ArticlePreview id='commerce-condemned'></ArticlePreview>
 
 Most of all, if ministry is to be "freely given" then there is no way to profit in the first place.
