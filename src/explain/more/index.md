@@ -16,14 +16,8 @@ While this site is designed to be succinct, others have written and spoken more 
 
 ## Books
 
- * [The Dorean Principle](https://thedoreanprinciple.org/) &mdash; A Biblical Response to the Commercialization of Christianity
- * [The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons) &mdash; Ending the spiritual famine of the global Church
-
-
-## Essays
-
- * [The Dorean Principle (thesis)](https://thedoreanprinciple.org/dorean-thesis.pdf) &mdash; A Biblical Ethic for Ministry Fundraising
- * [Letting Go](/letting_go.pdf) &mdash; A rationale and appeal for making biblical content available under open licenses
+ * [The Dorean Principle](https://thedoreanprinciple.org/)
+ * [The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons)
 
 
 ## Articles
@@ -37,8 +31,14 @@ While this site is designed to be succinct, others have written and spoken more 
 
 ## Articles (external)
 
- * [Free and Open](https://www.missionfrontiers.org/issue/article/free-and-open) &mdash; Tim Jore
- * [How To Navigate The Crossroad Of Ministry And Money](https://africa.thegospelcoalition.org/reviews/how-to-navigate-the-crossroad-of-ministry-and-money/) &mdash; Eleazar Maduka
+ * [Free and Open](https://www.missionfrontiers.org/issue/article/free-and-open)
+ * [How To Navigate The Crossroad Of Ministry And Money](https://africa.thegospelcoalition.org/reviews/how-to-navigate-the-crossroad-of-ministry-and-money/)
+
+
+## Essays
+
+ * [The Dorean Principle (thesis)](https://thedoreanprinciple.org/dorean-thesis.pdf)
+ * [Letting Go](/letting_go.pdf)
 
 
 ## Video interviews
