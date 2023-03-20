@@ -30,3 +30,7 @@ These factors should prevent us from directly equating intellectual property the
 ## Permission should be granted upfront
 
 Regardless of your views on copyright, this is an encouragement to grant permission to everyone to use your resources. Thus there is no issue of theft because everyone will have been given permission to use them anyway.
+
+&nbsp;
+
+<img src='/memes/other_owner.jpg'>

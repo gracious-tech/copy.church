@@ -8,3 +8,7 @@ People also associated free software as being low quality and yet now some of th
 Likewise, the more people start to give ministry resources for free, the more they will be associated with quality rather than just being the leftover resources organizations failed to sell.
 
 But to really blow this objection out of the water. Jesus' ministry was free, Paul's was free, and the gospel is free. Should we charge for the gospel to make it more appealing to people? Obviously not.
+
+&nbsp;
+
+<img src='/memes/jesus_charge.jpg'>

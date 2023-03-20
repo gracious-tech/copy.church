@@ -23,3 +23,7 @@ As you can see, there are many possible barriers to simply "asking permission", 
 Now apply that to situations where you need to not just ask permission from one copyright owner but multiple. Bibles are an excellent example of this. There are thousands of Bible translations in the world, however a majority of them are under restrictive copyright. If you want to make a resource, such as a Bible app, that has as many languages and translations as possible, you will need to literally form thousands of legal agreements with hundreds of organizations. And each organization has a chance of either being uncontactable or simply not granting your request because of the reasons above. So it would take many years and intensive labour just to form such agreements.
 
 Which is why there is only one Bible app available that has most of the world's Bible translations in it, and few other options.
+
+&nbsp;
+
+<img src='/memes/other_permission.jpg'>

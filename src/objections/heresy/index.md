@@ -8,3 +8,7 @@ There are still other ways of preserving integrity such as with trademarks. For 
 But to rely on the threat of a lawsuit is contrary to Paul's teaching (1 Cor 6:7), who instead encouraged us to wait for the Lord's judgment (Rom 12:19). God will expose the lies people tell and he doesn't need secular courts to ensure his Word is preserved.
 
 Also see [the objection regarding forbidding derivatives](/objections/no-derivatives/)
+
+&nbsp;
+
+<img src='/memes/other_copyright.jpg'>

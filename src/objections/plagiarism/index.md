@@ -14,3 +14,7 @@ Some authors may not even want to be acknowledged, as we are encouraged by Jesus
 Either way, we currently don't utilise copyright for most situations of plagiarism and there's no reason for that to change.
 
 Also see [the objection regarding requiring attribution](/objections/attribution/)
+
+&nbsp;
+
+<img src='/memes/paul_terms.jpg'>

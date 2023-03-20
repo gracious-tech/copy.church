@@ -19,3 +19,7 @@ With that in mind, let's consider some specific examples:
  * __Counselling:__ Assisting people as they deal with difficult life circumstances is usually a deeply spiritual affair and so Christian counsellors should not charge for such ministry.
 
 Other products and services in areas such as IT, audio/visual, websites, etc. are not as clearly connected or essential for the proclamation of the gospel. As such, they don't necessarily have to be freely given. They are important parts of most modern churches though, and so believers may choose to offer them freely in the aim of supporting gospel ministry. Some contexts may be more clear than others in this regard.
+
+&nbsp;
+
+<img src='/memes/paul_trainings.jpg'>
