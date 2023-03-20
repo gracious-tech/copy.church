@@ -23,6 +23,9 @@ However, the exact laws of "fair use" and "fair dealing" vary by country and som
 
 
 ## Disabling copyright
+
+<img src='@/_assets/ill_free.svg'>
+
 So if you want to share intellectual property you have to actively disable all or some of the copyright protections that apply to it. Disabling copyright completely is done by dedicating something to the "public domain" which is where you declare that it no longer belongs to you but to the public, and you therefore don't have any exclusive rights to it any more.
 
 Almost all copyright eventually expires 50-70 years after the death of the author and becomes part of the "public domain", but anyone is able to dedicate their work to the public domain at any time.
