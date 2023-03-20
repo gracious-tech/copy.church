@@ -74,6 +74,30 @@ q
     margin: 24px 0
 
 
+// Generic
+label
+    user-select: none
+    cursor: pointer
+    color: var(--vp-c-text-1)
+    filter: sepia(1)
+input[type="checkbox"], input[type="radio"]
+    width: 1.6em
+    height: 1.6em
+    margin: 0
+    vertical-align: middle
+    cursor: pointer
+
+    &:not([disabled])
+        filter: sepia(1)  // Give yellow tinge (easiest way to control color)
+
+    & + label
+        display: inline-block
+        line-height: 2em  // Allow more space to click above/below text
+        vertical-align: middle
+        padding-left: 12px  // WARN Don't use margin or can't click between input and label
+        margin-right: 24px
+
+
 // Fonts
 
 @font-face
