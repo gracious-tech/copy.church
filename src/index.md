@@ -35,10 +35,14 @@ h1:nth-child(2)
     font-size: 30px
     text-align: center
 
-h1 + h4
-    text-align: center
-    margin-top: 32px
-    font-weight: normal
+.quote
+    width: 100%
+
+h3
+    font-size: 1.5em
+    margin-top: 48px
+    margin-bottom: 24px
+    font-weight: bold
 
 .icon
     width: 100%
@@ -57,8 +61,10 @@ h1 + h4
     img
         width: 0
         flex-grow: 1
-        margin-right: 12px
         cursor: pointer
+        margin-right: 24px
+        @media (max-width: 600px)
+            margin-right: 12px
 
 .people
     display: flex
@@ -69,7 +75,9 @@ h1 + h4
         width: 0
         flex-grow: 1
         border-radius: 50%
-        margin-right: 12px
+        margin-right: 24px
+        @media (max-width: 600px)
+            margin-right: 12px
 
 .more
     @media (max-width: 600px)
@@ -80,8 +88,6 @@ h1 + h4
 
 # Let's copy, church
 # Give up your rights for the sake of the kingdom
-
-#### “Freely you received, freely give” &mdash; __Jesus__
 
 <img class='icon' src='/_assets/icon.svg'>
 
@@ -103,6 +109,8 @@ This is [hindering ministry](/explain/examples/) in various ways:
 
 ## What does the Bible say?
 
+<img class='quote' src='@/_assets/images/quote.svg'>
+
 Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of Scripture also testifies to this command](/explain/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
 
 
@@ -111,8 +119,8 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 ### [1. Raise awareness of this issue](/share/)
 
 <a class='memes' href='/share/'>
-    <img src='/memes/other_purpose.jpg'>
-    <img src='/memes/jesus_ascension.jpg'>
+    <img src='/memes/jesus_give.jpg'>
+    <img src='/memes/jesus_charge.jpg'>
     <img src='/memes/paul_trainings.jpg'>
 </a>
 
