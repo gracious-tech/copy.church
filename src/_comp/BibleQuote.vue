@@ -2,36 +2,51 @@
 <template lang='pug'>
 
 blockquote
-    p {{ text }}
+    p.text {{ text }}
     div.info
         a.passage(:href='read_url' target='_blank') {{ passage }}
         div.options
-            div.option(v-for='option of options' :class='{selected: option === TRANS}' @click='change_trans(option)')
+            div.option(v-if='custom' :class='{selected: active === "custom"}' @click='change_trans("custom")')
+                | Own
+            div.option(v-for='option of options' :class='{selected: option === active}' @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
-        a.credit(:href='bible.license' target='_blank') {{ bible.credit }}
+        a.credit(v-if='active !== "custom"' :href='bible.license' target='_blank') {{ bible.credit }}
 
 </template>
 
 
 <script lang='ts' setup>
 
-import {computed} from 'vue'
+import {computed, ref} from 'vue'
 import {TRANS} from './state'
 import {BIBLES} from './bibles'
 import {scripture} from './scripture'
 
 
-const props = defineProps({passage: String})
+const props = defineProps({passage: String, custom: String})
 
 const options = ['net', 'esv', 'niv', 'csb']
 
+// Always start showing custom if available
+const active = ref(props.custom ? 'custom' : TRANS.value)
+
+// Use TRANS instead of active so read_url is always valid
 const bible = computed(() => BIBLES[TRANS.value])
 
+// Always change active, but only change TRANS if not custom
 const change_trans = trans => {
-    TRANS.value = trans
+    active.value = trans
+    if (trans !== 'custom'){
+        TRANS.value = trans
+    }
 }
 
-const text = computed(() => scripture[props.passage][TRANS.value])
+const text = computed(() => {
+    if (active.value === 'custom'){
+        return props.custom.trim()  // Using pre-line so avoid any whitespace at start/end
+    }
+    return scripture[props.passage][TRANS.value]
+})
 
 const read_url = computed(() => {
     const p = encodeURIComponent(props.passage)
@@ -42,6 +57,9 @@ const read_url = computed(() => {
 
 
 <style lang='sass' scoped>
+
+.text
+    white-space: pre-line
 
 .info
     display: flex

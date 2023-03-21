@@ -22,6 +22,13 @@ export const scripture:Record<string, {net:string, esv:string, niv:string, csb:s
     csb: "There is a futility that is done on the earth: there are righteous people who get what the actions of the wicked deserve, and there are wicked people who get what the actions of the righteous deserve.",
 },
 
+"Micah 3:11": {
+    net: "Her leaders take bribes when they decide legal cases,\nher priests proclaim rulings for profit,\nand her prophets read omens for pay.\nYet they claim to trust the Lord and say,\n“The Lord is among us.\nDisaster will not overtake us!”",
+    esv: "Its heads give judgment for a bribe;\nits priests teach for a price;\nits prophets practice divination for money;\nyet they lean on the Lord and say,\n“Is not the Lord in the midst of us?\nNo disaster shall come upon us.”",
+    niv: "Her leaders judge for a bribe,\nher priests teach for a price,\nand her prophets tell fortunes for money.\nYet they look for the Lord’s support and say,\n“Is not the Lord among us?\nNo disaster will come upon us.”",
+    csb: "Her leaders issue rulings for a bribe,\nher priests teach for payment,\nand her prophets practice divination for silver.\nYet they lean on the Lord, saying,\n“Isn’t the Lord among us?\nNo disaster will overtake us.”",
+},
+
 "Micah 3:11b": {
     net: "her priests proclaim rulings for profit, and her prophets read omens for pay. Yet they claim to trust the Lord and say, “The Lord is among us. Disaster will not overtake us!”",
     esv: "its priests teach for a price; its prophets practice divination for money; yet they lean on the Lord and say, “Is not the Lord in the midst of us? No disaster shall come upon us.”",
