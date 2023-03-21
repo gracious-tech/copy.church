@@ -5,10 +5,6 @@ titleTemplate: false
 aside: false
 ---
 
-<script lang='ts' setup>
-import CommittedPerson from '@/_comp/CommittedPerson.vue'
-</script>
-
 
 # How to profit from ministry in a godly way
 

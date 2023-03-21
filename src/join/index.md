@@ -1,8 +1,6 @@
 
 <script lang='ts' setup>
 
-import CommittedPerson from '@/_comp/CommittedPerson.vue'
-
 import {people} from '@/_comp/people'
 
 </script>

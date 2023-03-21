@@ -7,8 +7,6 @@ aside: false
 
 <script lang='ts' setup>
 
-import CommittedPerson from '@/_comp/CommittedPerson.vue'
-import BibleQuote from '@/_comp/BibleQuote.vue'
 import {nice_date} from '@/_comp/utils'
 
 const date = nice_date(2023, 2, 21)

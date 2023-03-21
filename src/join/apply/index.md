@@ -1,9 +1,4 @@
 
-<script lang='ts' setup>
-import CommittedPerson from '@/_comp/CommittedPerson.vue'
-</script>
-
-
 # Join us
 We're a collection of like-minded Christians who believe Jesus' command to "freely give" is to not just be admired but obeyed.
 
@@ -44,6 +39,6 @@ It should be all up __less than 100 words__. By submitting the picture and info 
 If all that sounds good, please submit your profile to [Gracious Tech](https://gracious.tech/support/).
 
 
-&nbsp;
+## Example
 
 <CommittedPerson id='jon_here'></CommittedPerson>

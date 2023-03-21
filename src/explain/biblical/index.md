@@ -1,11 +1,4 @@
 
-<script lang='ts' setup>
-
-import BibleQuote from '@/_comp/BibleQuote.vue'
-
-</script>
-
-
 # Biblical basis
 
 The free giving of ministry resources is not just a good idea, it's what Scripture calls us to.

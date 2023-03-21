@@ -1,11 +1,4 @@
 
-<script lang='ts' setup>
-
-import BibleQuote from '@/_comp/BibleQuote.vue'
-
-</script>
-
-
 # Alternate funding
 Freely giving resources does not mean you can't receive any funding for them. There are still a number of ways resources can be funded aside from traditional "all rights reserved" sales.
 
