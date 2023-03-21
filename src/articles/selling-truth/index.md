@@ -16,7 +16,7 @@ const date = "Draft"  // nice_date(2023, 3, 21)
 
 # Selling Truth &mdash; A close look at Micah 3:11
 
-<h4 class='article-meta'>{{ date }} · Andrew Case · 10 min read</h4>
+<h4 class='article-meta'>{{ date }} · Andrew Case · 8 min read</h4>
 
 <img src='/_assets/articles/selling-truth.jpg' width='1200' height='630' class='article-hero'>
 
