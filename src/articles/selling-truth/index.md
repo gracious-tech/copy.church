@@ -9,7 +9,7 @@ aside: false
 
 import {nice_date} from '@/_comp/utils'
 
-const date = "Draft"  // nice_date(2023, 3, 21)
+const date = nice_date(2023, 3, 22)
 
 </script>
 
