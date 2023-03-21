@@ -43,6 +43,8 @@ h3
     margin-top: 48px
     margin-bottom: 24px
     font-weight: bold
+    @media (max-width: 600px)
+        font-size: 1.2em
 
 .icon
     width: 100%
