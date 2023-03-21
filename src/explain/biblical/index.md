@@ -10,6 +10,8 @@ When Jesus told his disciples to go out and proclaim the kingdom of heaven, he c
 
 The Bible clearly affirms the right to financial _support_, however it does not affirm the right to _sell_ ministry. The following articles provide an overview of the most significant passages regarding this topic:
 
+&nbsp;
+
 <ArticlePreview id='command-many-overlook'></ArticlePreview>
 <ArticlePreview id='biblical-funding'></ArticlePreview>
 <ArticlePreview id='commerce-condemned'></ArticlePreview>
