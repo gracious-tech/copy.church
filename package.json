@@ -1,15 +1,17 @@
 {
   "private": true,
   "devDependencies": {
+    "@akryum/flexsearch-es": "^0.7.32",
+    "@mdit-vue/shared": "^0.12.0",
     "@volar/vue-language-plugin-pug": "^1.2.0",
     "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1",
     "npm-check-updates": "^16.7.12",
     "pug": "^3.0.2",
     "sass": "^1.58.3",
     "stopword": "^2.0.7",
     "typescript": "^4.9.5",
     "vitepress": "^1.0.0-alpha.51",
-    "vitepress-plugin-search": "^1.0.4-alpha.19",
     "wink-porter2-stemmer": "^2.0.1"
   }
 }

@@ -4,6 +4,8 @@ import path from 'path'
 import stemmer from 'wink-porter2-stemmer'
 import {eng as stopwords} from 'stopword'
 import {defineConfig} from 'vitepress'
+
+import {SearchPlugin} from './plugin-search'
 import {articles} from '../src/_comp/articles'
 
 
@@ -22,19 +24,23 @@ export default defineConfig({
     ],
     vite: {
         resolve: {
-            alias: [{find: '@', replacement: path.resolve(__dirname, '../src')}],
+            alias: [
+                {find: '@', replacement: path.resolve(__dirname, '../src')},
+            ],
         },
         plugins: [
             SearchPlugin({
+                // TODO Doesn't render Markdown yet, so &nbsp; etc not decoded
                 // Plugin config
                 placeholder: "Search site...",
+                previewLength: 200,
                 // FlexSearch config
                 language: 'en',
                 context: true,
                 stemmer,
                 filter: stopwords,
-                tokenize: 'full',
-                minlength: 3,
+                tokenize: 'forward',
+                minlength: 3,  // Does exist, not typed
             }),
         ],
     },
