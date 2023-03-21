@@ -1,5 +1,5 @@
 ---
-description: Micah had a message for Israel's leaders, and he has one for ours as well
+description: Micah had a message for Israel's leaders, and he has one for us as well.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/selling-truth.jpg'}]]
 titleTemplate: false
 aside: false
