@@ -7,16 +7,7 @@ titleTemplate: false
 
 import {onBeforeMount} from 'vue'
 
-import {people} from '@/_comp/people'
-
-
-const people_ids = Object.keys(people)
-
-onBeforeMount(() => {
-    // Randomize order of people (ignored for SSR)
-    const random_nums = Object.fromEntries(people_ids.map(id => [id, Math.random()]))
-    people_ids.sort((a, b) => random_nums[a] - random_nums[b])
-})
+import {people, people_ids_randomized} from '@/_comp/people'
 
 </script>
 
@@ -73,13 +64,23 @@ h3
     align-items: center
     margin: 12px 0
 
-    img
+    a
         width: 0
-        flex-grow: 1
-        border-radius: 50%
-        margin-right: 24px
-        @media (max-width: 600px)
-            margin-right: 12px
+        flex-grow: 2
+        text-align: center
+
+        &:last-child
+            flex-grow: 1
+            @media (min-width: 600px)
+                font-size: 2em
+
+        &:not(:last-child)
+            margin-right: 24px
+            @media (max-width: 600px)
+                margin-right: 8px
+
+        img
+            border-radius: 50%
 
 .more
     @media (max-width: 600px)
@@ -136,10 +137,12 @@ Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the res
 
 ### [3. Join those committed to freely giving](/join/)
 
-<a class='people' href='/join/'>
-    <img v-for='person of people_ids.slice(0, 6)' :src='`/_assets/people/${person}.webp`' :title='people[person].title'>
-    <div title="View all">❯</div>
-</a>
+<div class='people'>
+    <a v-for='person of people_ids_randomized.slice(0, 6)' :href='`/join/#person_${person}`'>
+        <img :src='`/_assets/people/${person}.webp`' :title='people[person].title'>
+    </a>
+    <a href='/join/' title="View all">❯</a>
+</div>
 
 
 ### [4. Explore our collection of free resources](/collection/)

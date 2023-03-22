@@ -67,3 +67,9 @@ export const people:Record<string, Person> = {
         quote: "How can we give to God more than we receive from him? If I burnt out or became poor for his sake, it would be worth it, but it still wouldn't come close to what he's given me. The least I can do is also give freely.",
     },
 }
+
+
+// Randomize order of people each time site loads (not every navigation as would get confusing)
+export const people_ids_randomized = Object.keys(people)
+const random_nums = Object.fromEntries(people_ids_randomized.map(id => [id, Math.random()]))
+people_ids_randomized.sort((a, b) => random_nums[a] - random_nums[b])

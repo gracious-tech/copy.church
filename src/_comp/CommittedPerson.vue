@@ -1,7 +1,7 @@
 
 <template lang='pug'>
 
-div.person
+div.person(:id='`person_${id}`')
 
     div.identity
         img(:src='`/_assets/people/${id}.webp`')
