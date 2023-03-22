@@ -66,6 +66,14 @@ export const people:Record<string, Person> = {
         bio: "Jack lives and works with a minority people group in a remote location of Asia. Sometimes he helps film parables for them in their language or encourages those that translate their scriptures. Other times he is just with them, talking goats and sheep.",
         quote: "How can we give to God more than we receive from him? If I burnt out or became poor for his sake, it would be worth it, but it still wouldn't come close to what he's given me. The least I can do is also give freely.",
     },
+    craig_bradley: {
+        name: "Craig Bradley",
+        title: "Founder of AO Lab",
+        education: "",
+        site: "https://linktr.ee/helloaolab",
+        bio: "Craig and AO Lab make digital tools and experiences to help Christian communities love and live out the Bible. AO Lab’s tools are designed to be easily understood and modified, and may be used freely and adapted for any purpose. AO Lab only asks you pray and seek God’s will in everything you do.",
+        quote: "Our passion is making tools that Christians we have never met can modify for any purpose the Holy Spirit inspires. Only by giving things away without restriction can we ensure we are not hindering the work of God!",
+    },
 }
 
 
