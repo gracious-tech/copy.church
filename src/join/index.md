@@ -28,7 +28,7 @@ Like or follow [the Facebook page](https://www.facebook.com/copy.church), which 
 ## Meet who's freely giving
 A great many believers are already freely giving their resources; here's just a few of them:
 
-<CommittedPerson v-for='id of people_ids_randomized' :id='id'></CommittedPerson>
+<CommittedPerson v-for='id of people_ids_randomized' :key='id' :id='id'></CommittedPerson>
 
 
 ::: info Are you also freely giving? [Submit your profile](/join/apply/)

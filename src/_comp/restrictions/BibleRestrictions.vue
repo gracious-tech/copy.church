@@ -22,7 +22,7 @@ table.translations(ref='table' :class='{advanced}')
             th Translate
             th Modify
             th Supportive
-    tr(v-for='item of bibles' :class='{selected: bible_id === item.id}'
+    tr(v-for='item of bibles' :key='item.id' :class='{selected: bible_id === item.id}'
             @click='() => change_translation(item.id)')
         td {{ item.abbrev }}
         td(v-if='!advanced' class='condensed trim') {{ item.name }}

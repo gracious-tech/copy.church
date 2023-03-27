@@ -8,7 +8,8 @@ blockquote
         div.options
             div.option(v-if='custom' :class='{selected: active === "custom"}' @click='change_trans("custom")')
                 | Own
-            div.option(v-for='option of options' :class='{selected: option === active}' @click='change_trans(option)')
+            div.option(v-for='option of options' :key='option' :class='{selected: option === active}'
+                    @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
         a.credit(v-if='active !== "custom"' :href='bible.license' target='_blank') {{ bible.credit }}
 
