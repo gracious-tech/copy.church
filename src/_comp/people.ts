@@ -1,4 +1,7 @@
 
+import {ref} from 'vue'
+
+
 interface Person {
     name:string
     title:string
@@ -77,7 +80,18 @@ export const people:Record<string, Person> = {
 }
 
 
-// Randomize order of people each time site loads (not every navigation as would get confusing)
-export const people_ids_randomized = Object.keys(people)
-const random_nums = Object.fromEntries(people_ids_randomized.map(id => [id, Math.random()]))
-people_ids_randomized.sort((a, b) => random_nums[a] - random_nums[b])
+// A list of people ids that will be randomized client-side but NOT during SSR
+export const people_ids_randomized = ref(Object.keys(people))
+
+
+// A function for triggering the randomization of people_ids_randomized
+// WARN Can ONLY be called in a component's onMounted hook, else will cause hydration mismatch
+// NOTE Ensures only run once per site load so user doesn't get confused
+let have_randomized = false
+export function randomize_people(){
+    if (!have_randomized){
+        const random_nums = Object.fromEntries(people_ids_randomized.value.map(id => [id, Math.random()]))
+        people_ids_randomized.value.sort((a, b) => random_nums[a] - random_nums[b])
+        have_randomized = true
+    }
+}

@@ -1,7 +1,14 @@
 
 <script lang='ts' setup>
 
-import {people_ids_randomized} from '@/_comp/people'
+import {onMounted} from 'vue'
+
+import {people_ids_randomized, randomize_people} from '@/_comp/people'
+
+
+onMounted(() => {
+    randomize_people()
+})
 
 </script>
 

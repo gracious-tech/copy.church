@@ -5,9 +5,14 @@ titleTemplate: false
 
 <script lang='ts' setup>
 
-import {onBeforeMount} from 'vue'
+import {onMounted} from 'vue'
 
-import {people, people_ids_randomized} from '@/_comp/people'
+import {people, people_ids_randomized, randomize_people} from '@/_comp/people'
+
+
+onMounted(() => {
+    randomize_people()
+})
 
 </script>
 
