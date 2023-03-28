@@ -56,7 +56,8 @@ import {CRITICALS} from './critical_texts'
 
 
 const bibles = Object.values(CRITICALS)
-bibles.sort((a, b) => a.rating - b.rating)
+bibles.sort((a, b) => b.year - a.year)
+bibles.sort((a, b) => b.rating - a.rating)
 
 const table = ref()
 const bible_id = ref()

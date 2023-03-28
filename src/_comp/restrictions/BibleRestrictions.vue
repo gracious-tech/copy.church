@@ -68,7 +68,8 @@ import {BIBLES} from '../bibles'
 
 
 const bibles = Object.values(BIBLES)
-bibles.sort((a, b) => a.rating - b.rating)
+bibles.sort((a, b) => b.year - a.year)
+bibles.sort((a, b) => b.rating - a.rating)
 
 const table = ref()
 const bible_id = ref()
