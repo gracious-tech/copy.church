@@ -126,6 +126,24 @@ const critical_texts = {
             transparent: false,
         },
     },
+    bgb: {
+        testament: "NT",
+        abbrev: "BGB",
+        name: "Berean Greek Bible",
+        year: 2016,
+        info: 'https://greekbible.org/',
+        license: 'https://berean.bible/terms.htm',
+        read: 'https://biblehub.com/bgb/',
+        can: {
+            read: true,
+            distribute: false,
+            translate: false,
+            modify: false,
+            not_attribute: false,
+            use_commercially: false,
+            transparent: false,
+        },
+    },
 }
 
 
