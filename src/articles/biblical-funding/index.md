@@ -78,7 +78,7 @@ Paul isn't saying that we follow Levitical law today; just that the biblical mod
 
 <img src='./diagram_church.svg' alt="Offerings go from church regulars to God to the pastor">
 
-Believers are not obligated to pay their pastor for their sermon but they are obligated to give offerings to God. And the minister is not to demand payment from those he serves but is to rely on God's provision, which will often come from the hands of other believers. Those who do the ministry and those who fund the ministry are then partners in ministry (Phil 4:15), working together for the sake of the Gospel. They give and serve out of obligation to God and not out of obligation to each other.
+Believers are not obligated to pay their pastor for their sermon but they are obligated to give offerings to God. And the minister is not to demand payment from those he serves but is to rely on God's provision, which will often come from the hands of other believers. Those who do the ministry and those who fund the ministry are then partners in ministry (Phil 4:15), working together for the sake of the gospel. They give and serve out of obligation to God and not out of obligation to each other.
 
 The same model can be used for missionaries, authors, musicians, and anyone else who ministers or creates ministry resources. As long as their ministry is freely given.
 

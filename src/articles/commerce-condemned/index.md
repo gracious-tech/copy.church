@@ -110,12 +110,12 @@ Seeking to serve God and pursue money at the same time is not possible according
 <BibleQuote passage="Luke 16:13"></BibleQuote>
 
 
-### 10. Jesus cleanses the Temple
-Last and most memorable is Jesus' anger at those who tried to profit from people who came to worship God in the Temple, as recorded in all four Gospels:
+### 10. Jesus cleanses the temple
+Last and most memorable is Jesus' anger at those who tried to profit from people who came to worship God in the temple, as recorded in all four Gospels:
 
 <BibleQuote passage="John 2:14-16"></BibleQuote>
 
-Obviously Jesus was not opposed to the general sale of animals in a normal market. But people were seeking to do commerce in a place of ministry and worship, God's very own Temple. While the holiness of the Temple is important context, we should remember that God's Word is also holy, and all ministry deals with that which is holy.
+Obviously Jesus was not opposed to the general sale of animals in a normal market. But people were seeking to do commerce in a place of ministry and worship, God's very own temple. While the holiness of the temple is important context, we should remember that God's Word is also holy, and all ministry deals with that which is holy.
 
 We too have turned ministry into a marketplace, and the Lord is not likely to be pleased.
 
