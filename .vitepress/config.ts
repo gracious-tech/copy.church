@@ -153,6 +153,7 @@ export default defineConfig({
                         {text: "English Bible ratings", link: '/initiatives/bibles/'},
                         {text: "Critical Text ratings", link: '/initiatives/critical-texts/'},
                         {text: "Freedom to worship", link: '/initiatives/music/'},
+                        {text: "Opposing views", link: '/initiatives/opposition/'},
                     ],
                 },
             ],
