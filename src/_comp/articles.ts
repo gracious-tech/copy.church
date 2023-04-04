@@ -15,7 +15,7 @@ export const articles:Record<string, {title:string, desc:string}> = {
         desc: "There are many passages that directly condemn commercializing ministry.",
     },
     'selling-truth': {
-        title: "Examining Micah 3:11",
+        title: "A close look at Micah 3:11",
         desc: "Where God clearly condemns charging for religious teaching.",
     },
 }
