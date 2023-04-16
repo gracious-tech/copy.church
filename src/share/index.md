@@ -146,10 +146,12 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_singing.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_stop.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_modify.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_terms.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_read.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_giving.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_ascension.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_teach.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_share.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_beginning.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_ministry.jpg'>
@@ -163,6 +165,9 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_critical.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_serve.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_compare.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_follow.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_consult.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_hq.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_plans.jpg'>
 </div>
 
