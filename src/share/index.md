@@ -161,7 +161,6 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_church.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_charge.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_critical.jpg'>
-    <img @click='share_img' width='1024' height='848' src='/memes/other_burden.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_serve.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_compare.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_plans.jpg'>
