@@ -22,11 +22,7 @@ While this site is designed to be succinct, others have written and spoken more 
 
 ## Articles
 
-<ul>
-    <li v-for='article of lcc_articles' :key='article.url'>
-        <a :href='article.url'>{{ article.title }}</a>
-    </li>
-</ul>
+<ArticlePreview v-for='article of Object.keys(articles)' :key='article' :id='article'></ArticlePreview>
 
 
 ## Articles (external)
