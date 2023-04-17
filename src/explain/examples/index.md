@@ -30,6 +30,15 @@ The ESV bible translation used to be included in a Bible platform that allowed m
 As a result, many of these free apps get negative feedback from users even though there is nothing they can do about it. Like this 2/5 stars review for [AndBible](https://play.google.com/store/apps/details?id=net.bible.android.activity): <q>Poor review due to the fact that ESV version is no longer available</q>.
 
 
+## Books out of print
+
+If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to them. Rather than make the works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them.
+
+The _Diccionario bíblico hebreo-español_ is a Hebrew-Spanish dictionary that is out of print, and the publisher does not respond when contacted. Many spanish believers would love to study biblical Hebrew using such a resource, but are unable to because the publisher retains the rights to the now out-of-print book.
+
+Likewise, there are many bible illustrations that publishers hold the rights to even though they are no longer using them. Rather than release them for the benefit of the church, they keep them in storage instead.
+
+
 ## Worship music
 
 While many songs tell of <q>giving everything to Jesus</q> in various wording, almost all modern songs are not freely given to Jesus and his church, but are illegal to sing in public without a license.
