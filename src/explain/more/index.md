@@ -1,6 +1,7 @@
 
 <script lang='ts' setup>
 
+import ResourcePreview from '@/_comp/ResourcePreview.vue'
 import {articles} from '@/_comp/articles'
 
 const lcc_articles = Object.entries(articles).map(([id, meta]) => ({
@@ -16,8 +17,9 @@ While this site is designed to be succinct, others have written and spoken more 
 
 ## Books
 
- * [The Dorean Principle](https://thedoreanprinciple.org/)
- * [The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons)
+<ResourcePreview title="The Dorean Principle" desc="A biblical response to the commercialization of Christianity" url='https://thedoreanprinciple.org/' img='/_assets/books/dorean_principle.jpg'></ResourcePreview>
+
+<ResourcePreview title="The Christian Commons" desc="Ending the spiritual famine of the global Church" url='https://www.unfoldingword.org/publications/the-christian-commons' img='/_assets/books/christian_commons.jpg'></ResourcePreview>
 
 
 ## Articles
@@ -25,7 +27,7 @@ While this site is designed to be succinct, others have written and spoken more 
 <ArticlePreview v-for='article of Object.keys(articles)' :key='article' :id='article'></ArticlePreview>
 
 
-## Articles (external)
+### External articles
 
  * [Free and Open](https://www.missionfrontiers.org/issue/article/free-and-open)
  * [How To Navigate The Crossroad Of Ministry And Money](https://africa.thegospelcoalition.org/reviews/how-to-navigate-the-crossroad-of-ministry-and-money/)
