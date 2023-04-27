@@ -117,7 +117,7 @@ This is [hindering ministry](/explain/examples/) in various ways:
 
 ## What does the Bible say?
 
-<img class='quote' src='@/_assets/images/quote.svg'>
+<a href='/explain/biblical/'><img class='quote' src='@/_assets/images/quote.svg'></a>
 
 Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and [the rest of Scripture also testifies to this command](/explain/biblical/). This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
 
