@@ -2,8 +2,8 @@
 # Examples of resources
 This is a non-exhaustive list of the most significant resources that have been freely given and/or openly licensed.
 
-::: warning We'll soon be publishing a proper collection
-Coming early 2023
+::: warning We'll soon be publishing a proper collection with many more resources
+Coming mid-2023
 :::
 
 
