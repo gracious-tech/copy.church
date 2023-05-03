@@ -281,7 +281,7 @@ const bibles_raw = {
     },
     oeb: {
         abbrev: "OEB",
-        name: "Open English Bible",
+        name: "Open English Bible (NT)",
         year: 2010,  // When first published NT, as OT can drag on a long time
         type: "Dynamic",
         source: "Alexandrian",
@@ -406,7 +406,7 @@ const bibles_raw = {
     },
     blb: {
         abbrev: "BLB",
-        name: "Berean Literal Bible",
+        name: "Berean Literal Bible (NT)",
         year: 2016,  // When first published NT, as OT can drag on a long time
         type: "Very literal",
         source: "Alexandrian",
