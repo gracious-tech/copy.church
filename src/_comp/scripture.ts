@@ -3,10 +3,10 @@ export const translation_options = ['bsb', 'esv', 'niv', 'csb']
 
 
 export const scripture_by_topic:Record<string, string[]> = {
-    "Free giving": ["Matt 10:7-8", "1 Cor 9:18"],
+    "Free giving": ["Matt 10:7-8", "1 Cor 9:12", "1 Cor 9:14-15", "1 Cor 9:18", "2 Cor 11:7-9"],
     "Condemnation": ["Micah 3:11", "Luke 16:13", "2 Cor 2:17", "1 Tim 6:5b-8", "Titus 1:10-11", "1 Peter 5:1-2"],
     "Stories": ["1 Sam 2:15-17", "2 Kings 5:15-16", "John 2:14-16", "Acts 8:18-21"],
-    "Forbidding others": ["1 Cor 6:7"],
+    "Forbidding others": ["Luke 9:49-50", "1 Cor 6:7"],
     "Attitude": ["Luke 17:7-10", "Acts 4:32"],
 }
 
@@ -71,6 +71,13 @@ export const scripture:Record<string, {bsb:string, esv:string, niv:string, csb:s
     csb: "“Don’t acquire gold, silver, or copper for your money-belts. Don’t take a traveling bag for the road, or an extra shirt, sandals, or a staff, for the worker is worthy of his food.”",
 },
 
+"Luke 9:49-50": {
+    bsb: "“Master,” said John, “we saw someone driving out demons in Your name, and we tried to stop him, because he does not accompany us.” “Do not stop him,” Jesus replied, “for whoever is not against you is for you.”",
+    esv: "John answered, “Master, we saw someone casting out demons in your name, and we tried to stop him, because he does not follow with us.” But Jesus said to him, “Do not stop him, for the one who is not against you is for you.”",
+    niv: "“Master,” said John, “we saw someone driving out demons in your name and we tried to stop him, because he is not one of us.” “Do not stop him,” Jesus said, “for whoever is not against you is for you.”",
+    csb: "John responded, “Master, we saw someone driving out demons in your name, and we tried to stop him because he does not follow us.” “Don’t stop him,” Jesus told him, “because whoever is not against you is for you.”",
+},
+
 "Luke 16:13": {
     bsb: "No servant can serve two masters. Either he will hate the one and love the other, or he will be devoted to the one and despise the other. You cannot serve both God and money.”",
     esv: "No servant can serve two masters, for either he will hate the one and love the other, or he will be devoted to the one and despise the other. You cannot serve God and money.”",
@@ -127,11 +134,25 @@ export const scripture:Record<string, {bsb:string, esv:string, niv:string, csb:s
     csb: "My defense to those who examine me is this: Don’t we have the right to eat and drink? Don’t we have the right to be accompanied by a believing wife like the other apostles, the Lord’s brothers, and Cephas? Or do only Barnabas and I have no right to refrain from working? Who serves as a soldier at his own expense? Who plants a vineyard and does not eat its fruit? Or who shepherds a flock and does not drink the milk from the flock?",
 },
 
+"1 Cor 9:12": {
+    bsb: "If others have this right to your support, shouldn’t we have it all the more? But we did not exercise this right. Instead, we put up with anything rather than hinder the gospel of Christ.",
+    esv: "If others share this rightful claim on you, do not we even more? Nevertheless, we have not made use of this right, but we endure anything rather than put an obstacle in the way of the gospel of Christ.",
+    niv: "If others have this right of support from you, shouldn’t we have it all the more? But we did not use this right. On the contrary, we put up with anything rather than hinder the gospel of Christ.",
+    csb: "If others have this right to receive benefits from you, don’t we even more? Nevertheless, we have not made use of this right; instead, we endure everything so that we will not hinder the gospel of Christ.",
+},
+
 "1 Cor 9:13-14": {
     bsb: "Do you not know that those who work in the temple eat of its food, and those who serve at the altar partake of its offerings? In the same way, the Lord has prescribed that those who preach the gospel should receive their living from the gospel.",
     esv: "Do you not know that those who are employed in the temple service get their food from the temple, and those who serve at the altar share in the sacrificial offerings? In the same way, the Lord commanded that those who proclaim the gospel should get their living by the gospel.",
     niv: "Don’t you know that those who serve in the temple get their food from the temple, and that those who serve at the altar share in what is offered on the altar? In the same way, the Lord has commanded that those who preach the gospel should receive their living from the gospel.",
     csb: "Don’t you know that those who perform the temple services eat the food from the temple, and those who serve at the altar share in the offerings of the altar? In the same way, the Lord has commanded that those who preach the gospel should earn their living by the gospel.",
+},
+
+"1 Cor 9:14-15": {
+    bsb: "In the same way, the Lord has prescribed that those who preach the gospel should receive their living from the gospel. But I have not used any of these rights. And I am not writing this to suggest that something be done for me. Indeed, I would rather die than let anyone nullify my boast.",
+    esv: "In the same way, the Lord commanded that those who proclaim the gospel should get their living by the gospel. But I have made no use of any of these rights, nor am I writing these things to secure any such provision. For I would rather die than have anyone deprive me of my ground for boasting.",
+    niv: "In the same way, the Lord has commanded that those who preach the gospel should receive their living from the gospel. But I have not used any of these rights. And I am not writing this in the hope that you will do such things for me, for I would rather die than allow anyone to deprive me of this boast.",
+    csb: "In the same way, the Lord has commanded that those who preach the gospel should earn their living by the gospel. For my part I have used none of these rights, nor have I written these things that they may be applied in my case. For it would be better for me to die than for anyone to deprive me of my boast!",
 },
 
 "1 Cor 9:18": {
@@ -146,6 +167,13 @@ export const scripture:Record<string, {bsb:string, esv:string, niv:string, csb:s
     esv: "For we are not, like so many, peddlers of God's word, but as men of sincerity, as commissioned by God, in the sight of God we speak in Christ.",
     niv: "Unlike so many, we do not peddle the word of God for profit. On the contrary, in Christ we speak before God with sincerity, as those sent from God.",
     csb: "For we do not market the word of God for profit like so many. On the contrary, we speak with sincerity in Christ, as from God and before God.",
+},
+
+"2 Cor 11:7-9": {
+    bsb: "Was it a sin for me to humble myself in order to exalt you, because I preached the gospel of God to you free of charge? I robbed other churches by accepting their support in order to serve you. And when I was with you and in need, I was not a burden to anyone; for the brothers who came from Macedonia supplied my needs. I have refrained from being a burden to you in any way, and I will continue to do so.",
+    esv: "Or did I commit a sin in humbling myself so that you might be exalted, because I preached God's gospel to you free of charge? I robbed other churches by accepting support from them in order to serve you. And when I was with you and was in need, I did not burden anyone, for the brothers who came from Macedonia supplied my need. So I refrained and will refrain from burdening you in any way.",
+    niv: "Was it a sin for me to lower myself in order to elevate you by preaching the gospel of God to you free of charge? I robbed other churches by receiving support from them so as to serve you. And when I was with you and needed something, I was not a burden to anyone, for the brothers who came from Macedonia supplied what I needed. I have kept myself from being a burden to you in any way, and will continue to do so.",
+    csb: "Or did I commit a sin by humbling myself so that you might be exalted, because I preached the gospel of God to you free of charge? I robbed other churches by taking pay from them to minister to you. When I was present with you and in need, I did not burden anyone, since the brothers who came from Macedonia supplied my needs. I have kept myself, and will keep myself, from burdening you in any way.",
 },
 
 "1 Tim 6:5b-8": {
