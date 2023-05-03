@@ -8,7 +8,7 @@ blockquote
         div.options
             div.option(v-if='custom' :class='{selected: active === "custom"}' @click='change_trans("custom")')
                 | Own
-            div.option(v-for='option of options' :key='option' :class='{selected: option === active}'
+            div.option(v-for='option of translation_options' :key='option' :class='{selected: option === active}'
                     @click='change_trans(option)')
                 | {{ BIBLES[option].abbrev }}
         a.credit(v-if='active !== "custom"' :href='bible.license' target='_blank') {{ bible.credit }}
@@ -21,12 +21,10 @@ blockquote
 import {computed, ref} from 'vue'
 import {TRANS} from './state'
 import {BIBLES} from './bibles'
-import {scripture} from './scripture'
+import {scripture, translation_options} from './scripture'
 
 
 const props = defineProps({passage: String, custom: String})
-
-const options = ['bsb', 'net', 'esv', 'niv', 'csb']
 
 // Always start showing custom if available
 const active = ref(props.custom ? 'custom' : TRANS.value)

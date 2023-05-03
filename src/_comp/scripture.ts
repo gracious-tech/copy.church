@@ -1,4 +1,17 @@
 
+export const translation_options = ['bsb', 'net', 'esv', 'niv', 'csb']
+
+
+export const scripture_by_topic:Record<string, string[]> = {
+    "Free giving": ["Matt 10:7-8", "1 Cor 9:18"],
+    "Condemnation": ["Micah 3:11", "Luke 16:13", "2 Cor 2:17", "1 Tim 6:5b-8", "Titus 1:10-11", "1 Peter 5:1-2"],
+    "Stories": ["1 Sam 2:15-17", "2 Kings 5:15-16", "John 2:14-16", "Acts 8:18-21"],
+    "Forbidding others": ["1 Cor 6:7"],
+    "Attitude": ["Luke 17:7-10", "Acts 4:32"],
+}
+
+
+// NOTE These are expected to be in traditional order
 export const scripture:Record<string, {bsb:string, net:string, esv:string, niv:string, csb:string}> = {
 
 "1 Sam 2:15-17": {
