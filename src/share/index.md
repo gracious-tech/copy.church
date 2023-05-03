@@ -154,6 +154,8 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_charge.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_follow.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_consult.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/paul_payment.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_compatibility.jpg'>
     <!-- Cartoons -->
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_give.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
