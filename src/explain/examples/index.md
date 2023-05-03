@@ -72,7 +72,7 @@ It's often argued that anyone wanting to use a resource should simply ask permis
 > In sum, we usually expect to either not receive any reply or to be denied access to resources. To be granted access to something is definitely the less common outcome in our experience."
 
 
-## Testimonies
+## Less resourced countries
 
 The [Digital Bible Society was founded](https://dbs.org/about/overview/history) in response to the issue of copyright and the lack of resources for places like China:
 
