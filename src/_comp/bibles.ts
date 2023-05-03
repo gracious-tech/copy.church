@@ -404,6 +404,31 @@ const bibles_raw = {
             owner_supportive: true,
         },
     },
+    blb: {
+        abbrev: "BLB",
+        name: "Berean Literal Bible",
+        year: 2023,  // In progress
+        type: "Very literal",
+        source: "Alexandrian",
+        info: 'https://literalbible.com/',
+        license: 'https://berean.bible/terms.htm',
+        read: 'https://biblehub.com/blb/john/1.htm',
+        credit: "",
+        can: {
+            read_for_free: true,
+            read_anonymously: true,
+            quote: true,
+            quote_ratio: true,
+            quote_book: true,
+            not_attribute: true,
+            use_quote_openly: true,
+            use_commercially: true,
+            audio: true,
+            translate: true,
+            modify: true,
+            owner_supportive: true,
+        },
+    },
 }
 
 
