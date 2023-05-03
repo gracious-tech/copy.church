@@ -57,7 +57,7 @@ table(v-if='choice_payment && choice_license')
         td
             p Any profits #[span(v-html='do_(checks.non_profit)')] get invested back into ministry (whether payment or donations).
             ul
-                li Using ministry for profit is condemned in scripture (2 Cor 2:17, Luke 16:13)
+                li Using ministry for profit is condemned in Scripture (2 Cor 2:17, Luke 16:13)
                 li Even if not much money is made, having no limit on what can be earned is opening oneself up to profit from ministry
 
     tr

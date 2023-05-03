@@ -87,7 +87,7 @@ transition
             p You can't do this, as it breaks rule:
             ul
                 li {{ rule_ratio }}
-            p (scripture would take up 100% of the narration)
+            p (Scripture would take up 100% of the narration)
 
     div(v-else-if='slide === 9')
         h3 Can you share a Bible verse on social media?
