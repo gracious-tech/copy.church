@@ -379,7 +379,7 @@ const bibles_raw = {
             owner_supportive: false,
         },
     },
-    berean: {
+    bsb: {
         abbrev: "BSB",
         name: "Berean Standard Bible",
         year: 2016,
@@ -388,7 +388,7 @@ const bibles_raw = {
         info: 'https://bereanbibles.com/',
         license: 'https://berean.bible/terms.htm',
         read: 'https://www.bible.com/en-GB/bible/3034/JHN.1.BSB',
-        credit: "",
+        credit: "Berean Standard Bible",  // Name since many users won't know what BSB stands for
         can: {
             read_for_free: true,
             read_anonymously: true,

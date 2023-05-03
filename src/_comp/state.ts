@@ -1,4 +1,4 @@
 
 import {ref} from 'vue'
 
-export const TRANS = ref('net')
+export const TRANS = ref('bsb')

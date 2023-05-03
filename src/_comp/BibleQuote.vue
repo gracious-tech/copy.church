@@ -26,7 +26,7 @@ import {scripture} from './scripture'
 
 const props = defineProps({passage: String, custom: String})
 
-const options = ['net', 'esv', 'niv', 'csb']
+const options = ['bsb', 'net', 'esv', 'niv', 'csb']
 
 // Always start showing custom if available
 const active = ref(props.custom ? 'custom' : TRANS.value)
@@ -50,6 +50,11 @@ const text = computed(() => {
 })
 
 const read_url = computed(() => {
+    if (bible.value.id === 'bsb'){
+        // BSB is not on Bible Gateway, and Bible Hub doesn't support verse ranges...
+        const chapter = props.passage.split(':')[0]
+        return `https://biblemenus.com/searchbsb.php?q=${encodeURIComponent(chapter)}`
+    }
     const p = encodeURIComponent(props.passage)
     return `https://www.biblegateway.com/passage/?search=${p}&version=${bible.value.abbrev}`
 })
