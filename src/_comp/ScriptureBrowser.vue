@@ -2,13 +2,15 @@
 <template lang='pug'>
 
 div.config
-    input(v-model='order' type='radio' id='order_book' value='book')
-    label(for='order_book') Order by book
-    input(v-model='order' type='radio' id='order_topic' value='topic')
-    label(for='order_topic') Order by topic
+    div.radio
+        input(v-model='order' type='radio' id='order_book' value='book')
+        label(for='order_book') Order by book
+    div.radio
+        input(v-model='order' type='radio' id='order_topic' value='topic')
+        label(for='order_topic') Order by topic
 
 div.config
-    template(v-for='bible of translation_options')
+    div.radio(v-for='bible of translation_options')
         input(v-model='primary_bible' type='radio' :id='`primary_${bible}`' :value='bible')
         label(:for='`primary_${bible}`') {{ bible.toUpperCase() }}
     div.credit {{ primary_credit }}
@@ -16,11 +18,12 @@ div.config
 div.config
     div
         small Compare with:
-    template(v-for='bible of translation_options')
+    div.radio(v-for='bible of translation_options')
         input(v-model='secondary_bible' type='radio' :id='`secondary_${bible}`' :value='bible')
         label(:for='`secondary_${bible}`') {{ bible.toUpperCase() }}
-    input(v-model='secondary_bible' type='radio' id='secondary_null' :value='null')
-    label(for='secondary_null') None
+    div.radio
+        input(v-model='secondary_bible' type='radio' id='secondary_null' :value='null')
+        label(for='secondary_null') None
     div.credit(v-if='secondary_bible') {{ secondary_credit }}
 
 div(v-for='[topic, passages] of groups' :key='topic')
@@ -95,6 +98,9 @@ const chapter_url = (passage:string) => {
 .config
     margin: 16px 0
 
+.radio
+    display: inline-block
+
 .credit
     opacity: 0.5
     font-size: 0.8em
@@ -112,5 +118,13 @@ h2
 
     .secondary
         margin-left: 24px
+
+    @media (max-width: 600px)
+        flex-direction: column
+        .secondary
+            margin-left: 0
+            border-top: 1px solid hsl(0, 0%, 50%, 0.2)
+            margin-top: 12px
+            padding-top: 8px
 
 </style>

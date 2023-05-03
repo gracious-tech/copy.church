@@ -11,6 +11,4 @@ import ScriptureBrowser from '@/_comp/ScriptureBrowser.vue'
 
 # Relevant passages
 
-&nbsp;
-
 <ScriptureBrowser></ScriptureBrowser>
