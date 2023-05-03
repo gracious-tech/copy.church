@@ -30,13 +30,22 @@ The ESV bible translation used to be included in a Bible platform that allowed m
 As a result, many of these free apps get negative feedback from users even though there is nothing they can do about it. Like this 2/5 stars review for [AndBible](https://play.google.com/store/apps/details?id=net.bible.android.activity): <q>Poor review due to the fact that ESV version is no longer available</q>.
 
 
-## Books out of print
+## Abandoned resources
 
-If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to them. Rather than make the works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them.
+If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to them. Rather than make the works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them. This also happens when authors pass away, leaving the rights to their works to any descendants who may or may not continue publishing them.
 
+### The International Standard Version
+Reportedly used by millions of people worldwide at one point, the [International Standard Version](https://www.biblegateway.com/versions/International-Standard-Version-ISV-Bible/) is an English Bible translation that would have taken years of diligent work to produce. Yet after the former executive director of its foundation passed away in 2019, the [ISV website](http://isv.org/) has gone down, the ISV foundation has not filed any tax returns, and the website of the stated publisher of the ISV has been [infected with malware advertising gambling](http://davidsonpress.com/introduction/) (as of May 2023).
+
+It is unknown who now owns the rights to the ISV translation, and it can no longer be downloaded from the website. Had the owners freed it from copyright, the Christian community could have continued to publish and use it in ministry resources. Unless the new rights owners emerge and continue publishing it, an entire modern English Bible will progressively go to waste.
+
+
+
+### The Hebrew dictionary no longer in print
 The _Diccionario bíblico hebreo-español_ is a Hebrew-Spanish dictionary that is out of print, and the publisher does not respond when contacted. Many spanish believers would love to study biblical Hebrew using such a resource, but are unable to because the publisher retains the rights to the now out-of-print book.
 
-Likewise, there are many bible illustrations that publishers hold the rights to even though they are no longer using them. Rather than release them for the benefit of the church, they keep them in storage instead.
+### Bible illustrations in storage
+There are many bible illustrations that publishers hold the rights to even though they are no longer using them. Rather than release them for the benefit of the church, they keep them in storage instead.
 
 
 ## Worship music
