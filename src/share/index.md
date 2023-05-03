@@ -192,3 +192,9 @@ Start conversations about how we can resist the commercialization of ministry by
 <transition>
     <div v-if='show_copied' class='copied'>Copied! Now paste it somewhere</div>
 </transition>
+
+
+## Share Scripture
+The Bible speaks for itself! We've collected relevant passages on this topic in one convenient place:
+
+<p><VPButton href='/share/scripture/' text="Relevant passages"></VPButton></p>
