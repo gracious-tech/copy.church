@@ -44,11 +44,6 @@
     color: hsla(30, 50%, 50%)
 
 
-q
-    opacity: 0.7
-    font-style: italic
-
-
 .vp-doc
 
     &[class*='_articles_']
@@ -83,11 +78,17 @@ q
 
 
 // Generic
+
+q
+    opacity: 0.7
+    font-style: italic
+
 label
     user-select: none
     cursor: pointer
     color: var(--vp-c-text-1)
     filter: sepia(1)
+
 input[type="checkbox"], input[type="radio"]
     width: 1.6em
     height: 1.6em
@@ -104,6 +105,10 @@ input[type="checkbox"], input[type="radio"]
         vertical-align: middle
         padding-left: 12px  // WARN Don't use margin or can't click between input and label
         margin-right: 24px
+
+mark
+    color: inherit
+    background-color: hsl(60, 100%, 50%, 0.2)
 
 
 // Fonts
