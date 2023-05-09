@@ -56,7 +56,7 @@ The intention here is to help us recall what Paul means by terms, applying what 
 
 <blockquote>
 
-<sup>1</sup>Am I not free [_to do as I please_]? Am I not an apostle [_with rights_]? Have I not seen Jesus our Lord? Are you yourselves not my workmanship in the Lord? <sup>2</sup>Even if I am not an apostle to others, surely I am to you. For you are the seal of my apostleship in the Lord [_thus I have the rights of an apostle_].
+<sup>1</sup>Am I not free [_to exercise my rights_]? Am I not an apostle [_with rights_]? Have I not seen Jesus our Lord? Are you yourselves not my workmanship in the Lord? <sup>2</sup>Even if I am not an apostle to others, surely I am to you. For you are the seal of my apostleship in the Lord [_thus I have the rights of an apostle_].
 
 <sup>3</sup>This is my defense to those who scrutinize me [_when I tell you to give up your own rights_]: <sup>4</sup>Have we no right to food and to drink? <sup>5</sup>Have we no right to take along a believing wife, as do the other apostles and the Lord’s brothers and Cephas? <sup>6</sup>Or are Barnabas and I the only apostles who must work for a living? [_Surely we have the right to support just as the other apostles do._]
 
