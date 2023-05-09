@@ -126,7 +126,7 @@ On the other hand, he will only preach "free of charge" (9:18) and will not let 
 
 What we can conclude then is that the right to financial support is legitimate, as long as it doesn't get in the way of the gospel. Which means there are times it is appropriate and times it is not, and forms of finance that are appropriate and forms that are not. Conley Owens in [The Dorean Principle](https://thedoreanprinciple.org/) distinguishes between "colabor" (appropriate support) and "reciprocity" (inappropriate exchange), which is a helpful lens to see these matters through.
 
-There is a notable form of finance that Paul misses in this chapter. Paul covers a range of occupations: apostles, soldiers, vinedressers, shepherds, oxen, plowmen, threshers, sowers, and priests. Yet the common occupation of a seller in a marketplace is missing, and for good reason. Selling ministry is the direct opposite of ministering "free of charge", and is a form of finance Paul would never endorse.
+There is a form of finance that is conspicuously absent in this chapter. Paul covers a range of occupations: apostles, soldiers, vinedressers, shepherds, oxen, plowmen, threshers, sowers, and priests. Yet the common occupation of a seller in a marketplace is missing, and for good reason. Selling ministry is the direct opposite of ministering "free of charge", and is a form of finance Paul would never endorse.
 
 &nbsp;
 
