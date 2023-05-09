@@ -6,6 +6,7 @@
     "@volar/vue-language-plugin-pug": "^1.2.0",
     "flexsearch": "^0.7.31",
     "markdown-it": "^13.0.1",
+    "markdown-it-footnote": "^3.0.3",
     "npm-check-updates": "^16.7.12",
     "pug": "^3.0.2",
     "sass": "^1.58.3",

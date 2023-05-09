@@ -4,6 +4,7 @@ import path from 'path'
 import stemmer from 'wink-porter2-stemmer'
 import {eng as stopwords} from 'stopword'
 import {defineConfig} from 'vitepress'
+import MarkdownPluginFootnote from 'markdown-it-footnote'
 
 import {SearchPlugin} from './plugin-search'
 import {articles} from '../src/_comp/articles'
@@ -43,6 +44,11 @@ export default defineConfig({
                 minlength: 3,  // Does exist, not typed
             }),
         ],
+    },
+    markdown: {
+        config: (md) => {
+            md.use(MarkdownPluginFootnote)
+        },
     },
     themeConfig: {
         logo: '/_assets/icon.svg',
