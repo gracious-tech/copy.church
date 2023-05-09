@@ -36,10 +36,7 @@ The great irony is that we've been reading 1 Corinthians 9 upside down. Paul is 
 
 While Paul acknowledges that we have the "right" to eat whatever we like, he admonishes that such a right should not always be exercised (8:9). He then goes on in chapter 9 to give an example from his own ministry of how he also must give up his rights regarding finance at times.
 
-
-## Terms in 1 Corinthians 9
-
-The following terms are used in chapter 9 without much clarification from Paul as to what they are referring to, so it is important to consider the overall context of the letter.
+The following terms are used in chapter 9 without much clarification from Paul as to what they are referring to, so it is important to read them in the overall context of the letter:
 
  * __"free / ἐλεύθερος"__ &mdash; Should be understood to refer to being free from others to do as you please. Paul uses it earlier in the letter to refer to slaves being free from their masters (7:21), and a woman being free to marry whoever she likes (7:39).
 
@@ -55,31 +52,31 @@ The following terms are used in chapter 9 without much clarification from Paul a
 
 In light of this understanding, let's go through 1 Corinthians 9, with parenthetical expansions to help smooth out the flow of Paul's argument. We'll use the Berean Standard Bible simply because [it's free](/initiatives/bibles/), but these comments also work for any of the major translations.
 
-The intention here is to help us recall what Paul means by terms, and apply what we know from the context.
+The intention here is to help us recall what Paul means by terms, applying what we know from the context.
 
 <blockquote>
 
 <sup>1</sup>Am I not free [_to do as I please_]? Am I not an apostle [_with rights_]? Have I not seen Jesus our Lord? Are you yourselves not my workmanship in the Lord? <sup>2</sup>Even if I am not an apostle to others, surely I am to you. For you are the seal of my apostleship in the Lord [_thus I have the rights of an apostle_].
 
-<sup>3</sup>This is my defense to those who scrutinize me [when I tell you to give up your own rights]: <sup>4</sup>Have we no right to food and to drink? <sup>5</sup>Have we no right to take along a believing wife, as do the other apostles and the Lord’s brothers and Cephas? <sup>6</sup>Or are Barnabas and I the only apostles who must work for a living?
+<sup>3</sup>This is my defense to those who scrutinize me [_when I tell you to give up your own rights_]: <sup>4</sup>Have we no right to food and to drink? <sup>5</sup>Have we no right to take along a believing wife, as do the other apostles and the Lord’s brothers and Cephas? <sup>6</sup>Or are Barnabas and I the only apostles who must work for a living? [_Surely we have the right to support just as the other apostles do._]
 
-<sup>7</sup>Who serves as a soldier at his own expense? Who plants a vineyard and does not eat of its fruit? Who tends a flock and does not drink of its milk? [Nobody does.]
+<sup>7</sup>Who serves as a soldier at his own expense? Who plants a vineyard and does not eat of its fruit? Who tends a flock and does not drink of its milk? [_Nobody does._]
 
-<sup>8</sup>Do I say this from [only] a human perspective? Doesn’t the Law say the same thing? <sup>9</sup>For it is written in the Law of Moses: “Do not muzzle an ox while it is treading out the grain.” Is it about oxen that God is concerned? <sup>10</sup>Isn’t He actually speaking on our behalf? Indeed, this was written for us, because when the plowman plows and the thresher threshes, they should also expect to share in the harvest.
+<sup>8</sup>Do I say this from [_only_] a human perspective? Doesn’t the Law say the same thing? <sup>9</sup>For it is written in the Law of Moses: “Do not muzzle an ox while it is treading out the grain.” Is it about oxen that God is concerned? <sup>10</sup>Isn’t He actually speaking on our behalf? Indeed, this was written for us, because when the plowman plows and the thresher threshes, they should also expect to share in the harvest.
 
-<sup>11</sup>If we have sown spiritual seed [of great value] among you, is it too much for us to reap a material harvest [of lesser value] from you? <sup>12</sup>If others have this right to your support, shouldn’t we have it all the more? [Thus we deserve support from you more than anyone else does!]
+<sup>11</sup>If we have sown spiritual seed [_of great value_] among you, is it too much for us to reap a material harvest [_of lesser value_] from you? <sup>12</sup>If others have this right to your support, shouldn’t we have it all the more? [_Thus we deserve support from you more than anyone else does!_]
 
-<mark>But we did not exercise this right.</mark> Instead, we put up with anything rather than hinder the gospel of Christ.
+<mark>But we did not exercise this right.</mark> Instead, we put up with anything rather than hinder the gospel of Christ [_by expecting support from you_].
 
-<sup>13</sup>Do you not know that those who work in the temple eat of its food, and those who serve at the altar partake of its offerings? <sup>14</sup>In the same way, the Lord has prescribed that those who preach the gospel should receive their living from the gospel.
+<sup>13</sup>Do you not know that those who work in the temple eat of its food, and those who serve at the altar partake of its offerings? <sup>14</sup>In the same way, the Lord has prescribed that those who preach the gospel should receive their living from the gospel [_through the support of others_].
 
-<sup>15</sup><mark>But I have not used any of these rights.</mark> And I am not writing this to suggest that something be done for me. Indeed, I would rather die than let anyone nullify my "boast" [_which is really me humbling myself_].
+<sup>15</sup><mark>But I have not used any of these rights.</mark> And I am not writing this to suggest that something be done for me. Indeed, I would rather die than [_compromise the sincerity of my ministry and_] let anyone nullify my "boast". [_While others boast, I humble myself and go without pay._]
 
-<sup>16</sup>Yet when I preach the gospel, I have no reason to boast, because I am obligated to preach [as God's servant]. Woe to me if I do not preach the gospel! <sup>17</sup>If my preaching is voluntary [_which it isn't_], I have a reward [_being free to charge as I like_]. But if it is not voluntary [_which is the case_], I am still entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_seeking reward from God_], and so not [_seek material reward and_] use up my "rights" in preaching it.
+<sup>16</sup>Yet when I preach the gospel, I have no reason to boast, because I am obligated to preach [_as God's servant_]. Woe to me if I do not preach the gospel! <sup>17</sup>If my preaching is voluntary [_which it isn't_], I have a reward [_being free to charge as I like_]. But if it is not voluntary [_which is the case_], I am still entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_with reward from God_], and so not use[^use] up my "rights" in preaching it [_and take advantage of such material rewards_].
 
 <sup>19</sup>Though I am free of obligation to anyone, I make myself a slave to everyone [_giving up my rights_], to win as many as possible.
 
-<sup>20-27</sup> [_Paul continues the idea of giving up rights for the sake of others and being self-disciplined rather than living as we please_]
+<sup>20-27</sup> [_Paul continues the idea of giving up rights for the sake of others and being self-disciplined rather than living as we please._]
 
 </blockquote>
 
@@ -92,13 +89,13 @@ Am I not also free to do as I please?
 
 As you know, I'm an apostle. Apostles deserve to be compensated for their labor, just like anyone else does. So we could have accepted support from you if we wanted to.
 
-But we did not exercise this right! Because it would have hindered us sharing the gospel with you.
+But we did not exercise this right! We'd prefer to go without than let money get in the way of the gospel.
 
 We certainly do have the "right" to support, as God has always supported ministers through the offerings of people, in the temple and now as well.
 
 But I have not used any of these rights!
 
-(By the way, I'm not mentioning all of this to imply you should support me. I would rather die than have mixed motives.)
+(By the way, I'm not mentioning all of this to imply you should support me. I would rather die than compromise the sincerity of my ministry.)
 
 I have to preach the gospel free of charge, as I'm not self-employed but rather a servant of God. My reward is getting to serve him and you.
 
@@ -132,3 +129,7 @@ Either way, what is clear from this passage is that Paul isn't justifying all fo
 &nbsp;
 
 <CommittedPerson id='jon_here'></CommittedPerson>
+
+&nbsp;
+
+[^use]: __"use / καταχρήσασθαι"__ &mdash; This verb is prepended by "κατα" which intensifies it (Garland, _1 Corinthians_, 2003, p427). Some translations read "not make full use of my rights" (NIV, ESV similar) which could mistakenly imply that Paul _did make some use_ of his rights. Other translations read it in terms of excess "not abuse my authority" (NKJV). The translation chosen for this article renders it as "not use up my rights" (BSB). In context, Paul is heavily implying it would be _inappropriate_ for him to "use" his rights, so "abuse" or "take advantage of" better capture the meaning.
