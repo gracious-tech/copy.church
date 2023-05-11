@@ -98,6 +98,9 @@ const chapter_url = (passage:string) => {
 .config
     margin: 16px 0
 
+    @media print
+        display: none
+
 .radio
     display: inline-block
 

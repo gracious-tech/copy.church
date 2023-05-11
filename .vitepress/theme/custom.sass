@@ -132,3 +132,14 @@ mark
 
 :lang(heb)
     font-family: 'Noto Serif Hebrew', serif
+
+
+// Print
+@media print
+    :root
+        --vp-c-text-1: black
+        a
+            color: black
+
+    .VPNav, .VPLocalNav
+        display: none !important
