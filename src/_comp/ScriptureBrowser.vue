@@ -13,7 +13,6 @@ div.config
     div.radio(v-for='bible of translation_options')
         input(v-model='primary_bible' type='radio' :id='`primary_${bible}`' :value='bible')
         label(:for='`primary_${bible}`') {{ bible.toUpperCase() }}
-    div.credit {{ primary_credit }}
 
 div.config
     div
@@ -24,7 +23,6 @@ div.config
     div.radio
         input(v-model='secondary_bible' type='radio' id='secondary_null' :value='null')
         label(for='secondary_null') None
-    div.credit(v-if='secondary_bible') {{ secondary_credit }}
 
 div(v-for='[topic, passages] of groups' :key='topic')
     h2 {{ topic }}
@@ -34,6 +32,10 @@ div(v-for='[topic, passages] of groups' :key='topic')
         div.row
             div.primary {{ scripture[passage][primary_bible] }}
             div.secondary(v-if='secondary_bible') {{ scripture[passage][secondary_bible] }}
+
+div.credit
+    div {{ primary_credit }}
+    div(v-if='secondary_bible') {{ secondary_credit }}
 
 </template>
 
@@ -73,11 +75,13 @@ const groups = computed(() => {
 })
 
 const primary_credit = computed(() => {
-    return BIBLES[primary_bible.value].credit
+    const bible = BIBLES[primary_bible.value]
+    return `${bible.abbrev} - ${bible.credit}`
 })
 
 const secondary_credit = computed(() => {
-    return BIBLES[secondary_bible.value]?.credit
+    const bible = BIBLES[secondary_bible.value]
+    return `${bible.abbrev} - ${bible.credit}`
 })
 
 const chapter_url = (passage:string) => {
@@ -105,6 +109,7 @@ const chapter_url = (passage:string) => {
     display: inline-block
 
 .credit
+    margin-top: 50px
     opacity: 0.5
     font-size: 0.8em
 
