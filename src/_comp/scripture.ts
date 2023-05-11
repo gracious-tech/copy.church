@@ -3,9 +3,10 @@ export const translation_options = ['bsb', 'esv', 'niv', 'csb']
 
 
 export const scripture_by_topic:Record<string, string[]> = {
-    "Free giving": ["Matt 10:7-8", "1 Cor 9:12", "1 Cor 9:14-15", "1 Cor 9:18", "2 Cor 11:7-9"],
+    "Free giving": ["Matt 10:7-8", "1 Cor 9:12", "1 Cor 9:14-15", "1 Cor 9:18", "2 Cor 11:7-9", "Rev 21:6"],
     "Condemnation": ["Micah 3:11", "Luke 16:13", "2 Cor 2:17", "1 Tim 6:5b-8", "Titus 1:10-11", "1 Peter 5:1-2"],
     "Stories": ["1 Sam 2:15-17", "2 Kings 5:15-16", "John 2:14-16", "Acts 8:18-21"],
+    "Provision": ["Matt 9:37-38", "Matt 10:9-10", "Phil 4:18"],
     "Forbidding others": ["Luke 9:49-50", "1 Cor 6:7"],
     "Attitude": ["Luke 17:7-10", "Acts 4:32"],
 }
@@ -209,6 +210,13 @@ export const scripture:Record<string, {bsb:string, esv:string, niv:string, csb:s
     esv: "So I exhort the elders among you, as a fellow elder and a witness of the sufferings of Christ, as well as a partaker in the glory that is going to be revealed: shepherd the flock of God that is among you, exercising oversight, not under compulsion, but willingly, as God would have you; not for shameful gain, but eagerly;",
     niv: "To the elders among you, I appeal as a fellow elder and a witness of Christ’s sufferings who also will share in the glory to be revealed: Be shepherds of God’s flock that is under your care, watching over them—not because you must, but because you are willing, as God wants you to be; not pursuing dishonest gain, but eager to serve;",
     csb: "I exhort the elders among you as a fellow elder and witness to the sufferings of Christ, as well as one who shares in the glory about to be revealed: Shepherd God’s flock among you, not overseeing out of compulsion but willingly, as God would have you; not out of greed for money but eagerly;",
+},
+
+"Rev 21:6": {
+    bsb: "And He told me, “It is done! I am the Alpha and the Omega, the Beginning and the End. To the thirsty I will give freely from the spring of the water of life.",
+    esv: "And he said to me, “It is done! I am the Alpha and the Omega, the beginning and the end. To the thirsty I will give from the spring of the water of life without payment.",
+    niv: "He said to me: “It is done. I am the Alpha and the Omega, the Beginning and the End. To the thirsty I will give water without cost from the spring of the water of life.",
+    csb: "Then he said to me, “It is done! I am the Alpha and the Omega, the beginning and the end. I will freely give to the thirsty from the spring of the water of life.",
 },
 
 "Rev 22:12": {
