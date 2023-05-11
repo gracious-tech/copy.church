@@ -57,6 +57,13 @@ export const scripture:Record<string, {bsb:string, esv:string, niv:string, csb:s
     csb: "Then he said to his disciples, “The harvest is abundant, but the workers are few. Therefore, pray to the Lord of the harvest to send out workers into his harvest.”",
 },
 
+"Matt 10:5-8": {
+    bsb: "These twelve Jesus sent out with the following instructions: “Do not go onto the road of the Gentiles or enter any town of the Samaritans. Go rather to the lost sheep of Israel. As you go, preach this message: ‘The kingdom of heaven is near.’ Heal the sick, raise the dead, cleanse the lepers, drive out demons. Freely you have received; freely give.",
+    esv: "These twelve Jesus sent out, instructing them, “Go nowhere among the Gentiles and enter no town of the Samaritans, but go rather to the lost sheep of the house of Israel. And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay.",
+    niv: "These twelve Jesus sent out with the following instructions: “Do not go among the Gentiles or enter any town of the Samaritans. Go rather to the lost sheep of Israel. As you go, proclaim this message: ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those who have leprosy, drive out demons. Freely you have received; freely give.",
+    csb: "Jesus sent out these twelve after giving them instructions: “Don’t take the road that leads to the Gentiles, and don’t enter any Samaritan town. Instead, go to the lost sheep of the house of Israel. As you go, proclaim, ‘The kingdom of heaven has come near.’ Heal the sick, raise the dead, cleanse those with leprosy, drive out demons. Freely you received, freely give.",
+},
+
 "Matt 10:7-8": {
     bsb: "As you go, preach this message: ‘The kingdom of heaven is near.’ Heal the sick, raise the dead, cleanse the lepers, drive out demons. Freely you have received; freely give.",
     esv: "“And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’ Heal the sick, raise the dead, cleanse lepers, cast out demons. You received without paying; give without pay.”",

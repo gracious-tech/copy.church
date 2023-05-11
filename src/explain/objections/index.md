@@ -4,6 +4,8 @@
 ## Scripture
 [Jesus' command doesn't apply today.](/objections/not-command/)
 
+[Jesus' command only applies to evangelism.](/objections/only-evangelism/)
+
 [The worker deserves his wages.](/objections/deserves-wages/)
 
 [Scripture only condemns greedy ministry, not all forms of profit.](/objections/only-greed/)

@@ -71,6 +71,7 @@ export default defineConfig({
                     text: "Scripture",
                     items: [
                         {text: "It's not a command", link: '/objections/not-command/'},
+                        {text: "Only applies to evangelism", link: '/objections/only-evangelism/'},
                         {text: "Worker deserves wages", link: '/objections/deserves-wages/'},
                         {text: "Only greed condemned", link: '/objections/only-greed/'},
                     ],
