@@ -3,12 +3,15 @@
 
 
 .translations
-    cursor: pointer
     display: table  // Vitepress defaults to block for tables for some reason
     width: 100%
+    user-select: none
 
     tr
         background-color: transparent !important
+
+        td
+            cursor: pointer
 
         th, td
             white-space: nowrap
