@@ -18,4 +18,12 @@ export const articles:Record<string, {title:string, desc:string}> = {
         title: "A close look at Micah 3:11",
         desc: "Where God clearly condemns charging for religious teaching.",
     },
+    // '1cor9': {
+    //     title: "1 Corinthians 9",
+    //     desc: "How Paul's argument was turned upside down",
+    // },
+    'sharealike': {
+        title: "The problem with ShareAlike",
+        desc: "It is only through waiving every claim to works of ministry that the gospel may be freely given.",
+    },
 }
