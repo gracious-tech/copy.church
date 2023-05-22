@@ -33,17 +33,17 @@ Let's closely examine the context, and especially the lead up to Jesus' command:
 
 <h4>Matthew 9:35-10:10 (Berean Standard Bible)</h4>
 
-Jesus went through all the towns and villages, teaching in their synagogues, preaching the gospel of the kingdom, and healing every disease and sickness. When He saw the crowds, He was moved with compassion for them, because they were harassed and helpless, like sheep without a shepherd.
+<sup>35</sup>Jesus went through all the towns and villages, teaching in their synagogues, preaching the gospel of the kingdom, and healing every disease and sickness. <sup>36</sup>When He saw the crowds, He was moved with compassion for them, because they were harassed and helpless, like sheep without a shepherd.
 
-Then He said to His disciples, “The harvest is plentiful, but the workers are few. Ask the Lord of the harvest, therefore, to send out workers into His harvest.”
+<sup>37</sup>Then He said to His disciples, “The harvest is plentiful, but the workers are few. <sup>38</sup>Ask the Lord of the harvest, therefore, to send out workers into His harvest.”
 
-And calling His twelve disciples to Him, Jesus gave them authority over unclean spirits, so that they could drive them out and heal every disease and sickness.
+<sup>10:1</sup>And calling His twelve disciples to Him, Jesus gave them authority over unclean spirits, so that they could drive them out and heal every disease and sickness.
 
-These are the names of the twelve apostles: first Simon, called Peter, and his brother Andrew; James son of Zebedee, and his brother John; Philip and Bartholomew; Thomas and Matthew the tax collector; James son of Alphaeus, and Thaddaeus; Simon the Zealot, and Judas Iscariot, who betrayed Jesus.
+<sup>2-4</sup>These are the names of the twelve apostles... [omitted]
 
-These twelve Jesus sent out with the following instructions: “Do not go onto the road of the Gentiles or enter any town of the Samaritans. Go rather to the lost sheep of Israel. As you go, preach this message: ‘The kingdom of heaven is near.’ Heal the sick, raise the dead, cleanse the lepers, drive out demons. <mark>Freely you have received; freely give.</mark>
+<sup>5</sup>These twelve Jesus sent out with the following instructions: “Do not go onto the road of the Gentiles or enter any town of the Samaritans. <sup>6</sup>Go rather to the lost sheep of Israel. <sup>7</sup>As you go, preach this message: ‘The kingdom of heaven is near.’ <sup>8</sup>Heal the sick, raise the dead, cleanse the lepers, drive out demons. <mark>Freely you have received; freely give.</mark>
 
-Do not carry any gold or silver or copper in your belts. Take no bag for the road, or second tunic, or sandals, or staff; for the worker is worthy of his provisions.
+<sup>9</sup>Do not carry any gold or silver or copper in your belts. <sup>10</sup>Take no bag for the road, or second tunic, or sandals, or staff; for the worker is worthy of his provisions.
 </blockquote>
 
 In this passage^[See also Mark 6:7–13 and Luke 9:1–6] we have Jesus doing his ministry, "preaching the gospel of the kingdom, and healing every disease and sickness" (9:35), and then commissioning the twelve disciples to do the same. He gives them the authority to perform miracles (10:1) and tells them to preach and heal just as he has been doing (10:7-8). And straight after doing so he tells them to "freely give" because they have "freely received" (10:8).
