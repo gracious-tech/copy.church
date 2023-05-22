@@ -73,7 +73,7 @@ The real problem is not Jesus' command being interpreted too broadly, rather it 
 These arguments all have common problems:
 
  1. The command is in response to "freely receiving", which _is_ true of anyone who has received the gospel of God's grace.
- 2. Miracles are in view too, not just evangelism. Jesus was also freely teaching and discipling the twelve for long periods of time, which is what he was training them up to do as well as "workers of the harvest" (9:38).
+ 2. Miracles are in view too, not just evangelism. Jesus was also teaching and discipling the twelve for long periods of time as _free ministry_, which is what he was training them up to do as well as "workers of the harvest" (9:38).
  3. If the command no longer applies then it is ok to sell the following: prayer, baptism, communion, entry to church, etc.
 
 It is therefore right and appropriate to apply this command to all forms of gospel ministry, just as Paul did in his own ministry (1 Cor 9:18, 2 Cor 11:7). This includes preaching, teaching, Scripture, worship music, ministry resources, and anything else that specifically deals with spiritual matters. Importantly noting that those who serve in these ways are to be financially supported in their freely given ministries, just as Jesus' disciples were (10:10).
