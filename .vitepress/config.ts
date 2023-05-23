@@ -1,12 +1,9 @@
 
 import path from 'path'
 
-import stemmer from 'wink-porter2-stemmer'
-import {eng as stopwords} from 'stopword'
 import {defineConfig} from 'vitepress'
 import MarkdownPluginFootnote from 'markdown-it-footnote'
 
-import {SearchPlugin} from './plugin-search'
 import {articles} from '../src/_comp/articles'
 
 
@@ -29,21 +26,6 @@ export default defineConfig({
                 {find: '@', replacement: path.resolve(__dirname, '../src')},
             ],
         },
-        plugins: [
-            SearchPlugin({
-                // TODO Doesn't render Markdown yet, so &nbsp; etc not decoded
-                // Plugin config
-                placeholder: "Search site...",
-                previewLength: 200,
-                // FlexSearch config
-                language: 'en',
-                context: true,
-                stemmer,
-                filter: stopwords,
-                tokenize: 'forward',
-                minlength: 3,  // Does exist, not typed
-            }),
-        ],
     },
     markdown: {
         config: (md) => {
@@ -59,6 +41,9 @@ export default defineConfig({
         socialLinks: [
             {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
         ],
+        search: {
+            provider: 'local',
+        },
         sidebar: {
             '/objections/': [
                 {
