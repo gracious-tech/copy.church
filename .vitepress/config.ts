@@ -21,6 +21,7 @@ export default defineConfig({
         ['meta', {property: 'og:image:height', content: '630'}],
     ],
     vite: {
+        publicDir: '_public',
         resolve: {
             alias: [
                 {find: '@', replacement: path.resolve(__dirname, '../src')},
