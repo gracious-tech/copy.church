@@ -60,7 +60,7 @@ export default defineConfig({
                 {
                     text: "",
                     items: [
-                        {text: "All Objections", link: '/explain/objections/'},
+                        {text: "← All Objections", link: '/explain/objections/'},
                     ],
                 },
                 {
@@ -117,6 +117,12 @@ export default defineConfig({
             ],
 
             '/articles/': [
+                {
+                    text: "",
+                    items: [
+                        {text: "← More depth", link: '/explain/more/'},
+                    ],
+                },
                 {
                     text: "Articles",
                     items: Object.entries(articles).map(([id, meta]) => ({
