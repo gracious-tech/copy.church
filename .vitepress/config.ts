@@ -27,6 +27,16 @@ export default defineConfig({
                 {find: '@', replacement: path.resolve(__dirname, '../src')},
             ],
         },
+        build: {
+            rollupOptions: {
+                output: {
+                    // Merge chunks together if less than 2kb
+                    // Previously rollup had separate chunk for img urls used more than once
+                    // Resulting in 2 requests per image
+                    experimentalMinChunkSize: 2000,
+                },
+            },
+        },
     },
     markdown: {
         config: (md) => {
