@@ -53,7 +53,7 @@ We can therefore determine that when Jesus said the disciples had "freely receiv
 
 ## Narrowing the scope
 
-Some will argue that "all of life is ministry" and so Jesus' command could be taken to mean that you can't sell anything, or have to live communally as some of the early disciples did for a time (Acts 4:32). The generous spirit and dedication to the gospel is certainly something we all should learn from, but the difference between Acts 4 and Matthew 10 is that the passage in Acts is descriptive, where as Jesus' command is prescriptive. It is an imperative (δωρεὰν δότε).
+Some will argue that "all of life is ministry" and so Jesus' command could be taken to mean that you can't sell anything, or have to live communally as some of the early disciples did for a time (Acts 4:32). The generous spirit and dedication to the gospel is certainly something we all should learn from, but the difference between Acts 4 and Matthew 10 is that the passage in Acts is descriptive, whereas Jesus' command is prescriptive. It is an imperative (δωρεὰν δότε).
 
 The specific actions Jesus directs his disciples to perform are "preach", "heal/cleanse", "raise the dead", and "drive out demons" (10:7-8). These are all spiritual activities.
 
