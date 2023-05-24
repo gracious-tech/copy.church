@@ -59,7 +59,7 @@ The specific actions Jesus directs his disciples to perform are "preach", "heal/
 
 It is important to remember that the function of healings in Jesus' ministry were not simply for him to serve as a doctor, but were a form of gospel proclamation. John describes Jesus' healing of an official's son as "the second sign that Jesus performed" (John 4:54). Jesus did not heal everyone he could see, such as when he healed only one man at a pool full of people with ailments (John 5:1-13). Healings were not just about helping the sick but "so that the works of God would be displayed" (John 9:3). So we should not confuse miraculous healings with medical work today. God does heal through both miracles and doctors, but it is the miracles that are in view in Matthew 10 and not regular healings.
 
-Thus Conley Owens describes the context of Jesus' command in _[The Dorean Principle](https://thedoreanprinciple.org/#c1_4)_ as "gospel proclamation". Both the preaching and the healings are in fact gospel proclamation, and Jesus' command should not be broadened beyond that. Ministry should affect all of life, but that doesn't mean the command to freely give does.
+Thus the instructions to preach and to heal are ministerial activities that are spiritual in nature, and Jesus' command should not be broadened beyond that. Ministry should affect all of life, but that doesn't mean the command to freely give does.
 
 
 ## Broadening the scope
