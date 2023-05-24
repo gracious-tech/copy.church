@@ -11,6 +11,4 @@ Secondly, the abundance of resources we enjoy are limited primarily to English-s
 
 Thirdly, biblical ethics do not change. The command to freely give was not about practicalities but about the principle of emulating God's grace. God's grace remains free and our giving should too.
 
-&nbsp;
-
-<img src='/memes/paul_compare.jpg'>
+<ArticlePreview id='scope'></ArticlePreview>

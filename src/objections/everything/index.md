@@ -5,6 +5,6 @@ Yes, technically everything does belong to God, even our very lives. So it could
 
 <BibleQuote passage='Acts 4:32'></BibleQuote>
 
-It is not argued that everything must be freely given, but it is argued that all ministry should be freely given. There is an important distinction as ministry is to do with that which is spiritual and holy.
+It is not argued that everything must be freely given, but it is argued that all ministry should be freely given. There is an important distinction as ministry is to do with that which is spiritual.
 
-There is a distinction between common grace (what everyone receives) and saving grace (what only true believers receive). Likewise, there must be a distinction between that which is holy and that which is not. This is consistent with Scripture (which is itself holy).
+<ArticlePreview id='scope'></ArticlePreview>

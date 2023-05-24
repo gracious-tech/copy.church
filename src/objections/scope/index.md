@@ -1,11 +1,9 @@
 
 # What can or can't be sold?
 
-The requirement to freely give does not apply to everything. While we do have a general encouragement to be generous with what we have (1 Tim 6:18), the command to freely give only applies to ministry. The scope is derived mainly from the context of Jesus' command:
+The requirement to freely give does not apply to everything. While we do have a general encouragement to be generous with what we have (1 Tim 6:18), the command to freely give only applies to ministry. That which pertains to spiritual things. Not limited to occupational "ministers" but anyone who engages in ministry or creates ministry resources.
 
-<BibleQuote passage='Matt 10:7-8'></BibleQuote>
-
-The command is given in the context of the proclamation of the gospel and the blessings that come with it, which is usually summed up as "ministry". That which pertains to spiritual things. Not limited to occupational "ministers" but anyone who engages in ministry or creates ministry resources.
+<ArticlePreview id='scope'></ArticlePreview>
 
 With that in mind, let's consider some specific examples:
 
@@ -19,7 +17,3 @@ With that in mind, let's consider some specific examples:
  * __Counselling:__ Assisting people as they deal with difficult life circumstances is usually a deeply spiritual affair and so Christian counsellors should not charge for such ministry.
 
 Other products and services in areas such as IT, audio/visual, websites, etc. are not as clearly connected or essential for the proclamation of the gospel. As such, they don't necessarily have to be freely given. They are important parts of most modern churches though, and so believers may choose to offer them freely in the aim of supporting gospel ministry. Some contexts may be more clear than others in this regard.
-
-&nbsp;
-
-<img src='/memes/paul_trainings.jpg'>

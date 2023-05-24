@@ -1,5 +1,5 @@
 ---
-description: Without this command of Jesus, there is nothing to stop Christianity from becoming a commercial enterprise.
+description: Interpreting it too broadly or too narrowly misunderstands Jesus' expectation for ministry.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/articles/scope.jpg'}]]
 titleTemplate: false
 aside: false
@@ -9,14 +9,14 @@ aside: false
 
 import {nice_date} from '@/_comp/utils'
 
-const date = "Draft"  // nice_date(2023, 5, 8)
+const date = nice_date(2023, 5, 24)
 
 </script>
 
 
 # The scope of Jesus' command to freely give
 
-<h4 class='article-meta'>{{ date }} · Jon Here · 6 min read</h4>
+<h4 class='article-meta'>{{ date }} · Jon Here · 5 min read</h4>
 
 <img src='/_assets/articles/scope.jpg' width='1200' height='630' class='article-hero'>
 
@@ -46,9 +46,9 @@ Let's closely examine the context, and especially the lead up to Jesus' command:
 <sup>9</sup>Do not carry any gold or silver or copper in your belts. <sup>10</sup>Take no bag for the road, or second tunic, or sandals, or staff; for the worker is worthy of his provisions.
 </blockquote>
 
-In this passage^[See also Mark 6:7–13 and Luke 9:1–6] we have Jesus doing his ministry, "preaching the gospel of the kingdom, and healing every disease and sickness" (9:35), and then commissioning the twelve disciples to do the same. He gives them the authority to perform miracles (10:1) and tells them to preach and heal just as he has been doing (10:7-8). And straight after doing so he tells them to "freely give" because they have "freely received" (10:8).
+In this passage^[See also Mark 6:7–13, Luke 9:1–6, Luke 10:1-17] we have Jesus doing his ministry, "preaching the gospel of the kingdom, and healing every disease and sickness" (9:35), and then commissioning the twelve disciples to do the same. He gives them the authority to perform miracles (10:1) and tells them to preach and heal just as he has been doing (10:7-8). And straight after doing so he tells them to "freely give" because they have "freely received" (10:8).
 
-We can therefore determine that when Jesus said the disciples had "freely received", he was referring primarily to the gospel message as well as the power to perform miracles. And likewise, they were to "freely give" the gospel message and perform miracles free of charge. We can helpfully sum this up as "ministry". But ministry can have a broad range of meanings, so it is important to further refine exactly what it encompasses.
+We can therefore determine that when Jesus said the disciples had "freely received", he was referring primarily to the gospel message as well as the power to perform miracles. And likewise, they were to "freely give" the gospel message and perform miracles free of charge. We can helpfully sum this up as "ministry". But ministry can have a broad range of meanings, so it is important to further refine exactly what it should encompass in regard to free giving.
 
 
 ## Narrowing the scope
@@ -73,12 +73,17 @@ The real problem is not Jesus' command being interpreted too broadly, rather it 
 These arguments all have common problems:
 
  1. The command is in response to "freely receiving", which _is_ true of anyone who has received the gospel of God's grace.
- 2. Miracles are in view too, not just evangelism. Jesus was also teaching and discipling the twelve for long periods of time as _free ministry_, which is what he was training them up to do as well as "workers of the harvest" (9:38).
- 3. If the command no longer applies then it is ok to sell the following: prayer, baptism, communion, entry to church, etc.
+ 2. Paul applied the command to his own ministry (1 Cor 9:18, 2 Cor 11:7), not just the twelve disciples.
+ 3. If the command no longer applies then it is ok to sell the following: prayer, baptism, communion, entry to church, etc. God forbid.
 
-It is therefore right and appropriate to apply this command to all forms of gospel ministry, just as Paul did in his own ministry (1 Cor 9:18, 2 Cor 11:7). This includes preaching, teaching, Scripture, worship music, ministry resources, and anything else that specifically deals with spiritual matters. Importantly noting that those who serve in these ways are to be financially supported in their freely given ministries, just as Jesus' disciples were (10:10).
+Furthermore, regarding evangelism:
+ 1. Miracles were to be freely given, not just evangelism.
+ 2. Jesus specifically forbid the disciples to go to gentile towns on that particular trip (10:5), so it wasn't evangelising non-believers but rather discipling existing followers of Yahweh.
+ 3. Jesus was teaching and discipling the twelve for long periods of time as _free ministry_, which is what he was training them up to do as well as "workers of the harvest" (9:38).
 
-Without this command of Jesus, there is nothing to stop Christianity from becoming a commercial enterprise. I really wish that was a warning for the future. It is in fact a reality we are already experiencing.
+It is therefore right and appropriate to apply this command to all forms of gospel ministry. This includes preaching, teaching, Scripture, worship music, ministry resources, and anything else that specifically deals with spiritual matters. Importantly noting that those who serve in these ways are to be financially supported in their freely given ministries, just as Jesus' disciples were (10:10).
+
+Without this command of Jesus, there is nothing to stop Christianity from becoming a commercial enterprise. I really wish that was a warning for the future. It is in fact what many forms of ministry have already become.
 
 
 &nbsp;
