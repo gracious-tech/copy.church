@@ -32,7 +32,7 @@ As a result, many of these free apps get negative feedback from users even thoug
 
 ## Abandoned resources
 
-If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to them. Rather than make the works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them. This also happens when authors pass away, leaving the rights to their works to any descendants who may or may not continue publishing them.
+If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to it. Rather than make works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them. This also happens when authors pass away, leaving the rights to their works to any descendants who may or may not continue publishing them.
 
 ### The International Standard Version
 Reportedly used by millions of people worldwide at one point, the [International Standard Version](https://www.biblegateway.com/versions/International-Standard-Version-ISV-Bible/) is an English Bible translation that would have taken years of diligent work to produce. Yet after the former executive director of its foundation passed away in 2019, the [ISV website](http://isv.org/) has gone down, the ISV foundation has not filed any tax returns, and the website of the stated publisher of the ISV has been [infected with malware advertising gambling](http://davidsonpress.com/introduction/) (as of May 2023).
