@@ -173,7 +173,7 @@ table
                 li Use some of their translations freely
 
 h3 You #[em may] be able to do more than this
-p These restrictions are based on what the translation owner has declared is allowed, however they do not nullify #[a(href='/explain/copyright/#fair-use') existing rights to fair use] which may be slightly more permissive in some cases.
+p These restrictions are based on what the translation owner has declared is allowed for public use, however they do not nullify #[a(href='/explain/copyright/#fair-use') existing rights to fair use] which may be slightly more permissive in some cases.
 p You also may be able to ask the copyright owner for additional permissions. Though, <a href='/objections/permission/'>there is no guarantee</a> your request will be accepted.
 p
     small Some licenses have different conditions depending on the intended use (such as commercial and non-commercial), and above represents whichever is most permissive (see actual licenses for more details).
