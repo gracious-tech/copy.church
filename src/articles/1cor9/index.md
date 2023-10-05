@@ -34,23 +34,22 @@ The great irony is that we've been reading 1 Corinthians 9 upside down. Paul is 
 
 1 Corinthians 9 is embedded within Paul's admonishment to the Corinthians regarding food sacrificed to idols (chapters 8-10). Many incorrectly assume that Paul has gone off on a tangent and miss that chapter 9 is integral to his overall argument regarding food sacrificed to idols.
 
-While Paul acknowledges that we have the "right" to eat whatever we like, he admonishes that such a right should not always be exercised (8:9). He then goes on in chapter 9 to give an example from his own ministry of how he also must give up his rights regarding finance at times.
+While Paul acknowledges that we have the "right" to eat whatever we like, he admonishes that such a right should not always be exercised (8:9). He then goes on in chapter 9 to give an example from his own ministry of how he also must give up one of his rights at times (the right to finance).
 
 The following terms are used in chapter 9 without much clarification from Paul as to what they are referring to, so it is important to read them in the overall context of the letter:
 
- * __"free / ἐλεύθερος"__ &mdash; Should be understood to refer to being free from others to do as you please. Paul uses it earlier in the letter to refer to slaves being free from their masters (7:21), and a woman being free to marry whoever she likes (7:39).
+ * __"free" (as in freedom) / ἐλεύθερος__ &mdash; Paul uses this term earlier in the letter to refer to slaves being free from their masters (7:21), and a woman being free to marry whoever she likes (7:39). Thus, when used in 9:1 and 9:19 he is not referring to his salvation but rather being free from obligation to others, free to do as he pleases.[^free]
 
- * __"right / ἐξουσία"__ &mdash; Critiquing the concept of "rights" is part of the purpose of Paul's letter. In earlier chapters he makes clear that one's "rights" are not always justified but can be detrimental to the gospel, in regards to sexual immorality (6:12) and food sacrificed to idols (8:9).
+ * __"right" / ἐξουσία__ &mdash; Critiquing the concept of "rights" is part of the purpose of Paul's letter. In earlier chapters he makes clear that one's "rights" are not always justified but can be detrimental to the gospel, in regards to sexual immorality (6:12) and food sacrificed to idols (8:9).
 
- * __"boast / καύχημα"__ &mdash; Paul mentions "boasting" throughout both letters to the Corinthians. He is very critical of human boasting (1:29), redirects it to boasting about God instead (1:31), and also uses it sarcastically throughout 2 Corinthians. In 1 Corinthians 9:15 he also uses it sarcastically to refer to the humbling of himself by not claiming his rights, which is how he also refers to it in 2 Corinthians 11:7.
+ * __"boast" / καύχημα__ &mdash; Paul mentions "boasting" throughout both letters to the Corinthians. He is very critical of human boasting (1:29), redirects it to boasting about God instead (1:31), and also uses it sarcastically throughout 2 Corinthians (especially 2 Cor 11-12). In 1 Corinthians 9:15 he also uses it sarcastically.[^sarcastic] While others really do boast, Paul instead humbles himself by not claiming his financial rights.[^humble]
 
- * __"reward / μισθός"__ &mdash; Earlier in the letter Paul talks about God rewarding people for their service (3:8,14), and so too Paul sees his reward for preaching as being the privilege of serving his God rather than being rewarded with financial "rights" (9:18).
-
+ * __"reward" / μισθός__ &mdash; Earlier in the letter Paul talks about God rewarding people for their service (3:8,14), and so too Paul himself seeks reward from God rather than payment from men. While others may get a financial reward when preaching of their own initiative (9:17), Paul's "reward" ironically is to get to preach for free (9:18) and be rewarded by his master instead.
 
 
 ## 1 Corinthians 9 expanded
 
-In light of this understanding, let's go through 1 Corinthians 9, with parenthetical expansions to help smooth out the flow of Paul's argument. We'll use the Berean Standard Bible simply because [it's free](/initiatives/bibles/), but these comments also work for any of the major translations.
+In light of this understanding, let's go through 1 Corinthians 9, with parenthetical expansions to help smooth out the flow of Paul's argument. These expansions work for any of the major translations, so feel free to apply them to your preferred translation.
 
 The intention here is to help us recall what Paul means by terms, applying what we know from the context. We'll start from the last verse of chapter 8 for context:
 
@@ -74,7 +73,7 @@ The intention here is to help us recall what Paul means by terms, applying what 
 
 <sup>15</sup><mark>But I have not used any of these rights.</mark> And I am not writing this to suggest that something be done for me. Indeed, I would rather die than [_compromise the sincerity of my ministry and_] let anyone nullify my "boast". [_While others boast, I humble myself and go without pay._]
 
-<sup>16</sup>Yet when I preach the gospel, I have no reason to boast, because I am obligated to preach [_as God's servant_]. Woe to me if I do not preach the gospel! <sup>17</sup>If my preaching is voluntary [_which it isn't_], I have a reward [_being free to charge as I like_]. But if it is not voluntary [_which is the case_], I am still entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_with reward from God_], and so not use[^use] up my "rights" in preaching it [_and take advantage of such material rewards_].
+<sup>16</sup>Yet when I preach the gospel, I have no reason to boast, because I am obligated to preach [_as God's servant_]. Woe to me if I do not preach the gospel! <sup>17</sup>If my preaching is of my own will[^voluntary] [_which it isn't_], I have a reward [_being free to charge as I like_]. But if it is not of my own will [_which is the case_], I have been[^still] entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_seeking reward from God instead_], and so not take advantage of[^use] my "rights" in preaching it.
 
 <sup>19</sup>Though I am free of obligation to anyone, I make myself a slave to everyone [_giving up my rights_], to win as many as possible.
 
@@ -134,4 +133,14 @@ There is a form of finance that is conspicuously absent in this chapter. Paul co
 
 &nbsp;
 
-[^use]: __"use / καταχρήσασθαι"__ &mdash; This verb is prepended by "κατα" which intensifies it (Garland, _1 Corinthians_, 2003, p427). Some translations read "not make full use of my rights" (NIV, ESV similar) which could mistakenly imply that Paul _did make some use_ of his rights. Other translations read it in terms of excess "not abuse my authority" (NKJV). The translation chosen for this article renders it as "not use up my rights" (BSB). In context, Paul is heavily implying it would be _inappropriate_ for him to "use" his rights, so "abuse" or "take advantage of" better capture the meaning.
+[^free]: This is especially clear in 9:19, "Ἐλεύθερος γὰρ ὢν ἐκ πάντων" (Free, for I am, from all)
+
+[^sarcastic]: It's clear he is sarcastic given he immediately follows "I would rather die than let anyone nullify my boast" with "I have no reason to boast" (9:15-16).
+
+[^humble]: This is also how he also refers to his giving up of financial rights in 2 Corinthians 11:7 ("to humble myself").
+
+[^voluntary]: Some translations render ἑκὼν as "voluntary", however "voluntary" can be understood to mean someone has "volunteered" to serve under an authority, which would mean they are not really "free" (9:1). Rather, Paul is giving an example of someone who _is_ free from any authority or obligation. Thus "of my own will" is a better rendering as it removes the potential for such a misunderstanding.
+
+[^still]: Some translations render the perfect tense of πεπίστευμαι as "I am still entrusted", however the use of "still" can mislead readers into thinking it is in contrast to "but if not of my own will". In which case Paul would be saying that he is still entrusted with a responsibility _despite_ not preaching of his own will. When really Paul is entrusted with a responsibility _in accord with_ not preaching of his own will. Thus "I have been entrusted" is more suitable.
+
+[^use]: "use" / καταχρήσασθαι &mdash; This verb is prepended by "κατα" which intensifies it (Garland, _1 Corinthians_, 2003, p427). Some translations read "not make full use of my rights" (NIV, ESV similar) which could mistakenly imply that Paul _did make some use_ of his rights. Other translations read it in terms of excess "not abuse my authority" (NKJV). This is more likely given the context. Paul is heavily implying it would be _inappropriate_ for him to "use" his rights, so "abuse" or "take advantage of" better capture the meaning.
