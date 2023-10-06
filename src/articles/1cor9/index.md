@@ -24,7 +24,7 @@ const date = "Draft"  // nice_date(2023, 5, 8)
 
 However, there are two big mistakes that most interpreters of 1 Corinthians 9 make:
 
- 1. Assuming the right to financial support includes [the right to _sell_ ministry](/articles/command-many-overlook/)
+ 1. Assuming the right to financial support includes the right to _sell_ ministry
  2. Assuming the right to financial support is the point of the chapter
 
 The great irony is that we've been reading 1 Corinthians 9 upside down. Paul is not lifting up the right to finance to justify it, but for it to be all the more dramatic when he cuts it down with "__*But we did not exercise this right*__"! And he even does it twice to drive the point home.
@@ -38,7 +38,7 @@ While Paul acknowledges that we have the "right" to eat whatever we like, he adm
 
 The following terms are used in chapter 9 without much clarification from Paul as to what they are referring to, so it is important to read them in the overall context of the letter:
 
- * __"free" (as in freedom) / ἐλεύθερος__ &mdash; Paul uses this term earlier in the letter to refer to slaves being free from their masters (7:21), and a woman being free to marry whoever she likes (7:39). Thus, when used in 9:1 and 9:19 he is not referring to his salvation but rather being free from obligation to others, free to do as he pleases.[^free]
+ * __"free" (as in freedom) / ἐλεύθερος__ &mdash; Paul uses this term earlier in the letter to refer to slaves being free from their masters (7:21), and a woman being free to marry whoever she likes (7:39). Thus, when used in 9:1 and 9:19 he is not referring to his salvation but rather being free from obligation to others, free to do as he pleases.[^free] Paul will later make the point that while he may be free from others, he is not free from the Lord (9:17).
 
  * __"right" / ἐξουσία__ &mdash; Critiquing the concept of "rights" is part of the purpose of Paul's letter. In earlier chapters he makes clear that one's "rights" are not always justified but can be detrimental to the gospel, in regards to sexual immorality (6:12) and food sacrificed to idols (8:9).
 
@@ -71,9 +71,11 @@ The intention here is to help us recall what Paul means by terms, applying what 
 
 <sup>13</sup>Do you not know that those who work in the temple eat of its food, and those who serve at the altar partake of its offerings? <sup>14</sup>In the same way, the Lord has prescribed that those who preach the gospel should receive their living from the gospel [_through the support of others_].
 
-<sup>15</sup><mark>But I have not used any of these rights.</mark> And I am not writing this to suggest that something be done for me. Indeed, I would rather die than [_compromise the sincerity of my ministry and_] let anyone nullify my "boast". [_While others boast, I humble myself and go without pay._]
+<sup>15</sup><mark>But I have not used any of these rights.</mark> And I am not writing this to suggest that something be done for me. Indeed, I would rather die than let anyone nullify my "boast", [_lest anyone think I'm doing this for money_].
 
-<sup>16</sup>Yet when I preach the gospel, I have no reason to boast, because I am obligated to preach [_as God's servant_]. Woe to me if I do not preach the gospel! <sup>17</sup>If my preaching is of my own will[^voluntary] [_which it isn't_], I have a reward [_being free to charge as I like_]. But if it is not of my own will [_which is the case_], I have been[^still] entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_seeking reward from God instead_], and so not take advantage of[^use] my "rights" in preaching it.
+<sup>16</sup>For when I preach the gospel, I have no reason to boast, because I am obligated to preach [_as God's servant_]. Woe to me if I do not preach the gospel!
+
+<sup>17</sup>If my preaching is of my own will[^voluntary] [_like someone self-employed_], I have a reward [_receiving whatever I like_]. But if it is not of my own will [_which is the case_], I have been[^still] entrusted with a responsibility [_as God's servant_]. <sup>18</sup>What then is my reward? That in preaching the gospel I may offer it free of charge [_seeking reward from God instead_], and so not take advantage of[^use] my "rights" in preaching it.
 
 <sup>19</sup>Though I am free of obligation to anyone, I make myself a slave to everyone [_giving up my rights_], to win as many as possible.
 
@@ -116,7 +118,7 @@ Let's consider some of the most common alternate interpretations for this passag
  * __Patronage:__ Some argue Paul wanted to avoid being controlled by the Corinthians were they to become his financial backers. There is little evidence this is the case and it must merely be assumed to be his concern. It also doesn't fit with the context of chapters 8-10 and also doesn't make sense of the Corinthians desire to be _under_ Paul (1:12). Patronage assumes they wanted to be _over_ him.
 
 
-## The gospel comes first
+## The two tensions
 This chapter is a challenging one to fully understand because Paul is holding two things in tension.
 
 On the one hand, Paul is indeed justifying the right to support. When he mentions that the other apostles received support (9:5-6), he is not criticising them. It is all part of his argument that he too has the right to support just like they do. And Paul did accept support from other churches (Phil 2:18) and even requests it from the Corinthians at the end of the letter (1 Cor 16:6).
