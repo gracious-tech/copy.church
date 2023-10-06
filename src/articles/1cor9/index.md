@@ -98,7 +98,7 @@ We certainly do have the "right" to support, as God has always supported ministe
 
 But I have not used any of these rights!
 
-(By the way, I'm not mentioning all of this to imply you should support me. I would rather die than compromise the sincerity of my ministry.)
+(By the way, I'm not mentioning all of this to imply you should support me. I would rather die than have anyone think I'm doing this for money.)
 
 I have to preach the gospel free of charge, as I'm not self-employed but rather a servant of God. My reward is getting to serve him and you.
 
