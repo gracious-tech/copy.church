@@ -14,7 +14,7 @@ const date = "Draft"  // nice_date(2023, 5, 8)
 </script>
 
 
-# 1 Corinthians 9 &mdash; We've been reading it upside down
+# 1 Corinthians 9 &mdash; Affirming payment for ministry or condemning it?
 
 <h4 class='article-meta'>{{ date }} · Jon Here · 8 min read</h4>
 
@@ -121,13 +121,22 @@ Let's consider some of the most common alternate interpretations for this passag
 ## The two tensions
 This chapter is a challenging one to fully understand because Paul is holding two things in tension.
 
-On the one hand, Paul is indeed justifying the right to support. When he mentions that the other apostles received support (9:5-6), he is not criticising them. It is all part of his argument that he too has the right to support just like they do. And Paul did accept support from other churches (Phil 2:18) and even requests it from the Corinthians at the end of the letter (1 Cor 16:6).
+On the one hand, Paul is indeed justifying the right to support. When he mentions that the other apostles received support (9:5-6), he is not criticising them. It is all part of his argument that he too has the right to support just like they do. And Paul did accept support from other churches (Phil 4:18) and even requests it from the Corinthians at the end of the letter (1 Cor 16:6).
 
 On the other hand, he will only preach "free of charge" (9:18) and will not let money hinder his ministry in any way (9:12). This is not a personal choice but a practice he expects everyone to follow, lest they too "hinder the gospel of Christ". Just as he has given up his financial rights, he expects the Corinthians to do the same in regard to food sacrificed to idols.
 
 What we can conclude then is that the right to financial support is legitimate, as long as it doesn't get in the way of the gospel. Which means there are times it is appropriate and times it is not, and forms of finance that are appropriate and forms that are not. Conley Owens in [The Dorean Principle](https://thedoreanprinciple.org/) distinguishes between "colabor" (appropriate support) and "reciprocity" (inappropriate exchange), which is a helpful lens to see these matters through.
 
-There is a form of finance that is conspicuously absent in this chapter. Paul covers a range of occupations: apostles, soldiers, vinedressers, shepherds, oxen, plowmen, threshers, sowers, and priests. Yet the common occupation of a seller in a marketplace is missing, and for good reason. Selling ministry is the direct opposite of ministering "free of charge", and is a form of finance Paul would never endorse.
+
+## A right to sell ministry?
+
+There is a form of finance that is conspicuously absent in this chapter. Paul covers a range of occupations: apostles, soldiers, vinedressers, shepherds, oxen, plowmen, threshers, sowers, and priests. Yet the common occupation of a seller in a marketplace is missing, and for good reason.
+
+The clearest passages on the right to finance describe it as "wages" (Luke 10:7, 1 Tim 5:18). But a seller does not receive wages, they receive payment in exchange for goods.[^shop]
+
+Such reciprocity, exchanging spiritual things for money, is exactly the type of finance that "hinders the gospel of Christ". To sell ministry is to deny people access to it unless they pay. It is also the type of finance explicitly condemned by Micah (Micah 3:11), Paul (2 Cor 2:17), and Jesus (John 2:16) when used in the context of ministry.
+
+Thus 1 Corinthians 9 does not support selling ministry, it condemns it.
 
 &nbsp;
 
@@ -146,3 +155,5 @@ There is a form of finance that is conspicuously absent in this chapter. Paul co
 [^still]: Some translations render the perfect tense of πεπίστευμαι as "I am still entrusted", however the use of "still" can mislead readers into thinking it is in contrast to "but if not of my own will". In which case Paul would be saying that he is still entrusted with a responsibility _despite_ not preaching of his own will. When really Paul is entrusted with a responsibility _in accord with_ not preaching of his own will. Thus "I have been entrusted" is more suitable.
 
 [^use]: "use" / καταχρήσασθαι &mdash; This verb is prepended by "κατα" which intensifies it (Garland, _1 Corinthians_, 2003, p427). Some translations read "not make full use of my rights" (NIV, ESV similar) which could mistakenly imply that Paul _did make some use_ of his rights. Other translations read it in terms of excess "not abuse my authority" (NKJV). This is more likely given the context. Paul is heavily implying it would be _inappropriate_ for him to "use" his rights, so "abuse" or "take advantage of" better capture the meaning.
+
+[^shop]: While someone could be employed at a market stall and so be paid wages, that simply means the owner of the stall is the one receiving payment which is the same problem.
