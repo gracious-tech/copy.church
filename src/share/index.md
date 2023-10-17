@@ -156,6 +156,10 @@ __{{ share_meme_instruct }}__
     <img @click='share_img' width='1024' height='848' src='/memes/other_consult.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/paul_payment.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_compatibility.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_heresy.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_control.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/other_abandon.jpg'>
+    <img @click='share_img' width='1024' height='848' src='/memes/jesus_selling.jpg'>
     <!-- Cartoons -->
     <img @click='share_img' width='1024' height='848' src='/memes/jesus_give.jpg'>
     <img @click='share_img' width='1024' height='848' src='/memes/other_permission.jpg'>
