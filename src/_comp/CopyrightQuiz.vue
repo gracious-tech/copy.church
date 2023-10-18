@@ -223,7 +223,7 @@ img
     text-align: center
 
     h3
-        color: var(--vp-c-brand)
+        color: var(--vp-c-brand-1)
 
 button[disabled]
     visibility: hidden

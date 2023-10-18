@@ -1,13 +1,14 @@
 {
   "private": true,
+  "type": "module",
   "devDependencies": {
     "@volar/vue-language-plugin-pug": "^1.6.5",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^13.0.2",
     "markdown-it-footnote": "^3.0.3",
-    "npm-check-updates": "^16.10.12",
+    "npm-check-updates": "^16.14.6",
     "pug": "^3.0.2",
-    "sass": "^1.62.1",
-    "typescript": "^5.0.4",
-    "vitepress": "^1.0.0-beta.1"
+    "sass": "^1.69.4",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.0.0-rc.22"
   }
 }

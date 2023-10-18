@@ -104,7 +104,7 @@ onBeforeMount(() => {
     bottom: 50%
     left: 30%
     z-index: 999
-    background-color: var(--vp-c-brand-lighter)
+    background-color: var(--brand)
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5))
     font-size: 14px
     font-weight: bold
