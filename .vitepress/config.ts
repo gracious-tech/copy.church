@@ -115,22 +115,6 @@ export default defineConfig({
                 },
             ],
 
-            '/articles/': [
-                {
-                    text: "",
-                    items: [
-                        {text: "← More depth", link: '/explain/more/'},
-                    ],
-                },
-                {
-                    text: "Articles",
-                    items: Object.entries(articles).map(([id, meta]) => ({
-                        text: meta.title,
-                        link: `/articles/${id}/`,
-                    })),
-                },
-            ],
-
             '/': [
                 {
                     text: "Join the movement",
@@ -150,7 +134,6 @@ export default defineConfig({
                         {text: "Alternate funding", link: '/explain/funding/'},
                         {text: "Common objections", link: '/explain/objections/'},
                         {text: "Real examples", link: '/explain/examples/'},
-                        {text: "More depth", link: '/explain/more/'},
                     ],
                 },
                 {
