@@ -31,7 +31,7 @@ table
             div(v-html='b(bible.can.read_anonymously)')
             img(src='@/_assets/restrictions/ill_privacy.svg')
         td
-            p Some translation owners require you to #[a(href='./privacy/') hand over your personal information] to them in exchange for being allowed to read it offline.
+            p Some translation owners require you to #[a(href='/initiatives/bibles/privacy/') hand over your personal information] to them in exchange for being allowed to read it offline.
             p(v-html='can(bible.can.read_anonymously)')
             ul
                 li Anonymously read this translation offline in popular Bible apps
@@ -88,7 +88,7 @@ table
             div(v-html='b(bible.can.use_quote_openly)')
             img(src='@/_assets/restrictions/ill_open.svg')
         td
-            p Some translations #[a(href='./open/') forbid even being quoted at all] in resources that are openly licensed (free to share with others), such as resources that use a Creative Commons license.
+            p Some translations #[a(href='/initiatives/bibles/open/') forbid even being quoted at all] in resources that are openly licensed (free to share with others), such as resources that use a Creative Commons license.
             p(v-html='can(bible.can.use_quote_openly)')
             ul
                 li Quote a verse in a Bible study that's free to copy and use (CC BY)
