@@ -110,7 +110,7 @@ const license_url = computed(() => {
 
 const license_desc = computed(() => {
     if (license_code.value === 'free'){
-        return "Copyright waived"
+        return "Dedicated to the public domain"
     } else if (license_code.value.startsWith('cc-')){
         return `Licensed under CC ${license_code.value.slice(3).toUpperCase()}`
     }
