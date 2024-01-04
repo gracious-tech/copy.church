@@ -33,7 +33,6 @@ div.container
 
 
     h3 {{ start + 1 }}. Choose your preferred badge
-
     div.badges
         div
             img(:src='`/badges/brand/lcc/${license_code}.svg`' width='300' height='60'
@@ -45,10 +44,11 @@ div.container
                 :class='{active: badge_subtle && badge_lcc}' @click='choose_subtle_lcc')
             img(:src='`/badges/subtle/alt/${license_code}.svg`' width='300' height='60'
                 :class='{active: badge_subtle && !badge_lcc}' @click='choose_subtle_alt')
+    p If you can't add a badge or don't wish to, you can just write "{{ license_desc }}".
 
 
     h3 {{ start + 2 }}. Add the badge to your resource
-    p The badge could go inside your resource (for books etc) or next to your resource (for music/images/etc), or if it can't be added you can just write "{{ license_desc }}".
+    p The badge could go inside your resource (for books etc) or next to your resource (for music/images/etc).
 
     p.links
         VPButton(:text='copy_badge_text' @click='copy_badge')
@@ -56,8 +56,8 @@ div.container
         a(:href='badge_chosen + "svg"' target='_blank') URL for SVG
 
 
-    h3 {{ start + 3 }}. Add the link to the badge
-    p If the resource will ever be printed, also place the link address below the badge.
+    h3 {{ start + 3 }}. Add the link (<em>most important</em>)
+    p Make clicking the badge go to the link. If your resource will ever be printed (e.g. a book), also place the link text below the badge so it isn't lost when not clickable.
 
     p.links
         VPButton(:text='copy_link_text' @click='copy_link')
