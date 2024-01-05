@@ -2,4 +2,4 @@
 set -e
 cd "$(dirname "$(dirname "$0")")/src/_public/badges"
 
-find . -type f -name "*.svg" -exec inkscape --export-type=png -w 1200 '{}' \;
+find . -type f -name "*.svg" -exec inkscape --export-type=png -w 900 '{}' \;
