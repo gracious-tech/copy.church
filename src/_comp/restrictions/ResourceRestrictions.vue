@@ -115,7 +115,7 @@ table(v-if='choice_payment && choice_license')
         td
             p This resource #[span(v-html='has(checks.no_copyright)')] been freed from copyright.
             ul
-                li Copyright is not necessarily a biblical concept and only went into law in 1710
+                li Copyright is not a biblical concept and only went into law in 1710
                 li Copyright can only be enforced in secular courts, and resolving disputes in secular courts is condemned by Paul (1 Cor 6)
                 li Copyright unnecessarily makes many well-intentioned believers lawbreakers for sharing ministry resources
 
