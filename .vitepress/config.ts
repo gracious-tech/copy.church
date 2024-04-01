@@ -115,7 +115,7 @@ export default defineConfig({
 
             '/': [
                 {
-                    text: "Join the movement",
+                    text: "Freeing resources",
                     items: [
                         {text: "Raise awareness", link: '/share/'},
                         {text: "Free your resources", link: '/licenses/'},
@@ -131,13 +131,16 @@ export default defineConfig({
                         {text: "Biblical basis", link: '/explain/biblical/'},
                         {text: "Alternate funding", link: '/explain/funding/'},
                         {text: "Common objections", link: '/explain/objections/'},
-                        {text: "Real examples", link: '/explain/examples/'},
                     ],
                 },
                 {
-                    text: "Initiatives",
+                    text: "Examples",
                     items: [
-                        {text: "Quiz", link: '/initiatives/quiz/'},
+                    ],
+                },
+                {
+                    text: "Tests",
+                    items: [
                         {text: "Am I being generous?", link: '/initiatives/assess/'},
                         {text: "English Bible ratings", link: '/initiatives/bibles/'},
                         {text: "Critical Text ratings", link: '/initiatives/critical-texts/'},
