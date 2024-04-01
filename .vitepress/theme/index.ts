@@ -13,7 +13,7 @@ import './custom.sass'
 export default {
     ...DefaultTheme,
     enhanceApp(ctx){
-
+        DefaultTheme.enhanceApp(ctx)
         // Global components
         ctx.app.component('VPButton', VPButton)
         ctx.app.component('BibleQuote', BibleQuote)
