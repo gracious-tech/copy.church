@@ -136,6 +136,7 @@ export default defineConfig({
                 {
                     text: "Examples",
                     items: [
+                        {text: "Resources", link: '/collection/'},
                     ],
                 },
                 {
