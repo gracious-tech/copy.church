@@ -20,16 +20,7 @@ onMounted(() => {
 </style>
 
 
-# Join the community
-
-
-## Join a discussion group
-
- * [A Facebook group on money and ministry](https://www.facebook.com/groups/doreanism)
- * [A Discord server for open source software](https://discord.com/invite/auJb4H9ezx)
-
-
-## Meet who's freely giving
+# Meet who's freely giving
 A great many believers are already freely giving their resources; here's just a few of them:
 
 <CommittedPerson v-for='id of people_ids_randomized' :key='id' :id='id'></CommittedPerson>
