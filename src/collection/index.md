@@ -1,9 +1,6 @@
 
 # Examples of resources
-This is a non-exhaustive list of the most significant resources that have been freely given and/or openly licensed.
-
-::: warning We plan to publish a proper searchable collection with many more resources when able
-:::
+This is a list of some of the most significant free resources we've come across. You can also follow [our Facebook page](https://www.facebook.com/copy.church) which regularly posts new resources.
 
 
 ## Initiatives
