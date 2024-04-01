@@ -4,8 +4,6 @@ import path from 'path'
 import {defineConfig} from 'vitepress'
 import MarkdownPluginFootnote from 'markdown-it-footnote'
 
-import {articles} from '../src/_comp/articles'
-
 
 export default defineConfig({
     cleanUrls: true,  // Don't force `.html` on urls
