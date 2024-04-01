@@ -136,7 +136,9 @@ export default defineConfig({
                 {
                     text: "Examples",
                     items: [
-                        {text: "Resources", link: '/collection/'},
+                        {text: "Free resources", link: '/collection/'},
+                        {text: "People freely giving", link: '/join/'},
+                        {text: "Harm caused by copyright", link: '/explain/examples/'},
                     ],
                 },
                 {
