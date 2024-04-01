@@ -143,9 +143,7 @@ export default defineConfig({
                     text: "Tests",
                     items: [
                         {text: "Am I being generous?", link: '/initiatives/assess/'},
-                        {text: "English Bible ratings", link: '/initiatives/bibles/'},
-                        {text: "Critical Text ratings", link: '/initiatives/critical-texts/'},
-                        {text: "Freedom to worship", link: '/initiatives/music/'},
+                        {text: "Bible ratings", link: '/initiatives/bibles/'},
                     ],
                 },
             ],
