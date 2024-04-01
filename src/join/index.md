@@ -22,9 +22,6 @@ onMounted(() => {
 
 # Join the community
 
-## Get updates about free ministry resources
-Like or follow [the Facebook page](https://www.facebook.com/copy.church), which regularly posts quality free ministry resources as we come across them.
-
 
 ## Join a discussion group
 
