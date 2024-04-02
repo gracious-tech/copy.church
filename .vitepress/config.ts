@@ -118,10 +118,9 @@ export default defineConfig({
                 {
                     text: "Freeing resources",
                     items: [
-                        {text: "Raise awareness", link: '/share/'},
-                        {text: "Free your resources", link: '/licenses/'},
-                        {text: "Join the community", link: '/join/'},
-                        {text: "Explore free resources", link: '/collection/'},
+                        {text: "How to free", link: '/licenses/'},
+                        {text: "How to publish", link: '/publish/'},
+                        {text: "How to fund", link: '/explain/funding/'},
                     ],
                 },
                 {
