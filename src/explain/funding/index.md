@@ -1,54 +1,50 @@
 
-# Alternate funding
-Freely giving resources does not mean you can't receive any funding for them. There are still a number of ways resources can be funded aside from traditional "all rights reserved" sales.
+# How to fund
+Freely giving resources does not mean you can't receive any funding for them. Churches have been funded purely through donations for thousands of years.
 
-## Compatible with "giving freely"
-The following funding methods do not go against the principle of giving freely.
 
-### Church-based funding
-Ask your church or a group of churches to fund a new project so that it can be freely given when completed.
+## Setup a donations box
+If you give away resources in-person, simply place an empty box nearby to collect cash donations. You may also want to display a page with bank account details for those who don't carry cash on them.
 
-### Crowd funding
-Use a crowd funding platform to gather funds from individuals who also believe in your cause.
 
-### Donations
-Fund your ministry via donations, like churches have been funded for thousands of years.
+## Seek funding from your church
+Ask your church or a group of churches to fund a project. If it is missional in nature then the church might consider allocating some of its funds for mission toward it.
 
-### Use cost-effective distribution
+Alternatively, they might let you make an appeal to the congregation for funding, and collect payment through their existing system for offerings.
+
+
+## Accept online donations
+You can very easily and quickly setup a link to a donation form using a service like [PayPal donate](https://www.paypal.com/donate/buttons). Donors click the link and are taken to a secure payment form, with the funds deposited into your chosen bank account.
+
+<small>__For web developers:__ You can use a service like [Stripe](https://support.stripe.com/questions/how-to-accept-donations-through-stripe) for more control over UI and payment options. They also support payment links, though recurring payments require a set amount. You can get around this by writing your own code using their Payment API.</small>
+
+
+## Use a crowdfunding platform
+Crowdfunding platforms are popular for raising money for a project. They are more social in nature, often publicly displaying donations and donor names. They are also more goal oriented. This may be suitable for some projects more than others.
+
+An example would be [GoFundMe](https://www.gofundme.com/). We don't recommend the popular Patreon platform as they take at least 11% from donations (other platforms are usually 2%-5%).
+
+
+## Use cost-effective distribution
 New technology has made it easier and more cost-effective than ever to distribute resources:
 
- * Host conferences online or at a church, rather than an expensive venue
  * Publish ebooks rather than printed books
+ * Host conferences online or at a church, rather than an expensive venue
  * Pay staff a reasonable stipend rather than industry standard salaries
- * Host static apps that don't require a server for authentication and payment processing etc
+ * Create static apps that don't require an expensive server
 
-### Cover the costs of production only
-Charge only to cover production expenses but make clear that the actual teaching in your resource is freely given, and make it available online for free as well.
 
-### Wait for Jesus
+## Charge for production only
+Charge only to cover production expenses but make clear that the actual teaching in your resource is freely given. The best way to do this is by ensuring your resource is public domain and freely available online without any barriers. People who wish to pay for a printed copy can cover the costs of production themselves.
+
+It is best to pass this off to a third-party so that no one mistakes you for profiting off of your teaching. For example, there are print-on-demand services where you can charge only for the cost of printing.
+
+
+## Fund it yourself
+There is an unbiblical culture amongst Christian authors of wanting to always cover costs. Some authors give their time but do not want to give any money. Others want to be paid for their time, effectively making money like any other job that pays wages.
+
+This is like saying: "I want to serve God without it costing me anything". Rather, we should be willing to give God our time and our money, regardless if we receive any compensation or not. We should be the first person to want to financially support a project we believe in.
+
+
+## Wait for Jesus
 <BibleQuote passage='Rev 22:12'></BibleQuote>
-
-
-
-## Incompatible with "giving freely"
-The following funding methods are not compatible with the biblical principle of "giving freely", but are an improvement to standard commercial funding. You may want to consider them if other methods are not possible for some reason.
-
-### Pay if you can
-You can openly license your resource but still request for people to pay for it if they are able. This relies on social expectation rather than legal protection.
-
-### Semi-restricted
-Most licenses (except for public domain dedication) still apply some restrictions, such as forbidding commercial use. You could choose the restrictions that work for your situation and require anyone that wanted those restrictions lifted to get your permission/pay you.
-
-### Temporary restrictions
-You can keep your resource restricted until you receive enough payment to reimburse yourself for your time and expenses involved in creating it. Once you have broken even you can then free the resource from copyright. You should especially consider freeing the resource from copyright if you are no longer receiving significant payment for it, as, well, why not?
-
-### Geo-restrictions
-You could write your own license, allowing anyone to use it as long as they don't share it within your own country. This would allow poorer countries to benefit from the resource, especially since they otherwise might not be able to afford it.
-
-### Translation only
-You can use the [Free Translate](/licenses/uw-ft/) license to permit translations of your resource without affecting the license of the original. Most resources are never translated anyway, so in such cases there would be no loss and would allow the rest of the world access to your resource if they need it.
-
-This option requires nothing on your part, as it allows others to translate your resource rather than you having to do it yourself. There are over 7,000 languages in the world, so it's not something you want to manage yourself anyway.
-
-### Multi licensing
-You can apply multiple licenses to your resource that have different restrictions. For example, you could apply a CC BY-NC license that allows derivatives but not if they are commercial, and then also apply a CC BY-ND license that allows commercial use as long as nothing is changed. Anyone that wanted to both make changes to your resource and to sell them would then first need to get your permission.
