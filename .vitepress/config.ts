@@ -45,6 +45,7 @@ export default defineConfig({
         logo: '/_assets/icon.svg',
         nav: [
             {text: "About", link: '/about/'},
+            {text: "Memes", link: '/share/'},
         ],
         socialLinks: [
             {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
