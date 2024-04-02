@@ -1,7 +1,21 @@
 
-# Why this is important
-There are both theological and practical reasons why Christian resources should be freely given.
+<style lang='sass' scoped>
+.sj
+    border-radius: 12px
+    max-width: 600px
+</style>
 
+# Why this is important
+
+The most important reason for freeing resources from copyright is that __Scripture calls us to it__. We highly recommend spending lots of time watching the videos and reading the articles at our partner site, [Selling Jesus](https://sellingjesus.org).
+
+<a href='https://sellingjesus.org' target='sj'>
+    <img class='sj' src='/_assets/images/sj.jpg'>
+</a>
+
+&nbsp;
+
+In addition to Scripture's clear teaching on freely giving, here are more reasons why relinquishing copyright is important:
 
 ## The commercialization of ministry
 Christians have become so used to paying for resources, and so trusting of resource creators, that we have barely noticed how commercialized ministry has become. Consider the following realities:
@@ -60,3 +74,7 @@ Most Christian resources are reasonably priced and easily accessible in Western 
 Take for example the numerous Christian worship songs that have been (often illegally) translated into other languages and used in churches. Many resource owners won't mind that such things are taking place, but legally speaking, by retaining copyright, millions of brothers and sisters around the world are being made unintentional law breakers.
 
 Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also [letting ourselves be wronged](/explain/biblical/) rather than making other believers criminals in the sight of secular law.
+
+---
+
+See also &nbsp; <VPButton text="Harm caused by copyright" href="/explain/examples/" theme='alt' />
