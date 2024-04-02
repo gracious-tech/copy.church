@@ -1,3 +1,7 @@
+---
+next: false
+---
+
 
 <script lang='ts' setup>
 
@@ -123,21 +127,11 @@ onBeforeMount(() => {
 </style>
 
 
-# Raise awareness
+# Memes
 
-Hearts and minds need to be changed for us to see true generosity for the sake of the Kingdom.
+Sometimes it takes a bit of humor to understand why something is important.
 
-
-## Share this site
-
-<p v-if='share_label'><VPButton :text='share_label' @click='share'></VPButton></p>
-
-
-## Share a meme
-
-Sometimes it takes a bit of humor to better understand why something is important.
-
-__{{ share_meme_instruct }}__
+_{{ share_meme_instruct }}_
 
 <div class='memes'>
     <!-- Illustrations -->
@@ -182,23 +176,6 @@ __{{ share_meme_instruct }}__
 </div>
 
 
-## Talk to people
-
-Start conversations about how we can resist the commercialization of ministry by talking to:
-
- * Your pastor
- * Your college/seminary teachers
- * Your small group
- * Your band
- * and any other Christians you know
-
-
 <transition>
     <div v-if='show_copied' class='copied'>Copied! Now paste it somewhere</div>
 </transition>
-
-
-## Share Scripture
-The Bible speaks for itself! We've collected relevant passages on this topic in one convenient place:
-
-<p><VPButton href='/share/scripture/' text="Relevant passages"></VPButton></p>
