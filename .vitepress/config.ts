@@ -128,8 +128,6 @@ export default defineConfig({
                     items: [
                         {text: "How copyright works", link: '/explain/copyright/'},
                         {text: "Why this is important", link: '/explain/importance/'},
-                        {text: "Biblical basis", link: '/explain/biblical/'},
-                        {text: "Alternate funding", link: '/explain/funding/'},
                         {text: "Common objections", link: '/explain/objections/'},
                     ],
                 },
