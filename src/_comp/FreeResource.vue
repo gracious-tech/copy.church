@@ -1,59 +1,58 @@
 
 <template lang='pug'>
 
-div.tabs
-    div(:class='{active: category === "free"}' @click='category = "free"') Completely free
-    div(:class='{active: category === "conditions"}' @click='category = "conditions"') Share with conditions
-    div(:class='{active: category === "software"}' @click='category = "software"') Software
+h3 1. Select the type of resource
 
-div.container
-
-    template(v-if='category === "free"')
-        p To truly "give freely" you must give up all rights to your resource by dedicating it to the public domain.
-
-    template(v-if='category === "conditions"')
-        p #[strong(class='mixed') We highly recommend not applying any legal conditions] to the use of your resource as it would no longer #[a(href='/objections/public-domain/') truly be "freely given"]. The following are however available:
-        h3 1. Choose your conditions
-        p ShareAlike ensures improvements are also copyable and cannot be restricted.
-        p
-            input(type='checkbox' id='condition_by' checked disabled)
-            label(for='condition_by') Attribution
-            input(v-model='condition_nc' type='checkbox' id='condition_nc')
-            label(for='condition_nc') NonCommercial
-            input(v-model='condition_sa' type='checkbox' id='condition_sa')
-            label(for='condition_sa') ShareAlike
-
-    template(v-if='category === "software"')
-        p It is best to use a software license for software, due to #[a(href='https://en.wikipedia.org/wiki/Unlicense#Reception' target='_blank') issues with legal compatibility]. We recommend using the #[a(href='https://choosealicense.com/licenses/mit-0/' target='_blank') MIT No Attribution] or #[a(href='https://choosealicense.com/licenses/0bsd/' target='_blank') BSD Zero Clause], which essentially operate the same as a public domain dedication without the legal issues.
-        p Choose and apply your own license, as we don't host them ourselves. As long as it is an open source license you can use a badge below in your About page or README.
-        h3 1. Is your software license free of conditions?
-        p
-            input(v-model='condition_pde' type='checkbox' id='condition_pde')
-            label(for='condition_pde') License has no conditions (not even attribution)
+div.categories
+    input(v-model='category' type='radio' id='category_book' value='book')
+    label(for='category_book') Book
+    input(v-model='category' type='radio' id='category_music' value='music')
+    label(for='category_music') Music
+    input(v-model='category' type='radio' id='category_image' value='image')
+    label(for='category_image') Image
+    input(v-model='category' type='radio' id='category_video' value='video')
+    label(for='category_video') Video
+    input(v-model='category' type='radio' id='category_software' value='software')
+    label(for='category_software') Software
+    input(v-model='category' type='radio' id='category_other' value='')
+    label(for='category_other') Other
 
 
-    h3 {{ start + 1 }}. Choose your preferred badge
+h3 2. Choose your preferred badge
 
     div.badges
+    div.short
+        h4 Let's copy, church
+        img(:src='`/badges/lcc_standard_${pd_code}.svg`'
+            :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
+        img(:src='`/badges/lcc_alt_${pd_code}.svg`'
+            :class='{active: badge === "lcc_alt"}' @click='badge = "lcc_alt"')
         div
-            img(:src='`/badges/brand/lcc/${license_code}.svg`' width='300' height='60'
-                :class='{active: !badge_subtle && badge_lcc}' @click='choose_brand_lcc')
-            img(:src='`/badges/brand/alt/${license_code}.svg`' width='300' height='60'
-                :class='{active: !badge_subtle && !badge_lcc}' @click='choose_brand_alt')
-        div
-            img(:src='`/badges/subtle/lcc/${license_code}.svg`' width='300' height='60'
-                :class='{active: badge_subtle && badge_lcc}' @click='choose_subtle_lcc')
-            img(:src='`/badges/subtle/alt/${license_code}.svg`' width='300' height='60'
-                :class='{active: badge_subtle && !badge_lcc}' @click='choose_subtle_alt')
+        h4
+            a(href='https://sellingjesus.org' target='sj') Selling Jesus
+        img(:src='`/badges/sj_standard_${pd_code}.svg`'
+            :class='{active: badge === "sj_standard"}' @click='badge = "sj_standard"')
+        img(:src='`/badges/sj_alt_${pd_code}.svg`'
+            :class='{active: badge === "sj_alt"}' @click='badge = "sj_alt"')
+    div.short
+        h4 Text only
+        img(src='/_assets/images/no_badge.svg'
+            :class='{active: badge === ""}' @click='badge = ""')
 
 
-    h3 {{ start + 2 }}. Add the badge to your resource
-    p The badge could go inside your resource (for books etc) or next to your resource (for music/images/etc), or if it can't be added you can just write "{{ license_desc }}".
+h3 3. Add {{ badge ? "the badge" : `"${license_desc}"` }} to your resource
 
-    p.links
+p.links(v-if='badge')
         VPButton(:text='copy_badge_text' @click='copy_badge')
-        a(:href='badge_chosen + "png"' target='_blank') URL for PNG
-        a(:href='badge_chosen + "svg"' target='_blank') URL for SVG
+    a(:href='badge_url_base + "png"' target='_blank') URL for PNG
+    a(:href='badge_url_base + "svg"' target='_blank') URL for SVG
+
+p(v-if='category === "book"') Paste it into the first page of the book, where a copyright notice would usually go.
+p(v-else-if='category === "music"') Paste it next to your songs, wherever they are able to be downloaded or listened to.
+p(v-else-if='category === "image"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
+p(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
+p(v-else-if='category === "software"') Paste it in the README for your software.
+p(v-else) Paste it either inside your resource or next to any links to download it.
 
 
     h3 {{ start + 3 }}. Add the link to the badge
