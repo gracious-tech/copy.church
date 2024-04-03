@@ -20,7 +20,7 @@ import FreeResource from '@/_comp/FreeResource.vue'
 
 # Free your resource
 
-It is very easy to free your resource from copyright, simply linking to a license is enough. Freely giving can involve sacrifice, and these licenses can't be revoked, so prayerfully consider the terms before using them.
+You can instantly free your resource from copyright at any time. You simply need to say it is "dedicated to the public domain". This is permanent and will allow anyone to use your resource in any way they please, as you will be "freely giving" without any conditions. If you have any concerns about this, please browse these [common objections](/explain/objections/).
 
 &nbsp;
 
