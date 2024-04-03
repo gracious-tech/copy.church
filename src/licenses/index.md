@@ -22,8 +22,6 @@ import FreeResource from '@/_comp/FreeResource.vue'
 
 You can instantly free your resource from copyright at any time. You simply need to say it is "dedicated to the public domain". This is permanent and will allow anyone to use your resource in any way they please, as you will be "freely giving" without any conditions. If you have any concerns about this, please browse these [common objections](/explain/objections/).
 
-&nbsp;
-
 <FreeResource></FreeResource>
 
 <img src='@/_assets/party.webp' class='party'>
