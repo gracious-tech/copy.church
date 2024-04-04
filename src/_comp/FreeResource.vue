@@ -34,7 +34,7 @@ h3 2. Choose your preferred badge
             :class='{active: badge === "sj_standard"}' @click='badge = "sj_standard"')
         img(:src='`/badges/sj_alt_${pd_code}.svg`'
             :class='{active: badge === "sj_alt"}' @click='badge = "sj_alt"')
-    div.short
+    div.none
         h4 Text only
         img(src='/_assets/images/no_badge.svg'
             :class='{active: badge === ""}' @click='badge = ""')
@@ -51,7 +51,7 @@ p(v-if='category === "book"') Paste it into the first page of the book, where a 
 p(v-else-if='category === "music"') Paste it next to your songs, wherever they are able to be downloaded or listened to.
 p(v-else-if='category === "image"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
 p(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
-p(v-else-if='category === "software"') Paste it in the README for your software.
+p(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
 p(v-else) Paste it either inside your resource or next to any links to download it.
 
 
