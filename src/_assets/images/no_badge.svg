@@ -1,11 +1,6 @@
-<svg version="1.0" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify">
-  <g transform="scale(.16216)"></g>
-  <g transform="scale(.16216)" fill="#fff"></g>
-  <g transform="scale(.16216)"></g>
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <rect x="4.0001" y="3.9999" width="172" height="82" rx="16" ry="16" fill="#ffffff00" stop-color="#000000" stroke="#808080" stroke-dasharray="2, 4" stroke-width="2"/>
-    <text x="89.336761" y="54.754345" fill="#7f7f7f" font-family="Roboto" font-size="27.441px" stop-color="#000000" stroke-dasharray="0.367511, 0.735023" stroke-width=".36751" text-align="center" text-anchor="middle" style="line-height:0;text-decoration-color:#000000;white-space:pre" xml:space="preserve"><tspan x="89.336761" y="54.754345" fill="#7f7f7f" font-family="Roboto" stroke-width=".36751">NONE</tspan></text>
-  </g>
+<svg version="1.0" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" zoomAndPan="magnify">
+  <rect x="1.9993" y="2" width="176" height="116" rx="18" ry="18" fill="none" stop-color="#000000" stroke="#808080" stroke-dasharray="2, 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <text x="89.336754" y="69.754417" fill="#7f7f7f" font-family="Roboto" font-size="27.441px" stop-color="#000000" stroke-dasharray="0.367511, 0.735023" stroke-linecap="round" stroke-linejoin="round" stroke-width=".36751" text-align="center" text-anchor="middle" style="line-height:0;text-decoration-color:#000000;white-space:pre" xml:space="preserve"><tspan x="89.336754" y="69.754417" fill="#7f7f7f" font-family="Roboto" stroke-width=".36751">NONE</tspan></text>
   <g display="none">
     <g stop-color="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6188" style="white-space:pre" aria-label="PUBLIC DOMAIN EQ.">
       <path d="m31.556 80.129c3.4973 0 5.3552-1.7486 5.3552-4.6885 0-2.8087-1.8579-4.7432-5.3552-4.7432h-5.4208v15.913h1.3443v-6.4809zm-4.0765-8.2841h4.0765c2.8306 0 4.0109 1.6721 4.0109 3.6175 0 1.9891-1.1803 3.5191-4.0109 3.5191h-4.0765z"/>
