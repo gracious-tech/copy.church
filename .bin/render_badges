@@ -2,4 +2,5 @@
 set -e
 cd "$(dirname "$(dirname "$0")")/src/_public/badges"
 
-find . -type f -name "*.svg" -exec inkscape --export-type=png -w 900 '{}' \;
+# 3x CSS size as smartphones have 3pixels/1css-pixel and 3x is around 300dpi for printing
+find . -type f -maxdepth 1 -name "*.svg" -exec inkscape --export-type=png -w 1080 '{}' \;
