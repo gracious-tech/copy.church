@@ -55,12 +55,20 @@ p(v-else-if='category === "software"') Paste it in the README for your software 
 p(v-else) Paste it either inside your resource or next to any links to download it.
 
 
-    h3 {{ start + 3 }}. Add the link to the badge
-    p If the resource will ever be printed, also place the link address below the badge.
+h3 4. Add {{ category === "software" ? "a no-conditions license" : "the public domain link" }} (⚠️ <em>important</em>)
 
+template(v-if='category === "software"')
+    p It is best to use a software license for software, due to #[a(href='https://en.wikipedia.org/wiki/Public-domain-equivalent_license' target='_blank') legal issues with patents]. We recommend using the #[a(href='https://choosealicense.com/licenses/mit-0/' target='_blank') MIT No Attribution] license, which essentially operates the same as a public domain dedication without the legal issues. Copy the license text into a LICENSE file in your source code and fill in the year and your name.
+    p
+        em Open source licenses that require attribution, or any other condition, are not endorsed by us.
+
+template(v-else)
     p.links
+        strong {{ license_url }}
         VPButton(:text='copy_link_text' @click='copy_link')
-        a(:href='license_url' target='_blank') Link URL
+        a(:href='license_url' target='_blank') Open
+    p This link points to legal text that permanently relinquishes your ownership of the resource. Please ensure you have read and understand it. Make the {{ badge ? "badge" : "dedication" }} go to it when clicked or paste it below it.
+
 
 </template>
 
