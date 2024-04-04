@@ -20,14 +20,14 @@ div.categories
 
 h3 2. Choose your preferred badge
 
-    div.badges
+div.badges
     div.short
         h4 Let's copy, church
         img(:src='`/badges/lcc_standard_${pd_code}.svg`'
             :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
         img(:src='`/badges/lcc_alt_${pd_code}.svg`'
             :class='{active: badge === "lcc_alt"}' @click='badge = "lcc_alt"')
-        div
+    div
         h4
             a(href='https://sellingjesus.org' target='sj') Selling Jesus
         img(:src='`/badges/sj_standard_${pd_code}.svg`'
@@ -43,7 +43,7 @@ h3 2. Choose your preferred badge
 h3 3. Add {{ badge ? "the badge" : `"${license_desc}"` }} to your resource
 
 p.links(v-if='badge')
-        VPButton(:text='copy_badge_text' @click='copy_badge')
+    VPButton(:text='copy_badge_text' @click='copy_badge')
     a(:href='badge_url_base + "png"' target='_blank') URL for PNG
     a(:href='badge_url_base + "svg"' target='_blank') URL for SVG
 
@@ -77,92 +77,41 @@ template(v-else)
 
 import {ref, computed} from 'vue'
 
-const category = ref('free' as 'free'|'conditions'|'software')
-const condition_nc = ref(false)
-const condition_sa = ref(false)
-const condition_pde = ref(true)
-const badge_lcc = ref(true)
-const badge_subtle = ref(false)
-const copy_badge_text = ref("Copy badge")
-const copy_link_text = ref("Copy link")
+const category = ref(null as null|'book'|'music'|'image'|'video'|'software'|'')
+const badge = ref(null as null|'lcc_standard'|'lcc_alt'|'sj_standard'|'sj_alt'|'')
+const copy_badge_text = ref("Copy badge image")
+const copy_link_text = ref("Copy")
 
 
-const license_code = computed(() => {
-    // Get the license code based on category and conditions options
-    if (category.value === 'free'){
-        return 'free'
-    } else if (category.value === 'conditions'){
-        let code = 'cc-by'
-        if (condition_nc.value){
-            code += '-nc'
-        }
-        if (condition_sa.value){
-            code += '-sa'
-        }
-        return code
-    } else {
-        return condition_pde.value ? 'free-equiv' : 'open-source'
-    }
+const pd_code = computed(() => {
+    return category.value === 'software' ? 'pde' : 'pd'
 })
 
 const license_url = computed(() => {
-    // Get the license URL for chosen options
-    // WARN Public domain dedication is not prefixed with /licenses/
-    const base = 'https://copy.church/'
-    if (license_code.value === 'free'){
-        return base + 'free/'
-    }
-    return base + `licenses/${license_code.value}/`
+    const base = badge.value?.startsWith('sj_') ? 'https://sellingjesus.org' : 'https://copy.church'
+    return pd_code.value === 'pd' ? base + '/free' : base
 })
 
 const license_desc = computed(() => {
-    if (license_code.value === 'free'){
-        return "Copyright waived"
-    } else if (license_code.value.startsWith('cc-')){
-        return `Licensed under CC ${license_code.value.slice(3).toUpperCase()}`
-    }
-    return license_code.value === 'open-source' ? "Open source" : "Public domain equivalent"
+    return pd_code.value === 'pd' ? "Dedicated to the public domain" : "Freely given"
 })
 
-const start = computed(() => category.value === 'free' ? 0 : 1)
-
-const badge_chosen = computed(() => {
+const badge_url_base = computed(() => {
     // The URL for the chosen badge, excluding the file extension
-    const colors = badge_subtle.value ? 'subtle' : 'brand'
-    const lcc = badge_lcc.value ? 'lcc' : 'alt'
-    return `/badges/${colors}/${lcc}/${license_code.value}.`
+    return `/badges/${badge.value}_${pd_code.value}.`
 })
 
-const choose_brand_lcc = () => {
-    badge_subtle.value = false
-    badge_lcc.value = true
-}
-
-const choose_brand_alt = () => {
-    badge_subtle.value = false
-    badge_lcc.value = false
-}
-
-const choose_subtle_lcc = () => {
-    badge_subtle.value = true
-    badge_lcc.value = true
-}
-
-const choose_subtle_alt = () => {
-    badge_subtle.value = true
-    badge_lcc.value = false
-}
 
 const copy_badge = async () => {
     try {
-        const blob = await (await fetch(`${badge_chosen.value}png`)).blob()
+        const blob = await (await fetch(`${badge_url_base.value}png`)).blob()
         await self.navigator.clipboard.write([new ClipboardItem({[blob.type]: blob})])
         copy_badge_text.value = "Copied, now paste it"
     } catch {
         copy_badge_text.value = "Unable to copy (use the URL)"
     }
     setTimeout(() => {
-        copy_badge_text.value = "Copy badge"
+        copy_badge_text.value = "Copy badge image"
     }, 1000 * 3)
 }
 
@@ -174,7 +123,7 @@ const copy_link = async () => {
         copy_link_text.value = "Unable to copy (use the URL)"
     }
     setTimeout(() => {
-        copy_link_text.value = "Copy link"
+        copy_link_text.value = "Copy"
     }, 1000 * 3)
 }
 
@@ -183,54 +132,29 @@ const copy_link = async () => {
 
 <style lang='sass' scoped>
 
-p
+p, li
     color: var(--vp-c-text-2)
 
-.tabs
-    display: flex
-    color: hsla(0, 0%, 0%, 80%)
-    font-weight: bold
-    background-color: hsl(120, 50%, 75%)
-    border-radius: 8px 8px 0 0
-    @media (max-width: 600px)
-        font-size: 0.8em
-
-    div
-        flex-grow: 1
-        flex-basis: 0
-        padding: 12px
-        text-align: center
-        cursor: pointer
-
-        &:not(.active)
-            background-color: hsla(0, 0%, 0%, 50%)
-
-            &:hover
-                background-color: hsla(0, 0%, 0%, 25%)
-
-.container
-    background-color: hsla(120, 25%, 50%, 10%)
-    border-radius: 0 0 8px 8px
-    padding: 20px
-    @media (max-width: 600px)
-        padding: 0
-        background-color: transparent
+h3
+    margin-top: 64px
+    margin-bottom: 24px
 
 .badges
     display: flex
     margin-top: 24px
 
     img
-        max-width: 600px
+        display: inline-flex
+        box-sizing: content-box
+        max-width: 360px
         width: 100%
-        margin-bottom: 24px
-        border: 1px solid transparent
-        border-radius: 14px
+        border: 2px solid transparent
+        border-radius: 24px
         padding: 4px
         cursor: pointer
 
         &.active
-            border-color: var(--brand)
+            border-color: #f0f9
 
     > div:nth-child(1)
         margin-right: 12px
@@ -241,6 +165,23 @@ p
         margin-left: 12px
         @media (max-width: 600px)
             margin-left: 2px
+
+    .short img
+        margin: 10px 0
+
+    .none img
+        width: 180px
+
+    h4
+        text-align: center
+        margin-bottom: 12px
+        font-size: 16px
+        font-weight: bold
+        font-style: italic
+        opacity: 0.8
+        a
+            color: inherit
+            font-weight: inherit
 
 .links
     & > *
