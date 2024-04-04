@@ -1,5 +1,12 @@
+---
+title: Free Translate
+aside: false
+head:
+    - [meta, {name: robots, content: noindex}]
+---
 
-::: info _Let's copy, church_ does not endorse this license, but some may wish to use it to permit translations of otherwise restricted resources.
+
+::: danger _Let's copy, church_ no longer endorses licenses with conditions.
 
 This license is itself licensed under [CC BY-SA](/licenses/cc-by-sa/), © 2022 unfoldingWord
 :::

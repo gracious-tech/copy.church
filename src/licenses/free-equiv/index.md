@@ -1,6 +1,8 @@
 ---
 title: Public domain equivalent
 aside: false
+head:
+    - [meta, {name: robots, content: noindex}]
 ---
 
 

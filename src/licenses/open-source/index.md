@@ -1,7 +1,13 @@
 ---
 title: Open source
 aside: false
+head:
+    - [meta, {name: robots, content: noindex}]
 ---
+
+
+::: danger _Let's copy, church_ no longer endorses licenses with conditions.
+:::
 
 
 # Copy for the kingdom

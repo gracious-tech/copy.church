@@ -1,7 +1,14 @@
 ---
 title: Attribution ShareAlike license
 aside: false
+head:
+    - [meta, {name: robots, content: noindex}]
 ---
+
+
+::: danger _Let's copy, church_ no longer endorses licenses with conditions.
+:::
+
 
 <script lang='ts' setup>
 
