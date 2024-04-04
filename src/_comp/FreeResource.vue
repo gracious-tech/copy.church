@@ -21,13 +21,13 @@ div.categories
 h3 2. Choose your preferred badge
 
 div.badges
-    div.short
+    div.lcc
         h4 Let's copy, church
         img(:src='`/badges/lcc_standard_${pd_code}.svg`'
             :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
         img(:src='`/badges/lcc_alt_${pd_code}.svg`'
             :class='{active: badge === "lcc_alt"}' @click='badge = "lcc_alt"')
-    div
+    div.sj
         h4
             a(href='https://sellingjesus.org' target='sj') Selling Jesus
         img(:src='`/badges/sj_standard_${pd_code}.svg`'
@@ -54,6 +54,13 @@ p(v-else-if='category === "video"') Paste it next to your video, wherever it is 
 p(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
 p(v-else) Paste it either inside your resource or next to any links to download it.
 
+details
+    summary Optional additions
+    p You may wish to elaborate on what people can do with your resource and why you have made it free. For example:
+    blockquote
+        p You can copy, translate, modify, and distribute this resource, without restriction, and without needing to ask permission.
+    blockquote
+        p This resource is freely given (Matt 10:8) for the sake of the gospel.
 
 h3 4. Add {{ category === "software" ? "a no-conditions license" : "the public domain link" }} (⚠️ <em>important</em>)
 
@@ -135,19 +142,21 @@ const copy_link = async () => {
 p, li
     color: var(--vp-c-text-2)
 
+summary
+    cursor: pointer
+
 h3
     margin-top: 64px
     margin-bottom: 24px
 
 .badges
     display: flex
+    flex-wrap: wrap
     margin-top: 24px
 
     img
         display: inline-flex
         box-sizing: content-box
-        max-width: 360px
-        width: 100%
         border: 2px solid transparent
         border-radius: 24px
         padding: 4px
@@ -156,24 +165,34 @@ h3
         &.active
             border-color: #f0f9
 
-    > div:nth-child(1)
-        margin-right: 12px
         @media (max-width: 600px)
-            margin-right: 2px
+            img
+                width: 100%
+                max-width: 360px
+
+    > div
+        display: flex
+        flex-direction: column
+
+    > div:nth-child(1)
+        margin-right: 4px
 
     > div:nth-child(2)
-        margin-left: 12px
-        @media (max-width: 600px)
-            margin-left: 2px
+        margin-right: 4px
 
-    .short img
-        margin: 10px 0
+    .lcc img
+        width: 360px
+        margin: 10px 0  // Make up for shorter height
+
+    .sj img
+        width: 360px
 
     .none img
         width: 180px
 
     h4
         text-align: center
+        margin-top: 12px
         margin-bottom: 12px
         font-size: 16px
         font-weight: bold
