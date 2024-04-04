@@ -47,12 +47,15 @@ p.links(v-if='badge')
     a(:href='badge_url_base + "png"' target='_blank') URL for PNG
     a(:href='badge_url_base + "svg"' target='_blank') URL for SVG
 
-p(v-if='category === "book"') Paste it into the first page of the book, where a copyright notice would usually go.
-p(v-else-if='category === "music"') Paste it next to your songs, wherever they are able to be downloaded or listened to.
-p(v-else-if='category === "image"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
-p(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
-p(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
-p(v-else) Paste it either inside your resource or next to any links to download it.
+p
+    span(v-if='category === "book"') Paste it into the first page of the book, where a copyright notice would usually go.
+    span(v-else-if='category === "music"') Paste it next to your songs, wherever they are able to be downloaded or listened to.
+    span(v-else-if='category === "image"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
+    span(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
+    span(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
+    span(v-else) Paste it either inside your resource or next to any links to download it.
+    |
+    span(v-if='badge')  Resize as desired (standard width is 360px).
 
 details
     summary Optional additions
