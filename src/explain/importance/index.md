@@ -77,4 +77,4 @@ Creators of resources should instead rely on Christian accountability rather tha
 
 ---
 
-See also &nbsp; <VPButton text="Harm caused by copyright" href="/explain/examples/" theme='alt' />
+See also &nbsp; <VPButton text="Harm caused by copyright" href="/explain/examples/" theme='alt' /> &nbsp; <VPButton text="Common objections" href="/explain/objections/" theme='alt' />
