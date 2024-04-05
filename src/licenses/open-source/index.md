@@ -6,7 +6,8 @@ head:
 ---
 
 
-::: danger _Let's copy, church_ no longer endorses licenses with conditions.
+::: danger _Let's copy, church_ no longer endorses licenses with conditions
+We disclaim all uses of this page (5 April 2024).
 :::
 
 
