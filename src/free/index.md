@@ -1,5 +1,5 @@
 ---
-title: Freely given
+titleTemplate: false
 aside: false
 ---
 
