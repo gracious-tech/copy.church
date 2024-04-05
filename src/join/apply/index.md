@@ -20,7 +20,9 @@ We also believe ministry should be freely given, and so we *do not*:
  * Solicit donations in direct exchange for ministry
  * Restrict the distribution, adaptation, or translation of ministry resources
 
-This perspective is not what people commonly think about when they refer to "giving for free", so it's important you [familiarize yourself with the theology](/explain/biblical/) before agreeing to it. We expect this freely giving ethic to apply to all aspects of someone's ministry, and not just parts of it.
+This perspective is not what people commonly think about when they refer to "giving for free", so it's important you [familiarize yourself with the theology](https://sellingjesus.org) before agreeing to it. We expect this freely giving ethic to apply to all aspects of someone's ministry, and not just parts of it.
+
+While we advocate for the public domain, we accept others have different opinions on what should be considered "freely giving" and so we also partner with those who openly license their resources (BY, SA, or NC).
 
 
 ## Submit
