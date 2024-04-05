@@ -126,24 +126,24 @@ export default defineConfig({
                 {
                     text: "Explanation",
                     items: [
-                        {text: "How copyright works", link: '/explain/copyright/'},
                         {text: "Why this is important", link: '/explain/importance/'},
+                        {text: "How copyright works", link: '/explain/copyright/'},
                         {text: "Common objections", link: '/explain/objections/'},
                     ],
                 },
                 {
                     text: "Examples",
                     items: [
-                        {text: "Free resources", link: '/collection/'},
-                        {text: "People freely giving", link: '/join/'},
                         {text: "Harm caused by copyright", link: '/explain/examples/'},
+                        {text: "People freely giving", link: '/join/'},
+                        {text: "Free resources", link: '/collection/'},
                     ],
                 },
                 {
                     text: "Tests",
                     items: [
-                        {text: "Am I being generous?", link: '/initiatives/assess/'},
                         {text: "Bible ratings", link: '/initiatives/bibles/'},
+                        {text: "Am I being generous?", link: '/initiatives/assess/'},
                     ],
                 },
             ],
