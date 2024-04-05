@@ -6,7 +6,8 @@ head:
 ---
 
 
-::: danger _Let's copy, church_ no longer endorses licenses with conditions.
+::: danger _Let's copy, church_ no longer endorses licenses with conditions
+We disclaim all uses of this page and/or license (5 April 2024). Works that have applied this license remain licensed under it.
 
 This license is itself licensed under [CC BY-SA](/licenses/cc-by-sa/), © 2022 unfoldingWord
 :::
