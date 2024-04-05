@@ -5,9 +5,30 @@
     max-width: 600px
 </style>
 
-# Why this is important
 
-The most important reason for freeing resources from copyright is that __Scripture calls us to it__. We highly recommend spending lots of time watching the videos and reading the articles at our partner site, [Selling Jesus](https://sellingjesus.org).
+
+# What's the problem?
+
+<span class=mixed>__The commercialization of ministry__ &mdash; through paywalls and copyright</span>
+
+A vast amount of Christian resources exist (books, songs, trainings, etc) to further God's kingdom, and yet most of them are restricted to paying customers. Copyright also automatically applies to new resources, making them illegal to share, whether the authors intend it or not.
+
+This is [hindering ministry](/explain/examples/) in various ways:
+
+ 1. __Helpful resources are not being shared__ as widely as they could be
+ 2. __Many unintentionally break the law__ by sharing copyrighted resources
+ 3. __We're being taught to pay for ministry__ rather than partner in it
+
+<img src='@/_assets/ill_share.svg' class='ill_share'>
+
+
+## What does the Bible say?
+
+<img class='quote' src='@/_assets/images/quote.svg'>
+
+Jesus explicitly told his disciples to "freely give" (Matthew 10:8) and the rest of Scripture also testifies to this command. This is at odds with paywalls and copyright which are all about restricting what is given for the benefit of the creator rather than those they serve.
+
+We highly recommend spending lots of time watching the videos and reading the articles at our partner site, [Selling Jesus](https://sellingjesus.org).
 
 <a href='https://sellingjesus.org' target='sj'>
     <img class='sj' src='/_assets/images/sj.jpg'>
