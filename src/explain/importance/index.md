@@ -3,6 +3,7 @@
 .sj
     border-radius: 12px
     max-width: 600px
+    width: 100%
 </style>
 
 
