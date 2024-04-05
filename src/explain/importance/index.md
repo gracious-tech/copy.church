@@ -94,7 +94,7 @@ Most Christian resources are reasonably priced and easily accessible in Western 
 
 Take for example the numerous Christian worship songs that have been (often illegally) translated into other languages and used in churches. Many resource owners won't mind that such things are taking place, but legally speaking, by retaining copyright, millions of brothers and sisters around the world are being made unintentional law breakers.
 
-Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also [letting ourselves be wronged](/explain/biblical/) rather than making other believers criminals in the sight of secular law.
+Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also letting ourselves be wronged (1 Cor 6:7) rather than making other believers criminals in the sight of secular law.
 
 ---
 
