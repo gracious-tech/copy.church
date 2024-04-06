@@ -2,8 +2,6 @@
 # How to Self-Publish a Free Book That Is Truly Freely Given
 
 
-## Introduction
-
 Many feel intimidated when it comes to making their book available free of cost or hindrance. And if you’ve listened to our conversation about _[Joe the Author](https://sellingjesus.org/podcast/2jUt3APpuM6G4sZNbNFOY5)_, you may have lots of practical questions about where to start. This guide is for you.
 
 A common misconception is that you need a legacy publisher to typeset, format, and publish your book in order for it to be successful, beautiful, and professional. That is simply not true. God, in his providence, has given us incredible tools that allow us to circumvent the unbiblical system of most legacy Christian publishers and reach far more people with our work. So this is a comprehensive guide meant to demystify the steps involved in self-publishing a book in a way that truly accords with Christ’s command to freely give (Matt 10:8).
@@ -169,35 +167,23 @@ Adjust the page size, margins, and other formatting settings according to your c
 
 ### Add front matter and back matter, and make your license and intentions clear
 
-Create a title page, copyright page, table of contents, preface, acknowledgments, and any other front matter sections. At the end of your book, include an index, glossary, or other back matter sections if applicable. It's important to make it clear in the front matter that your book is dedicated to the public domain[^1], that the paper copies are being sold by a secular third party (like Amazon) at cost, that you are not profiting from the sale of the print edition, and that you're willing to send a free print copy to those who have no device on which to read the ebook and can't afford a print edition. Here's an example:
+Create a title page, copyright page, table of contents, preface, acknowledgments, and any other front matter sections. At the end of your book, include an index, glossary, or other back matter sections if applicable.
 
-> Andrew Case, _Praying the Bible Together_
+It's important to make it clear in the front matter that your book is dedicated to the public domain, that the paper copies are being sold by a secular third party (like Amazon) at cost, that you are not profiting from the sale of the print edition, and that you're willing to send a free print copy to those who have no device on which to read the ebook and can't afford a print edition.
 
-_> _CC0 2023 by Andrew Case
+<VPButton text="Use this guide to free the book" href='/licenses/' target="_blank" />
 
-> Public Domain. All of this publication may be shared, translated, sold, or copied freely without limitation and without permission. To learn more about this open license visit https://creativecommons.org/share-your-work/public-domain/cc0/ To learn more about why this book is freely given (Matt 10:8), please visit sellingJesus.org.
+Here's an example:
 
-Also, add something like the following to the description of your book on your website and even in the back matter of your book:
+> <a href='https://sellingjesus.org/free'><img src='https://copy.church/badges/sj_standard_pd.svg' style='max-width: 360px; width: 100%;'></a>
+>
+> Andrew Case, _Praying the Bible Together_, 2023
+>
+> [Dedicated to the public domain](https://sellingjesus.org/free). All of this publication may be shared, translated, sold, or copied freely without limitation and without permission. To learn more about why this book is freely given (Matt 10:8), please visit [sellingJesus.org](https://sellingJesus.org).
+
+It's important to state the book is public domain and add the link to the legal code. The rest of the text can be customized. Also, add something like the following to the description of your book on your website and even in the back matter of your book:
 
 > Cost should never be “an obstacle in the way of the gospel of Christ” (1 Cor 9:12), so if you'd like a physical copy of this book, but can't afford one, please contact us at _________ and it will be our pleasure to fill your request.
-
-Also, feel free to add one of the following badges to your book's front matter, or to your website or video:
-
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
-
-Don't miss other [badge designs](https://copy.church/licenses/) you can use from [copy.church](https://copy.church).
 
 
 ### Insert images and create a cover
@@ -211,7 +197,7 @@ If your book contains images or graphics, ensure they are high resolution and pr
     * **JPG (Joint Photographic Group):** Raster (made of pixels).
     * **SVG (Scalable Vector Graphic):** Vector (made of mathematical paths).
 
-_Vector _images can be infinitely scaled without losing quality, whereas enlarging a _raster _image will make the pixels become visible and the image appear blurry.
+_Vector_ images can be infinitely scaled without losing quality, whereas enlarging a _raster_ image will make the pixels become visible and the image appear blurry.
 
 
 
@@ -234,12 +220,7 @@ If you choose to publish on Amazon KDP, we recommend the following settings for 
 - Set the price in each country to the minimum required by Amazon. This will ensure that you receive no royalties from sales.
 
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![](/_assets/images/amazon_price.png)
 
 
 - Leave “Expanded distribution” unchecked
@@ -285,7 +266,9 @@ _Note: If you try reporting the lower price on Smashwords before your title is a
 
 To ensure maximum usability and ease of producing derivatives and translations, aim to provide your books in a variety of open and accessible file formats. The ideal approach is to make available not only the final rendered formats, like PDF and EPUB, but also the source files used to create those formats.
 
-For example, providing the original manuscript files in formats like .docx, .odt, a Google doc, or whatever original file format you used to typeset it in (LaTeX, Scribus, etc.), allows others to easily modify the content as needed, run it through Google Translate[^2], change the formatting, styling, page layout, etc.
+For example, providing the original manuscript files in formats like .docx, .odt, a Google doc, or whatever original file format you used to typeset it in (LaTeX, Scribus, etc.), allows others to easily modify the content as needed, run it through Google Translate, change the formatting, styling, page layout, etc.
+
+> An entire book can be translated using [Google Translate](https://translate.google.com/), though will still need reviewing by a native speaker. If you click on the “Documents” tab, you’ll have the option to upload your entire book file, as long as it’s in a .docx or .pdf format. If you have all of your book text in a Google Doc, you can click Tools > Translate document, and that will translate it as well.
 
 Open formats like .html, .epub, and .xml are also valuable, as they can be easily converted to other ebook formats or used to generate accessible versions like those compatible with screen readers or braille displays. By providing a comprehensive set of source and output files in both proprietary and open formats, you can maximize the potential for your work to be utilized, adapted, and built upon by others, fostering a more open and collaborative ecosystem for sharing truth.
 
@@ -294,22 +277,12 @@ To make these files universally available, you can leverage a variety of platfor
 
 ## Serving and Bearing Burdens
 
-If you’re feeling overwhelmed by what’s involved in making your book freely available, that’s normal. Pace yourself, take one step at a time, read a productivity book like _[What’s Best Next](https://www.whatsbestnext.com/product/whats-best-next/) _or _[Deep Work](https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/)_, and commit your labor to God in prayer. Be encouraged that God is honored by any extra effort you exert to freely give. As with all followers of Christ, authors are called to serve those they minister to out of love (Gal 5:13). Your work to create beautiful, useful, edifying books that adorn the gospel is an act of bearing the burdens of others (Gal 6:2), and reflects the heart of our Master who came not to be served, but to serve (Mark 10:45).
+If you’re feeling overwhelmed by what’s involved in making your book freely available, that’s normal. Pace yourself, take one step at a time, read a productivity book like _[What’s Best Next](https://www.whatsbestnext.com/product/whats-best-next/)_ or _[Deep Work](https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/)_, and commit your labor to God in prayer. Be encouraged that God is honored by any extra effort you exert to freely give. As with all followers of Christ, authors are called to serve those they minister to out of love (Gal 5:13). Your work to create beautiful, useful, edifying books that adorn the gospel is an act of bearing the burdens of others (Gal 6:2), and reflects the heart of our Master who came not to be served, but to serve (Mark 10:45).
 
 
 ### What If I Need Help?
 
 If you get stuck and need some personal help, there are two people you can reach out to who would be happy to help you answer questions you can’t get answers to from YouTube tutorials, AI, or forums:
 
-
-
 * Johnathan: [JohnathansLiterature@gmail.com](mailto:JohnathansLiterature@gmail.com)
 * Courtney: [courtney.sj@lyndnex.com](mailto:courtney.sj@lyndnex.com)
-
-
-
-[^1]:
-     While some people argue that CC BY-SA (Creative Commons Attribution-ShareAlike) is the best option, we believe that Scripture and wisdom require dedication to the public domain, a position we defend in [this article](https://sellingjesus.org/articles/sharealike#_5-reasons-share-alike-is-problematic).
-
-[^2]:
-     If you go to [https://translate.google.com/](https://translate.google.com/) and click on the “Documents” tab, you’ll have the option to upload your entire book file, as long as it’s in a .docx or .pdf format. If you have all of your book text in a Google Doc, you can click Tools > Translate document, and that will translate it as well.
