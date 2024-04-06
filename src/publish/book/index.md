@@ -182,9 +182,9 @@ Here's an example:
 >
 > Andrew Case, _Praying the Bible Together_, 2023
 >
-> [Dedicated to the public domain](https://sellingjesus.org/free). All of this publication may be shared, translated, sold, or copied freely without limitation and without permission. To learn more about why this book is freely given (Matt 10:8), please visit [sellingJesus.org](https://sellingJesus.org).
+> Dedicated to the public domain. All of this publication may be shared, translated, sold, or copied freely without limitation and without permission. To learn more about why this book is freely given (Matt 10:8), please visit sellingJesus.org.
 
-It's important to state the book is public domain and add the link to the legal code. The rest of the text can be customized. Also, add something like the following to the description of your book on your website and even in the back matter of your book:
+It's important to state the book is public domain and to display the link to the legal code (included in the badge in this case). The rest of the text can be customized. Also, add something like the following to the description of your book on your website and even in the back matter of your book:
 
 > Cost should never be “an obstacle in the way of the gospel of Christ” (1 Cor 9:12), so if you'd like a physical copy of this book, but can't afford one, please contact us at _________ and it will be our pleasure to fill your request.
 
