@@ -14,7 +14,7 @@ aside: false
 
 
 # Freely given
-Resources marked as public domain and linked to this page have been freely given (Matt 10:8) for the sake of the gospel. The author has waived all copyright so that it may be used without hinderance.
+Resources marked as public domain and associated with this page have been freely given (Matt 10:8) for the sake of the gospel. The rights holder has waived all copyright so that it may be used without hinderance.
 
 This means you can:
 
@@ -27,10 +27,10 @@ This means you can:
 If you do modify the resource, we recommend you:
 
  * Avoid implying it is endorsed by the author
- * [Freely give](/licenses/) your modified version
+ * [Freely give](https://copy.church/licenses/) your modified version
 
 
-You do not need to ask the author for permission, even if you charge for it. Please read the [CC0 legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode) for more information.
+You do not need to ask the original rights holder for permission, even if you charge for it. They have dedicated the work to the public domain using [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode), which you should consult for more information.
 
 &nbsp;
 
