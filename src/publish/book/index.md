@@ -2,7 +2,7 @@
 # How to Self-Publish a Free Book That Is Truly Freely Given
 
 
-Many feel intimidated when it comes to making their book available free of cost or hindrance. And if you’ve listened to our conversation about _[Joe the Author](https://sellingjesus.org/podcast/2jUt3APpuM6G4sZNbNFOY5)_, you may have lots of practical questions about where to start. This guide is for you.
+Many feel intimidated when it comes to making their book available free of cost or hindrance, and have lots of practical questions about where to start. This guide is for you.
 
 A common misconception is that you need a legacy publisher to typeset, format, and publish your book in order for it to be successful, beautiful, and professional. That is simply not true. God, in his providence, has given us incredible tools that allow us to circumvent the unbiblical system of most legacy Christian publishers and reach far more people with our work. So this is a comprehensive guide meant to demystify the steps involved in self-publishing a book in a way that truly accords with Christ’s command to freely give (Matt 10:8).
 
@@ -40,6 +40,8 @@ _Drawbacks of Traditional Publishing:_
 6. **Lack of Care** - No one will ever care about your book as much as you do, especially a large publisher. They only care about your book insofar as it makes them money. Therefore, the attention to detail, elements of the design, etc., will not matter to them as much as they will to you if you have full control over the publishing process.
 
 8. **Disobedience to God & Scripture** - Traditional Christian publishers are actively engaged in [the sin of simony](https://sellingjesus.org/articles/simony) (Acts 8:18-19), of [selling truth](https://sellingjesus.org/articles/selling-truth) (Micah 3:11), [peddling God’s Word](https://sellingjesus.org/articles/commercializing-gods-word) (2 Cor 2:17), showing partiality to the rich (James 2), failing to reflect the generous heart of God, and violating the [command of Christ](https://sellingjesus.org/articles/freely-give-today) (Matt 10:8). By publishing with such publishers, authors become complicit (often unintentionally) with these sins.
+
+See also this podcast about _[Joe the Author](https://sellingjesus.org/podcast/2jUt3APpuM6G4sZNbNFOY5)_.
 
 
 ## How to Typeset Your Book
