@@ -107,11 +107,11 @@ Keep in mind that some webfonts are not suitable for serious typesetting because
 
 
 
-* _Limited Feature Sets_: Webfonts are often designed for efficiency and readability on screens, so they may lack the extensive character sets and stylistic features found in professional fonts. These features can include things like ligatures (special combinations of characters), swashes (ornate flourishes), and a wider range of weights and italics. \
+* _Limited Feature Sets_: Webfonts are often designed for efficiency and readability on screens, so they may lack the extensive character sets and stylistic features found in professional fonts. These features can include things like ligatures (special combinations of characters), swashes (ornate flourishes), and a wider range of weights and italics.
 
-* _Hinting Issues_: Webfonts rely on browser rendering to display correctly on different screens. This can sometimes lead to hinting issues, where the font appears blurry or uneven at small sizes. Professional fonts are often hinted specifically for high-resolution print output. \
+* _Hinting Issues_: Webfonts rely on browser rendering to display correctly on different screens. This can sometimes lead to hinting issues, where the font appears blurry or uneven at small sizes. Professional fonts are often hinted specifically for high-resolution print output.
 
-* _Control_: In typesetting, designers have a lot of control over how text appears, including kerning (spacing between letters) and tracking (overall letter spacing). Webfonts may not offer the same level of control. \
+* _Control_: In typesetting, designers have a lot of control over how text appears, including kerning (spacing between letters) and tracking (overall letter spacing). Webfonts may not offer the same level of control.
 
 * _Focus on Readability_: Webfonts are optimized for quick comprehension on various devices. For serious typesetting, a focus might be on aesthetics and creating a specific mood or style, which some webfonts might not be designed for.
 
