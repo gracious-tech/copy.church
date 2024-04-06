@@ -191,23 +191,17 @@ It's important to state the book is public domain and add the link to the legal 
 
 ### Insert images and create a cover
 
-If your book contains images or graphics, ensure they are high resolution and properly sized. Learn about the difference between PNG, JPG, and vector images (SVG), and become familiar with how to manipulate and create them, as well as what ppi is and how it affects your images. Here’s a brief breakdown to get you started:
+If your book contains images or graphics, ensure they are high resolution and properly sized. Learn about the different image formats, and become familiar with how to manipulate and create them, as well as what PPI is and how it affects your images.
 
+| Type    | Made of | Size   | Quality   | Use case
+| -       | -       | -      | -         | -
+| **SVG** | Shapes  | Small  | No loss   | Only for logos and illustrations _made on a computer_
+| **JPG** | Pixels  | Medium | Some loss | Photos and other detailed images
+| **PNG** | Pixels  | Large  | No loss   | When quality loss with JPG would be noticeable
 
+SVGs are the best format as they are small and infinitely scalable, but only for illustrations made on a computer. You should generally never convert to SVG from another format; you need to create illustrations with it from the start.
 
-* **Image Type:**
-    * **PNG (Portable Network Graphic):** Raster (made of pixels).
-    * **JPG (Joint Photographic Group):** Raster (made of pixels).
-    * **SVG (Scalable Vector Graphic):** Vector (made of mathematical paths).
-
-_Vector_ images can be infinitely scaled without losing quality, whereas enlarging a _raster_ image will make the pixels become visible and the image appear blurry.
-
-
-
-* **Quality:**
-    * **PNG:** Lossless compression, maintains sharp details, good for text and graphics with flat colors.
-    * **JPG:** Lossy compression, discards some data for smaller file sizes, good for photos with many colors.
-    * **SVG:** Infinitely scalable without quality loss, ideal for logos, illustrations, simple icons, and flat designs.
+You should also not generally convert a JPG to PNG as it will not improve the quality and will just increase the size. If, however, your PNG images are too large, you should try converting them to JPGs.
 
 Design a cover for your book using free graphic design options like [Canva](https://canva.com) (which also has a free pro option for non-profits), [Photopea](https://www.photopea.com/), [GIMP](https://www.gimp.org/), or [Inkscape](https://inkscape.org/). We recommend AI art generators like Midjourney, Leonardo AI, or Bing/Chat GPT Plus (just make sure you upscale everything to high resolution), and ask AI chats (like the ones mentioned above) for creative design ideas. Alternatively, you can hire a freelance designer on platforms like Fiverr or Upwork.
 
