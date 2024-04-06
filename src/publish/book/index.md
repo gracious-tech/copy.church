@@ -1,6 +1,7 @@
 
 # How to Self-Publish a Free Book That Is Truly Freely Given
 
+_&mdash; Andrew Case_
 
 Many feel intimidated when it comes to making their book available free of cost or hindrance, and have lots of practical questions about where to start. This guide is for you.
 
