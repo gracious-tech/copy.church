@@ -1,7 +1,12 @@
+---
+head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/pages/publish_book.jpg'}]]
+---
 
 # How to Self-Publish a Free Book That Is Truly Freely Given
 
 _&mdash; Andrew Case_
+
+<img src='/_assets/pages/publish_book.jpg' style='max-width: 500px; width: 100%;'>
 
 Many feel intimidated when it comes to making their book available free of cost or hindrance, and have lots of practical questions about where to start. This guide is for you.
 

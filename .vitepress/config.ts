@@ -15,8 +15,6 @@ export default defineConfig({
         ['link', {rel: 'icon', href: '/_assets/icon.png'}],
         // WARN WhatsApp requires a URL with domain included
         ['meta', {property: 'og:image', content: 'https://copy.church/_assets/social/site.png'}],
-        ['meta', {property: 'og:image:width', content: '1200'}],
-        ['meta', {property: 'og:image:height', content: '630'}],
     ],
     vite: {
         publicDir: '_public',
