@@ -13,6 +13,8 @@ export default defineConfig({
     description: "A call to freely share Christian resources to further God's kingdom",
     head: [
         ['link', {rel: 'icon', href: '/_assets/icon.png'}],
+        // Required for Twitter to show any image at all
+        ['meta', {name: 'twitter:card', content: 'summary'}],
         // WARN WhatsApp requires a URL with domain included
         ['meta', {property: 'og:image', content: 'https://copy.church/_assets/social/site.png'}],
     ],
@@ -146,5 +148,15 @@ export default defineConfig({
                 },
             ],
         },
+    },
+
+    transformHead(ctx){
+        const head:[string, Record<string, string>][] = []
+
+        // Twitter preview/card ignores <title> and meta description :/
+        head.push(['meta', {name: 'og:title', content: ctx.title}])
+        head.push(['meta', {name: 'og:description', content: ctx.description}])
+
+        return head
     },
 })
