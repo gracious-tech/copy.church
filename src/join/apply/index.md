@@ -34,7 +34,7 @@ In order to create a profile for you we'll need the following information:
  * Third-person mini bio
  * First-person quote about freely giving
  * Website URL (optional)
- * Do you have a Masters+ degree in theology or translation? (optional)
+ * Do you have a Bachelor+ degree in theology or another relevant field? (optional)
 
 It should be all up __less than 100 words__. By submitting the picture and info to us you agree to dedicate it to the public domain along with the rest of the website. You also agree in it being removed if your beliefs change or your conduct would bring disrepute on the site.
 
