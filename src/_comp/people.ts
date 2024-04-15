@@ -85,6 +85,14 @@ export const people:Record<string, Person> = {
         bio: "Robert served as a Bible translation trainer and facilitator for a Philippine cultural community for some thirty years. Now technically ‘retired’, he's been able to start working full-time on his long-held dream of open-licensed Bible software and datasets.",
         quote: "Way back when I switched to using Linux open-source software (generously offered freely by many people, probably mostly non-Christians), I was never able to figure out why the only encrypted and locked resources on my laptop were Bibles — even the original Hebrew and Greek texts! I founded Freely-Given.org back in 2009 to try to correct that scenario and to dedicate whatever remaining years God gives me to being at least as generous in the Bible world as others are in the secular world.",
     },
+    mark_feezell: {
+        name: "Mark Feezell",
+        title: "Professor of music",
+        education: "Ph.D.",
+        site: "https://drfeezell.com/",
+        bio: "Mark Feezell was born in San Antonio and teaches Music Theory at Southern Methodist University in Dallas, Texas. He earned a Ph.D. in Music Composition from the University of North Texas in 2003, and has released his composition dissertation into the public domain, along with many other worship pieces.",
+        quote: "When we completely release everything the Lord has given into our hands, we are most like Him in His generosity, and we gift to others that same chance to choose to give as God gives.",
+    },
 }
 
 
