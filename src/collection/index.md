@@ -3,15 +3,6 @@
 This is a list of some of the most significant free resources we've come across. You can also follow [our Facebook page](https://www.facebook.com/copy.church) which regularly posts new resources.
 
 
-## Initiatives
-Groups that have formed with the goal of freely sharing resources.
-
-Organization | Purpose
-| - | - |
-[The Copenhagen Alliance](http://copenhagen-alliance.org/) | Organizations with a common interest in making biblical language data free and openly accessible
-[Open Components](https://opencomponents.io/) | Collaborative creation of open source Bible technology
-
-
 ## Bibles
 Several organizations have openly licensed a large volume of Bible translations they own. Most of them are not in English (see [the bibles page](/initiatives/bibles/) for open English translations).
 
@@ -42,6 +33,7 @@ There are a number of open source products being created for both Bible translat
 
 Organization | Resources
 | - | - |
+[Let's Church](https://lets.church)                 | Cost-free and ad-free video hosting
 [CrossWire Bible Society](https://crosswire.org/)   | Software for digitally distributing and studying Bible translations
 [eBible](https://ebible.org/)                       | Bible collection and distribution tools
 [unfoldingWord](https://www.unfoldingword.org/)     | Bible translation tools
@@ -60,3 +52,12 @@ Organization | Resources
 [Lambsongs](https://www.freebibleimages.org/contributors/lambsongs/)          | Hundreds of illustrations of various parts of the Bible for children |
 
 [Free Bible images](https://www.freebibleimages.org/contributors/) has some more as well
+
+
+## Initiatives
+Groups that have formed with the goal of freely sharing resources.
+
+Organization | Purpose
+| - | - |
+[The Copenhagen Alliance](http://copenhagen-alliance.org/) | Organizations with a common interest in making biblical language data free and openly accessible
+[Open Components](https://opencomponents.io/) | Collaborative creation of open source Bible technology
