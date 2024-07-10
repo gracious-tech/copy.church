@@ -42,7 +42,7 @@ It is unknown who now owns the rights to the ISV translation, and it can no long
 
 
 ### The Hebrew dictionary no longer in print
-The _Diccionario bíblico hebreo-español_ is a Hebrew-Spanish dictionary that is out of print, and the publisher does not respond when contacted. Many spanish believers would love to study biblical Hebrew using such a resource, but are unable to because the publisher retains the rights to the now out-of-print book.
+The _Diccionario bíblico hebreo-español_ is a Hebrew-Spanish dictionary that is out of print, and the publisher does not respond when contacted. Many Spanish believers would love to study biblical Hebrew using such a resource, but are unable to because the publisher retains the rights to the now out-of-print book.
 
 ### Bible illustrations in storage
 There are many bible illustrations that publishers hold the rights to even though they are no longer using them. Rather than release them for the benefit of the church, they keep them in storage instead.
