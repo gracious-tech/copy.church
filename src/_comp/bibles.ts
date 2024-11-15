@@ -101,7 +101,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: true,  // License is equivelent to CC BY-NC-ND
+            owner_supportive: false,
         },
     },
     web: {
@@ -251,7 +251,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: true,  // License is equivelent to CC BY-NC-ND
+            owner_supportive: false,
         },
     },
     fbv: {
