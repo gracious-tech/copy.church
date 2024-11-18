@@ -55,6 +55,7 @@ onMounted(() => {
         width: 0
         flex-grow: 2
         text-align: center
+        text-decoration: none
 
         &:last-child
             flex-grow: 1

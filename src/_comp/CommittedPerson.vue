@@ -58,7 +58,7 @@ const person = computed(() => people[props.id])
         .cred
             flex-grow: 1
 
-            h3
+            h3, h4
                 margin-top: 0
 
             .edu

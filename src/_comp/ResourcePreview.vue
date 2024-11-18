@@ -40,6 +40,10 @@ a
     margin: 24px 0
     overflow: hidden
     color: inherit !important
+    text-decoration: none !important
+
+    &:hover
+        background-color: hsla(0deg, 0%, 50%, 0.3)
 
     img
         width: 100%
