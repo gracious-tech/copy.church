@@ -74,7 +74,7 @@ In addition to actual examples of people commercialising ministry, the Bible has
 
 ### 5. The Super Apostles
 
-In 2 Corinthians Paul responds to the "super apostles" who were not just leading the church astray but were also seeking to profit from their "ministry". Unlike the super apostles, Paul never charged for ministry (2 Cor 11:7), he only accepted voluntary financial support (Phil 2:18).
+In 2 Corinthians Paul responds to the "super apostles" who were not just leading the church astray but were also seeking to profit from their "ministry". Unlike the super apostles, Paul never charged for ministry (2 Cor 11:7), he only accepted voluntary financial support (Phil 4:18).
 
 <BibleQuote passage="2 Cor 2:17"></BibleQuote>
 

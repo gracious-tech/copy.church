@@ -65,7 +65,7 @@ Paul's argument in regard to food sacrificed to idols is that while one may have
 
 Likewise, Paul at times didn't exercise his right to financial support because it is not a right that is always justified, it too can be misused. After declaring that he didn't make use of his right to support, he gives the clear reason why: <q>so that we may not be a hindrance to the gospel of Christ</q> (1 Cor 9:12).
 
-This explains why Paul sometimes accepted support (Phil 2:18) and at other times did not, and also why he justifies the other disciples' acceptance of hospitality (1 Cor 9:5) yet refused it himself (9:18). The right to support can get in the way of the gospel depending on the context and how it is exercised.
+This explains why Paul sometimes accepted support (Phil 4:18) and at other times did not, and also why he justifies the other disciples' acceptance of hospitality (1 Cor 9:5) yet refused it himself (9:18). The right to support can get in the way of the gospel depending on the context and how it is exercised.
 
 ## 3. Paul's Examples Justify Support, Not Commerce
 
