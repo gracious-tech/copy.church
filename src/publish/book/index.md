@@ -241,7 +241,7 @@ If you typeset your book in Scribus, it offers the ability to export your book i
 
 Amazon is the biggest and most convenient place for most people to find and access your book. But Amazon hates the idea of making things completely free, so they put obstacles in your way if you want to do that. The cheapest you can make an ebook on Amazon by default is 99 cents. Here's what you'll need to do to get the price down to zero:
 
-1. _Sign up for a Draft2Digitalaccount:_ Go to their [website](https://draft2digital.com/) and create an account if you don't already have one..
+1. _Sign up for a Draft2Digital account:_ Go to their [website](https://draft2digital.com/) and create an account if you don't already have one..
 
 2. _Add a new book:_ Start the process of creating a new ebook through your account. This will reveal all the things you’ll need, such as the cover file and resolution recommended. And don’t miss their [style suggestions](https://draft2digital.com/style-suggestions/). All of this will help you know better how to prepare your files for their platform. On Fiverr.com and other places you’ll find affordable freelancers who will be happy to format your book to work well with Draft2Digital if you’d rather have help.
 
