@@ -146,7 +146,7 @@ If you plan to publish your book in physical form, you'll need to choose a print
 
 #### Draft2Digital
 
-- Wide distribution to many online retailers including Amazon, Apple Books, B&N, Smashwords, and others
+- Wide distribution to many online retailers including Amazon, Apple Books, B&N, and others
 
 - User-friendly interface and they allow you to offer your ebook for free across most platforms
 
@@ -232,37 +232,30 @@ For all the other details, here's [a step-by-step tutorial](https://www.youtube.
 
 ## Turning Your Book into an Ebook
 
-After publishing the print version of your book, it’s time to convert it to an ebook. There are many ways to do this for free. [Kindle Create](https://kdp.amazon.com/en_US/help/topic/GUGQ4WDZ92F733GC) and [Sigil](https://sigil-ebook.com/sigil/) are a couple of options, and [Calibre](https://calibre-ebook.com/) helps you convert ebooks to multiple formats. It’s also possible to create one manually with a word processor like Word, and there are many YouTube tutorials on how to do that. You could also hire a freelancer to do it for you inexpensively.
+After publishing the print version of your book, it’s time to convert it to an ebook. There are many ways to do this for free. [Kindle Create](https://kdp.amazon.com/en_US/help/topic/GUGQ4WDZ92F733GC) and [Sigil](https://sigil-ebook.com/sigil/) are a couple of options, and [Calibre](https://calibre-ebook.com/) helps you convert ebooks to multiple formats. It’s also possible to create one manually with a word processor like Word, and there are many YouTube tutorials on how to do that. You could also hire a freelancer to do it for you inexpensively. Some ebook aggregators like Draft2Digital now accept .docx files directly, so you don’t have to do a lot of special formatting. Draft2Digital will also give you the option of entering information for different sections of your book (like the back matter or table of contents) and then they will automatically format and insert it in the appropriate sections of your ebook.
 
-If you typeset your book in Scribus, it offers the ability to export your book into ebook formats like EPUB and Kindle's format. Scribus will take the layout and formatting of your book and convert it into the ebook format, creating a single file that can be directly uploaded to ebook platforms or loaded onto ebook readers. While Scribus handles the ebook export decently, some find that dedicated ebook formatting tools like Calibre or others mentioned above provide better control and optimization for ebook output. But for basic ebook conversions, Scribus's built-in export can be a convenient option.
+If you typeset your book in Scribus, it offers the ability to export your book into ebook formats like EPUB and Kindle's format (LaTeX doesn’t offer this unfortunately). Scribus will take the layout and formatting of your book and convert it into the ebook format, creating a single file that can be directly uploaded to ebook platforms or loaded onto ebook readers. While Scribus handles the ebook export decently, some find that dedicated ebook formatting tools like Calibre or others mentioned above provide better control and optimization for ebook output. But for basic ebook conversions, Scribus's built-in export can be a convenient option.
 
 
 ### Making Your Ebook Free on Amazon & Other Platforms
 
 Amazon is the biggest and most convenient place for most people to find and access your book. But Amazon hates the idea of making things completely free, so they put obstacles in your way if you want to do that. The cheapest you can make an ebook on Amazon by default is 99 cents. Here's what you'll need to do to get the price down to zero:
 
-1. _Sign up for a Smashwords account:_ Go to the [Smashwords website](https://www.smashwords.com/) and create an account if you don't already have one (yes, the website looks dated and unprofessional, but that's ok).
+1. _Sign up for a Draft2Digitalaccount:_ Go to their [website](https://draft2digital.com/) and create an account if you don't already have one..
 
-2. _Prepare your book files:_ Follow Smashwords' style guide to format your book correctly. This is not easy because Smashwords is very picky about formatting, and your book has to be perfect in order to be aggregated to all the “premium” platforms (besides Amazon). We highly recommend getting a freelance formatter to format it for you according to Smashwords' requirements (see the section on freelance options).
+2. _Add a new book:_ Start the process of creating a new ebook through your account. This will reveal all the things you’ll need, such as the cover file and resolution recommended. And don’t miss their [style suggestions](https://draft2digital.com/style-suggestions/). All of this will help you know better how to prepare your files for their platform. On Fiverr.com and other places you’ll find affordable freelancers who will be happy to format your book to work well with Draft2Digital if you’d rather have help.
 
-3. _Upload your book:_ Log in to your Smashwords account and upload your book files, along with the cover image and other required metadata.
+3. _[Watch this tutorial video to help guide you through the process.](https://youtu.be/LYngvgIJJMU)_
 
-4. Set your book's price to zero/free.
+4. Upload your ebook separately to Amazon KDP and publish it there. Make sure it's linked to your print version if you chose to publish a print version through them.
 
-5. _Publish your book on Smashwords and apply for a free ISBN:_ After your book passes Smashwords' vetting process, it will be available for sale or free download on their platform. Then you will need to enable premium distribution (which you’re required to have a separate ebook ISBN for [which is different from your print ISBN]). If you want, you can buy an ISBN in your own name, which allows you to specify the name of the publisher. Otherwise, 'Smashwords' will be listed as the publisher. Make sure to set it to publish everywhere but Amazon (you’ll publish it separately on Amazon).
+5. _Wait for your book to be approved and added to major outlets like B&N, Kobo, and Apple Books_. This may take a couple weeks.
 
-6. At this point, your Smashwords ebook will be marked as 'requires submission' or 'pending approval'. You can't enable premium distribution unless your ebook file is absolutely perfect—and Smashwords can be very picky. Keep fiddling and uploading until your file passes all the tests, or get a freelancer who will guarantee that it will pass.
+6. _Report the lower price to Amazon:_ From your KDP dashboard, go to the bottom of the page, click “Contact Us,” and write them a message, letting them know that you’d like to price-match your book as free. Specify which book, along with its Amazon link and identification number, and paste in the precise URLs for your book’s listing on B&N, Apple Books, and Kobo.
 
-7. _Enable Premium Distribution:_ Your title will be 'pending approval' for a while. In a couple of weeks—or longer—your book will appear on B&N, Apple Books, and Kobo with a price of zero.
+_Note: If you try reporting the lower price before your title is available on sites like B&N and Apple Books, it won’t work._
 
-8. Upload your ebook separately to Amazon KDP and publish it there. Make sure it's linked to your print version.
-
-9. _Report the lower price to Amazon:_ From your KDP dashboard, go to the bottom of the page, click “Contact Us,” and write them a message, letting them know that you’d like to price-match your book as free. Specify which book, along with its Amazon link and identification number, and paste in the precise URLs for your book’s listing on B&N, Apple Books, and Kobo.
-
-_Note: If you try reporting the lower price on Smashwords before your title is available on sites like B&N and Apple Books, it won’t work._
-
-10. _Wait for Amazon's Price Match:_ The next part is up to Amazon. Sometimes they'll price match and set your book to zero, and sometimes they won't. It's uncertain how long it will take, or whether they'll reduce the price to zero.
-
+7. _Wait for Amazon's Price Match:_ The next part is up to Amazon. Sometimes they'll price match and set your book to zero, and sometimes they won't. It's uncertain how long it will take, or whether they'll reduce the price to zero. So far it has worked every time for me.
 
 ### Other File Formats
 
