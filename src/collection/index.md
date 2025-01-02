@@ -38,6 +38,7 @@ Organization | Resources
 [eBible](https://ebible.org/)                       | Bible collection and distribution tools
 [unfoldingWord](https://www.unfoldingword.org/)     | Bible translation tools
 [Gracious Tech](https://gracious.tech)              | Mission-focused apps
+[Church Apps](https://churchapps.org/)              | Completely free ministry solutions for churches
 [Freely-Given](https://freely-given.org/)           | Bible translation tools
 [Digital Bible Society](https://dbs.org/)           | Bible collection and distribution tools
 [OpenLP](https://openlp.org/)                       | Church presentation software
