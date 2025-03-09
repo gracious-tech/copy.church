@@ -41,6 +41,8 @@ Yes, we greatly encourage financially supporting artists so they can give their 
 ## Access the collection
 The collection is in progress. Once we have a significant amount of songs available, we'll announce the collection as being ready to use.
 
+For now, see this [collection of public domain hymns](https://www.youtube.com/playlist?list=PL0jg8CxWUN_eMcUQjfN8j8R3FRvTxx2zC).
+
 
 ## Who can contribute
 We welcome all artists, regardless if you have ever had a song published or not. As long as you own the rights to the song, you can submit it to our collection.
