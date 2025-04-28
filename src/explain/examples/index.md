@@ -4,6 +4,12 @@ These stories represent just a small fraction of the problems many believers fac
 
 ## Printed Bibles
 
+Publishers do not want ordinary believers to be able to print out Scripture themselves (whether portions or entire books). This was confirmed by Gracious Tech, which [created an app](https://paper.bible) to allow users to do exactly that. It was denied permission by all the major English translations, except one which demanded money (the app is free). One publisher explicitly gave the reason why:
+
+> We do not however grant licenses for end-users to print their own editions, regardless of the amount of text they’re printing.
+
+While sites like Bible Gateway allow you to print portions of a book, it maxes out at 10 chapters. There is also no special license granted for printing, so sharing a printout with anyone else is in many cases illegal, even though Christians often do it.
+
 The following stories have been [compiled by Tim Jore](https://www.missionfrontiers.org/issue/article/free-and-open):
 
 > “A Bible society in Southeast Asia does not consider there to be any financial value in printing more copies of the Bible in certain languages, so they do not, even though the Church is pleading for more.”
