@@ -30,6 +30,15 @@ The ESV bible translation used to be included in a Bible platform that allowed m
 As a result, many of these free apps get negative feedback from users even though there is nothing they can do about it. Like this 2/5 stars review for [AndBible](https://play.google.com/store/apps/details?id=net.bible.android.activity): <q>Poor review due to the fact that ESV version is no longer available</q>.
 
 
+## Audio Bibles
+
+The audio recording of a reading of Scripture is a separate work to the text itself, with its own copyright. While relatively few translations are freely available, it is even worse with audio bibles. Even fewer are available than written bibles, and are just as restricted by publishers.
+
+Reading the entire Bible aloud in a public setting [was forbidden](https://sellingjesus.org/articles/copyright-and-the-bible#fn24) by the American Bible Society for their Contemporary English Version.
+
+Even just reading portions of the LSB out loud and publishing as podcast episodes resulted in Pastor Gabriel Hughes being [cautioned about copyright](https://wwutt.podbean.com/e/wwutt-2295-qa-parenting-resources-the-genealogies-of-jesus-contemporary-christian-music/). He took down all previous episodes from his Hear the Word of the Lord podcast and had to “go through the right channels” before he could resume reading Scripture to people publicly.
+
+
 ## Abandoned resources
 
 If a publisher no longer considers it profitable to keep printing a book they simply stop printing and yet still retain the rights to it. Rather than make works free to copy they simply let them die, making them no longer available and forbidding anyone else from reprinting them. This also happens when authors pass away, leaving the rights to their works to any descendants who may or may not continue publishing them.
