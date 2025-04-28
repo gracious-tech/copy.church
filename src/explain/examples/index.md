@@ -1,5 +1,5 @@
 # Real examples of how copyright is hindering ministry
-These stories represent just a small fraction of the problems many believers face all around the world in trying to get access to Christian resources.
+These stories represent just a small fraction of the problems many believers face all around the world in trying to get access to Christian resources. We are often told of situations where copyright is causing issues, but many reporters do not wish to publicly criticize the publishers. So below only includes those who were willing for their experiences to be published, or those who were ok with an anonymous report.
 
 
 ## Printed Bibles
