@@ -78,9 +78,11 @@ Some artists tell of how encouraged they are that their songs are being sung by 
 
 It's often argued that anyone wanting to use a resource should simply ask permission. There are [many problems with that](/objections/permission/), both in principle and in practice.
 
-[Gracious Tech](https://gracious.tech/) has contacted many different Christian organizations, requesting permission for many different types of resources, and this was their experience:
+[Gracious Tech](https://gracious.tech/) has contacted many different Christian organizations, requesting permission for many different types of resources:
 
 > "We've requested permission for all kinds of resources, including Bible translations, Bible data, images, articles, etc. Our use case is always non-commercial. Most of the time people simply don't reply. Sometimes they do if we send a followup email, but there's usually a long wait either way. For those that do reply, there'll be a long back-and-forth where we explain what we're trying to do, they raise some things, and there's often a long delay between each correspondence.
+>
+> When I contacted Bible publishers for permission for a free app, one took eight months to respond, another took one and a half years!, and one didn’t respond at all.
 >
 > There was one time we couldn't even contact a Bible translation owner because they didn't publish any means of contact, and their website's contact form was broken, so we gave up.
 >
