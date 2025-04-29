@@ -31,6 +31,12 @@ The following stories have been [compiled by Tim Jore](https://www.missionfronti
 
 Most popular translations of the Bible are forbidden from being used in apps without permission, and usually only registered organizations are able to request or be granted access. However, most free open source apps are created by volunteers rather than organizations. As such, they are locked out from most popular Bible translations.
 
+Ken Powers created [a fast Bible search engine](https://instant.bible/) to help believers quickly find Scripture passages. Encouraged by positive feedback, he reached out to major Bible publishers to request permission to include their translations in the app. However, instead of support, he received responses such as:
+
+ * “we do not license to individuals”
+ * “[it's] available at www.biblegateway.com, and www.bible.com... therefore we will not be granting a license”
+ * “the full text comes with a $1000 one time fee”
+
 The ESV bible translation used to be included in a Bible platform that allowed many different free and open source bible apps to include it for their users. The owner of the ESV (Crossway) later had a change of heart and [pulled the translation from the platform](https://www.crosswire.org/pipermail/sword-devel/2019-June/047095.html).
 
 As a result, many of these free apps get negative feedback from users even though there is nothing they can do about it. Like this 2/5 stars review for [AndBible](https://play.google.com/store/apps/details?id=net.bible.android.activity): <q>Poor review due to the fact that ESV version is no longer available</q>.
