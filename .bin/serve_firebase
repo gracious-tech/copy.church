@@ -1,0 +1,7 @@
+#!/bin/bash
+# Serve firebase emulators
+set -e
+cd "$(realpath -m "$0/../..")"
+
+.bin/build_functions
+node_modules/.bin/firebase emulators:start --only functions,firestore "$@"
