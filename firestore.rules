@@ -3,10 +3,9 @@ rules_version = '2';
 service cloud.firestore {
     match /databases/{database}/documents {
         match /petitions/{petition_id} {
+            // Allow public read of signer public data
             match /signers/{signer_id} {
-                match /public/data {
-                    allow read;
-                }
+                allow read;
             }
         }
     }

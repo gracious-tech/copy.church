@@ -1,6 +1,7 @@
 ---
 sidebar: false
 navbar: false
+aside: false
 prev: false
 next: false
 ---
@@ -8,6 +9,7 @@ next: false
 <script lang='ts' setup>
 
 import SignPetition from '@/_comp/SignPetition.vue'
+import DisplaySigners from '@/_comp/DisplaySigners.vue'
 
 </script>
 
@@ -16,3 +18,4 @@ import SignPetition from '@/_comp/SignPetition.vue'
 Sign if you want to see this happen...
 
 <SignPetition petition='scripture'></SignPetition>
+<DisplaySigners petition='scripture'></DisplaySigners>

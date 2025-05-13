@@ -1,0 +1,223 @@
+
+<template lang="pug">
+
+teleport(to='body')
+    div.popup(:class='{fade: popup_fade}') {{ popup_msg }}
+    div.bg
+        div(v-for='signer of public_signers') {{ signer.name }}
+
+div.list
+    h2 List of signers ({{ total }})
+    div.grid
+        div(v-for='signer of public_signers')
+            div.name
+                img(v-if='signer.type === "org"' src='@/_assets/icons/group.svg')
+                | {{ signer.name }}
+            div.subtitle {{ signer.subtitle }}
+    div.unpub + {{ total_unpub }} unpublished names
+
+</template>
+
+
+<script lang="ts" setup>
+
+import {reactive, computed, ref, onMounted} from 'vue'
+
+import {countries} from './countries'
+
+import {listen_for_signers, type SigningOutput} from './backend'
+
+
+// TODO rm test data
+const names = [
+['person', "Olivia Bennett", "US", "",],
+['person', "Ethan Wallace", "US", "",],
+['person', "Mia Thornton", "US", "Pastor of Hope Valley Church",],
+['person', "Jacob Rivers", "US", "",],
+['person', "Sophia Mitchell", "US", "",],
+['person', "Lucas Harrington", "US", "",],
+['person', "Ava Delgado", "US", "",],
+['person', "Noah Preston", "US", "",],
+['person', "Isabella Quinn", "US", "",],
+['person', "Liam Chandler", "US", "",],
+['person', "Charlotte Pierce", "AU", "Senior Minister of Springfield Anglican Church",],
+['person', "Mason Avery", "US", "",],
+['person', "Amelia Vaughn", "US", "",],
+['org', "Silicon Valley Baptist Church", "US", "",],
+['person', "Harper Neal", "US", "",],
+['person', "Elijah Monroe", "US", "",],
+['person', "Lily Sanders", "US", "",],
+['person', "Aiden McAllister", "US", "",],
+['person', "Grace Holloway", "US", "",],
+['person', "Jameson Cross", "US", "",],
+].map(([type, name, country, position]) => ({
+    type, name, country, position,
+    sort: 0,
+    reviewed: true,
+    date: new Date(),
+}))
+names.push(...names, ...names, ...names, ...names)
+// TODO rm above
+
+
+const props = defineProps<{petition:string}>()
+
+const signers = reactive<SigningOutput[]>(names)  // TODO make empty
+const popup_msg = ref('')
+const popup_fade = ref(false)
+const popup_enabled = ref(false)
+
+const total = computed(() => signers.length)
+const total_unpub = computed(() => signers.length - public_signers.value.length)
+
+
+// Get data needed to display signers that should be public
+const public_signers = computed(() => {
+    return signers.filter(signer => signer.type !== 'unpub' && signer.reviewed).map(signer => {
+        let subtitle = signer.position
+        if (signer.position && signer.country){
+            subtitle += ', '
+        }
+        subtitle += countries[signer.country]?.short
+        return {type: signer.type, name: signer.name, subtitle}
+    })
+})
+
+
+listen_for_signers(props.petition, data => {
+
+    // Add new item to list
+    signers.push(data)
+
+    // Utils for sorting
+    const type_to_num = (type:string) => type === 'org' ? 1 : 0
+    const empty_to_num = (val:string) => val ? 1 : 0
+
+    // Sort by: date -> has position -> is org -> hardcoded sort
+    signers.sort((a, b) => b.date.seconds - a.date.seconds)
+    signers.sort((a, b) => empty_to_num(b.position) - empty_to_num(a.position))
+    signers.sort((a, b) => type_to_num(b.type) - type_to_num(a.type))
+    signers.sort((a, b) => b.sort - a.sort)
+
+    // Add popup msg
+    if (popup_enabled.value){
+        let msg = "Someone just signed"
+        if (data.country){
+            msg += ` from ${countries[data.country]?.short}`
+        }
+        popup_msg.value = msg
+        popup_fade.value = true
+        setTimeout(() => {
+            popup_fade.value = false
+        }, 4500)  // animation needs 4 seconds to complete
+    }
+})
+
+
+// Don't enable popup until initial signers likely already loaded
+onMounted(() => {
+    setTimeout(() => {
+        popup_enabled.value = true
+    }, 4000)
+})
+
+
+</script>
+
+
+<style lang="sass" scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap')
+
+.popup
+    z-index: 1000
+    position: fixed
+    top: 0
+    right: 0
+    padding: 4px 8px
+    margin: 6px
+    border-radius: 8px
+    text-align: center
+    font-weight: bold
+    font-size: 13px
+    background-image: -webkit-linear-gradient(300deg, #df09, #ff09, #fd09)
+    border: 1px solid #cc03
+    color: #000c
+    opacity: 0
+
+.bg
+    z-index: -1
+    position: absolute
+    font-family: "Caveat", cursive
+    font-size: 30px
+    font-weight: bold
+    line-height: 2
+    padding: 12px
+    display: grid
+    grid-template-columns: 300px 300px
+    justify-content: space-between
+    left: 0
+    right: 0
+    top: 0
+    opacity: 0.1
+    color: #660
+    white-space: nowrap
+
+    // Don't show bg when no space
+    @media (max-width: 1250px)
+        display: none
+
+    // Reduce width of names if limited space
+    @media (max-width: 1500px)
+        grid-template-columns: 200px 200px
+
+    // Clip names if needed
+    > div
+        overflow: hidden
+        text-overflow: ellipsis
+
+    > div:nth-child(even)
+        text-align: right
+
+.grid
+    display: grid
+    gap: 24px
+    grid-template-columns: 1fr 1fr 1fr
+    @media (max-width: 800px)
+        grid-template-columns: 1fr 1fr
+
+    .name
+        display: flex
+        gap: 4px
+        font-family: "Caveat", cursive
+        font-weight: bold
+        font-size: 20px
+
+        img
+            opacity: 0.8
+
+    .subtitle
+        font-size: 12px
+        line-height: 1.2
+
+
+.unpub
+    font-weight: bold
+    margin-top: 24px
+
+
+.fade
+    animation: fade_in_out 4s ease
+
+@keyframes fade_in_out
+    0%
+        opacity: 0
+    20%
+        opacity: 1
+    80%
+        opacity: 1
+    100%
+        opacity: 0
+
+
+</style>

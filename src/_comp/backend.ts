@@ -1,15 +1,26 @@
 
 import {initializeApp} from 'firebase/app'
-import {getFirestore, setDoc, doc, connectFirestoreEmulator} from 'firebase/firestore'
+import {getFirestore, collection, onSnapshot, query, orderBy, connectFirestoreEmulator,
+    type Timestamp} from 'firebase/firestore'
 import {getFunctions, httpsCallable, connectFunctionsEmulator} from 'firebase/functions'
 
 
-export interface SigningData {
+export interface SigningInput {
     type:'person'|'org'|'unpub'
     email:string
     name:string  // Empty string if unpub
     country:string  // Empty string if unpub
     position:string  // 'person' only
+}
+
+export interface SigningOutput {
+    type:'person'|'org'|'unpub'
+    name:string
+    country:string
+    position:string
+    date:Timestamp
+    sort:number
+    reviewed:boolean
 }
 
 
@@ -28,7 +39,31 @@ const fire_save_signing = httpsCallable(fire_functions, 'save_signing')
 
 
 // Send signer's details to cloud function
-export async function save_signing(petition:string, data:SigningData){
+export async function save_signing(petition:string, data:SigningInput){
     const resp = await fire_save_signing({petition, ...data})
     return (resp.data as {error:string|null}).error
+}
+
+
+// Listen for signers
+export async function listen_for_signers(petition:string, add_signer:(data:SigningOutput)=>void){
+
+    // TODO rm test code
+    let last_doc = null
+    setInterval(() => {
+        if (last_doc){
+            add_signer(last_doc)
+        }
+    }, 1000 * 10)
+    // TODO rm above
+
+    const q = query(collection(fire_db, `petitions/${petition}/signers`), orderBy('date', 'desc'))
+    onSnapshot(q, snapshot => {
+        snapshot.docChanges().forEach(change => {
+            if (change.type === 'added'){
+                last_doc = change.doc.data()  // TODO rm test code
+                add_signer(change.doc.data() as SigningOutput)
+            }
+        })
+    })
 }

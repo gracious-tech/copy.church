@@ -19,9 +19,11 @@ div.container
 
     template(v-if='input.type')
 
+        p(v-if='input.type === "unpub"') You will be added to the total number of signers, without publishing your name.
+
         template(v-if='input.type !== "unpub"')
             label
-                span Name
+                span {{ input.type === 'org' ? "Church / Organization" : "Full name" }}
                 input(type="text" v-model="input.name" required)
             div(class='explain') This will appear publicly a day or so after submission.
 
@@ -34,7 +36,7 @@ div.container
             span Country (optional)
             select(v-model="input.country")
                 option(value='') -
-                option(v-for='country of countries' :value='country.code') {{ country.name }}
+                option(v-for='country of countries_list' :value='country.code') {{ country.long }}
 
         label(v-if="input.type === 'person'")
             span Position (optional)
@@ -53,15 +55,15 @@ div.container
 
 import {ref} from 'vue'
 
-import {countries} from './countries'
+import {countries_list} from './countries'
 
-import {save_signing, type SigningData} from './backend'
+import {save_signing, type SigningInput} from './backend'
 
 
 const props = defineProps<{petition:string}>()
 
 
-const input = ref<SigningData>(get_empty_input())
+const input = ref<SigningInput>(get_empty_input())
 const error_msg = ref('')
 const success = ref(false)
 

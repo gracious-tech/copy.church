@@ -47,7 +47,7 @@ export const save_signing = onCall(async (request):Promise<{error:string|null}> 
     // If type is not 'org', email must be unique
     // NOTE Some may use same email address for multiple orgs, which is fine
     if (type !== 'org'){
-        const same_email = await fire_db.collection(`petitions/${petition}/signers`)
+        const same_email = await fire_db.collection(`petitions/${petition}/uniqueness`)
             .where('email', '==', email)
             .where('type', '!=', 'org')
             .get()
@@ -59,13 +59,30 @@ export const save_signing = onCall(async (request):Promise<{error:string|null}> 
     // Generate random id for signing
     const signing_id = generate_token()
 
-    // Save the signing to db
+    // Get paths for each doc that will be saved
+    const doc_petition = fire_db.doc(`petitions/${petition}`)
+    const doc_signing = doc_petition.collection('signers').doc(signing_id)
+    const doc_private = doc_signing.collection('private').doc('data')
+    const doc_unique = doc_petition.collection('uniqueness').doc(signing_id)
+
+    // Do in batch to avoid partial data upon failure
     const batch = fire_db.batch()
-    const doc = fire_db.doc(`petitions/${petition}/signers/${signing_id}`)
-    // NOTE type needed in main doc and subdoc for querying
-    batch.set(doc, {email, ip, type})
-    batch.set(doc.collection('public').doc('data'),
-        {type, name, country, position, reviewed: false})
+    // Save public data
+    batch.set(doc_signing, {
+        type,
+        name,
+        country,
+        position,
+        date: new Date(),
+        sort: 0,
+        reviewed: false,
+    })
+    // Save private data in subdoc
+    batch.set(doc_private, {email, ip})
+    // Save data relevant to uniqueness testing in separate collection
+    // (since can't query email/ip across the private subdocs)
+    // NOTE Only email is auto-tested for uniqueness, the rest is useful for manual inspection
+    batch.set(doc_unique, {type, email, ip, name})
     await batch.commit()
 
     // Success
