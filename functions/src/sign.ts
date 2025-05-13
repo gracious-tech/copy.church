@@ -15,7 +15,7 @@ export const save_signing = onCall(async (request):Promise<{error:string|null}> 
 
     // Determine origin and ensure either localhost or production site
     const domain_origin = request.rawRequest.headers.origin!
-    if (domain_origin !== 'https://copy.church'
+    if (domain_origin !== 'https://copy.church' && domain_origin !== 'https://copy-church.web.app'
             && domain_origin.split('//')[1]?.split(':')[0] !== 'localhost'){
         throw new Error(`Invalid origin: ${domain_origin}`)
     }

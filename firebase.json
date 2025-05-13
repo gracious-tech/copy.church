@@ -1,5 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
+    "hosting": {
+        "public": "dist"
+    },
     "functions": [
         {
             "runtime": "nodejs20",

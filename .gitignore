@@ -6,6 +6,7 @@ node_modules/
 /.releases/
 /.vitepress/cache/
 
+/.firebase/
 /firebase-debug.log
 /firestore-debug.log
 /functions/lib

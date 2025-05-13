@@ -9,6 +9,7 @@ node_modules/.bin/firebase login
 
 
 # Ensure deploying a fresh build
+.bin/build
 .bin/build_functions
 
 

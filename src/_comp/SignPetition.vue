@@ -43,7 +43,7 @@ div.container
             input(type="text" v-model="input.position" placeholder="Pastor of..., Director of..., etc.")
 
         div.sign
-            VPButton(@click='submit' text="Sign" size='big')
+            VPButton(@click='submit' :text='progress ? "Signing..." : "Sign"' size='big' :class='{progress}')
 
     div.error(v-if='error_msg') {{ error_msg }}
     div.success(v-if="success && !error_msg") Thanks for signing
@@ -66,6 +66,7 @@ const props = defineProps<{petition:string}>()
 const input = ref<SigningInput>(get_empty_input())
 const error_msg = ref('')
 const success = ref(false)
+const progress = ref(false)
 
 
 function get_empty_input(){
@@ -80,6 +81,13 @@ function get_empty_input(){
 
 
 const submit = async () => {
+    progress.value = true
+    await submit_inner()
+    progress.value = false
+}
+
+
+const submit_inner = async () => {
 
     // Reset state
     error_msg.value = ''
@@ -185,5 +193,20 @@ input[type="text"], input[type="email"], select
 
 .success
     background-color: #0f03
+
+.progress
+    background-color: black !important
+    animation: progress 2s linear
+    animation-iteration-count: infinite
+    pointer-events: none
+    user-select: none
+
+@keyframes progress
+    0%
+        opacity: 0.1
+    50%
+        opacity: 0.6
+    100%
+        opacity: 0.1
 
 </style>
