@@ -162,9 +162,15 @@ input[type="text"], input[type="email"], select
     padding: 6px
     margin: 4px 0
     font-size: 16px
-    border: 1px solid #999
-    background-color: #ff06
-    border-radius: 6px
+    background-color: #ddb
+    color: black
+    border-radius: 8px
+
+    &:focus
+        background-color: #dd9
+
+    &::placeholder
+        color: #0006
 
 .radio
     display: flex
