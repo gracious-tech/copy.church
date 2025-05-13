@@ -197,12 +197,13 @@ onMounted(() => {
     display: grid
     gap: 24px
     grid-template-columns: 1fr 1fr 1fr
+    line-height: 1.3
     @media (max-width: 800px)
         grid-template-columns: 1fr 1fr
 
     .name
         display: flex
-        gap: 4px
+        gap: 6px
         font-family: "Caveat", cursive
         font-weight: bold
         font-size: 20px
@@ -212,7 +213,6 @@ onMounted(() => {
 
     .subtitle
         font-size: 12px
-        line-height: 1.2
 
 
 .unpub
