@@ -7,7 +7,8 @@ teleport(to='body')
         div(v-for='signer of public_signers') {{ signer.name }}
 
 div.list
-    h2 List of signers ({{ total }})
+    //- NOTE Condition is so VitePress outline doesn't show incomplete number in heading
+    h2#signers List of signers {{ total ? `(${total})` : "" }}
     div.grid
         div(v-for='signer of public_signers')
             div.name
@@ -62,7 +63,7 @@ names.push(...names, ...names, ...names, ...names)
 
 const props = defineProps<{petition:string}>()
 
-const signers = reactive<SigningOutput[]>(names)  // TODO make empty
+const signers = reactive<SigningOutput[]>([])
 const popup_msg = ref('')
 const popup_fade = ref(false)
 const popup_enabled = ref(false)
@@ -84,41 +85,42 @@ const public_signers = computed(() => {
 })
 
 
-listen_for_signers(props.petition, data => {
-
-    // Add new item to list
-    signers.push(data)
-
-    // Utils for sorting
-    const type_to_num = (type:string) => type === 'org' ? 1 : 0
-    const empty_to_num = (val:string) => val ? 1 : 0
-
-    // Sort by: date -> has position -> is org -> hardcoded sort
-    signers.sort((a, b) => b.date.seconds - a.date.seconds)
-    signers.sort((a, b) => empty_to_num(b.position) - empty_to_num(a.position))
-    signers.sort((a, b) => type_to_num(b.type) - type_to_num(a.type))
-    signers.sort((a, b) => b.sort - a.sort)
-
-    // Add popup msg
-    if (popup_enabled.value){
-        let msg = "Someone just signed"
-        if (data.country){
-            msg += ` from ${countries[data.country]?.short}`
-        }
-        popup_msg.value = msg
-        popup_fade.value = true
-        setTimeout(() => {
-            popup_fade.value = false
-        }, 4500)  // animation needs 4 seconds to complete
-    }
-})
-
-
-// Don't enable popup until initial signers likely already loaded
 onMounted(() => {
+
+    // Don't enable popup until initial signers likely already loaded
     setTimeout(() => {
         popup_enabled.value = true
+        signers.push(...names)  // TODO rm
     }, 4000)
+
+    listen_for_signers(props.petition, data => {
+
+        // Add new item to list
+        signers.push(data)
+
+        // Utils for sorting
+        const type_to_num = (type:string) => type === 'org' ? 1 : 0
+        const empty_to_num = (val:string) => val ? 1 : 0
+
+        // Sort by: date -> has position -> is org -> hardcoded sort
+        signers.sort((a, b) => b.date.seconds - a.date.seconds)
+        signers.sort((a, b) => empty_to_num(b.position) - empty_to_num(a.position))
+        signers.sort((a, b) => type_to_num(b.type) - type_to_num(a.type))
+        signers.sort((a, b) => b.sort - a.sort)
+
+        // Add popup msg
+        if (popup_enabled.value){
+            let msg = "Someone just signed"
+            if (data.country){
+            msg += ` from ${countries[data.country]?.short}`
+            }
+            popup_msg.value = msg
+            popup_fade.value = true
+            setTimeout(() => {
+                popup_fade.value = false
+            }, 4500)  // animation needs 4 seconds to complete
+        }
+    })
 })
 
 
@@ -144,6 +146,17 @@ onMounted(() => {
     border: 1px solid #cc03
     color: #000c
     opacity: 0
+    white-space: nowrap
+    overflow: hidden
+    max-width: min(95vw, 400px)
+    text-overflow: ellipsis
+    pointer-events: none
+    user-select: none
+    @media (min-width: 1400px)
+        right: 48px
+        top: 48px
+        font-size: 15px
+        white-space: normal
 
 .bg
     z-index: -1
@@ -180,6 +193,7 @@ onMounted(() => {
         text-align: right
 
 .grid
+    margin-top: 24px
     display: grid
     gap: 24px
     grid-template-columns: 1fr 1fr 1fr

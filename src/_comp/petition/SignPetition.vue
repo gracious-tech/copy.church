@@ -2,7 +2,7 @@
 <template lang="pug">
 
 div.container
-    h1 Sign declaration
+    h2#sign Sign declaration
 
     div
         strong Type
