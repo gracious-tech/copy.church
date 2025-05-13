@@ -17,5 +17,7 @@ import DisplaySigners from '@/_comp/DisplaySigners.vue'
 
 Sign if you want to see this happen...
 
-<SignPetition petition='scripture'></SignPetition>
-<DisplaySigners petition='scripture'></DisplaySigners>
+<ClientOnly>
+    <SignPetition petition='scripture'></SignPetition>
+    <DisplaySigners petition='scripture'></DisplaySigners>
+</ClientOnly>
