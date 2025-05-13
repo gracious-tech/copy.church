@@ -11,7 +11,9 @@ const fire_db = getFirestore(fire_app)
 
 
 // Main function
-export const save_signing = onCall(async (request):Promise<{error:string|null}> => {
+export const save_signing = onCall({
+    serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
+}, async (request):Promise<{error:string|null}> => {
 
     // Determine origin and ensure either localhost or production site
     const domain_origin = request.rawRequest.headers.origin!
@@ -48,10 +50,8 @@ export const save_signing = onCall(async (request):Promise<{error:string|null}> 
     // NOTE Some may use same email address for multiple orgs, which is fine
     if (type !== 'org'){
         const same_email = await fire_db.collection(`petitions/${petition}/uniqueness`)
-            .where('email', '==', email)
-            .where('type', '!=', 'org')
-            .get()
-        if (!same_email.empty){
+            .where('email', '==', email).get()
+        if (same_email.docs.filter(s => s.data()['type'] !== 'org').length){
             return {error: "Email address already used to sign."}
         }
     }
