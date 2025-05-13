@@ -8,8 +8,8 @@ next: false
 
 <script lang='ts' setup>
 
-import SignPetition from '@/_comp/SignPetition.vue'
-import DisplaySigners from '@/_comp/DisplaySigners.vue'
+import SignPetition from '@/_comp/petition/SignPetition.vue'
+import DisplaySigners from '@/_comp/petition/DisplaySigners.vue'
 
 </script>
 
