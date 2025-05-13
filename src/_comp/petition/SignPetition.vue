@@ -128,9 +128,7 @@ const submit_inner = async () => {
 
 @media (max-width: 500px)
     .container
-        padding: 12px !important
-    h1
-        font-size: 22px !important
+        padding: 24px 12px !important
     .radio
         flex-direction: column !important
         gap: 8px !important
@@ -146,10 +144,12 @@ const submit_inner = async () => {
     > label
         margin-top: 24px
 
-h1
+h2
     text-align: center
+    margin-top: 0
+    border-style: none
+    padding-top: 0
     margin-bottom: 24px
-    font-size: 28px
 
 label
     display: block
