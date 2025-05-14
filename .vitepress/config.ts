@@ -17,6 +17,11 @@ export default defineConfig({
         ['meta', {name: 'twitter:card', content: 'summary'}],
         // WARN WhatsApp requires a URL with domain included
         ['meta', {property: 'og:image', content: 'https://copy.church/_assets/social/site.png'}],
+        // Needed for translation widget
+        ['script', {
+            src: 'https://static.elfsight.com/platform/platform.js',
+            async: '',
+        }],
     ],
     vite: {
         publicDir: '_public',
