@@ -14,8 +14,12 @@ Layout(:class='page_id')
 <script lang='ts' setup>
 
 import DefaultTheme from 'vitepress/theme'
-import {computed} from 'vue'
-import {useRoute} from 'vitepress'
+import {computed, onMounted} from 'vue'
+import {useRoute, useRouter} from 'vitepress'
+import {BibleEnhancer} from '@gracious.tech/fetch-enhancer'
+
+import '@gracious.tech/fetch-client/client.css'
+import '@gracious.tech/fetch-enhancer/styles.css'
 
 
 const {Layout} = DefaultTheme
@@ -29,6 +33,33 @@ const page_id = computed(() => {
         id = id.slice(0, 'index'.length*-1)  // WARN Don't remove the '_'
     }
     return id
+})
+
+
+// Enhancer
+onMounted(() => {
+
+    const enhancer = new BibleEnhancer({
+        app_args: {hue: '60'},
+        before_history_push: () => {
+            // Store scroll position for VitePress to prevent page jump
+            history.replaceState({scrollPosition: window.scrollY}, '')
+        },
+    })
+
+    const selector = '.VPDoc > .container > .content'
+
+    useRouter().onAfterRouteChanged = to => {
+        const doc = document.querySelector(selector) as HTMLElement
+        if (doc){
+            enhancer.discover_bible_references(doc)
+        }
+    }
+
+    const doc = document.querySelector(selector) as HTMLElement
+    if (doc){
+        enhancer.discover_bible_references(doc)
+    }
 })
 
 </script>

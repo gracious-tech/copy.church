@@ -13,6 +13,7 @@
     "vitepress": "^1.5.0"
   },
   "dependencies": {
+    "@gracious.tech/fetch-enhancer": "^1.0.0",
     "firebase": "^11.6.1"
   }
 }
