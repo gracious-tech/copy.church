@@ -6,7 +6,7 @@ teleport(to='body')
     div.bg
         div(v-for='signer of public_signers') {{ signer.name }}
 
-div.list
+div.list(:class='{truncate}')
     //- NOTE Condition is so VitePress outline doesn't show incomplete number in heading
     h2#signers List of signers {{ total ? `(${total})` : "" }}
     div.grid
@@ -16,6 +16,9 @@ div.list
                 | {{ signer.name }}
             div.subtitle {{ signer.subtitle }}
     div.unpub + {{ total_unpub }} unpublished names
+
+div.show
+    VPButton(@click='truncate = !truncate' :text='truncate ? "Show all" : "Show less"' theme='alt')
 
 </template>
 
@@ -67,6 +70,7 @@ const signers = reactive<SigningOutput[]>([])
 const popup_msg = ref('')
 const popup_fade = ref(false)
 const popup_enabled = ref(false)
+const truncate = ref(true)
 
 const total = computed(() => signers.length)
 const total_unpub = computed(() => signers.length - public_signers.value.length)
@@ -74,14 +78,23 @@ const total_unpub = computed(() => signers.length - public_signers.value.length)
 
 // Get data needed to display signers that should be public
 const public_signers = computed(() => {
-    return signers.filter(signer => signer.type !== 'unpub' && signer.reviewed).map(signer => {
-        let subtitle = signer.position
-        if (signer.position && signer.country){
-            subtitle += ', '
-        }
-        subtitle += countries[signer.country]?.short
-        return {type: signer.type, name: signer.name, subtitle}
-    })
+    const results = signers
+        .filter(signer => signer.type !== 'unpub' && signer.reviewed)
+        .map(signer => {
+            let subtitle = signer.position
+            if (signer.position && signer.country){
+                subtitle += ', '
+            }
+            subtitle += countries[signer.country]?.short
+            return {type: signer.type, name: signer.name, subtitle}
+        })
+    if (truncate.value){
+        // Will probably need at least 300 to display in bg on edges of page
+        // But still at least improves performance if numbers ever get to thousands+
+        // NOTE This slice is purely for performance as div has max height anyway
+        return results.slice(0, 500)
+    }
+    return results
 })
 
 
@@ -172,7 +185,7 @@ onMounted(() => {
     left: 0
     right: 0
     top: 0
-    opacity: 0.1
+    opacity: 0.2
     color: #660
     white-space: nowrap
 
@@ -191,6 +204,12 @@ onMounted(() => {
 
     > div:nth-child(even)
         text-align: right
+
+.list
+    &.truncate
+        max-height: 100vh
+        overflow: hidden
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%)
 
 .grid
     margin-top: 24px
@@ -217,7 +236,10 @@ onMounted(() => {
 
 .unpub
     font-weight: bold
-    margin-top: 24px
+    margin: 24px 0
+
+.show
+    text-align: center
 
 
 .fade
