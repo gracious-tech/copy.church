@@ -2,6 +2,11 @@
 <template lang='pug'>
 
 Layout(:class='page_id')
+    template(#doc-bottom)
+        div.pd
+            | All original content is freely given and <a href='/free/'>dedicated to the public domain</a>.
+            br
+            | <a href='/ianal/'>We do not give legal advice.</a>
 
 </template>
 
@@ -30,4 +35,15 @@ const page_id = computed(() => {
 
 
 <style lang='sass' scoped>
+
+.pd
+    text-align: center
+    font-size: 12px
+    opacity: 0.5
+    padding-top: 200px
+    padding-bottom: 100px
+
+    a
+        text-decoration: underline
+
 </style>
