@@ -5,7 +5,7 @@ aside: false
 prev: false
 next: false
 titleTemplate: false
-title: A Declaration of Freedom to Copy and Share the Bible
+title: Liberate the Word - A Declaration of Freedom to Copy and Share the Bible
 description: All people should be free to use, copy, distribute, and adapt the Word of God apart from the permission of man.
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/declaration.jpg'}]]
 ---
