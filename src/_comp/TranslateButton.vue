@@ -15,10 +15,7 @@ div(v-else :class='`elfsight-app-${widget_id}`' data-elfsight-app-lazy) ...... â
 
 <script lang='ts' setup>
 
-import {computed, ref} from 'vue'
-import {TRANS} from './state'
-import {BIBLES} from './bibles'
-import {scripture, translation_options} from './scripture'
+import {ref} from 'vue'
 
 
 // ID from Elfsight
