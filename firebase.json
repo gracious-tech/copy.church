@@ -1,27 +1,31 @@
 {
-    "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
-    "hosting": {
-        "public": "dist",
-        "redirects": [
-            {"source": "/objections/", "destination": "/explain/objections/", "type": 302}
-        ]
-    },
-    "functions": [
-        {
-            "runtime": "nodejs20",
-            "source": "functions",
-            "codebase": "default",
-            "ignore": [
-                "node_modules",
-                ".git",
-                "firebase-debug.log",
-                "firebase-debug.*.log",
-                "*.local"
-            ]
-        }
-    ],
-    "firestore": {
-        "rules": "firestore.rules",
-        "indexes": "firestore.indexes.json"
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
+  "hosting": {
+    "public": "dist",
+    "redirects": [
+      {
+        "source": "/objections/",
+        "destination": "/explain/objections/",
+        "type": 302
+      }
+    ]
+  },
+  "functions": [
+    {
+      "runtime": "nodejs20",
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
     }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
 }
