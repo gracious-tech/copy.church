@@ -10,7 +10,7 @@
     "pug": "^3.0.2",
     "sass": "^1.69.4",
     "typescript": "^5.2.2",
-    "vitepress": "^1.5.0"
+    "vitepress": "^1.6.3"
   },
   "dependencies": {
     "@gracious.tech/fetch-enhancer": "^1.0.0",
