@@ -2,6 +2,10 @@
 <template lang='pug'>
 
 Layout(:class='page_id')
+    template(#nav-bar-content-after)
+        TranslateButton.translate-nav
+    template(#nav-screen-content-after)
+        TranslateButton.translate-menu
     template(#doc-bottom)
         div.pd
             | All original content is freely given and <a href='/free/'>dedicated to the public domain</a>.
@@ -17,6 +21,7 @@ import DefaultTheme from 'vitepress/theme'
 import {computed, onMounted} from 'vue'
 import {useRoute, useRouter} from 'vitepress'
 import {BibleEnhancer} from '@gracious.tech/fetch-enhancer'
+import TranslateButton from '../../src/_comp/TranslateButton.vue'
 
 import '@gracious.tech/fetch-client/client.css'
 import '@gracious.tech/fetch-enhancer/styles.css'
@@ -76,5 +81,13 @@ onMounted(() => {
 
     a
         text-decoration: underline
+
+.translate-nav
+    margin-left: 16px
+    @media (max-width: 767px)
+        display: none
+
+.translate-menu
+    margin: 12px auto
 
 </style>

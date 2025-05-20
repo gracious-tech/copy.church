@@ -14,6 +14,7 @@ head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/socia
 
 import SignPetition from '@/_comp/petition/SignPetition.vue'
 import DisplaySigners from '@/_comp/petition/DisplaySigners.vue'
+import TranslateButton from '@/_comp/TranslateButton.vue'
 
 </script>
 
@@ -29,11 +30,9 @@ img
 
 <h1><img src='/_assets/social/declaration.jpg' alt="Liberate the Word"></h1>
 
-&nbsp;
+<TranslateButton style='margin: 36px auto' />
 
-<div class="elfsight-app-3125d421-b225-4914-a224-d9db8ffa3e73" data-elfsight-app-lazy></div>
-
-<h2 style='visibility:hidden;margin:0' id='preamble'>Preamble</h2>
+<h2 style='visibility:hidden;margin:0;padding:0;line-height:0' id='preamble'>Preamble</h2>
 
 # A Declaration of Freedom to Copy and Share the Bible
 
