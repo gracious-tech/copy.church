@@ -1,4 +1,7 @@
 
+<!-- WARN Remember to keep in sync with SJ/copy.church -->
+
+
 <template lang='pug'>
 
 button.inactive(v-if='!activated' @click='activated = true')
