@@ -54,7 +54,7 @@ onMounted(() => {
 
     const selector = '.VPDoc > .container > .content'
 
-    useRouter().onAfterRouteChanged = to => {
+    useRouter().onAfterRouteChange = to => {
         const doc = document.querySelector(selector) as HTMLElement
         if (doc){
             enhancer.discover_bible_references(doc)
