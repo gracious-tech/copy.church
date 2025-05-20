@@ -23,7 +23,9 @@ const widget_id = '3125d421-b225-4914-a224-d9db8ffa3e73'
 
 
 // If Elfsight has set a key then translation has been previously activated and should remain so
-const previously_enabled = !!self.localStorage.getItem(`WebsiteTranslator.language.${widget_id}`)
+// But if they returned to original language, key will exist but not "value" prop in JSON
+const elf_value = self.localStorage.getItem(`WebsiteTranslator.language.${widget_id}`) || ''
+const previously_enabled = elf_value.includes('"value"')
 // If someone shared a link that included a lang param, also auto-enable
 const lang_param = self.document.location.search.includes('lang=')
 const activated = ref(previously_enabled || lang_param)
