@@ -2,12 +2,15 @@
 import DefaultTheme from 'vitepress/theme'
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
 import {Theme} from 'vitepress'
+import {BibleEnhancer} from '@gracious.tech/fetch-enhancer'
 
 import CustomLayout from './CustomLayout.vue'
 import BibleQuote from '@/_comp/BibleQuote.vue'
 import CommittedPerson from '@/_comp/CommittedPerson.vue'
 import ArticlePreview from '@/_comp/ArticlePreview.vue'
 
+import '@gracious.tech/fetch-client/client.css'
+import '@gracious.tech/fetch-enhancer/styles.css'
 import './custom.sass'
 
 
@@ -15,13 +18,40 @@ export default {
     ...DefaultTheme,
     Layout: CustomLayout,
     enhanceApp(ctx){
+
+        // Extend default
         DefaultTheme.enhanceApp(ctx)
+
         // Global components
         ctx.app.component('VPButton', VPButton)
         ctx.app.component('BibleQuote', BibleQuote)
         ctx.app.component('CommittedPerson', CommittedPerson)
         ctx.app.component('ArticlePreview', ArticlePreview)
 
+        // Enhancer
+        let enhancer:BibleEnhancer|undefined
+        ctx.router.onAfterPageLoad = to => {
+
+            // Init enhancer after first page mounted (as can't init until DOM ready anyway)
+            if (!enhancer){
+                enhancer = new BibleEnhancer({
+                    app_args: {hue: '60'},
+                    before_history_push: () => {
+                        // Store scroll position for VitePress to prevent page jump
+                        history.replaceState({scrollPosition: window.scrollY}, '')
+                    },
+                })
+            }
+
+            // Detect references only within the content part of the page
+            const selector = '.VPDoc > .container > .content'
+            const doc = document.querySelector(selector) as HTMLElement
+            if (doc){
+                enhancer.discover_bible_references(doc)
+            }
+        }
+
+        // Lang param for Elfsight translation
         if (!import.meta.env.SSR){
             // Preserve lang query param when navigating so that sharing URL preserves language choice
             // (Elfsight will auto-add the lang param, but Vitepress will lose it when changing page)
