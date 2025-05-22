@@ -30,7 +30,7 @@ img
 
 <h1><img src='/_assets/social/declaration.jpg' alt="Liberate the Word"></h1>
 
-<TranslateButton style='margin: 36px auto' />
+<ClientOnly><TranslateButton style='margin: 36px auto' /></ClientOnly>
 
 <h2 style='visibility:hidden;margin:0;padding:0;line-height:0' id='preamble'>Preamble</h2>
 
