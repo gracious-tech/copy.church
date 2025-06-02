@@ -93,6 +93,14 @@ export const people:Record<string, Person> = {
         bio: "Mark Feezell was born in San Antonio and teaches Music Theory at Southern Methodist University in Dallas, Texas. He earned a Ph.D. in Music Composition from the University of North Texas in 2003, and has released his composition dissertation into the public domain, along with many other worship pieces.",
         quote: "When we completely release everything the Lord has given into our hands, we are most like Him in His generosity, and we gift to others that same chance to choose to give as God gives.",
     },
+    matt_mangum: {
+        name: "Matt Mangum",
+        title: "Author of God Spoke",
+        education: "MA in Religion",
+        site: "https://equipthesaints.church/",
+        bio: "Matthew has a background as a translator for the military, spent some time in the parachurch ministry world, and is now transitioning to a role as a teacher at a classical Christian academy. He is the author of God Spoke: The Story of How We Came to Have the Bible as We Know It Today.",
+        quote: "I never really thought much about the commercialization of Christianity until it was pointed out to me, and I suspect that is true of many people. It is now my hope to be able to create freely given Christian education materials that may equip the saints for the work of ministry. Christ has freely given to us; should I not also freely give?",
+    },
 }
 
 

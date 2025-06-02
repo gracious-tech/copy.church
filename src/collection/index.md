@@ -23,6 +23,7 @@ Book | Description
 | - | - |
 [The Dorean Principle](https://thedoreanprinciple.org/) | A biblical response to the commercialization of Christianity
 [The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons) | Ending the spiritual famine of the global Church
+[God Spoke](https://equipthesaints.church/god-spoke/) | The story of how we came to have the Bible as we know it today
 [4training.net](https://www.4training.net/) | Discipleship resources in many different languages
 [Free Hebrew](https://freehebrew.online/) | Free videos for learning Hebrew
 [Free Greek](https://freegreek.online/) | Free videos for learning Ancient Greek
