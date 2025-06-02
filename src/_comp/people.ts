@@ -94,7 +94,7 @@ export const people:Record<string, Person> = {
         quote: "When we completely release everything the Lord has given into our hands, we are most like Him in His generosity, and we gift to others that same chance to choose to give as God gives.",
     },
     matt_mangum: {
-        name: "Matt Mangum",
+        name: "Matthew Mangum",
         title: "Author of God Spoke",
         education: "MA in Religion",
         site: "https://equipthesaints.church/",
