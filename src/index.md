@@ -26,6 +26,11 @@ features:
         icon:
             src: /_assets/home/object.svg
         details: If you have any concerns, here is what you should consider.
+    -   title: Sign the Statement
+        link: /statement/
+        target: statement
+        icon: 📝
+        details: Statement on the Stewardship of Scripture
 ---
 
 <script lang='ts' setup>
