@@ -5,6 +5,7 @@ Layout(:class='page_id')
     template(#nav-bar-content-after)
         ClientOnly
             TranslateButton.translate-nav
+            CountDown
     template(#nav-screen-content-after)
         ClientOnly
             TranslateButton.translate-menu
@@ -24,6 +25,7 @@ import {computed} from 'vue'
 import {useRoute} from 'vitepress'
 
 import TranslateButton from '../../src/_comp/TranslateButton.vue'
+import CountDown from '../../src/_comp/CountDown.vue'
 
 
 const {Layout} = DefaultTheme
