@@ -88,7 +88,7 @@ onUnmounted(() => {
     align-items: center
     line-height: 1
     gap: 4px
-    padding: 0 8px
+    padding: 0 12px
     font-size: 12px
     @media (max-width: 1000px)
         zoom: 0.8
