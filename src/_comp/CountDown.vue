@@ -54,11 +54,12 @@ const countdown = computed(() => {
     const weeks = Math.floor(days / 7)
 
     // Return most appropriate unit
-    if (weeks > 0)
+    // Change when 1 or less for greater precision
+    if (weeks >= 2)
         return {unit: 'week', value: weeks}
-    if (days > 0)
+    if (days >= 2)
         return {unit: 'day', value: days}
-    if (hours > 0)
+    if (hours >= 2)
         return {unit: 'hour', value: hours}
     return {unit: 'min', value: minutes}
 })
@@ -103,6 +104,7 @@ onUnmounted(() => {
     color: hsl(100deg, 70%, 40%)
 
 .live
-    color: #2c7a7b
+    color: hsl(20deg, 70%, 40%)
+    font-weight: bold
 
 </style>
