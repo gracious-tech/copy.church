@@ -1,13 +1,8 @@
 
 import {onCall} from 'firebase-functions/v2/https'
-import {initializeApp} from 'firebase-admin/app'
-import {getFirestore} from 'firebase-admin/firestore'
+
+import {fire_db} from './common.js'
 import {generate_token} from './utils.js'
-
-
-// Init firebase
-const fire_app = initializeApp()
-const fire_db = getFirestore(fire_app)
 
 
 // Main function
