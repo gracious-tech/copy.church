@@ -1,21 +1,15 @@
 
 import {onCall} from 'firebase-functions/v2/https'
 
-import {fire_db} from './common.js'
+import {allowed_domains, fire_db} from './common.js'
 import {generate_token} from './utils.js'
 
 
 // Main function
 export const save_signing = onCall({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
+    cors: allowed_domains,
 }, async (request):Promise<{error:string|null}> => {
-
-    // Determine origin and ensure either localhost or production site
-    const domain_origin = request.rawRequest.headers.origin!
-    if (domain_origin !== 'https://copy.church' && domain_origin !== 'https://copy-church.web.app'
-            && domain_origin.split('//')[1]?.split(':')[0] !== 'localhost'){
-        throw new Error(`Invalid origin: ${domain_origin}`)
-    }
 
     // Get signer's ip address
     const ip = request.rawRequest.ip || 'localhost'  // ip not available in emulator
