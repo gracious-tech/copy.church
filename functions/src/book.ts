@@ -148,6 +148,19 @@ async function record_order_inner(request:Request):Promise<string|null>{
     // Add new record to db
     await fire_db.collection('book_orders').add(order_data)
 
+    // Notify via discord
+    try {
+        const webhook_url = process.env['discord_webhook']!
+        const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
+        await fetch(webhook_url, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({content: discord_msg}),
+        })
+    } catch {
+        // Record still recorded, so...
+    }
+
     // Return no error for success
     return null
 }
