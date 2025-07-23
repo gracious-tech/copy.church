@@ -201,10 +201,10 @@ export const send_to_lulu:HttpsFunction = onRequest({
 
     // Send back response message
     if (error){
+        response.status(400).send("Error: " + error)
     } else {
         response.status(200).send("Successfully sent to Lulu")
     }
-    response.status(400).send("Error: " + error)
 })
 
 
@@ -298,6 +298,7 @@ function order_to_lulu_request(id:string, order:Order){
                 title: "Abolish the Jesus Trade",
                 quantity: 1,
                 external_id: 'abolish',
+                page_count: 377,  // Only needed for cost calculation endpoint
                 pod_package_id: order.color === 'white' ? sku_white : sku_cream,
                 interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
                 cover: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade-cover.pdf',
@@ -342,10 +343,11 @@ async function lulu_request(token:string, path:string, data:unknown)
     }
 
     // Throw for issues user can't resolve themselves
-    if (!resp.ok){
+    if (!resp.ok && resp.status !== 400){
         throw new Error(`Request to Lulu failed: ${resp.status} ${resp.statusText}`)
     }
-    return await resp.json() as Record<string, unknown>
+    const resp_data = await resp.json() as Record<string, unknown>
+    return resp.ok ? resp_data : {error: resp_data}
 }
 
 
@@ -361,10 +363,20 @@ async function validate_order(token:string, order:Order):Promise<string|null>{
         return "Could not connect, please try again"
     }
 
+    // See if any issue with provided details
+    if ('error' in resp_data){
+        // TODO Extract error
+        return JSON.stringify(resp_data, undefined, 4)
+    }
+
     // Tell user if order too expensive
     const currency = resp_data['currency'] as string  // This should always be account's currency
+    let limit = 40  // AUD
+    if (currency === 'USD'){
+        limit = limit / 1.5
+    }
     const dollars = parseInt(resp_data['total_cost_incl_tax'] as string)
-    if (dollars > 50){
+    if (dollars > limit){
         return `Sorry, it's too expensive to ship to that address (${dollars} ${currency})`
     }
 
