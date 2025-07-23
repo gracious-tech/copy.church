@@ -37,16 +37,16 @@ interface Order {
     }
 
     // State
-    state:'new'|'send'|'send_done'|'send_failed'|'no'
+    state:'new'|'sent'|'failed'|'no'
     error:string
 }
 
 
 // CONFIG (update when confident everything working)
-process.env['FUNCTIONS_EMULATOR'] = 'true'  // TODO Forcing Lulu sandbox until ready
-const PRODUCTION_DELAY = 60 * 24  // 1 day
-const LULU_DOMAIN = process.env['FUNCTIONS_EMULATOR'] ? 'https://api.sandbox.lulu.com/'
-    : 'https://api.lulu.com/'
+const DEV = !!process.env['FUNCTIONS_EMULATOR']
+const SANDBOX = DEV || true  // TODO Forcing Lulu sandbox until ready
+const PRODUCTION_DELAY = 60 * 24  // TODO Reduce from 1 day
+const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lulu.com/'
 
 
 export const record_order:HttpsFunction = onRequest({
@@ -120,7 +120,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
     // Basic spam prevention (drop orders from same ip if exceed limit)
     const num_from_ip = await fire_db.collection('book_orders').where('ip', '==', ip).count().get()
     if (num_from_ip.data().count > 6){
-        return "Too many orders from this IP address"
+        return "You have submitted too many orders"
     }
 
     // Prepare data to be saved
@@ -151,13 +151,29 @@ async function record_order_inner(request:Request):Promise<string|null>{
         error: '',
     }
 
+    // Validate with Lulu so requestor can fix anything missing themselves
+    const access_token = await get_lulu_access_token()
+    if (!access_token){
+        return "Couldn't connect, please try again"
+    }
+    const validation_error = await validate_order(access_token, order_data)
+    if (validation_error){
+        return validation_error
+    }
+
     // Add new record to db
-    await fire_db.collection('book_orders').add(order_data)
+    // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
+    const record = await fire_db.collection('book_orders').add(order_data)
+
+    // Determine send_to_lulu function URL
+    const send_url = DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/send_to_lulu'
+        : 'https://send-to-lulu-eyjvbqmvpa-uw.a.run.app'
 
     // Notify via discord
+    const webhook_url = process.env['discord_webhook']!
+    const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
+        + `\n\n${send_url}?id=${encodeURIComponent(record.id)}`
     try {
-        const webhook_url = process.env['discord_webhook']!
-        const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
         await fetch(webhook_url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -168,6 +184,68 @@ async function record_order_inner(request:Request):Promise<string|null>{
     }
 
     // Return no error for success
+    return null
+}
+
+
+// Function for triggering an order to be sent to Lulu
+export const send_to_lulu:HttpsFunction = onRequest({
+    serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
+}, async (request, response) => {
+
+    // Get the order id from query param
+    const order_id = String(request.query['id'])
+
+    // Do main logic
+    const error = await send_to_lulu_inner(order_id)
+
+    // Send back response message
+    if (error){
+    } else {
+        response.status(200).send("Successfully sent to Lulu")
+    }
+    response.status(400).send("Error: " + error)
+})
+
+
+// The main logic of sending order to Lulu (returns string if error)
+export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
+
+    // Get record for order
+    const order = await fire_db.collection('book_orders').doc(order_id).get()
+    if (!order.exists){
+        return "Order does not exist"
+    }
+
+    // Can only send new orders (or ones reset to new to retry)
+    const order_data = order.data() as Order
+    if (order_data.state !== 'new'){
+        return "Sending forbidden as order's state is not 'new'"
+    }
+
+    // Get access token
+    const access_token = await get_lulu_access_token()
+    if (!access_token){
+        return "Couldn't get access token"
+    }
+
+    // Double check order is valid and not too expensive
+    const validation_error = validate_order(access_token, order_data)
+    if (validation_error){
+        return validation_error
+    }
+
+    // Submit order
+    const request_data = order_to_lulu_request(order.id, order_data)
+    const resp_data = await lulu_request(access_token, 'print-jobs/', request_data)
+    if (!resp_data){
+        return "Couldn't connect to Lulu to send order"
+    }
+
+    // Change state of record
+    // TODO Set state to either failed to sent, and also add lulu order id and estimated delivery
+    await fire_db.collection('book_orders').doc(order_id).update({state: 'sent'})
+
     return null
 }
 
@@ -192,7 +270,10 @@ async function get_lulu_access_token():Promise<string|null>{
         return null  // Null for network errors as may be able to retry
     }
 
-    // Extract token from response
+    // Extract token from response (throw if fail)
+    if (!resp.ok){
+        throw new Error(`Failed to get access token (${resp.status} ${resp.statusText})`)
+    }
     const data = await resp.json() as {access_token:string}
     return data.access_token
 }
@@ -237,4 +318,56 @@ function order_to_lulu_request(id:string, order:Order){
             recipient_tax_id: order.address.tax_id,
         },
     }
+}
+
+
+// Submit a request to Lulu (returns null for network failure)
+async function lulu_request(token:string, path:string, data:unknown)
+        :Promise<Record<string, unknown>|null>{
+
+    // Try send
+    const url = LULU_DOMAIN + path
+    let resp:Response
+    try {
+        resp = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + token,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+    } catch {
+        return null
+    }
+
+    // Throw for issues user can't resolve themselves
+    if (!resp.ok){
+        throw new Error(`Request to Lulu failed: ${resp.status} ${resp.statusText}`)
+    }
+    return await resp.json() as Record<string, unknown>
+}
+
+
+// Validate order details and cost, and return string if user-resolvable error
+async function validate_order(token:string, order:Order):Promise<string|null>{
+
+    // Prepare request data (don't need order id for validation)
+    const request_data = order_to_lulu_request('', order)
+
+    // Check cost (which also validates address)
+    const resp_data = await lulu_request(token, 'print-job-cost-calculations/', request_data)
+    if (!resp_data){
+        return "Could not connect, please try again"
+    }
+
+    // Tell user if order too expensive
+    const currency = resp_data['currency'] as string  // This should always be account's currency
+    const dollars = parseInt(resp_data['total_cost_incl_tax'] as string)
+    if (dollars > 50){
+        return `Sorry, it's too expensive to ship to that address (${dollars} ${currency})`
+    }
+
+    // Passed validation
+    return null
 }
