@@ -37,8 +37,13 @@ interface Order {
     }
 
     // State
-    state:'new'|'sent'|'failed'|'no'
-    error:string
+    state:{
+        status:'new'|'sent'
+        lulu_id:string
+        arrival_min:string
+        arrival_max:string
+        cost:number
+    }
 }
 
 
@@ -147,8 +152,13 @@ async function record_order_inner(request:Request):Promise<string|null>{
             tax_id: address_tax_id,
         },
 
-        state: 'new',
-        error: '',
+        state: {
+            status: 'new',
+            lulu_id: '',
+            arrival_min: '',
+            arrival_max: '',
+            cost: 0,
+        },
     }
 
     // Validate with Lulu so requestor can fix anything missing themselves
@@ -156,10 +166,11 @@ async function record_order_inner(request:Request):Promise<string|null>{
     if (!access_token){
         return "Couldn't connect, please try again"
     }
-    const validation_error = await validate_order(access_token, order_data)
-    if (validation_error){
-        return validation_error
+    const validation = await validate_order(access_token, order_data)
+    if (typeof validation === 'string'){
+        return validation
     }
+    order_data.state.cost = validation.cost
 
     // Add new record to db
     // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
@@ -212,14 +223,15 @@ export const send_to_lulu:HttpsFunction = onRequest({
 export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
 
     // Get record for order
-    const order = await fire_db.collection('book_orders').doc(order_id).get()
+    const order_ref = fire_db.collection('book_orders').doc(order_id)
+    const order = await order_ref.get()
     if (!order.exists){
         return "Order does not exist"
     }
 
     // Can only send new orders (or ones reset to new to retry)
     const order_data = order.data() as Order
-    if (order_data.state !== 'new'){
+    if (order_data.state.status !== 'new'){
         return "Sending forbidden as order's state is not 'new'"
     }
 
@@ -230,9 +242,9 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     }
 
     // Double check order is valid and not too expensive
-    const validation_error = validate_order(access_token, order_data)
-    if (validation_error){
-        return validation_error
+    const validation = await validate_order(access_token, order_data)
+    if (typeof validation === 'string'){
+        return validation
     }
 
     // Submit order
@@ -241,10 +253,21 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     if (!resp_data){
         return "Couldn't connect to Lulu to send order"
     }
+    if ('error' in resp_data){
+        // Pass on all data since this is for developer viewing
+        return JSON.stringify(resp_data, undefined, 4)
+    }
 
-    // Change state of record
-    // TODO Set state to either failed to sent, and also add lulu order id and estimated delivery
-    await fire_db.collection('book_orders').doc(order_id).update({state: 'sent'})
+    // Update state of record
+    await order_ref.update({
+        state: {
+            status: 'sent',
+            lulu_id: resp_data['order_id'],
+            arrival_min: resp_data['estimated_shipping_dates']['arrival_min'],
+            arrival_max: resp_data['estimated_shipping_dates']['arrival_max'],
+            cost: parseFloat(resp_data['costs']['total_cost_incl_tax']),
+        },
+    })
 
     return null
 }
@@ -324,7 +347,7 @@ function order_to_lulu_request(id:string, order:Order){
 
 // Submit a request to Lulu (returns null for network failure)
 async function lulu_request(token:string, path:string, data:unknown)
-        :Promise<Record<string, unknown>|null>{
+        :Promise<Record<string, any>|null>{
 
     // Try send
     const url = LULU_DOMAIN + path
@@ -352,7 +375,7 @@ async function lulu_request(token:string, path:string, data:unknown)
 
 
 // Validate order details and cost, and return string if user-resolvable error
-async function validate_order(token:string, order:Order):Promise<string|null>{
+async function validate_order(token:string, order:Order):Promise<string|{cost:number}>{
 
     // Prepare request data (don't need order id for validation)
     const request_data = order_to_lulu_request('', order)
@@ -374,13 +397,13 @@ async function validate_order(token:string, order:Order):Promise<string|null>{
     if (currency === 'USD'){
         limit = limit / 1.5
     }
-    const dollars = parseInt(resp_data['total_cost_incl_tax'] as string)
+    const dollars = parseFloat(resp_data['total_cost_incl_tax'] as string)
     if (dollars > limit){
         return `Sorry, it's too expensive to ship to that address (${dollars} ${currency})`
     }
 
     // Passed validation
-    return null
+    return {cost: dollars}
 }
 
 
