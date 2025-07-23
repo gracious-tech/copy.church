@@ -196,3 +196,45 @@ async function get_lulu_access_token():Promise<string|null>{
     const data = await resp.json() as {access_token:string}
     return data.access_token
 }
+
+
+// Generate data for a Lulu request from an order record
+function order_to_lulu_request(id:string, order:Order){
+
+    // Determine SKU/pod (combination of printing options)
+    // These are all: 6x9", black/white, matte
+    const sku_cream = '0600X0900BWSTDPB060UC444MXX'
+    const sku_white = '0600X0900BWSTDPB060UW444MXX'
+
+    // Prepare data to send to Lulu
+    return {
+        external_id: id,
+        contact_email: 'admin@gracious.tech',
+        production_delay: PRODUCTION_DELAY,  // Can't cancel once sent to production
+        shipping_level: 'MAIL',  // Cheapest option
+        line_items: [
+            {
+                title: "Abolish the Jesus Trade",
+                quantity: 1,
+                external_id: 'abolish',
+                pod_package_id: order.color === 'white' ? sku_white : sku_cream,
+                interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
+                cover: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade-cover.pdf',
+            }
+        ],
+        shipping_address: {
+            name: order.name,
+            email: order.email,
+            phone_number: order.address.phone,
+
+            street1: order.address.street1,
+            street2: order.address.street2,
+            city: order.address.city,
+            state_code: order.address.state,
+            postcode: order.address.postcode,
+            country_code: order.address.country,
+
+            recipient_tax_id: order.address.tax_id,
+        },
+    }
+}
