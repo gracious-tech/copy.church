@@ -40,8 +40,6 @@ interface Order {
     state:{
         status:'new'|'sent'
         lulu_id:string
-        arrival_min:string
-        arrival_max:string
         cost:number
     }
 }
@@ -155,8 +153,6 @@ async function record_order_inner(request:Request):Promise<string|null>{
         state: {
             status: 'new',
             lulu_id: '',
-            arrival_min: '',
-            arrival_max: '',
             cost: 0,
         },
     }
@@ -248,7 +244,7 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     }
 
     // Submit order
-    const request_data = order_to_lulu_request(order.id, order_data)
+    const request_data = order_to_lulu_request(order.id, order_data, false)
     const resp_data = await lulu_request(access_token, 'print-jobs/', request_data)
     if (!resp_data){
         return "Couldn't connect to Lulu to send order"
@@ -259,13 +255,11 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     }
 
     // Update state of record
+    // NOTE cost and shipping dates not available straight away (at least in sandbox)
     await order_ref.update({
         state: {
             status: 'sent',
-            lulu_id: resp_data['order_id'],
-            arrival_min: resp_data['estimated_shipping_dates']['arrival_min'],
-            arrival_max: resp_data['estimated_shipping_dates']['arrival_max'],
-            cost: parseFloat(resp_data['costs']['total_cost_incl_tax']),
+            lulu_id: resp_data['id'],  // order_id is null when tested in sandbox
         },
     })
 
@@ -303,7 +297,7 @@ async function get_lulu_access_token():Promise<string|null>{
 
 
 // Generate data for a Lulu request from an order record
-function order_to_lulu_request(id:string, order:Order){
+function order_to_lulu_request(id:string, order:Order, validation:boolean){
 
     // Determine SKU/pod (combination of printing options)
     // These are all: 6x9", black/white, matte
@@ -321,10 +315,11 @@ function order_to_lulu_request(id:string, order:Order){
                 title: "Abolish the Jesus Trade",
                 quantity: 1,
                 external_id: 'abolish',
-                page_count: 377,  // Only needed for cost calculation endpoint
                 pod_package_id: order.color === 'white' ? sku_white : sku_cream,
                 interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
                 cover: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade-cover.pdf',
+                // page_count is required for validation but will cause 500 error for orders
+                ...validation ? {page_count: 377} : {},
             }
         ],
         shipping_address: {
@@ -378,7 +373,7 @@ async function lulu_request(token:string, path:string, data:unknown)
 async function validate_order(token:string, order:Order):Promise<string|{cost:number}>{
 
     // Prepare request data (don't need order id for validation)
-    const request_data = order_to_lulu_request('', order)
+    const request_data = order_to_lulu_request('', order, true)
 
     // Check cost (which also validates address)
     const resp_data = await lulu_request(token, 'print-job-cost-calculations/', request_data)
