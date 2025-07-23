@@ -42,7 +42,13 @@ interface Order {
 }
 
 
-// Main function
+// CONFIG (update when confident everything working)
+process.env['FUNCTIONS_EMULATOR'] = 'true'  // TODO Forcing Lulu sandbox until ready
+const PRODUCTION_DELAY = 60 * 24  // 1 day
+const LULU_DOMAIN = process.env['FUNCTIONS_EMULATOR'] ? 'https://api.sandbox.lulu.com/'
+    : 'https://api.lulu.com/'
+
+
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
@@ -163,4 +169,30 @@ async function record_order_inner(request:Request):Promise<string|null>{
 
     // Return no error for success
     return null
+}
+
+
+// Get access token from Lulu
+async function get_lulu_access_token():Promise<string|null>{
+    const url = LULU_DOMAIN + 'auth/realms/glasstree/protocol/openid-connect/token'
+    let resp:Response
+    try {
+        resp = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + process.env['lulu_auth'],
+            },
+            body: new URLSearchParams({
+                grant_type: 'client_credentials',
+            }),
+        })
+    } catch (caught){
+        console.error(caught)
+        return null  // Null for network errors as may be able to retry
+    }
+
+    // Extract token from response
+    const data = await resp.json() as {access_token:string}
+    return data.access_token
 }
