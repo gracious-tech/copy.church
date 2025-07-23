@@ -365,8 +365,7 @@ async function validate_order(token:string, order:Order):Promise<string|null>{
 
     // See if any issue with provided details
     if ('error' in resp_data){
-        // TODO Extract error
-        return JSON.stringify(resp_data, undefined, 4)
+        return extract_human_error_msg(resp_data['error'] as ErrorResponse)
     }
 
     // Tell user if order too expensive
@@ -383,3 +382,21 @@ async function validate_order(token:string, order:Order):Promise<string|null>{
     // Passed validation
     return null
 }
+
+
+// Extract human-readable error messages from Lulu error data
+function extract_human_error_msg(data:ErrorResponse){
+    try {
+        return Object.values(data)
+            .map(item => item.detail.errors.map(e => e.message))
+            .flat()
+            .join('\n')
+    } catch {
+        return JSON.stringify(data)
+    }
+}
+
+
+type ErrorResponse = Record<string, {detail: {errors: Array<{message:string}>}}>
+// EXAMPLE (noting that first error prop is from this function and not Lulu)
+// { "shipping_address": { "detail": { "errors": [ { "code": "INVALID", "path": "postcode", "message": "The format of the Postal Code entered does not match the country you entered. It should look like 1000, 2888, 3585, 3707." } ] } } }
