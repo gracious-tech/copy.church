@@ -185,8 +185,9 @@ async function record_order_inner(request:Request):Promise<string|null>{
         : 'https://send-to-lulu-eyjvbqmvpa-uw.a.run.app'
 
     // Notify via discord
+    // NOTE '~' added to end of URL to prevent Discord spam/preview requests from triggering
     const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
-        + `\n\n${send_url}?id=${encodeURIComponent(record.id)}`
+        + `\n\n${send_url}?id=${encodeURIComponent(record.id)}~`
     try {
         await fetch(DEV ? DISCORD_WEBHOOK_DEV.value() : DISCORD_WEBHOOK_PROD.value(), {
             method: 'POST',
@@ -225,6 +226,11 @@ export const send_to_lulu:HttpsFunction = onRequest({
 
 // The main logic of sending order to Lulu (returns string if error)
 export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
+
+    // Warn if id has '~' appended which is to prevent Discord from auto-triggering URL
+    if (order_id.endsWith('~')){
+        return "Remove ~ to confirm send"
+    }
 
     // Get record for order
     const order_ref = fire_db.collection('book_orders').doc(order_id)
