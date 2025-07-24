@@ -49,7 +49,8 @@ interface Order {
 // CONFIG (update when confident everything working)
 const DEV = !!process.env['FUNCTIONS_EMULATOR']
 const SANDBOX = DEV || true  // TODO Forcing Lulu sandbox until ready
-const PRODUCTION_DELAY = 60 * 24  // TODO Reduce from 1 day
+// NOTE Since manually confirming orders anyway, can already delay as long as like so set to 60min
+const PRODUCTION_DELAY = 60  // Mininum is 60 minutes to allow cancelling
 const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lulu.com/'
 
 // Firebase config
