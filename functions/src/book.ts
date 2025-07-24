@@ -1,6 +1,6 @@
 
 import {HttpsFunction, onRequest, Request} from 'firebase-functions/v2/https'
-import {defineString} from 'firebase-functions/params'
+import {defineString, defineSecret} from 'firebase-functions/params'
 
 import {allowed_domains, fire_db} from './common.js'
 import region_data from './data/regions.json' with {type: 'json'}
@@ -46,21 +46,22 @@ interface Order {
 }
 
 
-// From .env
-const DISCORD_WEBHOOK = defineString('DISCORD_WEBHOOK')
-const LULU_AUTH = defineString('LULU_AUTH')
-
-
 // CONFIG (update when confident everything working)
 const DEV = !!process.env['FUNCTIONS_EMULATOR']
 const SANDBOX = DEV || true  // TODO Forcing Lulu sandbox until ready
 const PRODUCTION_DELAY = 60 * 24  // TODO Reduce from 1 day
 const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lulu.com/'
 
+// Firebase config
+const DISCORD_WEBHOOK = defineString('DISCORD_WEBHOOK')
+const LULU_AUTH_SANDBOX = defineString('LULU_AUTH')
+const LULU_AUTH_PROD = defineSecret('LULU_AUTH')
+
 
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
+    secrets: [LULU_AUTH_PROD],
 }, async (request, response) => {
 
     const error = await record_order_inner(request)
@@ -203,6 +204,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
 // Function for triggering an order to be sent to Lulu
 export const send_to_lulu:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
+    secrets: [LULU_AUTH_PROD],
 }, async (request, response) => {
 
     // Get the order id from query param
@@ -275,13 +277,14 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
 // Get access token from Lulu
 async function get_lulu_access_token():Promise<string|null>{
     const url = LULU_DOMAIN + 'auth/realms/glasstree/protocol/openid-connect/token'
+    const auth_token = SANDBOX ? LULU_AUTH_SANDBOX.value() : LULU_AUTH_PROD.value()
     let resp:Response
     try {
         resp = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' + LULU_AUTH.value(),
+                'Authorization': 'Basic ' + auth_token,
             },
             body: new URLSearchParams({
                 grant_type: 'client_credentials',
