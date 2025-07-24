@@ -63,7 +63,7 @@ const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
-    secrets: [LULU_AUTH_PROD],
+    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_PROD],
 }, async (request, response) => {
 
     const error = await record_order_inner(request)
