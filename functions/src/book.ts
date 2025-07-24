@@ -53,9 +53,10 @@ const PRODUCTION_DELAY = 60 * 24  // TODO Reduce from 1 day
 const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lulu.com/'
 
 // Firebase config
-const DISCORD_WEBHOOK = defineString('DISCORD_WEBHOOK')
-const LULU_AUTH_SANDBOX = defineString('LULU_AUTH')
-const LULU_AUTH_PROD = defineSecret('LULU_AUTH')
+const DISCORD_WEBHOOK_DEV = defineString('DISCORD_WEBHOOK_DEV')
+const DISCORD_WEBHOOK_PROD = defineSecret('DISCORD_WEBHOOK_PROD')
+const LULU_AUTH_SANDBOX = defineString('LULU_AUTH_SANDBOX')
+const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 
 
 export const record_order:HttpsFunction = onRequest({
@@ -187,7 +188,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
     const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
         + `\n\n${send_url}?id=${encodeURIComponent(record.id)}`
     try {
-        await fetch(DISCORD_WEBHOOK.value(), {
+        await fetch(DEV ? DISCORD_WEBHOOK_DEV.value() : DISCORD_WEBHOOK_PROD.value(), {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({content: discord_msg}),
