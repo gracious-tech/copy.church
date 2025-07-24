@@ -1,5 +1,6 @@
 
 import {HttpsFunction, onRequest, Request} from 'firebase-functions/v2/https'
+import {defineString} from 'firebase-functions/params'
 
 import {allowed_domains, fire_db} from './common.js'
 import region_data from './data/regions.json' with {type: 'json'}
@@ -43,6 +44,11 @@ interface Order {
         cost:number
     }
 }
+
+
+// From .env
+const DISCORD_WEBHOOK = defineString('DISCORD_WEBHOOK')
+const LULU_AUTH = defineString('LULU_AUTH')
 
 
 // CONFIG (update when confident everything working)
@@ -177,11 +183,10 @@ async function record_order_inner(request:Request):Promise<string|null>{
         : 'https://send-to-lulu-eyjvbqmvpa-uw.a.run.app'
 
     // Notify via discord
-    const webhook_url = process.env['discord_webhook']!
     const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
         + `\n\n${send_url}?id=${encodeURIComponent(record.id)}`
     try {
-        await fetch(webhook_url, {
+        await fetch(DISCORD_WEBHOOK.value(), {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({content: discord_msg}),
@@ -276,7 +281,7 @@ async function get_lulu_access_token():Promise<string|null>{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' + process.env['lulu_auth'],
+                'Authorization': 'Basic ' + LULU_AUTH.value(),
             },
             body: new URLSearchParams({
                 grant_type: 'client_credentials',
