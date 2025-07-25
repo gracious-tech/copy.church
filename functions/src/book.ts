@@ -404,7 +404,7 @@ async function validate_order(token:string, order:Order):Promise<string|{cost:nu
 
     // Tell user if order too expensive
     const currency = resp_data['currency'] as string  // This should always be account's currency
-    let limit = 40  // AUD
+    let limit = 50  // AUD (high as will manually verify anyway, normally 26 US, 32 AU, 40 PH)
     if (currency === 'USD'){
         limit = limit / 1.5
     }
