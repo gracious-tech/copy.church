@@ -429,6 +429,31 @@ const bibles_raw = {
             access_source: true,
         },
     },
+    msb: {
+        abbrev: "MSB",
+        name: "Majority Standard Bible",
+        year: 2025,
+        type: "Dynamic",
+        source: "Byzantine",
+        info: 'https://majoritybible.com/',
+        license: 'https://berean.bible/terms.htm',
+        read: 'https://biblehub.com/msb/john/1.htm',
+        credit: "",
+        can: {
+            read_for_free: true,
+            read_anonymously: true,
+            quote: true,
+            quote_ratio: true,
+            quote_book: true,
+            not_attribute: true,
+            use_quote_openly: true,
+            use_commercially: true,
+            audio: true,
+            translate: true,
+            modify: true,
+            access_source: true,
+        },
+    },
 }
 
 
