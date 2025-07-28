@@ -7,7 +7,7 @@ p
     br
     | <a :href='bible.info' target='_blank'>{{ bible.abbrev}} website</a> | <a :href='bible.read' target='_blank'>read online</a> | <a :href='bible.license' target='_blank'>view license</a>
 
-table
+table: tbody
 
     tr
         th

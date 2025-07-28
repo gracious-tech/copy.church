@@ -9,11 +9,11 @@ p
 
 p(v-if='bible.id === "kjv"' class='mixed') Copyright of the KJV should have expired a long time ago, however the British Crown is the owner and is exempt from common copyright law in the UK, so it is only in the public domain outside of the UK.
 
-table
+table: tbody
 
     tr
         td(colspan='2')
-            h3 Personal use
+            h3 Availability
 
     tr
         th
@@ -35,6 +35,19 @@ table
             p(v-html='can(bible.can.read_anonymously)')
             ul
                 li Anonymously read this translation offline in popular Bible apps
+    tr
+        th
+            | Download in flexible format
+            div(v-html='b(bible.can.access_source)')
+            img(src='@/_assets/restrictions/ill_download.svg')
+        td
+            p Many publishers only make their translations available in formats that are not easy to adapt, to intentionally make it difficult to include them in third-party apps and publications.
+            p(v-html='can(bible.can.access_source)')
+            ul
+                li Easily convert the translation to another file format
+                li Effortlessly include the translation in a new Bible app
+                li Print the translation in a variety of page sizes
+
 
     tr
         td(colspan='2')
@@ -156,21 +169,6 @@ table
                 li Rephrase anything into simpler English for second language learners
                 li Correct or improve any parts of the translation
 
-    tr
-        td(colspan='2')
-            h3 The owner
-
-    tr
-        th
-            | Owner supportive
-            div(v-html='b(bible.can.owner_supportive)')
-            img(src='@/_assets/restrictions/ill_other.svg')
-        td
-            p Whether the owner of this translation supports allowing Bible translations to be freely shared without much restriction.
-            p Some translation owners use profits of restricted translations to fund more openly licensed translations in other languages.
-            p(v-html='can(bible.can.owner_supportive)')
-            ul
-                li Use some of their translations freely
 
 h3 You #[em may] be able to do more than this
 p These restrictions are based on what the translation owner has declared is allowed for public use, however they do not nullify #[a(href='/explain/copyright/#fair-use') existing rights to fair use] which may be slightly more permissive in some cases.

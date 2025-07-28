@@ -1,7 +1,7 @@
 
 <template lang='pug'>
 
-table.translations(ref='table' :class='{advanced}')
+table.translations(ref='table' :class='{advanced}'): tbody
     tr
         th ID
         th(v-if='!advanced') Name
@@ -12,6 +12,7 @@ table.translations(ref='table' :class='{advanced}')
             th NT source
             th Read
             th Anonymous
+            th Download
             th Unlimited
             th By itself
             th Book
@@ -21,7 +22,6 @@ table.translations(ref='table' :class='{advanced}')
             th Audio
             th Translate
             th Modify
-            th Supportive
     tr(v-for='item of bibles' :key='item.id' :class='{selected: bible_id === item.id}'
             @click='() => change_translation(item.id)')
         td {{ item.abbrev }}
@@ -35,6 +35,7 @@ table.translations(ref='table' :class='{advanced}')
             td(class='condensed') {{ item.source }}
             td(v-html='b(item.can.read_for_free)')
             td(v-html='b(item.can.read_anonymously)')
+            td(v-html='b(item.can.access_source)')
             td(v-html='num(item.can.quote)')
             td(v-html='per(item.can.quote_ratio)')
             td(v-html='b(item.can.quote_book)')
@@ -44,7 +45,6 @@ table.translations(ref='table' :class='{advanced}')
             td(v-html='b(item.can.audio)')
             td(v-html='b(item.can.translate)')
             td(v-html='b(item.can.modify)')
-            td(v-html='b(item.can.owner_supportive)')
 
 p.advanced-toggle
     input(v-model='advanced' type='checkbox' id='advanced')

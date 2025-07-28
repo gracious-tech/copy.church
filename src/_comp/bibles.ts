@@ -26,7 +26,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     niv: {
@@ -51,7 +51,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: true,
+            access_source: false,
         },
     },
     nlt: {
@@ -76,7 +76,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     net: {
@@ -101,7 +101,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     web: {
@@ -126,7 +126,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
     nkjv: {
@@ -151,7 +151,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     csb: {
@@ -176,7 +176,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     nasb: {
@@ -201,7 +201,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     lsv: {
@@ -226,7 +226,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
     leb: {
@@ -251,7 +251,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     fbv: {
@@ -276,7 +276,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
     oeb: {
@@ -301,7 +301,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
     kjv: {
@@ -326,7 +326,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     nrsv: {
@@ -351,7 +351,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     lsb: {
@@ -376,7 +376,7 @@ const bibles_raw = {
             audio: false,
             translate: false,
             modify: false,
-            owner_supportive: false,
+            access_source: false,
         },
     },
     bsb: {
@@ -401,7 +401,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
     blb: {
@@ -426,7 +426,7 @@ const bibles_raw = {
             audio: true,
             translate: true,
             modify: true,
-            owner_supportive: true,
+            access_source: true,
         },
     },
 }
