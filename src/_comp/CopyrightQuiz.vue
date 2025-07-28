@@ -7,7 +7,7 @@ transition
 
     div.first(v-if='slide === 0')
         h1 Is it legal for you to share the Bible?
-        p Only 41% of the world has a shareable translation
+        p Only 54% of the world has a shareable translation
         img(src='@/_assets/quiz/question.svg')
         h3 Take the quiz!
 
