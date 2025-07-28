@@ -113,11 +113,11 @@ table: tbody
             div(v-html='b(bible.can.use_commercially)')
             img(src='@/_assets/restrictions/ill_commercial.svg')
         td
-            p Whether this translation can be used commercially in full, such as by charging to use it or including it in a paid product.
+            p Whether this translation can be used commercially in full.
             p(v-html='can(bible.can.use_commercially)')
             ul
-                li Use this translation in a paid Bible commentary
-                li Use this translation in paid Bible study software
+                li Charge for printing the translation and shipping it to customers
+                li Charge for copies of a Bible commentary that uses the translation
 
     tr
         th
