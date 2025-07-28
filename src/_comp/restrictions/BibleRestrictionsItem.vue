@@ -7,7 +7,7 @@ p
     br
     | <a :href='bible.info' target='_blank'>{{ bible.abbrev}} website</a> | <a :href='bible.read' target='_blank'>read online</a> | <a :href='bible.license' target='_blank'>view license</a>
 
-p(v-if='bible.id === "kjv"' class='mixed') Copyright of the KJV should have expired a long time ago, however the British Crown is the owner and is exempt from common copyright law in the UK, so it is only in the public domain outside of the UK.
+p(v-if='bible.id === "kjv"' class='mixed') Copyright of the KJV should have expired a long time ago, however the British Crown is the owner and the KJV is exempt from common copyright law #[a(href='https://en.wikipedia.org/wiki/King_James_Version#Copyright_status' target='_blank') by royal prerogative], so it is only in the public domain outside of the UK. This site ranks translations based on the intent of the publisher and the license they declare. It's not good enough for a translation to be free in some countries, it must be worldwide, noting that the crown still has control of this and could relinquish its rights if it wished to.
 
 table: tbody
 
