@@ -39,9 +39,10 @@ interface Order {
 
     // State
     state:{
-        status:'new'|'sent'|'sent_manually'
+        status:'new'|'sent_lulu'|'sent_manually'
         lulu_id:string
         cost:number
+        currency:string
     }
 }
 
@@ -166,6 +167,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
             status: 'new',
             lulu_id: '',
             cost: 0,
+            currency: '',
         },
     }
 
@@ -179,6 +181,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
         return validation
     }
     order_data.state.cost = validation.cost
+    order_data.state.currency = validation.currency
 
     // Add new record to db
     // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
@@ -206,9 +209,9 @@ async function record_order_inner(request:Request):Promise<string|null>{
         `State: ${order_data.address.state}`,
         '',
         `Email: ${order_data.email}`,
-        `IP: ${order_data.ip} (${ip_total} orders in total)`,
+        `IP: ${order_data.ip} (${ip_total} previous orders)`,
         `Tax ID: ${order_data.address.tax_id}`,
-        `Lulu cost: ${order_data.state.cost} AUD`,
+        `Lulu cost: ${order_data.state.cost} ${order_data.state.currency}`,
         `Order ID: ${record.id}`,
         '',
         // NOTE '~' added to end of URL to prevent Discord spam/preview requests from triggering
@@ -289,9 +292,7 @@ async function mark_as_sent_inner(order_id:string):Promise<string>{
 
     // Update status
     await order_ref.update({
-        state: {
-            status: 'sent_manually',
-        },
+        'state.status': 'sent_manually',
     })
 
     return `Order for "${name}" has been successfully marked as "sent_manually".`
@@ -366,10 +367,9 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     // Update state of record
     // NOTE cost and shipping dates not available straight away (at least in sandbox)
     await order_ref.update({
-        state: {
-            status: 'sent',
-            lulu_id: resp_data['id'],  // order_id is null when tested in sandbox
-        },
+        'state.status': 'sent_lulu',
+        'state.lulu_id': resp_data['id'],  // order_id is null when tested in sandbox
+        'state.cost': parseFloat(resp_data['costs']['total_cost_incl_tax']),
     })
 
     return null
@@ -480,7 +480,8 @@ async function lulu_request(token:string, path:string, data:unknown)
 
 
 // Validate order details and cost, and return string if user-resolvable error
-async function validate_order(token:string, order:Order):Promise<string|{cost:number}>{
+async function validate_order(token:string, order:Order)
+        :Promise<string|{cost:number, currency:string}>{
 
     // Prepare request data (don't need order id for validation)
     const request_data = order_to_lulu_request('', order, true)
@@ -508,7 +509,7 @@ async function validate_order(token:string, order:Order):Promise<string|{cost:nu
     }
 
     // Passed validation
-    return {cost: dollars}
+    return {cost: dollars, currency}
 }
 
 
