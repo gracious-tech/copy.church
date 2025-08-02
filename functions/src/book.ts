@@ -39,7 +39,7 @@ interface Order {
 
     // State
     state:{
-        status:'new'|'sent'
+        status:'new'|'sent'|'sent_manually'
         lulu_id:string
         cost:number
     }
@@ -55,7 +55,9 @@ const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lul
 
 // Firebase config
 const DISCORD_WEBHOOK_DEV = defineString('DISCORD_WEBHOOK_DEV')
-const DISCORD_WEBHOOK_PROD = defineSecret('DISCORD_WEBHOOK_PROD')
+const DISCORD_WEBHOOK_US = defineSecret('DISCORD_WEBHOOK_US')
+const DISCORD_WEBHOOK_AU = defineSecret('DISCORD_WEBHOOK_AU')
+const DISCORD_WEBHOOK_OTHER = defineSecret('DISCORD_WEBHOOK_OTHER')
 const LULU_AUTH_SANDBOX = defineString('LULU_AUTH_SANDBOX')
 const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 
@@ -63,7 +65,7 @@ const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
-    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_PROD],
+    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_US, DISCORD_WEBHOOK_AU, DISCORD_WEBHOOK_OTHER],
 }, async (request, response) => {
 
     const error = await record_order_inner(request)
@@ -131,7 +133,8 @@ async function record_order_inner(request:Request):Promise<string|null>{
 
     // Basic spam prevention (drop orders from same ip if exceed limit)
     const num_from_ip = await fire_db.collection('book_orders').where('ip', '==', ip).count().get()
-    if (num_from_ip.data().count > 6){
+    const ip_total = num_from_ip.data().count
+    if (ip_total > 6){
         return "You have submitted too many orders"
     }
 
@@ -181,16 +184,51 @@ async function record_order_inner(request:Request):Promise<string|null>{
     // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
     const record = await fire_db.collection('book_orders').add(order_data)
 
-    // Determine send_to_lulu function URL
-    const send_url = DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/send_to_lulu'
-        : 'https://send-to-lulu-eyjvbqmvpa-uw.a.run.app'
+    // Determine action URL
+    let action_url:string
+    if (order_data.address.country === 'US' || order_data.address.country === 'AU'){
+        action_url = DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/mark_as_sent'
+            : 'https://mark-as-sent-eyjvbqmvpa-uw.a.run.app'
+    } else {
+        action_url = DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/send_to_lulu'
+            : 'https://send-to-lulu-eyjvbqmvpa-uw.a.run.app'
+    }
+
+    // Format details for easy copy-pasting to Amazon
+    const discord_msg = [
+        `Country: ${order_data.address.country}`,
+        `Name: ${order_data.name}`,
+        `Phone: ${order_data.address.phone}`,
+        `Address line 1: ${order_data.address.street1}`,
+        `Address line 2: ${order_data.address.street2}`,
+        `Postcode: ${order_data.address.postcode}`,
+        `City/Suburb: ${order_data.address.city}`,
+        `State: ${order_data.address.state}`,
+        '',
+        `Email: ${order_data.email}`,
+        `IP: ${order_data.ip} (${ip_total} orders in total)`,
+        `Tax ID: ${order_data.address.tax_id}`,
+        `Lulu cost: ${order_data.state.cost} AUD`,
+        `Order ID: ${record.id}`,
+        '',
+        // NOTE '~' added to end of URL to prevent Discord spam/preview requests from triggering
+        `Confirm: ${action_url}?id=${encodeURIComponent(record.id)}~`,
+    ].join('\n')
+
+    // Determine discord webhook/channel
+    let webhook = DISCORD_WEBHOOK_DEV.value()
+    if (!DEV){
+        webhook = DISCORD_WEBHOOK_OTHER.value()
+        if (order_data.address.country === 'US'){
+            webhook = DISCORD_WEBHOOK_US.value()
+        } else if (order_data.address.country === 'AU'){
+            webhook = DISCORD_WEBHOOK_AU.value()
+        }
+    }
 
     // Notify via discord
-    // NOTE '~' added to end of URL to prevent Discord spam/preview requests from triggering
-    const discord_msg = "New book order:\n" + JSON.stringify(order_data, undefined, 4)
-        + `\n\n${send_url}?id=${encodeURIComponent(record.id)}~`
     try {
-        await fetch(DEV ? DISCORD_WEBHOOK_DEV.value() : DISCORD_WEBHOOK_PROD.value(), {
+        await fetch(webhook, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({content: discord_msg}),
