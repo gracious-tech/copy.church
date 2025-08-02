@@ -204,6 +204,62 @@ async function record_order_inner(request:Request):Promise<string|null>{
 }
 
 
+// Function for marking an order as manually sent
+export const mark_as_sent:HttpsFunction = onRequest({
+    serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
+}, async (request, response) => {
+
+    // Get the order id from query param
+    const order_id = String(request.query['id'])
+
+    // Do main logic
+    const msg = await mark_as_sent_inner(order_id)
+
+    // Send back response message
+    response.status(200).send(msg)
+})
+
+
+// The main logic for marking an order as manually sent (returns string for feedback)
+async function mark_as_sent_inner(order_id:string):Promise<string>{
+
+    // Rm ~ for sake of getting record
+    let real_id = order_id
+    if(order_id.endsWith('~')){
+        real_id = order_id.slice(0, -1)
+    }
+
+    // Get record for order
+    const order_ref = fire_db.collection('book_orders').doc(real_id)
+    const order = await order_ref.get()
+    if (!order.exists){
+        return `Order does not exist with id "${real_id}"`
+    }
+
+    // Only relevant for new orders
+    const order_data = order.data() as Order
+    const name = order_data.name
+    if (order_data.state.status !== 'new'){
+        return `Order for "${name}" already has status "${order_data.state.status}"`
+    }
+
+    // Warn if id has '~' appended which is to prevent Discord from auto-triggering URL
+    if (order_id.endsWith('~')){
+        return `You're going to mark the order to "${name}" as being sent.
+            Remove the '~' from the end of the URL to confirm.`
+    }
+
+    // Update status
+    await order_ref.update({
+        state: {
+            status: 'sent_manually',
+        },
+    })
+
+    return `Order for "${name}" has been successfully marked as "sent_manually".`
+}
+
+
 // Function for triggering an order to be sent to Lulu
 export const send_to_lulu:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
