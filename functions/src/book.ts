@@ -369,7 +369,8 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     await order_ref.update({
         'state.status': 'sent_lulu',
         'state.lulu_id': resp_data['id'],  // order_id is null when tested in sandbox
-        'state.cost': parseFloat(resp_data['costs']['total_cost_incl_tax']),
+        // TODO Below resulted in NaN in sandbox, maybe docs are incorrect?
+        // 'state.cost': parseFloat(resp_data['costs']['total_cost_incl_tax']),
     })
 
     return null
