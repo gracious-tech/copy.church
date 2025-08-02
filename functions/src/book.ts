@@ -238,7 +238,7 @@ async function mark_as_sent_inner(order_id:string):Promise<string>{
 
     // Only relevant for new orders
     const order_data = order.data() as Order
-    const name = order_data.name
+    const name = order_data.name.replace(/[&<>"']/g, '')
     if (order_data.state.status !== 'new'){
         return `Order for "${name}" already has status "${order_data.state.status}"`
     }
