@@ -2,7 +2,7 @@
 import {HttpsFunction, onRequest, Request} from 'firebase-functions/v2/https'
 import {defineString, defineSecret} from 'firebase-functions/params'
 
-import {allowed_domains, fire_db} from './common.js'
+import {allowed_domains, fire_db, validate_turnstile} from './common.js'
 import region_data from './data/regions.json' with {type: 'json'}
 
 
@@ -54,6 +54,7 @@ const PRODUCTION_DELAY = 60  // Mininum is 60 minutes to allow cancelling
 const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lulu.com/'
 
 // Firebase config
+const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
 const DISCORD_WEBHOOK_DEV = defineString('DISCORD_WEBHOOK_DEV')
 const DISCORD_WEBHOOK_US = defineSecret('DISCORD_WEBHOOK_US')
 const DISCORD_WEBHOOK_AU = defineSecret('DISCORD_WEBHOOK_AU')
@@ -65,7 +66,7 @@ const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
-    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_US, DISCORD_WEBHOOK_AU, DISCORD_WEBHOOK_OTHER],
+    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_US, DISCORD_WEBHOOK_AU, DISCORD_WEBHOOK_OTHER, TURNSTILE_SECRET],
 }, async (request, response) => {
 
     const error = await record_order_inner(request)
@@ -179,6 +180,13 @@ async function record_order_inner(request:Request):Promise<string|null>{
     }
     order_data.state.cost = validation.cost
     order_data.state.currency = validation.currency
+
+    // Check turnstile token last of all checks, as will invalidate it once used
+    // If checked earlier and some other problem, then user would have to redo each time
+    if (! await validate_turnstile(ip, String(data['turnstile']), TURNSTILE_SECRET.value())){
+        // WARN "human" string is looked for in form UI, so don't remove
+        return "Not sure if you're human (please try again or email us)"
+    }
 
     // Add new record to db
     // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
