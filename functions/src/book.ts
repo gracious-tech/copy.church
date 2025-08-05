@@ -23,7 +23,6 @@ interface Order {
 
     // Order
     books:Partial<Record<'abolish'|'dorean', BookOptions>>
-    color:'white'|'cream'
     address:{
         // Required by Lulu
         country:string
@@ -86,7 +85,6 @@ async function record_order_inner(request:Request):Promise<string|null>{
     // Ensure input types correct
     const name = String(data['name']).trim()
     const email = String(data['email']).trim().toLowerCase()  // Lower for easier unique checking
-    const color = String(data['color']).trim() === 'white' ? 'white' : 'cream'
     const address_country = String(data['address_country']).trim()
     const address_city = String(data['address_city']).trim()
     const address_postcode = String(data['address_postcode']).trim()
@@ -149,7 +147,6 @@ async function record_order_inner(request:Request):Promise<string|null>{
         email,
 
         books: {abolish: {quantity: 1}},  // Hardcoded for now
-        color,
 
         address: {
             country: address_country,
@@ -411,9 +408,8 @@ async function get_lulu_access_token():Promise<string|null>{
 function order_to_lulu_request(id:string, order:Order, validation:boolean){
 
     // Determine SKU/pod (combination of printing options)
-    // These are all: 6x9", black/white, matte
-    const sku_cream = '0600X0900BWSTDPB060UC444MXX'
-    const sku_white = '0600X0900BWSTDPB060UW444MXX'
+    // 6x9", black/white, cream paper, matte cover
+    const pod_package_id = '0600X0900BWSTDPB060UC444MXX'
 
     // Prepare data to send to Lulu
     return {
@@ -426,7 +422,7 @@ function order_to_lulu_request(id:string, order:Order, validation:boolean){
                 title: "Abolish the Jesus Trade",
                 quantity: 1,
                 external_id: 'abolish',
-                pod_package_id: order.color === 'white' ? sku_white : sku_cream,
+                pod_package_id,
                 interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
                 cover: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade-cover.pdf',
                 // page_count is required for validation but will cause 500 error for orders
