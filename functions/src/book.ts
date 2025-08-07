@@ -328,22 +328,30 @@ export const send_to_lulu:HttpsFunction = onRequest({
 // The main logic of sending order to Lulu (returns string if error)
 export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
 
-    // Warn if id has '~' appended which is to prevent Discord from auto-triggering URL
-    if (order_id.endsWith('~')){
-        return "Remove ~ to confirm send"
+    // Rm ~ for sake of getting record
+    let real_id = order_id
+    if(order_id.endsWith('~')){
+        real_id = order_id.slice(0, -1)
     }
 
     // Get record for order
-    const order_ref = fire_db.collection('book_orders').doc(order_id)
+    const order_ref = fire_db.collection('book_orders').doc(real_id)
     const order = await order_ref.get()
     if (!order.exists){
-        return "Order does not exist"
+        return `Order does not exist with id "${real_id}"`
     }
 
     // Can only send new orders (or ones reset to new to retry)
     const order_data = order.data() as Order
+    const name = order_data.name.replace(/[&<>"']/g, '')
     if (order_data.state.status !== 'new'){
-        return "Sending forbidden as order's state is not 'new'"
+        return `Order for "${name}" already has status "${order_data.state.status}"`
+    }
+
+    // Warn if id has '~' appended which is to prevent Discord from auto-triggering URL
+    if (order_id.endsWith('~')){
+        return `You're going to send order for "${name}" to Lulu.
+            Remove the '~' from the end of the URL to confirm.`
     }
 
     // Get access token
@@ -432,7 +440,7 @@ function order_to_lulu_request(id:string, order:Order, validation:boolean){
                 external_id: 'abolish',
                 pod_package_id,
                 interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
-                cover: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade-cover.pdf',
+                cover: 'https://sellingjesus.org/book/Abolish-cover-lulu.pdf',
                 // page_count is required for validation but will cause 500 error for orders
                 ...validation ? {page_count: 377} : {},
             }
