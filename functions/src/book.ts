@@ -39,7 +39,7 @@ interface Order {
     // State
     state:{
         status:'new'|'sent_lulu'|'sent_manually'
-        lulu_id:string
+        lulu_id:null|number
         cost:number
         currency:string
     }
@@ -163,7 +163,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
 
         state: {
             status: 'new',
-            lulu_id: '',
+            lulu_id: null,
             cost: 0,
             currency: '',
         },
