@@ -101,7 +101,7 @@ const bibles_raw = {
             audio: true,  // The license is very confusing but does seem to allow
             translate: false,
             modify: false,
-            access_source: false,
+            access_source: false,  // Only sword is an adaptable format and is old version
         },
     },
     web: {
