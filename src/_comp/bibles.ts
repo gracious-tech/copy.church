@@ -454,6 +454,31 @@ const bibles_raw = {
             access_source: true,
         },
     },
+    gnt: {
+        abbrev: "GNT",
+        name: "Good News Translation",
+        year: 1976,
+        type: "Very dynamic",
+        source: "Alexandrian",
+        info: 'https://gnt.bible/',
+        license: 'https://bibles.com/pages/american-bible-society-rights-and-permissions#TEV',
+        read: 'https://biblesearch.global.bible/bible/61fd76eafa1577c2-01/JHN.1',
+        credit: "",
+        can: {
+            read_for_free: true,
+            read_anonymously: false,
+            quote: 500,
+            quote_ratio: 25,
+            quote_book: false,  // Has even a 50% of book limit, but don't bother explaining...
+            not_attribute: false,
+            use_quote_openly: true,
+            use_commercially: false,
+            audio: false,
+            translate: false,
+            modify: false,
+            access_source: false,
+        },
+    },
 }
 
 
