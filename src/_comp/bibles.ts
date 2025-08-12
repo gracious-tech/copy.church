@@ -98,7 +98,7 @@ const bibles_raw = {
             not_attribute: false,
             use_quote_openly: true,
             use_commercially: false,
-            audio: false,
+            audio: true,  // The license is very confusing but does seem to allow
             translate: false,
             modify: false,
             access_source: false,
