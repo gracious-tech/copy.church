@@ -46,6 +46,13 @@ interface Order {
 }
 
 
+// CONSTANTS
+// SKU/pod (combination of printing options)
+// 6x9", black/white, cream paper, matte cover
+const POD_PACKAGE_ID = '0600X0900BWSTDPB060UC444MXX'
+const PAGE_COUNT = 377
+
+
 // CONFIG (update when confident everything working)
 const DEV = !!process.env['FUNCTIONS_EMULATOR']
 const SANDBOX = DEV
@@ -390,6 +397,61 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
 }
 
 
+// Function for estimating delivery time
+export const estimate_delivery:HttpsFunction = onRequest({
+    secrets: [LULU_AUTH_PROD],
+}, async (request, response) => {
+
+    // Accepts a country param
+    const country = String(request.query['country'])
+
+    // Do main logic
+    const result = await estimate_delivery_inner(country)
+
+    // Send back response message
+    if (result.error){
+        response.status(500).send("Error: " + result)
+    } else {
+        response.status(200).send({days: result.days})
+    }
+})
+
+
+// The main logic of function that estimates delivery time
+export async function estimate_delivery_inner(country:string):Promise<{error?:string, days?:number}>{
+
+    // Get access token
+    const access_token = await get_lulu_access_token()
+    if (!access_token){
+        return {error: "Couldn't get access token"}
+    }
+
+    // Submit request
+    const resp_data = await lulu_request(access_token, 'shipping-options/', {
+        line_items: [
+            {
+                page_count: PAGE_COUNT,
+                pod_package_id: POD_PACKAGE_ID,
+                quantity: 1,
+            }
+        ],
+        shipping_address: {
+            country,
+        },
+    })
+    if (!resp_data){
+        return {error: "Couldn't connect to Lulu"}
+    }
+    if ('error' in resp_data){
+        // Print to console in case sensitive
+        console.error(JSON.stringify(resp_data, undefined, 4))
+        return {error: "Internal"}
+    }
+
+    return {days: resp_data[0].total_days_max}
+}
+
+
 // Get access token from Lulu
 async function get_lulu_access_token():Promise<string|null>{
     const url = LULU_DOMAIN + 'auth/realms/glasstree/protocol/openid-connect/token'
@@ -422,12 +484,6 @@ async function get_lulu_access_token():Promise<string|null>{
 
 // Generate data for a Lulu request from an order record
 function order_to_lulu_request(id:string, order:Order, validation:boolean){
-
-    // Determine SKU/pod (combination of printing options)
-    // 6x9", black/white, cream paper, matte cover
-    const pod_package_id = '0600X0900BWSTDPB060UC444MXX'
-
-    // Prepare data to send to Lulu
     return {
         external_id: id,
         contact_email: 'admin@gracious.tech',
@@ -438,11 +494,11 @@ function order_to_lulu_request(id:string, order:Order, validation:boolean){
                 title: "Abolish the Jesus Trade",
                 quantity: 1,
                 external_id: 'abolish',
-                pod_package_id,
+                pod_package_id: POD_PACKAGE_ID,
                 interior: 'https://sellingjesus.org/book/Abolish-the-Jesus-Trade.pdf',
                 cover: 'https://sellingjesus.org/book/Abolish-cover-lulu.pdf',
                 // page_count is required for validation but will cause 500 error for orders
-                ...validation ? {page_count: 377} : {},
+                ...validation ? {page_count: PAGE_COUNT} : {},
             }
         ],
         shipping_address: {
