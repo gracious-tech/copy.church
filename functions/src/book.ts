@@ -399,6 +399,7 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
 
 // Function for estimating delivery time
 export const estimate_delivery:HttpsFunction = onRequest({
+    cors: allowed_domains,
     secrets: [LULU_AUTH_PROD],
 }, async (request, response) => {
 
