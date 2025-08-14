@@ -412,13 +412,13 @@ export const estimate_delivery:HttpsFunction = onRequest({
     if (result.error){
         response.status(500).send("Error: " + result)
     } else {
-        response.status(200).send({days: result.days})
+        response.status(200).send(result)
     }
 })
 
 
 // The main logic of function that estimates delivery time
-export async function estimate_delivery_inner(country:string):Promise<{error?:string, days?:number}>{
+export async function estimate_delivery_inner(country:string):Promise<{error?:string, max_delivery_date?:string}>{
 
     // Get access token
     const access_token = await get_lulu_access_token()
@@ -448,7 +448,10 @@ export async function estimate_delivery_inner(country:string):Promise<{error?:st
         return {error: "Internal"}
     }
 
-    return {days: resp_data[0].total_days_max}
+    // Identify correct shipping method
+    const normal_mail = (resp_data as any).find((s:any) => s.level === 'MAIL')
+
+    return {max_delivery_date: normal_mail?.max_delivery_date ?? null}
 }
 
 
