@@ -451,6 +451,7 @@ export async function estimate_delivery_inner(country:string):Promise<{error?:st
     // Identify correct shipping method
     const normal_mail = (resp_data as any).find((s:any) => s.level === 'MAIL')
 
+    // NOTE total days only includes business days, so using dates instead
     return {max_delivery_date: normal_mail?.max_delivery_date ?? null}
 }
 
