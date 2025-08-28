@@ -64,6 +64,7 @@ const LULU_DOMAIN = SANDBOX ? 'https://api.sandbox.lulu.com/' : 'https://api.lul
 const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
 const DISCORD_WEBHOOK_DEV = defineString('DISCORD_WEBHOOK_DEV')
 const DISCORD_WEBHOOK_US = defineSecret('DISCORD_WEBHOOK_US')
+const DISCORD_WEBHOOK_PH = defineSecret('DISCORD_WEBHOOK_PH')
 const DISCORD_WEBHOOK_AU = defineSecret('DISCORD_WEBHOOK_AU')
 const DISCORD_WEBHOOK_OTHER = defineSecret('DISCORD_WEBHOOK_OTHER')
 const LULU_AUTH_SANDBOX = defineString('LULU_AUTH_SANDBOX')
@@ -73,7 +74,7 @@ const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
 export const record_order:HttpsFunction = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
-    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_US, DISCORD_WEBHOOK_AU, DISCORD_WEBHOOK_OTHER, TURNSTILE_SECRET],
+    secrets: [LULU_AUTH_PROD, DISCORD_WEBHOOK_US, DISCORD_WEBHOOK_PH, DISCORD_WEBHOOK_AU, DISCORD_WEBHOOK_OTHER, TURNSTILE_SECRET],
 }, async (request, response) => {
 
     const error = await record_order_inner(request)
@@ -236,6 +237,8 @@ async function record_order_inner(request:Request):Promise<string|null>{
         webhook = DISCORD_WEBHOOK_OTHER.value()
         if (order_data.address.country === 'US'){
             webhook = DISCORD_WEBHOOK_US.value()
+        } else if (order_data.address.country === 'PH'){
+            webhook = DISCORD_WEBHOOK_PH.value()
         } else if (order_data.address.country === 'AU'){
             webhook = DISCORD_WEBHOOK_AU.value()
         }
