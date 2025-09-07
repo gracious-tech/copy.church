@@ -1,7 +1,7 @@
 
 <template lang='pug'>
 
-table.translations(ref='table' :class='{advanced}')
+table.translations(ref='table' :class='{advanced}'): tbody
     tr
         th ID
         th(v-if='!advanced') Name

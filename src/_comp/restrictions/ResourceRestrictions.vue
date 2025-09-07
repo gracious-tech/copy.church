@@ -34,7 +34,7 @@ h3(v-if='choice_payment && choice_license' :class='score_class')
     | The resource scored {{ score }} out of 8
 
 
-table(v-if='choice_payment && choice_license')
+table(v-if='choice_payment && choice_license'): tbody
 
     tr
         th

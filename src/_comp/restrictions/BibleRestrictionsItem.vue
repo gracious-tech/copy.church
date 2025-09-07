@@ -97,7 +97,7 @@ table: tbody
 
     tr
         th
-            | Quote in open resources
+            | Use in open resources
             div(v-html='b(bible.can.use_quote_openly)')
             img(src='@/_assets/restrictions/ill_open.svg')
         td

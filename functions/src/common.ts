@@ -14,3 +14,27 @@ export const allowed_domains = [
     'https://copy.church',
     'https://copy-church.web.app',
 ]
+
+
+// Turnstile token validation
+export async function validate_turnstile(ip:string, token:string, secret:string):Promise<boolean>{
+
+    // Gather data to submit
+    const verify_form = new FormData()
+    verify_form.append("secret", secret)
+    verify_form.append("remoteip", ip)
+    verify_form.append("response", token)
+
+    // Submit data
+    const result = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        body: verify_form,
+        method: 'POST',
+    })
+
+    // Return success
+    const outcome = await result.json() as {success:boolean, 'error-codes':string[]}
+    if (!outcome.success){
+        console.error(outcome['error-codes'].join(', '))
+    }
+    return !!outcome.success
+}
