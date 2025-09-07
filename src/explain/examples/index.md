@@ -97,7 +97,7 @@ It's often argued that anyone wanting to use a resource should simply ask permis
 
 ## Less resourced countries
 
-The [Digital Bible Society was founded](https://dbs.org/about/overview/history) in response to the issue of copyright and the lack of resources for places like China:
+The [Digital Bible Society was founded](https://dbs.org/en/about/history/) in response to the issue of copyright and the lack of resources for places like China:
 
 > Ken, a Bible enthusiast and self-taught computer programmer agreed to meet with Jon [a Chinese missionary]. He introduced him to commercial Bible software of the time: PC Study Bible and Logos. Jon, seeing the abundance of resources began weeping. He then asked Ken to give him copies of these programs for distribution across China. Ken said, “No, that’s illegal. It’s against copyright law.”
 >
