@@ -10,7 +10,7 @@ Publishers do not want ordinary believers to be able to print out Scripture them
 
 While sites like Bible Gateway allow you to print portions of a book, it maxes out at 10 chapters. There is also no special license granted for printing, so sharing a printout with anyone else is in many cases illegal, even though Christians often do it.
 
-The following stories have been [compiled by Tim Jore](https://www.missionfrontiers.org/issue/article/free-and-open):
+The following stories have been [compiled by Tim Jore](https://web.archive.org/web/20241111201127/https://www.missionfrontiers.org/issue/article/free-and-open):
 
 > “A Bible society in Southeast Asia does not consider there to be any financial value in printing more copies of the Bible in certain languages, so they do not, even though the Church is pleading for more.”
 
