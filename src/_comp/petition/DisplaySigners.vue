@@ -16,10 +16,11 @@ div.list(:class='{truncate}')
                 img(v-if='signer.type === "org"' src='@/_assets/icons/group.svg')
                 | {{ signer.name }}
             div.subtitle {{ signer.subtitle }}
-    div.unpub + {{ total_unpub }} unpublished names
+    div.unpub(v-if='total_unpub > 0') + {{ total_unpub }} unpublished names
 
-div.show
-    VPButton(@click='truncate = !truncate' :text='truncate ? "Show all" : "Show less"' theme='alt')
+//- TODO Enable when decent amount have signed
+//- div.show
+//-     VPButton(@click='truncate = !truncate' :text='truncate ? "Show all" : "Show less"' theme='alt')
 
 </template>
 
@@ -39,7 +40,7 @@ const signers = reactive<SigningOutput[]>([])
 const popup_msg = ref('')
 const popup_fade = ref(false)
 const popup_enabled = ref(false)
-const truncate = ref(true)
+const truncate = ref(false)  // TODO 'true' when decent amount signed
 
 const total = computed(() => signers.length)
 const total_unpub = computed(() => signers.length - public_signers.value.length)
