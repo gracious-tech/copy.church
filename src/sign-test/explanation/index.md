@@ -108,7 +108,7 @@ This question confuses the notion of trademark with copyright. Copyright does no
 ## Regarding the origin of the statement
 
 ### Who is behind this?
-This effort is led by the creators of _[sellingJesus.org](http://sellingJesus.org)_, _[copy.church](https://copy.church)_, and _[thedoreanprinciple.org](http://thedoreanprinciple.org)._ They have substantial combined experience in Bible translation, Bible app development, publishing, pastoral ministry, and global missions. _Selling Jesus_ provides educational resources that confront the monetization of ministry, while _copy.church_ documents how copyright laws are used to restrict the sharing of Scripture and ministry resources. _The Dorean Principle_ is a biblical response to the commercialization of Christianity. They share the common message that _ministry should be supported, not sold._
+This effort is led by the creators of _[sellingJesus.org](https://sellingJesus.org)_, _[copy.church](https://copy.church)_, and _[thedoreanprinciple.org](https://thedoreanprinciple.org)._ They have substantial combined experience in Bible translation, Bible app development, publishing, pastoral ministry, and global missions. _Selling Jesus_ provides educational resources that confront the monetization of ministry, while _copy.church_ documents how copyright laws are used to restrict the sharing of Scripture and ministry resources. _The Dorean Principle_ is a biblical response to the commercialization of Christianity. They share the common message that _ministry should be supported, not sold._
 
 ### What if I don’t agree with all your views on copyright or ministry finance?
 When you sign this declaration, you are only agreeing to the preamble and affirmations, not this Q&A or our other resources.
@@ -136,8 +136,8 @@ For statistics, see:
 See also the following websites:
 
 * [Let's copy, church](https://copy.church)
-* [Selling Jesus](http://sellingJesus.org)
-* [The Dorean Principle](thedoreanprinciple.org)
+* [Selling Jesus](https://sellingJesus.org)
+* [The Dorean Principle](https://thedoreanprinciple.org)
 
 
 &nbsp;
