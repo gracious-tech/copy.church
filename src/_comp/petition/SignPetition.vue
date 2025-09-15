@@ -42,8 +42,8 @@ div.container
             span Position (optional)
             input(type="text" v-model="input.position" placeholder="Pastor of..., Director of..., etc.")
 
-        div.sign
-            VPButton(@click='submit' :text='progress ? "Signing..." : "Sign"' size='big' :class='{progress}')
+    div.sign
+        VPButton(@click='submit' :text='progress ? "Signing..." : "Sign"' size='big' :class='{progress}')
 
     div.error(v-if='error_msg') {{ error_msg }}
     div.success(v-if="success && !error_msg") Thanks for signing. Please consider encouraging others to sign this statement as well.
@@ -94,6 +94,10 @@ const submit_inner = async () => {
     success.value = false
 
     // Validate data
+    if (!input.value.type){
+        error_msg.value = "Choose type of signer"
+        return
+    }
     if (! /^[^\s@]+@[^\s@]+$/.test(input.value.email)){
         error_msg.value = "Invalid email address"
         return
