@@ -16,6 +16,10 @@ import SignPetition from '@/_comp/petition/SignPetition.vue'
 import DisplaySigners from '@/_comp/petition/DisplaySigners.vue'
 import TranslateButton from '@/_comp/TranslateButton.vue'
 
+// Statement signable after 8 Oct 10:30am Sunnyvale CA
+const pub_date_ms = new Date('2025-10-08T10:30:00-07:00').getTime()
+const signable = pub_date_ms < new Date().getTime()
+
 </script>
 
 <style lang='sass' scoped>
@@ -43,9 +47,9 @@ img
 # <span>The Sunnyvale Statement</span><br>on the Stewardship of Scripture
 
 <div class='shortcuts'>
-    <VPButton theme='alt' text="Sign" href="#sign"></VPButton>
+    <VPButton v-if='signable' theme='alt' text="Sign" href="#sign"></VPButton>
     <VPButton theme='alt' text="Q & A" href="/statement/explanation/"></VPButton>
-    <VPButton theme='alt' text="List of signers" href="#signers"></VPButton>
+    <VPButton v-if='signable' theme='alt' text="List of signers" href="#signers"></VPButton>
     <ClientOnly><TranslateButton></TranslateButton></ClientOnly>
 </div>
 
@@ -92,12 +96,12 @@ __We deny__ that mistranslation, mishandling, or any other danger undermines thi
 
 
 <div class='shortcuts'>
-    <VPButton theme='alt' text="Questions & Answers" href="/statement/explanation/"></VPButton>
+    <VPButton theme='alt' size='big' text="Questions & Answers" href="/statement/explanation/"></VPButton>
 </div>
 
 
-<SignPetition petition='scripture'></SignPetition>
-
-
-
-<DisplaySigners petition='scripture'></DisplaySigners>
+<template v-if='signable'>
+    <SignPetition petition='scripture'></SignPetition>
+    <DisplaySigners petition='scripture'></DisplaySigners>
+</template>
+<p v-else>The Statement will be able to be signed after <a href='https://www.doreancon.org/' target='_blank'>Doreancon</a> on 8 October 2025. <a href='https://forms.gle/4kHfFRWfRiGjZS5D9' target='_blank'>Sign up here</a> to be notified.</p>
