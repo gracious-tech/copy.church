@@ -47,21 +47,10 @@ export async function save_signing(petition:string, data:SigningInput){
 
 // Listen for signers
 export async function listen_for_signers(petition:string, add_signer:(data:SigningOutput)=>void){
-
-    // TODO rm test code
-    let last_doc = null
-    setInterval(() => {
-        if (last_doc){
-            add_signer(last_doc)
-        }
-    }, 1000 * 10)
-    // TODO rm above
-
     const q = query(collection(fire_db, `petitions/${petition}/signers`), orderBy('date', 'desc'))
     onSnapshot(q, snapshot => {
         snapshot.docChanges().forEach(change => {
             if (change.type === 'added'){
-                last_doc = change.doc.data()  // TODO rm test code
                 add_signer(change.doc.data() as SigningOutput)
             }
         })

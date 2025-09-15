@@ -33,38 +33,6 @@ import {countries} from './countries'
 import {listen_for_signers, type SigningOutput} from './backend'
 
 
-// TODO rm test data
-const names = [
-['person', "Olivia Bennett", "US", "",],
-['person', "Ethan Wallace", "US", "",],
-['person', "Mia Thornton", "US", "Pastor of Hope Valley Church",],
-['person', "Jacob Rivers", "US", "",],
-['person', "Sophia Mitchell", "US", "",],
-['person', "Lucas Harrington", "US", "",],
-['person', "Ava Delgado", "US", "",],
-['person', "Noah Preston", "US", "",],
-['person', "Isabella Quinn", "US", "",],
-['person', "Liam Chandler", "US", "",],
-['person', "Charlotte Pierce", "AU", "Senior Minister of Springfield Anglican Church",],
-['person', "Mason Avery", "US", "",],
-['person', "Amelia Vaughn", "US", "",],
-['org', "Silicon Valley Baptist Church", "US", "",],
-['person', "Harper Neal", "US", "",],
-['person', "Elijah Monroe", "US", "",],
-['person', "Lily Sanders", "US", "",],
-['person', "Aiden McAllister", "US", "",],
-['person', "Grace Holloway", "US", "",],
-['person', "Jameson Cross", "US", "",],
-].map(([type, name, country, position]) => ({
-    type, name, country, position,
-    sort: 0,
-    reviewed: true,
-    date: new Date(),
-}))
-names.push(...names, ...names, ...names, ...names)
-// TODO rm above
-
-
 const props = defineProps<{petition:string}>()
 
 const signers = reactive<SigningOutput[]>([])
@@ -104,7 +72,6 @@ onMounted(() => {
     // Don't enable popup until initial signers likely already loaded
     setTimeout(() => {
         popup_enabled.value = true
-        signers.push(...names)  // TODO rm
     }, 4000)
 
     listen_for_signers(props.petition, data => {
