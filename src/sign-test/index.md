@@ -48,7 +48,7 @@ img
 
 <div class='shortcuts'>
     <VPButton v-if='signable' theme='alt' text="Sign" href="#sign"></VPButton>
-    <VPButton theme='alt' text="Q & A" href="/statement/explanation/"></VPButton>
+    <VPButton theme='alt' text="Q & A" href="./explanation/"></VPButton>
     <VPButton v-if='signable' theme='alt' text="List of signers" href="#signers"></VPButton>
     <ClientOnly><TranslateButton></TranslateButton></ClientOnly>
 </div>
@@ -96,7 +96,7 @@ __We deny__ that mistranslation, mishandling, or any other danger undermines thi
 
 
 <div class='shortcuts'>
-    <VPButton theme='alt' size='big' text="Questions & Answers" href="/statement/explanation/"></VPButton>
+    <VPButton theme='alt' size='big' text="Questions & Answers" href="./explanation/"></VPButton>
 </div>
 
 
