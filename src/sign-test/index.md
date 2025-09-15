@@ -29,6 +29,8 @@ h1
     display: flex
     flex-wrap: wrap
     gap: 12px
+    justify-content: center
+    margin: 24px 0
 img
     border-radius: 12px
 </style>
@@ -40,7 +42,12 @@ img
 
 # <span>The Sunnyvale Statement</span><br>on the Stewardship of Scripture
 
-<ClientOnly><TranslateButton style='margin: 36px auto' /></ClientOnly>
+<div class='shortcuts'>
+    <VPButton theme='alt' text="Sign" href="#sign"></VPButton>
+    <VPButton theme='alt' text="Q & A" href="/statement/explanation/"></VPButton>
+    <VPButton theme='alt' text="List of signers" href="#signers"></VPButton>
+    <ClientOnly><TranslateButton></TranslateButton></ClientOnly>
+</div>
 
 In the past centuries, innovations in technology have greatly increased the distribution of Scripture. However, this progress has been hindered in other ways: Anti-Christian authorities continue to inhibit access as they always have, yet some of the greatest threats to the dissemination of the Word of God come from within our own institutions. The seventeenth century introduced exclusive publishing rights that limited the printing of the Authorized Version of the Bible. The eighteenth century witnessed the advent of modern copyright law, a legal mechanism that, by design, restricts the free propagation of Scripture. In our own day, these regulations have only expanded, and their impact has increased with the invention of digital publishing.
 
@@ -85,9 +92,7 @@ __We deny__ that mistranslation, mishandling, or any other danger undermines thi
 
 
 <div class='shortcuts'>
-    <VPButton text="Sign" href="#sign" />
-    <VPButton text="Q & A" href="#questions-answers" />
-    <VPButton text="List of signers" href="#signers" />
+    <VPButton theme='alt' text="Questions & Answers" href="/statement/explanation/"></VPButton>
 </div>
 
 
