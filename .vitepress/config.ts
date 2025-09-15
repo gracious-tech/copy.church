@@ -50,7 +50,7 @@ export default defineConfig({
         logo: '/_assets/icon.svg',
         nav: [
             {text: "About", link: '/about/'},
-            {text: "The Statement", link: '/statement/', target: 'statement'},
+            {text: "Sign Statement", link: '/statement/', target: 'statement'},
             {text: "Memes", link: '/share/'},
         ],
         socialLinks: [

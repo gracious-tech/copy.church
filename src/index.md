@@ -30,7 +30,7 @@ features:
         link: /statement/
         target: statement
         icon: 📝
-        details: Statement on the Stewardship of Scripture
+        details: The Sunnyvale Statement on the Stewardship of Scripture
 ---
 
 <script lang='ts' setup>

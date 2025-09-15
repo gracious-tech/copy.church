@@ -2,7 +2,7 @@
 <template lang="pug">
 
 div.container
-    h2#sign Sign declaration
+    h2#sign Sign Statement
 
     div
         strong Type
@@ -46,7 +46,7 @@ div.container
             VPButton(@click='submit' :text='progress ? "Signing..." : "Sign"' size='big' :class='{progress}')
 
     div.error(v-if='error_msg') {{ error_msg }}
-    div.success(v-if="success && !error_msg") Thanks for signing
+    div.success(v-if="success && !error_msg") Thanks for signing. Please consider encouraging others to sign this statement as well.
 
 </template>
 
