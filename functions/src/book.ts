@@ -1,8 +1,9 @@
 
 import {HttpsFunction, onRequest, Request} from 'firebase-functions/v2/https'
 import {defineString, defineSecret} from 'firebase-functions/params'
+import {getFirestore} from 'firebase-admin/firestore'
 
-import {allowed_domains, fire_db, validate_turnstile} from './common.js'
+import {allowed_domains, fire_app, validate_turnstile} from './common.js'
 import region_data from './data/regions.json' with {type: 'json'}
 
 
@@ -69,6 +70,10 @@ const DISCORD_WEBHOOK_AU = defineSecret('DISCORD_WEBHOOK_AU')
 const DISCORD_WEBHOOK_OTHER = defineSecret('DISCORD_WEBHOOK_OTHER')
 const LULU_AUTH_SANDBOX = defineString('LULU_AUTH_SANDBOX')
 const LULU_AUTH_PROD = defineSecret('LULU_AUTH_PROD')
+
+
+// Use different database for book orders to isolate from other data
+const book_db = getFirestore(fire_app, 'book-orders')
 
 
 export const record_order:HttpsFunction = onRequest({
@@ -140,7 +145,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
     }
 
     // Basic spam prevention (drop orders from same ip if exceed limit)
-    const num_from_ip = await fire_db.collection('book_orders').where('ip', '==', ip).count().get()
+    const num_from_ip = await book_db.collection('book_orders').where('ip', '==', ip).count().get()
     const ip_total = num_from_ip.data().count
     if (ip_total > 6){
         return "You have submitted too many orders"
@@ -198,7 +203,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
 
     // Add new record to db
     // SECURITY Do not publicly expose record id, as can use it to trigger send to Lulu
-    const record = await fire_db.collection('book_orders').add(order_data)
+    const record = await book_db.collection('book_orders').add(order_data)
 
     // Determine action URL
     let action_url:string
@@ -286,7 +291,7 @@ async function mark_as_sent_inner(order_id:string):Promise<string>{
     }
 
     // Get record for order
-    const order_ref = fire_db.collection('book_orders').doc(real_id)
+    const order_ref = book_db.collection('book_orders').doc(real_id)
     const order = await order_ref.get()
     if (!order.exists){
         return `Order does not exist with id "${real_id}"`
@@ -345,7 +350,7 @@ export async function send_to_lulu_inner(order_id:string):Promise<null|string>{
     }
 
     // Get record for order
-    const order_ref = fire_db.collection('book_orders').doc(real_id)
+    const order_ref = book_db.collection('book_orders').doc(real_id)
     const order = await order_ref.get()
     if (!order.exists){
         return `Order does not exist with id "${real_id}"`
