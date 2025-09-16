@@ -18,7 +18,7 @@ import TranslateButton from '@/_comp/TranslateButton.vue'
 
 // Statement signable after 8 Oct 10:30am Sunnyvale CA
 // const pub_date_ms = new Date('2025-10-08T10:30:00-07:00').getTime()
-const pub_date_ms = new Date('2025-09-08T10:30:00-07:00').getTime()
+const pub_date_ms = new Date('2025-09-16T10:30:00-07:00').getTime()
 const signable = pub_date_ms < new Date().getTime()
 
 </script>
