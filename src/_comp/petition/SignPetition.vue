@@ -103,8 +103,13 @@ async function load_turnstile(){
 
 
 // Render turnstile at div with class 'turnstile'
+let turnstile_id:string
 async function render_turnstile(){
-    self.turnstile.render('.turnstile', {
+    if (turnstile_id){
+        self.turnstile.reset(turnstile_id)
+        return
+    }
+    turnstile_id = self.turnstile.render('.turnstile', {
         sitekey: '0x4AAAAAABoYqRsX2W9RrFK4',
         callback: function(token:string){
             input.value.turnstile = token
