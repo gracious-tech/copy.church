@@ -16,9 +16,9 @@ import SignPetition from '@/_comp/petition/SignPetition.vue'
 import DisplaySigners from '@/_comp/petition/DisplaySigners.vue'
 import TranslateButton from '@/_comp/TranslateButton.vue'
 
-// Signings public after 8 Oct 10:30am Sunnyvale CA
+// Signings published after 8 Oct 10:30am Sunnyvale CA
 const pub_date_ms = new Date('2025-10-08T10:30:00-07:00').getTime()
-const public = pub_date_ms < new Date().getTime()
+const published = pub_date_ms < new Date().getTime()
 
 </script>
 
@@ -49,7 +49,7 @@ img
 <div class='shortcuts'>
     <VPButton theme='alt' text="Sign" href="#sign"></VPButton>
     <VPButton theme='alt' text="Q & A" href="./explanation/"></VPButton>
-    <VPButton v-if='public' theme='alt' text="List of signers" href="#signers"></VPButton>
+    <VPButton v-if='published' theme='alt' text="List of signers" href="#signers"></VPButton>
     <ClientOnly><TranslateButton></TranslateButton></ClientOnly>
 </div>
 
@@ -101,7 +101,7 @@ __We deny__ that mistranslation, mishandling, or any other danger undermines thi
 
 <SignPetition petition='scripture'></SignPetition>
 
-<template v-if='public'>
+<template v-if='published'>
     <DisplaySigners petition='scripture'></DisplaySigners>
 </template>
 <p v-else>List of signers will be published during <a href='https://www.doreancon.org/' target='_blank'>Doreancon</a> on 8 October 2025.</p>
