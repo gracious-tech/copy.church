@@ -35,8 +35,8 @@ div.container
         label(v-if='input.type !== "unpub"')
             span Country (optional)
             select(v-model="input.country")
-                option(value='') -
-                option(v-for='country of countries_list' :value='country.code') {{ country.long }}
+                option(v-for='country of countries_options' :value='country.code'
+                    :disabled='country.disabled') {{ country.name }}
 
         label(v-if="input.type === 'person'")
             span Position (optional)
@@ -55,7 +55,7 @@ div.container
 
 <script lang="ts" setup>
 
-import {onMounted, ref} from 'vue'
+import {computed, onMounted, ref} from 'vue'
 
 import {countries_list} from './countries'
 
@@ -76,6 +76,21 @@ const input = ref<SigningInput>(get_empty_input())
 const error_msg = ref('')
 const success = ref(false)
 const progress = ref(false)
+
+
+// Add common countries to top of list as well
+const countries_options = computed<{code:string, name:string, disabled?:boolean}[]>(() => {
+    return [
+        {code: '', name: ""},
+        {code: 'US', name: "United States"},
+        {code: 'GB', name: "United Kingdom"},
+        {code: 'CA', name: "Canada"},
+        {code: 'AU', name: "Australia"},
+        {code: 'NZ', name: "New Zealand"},
+        {code: '', name: "---", disabled: true},
+        ...countries_list.map(({code, long}) => ({code, name: long})),
+    ]
+})
 
 
 // Function for ensuring turnstile has been loaded
