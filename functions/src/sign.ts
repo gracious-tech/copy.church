@@ -1,14 +1,19 @@
 
 import {onCall} from 'firebase-functions/v2/https'
+import {defineSecret} from 'firebase-functions/params'
 
-import {allowed_domains, fire_db} from './common.js'
+import {allowed_domains, fire_db, validate_turnstile} from './common.js'
 import {generate_token} from './utils.js'
+
+
+const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
 
 
 // Main function
 export const save_signing = onCall({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
+    secrets: [TURNSTILE_SECRET],
 }, async (request):Promise<{error:string|null}> => {
 
     // Get signer's ip address
@@ -43,6 +48,13 @@ export const save_signing = onCall({
         if (same_email.docs.filter(s => s.data()['type'] !== 'org').length){
             return {error: "Email address already used to sign."}
         }
+    }
+
+    // Check turnstile token last of all checks, as will invalidate it once used
+    // If checked earlier and some other problem, then user would have to redo each time
+    if (! await validate_turnstile(ip, String(data['turnstile']), TURNSTILE_SECRET.value())){
+        // WARN "human" string is looked for in form UI, so don't remove
+        return {error: "Not sure if you're human (please try again or email support@gracious.tech)"}
     }
 
     // Generate random id for signing

@@ -11,6 +11,7 @@ export interface SigningInput {
     name:string  // Empty string if unpub
     country:string  // Empty string if unpub
     position:string  // 'person' only
+    turnstile:string
 }
 
 export interface SigningOutput {

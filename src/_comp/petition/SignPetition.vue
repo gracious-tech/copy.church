@@ -42,6 +42,8 @@ div.container
             span Position (optional)
             input(type="text" v-model="input.position" placeholder="Pastor of..., Director of..., etc.")
 
+    div.turnstile
+
     div.sign
         VPButton(@click='submit' :text='progress ? "Signing..." : "Sign"' size='big' :class='{progress}')
 
@@ -53,11 +55,18 @@ div.container
 
 <script lang="ts" setup>
 
-import {ref} from 'vue'
+import {onMounted, ref} from 'vue'
 
 import {countries_list} from './countries'
 
 import {save_signing, type SigningInput} from './backend'
+
+
+declare global {
+    interface Window {
+        turnstile:any
+    }
+}
 
 
 const props = defineProps<{petition:string}>()
@@ -69,6 +78,47 @@ const success = ref(false)
 const progress = ref(false)
 
 
+// Function for ensuring turnstile has been loaded
+async function load_turnstile(){
+    return new Promise<void>((resolve, reject) => {
+
+        // Check if aleady exists
+        if (self.turnstile)
+            return resolve()
+        const existing = document.querySelector('script[src*="turnstile"]')
+        if (existing){
+            existing.addEventListener('load', () => resolve())
+            return
+        }
+
+        // Add script
+        const script = document.createElement('script')
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+        script.defer = true
+        script.onload = () => resolve()
+        script.onerror = () => reject(new Error("Failed to load Turnstile"))
+        document.head.appendChild(script)
+    })
+}
+
+
+// Render turnstile at div with class 'turnstile'
+async function render_turnstile(){
+    self.turnstile.render('.turnstile', {
+        sitekey: '0x4AAAAAABoYqRsX2W9RrFK4',
+        callback: function(token:string){
+            input.value.turnstile = token
+        },
+    })
+}
+
+
+onMounted(async () => {
+    await load_turnstile()
+    await render_turnstile()
+})
+
+
 function get_empty_input(){
     return {
         type: '' as 'person',  // Empty initially so user can choose
@@ -76,6 +126,7 @@ function get_empty_input(){
         name: '',
         country: '',
         position: '',
+        turnstile: '',
     }
 }
 
@@ -122,6 +173,7 @@ const submit_inner = async () => {
 
     // Reset form and show success
     input.value = get_empty_input()
+    render_turnstile()
     success.value = true
 }
 
@@ -188,6 +240,9 @@ input[type="text"], input[type="email"], select
 
 .explain
     font-size: 14px
+
+.turnstile
+    margin-top: 24px
 
 .sign
     text-align: center
