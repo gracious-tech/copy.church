@@ -7,11 +7,6 @@
         "source": "/objections/",
         "destination": "/explain/objections/",
         "type": 302
-      },
-      {
-        "source": "/statement",
-        "destination": "https://docs.google.com/document/d/12DwWu4BZpAu-Ys0Pbg0jDrK7tthzVZFEfaxpZOWEA1c/edit?usp=sharing",
-        "type": 302
       }
     ]
   },
