@@ -187,7 +187,7 @@ const submit_inner = async () => {
             return
         }
     } catch (error){
-        error_msg.value = "Something went wrong. Please try again or send us a message at gracious.tech/contact"
+        error_msg.value = "Something went wrong. Please try again or email your signing details to support@gracious.tech"
         return
     }
 
