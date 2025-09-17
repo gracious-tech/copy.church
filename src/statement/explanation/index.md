@@ -68,7 +68,7 @@ The “All Rights Reserved” approach to copyright for most Bible versions has 
 
 Under typical licenses, churches are not allowed to print significant portions of Scripture, and many are turned into lawbreakers unwittingly. Scripture does not reach as many people as it could because of restrictions, especially in low-resource languages. Legal red tape often prohibits audio bibles for people in oral cultures (75% of the world). Publishers often prohibit _faithful_ uses of their texts for trivial reasons, such as “we do not license to individuals,” or “your Bible app isn’t innovative enough.”
 
-Reported cases are just the tip of the iceberg, as it is rare for Christians to question the legitimacy of copyrighting Scripture, and most resign to simply accepting the restrictions. When copyright is breached, most comply with cease-and-desist demands, so violations rarely proceed to litigation.
+Reported cases are just the tip of the iceberg, since few Christians question the legitimacy of copyrighting Scripture, and most simply accept the restrictions. When copyright is breached, most believers comply with cease-and-desist demands, so violations rarely escalate to litigation.
 
 ### How can these limitations be significant if I’ve never faced them in my own ministry?
 Most people in ministry will have already breached the licenses of modern translations on numerous occasions without realizing it. Trivial breaches include printing a passage of Scripture for others to study, or publicly reading all 13 verses of 2 John. Public readings are subject to copyright, and reproductions of entire books are forbidden by most Bible licenses.
