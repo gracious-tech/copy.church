@@ -64,15 +64,19 @@ _The following is not part of the statement and need not be agreed to, it merely
 Most modern Bible publishers have placed legal restrictions on the copying, distributing, and translating of Scripture. This means that individuals and ministries often need to seek permission or pay licensing fees simply to include quotations of Scripture in ministry resources—even in regions where access is scarce or believers are persecuted. This practice places unnecessary barriers between people and Scripture and undermines the gospel’s call to freely share the good news. (See the [legal restrictions for major translations](https://copy.church/initiatives/bibles/).)
 
 ### What harm has been done by the mainstream status quo of Bible licensing?
-The “All Rights Reserved” approach to copyright for most Bible versions has caused measurable harm over the years, and continues to do so. Specific cases have been documented [by us](https://sellingjesus.org/articles/bible-publishers) and [others](https://copy.church/explain/examples/#printed-bibles). Under typical licenses, churches are not allowed to print large portions of Scripture, and many are turned into lawbreakers unwittingly. Scripture does not reach as many people as it could because of restrictions, especially in low-resource languages. Legal red tape often prohibits audio bibles for people in oral cultures (75% of the world). Publishers often prohibit faithful uses of their texts for trivial reasons, such as “your Bible app isn’t innovative enough,” or “we do not license to individuals.”
+The “All Rights Reserved” approach to copyright for most Bible versions has caused measurable harm over the years, and continues to do so. Specific cases have been documented [by us](https://sellingjesus.org/articles/bible-publishers) and [others](https://copy.church/explain/examples/#printed-bibles).
+
+Under typical licenses, churches are not allowed to print significant portions of Scripture, and many are turned into lawbreakers unwittingly. Scripture does not reach as many people as it could because of restrictions, especially in low-resource languages. Legal red tape often prohibits audio bibles for people in oral cultures (75% of the world). Publishers often prohibit _faithful_ uses of their texts for trivial reasons, such as “we do not license to individuals,” or “your Bible app isn’t innovative enough.”
+
+Reported cases are just the tip of the iceberg, as it is rare for Christians to question the legitimacy of copyrighting Scripture, and most resign to simply accepting the restrictions. When copyright is breached, most comply with cease-and-desist demands, so violations rarely proceed to litigation.
 
 ### How can these limitations be significant if I’ve never faced them in my own ministry?
 Most people in ministry will have already breached the licenses of modern translations on numerous occasions without realizing it. Trivial breaches include printing a passage of Scripture for others to study, or publicly reading all 13 verses of 2 John. Public readings are subject to copyright, and reproductions of entire books are forbidden by most Bible licenses.
 
-Publishers may not actually mind such uses, but they violate their licenses and may not be covered by fair use exemptions (which are only available in certain countries). This means that many ordinary uses of Scripture pastors take for granted are technically prohibited. In practice, publishers usually respond with warnings rather than litigation, but strict adherence to their licenses would require abandoning many everyday uses of Scripture.
+Even if publishers don't respond to such uses, they still violate their licenses and may not be covered by fair use exemptions (which are only available in certain countries). This means that many ordinary uses of Scripture pastors take for granted are technically prohibited, and strict adherence to licenses would require abandoning many everyday uses of Scripture.
 
 ### Was the Word of God historically restricted by legal frameworks such as copyright law?
-No. For centuries prior to the establishment of copyright law, Scripture was freely shared, copied, and translated without legal limitations. This open access facilitated widespread distribution of and engagement with the biblical text across cultures and generations.
+No. For centuries prior to the establishment of copyright law, Scripture was freely shared, copied, and translated without legal limitations. This open access facilitated widespread distribution of and engagement with the biblical text across cultures and generations, especially during the Reformation.
 
 ### Aren’t there already some free translations available?
 Yes, some translations are already freely available [in English](https://copy.church/initiatives/bibles/) and other languages. But even though these free translations exist, it does not mean the need is met. God’s people should be free to share any translation and be able to select the best translation for their particular ministry. More importantly, many languages [do not have a free translation](https://fetch.bible/content/need/) available at all. Most minority languages have only one translation, for which distribution is restricted by copyright law.
@@ -93,7 +97,7 @@ No, though there may be cases where the Word of God should be shared despite leg
 ## Regarding objections to the statement
 
 ### Don’t Bible translators deserve their wages?
-Absolutely. Those who labor in Bible translation should be generously supported (1 Tim 5:18). However, fair compensation does not require restricting access to work via legal walls or paywalls. There are sustainable models that both honor the work of translators and allow the Word of God to be freely shared. The free generosity of God’s people (donations and offerings) is a feasible model that has supported the work of churches, ministries, and many Bible translators, since the early church. The call of this statement is to uphold the freedom of the gospel while still giving workers their due.
+Absolutely. Those who labor in Bible translation should be generously supported (1 Tim 5:18). However, fair compensation does not require restricting access to work via legal walls or paywalls. There are sustainable models that both honor the work of translators and allow the Word of God to be freely shared. The free generosity of God’s people (donations and offerings) is a feasible model that has supported the work of churches, ministries, and many Bible translators, since the early church.
 
 ### Isn’t copyright necessary to protect the integrity of the text?
 Only God can protect the integrity of his Word, and he did so for thousands of years before copyright law existed. While concerns about textual accuracy are valid, copyright law _does not_ and _cannot_ sovereignly protect the purity of Scripture as bad actors may ignore it anyway. Ultimately we must trust God to guard his Word, and the historical and global witness of the Church shows that the free sharing of Scripture can coexist with faithful transmission. It is best for Scripture to be dedicated to the public domain so that it may be used as a base for further refinement and/or translation to other languages. See also these articles on [biblically responding to abuse of resources](https://sellingjesus.org/articles/abuse) and [the specter of copyright hijacking](https://sellingjesus.org/articles/copyright-hijacking).
@@ -132,7 +136,7 @@ You can start with the following resources:
 
 For statistics, see:
 
-* [Why only 54% of the world can freely share Scripture](https://fetch.bible/content/need/)
+* [How much of the world has Scripture that can be freely shared](https://fetch.bible/content/need/)
 * [Compare the licenses of English translations](https://copy.church/initiatives/bibles/)
 
 See also the following websites:
