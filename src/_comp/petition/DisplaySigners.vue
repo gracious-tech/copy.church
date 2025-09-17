@@ -9,7 +9,7 @@ teleport(to='body')
 div.list(:class='{truncate}')
     //- NOTE Condition is so VitePress outline doesn't show incomplete number in heading
     h2#signers List of signers {{ total ? `(${total})` : "" }}
-    p Since initial signing in Sunnyvale, California, USA, on 8 October 2025.
+    p Since official signing in Sunnyvale, California, USA, on 8 October 2025.
     div.grid
         div(v-for='signer of public_signers')
             div.name
