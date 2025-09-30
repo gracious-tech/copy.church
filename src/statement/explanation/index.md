@@ -166,7 +166,7 @@ Yes. Some publishers are responding to these concerns. Biblica, for example, has
 ### How can I help?
 You can support this movement by signing the statement, sharing it with others, and raising awareness in your community, church, or ministry organization. Encourage Bible publishers to reconsider their policies in light of biblical principles and advocate for translations that are open to all.
 
-### Where Can I Learn More?
+### Where can I learn more?
 You can start with the following resources:
 
 * [Bible Publishers: Stewards or Gatekeepers?](https://sellingjesus.org/articles/bible-publishers)
