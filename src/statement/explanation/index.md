@@ -89,16 +89,46 @@ Yes, some translations are already freely available [in English](https://copy.ch
 ### Are you suggesting publishers must give bibles away for free?
 No, it is permissible to charge for paper and ink. The issue this statement addresses is the _sale and restriction of the Word itself_. This is most often done today through copyright and licensing.
 
+### What do you mean by “lawful”?
+This statement retains the use of “lawful” from historic confessions (such as the Westminster Confession of Faith) to refer to that which is consistent with God’s will. It refers to God’s authority, not merely human law. This may align with civil law, but it is not bound by it.
+
 ### Why does this declaration permit adaptations of Scripture?
 “Adaptations” is a technical term to refer to the creation of any derivative work. This includes translation, digitization, musical arrangements, etc. These are permissible provided they are _lawful_ in the sight of God. The declaration affirms the _liberty_ to make such adaptations; it does not itself determine which adaptations are lawful. It does not condone distortions of Scripture or misleading renderings.
 
 See also "Message 4: Adaptation & Inspiration" at [Doreancon 2025](https://www.doreancon.org/).
 
-### Does this declaration advocate for ignoring the copyright of translations?
-No, though there may be cases where the Word of God should be shared despite legal restrictions, as it has been by missionaries in closed countries.
+### Shouldn’t this apply only to Scripture in its original form?
+No, Scripture affirms that faithful copies and translations are still the Word of God. The New Testament translates Old Testament Hebrew passages into Greek, demonstrating that the divine meaning and authority are preserved in faithful translations. The Chicago Statement on Biblical Inerrancy likewise affirms that “copies and translations of Scripture are the Word of God to the extent that they faithfully represent the original” (Article X).
+
+Faithful adaptations beyond translations also retain the divine quality of the original Word. Modern law reflects this principle in that derivative works remain subject to the copyright of the original. Similarly, since God is the author of Scripture, all faithful derivatives of his Word remain under his authority and are intended to be freely shared.
+
+Christian teaching, which also retains a divine quality when based on Scripture, does not conflict with this statement. It simply implies analogous considerations for Christian teaching, which are outside the scope of this statement.
+
+See also "Message 4: Adaptation & Inspiration" at [Doreancon 2025](https://www.doreancon.org/).
+
+### Does this statement permit breaching the copyright of Bible editions?
+At the heart of this statement is the belief that God has given his Word to his people, making claims to exclusive ownership of any form of it illegitimate. We are to submit to governing authorities (Rom 13:1, 1 Pet 2:13), but not when such submission would restrict the spread of God’s Word (Acts 4:19, 5:29).
+
+Any genuine believer will affirm that it is right to share the gospel regardless of man’s consent. How ironic, then, would it be to suggest the gospel cannot be shared when it comes in the very words of Jesus himself, merely because a translator asserts copyright. History provides numerous examples, both ancient and modern, of believers sharing Scripture in ways declared unlawful by human authorities.
+
+This is not to say breaching the copyright of existing editions of Scripture is the right course of action, especially when suitable alternatives are available. For English speakers, the Berean Standard Bible is one good alternative to commercial translations commonly used today.
+
+This is principally a theological matter, and the statement only addresses the illegitimacy of restrictions on Scripture. It does not address how believers should respond to such restrictions, as godly application will depend on the laws and circumstances each believer faces.
+
+To avoid all doubt, the Sunnyvale Statement does not itself advocate for violating any civil laws such as copyright.
 
 
 ## Regarding objections to the statement
+
+### What is the Scriptural basis for this statement?
+This is principally a statement of belief, so explanation and elaboration are not included, as is common in such declarations. The authors of this statement have spent years studying and writing on this topic, and an extensive collection of resources is available in the links below for further study. For ease of reference, the following passages are particularly relevant:
+
+Paul declares that “the word of God is not bound” (2 Tim 2:9), showing that restricting it in any way opposes God’s will. Jesus commanded his disciples to freely give what they had freely received (Matt 10:8), referring to the message they were to preach, which also became Scripture. Paul contrasted himself with those “who peddle the word of God” (2 Cor 2:17), commercializing their teaching and restricting access to it for payment. When human authorities demanded that the apostles stop spreading teaching about Jesus, they responded, “We must obey God rather than men” (Acts 4:19, 5:29).
+
+These accounts underscore the sacred nature of God’s Word. Scripture is holy (Rom 1:2) and must not be treated as a commercial product to be controlled or sold, regardless of intention.
+
+Please see the links below for many resources that go into more depth.
+
 
 ### Don’t Bible translators deserve their wages?
 Absolutely. Those who labor in Bible translation should be generously supported (1 Tim 5:18). However, fair compensation does not require restricting access to work via legal walls or paywalls. There are sustainable models that both honor the work of translators and allow the Word of God to be freely shared. The free generosity of God’s people (donations and offerings) is a feasible model that has supported the work of churches, ministries, and many Bible translators, since the early church.
@@ -118,7 +148,8 @@ While this is often assumed, no. One can publish the Bible without being saddled
 ### If we remove copyright from Scripture, won’t it become confusing to know which versions are trustworthy or accurate?
 This question confuses the notion of trademark with copyright. Copyright does not prevent someone from falsely claiming that one translation is another; there are other laws that deal with false advertising. For example, the World English Bible (WEB) is in the public domain, but its name is trademarked, ensuring that modified versions cannot falsely use the WEB name. For other translations like the KJV, there is no trademark in most jurisdictions, yet this poses no serious threat to its integrity.
 
-
+### Why not just encourage the free sharing of Scripture, rather than insist upon it?
+This statement is primarily a theological declaration rather than a response to contemporary issues. The free sharing of Scripture is not commended merely because it is useful or advantageous, but because Jesus himself commands it (Matt 10:8). To withhold his Word, or to treat it as a product to be controlled, is not merely unwise—it is disobedience. The issue is, therefore, not one of convenience or efficiency, but of faithfulness to God’s will.
 
 
 ## Regarding the origin of the statement
