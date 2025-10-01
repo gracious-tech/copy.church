@@ -207,7 +207,7 @@ async function record_order_inner(request:Request):Promise<string|null>{
 
     // Determine action URL
     let action_url:string
-    if (order_data.address.country === 'US' || order_data.address.country === 'AU'){
+    if (['US', 'AU', 'PH'].includes(order_data.address.country)){
         action_url = DEV ? 'http://127.0.0.1:5001/copy-church/us-west1/mark_as_sent'
             : 'https://mark-as-sent-eyjvbqmvpa-uw.a.run.app'
     } else {
