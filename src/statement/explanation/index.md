@@ -78,8 +78,6 @@ Even if publishers don't respond to such uses, they still violate their licenses
 ### Was the Word of God historically restricted by legal frameworks such as copyright law?
 No. For centuries prior to the establishment of copyright law, Scripture was freely shared, copied, and translated without legal limitations. This open access facilitated widespread distribution of and engagement with the biblical text across cultures and generations, especially during the Reformation.
 
-See also "Message 3: The Commercialization of Bible Societies" at [Doreancon 2025](https://www.doreancon.org/).
-
 ### Aren’t there already some free translations available?
 Yes, some translations are already freely available [in English](https://copy.church/initiatives/bibles/) and other languages. But even though these free translations exist, it does not mean the need is met. God’s people should be free to share any translation and be able to select the best translation for their particular ministry. More importantly, many languages [do not have a free translation](https://fetch.bible/content/need/) available at all. Most minority languages have only one translation, for which distribution is restricted by copyright law.
 
@@ -95,8 +93,6 @@ This statement retains the use of “lawful” from historic confessions (such a
 ### Why does this declaration permit adaptations of Scripture?
 “Adaptations” is a technical term to refer to the creation of any derivative work. This includes translation, digitization, musical arrangements, etc. These are permissible provided they are _lawful_ in the sight of God. The declaration affirms the _liberty_ to make such adaptations; it does not itself determine which adaptations are lawful. It does not condone distortions of Scripture or misleading renderings.
 
-See also "Message 4: Adaptation & Inspiration" at [Doreancon 2025](https://www.doreancon.org/).
-
 ### Shouldn’t this apply only to Scripture in its original form?
 No, Scripture affirms that faithful copies and translations are still the Word of God. The New Testament translates Old Testament Hebrew passages into Greek, demonstrating that the divine meaning and authority are preserved in faithful translations. The Chicago Statement on Biblical Inerrancy likewise affirms that “copies and translations of Scripture are the Word of God to the extent that they faithfully represent the original” (Article X).
 
@@ -104,7 +100,7 @@ Faithful adaptations beyond translations also retain the divine quality of the o
 
 Christian teaching, which also retains a divine quality when based on Scripture, does not conflict with this statement. It simply implies analogous considerations for Christian teaching, which are outside the scope of this statement.
 
-See also "Message 4: Adaptation & Inspiration" at [Doreancon 2025](https://www.doreancon.org/).
+See also [_Adaptation & Inspiration_](https://sellingjesus.org/articles/adaptation).
 
 ### Does this statement permit breaching the copyright of Bible editions?
 At the heart of this statement is the belief that God has given his Word to his people, making claims to exclusive ownership of any form of it illegitimate. We are to submit to governing authorities (Rom 13:1, 1 Pet 2:13), but not when such submission would restrict the spread of God’s Word (Acts 4:19, 5:29).
@@ -138,7 +134,7 @@ Only God can protect the integrity of his Word, and he did so for thousands of y
 
 See also:
 
- * [Does Copyright Actually Protect the Text from Corruption?](https://www.doreancon.org/)
+ * [Does Copyright Actually Protect the Text of Scripture from Corruption?](https://sellingjesus.org/articles/copyright-protect-scripture)
  * [A Biblical Approach to Abuse of Resources](https://sellingjesus.org/articles/abuse)
  * [On the Specter of Copyright Hijacking](https://sellingjesus.org/articles/copyright-hijacking)
 
@@ -173,7 +169,7 @@ You can start with the following resources:
 * [The Bondage of the Word](https://sellingjesus.org/articles/copyright-and-the-bible)
 * [How the Jesus Trade Harms the World](https://sellingjesus.org/videos/documentary/nxUzRlbIsjM) (video)
 * [Copyright & Jesus’ Command to Freely Give](https://sellingjesus.org/articles/copyright-jesus-command-to-freely-give)
-* [Doreancon 2025 talks](https://www.doreancon.org/)
+* [Doreancon 2025 talks](https://sellingjesus.org/doreancon2025)
 * [Books & articles for further reading on copyright](https://sellingjesus.org/learn/resources#category-2)
 
 For statistics, see:
