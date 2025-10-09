@@ -55,7 +55,9 @@ const public_signers = computed(() => {
             if (signer.position && signer.country){
                 subtitle += ', '
             }
-            subtitle += countries[signer.country]?.short
+            if (signer.country){
+                subtitle += countries[signer.country]?.short || ''
+            }
             return {type: signer.type, name: signer.name, subtitle}
         })
     if (truncate.value){
