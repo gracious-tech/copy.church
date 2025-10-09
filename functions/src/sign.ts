@@ -76,7 +76,7 @@ export const save_signing = onCall({
         position,
         date: new Date(),
         sort: 0,
-        reviewed: false,
+        reviewed: type === 'unpub',  // Auto-mark unpub'd signers as reviewed
     })
     // Save private data in subdoc
     batch.set(doc_private, {email, ip})
