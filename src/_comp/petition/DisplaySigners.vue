@@ -86,8 +86,9 @@ onMounted(() => {
         const type_to_num = (type:string) => type === 'org' ? 1 : 0
         const empty_to_num = (val:string) => val ? 1 : 0
 
-        // Sort by: date -> has position -> is org -> hardcoded sort
-        signers.sort((a, b) => b.date.seconds - a.date.seconds)
+        // Sort by: date -> has country -> has position -> is org -> hardcoded sort
+        signers.sort((a, b) => a.date.seconds - b.date.seconds)
+        signers.sort((a, b) => empty_to_num(b.country) - empty_to_num(a.country))
         signers.sort((a, b) => empty_to_num(b.position) - empty_to_num(a.position))
         signers.sort((a, b) => type_to_num(b.type) - type_to_num(a.type))
         signers.sort((a, b) => b.sort - a.sort)
