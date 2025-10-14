@@ -235,8 +235,8 @@ const bibles_raw = {
         year: 2012,
         type: "Very literal",
         source: "Alexandrian",
-        info: 'https://lexhampress.com/product/6162/lexham-english-bible-leb-with-audio-new-testament',
-        license: 'https://lexhampress.com/LEB-License',
+        info: 'https://www.logos.com/product/37521/lexham-english-bible',
+        license: 'https://web.archive.org/web/20240227081305/https://lexhampress.com/LEB-License',
         read: 'https://www.bible.com/bible/90/JHN.1.LEB',
         credit: "",
         can: {
@@ -311,7 +311,7 @@ const bibles_raw = {
         type: "Archaic",
         source: "Byzantine",
         info: 'https://en.wikipedia.org/wiki/King_James_Version',
-        license: 'https://www.cambridge.org/bibles/about/rights-and-permissions/rights-and-permissions-kjv',
+        license: 'https://www.cambridge.org/us/universitypress/bibles/about/rights-and-permissions',
         read: 'https://www.bible.com/bible/1/JHN.1.KJV',
         credit: "",
         can: {
