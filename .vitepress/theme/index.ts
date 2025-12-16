@@ -8,6 +8,7 @@ import CustomLayout from './CustomLayout.vue'
 import BibleQuote from '@/_comp/BibleQuote.vue'
 import CommittedPerson from '@/_comp/CommittedPerson.vue'
 import ArticlePreview from '@/_comp/ArticlePreview.vue'
+import YouTube from '@/_comp/YouTube.vue'
 
 import '@gracious.tech/fetch-client/client.css'
 import '@gracious.tech/fetch-enhancer/styles.css'
@@ -27,6 +28,7 @@ export default {
         ctx.app.component('BibleQuote', BibleQuote)
         ctx.app.component('CommittedPerson', CommittedPerson)
         ctx.app.component('ArticlePreview', ArticlePreview)
+        ctx.app.component('YouTube', YouTube)
 
         if (!import.meta.env.SSR){
 
