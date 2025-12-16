@@ -17,7 +17,7 @@ From choosing typesetting software and formatting your manuscript, to navigating
 
 ## Why Can’t I Just Go with a Traditional Publisher?
 
-Most traditional Christian publishers do not operate according to [the dorean principle](https://thedoreanprinciple.org) in Matthew 10:8. Instead, they take away author’s rights and put their work behind a paywall and other restrictions that keep millions of people (especially in developing countries) from accessing the grace, truth, and biblical wisdom God has freely given to his Body (for more info on this, see [our video on the subject](https://youtu.be/nxUzRlbIsjM), and read _[The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons)_).
+Most traditional Christian publishers do not operate according to [the dorean principle](https://thedoreanprinciple.org) in Matthew 10:8. Instead, they take away authors' rights and put their work behind a paywall and other restrictions that keep millions of people (especially in developing countries) from accessing the grace, truth, and biblical wisdom God has freely given to his Body (for more info on this, see [our video on the subject](https://youtu.be/nxUzRlbIsjM), and read _[The Christian Commons](https://www.unfoldingword.org/publications/the-christian-commons)_).
 
 Here are some key benefits of self-publishing compared to traditional publishing, as well as some downsides of going with a legacy publisher:
 
