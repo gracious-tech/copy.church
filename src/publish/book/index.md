@@ -56,7 +56,9 @@ We highly recommend modeling your book’s layout and design after the design of
 
 That said, your first step will be to choose what [typesetting](https://en.wikipedia.org/wiki/Typesetting) software you’ll use. We will discuss free and open-source options here.
 
-The most user-friendly option may be [LibreOffice Writer](https://www.libreoffice.org/), especially for typical non-academic books. Technically, Writer is not a typesetting program. But if you [learn to use styles and format correctly](https://youtu.be/2mBa4DkJhHg), it can be a powerful tool and sufficient for many use cases. For those who already own Microsoft Word and are more familiar with it, LibreOffice Writer can also provide the same powerful tools that approximate a typesetting program if you [learn how to use styles and advanced formatting](https://youtu.be/LVgWMibhLhY).
+The most user-friendly option may be [LibreOffice Writer](https://www.libreoffice.org/), especially for typical non-academic books. Technically, Writer is not a typesetting program. But if you [learn to use styles and format correctly](https://youtu.be/2mBa4DkJhHg), it can be a powerful tool and sufficient for many use cases. For those who already own Microsoft Word and are more familiar with it, Word can also provide the same powerful tools that approximate a typesetting program if you learn how to use styles and advanced formatting.
+
+<YouTube id='iP0CfH4oK5w'></YouTube>
 
 For even more professional control, and for writing technical and academic books, consider using [LaTeX](https://www.latex-project.org/) or [Scribus](https://www.scribus.net/). These are both typesetting tools, but they have different approaches and use cases. Here are the main differences between them:
 
