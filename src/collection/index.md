@@ -35,6 +35,12 @@ Book | Description
 ## Software
 There are a number of open source products being created for both Bible translation and end-user apps.
 
+We recommend browsing these lists:
+ - [Christian FOSS list](https://github.com/meichthys/christian_foss)
+ - [faith.tools (open-source category)](https://faith.tools/open-source)
+
+These are also organizations focused on open source software:
+
 Organization | Resources
 | - | - |
 [Let's Church](https://lets.church)                 | Cost-free and ad-free video hosting
