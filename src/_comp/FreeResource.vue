@@ -181,6 +181,7 @@ h3
         display: flex
         align-items: center
         gap: 12px
+        margin-bottom: 18px
 
         @media (max-width: 1200px)
             flex-direction: column
@@ -188,7 +189,7 @@ h3
     h4
         width: 140px
         text-align: center
-        margin-top: 12px
+        margin-top: 0
         margin-bottom: 0
         font-size: 16px
         font-weight: bold
