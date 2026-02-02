@@ -34,8 +34,11 @@ div.badges
             :class='{active: badge === "sj_standard"}' @click='badge = "sj_standard"')
         img(:src='`/badges/sj_alt_${pd_code}.svg`'
             :class='{active: badge === "sj_alt"}' @click='badge = "sj_alt"')
-    div.none
-        h4 Text only
+    div.fg
+        h4
+            a(href='https://freely.giving' target='freely') Freely Giving
+        img(:src='`/badges/fg_standard_${pd_code}.svg`'
+            :class='{active: badge === "fg_standard"}' @click='badge = "fg_standard"')
         img(src='/_assets/images/no_badge.svg'
             :class='{active: badge === ""}' @click='badge = ""')
 
@@ -45,7 +48,7 @@ h3 3. Add {{ badge ? "the badge" : `"${license_desc}"` }} to your resource
 p.links(v-if='badge')
     VPButton(:text='copy_badge_text' @click='copy_badge')
     a(:href='badge_url_base + "png"' target='_blank') URL for PNG
-    a(:href='badge_url_base + "svg"' target='_blank') URL for SVG
+    a(v-if='category !== "book"' :href='badge_url_base + "svg"' target='_blank') URL for SVG
 
 p
     span(v-if='category === "book"') Paste it into the first page of the book, where a copyright notice would usually go.
@@ -88,7 +91,7 @@ template(v-else)
 import {ref, computed} from 'vue'
 
 const category = ref(null as null|'book'|'music'|'image'|'video'|'software'|'')
-const badge = ref(null as null|'lcc_standard'|'lcc_alt'|'sj_standard'|'sj_alt'|'')
+const badge = ref(null as null|'lcc_standard'|'lcc_alt'|'sj_standard'|'sj_alt'|'fg_standard'|'')
 const copy_badge_text = ref("Copy badge image")
 const copy_link_text = ref("Copy")
 
@@ -98,7 +101,8 @@ const pd_code = computed(() => {
 })
 
 const license_url = computed(() => {
-    const base = badge.value?.startsWith('sj_') ? 'https://sellingjesus.org' : 'https://copy.church'
+    const base = badge.value?.startsWith('sj_') ? 'https://sellingjesus.org' :
+        (badge.value?.startsWith('fg_') ? 'https://freely.giving' : 'https://copy.church')
     return pd_code.value === 'pd' ? base + '/free' : base
 })
 
@@ -108,7 +112,8 @@ const license_desc = computed(() => {
 
 const badge_url_base = computed(() => {
     // The URL for the chosen badge, excluding the file extension
-    return `/badges/${badge.value}_${pd_code.value}.`
+    const flat = category.value === 'book' ? '_flat' : ''
+    return `/badges/${badge.value}_${pd_code.value}${flat}.`
 })
 
 
@@ -153,11 +158,10 @@ h3
     margin-bottom: 24px
 
 .badges
-    display: flex
-    flex-wrap: wrap
     margin-top: 24px
 
     img
+        width: 360px
         display: inline-flex
         box-sizing: content-box
         border: 2px solid transparent
@@ -175,28 +179,17 @@ h3
 
     > div
         display: flex
-        flex-direction: column
+        align-items: center
+        gap: 12px
 
-    > div:nth-child(1)
-        margin-right: 4px
-
-    > div:nth-child(2)
-        margin-right: 4px
-
-    .lcc img
-        width: 360px
-        margin: 10px 0  // Make up for shorter height
-
-    .sj img
-        width: 360px
-
-    .none img
-        width: 180px
+        @media (max-width: 1200px)
+            flex-direction: column
 
     h4
+        width: 140px
         text-align: center
         margin-top: 12px
-        margin-bottom: 12px
+        margin-bottom: 0
         font-size: 16px
         font-weight: bold
         font-style: italic
