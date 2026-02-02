@@ -23,10 +23,10 @@ h3 2. Choose your preferred badge
 div.badges
     div.lcc
         h4 Let's copy, church
-        img(:src='`/badges/lcc_standard_${pd_code}.svg`'
-            :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
         img(:src='`/badges/lcc_alt_${pd_code}.svg`'
             :class='{active: badge === "lcc_alt"}' @click='badge = "lcc_alt"')
+        img(:src='`/badges/lcc_standard_${pd_code}.svg`'
+            :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
     div.sj
         h4
             a(href='https://sellingjesus.org' target='sj') Selling Jesus
