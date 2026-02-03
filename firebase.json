@@ -3,11 +3,41 @@
   "hosting": {
     "public": "dist",
     "redirects": [
-      {
-        "source": "/objections/",
-        "destination": "/explain/objections/",
-        "type": 302
-      }
+        {"type": 301, "source": "/licenses/cc-by/",
+            "destination": "https://creativecommons.org/licenses/by/4.0/legalcode"},
+        {"type": 301, "source": "/licenses/cc-by-sa/",
+            "destination": "https://creativecommons.org/licenses/by-sa/4.0/legalcode"},
+        {"type": 301, "source": "/licenses/cc-by-nc/",
+            "destination": "https://creativecommons.org/licenses/by-nc/4.0/legalcode"},
+        {"type": 301, "source": "/licenses/cc-by-nc-sa/",
+            "destination": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"},
+
+        {"type": 301, "source": "/licenses/open-source/",
+            "destination": "/"},
+        {"type": 301, "source": "/licenses/free-equiv/",
+            "destination": "/"},
+        {"type": 301, "source": "/licenses/uw-ft/",
+            "destination": "https://unfoldingword.org/publications/free-translate/"},
+
+        {"type": 301, "source": "/articles/",
+            "destination": "https://sellingjesus.org/articles"},
+        {"type": 301, "source": "/articles/1cor9/",
+            "destination": "https://sellingjesus.org/articles/1cor9"},
+        {"type": 301, "source": "/articles/scope/",
+            "destination": "https://sellingjesus.org/articles/scope"},
+        {"type": 301, "source": "/articles/commerce-condemned/",
+            "destination": "https://sellingjesus.org/articles/commerce-condemned"},
+        {"type": 301, "source": "/articles/selling-truth/",
+            "destination": "https://sellingjesus.org/articles/selling-truth"},
+        {"type": 301, "source": "/articles/biblical-funding/",
+            "destination": "https://sellingjesus.org/articles/biblical-funding"},
+        {"type": 301, "source": "/articles/command-many-overlook/",
+            "destination": "https://sellingjesus.org/articles/freely-give"},
+        {"type": 301, "source": "/articles/sharealike/",
+            "destination": "https://sellingjesus.org/articles/sharealike"},
+
+        {"type": 302, "source": "/objections/",
+            "destination": "/explain/objections/"}
     ]
   },
   "functions": [
