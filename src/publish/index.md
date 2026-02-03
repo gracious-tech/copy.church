@@ -1,6 +1,6 @@
 # How to publish
 
-Once you have [dedicated your resource to the public domain](/licenses/), you'll then need to make it easy for everyone to access. For any type of resource you should:
+Once you have [dedicated your resource to the public domain](/dedicate/), you'll then need to make it easy for everyone to access. For any type of resource you should:
 
  1. __Release the source files:__ It can be very difficult to improve or translate a resource without the original source files, so ensure you publish them along with the final product.
  2. __Distribute them on existing platforms:__ We don't currently host resources ourselves, so you should use existing platforms to share them around.
@@ -27,4 +27,4 @@ Publish on Youtube but also ad-free platforms like [_Let's Church_](https://lets
 
 ## Software
 
-Most software developers will already be familiar with [GitHub](https://github.com) and [GitLab](https://gitlab.com). Be sure to choose a license that does not have any conditions as most require attribution at the very least. [We recommend the MIT No Attribution license](/licenses/).
+Most software developers will already be familiar with [GitHub](https://github.com) and [GitLab](https://gitlab.com). Be sure to choose a license that does not have any conditions as most require attribution at the very least. [We recommend the MIT No Attribution license](/dedicate/).
