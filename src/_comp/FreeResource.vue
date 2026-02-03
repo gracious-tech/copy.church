@@ -107,7 +107,7 @@ const license_url = computed(() => {
 })
 
 const license_desc = computed(() => {
-    return pd_code.value === 'pd' ? "Dedicated to the public domain" : "Freely given"
+    return pd_code.value === 'pd' ? "Dedicated to the public domain via CC0" : "Freely given"
 })
 
 const badge_url_base = computed(() => {

@@ -43,7 +43,7 @@ The badges are designed to contain everything needed to fulfil the above criteri
 
 It doesn't include CC0 given that it is a trademark and Creative Commons would probably object to designing an alternate badge to their own. But it isn't necessary given that the badges embed a link to the deed which does identify it with CC0.
 
-When it isn't possible to add an image, we recommend stating "Dedicated to the public domain via CC0". As this still fulfils the above criteria even if it is printed or the link is not included in the first place. The "Dedicated to" is helpful to show intent, given that the badge implies intent because of its purpose, which may not be evident by just saying "Public domain" in plain text.
+When it isn't possible or desired to add an image, we recommend stating "Dedicated to the public domain via CC0". The "Dedicated to" is helpful to show intent, given that the badge implies intent because of its purpose, which may not be evident by just saying "Public domain" in plain text. And the CC0 is necessary in case the link isn't added or the statement is printed on paper (the badge still has the URL even when printed).
 
 
 ### Our deed
