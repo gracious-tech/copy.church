@@ -17,7 +17,7 @@ features:
             src: /_assets/home/question.svg
         details: <strong>The commercialization of ministry</strong> &mdash; through paywalls and copyright.
     -   title: How to freely give
-        link: /licenses/
+        link: /dedicate/
         icon:
             src: /_assets/home/give.svg
         details: Relinquishing copyright is very easy.

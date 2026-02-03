@@ -124,7 +124,7 @@ export default defineConfig({
                 {
                     text: "Freeing resources",
                     items: [
-                        {text: "How to free", link: '/licenses/'},
+                        {text: "How to free", link: '/dedicate/'},
                         {text: "How to publish", link: '/publish/'},
                         {text: "How to fund", link: '/explain/funding/'},
                     ],

@@ -12,6 +12,8 @@
         {"type": 301, "source": "/licenses/cc-by-nc-sa/",
             "destination": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode"},
 
+        {"type": 301, "source": "/licenses/",
+            "destination": "/dedicate/"},
         {"type": 301, "source": "/licenses/open-source/",
             "destination": "/"},
         {"type": 301, "source": "/licenses/free-equiv/",

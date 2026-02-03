@@ -49,7 +49,7 @@ We welcome all artists, regardless if you have ever had a song published or not.
 
 While we are primarily seeking congregational songs, you are welcome to submit other music too. But all music must be faithful to Scripture (not contradictory or confusing).
 
-You'll need to ensure you own the rights and have already [freed the song](/licenses/) from copyright restrictions.
+You'll need to ensure you own the rights and have already [freed the song](/dedicate/) from copyright restrictions.
 
 ### What we need
 
@@ -67,7 +67,7 @@ In order to promote the song it is highly advantageous to also submit a lyrics v
 <VPButton href='/about/' text="Contact Us"></VPButton>
 
 ## Regarding rights
-You must own the rights to a song (both lyrics and music) to be able to [free it from copyright restrictions](/licenses/), so we can add it to our collection.
+You must own the rights to a song (both lyrics and music) to be able to [free it from copyright restrictions](/dedicate/), so we can add it to our collection.
 
 ### Brand new songs
 If you created a song that hasn't been published yet, then you can free it yourself and submit it to us.

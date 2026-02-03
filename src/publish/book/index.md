@@ -181,7 +181,7 @@ Create a title page, copyright page, table of contents, preface, acknowledgments
 
 It's important to make it clear in the front matter that your book is dedicated to the public domain, that the paper copies are being sold by a secular third party (like Amazon) at cost, that you are not profiting from the sale of the print edition, and that you're willing to send a free print copy to those who have no device on which to read the ebook and can't afford a print edition.
 
-<VPButton text="Use this guide to free the book" href='/licenses/' target="_blank" />
+<VPButton text="Use this guide to free the book" href='https://copy.church/dedicate/' target="_blank" />
 
 Here's an example:
 
