@@ -39,7 +39,7 @@ You do not need to ask the original owner for permission. However, if you modify
 
 &nbsp;
 
-<VPButton href='/' text="Learn about freely giving" />
+<VPButton href='/' text="Learn about freely giving"></VPButton>
 
 &nbsp;
 
