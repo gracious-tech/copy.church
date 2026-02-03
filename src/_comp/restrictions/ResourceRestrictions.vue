@@ -22,7 +22,7 @@ select(v-model='choice_license')
     option(value='by-nc') Attribution-NonCommercial
     option(value='by-nc-sa') Attribution-NonCommercial-ShareAlike
     option(value='by-nc-nd') Attribution-NonCommercial-NoDerivatives
-    option(value='by-nc-nd-private-translate') Free Translate
+    //- option(value='by-nc-nd-private-translate') Free Translate
     option(value='by-os') Open source software
     option(value='by-nc-nd-private-custom') Custom conditions and limits
 

@@ -49,9 +49,10 @@ export default defineConfig({
     themeConfig: {
         logo: '/_assets/icon.svg',
         nav: [
-            {text: "About", link: '/about/'},
-            {text: "Sign Statement", link: '/statement/', target: 'statement'},
+            {text: "What the Bible says", link: 'https://sellingjesus.org'},
+            {text: "Browse resources", link: 'https://freely.giving'},
             {text: "Memes", link: '/share/'},
+            {text: "About", link: '/about/'},
         ],
         socialLinks: [
             {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
@@ -122,33 +123,26 @@ export default defineConfig({
 
             '/': [
                 {
-                    text: "Freeing resources",
+                    text: "Act",
                     items: [
-                        {text: "How to free", link: '/dedicate/'},
-                        {text: "How to publish", link: '/publish/'},
-                        {text: "How to fund", link: '/explain/funding/'},
+                        {text: "Relinquish copyright", link: '/dedicate/'},
+                        {text: "Sign the statement", link: '/statement/', target: 'statement'},
                     ],
                 },
                 {
                     text: "Explanation",
                     items: [
-                        {text: "Why this is important", link: '/explain/importance/'},
+                        {text: "What's the problem?", link: '/explain/importance/'},
                         {text: "How copyright works", link: '/explain/copyright/'},
-                        {text: "Common objections", link: '/explain/objections/'},
-                    ],
-                },
-                {
-                    text: "Examples",
-                    items: [
                         {text: "Harm caused by copyright", link: '/explain/examples/'},
-                        {text: "People freely giving", link: '/join/'},
-                        {text: "Free resources", link: '/collection/'},
+                        {text: "Common objections", link: '/explain/objections/'},
                     ],
                 },
                 {
                     text: "Tests",
                     items: [
                         {text: "Bible ratings", link: '/initiatives/bibles/'},
+                        {text: "Is sharing Scripture legal?", link: '/initiatives/quiz/'},
                         {text: "Am I being generous?", link: '/initiatives/assess/'},
                     ],
                 },

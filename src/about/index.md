@@ -16,7 +16,7 @@ If you have questions regarding this site, feel free to [get in touch with Jon](
 
 ## Beliefs
 
-We are Reformed Evangelical in theology. We will publish any resources that attempt to interpret Scripture in a faithful way, even if we disagree with the conclusions. But we will not publish anything that directly contradicts or manipulates Scripture.
+We are Reformed Evangelical in theology, but these issues are applicable to all Christians.
 
 
 ## Donations

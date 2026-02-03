@@ -8,29 +8,24 @@ hero:
         src: /_assets/home/illustration.svg
     actions:
         -   link: /explain/importance/
-            text: Start here
-            theme: alt
+            text: What's the problem?
 features:
-    -   title: What's the problem?
-        link: /explain/importance/
-        icon:
-            src: /_assets/home/question.svg
-        details: <strong>The commercialization of ministry</strong> &mdash; through paywalls and copyright.
-    -   title: How to freely give
+    -   title: How to relinquish copyright
         link: /dedicate/
         icon:
             src: /_assets/home/give.svg
-        details: Relinquishing copyright is very easy.
-    -   title: But...
-        link: /explain/objections/
-        icon:
-            src: /_assets/home/object.svg
-        details: If you have any concerns, here is what you should consider.
-    -   title: Sign the Statement
+        details: It's very easy...
+    -   title: Sign the statement on Scripture
         link: /statement/
         target: statement
-        icon: 📝
-        details: The Sunnyvale Statement on the Stewardship of Scripture
+        icon:
+            src: /_assets/home/sign.svg
+        details: That it should be free to copy, translate, and distribute.
+    -   title: Bible ratings
+        link: /initiatives/bibles/
+        icon:
+            src: /_assets/home/rating.svg
+        details: See how your favorite translation compares!
 ---
 
 <script lang='ts' setup>
