@@ -2,6 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
   "hosting": {
     "public": "dist",
+    "headers": [
+        {"source": "**", "headers": [
+            {"key": "Access-Control-Allow-Origin", "value": "https://freely.giving"}
+        ]}
+    ],
     "redirects": [
         {"type": 301, "source": "/licenses/cc-by/",
             "destination": "https://creativecommons.org/licenses/by/4.0/legalcode"},
