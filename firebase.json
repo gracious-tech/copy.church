@@ -43,6 +43,15 @@
         {"type": 301, "source": "/articles/sharealike/",
             "destination": "https://sellingjesus.org/articles/sharealike"},
 
+        {"type": 301, "source": "/publish/",
+            "destination": "https://freely.giving/publish"},
+        {"type": 301, "source": "/explain/funding/",
+            "destination": "https://freely.giving/funding"},
+        {"type": 301, "source": "/collection/",
+            "destination": "https://freely.giving/"},
+        {"type": 301, "source": "/join/apply/",
+            "destination": "https://freely.giving/people-apply"},
+
         {"type": 302, "source": "/objections/",
             "destination": "/explain/objections/"}
     ]

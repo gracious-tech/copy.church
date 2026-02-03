@@ -76,7 +76,7 @@ The pay-to-use model doesn't just ensure that the owner gets paid for their work
 
 <img src='@/_assets/ill_reach.svg'>
 
-If Christian resources are really intended to benefit God's kingdom then we should consider [other methods of funding](/explain/funding/) that don't block many people from accessing them.
+If Christian resources are really intended to benefit God's kingdom then we should consider [other methods of funding](https://freely.giving/funding) that don't block many people from accessing them.
 
 ## Slowing innovation
 Copyright not only prevents someone from sharing your resource without your permission, it also prevents them from making changes to it. Often people do not consider this an issue as when a resource is created it should already be as well made as possible. However, that is what innovation is... other people coming up with ideas you originally didn't think of. Instead of thinking our way is best, we should instead be having the humility to think "maybe someone will improve this in ways I never thought of".
