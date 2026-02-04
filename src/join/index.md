@@ -29,6 +29,6 @@ A great many believers are already freely giving their resources; here's just a 
 <CommittedPerson v-for='id of people_ids_randomized' :key='id' :id='id'></CommittedPerson>
 
 
-::: info Are you also freely giving? [Submit your profile at freely.giving](https://freely.giving/people-apply)
+::: info Are you also freely giving? [Submit your profile at freely.giving](https://freely.giving/people/apply)
 
 :::

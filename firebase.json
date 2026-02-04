@@ -50,7 +50,7 @@
         {"type": 301, "source": "/collection/",
             "destination": "https://freely.giving/"},
         {"type": 301, "source": "/join/apply/",
-            "destination": "https://freely.giving/people-apply"},
+            "destination": "https://freely.giving/people/apply"},
 
         {"type": 302, "source": "/objections/",
             "destination": "/explain/objections/"}
