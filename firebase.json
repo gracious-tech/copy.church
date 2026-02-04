@@ -51,6 +51,8 @@
             "destination": "https://freely.giving/"},
         {"type": 301, "source": "/join/apply/",
             "destination": "https://freely.giving/people/apply"},
+        {"type": 301, "source": "/initiatives/music/",
+            "destination": "https://freely.giving/music"},
 
         {"type": 302, "source": "/objections/",
             "destination": "/explain/objections/"}
