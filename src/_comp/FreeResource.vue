@@ -57,8 +57,8 @@ p
     span(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
     span(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
     span(v-else) Paste it either inside your resource or next to any links to download it.
-    |
-    span(v-if='badge')  Resize as desired (standard width is 360px).
+    br
+    span(v-if='badge') Resize as desired (recommended width is {{ badge_width }}).
 
 details
     summary Optional additions
@@ -114,6 +114,14 @@ const badge_url_base = computed(() => {
     // The URL for the chosen badge, excluding the file extension
     const flat = category.value === 'book' ? '_flat' : ''
     return `/badges/${badge.value}_${pd_code.value}${flat}.`
+})
+
+
+const badge_width = computed(() => {
+    if (category.value === 'book'){
+        return '2.5in/6.35cm'
+    }
+    return '360px'
 })
 
 
