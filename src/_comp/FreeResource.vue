@@ -25,11 +25,11 @@ div.badges
         h4 Let's copy, church
         img(:src='`/badges/lcc_standard_${pd_code}.svg`'
             :class='{active: badge === "lcc_standard"}' @click='badge = "lcc_standard"')
-    //- div
-    //-     h4
-    //-         a(href='https://freely.giving' target='freely') Freely Giving
-    //-     img(:src='`/badges/fg_standard_${pd_code}.svg`'
-    //-         :class='{active: badge === "fg_standard"}' @click='badge = "fg_standard"')
+    div
+        h4
+            a(href='https://freely.giving' target='freely') Freely Giving
+        img(:src='`/badges/fg_standard_${pd_code}.svg`'
+            :class='{active: badge === "fg_standard"}' @click='badge = "fg_standard"')
     div
         h4
             a(href='https://sellingjesus.org' target='sj') Selling Jesus
