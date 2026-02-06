@@ -20,7 +20,7 @@ We are Reformed Evangelical in theology, but these issues are applicable to all 
 
 
 ## Donations
-We affirm the right to financial support for ministry, but like Paul in 1 Corinthians 9, we feel there are some contexts where it is best to even give up that legitimate right. So to ensure there is no confusion regarding the motives of this site, we do not request donations for _Let's copy, church_. Rather, we greatly encourage you to consider financially supporting [those already freely giving](/join/).
+We affirm the right to financial support for ministry, but like Paul in 1 Corinthians 9, we feel there are some contexts where it is best to even give up that legitimate right. So to ensure there is no confusion regarding the motives of this site, we do not request donations for _Let's copy, church_. Rather, we greatly encourage you to consider financially supporting [those already freely giving](https://freely.giving/people).
 
 
 ## Legal matters
