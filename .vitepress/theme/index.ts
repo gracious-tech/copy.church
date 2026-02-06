@@ -6,7 +6,6 @@ import {BibleEnhancer} from '@gracious.tech/fetch-enhancer'
 
 import CustomLayout from './CustomLayout.vue'
 import BibleQuote from '@/_comp/BibleQuote.vue'
-import CommittedPerson from '@/_comp/CommittedPerson.vue'
 import ArticlePreview from '@/_comp/ArticlePreview.vue'
 import YouTube from '@/_comp/YouTube.vue'
 
@@ -26,7 +25,6 @@ export default {
         // Global components
         ctx.app.component('VPButton', VPButton)
         ctx.app.component('BibleQuote', BibleQuote)
-        ctx.app.component('CommittedPerson', CommittedPerson)
         ctx.app.component('ArticlePreview', ArticlePreview)
         ctx.app.component('YouTube', YouTube)
 

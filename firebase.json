@@ -49,6 +49,8 @@
             "destination": "https://freely.giving/funding"},
         {"type": 301, "source": "/collection/",
             "destination": "https://freely.giving/"},
+        {"type": 301, "source": "/join/",
+            "destination": "https://freely.giving/people"},
         {"type": 301, "source": "/join/apply/",
             "destination": "https://freely.giving/people/apply"},
         {"type": 301, "source": "/initiatives/music/",
