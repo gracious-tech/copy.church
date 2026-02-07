@@ -13,7 +13,7 @@ import FreeResource from '@/_comp/FreeResource.vue'
 
 .party
     width: 150px
-    margin: 80px auto
+    margin: 80px auto 40px auto
 
 </style>
 
@@ -25,3 +25,7 @@ You can instantly free your resource from copyright at any time. You simply need
 <FreeResource></FreeResource>
 
 <img src='@/_assets/party.webp' class='party'>
+
+<div style='text-align: center'>
+    <VPButton text="Discover places to share it!" href="https://freely.giving/publish"></VPButton>
+</div>
