@@ -4,18 +4,24 @@
 h3 1. Select the type of resource
 
 div.categories
-    input(v-model='category' type='radio' id='category_book' value='book')
-    label(for='category_book') Book
-    input(v-model='category' type='radio' id='category_music' value='music')
-    label(for='category_music') Music
-    input(v-model='category' type='radio' id='category_image' value='image')
-    label(for='category_image') Image
-    input(v-model='category' type='radio' id='category_video' value='video')
-    label(for='category_video') Video
-    input(v-model='category' type='radio' id='category_software' value='software')
-    label(for='category_software') Software
-    input(v-model='category' type='radio' id='category_other' value='')
-    label(for='category_other') Other
+    div
+        input(v-model='category' type='radio' id='category_book' value='book')
+        label(for='category_book') Book
+    div
+        input(v-model='category' type='radio' id='category_music' value='music')
+        label(for='category_music') Music
+    div
+        input(v-model='category' type='radio' id='category_image' value='image')
+        label(for='category_image') Image
+    div
+        input(v-model='category' type='radio' id='category_video' value='video')
+        label(for='category_video') Video
+    div
+        input(v-model='category' type='radio' id='category_software' value='software')
+        label(for='category_software') Software
+    div
+        input(v-model='category' type='radio' id='category_other' value='')
+        label(for='category_other') Other
 
 
 h3 2. Choose your preferred badge
@@ -164,6 +170,11 @@ summary
 h3
     margin-top: 64px
     margin-bottom: 24px
+
+.categories
+    display: flex
+    flex-wrap: wrap
+    gap: 4px
 
 .badges
     margin-top: 24px
