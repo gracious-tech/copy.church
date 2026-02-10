@@ -46,9 +46,11 @@ table.translations(ref='table' :class='{advanced}'): tbody
             td(v-html='b(item.can.translate)')
             td(v-html='b(item.can.modify)')
 
-p.advanced-toggle
-    input(v-model='advanced' type='checkbox' id='advanced')
-    label(for='advanced') Show advanced info
+div.bottom
+    VPButton(text="Sign our Statement on Scripture" href='/statement/')
+    p.advanced-toggle
+        input(v-model='advanced' type='checkbox' id='advanced')
+        label(for='advanced') Show advanced info
 
 p &nbsp;
 
