@@ -54,9 +54,6 @@ export default defineConfig({
             {text: "Memes", link: '/share/'},
             {text: "About", link: '/about/'},
         ],
-        socialLinks: [
-            {icon: 'facebook', link: 'https://www.facebook.com/copy.church'},
-        ],
         search: {
             provider: 'local',
         },
