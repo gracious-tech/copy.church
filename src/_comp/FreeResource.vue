@@ -5,22 +5,22 @@ h3 1. Select the type of resource
 
 div.categories
     div
-        input(v-model='category' type='radio' id='category_book' value='book')
-        label(for='category_book') Book
+        input(v-model='category' type='radio' id='category_books' value='books')
+        label(for='category_books') Book
     div
         input(v-model='category' type='radio' id='category_music' value='music')
         label(for='category_music') Music
     div
-        input(v-model='category' type='radio' id='category_image' value='image')
-        label(for='category_image') Image
+        input(v-model='category' type='radio' id='category_images' value='images')
+        label(for='category_images') Image
     div
-        input(v-model='category' type='radio' id='category_video' value='video')
-        label(for='category_video') Video
+        input(v-model='category' type='radio' id='category_videos' value='videos')
+        label(for='category_videos') Video
     div
         input(v-model='category' type='radio' id='category_software' value='software')
         label(for='category_software') Software
     div
-        input(v-model='category' type='radio' id='category_other' value='')
+        input(v-model='category' type='radio' id='category_other' value='other')
         label(for='category_other') Other
 
 
@@ -54,13 +54,13 @@ h3 3. Add {{ badge ? "the badge" : `"${license_desc}"` }} to your resource
 p.links(v-if='badge')
     VPButton(:text='copy_badge_text' @click='copy_badge')
     a(:href='badge_url_base + "png"' target='_blank') URL for PNG
-    a(v-if='category !== "book"' :href='badge_url_base + "svg"' target='_blank') URL for SVG
+    a(v-if='category !== "books"' :href='badge_url_base + "svg"' target='_blank') URL for SVG
 
 p
-    span(v-if='category === "book"') Paste it into the first page of the book, where a copyright notice would usually go.
+    span(v-if='category === "books"') Paste it into the first page of the book, where a copyright notice would usually go.
     span(v-else-if='category === "music"') Paste it next to your songs, wherever they are able to be downloaded or listened to.
-    span(v-else-if='category === "image"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
-    span(v-else-if='category === "video"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
+    span(v-else-if='category === "images"') Paste it next to your image, wherever it is able to be viewed or downloaded. It is not necessary to include it in the image itself.
+    span(v-else-if='category === "videos"') Paste it next to your video, wherever it is able to be watched or downloaded. You may also like to put it at the end of your video if appropriate.
     span(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
     span(v-else) Paste it either inside your resource or next to any links to download it.
     br
@@ -96,7 +96,7 @@ template(v-else)
 
 import {ref, computed} from 'vue'
 
-const category = ref(null as null|'book'|'music'|'image'|'video'|'software'|'')
+const category = ref(null as null|'books'|'music'|'images'|'videos'|'software'|'other')
 const badge = ref(null as null|'lcc_standard'|'lcc_alt'|'sj_standard'|'sj_alt'|'fg_standard'|'')
 const copy_badge_text = ref("Copy badge image")
 const copy_link_text = ref("Copy")
@@ -118,13 +118,13 @@ const license_desc = computed(() => {
 
 const badge_url_base = computed(() => {
     // The URL for the chosen badge, excluding the file extension
-    const flat = category.value === 'book' ? '_flat' : ''
+    const flat = category.value === 'books' ? '_flat' : ''
     return `/badges/${badge.value}_${pd_code.value}${flat}.`
 })
 
 
 const badge_width = computed(() => {
-    if (category.value === 'book'){
+    if (category.value === 'books'){
         return '2.5in/6.35cm'
     }
     return '360px'
