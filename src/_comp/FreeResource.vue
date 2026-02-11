@@ -64,7 +64,7 @@ p
     span(v-else-if='category === "software"') Paste it in the README for your software and link it to <strong>{{ license_url }}</strong> to encourage others to give without conditions too.
     span(v-else) Paste it either inside your resource or next to any links to download it.
     br
-    span(v-if='badge') Resize as desired (recommended width is {{ badge_width }}).
+    span(v-if='badge') Recommended display size: {{ badge_size }}
 
 details
     summary Optional additions
@@ -123,11 +123,14 @@ const badge_url_base = computed(() => {
 })
 
 
-const badge_width = computed(() => {
+const badge_size = computed(() => {
     if (category.value === 'books'){
-        return '2.5in/6.35cm'
+        const h_in = badge.value?.startsWith('sj_') ? '0.833' : '0.694'
+        const h_cm = badge.value?.startsWith('sj_') ? '2.12' : '1.76'
+        return `2.5 × ${h_in} inches (6.35 × ${h_cm} cm)`
     }
-    return '360px'
+    const h_px = badge.value?.startsWith('sj_') ? '120' : '100'
+    return `360 × ${h_px} px`
 })
 
 
