@@ -108,7 +108,7 @@ const statements_raw = {
         ...READ_ONLY,
     },
     natural_affections: {
-        name: "Statement on Natural Affections",
+        name: "Natural Affection",
         year: 2024,
         website: 'https://natural-affections.com',
         ...READ_ONLY,
@@ -120,13 +120,13 @@ const statements_raw = {
         ...READ_ONLY,
     },
     cacn: {
-        name: "Statement from Christians Against Christian Nationalism",
+        name: "Christians Against Christian Nationalism",
         year: 2019,
-        website: 'https://christiansagainstchristiannationalism.org',
+        website: 'https://www.christiansagainstchristiannationalism.org/statement',
         ...READ_ONLY,
     },
     scng: {
-        name: "Statement on Christian Nationalism and the Gospel",
+        name: "Christian Nationalism and the Gospel",
         year: 2024,
         website: 'https://statementonchristiannationalism.com',
         ...READ_ONLY,
