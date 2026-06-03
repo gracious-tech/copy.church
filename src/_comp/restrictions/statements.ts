@@ -22,6 +22,17 @@ const ND = {
         use_commercially: true,
     },
 }
+const NC_ND = {
+    license: "Non-commercial No-Derivatives",
+    can: {
+        read: true,
+        distribute: true,
+        translate: false,
+        modify: false,
+        not_attribute: false,
+        use_commercially: false,
+    },
+}
 const READ_ONLY = {
     license: "All rights reserved",
     can: {
@@ -76,7 +87,7 @@ const statements_raw = {
         name: "Danvers Statement",
         year: 1989,
         website: 'https://cbmw.org/about/the-danvers-statement',
-        ...ND,
+        ...NC_ND,
     },
     nashville: {
         name: "Nashville Statement",
