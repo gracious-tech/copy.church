@@ -24,6 +24,6 @@ While about 81% of the world has a complete Bible, only [54% of the world has a 
 
 ---
 
-<small>There are, of course, many old public domain translations. In this list, we include only those translations that are still under copyright, or those that have been dedicated to the public domain prior to their copyright expiring.</small>
+<small>This list only includes popular or noteworthy translations. Some more translations [do exist](https://fetch.bible/content/bibles/#eng) that are either openly licensed or public domain.</small>
 
 See also &nbsp; <VPButton text="Quiz" href='/initiatives/quiz/' theme='alt' /> &nbsp; <VPButton text="Critical Text Ratings" href='/initiatives/critical-texts/' theme='alt' />
