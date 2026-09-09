@@ -2,7 +2,6 @@ rules_version = '2';
 
 service cloud.firestore {
 
-    // Careful not to apply rules to book-orders db (only default)
     match /databases/(default)/documents {
         match /petitions/{petition_id} {
             // Allow public read of signer public data
