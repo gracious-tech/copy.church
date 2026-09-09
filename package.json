@@ -3,7 +3,7 @@
   "type": "module",
   "devDependencies": {
     "@volar/vue-language-plugin-pug": "^1.6.5",
-    "firebase-tools": "^14.2.1",
+    "firebase-tools": "^15.29.0",
     "markdown-it": "^13.0.2",
     "markdown-it-footnote": "^3.0.3",
     "npm-check-updates": "^16.14.6",
