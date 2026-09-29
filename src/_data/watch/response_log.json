@@ -189,6 +189,16 @@
         "evidence_url": ""
     },
     {
+        "id": "2023-wycliffe-paper-bible",
+        "owner_name": "Wycliffe Bible Translators, Inc.",
+        "owner_id": "wycliffe_bible_translators",
+        "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
+        "translation_ids": [],
+        "date": "2023-10-06",
+        "summary": "Gracious Tech asked SIL International (now SIL Global) and Wycliffe for printing permissions for their Digital Bible Library translations in Paper Bible (paper.bible), a free app for printing Scripture book by book. SIL's DBL content manager objected that the app “gives rights to a third party to print publish, which we don't currently permit with any of our licenses.” They added that users could add pages that “have not been approved by one of our consultants for publishing.” SIL then declined: “In many cases/languages it would conflict with other license agreements we have with other organisations.” It said it would still consider requests for specific translations where no conflicting agreement exists.",
+        "evidence_url": ""
+    },
+    {
         "id": "2024-lockman-lsb-paper-bible",
         "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
