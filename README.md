@@ -1,7 +1,7 @@
 
 # Let's copy, church
 
-The source code for https://copy.church
+The source code for [copy.church](https://copy.church)
 
 
 ## Rationale for wording of dedications

@@ -138,7 +138,8 @@ export default defineConfig({
                 {
                     text: "Ratings",
                     items: [
-                        {text: "Bible ratings", link: '/initiatives/bibles/'},
+                        {text: "Bible Org Watch", link: '/watch/'},
+                        {text: "English Bible ratings", link: '/initiatives/bibles/'},
                         {text: "Critical Text ratings", link: '/initiatives/critical-texts/'},
                         {text: "Statement ratings", link: '/initiatives/statements/'},
                     ],

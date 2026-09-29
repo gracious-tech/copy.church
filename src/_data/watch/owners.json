@@ -1,0 +1,1210 @@
+[
+    {
+        "id": "africa_inland_mission",
+        "name": "Africa Inland Mission"
+    },
+    {
+        "id": "africa_inland_mission_aic_tanzania_africa_inland_church_of_tanzania",
+        "name": "Africa Inland Mission, AIC Tanzania - Africa Inland Church of Tanzania"
+    },
+    {
+        "id": "ahirani_christi_iswari_mandli_sakri_dhule",
+        "name": "Ahirani Christi Iswari Mandli, Sakri, Dhule"
+    },
+    {
+        "id": "aic_tanzania_africa_inland_church_of_tanzania",
+        "name": "AIC Tanzania - Africa Inland Church of Tanzania"
+    },
+    {
+        "id": "american_bible_society",
+        "name": "American Bible Society"
+    },
+    {
+        "id": "an_sagart",
+        "name": "An Sagart"
+    },
+    {
+        "id": "aramaic_bible_translation",
+        "name": "Aramaic Bible Translation, Inc."
+    },
+    {
+        "id": "argentine_bible_society",
+        "name": "Argentine Bible Society"
+    },
+    {
+        "id": "artists_for_israel_international",
+        "name": "Artists for Israel International"
+    },
+    {
+        "id": "association_congolaise_de_traductions_de_la_bible",
+        "name": "Association Congolaise de Traductions de la Bible"
+    },
+    {
+        "id": "association_nationale_pour_la_traduction_de_la_bible_et_l_alphabétisation",
+        "name": "Association Nationale pour la Traduction de la Bible et l’Alphabétisation"
+    },
+    {
+        "id": "association_traduire_la_bible",
+        "name": "Association Traduire la Bible"
+    },
+    {
+        "id": "audiobiblia_org_irma_flores",
+        "name": "AudioBiblia.org /Irma Flores"
+    },
+    {
+        "id": "bangladesh_bible_society",
+        "name": "Bangladesh Bible Society"
+    },
+    {
+        "id": "baptist_mission_australia",
+        "name": "Baptist Mission Australia"
+    },
+    {
+        "id": "beyond_translation",
+        "name": "Beyond Translation"
+    },
+    {
+        "id": "bib_sen_an",
+        "name": "Bib Sen An"
+    },
+    {
+        "id": "bible_and_literature_translation_association",
+        "name": "Bible and Literature Translation Association"
+    },
+    {
+        "id": "bible_league_bulgaria",
+        "name": "Bible League - Bulgaria"
+    },
+    {
+        "id": "bible_league_international",
+        "name": "Bible League International"
+    },
+    {
+        "id": "bible_society_australia",
+        "name": "Bible Society Australia"
+    },
+    {
+        "id": "bible_society_in_georgia",
+        "name": "Bible Society in Georgia"
+    },
+    {
+        "id": "bible_society_in_guatemala",
+        "name": "Bible Society in Guatemala"
+    },
+    {
+        "id": "bible_society_in_guinea_conakry",
+        "name": "Bible Society in Guinea-Conakry"
+    },
+    {
+        "id": "bible_society_in_israel",
+        "name": "Bible Society in Israel"
+    },
+    {
+        "id": "bible_society_in_lebanon",
+        "name": "Bible Society in Lebanon"
+    },
+    {
+        "id": "bible_society_in_liberia",
+        "name": "Bible Society in Liberia"
+    },
+    {
+        "id": "bible_society_in_netherlands_antilles_and_aruba",
+        "name": "Bible Society in Netherlands Antilles and Aruba"
+    },
+    {
+        "id": "bible_society_in_nicaragua",
+        "name": "Bible Society in Nicaragua"
+    },
+    {
+        "id": "bible_society_in_northern_ireland",
+        "name": "Bible Society in Northern Ireland"
+    },
+    {
+        "id": "bible_society_in_russia",
+        "name": "Bible Society in Russia"
+    },
+    {
+        "id": "bible_society_in_sierra_leone",
+        "name": "Bible Society in Sierra Leone"
+    },
+    {
+        "id": "bible_society_in_south_sudan",
+        "name": "Bible Society in South Sudan"
+    },
+    {
+        "id": "bible_society_in_sudan",
+        "name": "Bible Society in Sudan"
+    },
+    {
+        "id": "bible_society_in_taiwan",
+        "name": "Bible Society in Taiwan"
+    },
+    {
+        "id": "bible_society_in_the_central_african_republic",
+        "name": "Bible Society in the Central African Republic"
+    },
+    {
+        "id": "bible_society_in_turkey",
+        "name": "Bible Society in Turkey"
+    },
+    {
+        "id": "bible_society_new_zealand_charitable_trust",
+        "name": "Bible Society New Zealand Charitable Trust"
+    },
+    {
+        "id": "bible_society_of_armenia",
+        "name": "Bible Society of Armenia"
+    },
+    {
+        "id": "bible_society_of_benin",
+        "name": "Bible Society of Benin"
+    },
+    {
+        "id": "bible_society_of_botswana",
+        "name": "Bible Society of Botswana"
+    },
+    {
+        "id": "bible_society_of_brazil",
+        "name": "Bible Society of Brazil"
+    },
+    {
+        "id": "bible_society_of_burkina_faso",
+        "name": "Bible Society of Burkina Faso"
+    },
+    {
+        "id": "bible_society_of_cameroon",
+        "name": "Bible Society of Cameroon"
+    },
+    {
+        "id": "bible_society_of_chad",
+        "name": "Bible Society of Chad"
+    },
+    {
+        "id": "bible_society_of_congo_republic",
+        "name": "Bible Society of Congo (Republic)"
+    },
+    {
+        "id": "bible_society_of_costa_rica",
+        "name": "Bible Society of Costa Rica"
+    },
+    {
+        "id": "bible_society_of_côte_d_ivoire",
+        "name": "Bible Society of Côte d'Ivoire"
+    },
+    {
+        "id": "bible_society_of_egypt",
+        "name": "Bible Society of Egypt"
+    },
+    {
+        "id": "bible_society_of_ethiopia",
+        "name": "Bible Society of Ethiopia"
+    },
+    {
+        "id": "bible_society_of_geneva",
+        "name": "Bible Society of Geneva"
+    },
+    {
+        "id": "bible_society_of_ghana",
+        "name": "Bible Society of Ghana"
+    },
+    {
+        "id": "bible_society_of_honduras",
+        "name": "Bible Society of Honduras"
+    },
+    {
+        "id": "bible_society_of_india",
+        "name": "The Bible Society of India"
+    },
+    {
+        "id": "bible_society_of_kenya",
+        "name": "Bible Society of Kenya"
+    },
+    {
+        "id": "bible_society_of_kyrgyzstan",
+        "name": "Bible Society of Kyrgyzstan"
+    },
+    {
+        "id": "bible_society_of_lithuania",
+        "name": "Bible Society of Lithuania"
+    },
+    {
+        "id": "bible_society_of_malawi",
+        "name": "Bible Society of Malawi"
+    },
+    {
+        "id": "bible_society_of_malaysia",
+        "name": "Bible Society of Malaysia"
+    },
+    {
+        "id": "bible_society_of_mali",
+        "name": "Bible Society of Mali"
+    },
+    {
+        "id": "bible_society_of_mauritius",
+        "name": "Bible Society of Mauritius"
+    },
+    {
+        "id": "bible_society_of_mexico",
+        "name": "Bible Society of Mexico"
+    },
+    {
+        "id": "bible_society_of_micronesia",
+        "name": "Bible Society of Micronesia"
+    },
+    {
+        "id": "bible_society_of_mozambique",
+        "name": "Bible Society of Mozambique"
+    },
+    {
+        "id": "bible_society_of_myanmar",
+        "name": "Bible Society of Myanmar"
+    },
+    {
+        "id": "bible_society_of_namibia",
+        "name": "Bible Society of Namibia"
+    },
+    {
+        "id": "bible_society_of_nigeria",
+        "name": "Bible Society of Nigeria"
+    },
+    {
+        "id": "bible_society_of_papua_new_guinea",
+        "name": "Bible Society of Papua New Guinea"
+    },
+    {
+        "id": "bible_society_of_portugal",
+        "name": "Bible Society of Portugal"
+    },
+    {
+        "id": "bible_society_of_rwanda",
+        "name": "Bible Society of Rwanda"
+    },
+    {
+        "id": "bible_society_of_serbia",
+        "name": "Bible Society of Serbia"
+    },
+    {
+        "id": "bible_society_of_slovenia",
+        "name": "Bible Society of Slovenia"
+    },
+    {
+        "id": "bible_society_of_south_africa",
+        "name": "Bible Society of South Africa"
+    },
+    {
+        "id": "bible_society_of_spain",
+        "name": "Bible Society of Spain"
+    },
+    {
+        "id": "bible_society_of_tajikistan",
+        "name": "Bible Society of Tajikistan"
+    },
+    {
+        "id": "bible_society_of_tanzania",
+        "name": "Bible Society of Tanzania"
+    },
+    {
+        "id": "bible_society_of_the_democratic_republic_of_congo",
+        "name": "Bible Society of the Democratic Republic of Congo"
+    },
+    {
+        "id": "bible_society_of_the_republic_of_macedonia",
+        "name": "Bible Society of the Republic of Macedonia"
+    },
+    {
+        "id": "bible_society_of_the_south_pacific",
+        "name": "Bible Society of the South Pacific"
+    },
+    {
+        "id": "bible_society_of_the_west_indies",
+        "name": "Bible Society of the West Indies"
+    },
+    {
+        "id": "bible_society_of_togo",
+        "name": "Bible Society of Togo"
+    },
+    {
+        "id": "bible_society_of_uganda",
+        "name": "Bible Society of Uganda"
+    },
+    {
+        "id": "bible_society_of_zambia",
+        "name": "Bible Society of Zambia"
+    },
+    {
+        "id": "bible_society_of_zimbabwe",
+        "name": "Bible Society of Zimbabwe"
+    },
+    {
+        "id": "bible_society_vietnam",
+        "name": "Bible Society Vietnam"
+    },
+    {
+        "id": "bible_students_fellowship_of_bangladesh",
+        "name": "Bible Students Fellowship of Bangladesh"
+    },
+    {
+        "id": "bible_translation_and_literacy",
+        "name": "Bible Translation and Literacy"
+    },
+    {
+        "id": "bible_translators_of_ukraine",
+        "name": "Bible Translators of Ukraine"
+    },
+    {
+        "id": "bibles_et_publications_chrétiennes",
+        "name": "Bibles et Publications Chrétiennes"
+    },
+    {
+        "id": "bibles_international",
+        "name": "Bibles International"
+    },
+    {
+        "id": "biblica",
+        "name": "Biblica, Inc."
+    },
+    {
+        "id": "biblical_studies_press_l_l_c",
+        "name": "Biblical Studies Press, L. L. C."
+    },
+    {
+        "id": "binoy_chacko_ministries",
+        "name": "Binoy Chacko Ministries"
+    },
+    {
+        "id": "bodo_parja_translation_samithi_dasamanthpur_odisha",
+        "name": "Bodo Parja Translation Samithi, Dasamanthpur, Odisha"
+    },
+    {
+        "id": "bolivian_bible_society",
+        "name": "Bolivian Bible Society"
+    },
+    {
+        "id": "bridge_connectivity_solutions",
+        "name": "Bridge Connectivity Solutions"
+    },
+    {
+        "id": "british_foreign_bible_society",
+        "name": "British & Foreign Bible Society"
+    },
+    {
+        "id": "bsb_publishing",
+        "name": "BSB Publishing, LLC"
+    },
+    {
+        "id": "bukavu_mashi_and_other_kivu_languages_bible",
+        "name": "BUKAVU Mashi and other Kivu Languages Bible"
+    },
+    {
+        "id": "bulgarian_bible_society",
+        "name": "Bulgarian Bible Society"
+    },
+    {
+        "id": "cameroon_association_for_bible_translation_and_literacy",
+        "name": "Cameroon Association for Bible Translation and Literacy"
+    },
+    {
+        "id": "canadian_bible_society",
+        "name": "Canadian Bible Society"
+    },
+    {
+        "id": "central_asia_publishing_gsungrab",
+        "name": "Central Asia Publishing, gSungrab"
+    },
+    {
+        "id": "centre_international_foi_agissante_par_la_charité",
+        "name": "Centre International Foi Agissante par la Charité"
+    },
+    {
+        "id": "ceylon_bible_society",
+        "name": "Ceylon Bible Society"
+    },
+    {
+        "id": "chilean_bible_society",
+        "name": "Chilean Bible Society"
+    },
+    {
+        "id": "christelike_lektuurmaatskappy_npc",
+        "name": "CHRISTELIKE LEKTUURMAATSKAPPY NPC"
+    },
+    {
+        "id": "chutney_media_agency_limited",
+        "name": "Chutney Media Agency Limited"
+    },
+    {
+        "id": "common_english_bible",
+        "name": "Common English Bible"
+    },
+    {
+        "id": "communauté_des_eglises_travaillistes",
+        "name": "Communauté des Eglises Travaillistes"
+    },
+    {
+        "id": "confraternity_of_christian_doctrine",
+        "name": "Confraternity of Christian Doctrine"
+    },
+    {
+        "id": "coordination_inter_eglises_pour_la_traduction_et_l_alphabétisation_en_langue_gabonaise",
+        "name": "Coordination Inter-Eglises pour la Traduction et l'alphabétisation en Langue Gabonaise"
+    },
+    {
+        "id": "covenant_press",
+        "name": "Covenant Press"
+    },
+    {
+        "id": "croatian_bible_society",
+        "name": "Croatian Bible Society"
+    },
+    {
+        "id": "crossway_good_news_publishers",
+        "name": "Crossway / Good News Publishers"
+    },
+    {
+        "id": "czech_bible_society",
+        "name": "Czech Bible Society"
+    },
+    {
+        "id": "danish_bible_society",
+        "name": "Danish Bible Society"
+    },
+    {
+        "id": "darton_longman_todd",
+        "name": "Darton, Longman & Todd"
+    },
+    {
+        "id": "davar_audio_bibles",
+        "name": "Davar Audio Bibles"
+    },
+    {
+        "id": "davar_partners_international",
+        "name": "Davar Partners International"
+    },
+    {
+        "id": "desiya_translation_samithi_koraput_odisha",
+        "name": "Desiya Translation Samithi, Koraput, Odisha"
+    },
+    {
+        "id": "dhankavi_mandli_khargon_raykhed_nandurbar",
+        "name": "Dhankavi Mandli, Khargon, Raykhed, Nandurbar"
+    },
+    {
+        "id": "didayi_believers_assembly_kudumulugumma_malkangiri_odisha",
+        "name": "Didayi Believers Assembly Kudumulugumma, Malkangiri, Odisha"
+    },
+    {
+        "id": "diocese_of_awori_church_of_nigeria_anglican_communion",
+        "name": "Diocese of Awori, Church of Nigeria, Anglican Communion"
+    },
+    {
+        "id": "door43_world_missions_community",
+        "name": "Door43 World Missions Community"
+    },
+    {
+        "id": "dr_humberto_gómez_caballero",
+        "name": "Dr. Humberto Gómez Caballero"
+    },
+    {
+        "id": "eastern_zone",
+        "name": "Eastern Zone"
+    },
+    {
+        "id": "ecclesia_bible_society",
+        "name": "Ecclesia Bible Society"
+    },
+    {
+        "id": "elam_ministries",
+        "name": "Elam Ministries"
+    },
+    {
+        "id": "ellis_w_deibler_jr",
+        "name": "Ellis W. Deibler, Jr."
+    },
+    {
+        "id": "empower_asia_bible_translation_movement",
+        "name": "Empower Asia Bible Translation Movement"
+    },
+    {
+        "id": "emu_international",
+        "name": "EMU International"
+    },
+    {
+        "id": "evangelical_apostolos_ministry",
+        "name": "The Evangelical Apostolos Ministry"
+    },
+    {
+        "id": "ewangeliczny_instytut_biblijny",
+        "name": "Ewangeliczny Instytut Biblijny"
+    },
+    {
+        "id": "far_east_broadcasting_company",
+        "name": "Far East Broadcasting Company"
+    },
+    {
+        "id": "faroese_bible_society",
+        "name": "Faroese Bible Society"
+    },
+    {
+        "id": "fcbh_malaysia",
+        "name": "FCBH - Malaysia"
+    },
+    {
+        "id": "finnish_bible_society",
+        "name": "Finnish Bible Society"
+    },
+    {
+        "id": "free_bible_foundation",
+        "name": "The Free Bible Foundation"
+    },
+    {
+        "id": "free_bible_ministry",
+        "name": "Free Bible Ministry, Inc."
+    },
+    {
+        "id": "french_bible_society",
+        "name": "French Bible Society"
+    },
+    {
+        "id": "friends_bible_study",
+        "name": "Friends Bible Study"
+    },
+    {
+        "id": "german_bible_society",
+        "name": "German Bible Society"
+    },
+    {
+        "id": "ghana_institute_of_linguistics_literacy_and_bible_translation",
+        "name": "Ghana Institute of Linguistics, Literacy and Bible Translation"
+    },
+    {
+        "id": "gilak_media",
+        "name": "Gilak Media"
+    },
+    {
+        "id": "global_bible_initiative",
+        "name": "Global Bible Initiative"
+    },
+    {
+        "id": "global_mission_outreach",
+        "name": "Global Mission Outreach"
+    },
+    {
+        "id": "global_mission_outreach_benin",
+        "name": "Global Mission Outreach Benin"
+    },
+    {
+        "id": "global_partners",
+        "name": "Global Partners"
+    },
+    {
+        "id": "god_s_vision_ministries",
+        "name": "God's Vision Ministries"
+    },
+    {
+        "id": "god_s_word_to_the_nations_mission_society",
+        "name": "God's Word to the Nations Mission Society"
+    },
+    {
+        "id": "haitian_bible_society",
+        "name": "Haitian Bible Society"
+    },
+    {
+        "id": "harvest_mission_ethiopia",
+        "name": "Harvest Mission Ethiopia"
+    },
+    {
+        "id": "hellenic_bible_society",
+        "name": "Hellenic Bible Society"
+    },
+    {
+        "id": "hermon_forlag_as",
+        "name": "Hermon Forlag AS"
+    },
+    {
+        "id": "holman_bible_publishers",
+        "name": "Holman Bible Publishers"
+    },
+    {
+        "id": "hong_kong_bible_society",
+        "name": "Hong Kong Bible Society"
+    },
+    {
+        "id": "hosanna_faith_comes_by_hearing",
+        "name": "Hosanna/Faith Comes By Hearing"
+    },
+    {
+        "id": "hungarian_bible_society",
+        "name": "Hungarian Bible Society"
+    },
+    {
+        "id": "i_smail_serinken",
+        "name": "İsmail Serinken"
+    },
+    {
+        "id": "icelandic_bible_society",
+        "name": "Icelandic Bible Society"
+    },
+    {
+        "id": "indonesian_bible_society",
+        "name": "Indonesian Bible Society"
+    },
+    {
+        "id": "initiative_for_translation_and_development_of_african_languages",
+        "name": "Initiative for Translation and Development of African Languages"
+    },
+    {
+        "id": "institute_for_bible_translation_finland",
+        "name": "Institute for Bible Translation, Finland"
+    },
+    {
+        "id": "institute_for_bible_translation_russia",
+        "name": "Institute for Bible Translation, Russia"
+    },
+    {
+        "id": "institute_for_bible_translation_sweden",
+        "name": "Institute for Bible Translation, Sweden"
+    },
+    {
+        "id": "interconfessional_bible_society_in_romania",
+        "name": "Interconfessional Bible Society in Romania"
+    },
+    {
+        "id": "interconfessional_bible_society_of_albania",
+        "name": "Interconfessional Bible Society of Albania"
+    },
+    {
+        "id": "international_sharif_bible_society",
+        "name": "International Sharif Bible Society"
+    },
+    {
+        "id": "internationaler_gideonbund_in_deutschland",
+        "name": "Internationaler Gideonbund in Deutschland e.V."
+    },
+    {
+        "id": "isia_limbu_literature_association",
+        "name": "Isia Limbu Literature Association"
+    },
+    {
+        "id": "isv_foundation",
+        "name": "ISV Foundation"
+    },
+    {
+        "id": "italybfbs",
+        "name": "ItalyBFBS"
+    },
+    {
+        "id": "j_warren_wells",
+        "name": "J Warren Wells"
+    },
+    {
+        "id": "japan_bible_society",
+        "name": "Japan Bible Society"
+    },
+    {
+        "id": "john_the_forerunner_church_of_christians_of_evangelical_faith_of_minsk_city",
+        "name": "John the Forerunner Church of Christians of Evangelical Faith of Minsk City"
+    },
+    {
+        "id": "juray_soura_translation_samithi_gajapati_odisha",
+        "name": "Juray Soura Translation Samithi, Gajapati, Odisha"
+    },
+    {
+        "id": "kc_markose",
+        "name": "KC Markose"
+    },
+    {
+        "id": "konda_porja_translation_samithi_dasamanthpur_odisha",
+        "name": "Konda Porja Translation Samithi, Dasamanthpur, Odisha"
+    },
+    {
+        "id": "korean_bible_society",
+        "name": "Korean Bible Society"
+    },
+    {
+        "id": "koya_translation_samithi_malkangiri_odisha",
+        "name": "Koya Translation Samithi, Malkangiri, Odisha"
+    },
+    {
+        "id": "kuvi_translation_samithi_semiliguda_koraput_odisha",
+        "name": "Kuvi Translation Samithi, Semiliguda, Koraput, Odisha"
+    },
+    {
+        "id": "la_liga_bíblica",
+        "name": "La Liga Bíblica"
+    },
+    {
+        "id": "la_sociedad_bíblica_peruana",
+        "name": "La Sociedad Bíblica Peruana"
+    },
+    {
+        "id": "language_developers_and_bible_translators",
+        "name": "Language Developers and Bible Translators"
+    },
+    {
+        "id": "laos_partnership",
+        "name": "Laos Partnership"
+    },
+    {
+        "id": "latinamerican_textual_bible_foundation",
+        "name": "Latinamerican Textual Bible Foundation Inc"
+    },
+    {
+        "id": "latvian_bible_society",
+        "name": "Latvian Bible Society"
+    },
+    {
+        "id": "latvijas_bībeles_savienība_latvian_bible_union",
+        "name": "Latvijas Bībeles Savienība (Latvian Bible Union)"
+    },
+    {
+        "id": "lebenswasser",
+        "name": "Lebenswasser"
+    },
+    {
+        "id": "lexihub",
+        "name": "Lexihub"
+    },
+    {
+        "id": "liebenzel_mission",
+        "name": "Liebenzel Mission"
+    },
+    {
+        "id": "liga_bíblica_internacional",
+        "name": "Liga Bíblica Internacional"
+    },
+    {
+        "id": "liga_del_sembrador_a_c",
+        "name": "Liga del Sembrador, A.C."
+    },
+    {
+        "id": "lockman_foundation",
+        "name": "The Lockman Foundation"
+    },
+    {
+        "id": "lodhi_translation_samithi_gondia",
+        "name": "Lodhi Translation Samithi, Gondia"
+    },
+    {
+        "id": "love_fellowship",
+        "name": "The Love Fellowship"
+    },
+    {
+        "id": "lutheran_bible_translators_australia",
+        "name": "Lutheran Bible Translators Australia"
+    },
+    {
+        "id": "m_b_s_n_i_n_e_a_c9",
+        "name": "M.B.S.: N.I.N.E.A. C9"
+    },
+    {
+        "id": "malagasy_bible_society",
+        "name": "Malagasy Bible Society"
+    },
+    {
+        "id": "malta_bible_society",
+        "name": "Malta Bible Society"
+    },
+    {
+        "id": "manna_foundation_ghana",
+        "name": "Manna Foundation Ghana"
+    },
+    {
+        "id": "messianic_jewish_family_bible_society",
+        "name": "Messianic Jewish Family Bible Society"
+    },
+    {
+        "id": "messianic_jewish_publishers",
+        "name": "Messianic Jewish Publishers"
+    },
+    {
+        "id": "michael_paul_johnson",
+        "name": "Michael Paul Johnson"
+    },
+    {
+        "id": "missão_novas_tribos_do_brasil",
+        "name": "Missão Novas Tribos do Brasil"
+    },
+    {
+        "id": "mission_evangélique_réformée_néerlandaise",
+        "name": "Mission Evangélique Réformée Néerlandaise"
+    },
+    {
+        "id": "mission_for_language_translation_ika_bible_translation_committee",
+        "name": "Mission for Language Translation/Ika Bible Translation Committee"
+    },
+    {
+        "id": "missionassist",
+        "name": "MissionAssist"
+    },
+    {
+        "id": "mistland",
+        "name": "MiSTLanD"
+    },
+    {
+        "id": "mitla_studio",
+        "name": "Mitla Studio"
+    },
+    {
+        "id": "mongolian_union_bible_society",
+        "name": "Mongolian Union Bible Society"
+    },
+    {
+        "id": "morocco_bible_society",
+        "name": "Morocco Bible Society"
+    },
+    {
+        "id": "mukeddes_kalam_uyghur_bible_translation_committee",
+        "name": "Mukeddes Kalam - Uyghur Bible Translation Committee"
+    },
+    {
+        "id": "munda_believers_assembly_sdcu_sambalpur_odisha",
+        "name": "Munda Believers Assembly, SDCU, Sambalpur, Odisha"
+    },
+    {
+        "id": "nahali_vishwaseen_mandli_toranmal_nandurbar",
+        "name": "Nahali Vishwaseen Mandli, Toranmal, Nandurbar"
+    },
+    {
+        "id": "national_council_of_the_churches_of_christ",
+        "name": "National Council of the Churches of Christ"
+    },
+    {
+        "id": "neighborhood_bible_translation_initiative",
+        "name": "Neighborhood Bible Translation Initiative"
+    },
+    {
+        "id": "nepal_bible_society",
+        "name": "Nepal Bible Society"
+    },
+    {
+        "id": "netherlands_bible_society",
+        "name": "Netherlands Bible Society"
+    },
+    {
+        "id": "new_harvest_global_ministries",
+        "name": "New Harvest Global Ministries"
+    },
+    {
+        "id": "new_life_computer_institute",
+        "name": "New Life Computer Institute"
+    },
+    {
+        "id": "new_thai_version_foundation",
+        "name": "New Thai Version Foundation"
+    },
+    {
+        "id": "new_tribes_mission",
+        "name": "New Tribes Mission"
+    },
+    {
+        "id": "nigeria_bible_translation_trust",
+        "name": "The Nigeria Bible Translation Trust"
+    },
+    {
+        "id": "noor_e_kashmir",
+        "name": "Noor-e-Kashmir"
+    },
+    {
+        "id": "north_east_centre_for_training_and_research",
+        "name": "North East Centre for Training and Research"
+    },
+    {
+        "id": "norwegian_bible_society",
+        "name": "Norwegian Bible Society"
+    },
+    {
+        "id": "operation_mobilization_international",
+        "name": "Operation Mobilization International"
+    },
+    {
+        "id": "orta_asia_baspasy",
+        "name": "Orta Asia Baspasy"
+    },
+    {
+        "id": "our_language_bible_organization",
+        "name": "The Our Language Bible Organization"
+    },
+    {
+        "id": "oxford_university_press_and_cambridge_university_press",
+        "name": "Oxford University Press and Cambridge University Press"
+    },
+    {
+        "id": "pakistan_bible_society",
+        "name": "Pakistan Bible Society"
+    },
+    {
+        "id": "paraguayan_bible_society",
+        "name": "Paraguayan Bible Society"
+    },
+    {
+        "id": "partners_in_bible_translation_senga_bible_translation_and_literacy",
+        "name": "Partners in Bible Translation, Senga Bible Translation and Literacy"
+    },
+    {
+        "id": "pengo_translation_samithi_dasamanthpur_odisha",
+        "name": "Pengo Translation Samithi, Dasamanthpur, Odisha"
+    },
+    {
+        "id": "peruvian_bible_society",
+        "name": "Peruvian Bible Society"
+    },
+    {
+        "id": "philippines_bible_society",
+        "name": "Philippines Bible Society"
+    },
+    {
+        "id": "pierre_demers",
+        "name": "Pierre deMers"
+    },
+    {
+        "id": "pioneer_bible_translators",
+        "name": "Pioneer Bible Translators"
+    },
+    {
+        "id": "producciones_cristianas_vina",
+        "name": "Producciones Cristianas Vina"
+    },
+    {
+        "id": "rev_dr_allen_harry_hall_and_jollen_press",
+        "name": "Rev. Dr. Allen Harry Hall and Jollen Press"
+    },
+    {
+        "id": "righthand_international_foundation",
+        "name": "Righthand International Foundation"
+    },
+    {
+        "id": "ron_smith",
+        "name": "Ron Smith"
+    },
+    {
+        "id": "royal_jongbloed",
+        "name": "Royal Jongbloed"
+    },
+    {
+        "id": "sanskritbible_in",
+        "name": "SanskritBible.in"
+    },
+    {
+        "id": "scottish_bible_society",
+        "name": "Scottish Bible Society"
+    },
+    {
+        "id": "sdruzeni_pro_novou_bibli_kralickou",
+        "name": "Sdruzeni pro Novou Bibli kralickou"
+    },
+    {
+        "id": "seed_company",
+        "name": "The Seed Company"
+    },
+    {
+        "id": "senter_for_tro_og_medier",
+        "name": "SENTER FOR TRO OG MEDIER"
+    },
+    {
+        "id": "seychelles_bible_society",
+        "name": "Seychelles Bible Society"
+    },
+    {
+        "id": "sihtasutus_piibel_kõigile",
+        "name": "Sihtasutus Piibel Kõigile"
+    },
+    {
+        "id": "sil_global",
+        "name": "SIL Global"
+    },
+    {
+        "id": "sil_papua_new_guinea",
+        "name": "SIL Papua New Guinea"
+    },
+    {
+        "id": "sil_tanzania",
+        "name": "SIL - Tanzania"
+    },
+    {
+        "id": "sim_international",
+        "name": "SIM International"
+    },
+    {
+        "id": "sinode_gereja_protestan_maluku",
+        "name": "Sinode Gereja Protestan Maluku"
+    },
+    {
+        "id": "slovak_bible_society",
+        "name": "Slovak Bible Society"
+    },
+    {
+        "id": "sociedade_religiosa_edições_vida_nova",
+        "name": "Sociedade Religiosa Edições Vida Nova"
+    },
+    {
+        "id": "son_light_foundation",
+        "name": "Son Light Foundation"
+    },
+    {
+        "id": "son_light_sunshine_foundation",
+        "name": "Son Light/ Sunshine Foundation"
+    },
+    {
+        "id": "spoken_worldwide",
+        "name": "Spoken Worldwide"
+    },
+    {
+        "id": "su_media",
+        "name": "SU Media"
+    },
+    {
+        "id": "suriname_bible_society",
+        "name": "Suriname Bible Society"
+    },
+    {
+        "id": "svenska_kärnbibeln",
+        "name": "Svenska Kärnbibeln"
+    },
+    {
+        "id": "sw_radio",
+        "name": "SW-Radio e.V."
+    },
+    {
+        "id": "swedish_bible_society",
+        "name": "Swedish Bible Society"
+    },
+    {
+        "id": "swedish_reformation_bible_society",
+        "name": "Swedish Reformation Bible Society"
+    },
+    {
+        "id": "swiss_bible_society",
+        "name": "Swiss Bible Society"
+    },
+    {
+        "id": "thailand_bible_society",
+        "name": "Thailand Bible Society"
+    },
+    {
+        "id": "thomas_nelson",
+        "name": "Thomas Nelson"
+    },
+    {
+        "id": "thomas_robinson",
+        "name": "Thomas Robinson"
+    },
+    {
+        "id": "tim_penterjemah_bahasa_nggem",
+        "name": "Tim Penterjemah Bahasa Nggem"
+    },
+    {
+        "id": "tovrose",
+        "name": "TovRose"
+    },
+    {
+        "id": "turkmen_truth",
+        "name": "Turkmen Truth"
+    },
+    {
+        "id": "tyndale_bible_translators",
+        "name": "Tyndale Bible Translators"
+    },
+    {
+        "id": "tyndale_house_foundation",
+        "name": "Tyndale House Foundation"
+    },
+    {
+        "id": "tyndale_house_publishers",
+        "name": "Tyndale House Publishers"
+    },
+    {
+        "id": "ukrainian_bible_society",
+        "name": "Ukrainian Bible Society"
+    },
+    {
+        "id": "ulster_scots_language_society",
+        "name": "Ulster-Scots Language Society"
+    },
+    {
+        "id": "unión_nacional_de_traductores_indígenas",
+        "name": "Unión Nacional de Traductores Indígenas"
+    },
+    {
+        "id": "unit_bahasa_dan_budaya",
+        "name": "Unit Bahasa dan Budaya"
+    },
+    {
+        "id": "united_bible_societies",
+        "name": "United Bible Societies"
+    },
+    {
+        "id": "united_bible_societies_in_ecuador",
+        "name": "United Bible Societies in Ecuador"
+    },
+    {
+        "id": "verbreitung_des_christlichen_glaubens",
+        "name": "Verbreitung des christlichen Glaubens e.V."
+    },
+    {
+        "id": "wilbur_n_pickering",
+        "name": "Wilbur N. Pickering"
+    },
+    {
+        "id": "word_biblical_ministries",
+        "name": "Word Biblical Ministries"
+    },
+    {
+        "id": "word_for_the_world_international",
+        "name": "The Word for the World International"
+    },
+    {
+        "id": "world_bible_translation_center",
+        "name": "World Bible Translation Center"
+    },
+    {
+        "id": "worldventure",
+        "name": "WorldVenture"
+    },
+    {
+        "id": "wps",
+        "name": "WPS"
+    },
+    {
+        "id": "wycliffe_benin",
+        "name": "Wycliffe Benin"
+    },
+    {
+        "id": "wycliffe_bible_translators",
+        "name": "Wycliffe Bible Translators, Inc."
+    },
+    {
+        "id": "wycliffe_india",
+        "name": "Wycliffe India"
+    },
+    {
+        "id": "wycliffe_philippines",
+        "name": "Wycliffe - Philippines"
+    },
+    {
+        "id": "wycliffe_togo",
+        "name": "Wycliffe - Togo"
+    },
+    {
+        "id": "wycliffe_usa",
+        "name": "Wycliffe - USA"
+    },
+    {
+        "id": "yayasan_misi_penginjilan_pemuridan_papua_jl_sosial",
+        "name": "Yayasan Misi Penginjilan Pemuridan Papua Jl. Sosial"
+    },
+    {
+        "id": "yayasan_sumber_sejahtera",
+        "name": "Yayasan Sumber Sejahtera"
+    },
+    {
+        "id": "yisu_por_bherho_karanya_palya_mandli_rajpur_barwani",
+        "name": "Yisu Por Bherho Karanya Palya Mandli, Rajpur, Barwani"
+    },
+    {
+        "id": "ywam_togo",
+        "name": "YWAM - Togo"
+    },
+    {
+        "id": "фонди_калом",
+        "name": "Фонди «Калом»"
+    }
+]
