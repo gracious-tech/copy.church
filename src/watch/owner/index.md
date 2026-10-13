@@ -10,3 +10,8 @@ import WatchTranslationsPage from '@/_comp/watch/WatchTranslationsPage.vue'
 </script>
 
 <ClientOnly><WatchTranslationsPage owner_mode/></ClientOnly>
+
+&nbsp;
+
+_We aim for accuracy based on available information, but mistakes are possible —
+[contact us](/about/#contact) if you spot one._

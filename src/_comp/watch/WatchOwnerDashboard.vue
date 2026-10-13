@@ -4,6 +4,9 @@
 div.watch_dashboard_wrap
     WatchStats(:stats='stat_tiles')
 
+    //- Page-supplied content (e.g. related links) placed between the stats and the table
+    slot
+
     div.controls
         input.search(v-model='query' type='text' placeholder="Search by org name…")
         label.cases_only
@@ -129,10 +132,14 @@ const stat_tiles = computed(() => {
     const total = translations.length
     const pct = (n:number) => total ? Math.round((n / total) * 100) : 0
     return [
-        {value: total, label: "Modern Bible versions"},
-        {value: `${pct(restricted)}%`, label: "Restricted", tier: 'restricted' as const},
+        {value: total, label: "Total Bible versions",
+            desc: "Includes both text and audio versions which are often licensed separately"},
+        {value: `${pct(restricted)}%`, label: "Restricted", tier: 'restricted' as const,
+            desc: "You cannot share the Bible version without their permission"},
         {value: `${pct(semi_restricted_or_worse)}%`, label: "Semi-restricted / Restricted",
-            tier: 'semi_restricted' as const},
+            tier: 'semi_restricted' as const,
+            desc: "You cannot use the version as a base for a new Bible translation and/or sell"
+                + " printed copies (no derivatives / non-commercial)"},
     ]
 })
 

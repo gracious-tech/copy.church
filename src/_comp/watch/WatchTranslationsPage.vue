@@ -237,6 +237,9 @@ const filtered = computed(() => {
     .back_link
         margin-bottom: 16px
 
+    h1
+        margin-bottom: 16px
+
     .owner_links
         display: flex
         flex-wrap: wrap

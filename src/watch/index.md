@@ -36,24 +36,24 @@ h1
     color: #000
     border-radius: 0 10px 10px 0
 
+// Related pages are secondary to the dashboard, so keep them small
+.see_also
+    font-size: 0.85em
+    line-height: 1.6
+
 </style>
 
 # <span class="title_org">Bible Org</span><span class="title_watch">Watch</span> {#bible-org-watch}
 
 Bible Org Watch tracks which organizations control the licensing of God's Word, and how restrictive they are.
 
-- **Restricted**: You cannot share the Bible version without their permission
-- **Semi-restricted**: You cannot use the version as a base for a new Bible translation
-  and/or sell printed copies (no derivatives / non-commercial)
+<WatchOwnerDashboard>
 
-See also: [All Bible versions](/watch/translations/) &middot; [English Bible ratings](/initiatives/bibles/) &middot; [Critical Text ratings](/initiatives/critical-texts/)
+See also: [All Bible versions](/watch/translations/) &middot; [English Bible ratings](/initiatives/bibles/) &middot; [Critical Text ratings](/initiatives/critical-texts/) {.see_also}
 
-<WatchOwnerDashboard/>
+</WatchOwnerDashboard>
 
 &nbsp;
 
 _Figures above exclude versions over 95 years old (public domain by age), except the KJV
 (perpetual Crown copyright)._
-
-_We aim for accuracy based on available information, but mistakes are possible —
-[contact us](/about/#contact) if you spot one._
