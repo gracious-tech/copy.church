@@ -1,6 +1,8 @@
 
 // Shared Bible Org Watch logic for the owner dashboard and translations pages
 
+import {ref, shallowRef} from 'vue'
+
 import response_log from '../../_data/watch/response_log.json'
 import type {ResponseLogEntry} from '../../_data/watch/types'
 
@@ -11,6 +13,24 @@ export type LicenseTier = 'open' | 'semi_restricted' | 'restricted'
 // Display a count with a comma thousand separator (e.g. 1,234)
 export function format_num(n:number):string{
     return n.toLocaleString('en-US')
+}
+
+
+// Display an ISO date in the browser's locale with a short month (e.g. "1 Jan 2021" or
+// "Jan 1, 2021"), or just month and year if no day, leaving partial dates like "2024" or
+// "Pre-1995" as is. Formatted in UTC so the local timezone can't shift the day.
+export function format_date(date:string):string{
+    const match = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(date)
+    if (!match)
+        return date
+    const [, year, month, day] = match
+    const utc = Date.UTC(Number(year), Number(month) - 1, day ? Number(day) : 1)
+    return new Intl.DateTimeFormat(undefined, {
+        day: day ? 'numeric' : undefined,
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'UTC',
+    }).format(utc)
 }
 
 
@@ -67,4 +87,26 @@ const sorted_log = [...response_log as ResponseLogEntry[]]
 for (const entry of sorted_log){
     const key = entry.owner_id ?? slugify(entry.owner_name)
     ;(response_log_by_owner[key] ??= []).push(entry)
+}
+
+
+// The item whose reports are shown in a dialog, whether it's open, and a function to open it
+export function use_reports_dialog<T>(){
+    const target = shallowRef<T>()
+    const open = ref(false)
+    const show = (item:T) => {
+        target.value = item
+        open.value = true
+    }
+    return {target, open, show}
+}
+
+
+// Response log entries grouped by the rating page ids (bibles.ts/critical_texts.ts) of the
+// translations involved, most recent first
+export const response_log_by_rating_id:Record<string, ResponseLogEntry[]> = {}
+for (const entry of sorted_log){
+    for (const id of entry.rating_ids ?? []){
+        (response_log_by_rating_id[id] ??= []).push(entry)
+    }
 }

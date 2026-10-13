@@ -22,6 +22,7 @@ table.translations(ref='table' :class='{advanced}'): tbody
             th Audio
             th Translate
             th Modify
+        th(v-if='has_reports')
     tr(v-for='item of bibles' :key='item.id' :class='{selected: bible_id === item.id}'
             @click='() => change_translation(item.id)')
         td {{ item.abbrev }}
@@ -45,6 +46,18 @@ table.translations(ref='table' :class='{advanced}'): tbody
             td(v-html='b(item.can.audio)')
             td(v-html='b(item.can.translate)')
             td(v-html='b(item.can.modify)')
+        td.reports(v-if='has_reports')
+            WatchReportsButton(
+                v-if='response_log_by_rating_id[item.id]' @click.stop='show_reports(item)'
+                :count='response_log_by_rating_id[item.id].length'
+                :active='reports_open && reports_item?.id === item.id' compact
+            )
+
+//- The clicked item's reports, shown in a modal
+WatchReportsDialog(
+    v-model='reports_open' :title='`Reports for ${reports_item?.abbrev ?? ""}`'
+    :entries='reports_item ? response_log_by_rating_id[reports_item.id] ?? [] : []'
+)
 
 div.bottom
     VPButton(text="Sign our Statement on Scripture" href='/statement/')
@@ -67,6 +80,9 @@ import {computed, ref, nextTick} from 'vue'
 
 import BibleRestrictionsItem from './BibleRestrictionsItem.vue'
 import {BIBLES} from '../bibles'
+import WatchReportsButton from '../watch/WatchReportsButton.vue'
+import WatchReportsDialog from '../watch/WatchReportsDialog.vue'
+import {response_log_by_rating_id, use_reports_dialog} from '../watch/watch_utils'
 
 
 const bibles = Object.values(BIBLES)
@@ -97,6 +113,13 @@ const change_translation = id => {
 
 // Advanced info columns available when screen wide enough
 const advanced = ref(false)
+
+// The reports column only shows when at least one item has reports
+const has_reports = bibles.some(item => response_log_by_rating_id[item.id])
+
+// The translation whose reports are shown in the dialog
+const {target: reports_item, open: reports_open, show: show_reports} =
+    use_reports_dialog<typeof bibles[0]>()
 
 </script>
 

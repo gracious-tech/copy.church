@@ -176,6 +176,13 @@ p You also may be able to ask the copyright owner for additional permissions. Th
 p
     small Some licenses have different conditions depending on the intended use (such as commercial and non-commercial), and above represents whichever is most permissive (see actual licenses for more details).
 
+
+//- Reports of how the owner has responded to this translation being used
+template(v-if='reports.length')
+    h2 Reports
+    WatchCases(:entries='reports')
+    p &nbsp;
+
 </template>
 
 
@@ -183,8 +190,14 @@ p
 
 import {computed} from 'vue'
 
+import WatchCases from '../watch/WatchCases.vue'
+import {response_log_by_rating_id} from '../watch/watch_utils'
+
 const props = defineProps({bible: Object})
 const bible = computed(() => props.bible)
+
+// Reports involving this translation, if any
+const reports = computed(() => response_log_by_rating_id[bible.value.id] ?? [])
 
 const b = bool => bool === true ? '<span class=good>✓</span>' : `<span class=bad>✕</span>`
 

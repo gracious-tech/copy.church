@@ -93,6 +93,11 @@ table: tbody
             p(v-if='bible.abbrev === "UBS"' class='mixed')
                 small Some versions of the UBS have a commentary that lists the reasons for the most significant textual choices, but it is sold as a separate product.
 
+//- Reports of how the owner has responded to this critical text being used
+template(v-if='reports.length')
+    h3 Reports
+    WatchCases(:entries='reports')
+
 p
     small You may be able to ask the copyright owner for additional permissions. Though, <a href='/objections/permission/'>there is no guarantee</a> your request will be accepted.
 
@@ -103,8 +108,14 @@ p
 
 import {computed} from 'vue'
 
+import WatchCases from '../watch/WatchCases.vue'
+import {response_log_by_rating_id} from '../watch/watch_utils'
+
 const props = defineProps({bible: Object})
 const bible = computed(() => props.bible)
+
+// Reports involving this critical text, if any
+const reports = computed(() => response_log_by_rating_id[bible.value.id] ?? [])
 
 const b = bool => bool === true ? '<span class=good>✓</span>' : `<span class=bad>✕</span>`
 

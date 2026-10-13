@@ -59,7 +59,10 @@ export interface ResponseLogEntry {
     owner_id?: string  // References an Owner's `id`, once matched
     translation_names: string[]  // Display name(s) of the translation(s) involved
     translation_ids: string[]  // References to Translation `id`s, for the ones that are matched
+    rating_ids?: string[]  // Ids on the English Bible/critical text rating pages (bibles.ts,
+        // critical_texts.ts) of the translations involved, so the report shows on those pages too
     date: string  // ISO 8601 date, or "Pre-YYYY" when only an upper bound is known
-    summary: string
-    evidence_url: string  // Public source, or empty if the evidence is private correspondence
+    summary: string  // Rendered as HTML, so may contain links and block quotes
+    sources: string[]  // Public sources, most relevant first (the only one linked), or empty if
+        // the evidence is private correspondence
 }

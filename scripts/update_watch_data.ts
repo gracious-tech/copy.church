@@ -2,13 +2,17 @@
 // Rebuilds the static Bible Society Watch dataset in src/_data/watch/*.json entirely from
 // scratch each run — translations.json, owners.json, and license_terms.json are NOT loaded and
 // merged with, they're fully replaced, so stale/removed fields and abandoned entries can't
-// accumulate across runs. (response_log.json is untouched — that one's hand-curated.)
+// accumulate across runs. (response_log.json is hand-curated — only its translation ids are
+// updated, to follow a translation into the version it was merged into or superseded by. A
+// rebuild that would no longer list a translation a case is about isn't saved at all.)
 //
 // Which versions are listed: every entry from the private steps first, then every find.bible
 // version that isn't one of those. The private steps live in .private/ (not in the public repo,
 // see its header for its sources and flags) — without it they're skipped. A closed version
 // that has since been re-published as an open edition (e.g. "Biblica® Open ...") is dropped in
-// favour of the open one.
+// favour of the open one. find.bible's versions only supplement the private steps', so wherever
+// the two are merged (as editions, or a closed version and its open edition), the private steps'
+// version and terms are always preferred.
 // Sources, in order:
 //   1. Private — text entries
 //   2. find.bible — via the public digitalbiblesociety/data dataset, for versions not in 1
@@ -26,34 +30,45 @@
 //      fetched once.
 // Deliberately does NOT consult open.bible (tried and dropped — see git history if it needs
 // revisiting; this sandbox's network can't reach it at all).
+// languages.json (the English name of each language code listed) is also rebuilt every run, from
+// find.bible's languages.json, else fetch.bible's manifest.
 //
-// NOTE Because owners.json is rebuilt fresh, any manually-added Owner fields (website,
-// ministry_watch_url) will be lost on the next run unless this script is taught to preserve them.
+// Owners' websites come from the private steps, and their Ministry Watch links from
+// ministry_watch.ts (Ministry Watch's compare page, fetched fresh every run).
+//
+// NOTE Because owners.json is rebuilt fresh, any Owner fields added to it by hand will be lost on
+// the next run — add them through one of the steps instead.
 //
 // NOTE Staleness — ebible_cache.json never re-fetches a details page (delete the translationId to
 // redo one), so it can be rebuilt reproducibly and nothing is fetched twice. eBible's
 // translations.csv, find.bible and fetch.bible are all fetched fresh every run.
 //
 // Usage:
-//   node --experimental-strip-types scripts/update_watch_data.ts [--dry-run]
+//   node --experimental-strip-types scripts/update_watch_data.ts [--dry-run] [--review-editions]
 //       (plus the private flags documented in .private/)
+//   --review-editions prints each set of versions merged as editions of one translation, to check
+//   that none are unrelated
 
-import {existsSync} from 'node:fs'
+import {existsSync, readFileSync} from 'node:fs'
 
 import type {Translation, Owner, LicenseTerms, ResponseLogEntry} from '../src/_data/watch/types.ts'
 import type {BuildState, DblSteps, FetchBible, FetchBibleEntry, FetchCollectionIds, FindBible,
-    FindBibleIndex} from './watch_common.ts'
-import {args, build_org_index, fetch_into, fetch_json, fetch_language, license_from_text,
-    owner_id_for, owner_ids_for, push_terms, save_json, sort_keys, split_holders,
-    strip_copyright_notice, today} from './watch_common.ts'
+    FindBibleIndex, FindBibleLanguage} from './watch_common.ts'
+import {args, build_org_index, DATA_DIR, fetch_into, fetch_json, fetch_language,
+    language_names, license_from_text, owner_id_for, owner_ids_for, push_terms, save_json, save_text, sort_keys,
+    split_holders, strip_copyright_notice, today} from './watch_common.ts'
 import ebible_cache_json from './ebible_cache.json' with {type: 'json'}
 import response_log from '../src/_data/watch/response_log.json' with {type: 'json'}
 import {major_translation_owners} from './major_translation_owners.ts'
+import {add_ministry_watch_urls} from './ministry_watch.ts'
+import {BIBLES} from '../src/_comp/bibles.ts'
+import {CRITICALS} from '../src/_comp/restrictions/critical_texts.ts'
 
 
 const SCRIPTS_DIR = new URL('./', import.meta.url)
 const DBL_MODULE = new URL('../.private/dbl/dbl.ts', import.meta.url)
 const FIND_BIBLE_BASE = 'https://raw.githubusercontent.com/digitalbiblesociety/data/master'
+const FIND_BIBLE_PAGE = 'https://find.bible/bibles/'
 const FETCH_BIBLE_MANIFEST = 'https://v1.fetch.bible/manifest.json'
 const FETCH_COLLECTION_BASE =
     'https://raw.githubusercontent.com/gracious-tech/fetch_collection/main/bibles'
@@ -68,6 +83,16 @@ const PUBLIC_DOMAIN_AGE_YEARS = 95
 // copyright holder anyway. The King James Version text is still under perpetual English Crown
 // copyright (administered via Cambridge University Press) despite being from 1611.
 const KEEP_DESPITE_AGE = new Set(['ENGKJV'])
+
+// Translations a response log case is about — a case shows there's a live rights holder, so these
+// are never dropped as too old
+const CASE_TRANSLATION_IDS = new Set(
+    (response_log as ResponseLogEntry[]).flatMap(entry => entry.translation_ids))
+
+// Each version dropped from the listing for another that stands in for it (a find.bible version
+// for its DBL entry, a closed version for its open edition, an edition for the one kept), so the
+// response log can follow a case's translation to the version now listed
+const replaced_by = new Map<string, string>()
 
 // Translations no source gives a year for, but known to be old enough to trip the age filter (or
 // ancient source texts rather than translations) — judged by hand from what each one is
@@ -86,7 +111,8 @@ const KNOWN_OLD = new Set([
 ])
 
 function too_old_for_copyright(translation:Translation):boolean{
-    if (KEEP_DESPITE_AGE.has(translation.id)) return false
+    if (KEEP_DESPITE_AGE.has(translation.id) || CASE_TRANSLATION_IDS.has(translation.id))
+        return false
     if (KNOWN_OLD.has(translation.id)) return true
     if (!translation.latest_year) return false  // unknown year — don't assume
     return new Date().getFullYear() - translation.latest_year > PUBLIC_DOMAIN_AGE_YEARS
@@ -177,19 +203,28 @@ async function pull_find_bible():Promise<FindBible>{
                 find_bible: entry.id,
                 ...(dbl_uid ? {dbl: dbl_uid} : {}),
             },
-            info_url: `https://find.bible/bibles/${entry.id}/`,
+            info_url: `${FIND_BIBLE_PAGE}${entry.id}/`,
         })
     }
     return {versions, index, dbl_uids}
 }
 
+// List every find.bible version that isn't already listed by the private steps, returning their
+// ids — they only supplement DBL's, so DBL's are preferred wherever the two are merged
 function add_find_bible(translations:Translation[], find_bible:FindBible,
-        superseded:Set<string>):void{
-    // List every find.bible version that isn't already listed by the private steps
+        superseded:Set<string>):Set<string>{
+    // Note which DBL entry stands in for each superseded version
+    for (const translation of translations){
+        const fb_id = translation.external_ids.find_bible
+        if (fb_id && superseded.has(fb_id))
+            replaced_by.set(fb_id, translation.id)
+    }
+
     const versions = find_bible.versions.filter(t => !superseded.has(t.id))
     translations.push(...versions)
     console.info(`find.bible: added ${versions.length} versions not in the DBL catalog `
         + `(${superseded.size} more are DBL entries, listed from DBL instead)`)
+    return new Set(versions.map(t => t.id))
 }
 
 
@@ -198,10 +233,10 @@ function add_find_bible(translations:Translation[], find_bible:FindBible,
 async function load_fetch_bible():Promise<FetchBible>{
     // Pull the manifest plus each translation's collection ids, used by several steps below
     console.info('Fetching fetch.bible manifest...')
-    const manifest =
-        await fetch_json<{bibles:Record<string, FetchBibleEntry>}>(FETCH_BIBLE_MANIFEST)
+    const manifest = await fetch_json<{bibles:Record<string, FetchBibleEntry>,
+        languages:FetchBible['languages']}>(FETCH_BIBLE_MANIFEST)
     const collection_ids = await fetch_collection_ids(Object.keys(manifest.bibles))
-    return {bibles: manifest.bibles, collection_ids}
+    return {bibles: manifest.bibles, collection_ids, languages: manifest.languages}
 }
 
 async function fetch_collection_ids(fb_ids:string[]):Promise<Map<string, FetchCollectionIds>>{
@@ -501,8 +536,10 @@ function edition_key(name:string):string{
 // open edition of it exists in the same language and medium — only where the open one's name says
 // "Open", or the two share an owner, so a same-named but unrelated version is never dropped. The
 // open edition's parenthesised qualifier ("(Simplified)") is ignored, but the closed one's isn't,
-// so e.g. "Open English Bible (British Spelling)" isn't taken for "Open English Bible".
-function drop_superseded_closed(translations:Translation[], license_terms:LicenseTerms[]):void{
+// so e.g. "Open English Bible (British Spelling)" isn't taken for "Open English Bible". A version
+// only find.bible lists never supersedes one DBL lists, as DBL's are always preferred.
+function drop_superseded_closed(translations:Translation[], license_terms:LicenseTerms[],
+        from_find_bible:Set<string>):void{
     // Each version's licenses and known owners
     const licenses = new Map<string, Set<string>>()
     const owner_ids = new Map<string, Set<string>>()
@@ -534,11 +571,15 @@ function drop_superseded_closed(translations:Translation[], license_terms:Licens
         if (!key || !all_in(translation.id, CLOSED_LICENSES))
             continue
         const owners = owner_ids.get(translation.id) ?? new Set()
+        const from_dbl = !from_find_bible.has(translation.id)
         const open = open_editions.get(`${translation.medium}|${translation.language}|${key}`)
-            ?.find(o => /\bopen\b/i.test(o.name)
+            ?.filter(o => !from_dbl || !from_find_bible.has(o.id))
+            .find(o => /\bopen\b/i.test(o.name)
                 || [...owner_ids.get(o.id) ?? []].some(owner => owners.has(owner)))
-        if (open)
+        if (open){
             superseded.set(translation.id, open)
+            replaced_by.set(translation.id, open.id)
+        }
     }
 
     // Drop them along with their terms
@@ -584,19 +625,31 @@ function is_edition_qualifier(part:string, name:string):boolean{
         || (/^\p{Lu}{3,}$/u.test(text) && initials.startsWith(text))
 }
 
+// A name without accents on its Latin letters ("Bakhtiâri" is "Bakhtiari"), leaving other scripts'
+// marks (e.g. Devanagari vowel signs) alone
+const strip_accents = (name:string):string =>
+    name.normalize('NFD').replace(/(\p{Script=Latin})\p{M}+/gu, '$1').normalize('NFC')
+
+// "New Testament" as DBL and find.bible name it in various languages, or abbreviated ("NT+")
+const NEW_TESTAMENT_RE = new RegExp('\\b(?:' + [
+    'new testament', 'nouveau testament', 'nuevo testamento', 'novo testamento', 'neues testament',
+    'nt',
+].join('|') + ')\\b\\+?', 'gi')
+
 // A version's name reduced to the translation it's an edition of — on top of edition_key()'s
-// reductions, without edition qualifiers in brackets, regional spellings ("Anglicised",
+// reductions, without accents, edition qualifiers in brackets, regional spellings ("Anglicised",
 // "British"), canon editions ("Catholic Edition", "with Apocrypha"), a trailing "Updated", or
-// study aids ("with Strong's numbers"), so e.g. "English Standard Version (ESV) Anglicised 2016"
-// and "English Standard Version®" match, as do "Revised Standard Version Catholic Edition" and
-// "Revised Standard Version". "Interconfessional" and "Ecumenical" usually name a translation of
-// their own ("Albanian Interconfessional Version"), so stay. Drama, non-drama and unlabelled
-// recordings are never editions of each other, so however a name labels its style, the key ends
-// in it.
+// study aids ("with Strong's numbers"), and with any "New Testament" as "nt", so e.g. "English
+// Standard Version (ESV) Anglicised 2016" and "English Standard Version®" match, as do "Revised
+// Standard Version Catholic Edition" and "Revised Standard Version", and "Manambo New Testament"
+// and "Manambo NT". "Interconfessional" and "Ecumenical" usually name a translation of their own
+// ("Albanian Interconfessional Version"), so stay. Drama, non-drama and unlabelled recordings are
+// never editions of each other, so however a name labels its style, the key ends in it.
 function translation_key(name:string):string{
-    const unbracketed = name.replace(/\(([^)]*)\)|\[([^\]]*)\]/g,
+    const unbracketed = strip_accents(name).replace(/\(([^)]*)\)|\[([^\]]*)\]/g,
         (part, round?:string, square?:string) =>
             is_edition_qualifier(round ?? square ?? '', name) ? ' ' : part)
+        .replace(NEW_TESTAMENT_RE, ' nt ')
     const key = edition_key(unbracketed.replace(new RegExp([
         'anglici[sz]ed', 'british', 'american', 'uk', 'us', 'usa', '(?<=.)updated', 'unicode',
         'script', 'text', 'with(?:out)?\\s+strong\'?s(?:\\s+numbers)?',
@@ -604,9 +657,22 @@ function translation_key(name:string):string{
         'with(?:\\s+the)?\\s+(?:apocrypha|deuterocanon\\w*)(?:\\s+books)?', 'non[\\s-]?drama',
         'drama',
     ].map(word => `\\b${word}\\b`).join('|'), 'gi'), ' '))
+        // Word order and filler words aside, so "Chatino, Nopala NT" matches "Nopala Chatino New
+        // Testament", and "Sulka NT" matches "The New Testament in Sulka"
+        .split(' ').filter(word => word !== 'in' && word !== 'en').sort().join(' ')
     const style = recording_style(name)
     return key && style ? `${key} ${style}` : key
 }
+
+// A translation key without the scope it names, so a find.bible "Xyz 2008 Edition" (which names
+// none) can be matched to DBL's "Xyz NT" of the same year
+const scope_free_key = (name:string):string => translation_key(name)
+    .replace(/\b(?:nt|ot|portions|selections)\b/g, ' ').replace(/\s+/g, ' ').trim()
+
+// A name with only its case, accents and punctuation dropped — to tell which of two translations
+// of similar names a version is exactly named after
+const exact_name_key = (name:string):string =>
+    strip_accents(name).toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '')
 
 // Whether a version's name marks it as a regional or canon edition, which is never the one listed
 // where there's another
@@ -624,14 +690,18 @@ function edition_year(translation:Translation):number{
     return years.length ? Math.max(...years) : translation.latest_year
 }
 
-// List each translation once, as its latest edition. Editions are versions of the same name once
-// their edition qualifiers are dropped (see translation_key), in the same language and medium,
-// that share a rights holder (so a same-named but unrelated version is never merged) — or have no
-// known rights holder, where only one translation has that name. The one kept is the latest
-// edition — never a regional or canon one where there's another, and preferring one find.bible
-// has a page for — with every edition's rights holders, and the latest edition's license (else
-// the latest known one).
-function merge_editions(translations:Translation[], license_terms:LicenseTerms[]):void{
+// List each translation once, as its latest edition. Editions are versions in the same language
+// and medium of the same name once their edition qualifiers are dropped (see translation_key), or
+// texts of the same year named the same but for their scope where one is a find.bible "Xyz 2008
+// Edition" (see scope_free_key), that share a rights holder (so a same-named but unrelated version
+// is never merged) — or have no known rights holder, where only one translation has that name (or
+// only one has exactly its name). DBL's data is always preferred, find.bible's only supplementing
+// it: the one kept is the latest edition DBL lists (find.bible's only where DBL lists none) —
+// never a regional or canon one where there's another, and preferring one find.bible has a page
+// for — with every such edition's rights holders, and the latest one's license (else the latest
+// known one).
+function merge_editions(translations:Translation[], license_terms:LicenseTerms[],
+        from_find_bible:Set<string>):void{
     const terms_by_id = new Map<string, LicenseTerms[]>()
     for (const terms of license_terms)
         terms_by_id.set(terms.translation_id, [...terms_by_id.get(terms.translation_id) ?? [], terms])
@@ -640,16 +710,44 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
 
     // Group by medium, language and translation, then split each group into sets of editions
     // linked by a shared rights holder
-    const groups = new Map<string, Translation[]>()
-    for (const translation of translations){
-        const key = translation_key(translation.name)
-        if (!key)
-            continue
-        const full_key = `${translation.medium}|${translation.language}|${key}`
-        groups.set(full_key, [...groups.get(full_key) ?? [], translation])
+    const group_of = new Map<Translation, Translation[]>()
+    const join = (a:Translation, b:Translation):void => {
+        const group_a = group_of.get(a)!
+        const group_b = group_of.get(b)!
+        if (group_a === group_b)
+            return
+        group_a.push(...group_b)
+        for (const t of group_b)
+            group_of.set(t, group_a)
+    }
+    const keyed = translations.filter(t => translation_key(t.name))
+    const first_by_key = new Map<string, Translation>()
+    for (const translation of keyed){
+        group_of.set(translation, [translation])
+        const key = [translation.medium, translation.language, translation_key(translation.name)]
+            .join('|')
+        const first = first_by_key.get(key)
+        if (first)
+            join(first, translation)
+        else
+            first_by_key.set(key, translation)
+    }
+
+    // find.bible names many texts just "Xyz 2008 Edition", naming no scope — join each with the
+    // other texts of its year named the same but for their scope (e.g. DBL's "Xyz NT")
+    const year_key = (t:Translation):string =>
+        `${t.language}|${scope_free_key(t.name)}|${edition_year(t)}`
+    const texts = keyed.filter(t =>
+        t.medium === 'text' && edition_year(t) && scope_free_key(t.name))
+    const dated_editions = new Map(texts.filter(t => /\b\d{4} edition$/i.test(t.name.trim()))
+        .map(t => [year_key(t), t]))
+    for (const translation of texts){
+        const dated = dated_editions.get(year_key(translation))
+        if (dated)
+            join(dated, translation)
     }
     const edition_sets:Translation[][] = []
-    for (const group of groups.values()){
+    for (const group of new Set(group_of.values())){
         let sets:{editions:Translation[], owners:Set<string>}[] = []
         const unowned:Translation[] = []
         for (const translation of group){
@@ -666,9 +764,19 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
             })
         }
         // An edition with no known rights holder belongs with the others of its name, but only
-        // where they're all one translation — with two unrelated ones, there's no telling which
-        if (sets.length <= 1 && unowned.length)
+        // where they're all one translation — with two unrelated ones, there's no telling which,
+        // unless only one of them has a version of exactly its name
+        if (sets.length <= 1 && unowned.length){
             sets = [{editions: [...sets[0]?.editions ?? [], ...unowned], owners: new Set()}]
+        } else {
+            for (const translation of unowned){
+                const name = exact_name_key(translation.name)
+                const named = sets.filter(set =>
+                    set.editions.some(t => exact_name_key(t.name) === name))
+                if (named.length === 1)
+                    named[0]!.editions.push(translation)
+            }
+        }
         edition_sets.push(...sets.map(set => set.editions).filter(editions => editions.length > 1))
     }
 
@@ -676,28 +784,37 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
     const dropped = new Set<string>()
     for (const editions of edition_sets){
         const latest_first = [...editions].sort((a, b) =>
-            Number(is_variant(a.name)) - Number(is_variant(b.name))
+            Number(from_find_bible.has(a.id)) - Number(from_find_bible.has(b.id))
+            || Number(is_variant(a.name)) - Number(is_variant(b.name))
             || edition_year(b) - edition_year(a)
             || Number(!!b.external_ids.find_bible) - Number(!!a.external_ids.find_bible))
         const kept = latest_first[0]!
 
-        // Link to find.bible's page for the translation where the kept edition has none of its own
-        if (!kept.external_ids.find_bible)
-            kept.info_url = editions.find(t => t.external_ids.find_bible)?.info_url ?? kept.info_url
-        const first_terms = latest_first.map(t => terms_by_id.get(t.id)?.[0])
+        // Link to find.bible's page for the translation where the kept edition doesn't already —
+        // DBL's own pages are only visible to signed-in members
+        const on_find_bible = (t:Translation) => t.info_url.startsWith(FIND_BIBLE_PAGE)
+        if (!on_find_bible(kept))
+            kept.info_url = editions.find(on_find_bible)?.info_url ?? kept.info_url
+
+        // Terms only from the editions DBL lists, where there are any
+        const from_dbl = latest_first.filter(t => !from_find_bible.has(t.id))
+        const term_sources = from_dbl.length ? from_dbl : latest_first
+        const first_terms = term_sources.map(t => terms_by_id.get(t.id)?.[0])
         const license_from = first_terms.find(terms => terms && terms.license !== 'unknown')
             ?? first_terms.find(terms => terms)
 
-        // Every edition's holders, each with the roles they hold in any edition
+        // Every such edition's holders, each with the roles they hold in any of them
         const roles_by_owner = new Map<string, Set<'text' | 'recording'>>()
-        for (const terms of editions.flatMap(t => terms_by_id.get(t.id) ?? [])){
+        for (const terms of term_sources.flatMap(t => terms_by_id.get(t.id) ?? [])){
             if (terms.owner_id !== 'unknown')
                 roles_by_owner.set(terms.owner_id,
                     new Set([...roles_by_owner.get(terms.owner_id) ?? [], ...terms.roles]))
         }
         for (const t of editions){
-            if (t !== kept)
-                dropped.add(t.id)
+            if (t === kept)
+                continue
+            dropped.add(t.id)
+            replaced_by.set(t.id, kept.id)
         }
         // No edition with terms leaves it without any, and none with a known holder keeps the
         // license under an 'unknown' one
@@ -750,7 +867,7 @@ async function main():Promise<void>{
     // Versions: the private steps' first, then find.bible's not already listed. Licenses: the
     // private steps' first, then fetch.bible and major owners for whatever is still left.
     const superseded = dbl?.add_text(state) ?? new Set<string>()
-    add_find_bible(translations, find_bible, superseded)
+    const from_find_bible = add_find_bible(translations, find_bible, superseded)
     await dbl?.add_terms(state)
     pull_fetch_bible(translations, owners, license_terms, find_bible.index, fetch_bible)
     apply_major_translation_owners(translations, owners, license_terms)
@@ -774,8 +891,8 @@ async function main():Promise<void>{
     await pull_ebible(translations, owners, license_terms, find_bible)
 
     // Only once every source has had its say on licenses, so open editions are all known
-    drop_superseded_closed(translations, license_terms)
-    merge_editions(translations, license_terms)
+    drop_superseded_closed(translations, license_terms, from_find_bible)
+    merge_editions(translations, license_terms, from_find_bible)
 
     // Drop owners left with no license terms (e.g. all their translations were too old)
     const used_owners = new Set(license_terms.map(lt => lt.owner_id))
@@ -784,32 +901,102 @@ async function main():Promise<void>{
             owners.splice(i, 1)
     }
     dbl?.add_owner_websites(state)
+    await add_ministry_watch_urls(owners)
 
     translations.sort((a, b) => a.id.localeCompare(b.id))
     owners.sort((a, b) => a.id.localeCompare(b.id))
     license_terms.sort((a, b) => a.translation_id.localeCompare(b.translation_id))
 
+    // English names for the languages listed, so the site needn't show bare ISO codes
+    console.info('Fetching find.bible languages...')
+    const languages = language_names(translations.map(t => t.language),
+        await fetch_json<FindBibleLanguage[]>(`${FIND_BIBLE_BASE}/languages.json`),
+        fetch_bible.languages)
+
+    // Only save a rebuild that still lists every translation a case is about
+    if (!link_response_log(translations, owners, license_terms)){
+        console.error('Not saved: the rebuild would lose a case\'s translation (see above)')
+        process.exit(1)
+    }
     save_json('translations.json', translations)
     save_json('owners.json', owners)
     save_json('license_terms.json', license_terms)
-    check_response_log(translations, owners)
+    save_json('languages.json', languages)
 
     console.info(`Done: ${translations.length} translations, ${owners.length} owners, `
         + `${license_terms.length} license terms`)
 }
 
-// Warn about any hand-curated response log entry pointing at an owner or translation the rebuilt
-// dataset no longer has (e.g. after an owner's name was merged into another by an alias) — the
-// site would otherwise show its cases under a separate, empty owner
-function check_response_log(translations:Translation[], owners:Owner[]):void{
+// The version now listed for a translation id, following it through any versions that replaced it
+function listed_version(id:string, listed:Set<string>):string|undefined{
+    const seen = new Set<string>()
+    let current = id
+    while (!listed.has(current) && !seen.has(current)){
+        seen.add(current)
+        const next = replaced_by.get(current)
+        if (!next)
+            return undefined
+        current = next
+    }
+    return listed.has(current) ? current : undefined
+}
+
+// Check the hand-curated response log against the rebuilt dataset, pointing each case at the
+// version now listed for its translations (saving response_log.json if any moved). Returns false
+// where a case's translation is no longer listed at all, or a case about a rated translation isn't
+// linked to one. Only warns where an owner is unknown (e.g. after an owner's name was merged into
+// another by an alias — the site would otherwise show its reports under a separate, empty owner)
+// or isn't among the rights holders of a translation the case is about.
+function link_response_log(translations:Translation[], owners:Owner[],
+        license_terms:LicenseTerms[]):boolean{
     const owner_ids = new Set(owners.map(o => o.id))
-    const translation_ids = new Set(translations.map(t => t.id))
+    const listed = new Set(translations.map(t => t.id))
+    const holders = new Map<string, Set<string>>()
+    for (const terms of license_terms)
+        holders.set(terms.translation_id,
+            (holders.get(terms.translation_id) ?? new Set()).add(terms.owner_id))
+
+    let ok = true
+    const moved = new Map<string, string>()
     for (const entry of response_log as ResponseLogEntry[]){
+        // Owners and rating ids
         if (entry.owner_id && !owner_ids.has(entry.owner_id))
             console.warn(`response_log.json: ${entry.id} has unknown owner_id ${entry.owner_id}`)
-        for (const id of entry.translation_ids.filter(id => !translation_ids.has(id)))
-            console.warn(`response_log.json: ${entry.id} has unknown translation id ${id}`)
+        for (const id of (entry.rating_ids ?? []).filter(id => !(id in BIBLES || id in CRITICALS)))
+            console.warn(`response_log.json: ${entry.id} has unknown rating id ${id}`)
+        if (entry.rating_ids?.length && !entry.translation_ids.length){
+            console.error(`response_log.json: ${entry.id} is about a rated translation `
+                + `(${entry.rating_ids.join(', ')}) but has no translation_ids`)
+            ok = false
+        }
+
+        // Translations, each followed to the version now listed
+        for (const id of entry.translation_ids){
+            const current = listed_version(id, listed)
+            if (!current){
+                console.error(`response_log.json: ${entry.id} is about ${id}, which the rebuild `
+                    + 'no longer lists')
+                ok = false
+                continue
+            }
+            if (current !== id)
+                moved.set(id, current)
+            if (entry.owner_id && !holders.get(current)?.has(entry.owner_id))
+                console.warn(`response_log.json: ${entry.id}'s owner ${entry.owner_id} isn't a `
+                    + `rights holder of ${current}`)
+        }
     }
+
+    // Update moved ids in place, so the file keeps its hand formatting
+    if (ok && moved.size){
+        let text = readFileSync(new URL('response_log.json', DATA_DIR), 'utf8')
+        for (const [id, current] of moved){
+            console.info(`response_log.json: ${id} is now listed as ${current}`)
+            text = text.replaceAll(`"${id}"`, `"${current}"`)
+        }
+        save_text('response_log.json', text)
+    }
+    return ok
 }
 
 main().catch(err => {

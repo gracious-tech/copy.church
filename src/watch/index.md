@@ -52,8 +52,3 @@ Bible Org Watch tracks which organizations control the licensing of God's Word, 
 See also: [All Bible versions](/watch/translations/) &middot; [English Bible ratings](/initiatives/bibles/) &middot; [Critical Text ratings](/initiatives/critical-texts/) {.see_also}
 
 </WatchOwnerDashboard>
-
-&nbsp;
-
-_Figures above exclude versions over 95 years old (public domain by age), except the KJV
-(perpetual Crown copyright)._

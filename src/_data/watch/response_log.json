@@ -4,30 +4,51 @@
         "owner_name": "Crossway",
         "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["dbl_f421fe261da7624f"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
         "date": "2021-02-01",
-        "summary": "Crossway declined to license the ESV to Randall House (publishing arm of the National Association of Free Will Baptists) for a planned study Bible, reportedly because Crossway was reluctant to have an Arminian set of study notes accompany the ESV text — while a Catholic Edition of the ESV had been approved.",
-        "evidence_url": "https://puritanboard.com/threads/crossway-denies-arminians-use-of-esv-but-permits-catholics.105168/"
+        "summary": "Randall House asked to license the ESV for a study Bible. It reported: <blockquote>After petitioning to license the ESV translation, Crossway the publisher who owns the rights to the ESV, denied usage. Known to be Reformed in theology, they cited a reluctance to allow an Arminian set of notes accompanying their text.</blockquote> Yet Crossway had licensed a Catholic Edition of the ESV, even letting Catholic scholars make some changes to the translation.",
+        "sources": [
+            "https://onemag.org/news_publication96.htm",
+            "https://puritanboard.com/threads/crossway-denies-arminians-use-of-esv-but-permits-catholics.105168/",
+            "https://catholicbiblestudent.com/2019/12/esv-catholic-edition-bible-now-available-in-the-united-states.html",
+            "https://www.ncregister.com/interview/augustine-institute-publishes-major-new-catholic-bible"
+        ]
     },
     {
         "id": "2019-crossway-esv-crosswire",
         "owner_name": "Crossway",
         "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["dbl_f421fe261da7624f"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
         "date": "2019-06-06",
-        "summary": "After years of free ESV distribution to the open-source SWORD project, Crossway demanded CrossWire stop distributing the ESV module from its own servers and billed $1,400 in back licensing fees. Open-source Bible apps built on SWORD (e.g. AndBible) had to remove the ESV, drawing negative user reviews from people unaware of the licensing change.",
-        "evidence_url": "https://www.crosswire.org/pipermail/sword-devel/2019-June/047095.html"
+        "summary": "CrossWire, whose free SWORD project powers many open-source Bible apps, had stopped paying its annual ESV license fee after Crossway seemed willing to host the ESV for SWORD apps itself, which would make the license unnecessary. Crossway never did, and instead billed $1,400 in back fees and refused to let CrossWire keep distributing it: <blockquote>Crossway does not wish to have you do this [distribute from CrossWire servers] with our content, as we have our own servers. We also do not want to make your software or the data files ... available on Crossway's site, as we have our own proprietary API, apps, software, and systems.</blockquote> Crossway later dropped the back fees, but SWORD apps such as <a href='https://andbible.org' target='_blank'>AndBible</a> lost the ESV, and then drew bad reviews from users unaware it was out of their hands: “Poor review due to the fact that ESV version is no longer available.”",
+        "sources": [
+            "https://www.crosswire.org/pipermail/sword-devel/2019-June/047095.html",
+            "https://www.crosswire.org/pipermail/sword-devel/2019-June/047088.html",
+            "https://www.crosswire.org/pipermail/sword-devel/2019-July/047229.html",
+            "https://github.com/AndBible/and-bible/issues/390",
+            "https://github.com/AndBible/and-bible/issues/1688#issuecomment-916337966",
+            "https://andbible.org/docs/faq/",
+            "https://sellingjesus.org/articles/bible-publishers"
+        ]
     },
     {
-        "id": "2023-lockman-lsb-gabriel-hughes-podcast",
+        "id": "2024-lockman-lsb-gabriel-hughes-podcast",
         "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
         "translation_names": ["Legacy Standard Bible"],
-        "translation_ids": [],
-        "date": "",
-        "summary": "Pastor Gabriel Hughes was cautioned about copyright after publishing daily podcast episodes reading the LSB aloud on 'Hear the Word of the Lord.' He took down all previous episodes and had to go through official channels before resuming public Scripture reading.",
-        "evidence_url": "https://wwutt.podbean.com/e/wwutt-2295-qa-parenting-resources-the-genealogies-of-jesus-contemporary-christian-music/"
+        "translation_ids": ["dbl_8011347e1aa60e8a"],
+        "rating_ids": ["lsb"],
+        "date": "2024",
+        "summary": "Pastor Gabriel Hughes paused his daily podcast of LSB readings, 'Hear the Word of the Lord,' after a copyright problem: <blockquote>really what shut down the Hear the Word of the Lord podcast, at least temporarily, is that I ran into a copyright issue. I did not know that was going to be a thing, but nonetheless, I had to go through the right channels and avenues and try to clear all of that up.</blockquote> It relaunched in 2025 with the earlier episodes removed and each description now promoting the LSB's publisher.",
+        "sources": [
+            "https://lets.church/media/5JAHe31ymZrsJPSW5J6eo7",
+            "https://wwutt.podbean.com/e/wwutt-2295-qa-parenting-resources-the-genealogies-of-jesus-contemporary-christian-music/",
+            "https://wwutt.podbean.com/e/wwutt-2100-qa-does-god-hate-anyone-the-chosen-on-the-view-hear-the-word-of-the-lord/",
+            "https://hearthewordofthelord.podbean.com/e/genesis-1-3/"
+        ]
     },
     {
         "id": "1970-1992-lockman-team-domei-japanese-bible",
@@ -36,18 +57,29 @@
         "translation_names": ["New Japanese Bible"],
         "translation_ids": ["JPNNJB"],
         "date": "1992-10-01",
-        "summary": "Lockman Foundation and its Japanese translation partners (TEAM/Domei) disputed who owned the copyright to the New Japanese Bible (1970) they had translated together. Lockman claimed work-for-hire ownership from having funded the project (Lockman says ~$2 million across languages; TEAM/Domei says Lockman covered only 'perhaps 15 percent' of this translation); the translators registered themselves as copyright owners in Japan in 1986, and a 1989 California suit by Lockman was dismissed so the dispute could be heard in Japan. The Japanese case settled in 1996, with the Japanese side paying Lockman a large settlement and keeping the copyright.",
-        "evidence_url": "https://www.christianitytoday.com/1992/10/lawsuit-battle-for-japans-bible/"
+        "summary": "The Lockman Foundation and its Japanese partners translated the New Japanese Bible together, then disputed who owned it. Lockman claimed it as “work-for-hire” for having funded the project, though its partners say it funded only “perhaps 15 percent.” Lockman's lawyers also argued the translation was derived from its English NASB. The partners' field chairman responded: <blockquote>This, of course, is ridiculous on the face of it, because Lockman exists to promote translations of the Bible from the original languages.</blockquote> The translators kept the copyright in Japan, reportedly paying Lockman a large settlement in 1996.",
+        "sources": [
+            "https://www.christianitytoday.com/1992/10/lawsuit-battle-for-japans-bible/",
+            "https://www.courtlistener.com/opinion/559055/lockman-foundation-v-evangelical-alliance-mission-evangelical-alliance/",
+            "https://www.casemine.com/judgement/us/5914bfb5add7b049347af968",
+            "https://ja.wikipedia.org/wiki/新改訳聖書",
+            "https://christianpress.jp/shinkaiyaku0910/",
+            "https://www.wlpm.or.jp/agreement-form/"
+        ]
     },
     {
         "id": "2014-crossway-esv-churchsw",
         "owner_name": "Crossway",
         "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["dbl_f421fe261da7624f"],
-        "date": "",
-        "summary": "In 2014, Good News Publishers (the not-for-profit that publishes as Crossway) sent a removal notice to churchsw.org, an Australian website offering free downloads of Bible translations including the ESV. The site's owner, who argued that Bible translations can't be copyrighted, publicly listed Good News Publishers on its Bibles page alongside a link to the notice. The notice itself is no longer online.",
-        "evidence_url": "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2014",
+        "summary": "Crossway sent a removal notice to churchsw.org, an Australian website offering free downloads of Bible translations including the ESV. The site's owner believed the Holy Spirit is “the original author and copyright holder of all Bibles,” and that translations of Scripture, being fact, can't be copyrighted.",
+        "sources": [
+            "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html",
+            "https://web.archive.org/web/20151128164840/http://www.churchsw.org/p/bibles.html"
+        ]
     },
     {
         "id": "2016-ecpa-tyndale-churchsw",
@@ -55,9 +87,16 @@
         "owner_id": "tyndale_house_publishers",
         "translation_names": ["New Living Translation"],
         "translation_ids": ["ENGNLT"],
+        "rating_ids": ["nlt"],
         "date": "2016-04-13",
-        "summary": "As part of an ECPA-led coalition (via Flagler Law Group), Tyndale House was among the publishers who forced an Australian website (churchsw.org) to remove more than 50 unauthorized Bible translations it had offered for free download since at least December 2015. The site's archived English Bible listing included Tyndale's NLT. The site operator signed a settlement agreeing not to infringe any ECPA member's rights again.",
-        "evidence_url": "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm"
+        "summary": "Christian publishers, led by their trade association the ECPA, threatened legal action against an Australian website (churchsw.org) that offered more than 50 Bible translations for free. Its owner believed the Holy Spirit is “the original author and copyright holder of all Bibles,” and that translations of Scripture, being fact, can't be copyrighted. To settle, he had to remove every copyrighted work from all his websites and agree never to share anything owned by any ECPA member without written permission. ECPA's director said: <blockquote>This case in Australia, along with the cases we faced in England and Nigeria, represents the value of working concertedly as an industry to protect the intellectual property of ECPA members. We appreciate all that Flagler Law Group did to lead this effort on behalf of our Association and the special efforts of Tyndale House, HarperCollins Christian Publishers, and American Bible Society to halt the infringement of many valuable Bible translations.</blockquote> Tyndale was one of the three publishers party to the settlement, and the site had offered its NLT.",
+        "sources": [
+            "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://web.archive.org/web/20160428081805/http://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://www.frontgatemedia.com/ecpa-stops-infringement-of-bible-translations/",
+            "https://web.archive.org/web/20151128164840/http://www.churchsw.org/p/bibles.html",
+            "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
+        ]
     },
     {
         "id": "2016-ecpa-biblica-churchsw",
@@ -70,9 +109,16 @@
             "Today's New International Version"
         ],
         "translation_ids": ["ENGNIV", "ENGNIRV", "ENGTNIV"],
+        "rating_ids": ["niv"],
         "date": "2016-04-13",
-        "summary": "As part of an ECPA-led coalition (via Flagler Law Group), HarperCollins Christian Publishers (whose Zondervan imprint is Biblica's US publisher of the NIV) was among the publishers who forced an Australian website (churchsw.org) to remove more than 50 unauthorized Bible translations it had offered for free download since at least December 2015. The site's archived English Bible listing included Biblica's NIV (US and UK editions), NIrV and TNIV. The site operator signed a settlement agreeing not to infringe any ECPA member's rights again.",
-        "evidence_url": "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm"
+        "summary": "Christian publishers, led by their trade association the ECPA, threatened legal action against an Australian website (churchsw.org) that offered more than 50 Bible translations for free. Its owner believed the Holy Spirit is “the original author and copyright holder of all Bibles,” and that translations of Scripture, being fact, can't be copyrighted. To settle, he had to remove every copyrighted work from all his websites and agree never to share anything owned by any ECPA member without written permission. ECPA's director said: <blockquote>This case in Australia, along with the cases we faced in England and Nigeria, represents the value of working concertedly as an industry to protect the intellectual property of ECPA members. We appreciate all that Flagler Law Group did to lead this effort on behalf of our Association and the special efforts of Tyndale House, HarperCollins Christian Publishers, and American Bible Society to halt the infringement of many valuable Bible translations.</blockquote> HarperCollins, which owns Zondervan, the NIV's US publisher, was one of the three publishers party to the settlement, and the site had offered the NIV, NIrV and TNIV.",
+        "sources": [
+            "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://web.archive.org/web/20160428081805/http://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://www.frontgatemedia.com/ecpa-stops-infringement-of-bible-translations/",
+            "https://web.archive.org/web/20151128164840/http://www.churchsw.org/p/bibles.html",
+            "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
+        ]
     },
     {
         "id": "2016-ecpa-thomas-nelson-churchsw",
@@ -80,9 +126,16 @@
         "owner_id": "thomas_nelson",
         "translation_names": ["New King James Version", "New Century Version"],
         "translation_ids": ["ENGNKJV", "ENGNCV"],
+        "rating_ids": ["nkjv"],
         "date": "2016-04-13",
-        "summary": "As part of an ECPA-led coalition (via Flagler Law Group), HarperCollins Christian Publishers (Thomas Nelson's parent company) was among the publishers who forced an Australian website (churchsw.org) to remove more than 50 unauthorized Bible translations it had offered for free download since at least December 2015. The site's archived English Bible listing included Thomas Nelson's NKJV and NCV. The site operator signed a settlement agreeing not to infringe any ECPA member's rights again.",
-        "evidence_url": "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm"
+        "summary": "Christian publishers, led by their trade association the ECPA, threatened legal action against an Australian website (churchsw.org) that offered more than 50 Bible translations for free. Its owner believed the Holy Spirit is “the original author and copyright holder of all Bibles,” and that translations of Scripture, being fact, can't be copyrighted. To settle, he had to remove every copyrighted work from all his websites and agree never to share anything owned by any ECPA member without written permission. ECPA's director said: <blockquote>This case in Australia, along with the cases we faced in England and Nigeria, represents the value of working concertedly as an industry to protect the intellectual property of ECPA members. We appreciate all that Flagler Law Group did to lead this effort on behalf of our Association and the special efforts of Tyndale House, HarperCollins Christian Publishers, and American Bible Society to halt the infringement of many valuable Bible translations.</blockquote> HarperCollins, Thomas Nelson's parent company, was one of the three publishers party to the settlement, and the site had offered the NKJV and NCV.",
+        "sources": [
+            "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://web.archive.org/web/20160428081805/http://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://www.frontgatemedia.com/ecpa-stops-infringement-of-bible-translations/",
+            "https://web.archive.org/web/20151128164840/http://www.churchsw.org/p/bibles.html",
+            "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
+        ]
     },
     {
         "id": "2016-ecpa-abs-churchsw",
@@ -90,19 +143,16 @@
         "owner_id": "american_bible_society",
         "translation_names": ["Good News Bible", "Contemporary English Version"],
         "translation_ids": ["ENGGNB", "ENGCEV"],
+        "rating_ids": ["gnt"],
         "date": "2016-04-13",
-        "summary": "As part of an ECPA-led coalition (via Flagler Law Group), American Bible Society was among the publishers who forced an Australian website (churchsw.org) to remove more than 50 unauthorized Bible translations it had offered for free download since at least December 2015. The site's archived English Bible listing included ABS's Good News Bible and Contemporary English Version. The site operator signed a settlement agreeing not to infringe any ECPA member's rights again.",
-        "evidence_url": "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm"
-    },
-    {
-        "id": "zondervan-niv-commentary-no-criticism",
-        "owner_name": "Biblica, Inc.",
-        "owner_id": "biblica",
-        "translation_names": ["New International Version"],
-        "translation_ids": ["ENGNIV"],
-        "date": "",
-        "summary": "When licensing the NIV for use in Bible commentaries, Zondervan (the NIV's US publisher, licensed from Biblica) forbade any direct criticism of the NIV rendering within the commentary text and reserved the right to review all comments to enforce this, which restricted the pursuit of the intended meaning of Scripture.",
-        "evidence_url": "https://sellingjesus.org/articles/copyright-and-the-bible#fn15"
+        "summary": "Christian publishers, led by their trade association the ECPA, threatened legal action against an Australian website (churchsw.org) that offered more than 50 Bible translations for free. Its owner believed the Holy Spirit is “the original author and copyright holder of all Bibles,” and that translations of Scripture, being fact, can't be copyrighted. To settle, he had to remove every copyrighted work from all his websites and agree never to share anything owned by any ECPA member without written permission. ECPA's director said: <blockquote>This case in Australia, along with the cases we faced in England and Nigeria, represents the value of working concertedly as an industry to protect the intellectual property of ECPA members. We appreciate all that Flagler Law Group did to lead this effort on behalf of our Association and the special efforts of Tyndale House, HarperCollins Christian Publishers, and American Bible Society to halt the infringement of many valuable Bible translations.</blockquote> American Bible Society was one of the three publishers party to the settlement, and the site had offered its Good News Bible and CEV.",
+        "sources": [
+            "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://web.archive.org/web/20160428081805/http://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm",
+            "https://www.frontgatemedia.com/ecpa-stops-infringement-of-bible-translations/",
+            "https://web.archive.org/web/20151128164840/http://www.churchsw.org/p/bibles.html",
+            "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
+        ]
     },
     {
         "id": "1996-biblica-niv-software-sales-quota",
@@ -110,9 +160,14 @@
         "owner_id": "biblica",
         "translation_names": ["New International Version"],
         "translation_ids": ["ENGNIV"],
+        "rating_ids": ["niv"],
         "date": "Pre-1996",
-        "summary": "A software publisher was refused a license to use the NIV in a proposed product because he couldn't guarantee a minimum of $10,000 in sales per year — even though he could pay the required $10,000 up-front licensing fee plus a percentage royalty on sales. The license was handled by Zondervan, the NIV's US publisher, licensed from Biblica (then the International Bible Society).",
-        "evidence_url": "https://sellingjesus.org/articles/copyright-and-the-bible#fn14"
+        "summary": "Michael Paul Johnson, later editor of the public domain World English Bible, asked Zondervan, the NIV's US publisher, for permission to use the NIV in his Bible software. He wrote: <blockquote>Zondervan won't grant such permission unless they get a significant royalty (they quoted me $10,000 + $10/copy distributed) and unless I convince them that my Bible search software is \"good enough\" for them.</blockquote> He was refused for not guaranteeing $10,000 in sales a year, even though he could pay the fees.",
+        "sources": [
+            "https://web.archive.org/web/19981203065210/http://www.ebible.org:80/bible/WEB/webfaq.htm",
+            "https://sellingjesus.org/articles/copyright-and-the-bible#fn14",
+            "https://ebible.org/eng-web/webfaq.htm"
+        ]
     },
     {
         "id": "1996-abs-rainbow-missions-electronic-rights",
@@ -124,9 +179,10 @@
             "Dios Habla Hoy (Versión Popular)"
         ],
         "translation_ids": ["ENGGNB", "ENGCEV"],
-        "date": "Pre-1996",
-        "summary": "American Bible Society refused a request on behalf of Rainbow Missions, Inc. to publish the TEV (Good News Bible), CEV and Versión Popular in electronic form, either for free or for any royalty fee, citing the lack of security of internet distribution. After being assured the texts would be encrypted, ABS refused again, saying it had decided not to let anyone have electronic rights to its Bible texts and that it would publish them itself if at all.",
-        "evidence_url": "https://sellingjesus.org/articles/copyright-and-the-bible#fn14"
+        "rating_ids": ["gnt"],
+        "date": "Pre-1997",
+        "summary": "American Bible Society refused to let Rainbow Missions, the nonprofit behind the public domain World English Bible, publish the Good News Bible, CEV and Versión Popular electronically. The requester reported: <blockquote>They had decided not to grant my request, based on the lack of security of my Internet distribution method. (Horrors! Someone might read the Gospel without paying for it!)</blockquote> When promised the texts would be encrypted, ABS refused again, saying it would publish its texts electronically itself, if at all. The requester added: <blockquote>Frankly, I feel like I've been ripped off, having contributed to the ABS based on their stated purpose of ‘providing the Holy Scriptures to every man, woman, and child in a language and form each can readily understand, and at a price each can easily afford.’ I fail to comprehend how these go together. This action does not match their mission statement very well.</blockquote>",
+        "sources": ["https://sellingjesus.org/articles/copyright-and-the-bible#fn14"]
     },
     {
         "id": "1996-abs-cev-radio-public-reading",
@@ -134,29 +190,31 @@
         "owner_id": "american_bible_society",
         "translation_names": ["Contemporary English Version"],
         "translation_ids": ["ENGCEV"],
-        "date": "Pre-1996",
-        "summary": "A Christian radio DJ planning a media event in which 300 people would read different portions of the Bible simultaneously in public, completing the whole Bible in 15 minutes, asked American Bible Society for permission to use the CEV. ABS refused, and he used the public domain KJV instead.",
-        "evidence_url": "https://sellingjesus.org/articles/copyright-and-the-bible#fn24"
+        "date": "Pre-1997",
+        "summary": "A Christian radio DJ planned an event where 300 people would read the whole Bible aloud in 15 minutes, each reading a different portion. American Bible Society refused permission to use the CEV, so he used the public domain KJV instead.",
+        "sources": ["https://sellingjesus.org/articles/copyright-and-the-bible#fn24"]
     },
     {
         "id": "2023-holman-csb-paper-bible",
         "owner_name": "Holman Bible Publishers",
         "owner_id": "holman_bible_publishers",
         "translation_names": ["Christian Standard Bible"],
-        "translation_ids": [],
+        "translation_ids": ["ENGHCSB"],
+        "rating_ids": ["csb"],
         "date": "2023-10-03",
-        "summary": "Gracious Tech asked through the Digital Bible Library to include the CSB in Paper Bible (paper.bible), a free app that lets anyone print Scripture. Lifeway, on behalf of Holman Bible Publishers, declined: “we cannot grant this kind of request (shown below) that allows any user to print from the CSB text themselves or with a print-on-demand printer.” In the same reply it said the app was “a great service for alternate language texts that are hard to acquire in certain parts of the world.”",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked to include the CSB in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. Lifeway, which publishes the CSB, declined: <blockquote>Unfortunately, we cannot grant this kind of request ... that allows any user to print from the CSB text themselves or with a print-on-demand printer. While we cannot approve this request, we do acknowledge that this is a great service for alternate language texts that are hard to acquire in certain parts of the world, though.</blockquote>",
+        "sources": []
     },
     {
         "id": "2023-crossway-esv-paper-bible",
         "owner_name": "Crossway",
         "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["dbl_f421fe261da7624f"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
         "date": "2023-10-16",
-        "summary": "Gracious Tech asked through the Digital Bible Library to include the ESV in Paper Bible (paper.bible), a free app that lets anyone print Scripture. Crossway declined: “We have a formal licensing process for allowing trusted bible publishers to print the ESV text. We do not however grant licenses for end-users to print their own editions, regardless of the amount of text they're printing.”",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked to include the ESV in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. Crossway declined: <blockquote>We reviewed your request and how your platform functions, and unfortunately it is not something we can grant a license for. We have a formal licensing process for allowing trusted bible publishers to print the ESV text. We do not however grant licenses for end-users to print their own editions, regardless of the amount of text they're printing.</blockquote>",
+        "sources": []
     },
     {
         "id": "2023-biblica-niv-paper-bible",
@@ -164,19 +222,21 @@
         "owner_id": "biblica",
         "translation_names": ["New International Version"],
         "translation_ids": ["ENGNIV"],
+        "rating_ids": ["niv"],
         "date": "2023-10-19",
-        "summary": "Gracious Tech asked to include the NIV in Paper Bible (paper.bible), a free app that lets anyone print Scripture. Biblica denied the request: “Biblica does not allow our licensees and/or their end users to create additional adaptations of any of its texts, especially for uncontrolled onward distribution.” Gracious Tech then offered to turn off all customisation so users could only print the plain NIV text. Biblica denied that as well, saying it checks whether an app offers “functionalities outside of what is currently offered by YouVersion and BibleGateway,” and that “to simply offer the user the option to print out a portion of the text (currently available on YV, BG, and Biblica.com) would not be unique nor innovative.”",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked to include the NIV in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. Biblica denied the request: <blockquote>Biblica does not allow our licensees and/or their end users to create additional adaptations of any of its texts, especially for uncontrolled onward distribution.</blockquote> Gracious Tech then offered to turn off all customisation so users could only print the plain NIV text. Biblica denied that too, saying: <blockquote>to simply offer the user the option to print out a portion of the text (currently available on YV [YouVersion], BG [BibleGateway], and Biblica.com) would not be unique nor innovative, and unfortunately, we would have to deny that as well.</blockquote> This is despite the fact that none of those websites offer the ability to create booklets or books of Scripture, the service Paper Bible provides.",
+        "sources": []
     },
     {
         "id": "2023-ncc-nrsvue-paper-bible",
         "owner_name": "National Council of the Churches of Christ",
         "owner_id": "national_council_of_the_churches_of_christ",
         "translation_names": ["New Revised Standard Version Updated Edition"],
-        "translation_ids": [],
+        "translation_ids": ["dbl_aac4eb6dbeb23c74"],
+        "rating_ids": ["nrsv"],
         "date": "2023-10-04",
-        "summary": "Gracious Tech asked through the Digital Bible Library to include the NRSVue in Paper Bible (paper.bible), a free app that lets anyone print Scripture, with its server costs covered by donations. Riggins Rights Management answered for the NCC. It did not refuse outright, but asked for money even though the app is free: “The NCC does license the NRSVue for use in gratis applications. The general terms are an annual licensing fee.” The fee quoted was $1,000 a year.",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked to include the NRSVue in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. The NCC's rights agent first asked for details such as the “Anticipated first print run quantity” and “Anticipated lifetime sales.” When told the app was free, they still asked for money: <blockquote>The NCC does license the NRSVue for use in gratis applications. The general terms are an annual licensing fee. The terms we can offer are:<br>Annual Fee: $1,000</blockquote>",
+        "sources": []
     },
     {
         "id": "2023-sil-paper-bible",
@@ -185,8 +245,8 @@
         "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
         "translation_ids": [],
         "date": "2023-10-06",
-        "summary": "Gracious Tech asked SIL International (now SIL Global) and Wycliffe for printing permissions for their Digital Bible Library translations in Paper Bible (paper.bible), a free app for printing Scripture book by book. SIL's DBL content manager objected that the app “gives rights to a third party to print publish, which we don't currently permit with any of our licenses.” They added that users could add pages that “have not been approved by one of our consultants for publishing.” SIL then declined: “In many cases/languages it would conflict with other license agreements we have with other organisations.” It said it would still consider requests for specific translations where no conflicting agreement exists.",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. SIL (on behalf of Wycliffe) denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
+        "sources": []
     },
     {
         "id": "2023-wycliffe-paper-bible",
@@ -195,18 +255,19 @@
         "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
         "translation_ids": [],
         "date": "2023-10-06",
-        "summary": "Gracious Tech asked SIL International (now SIL Global) and Wycliffe for printing permissions for their Digital Bible Library translations in Paper Bible (paper.bible), a free app for printing Scripture book by book. SIL's DBL content manager objected that the app “gives rights to a third party to print publish, which we don't currently permit with any of our licenses.” They added that users could add pages that “have not been approved by one of our consultants for publishing.” SIL then declined: “In many cases/languages it would conflict with other license agreements we have with other organisations.” It said it would still consider requests for specific translations where no conflicting agreement exists.",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. SIL (on behalf of Wycliffe) denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
+        "sources": []
     },
     {
         "id": "2024-lockman-lsb-paper-bible",
         "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
         "translation_names": ["Legacy Standard Bible"],
-        "translation_ids": [],
+        "translation_ids": ["dbl_8011347e1aa60e8a"],
+        "rating_ids": ["lsb"],
         "date": "2024-05-31",
-        "summary": "Gracious Tech asked through the Digital Bible Library to include the LSB in Paper Bible (paper.bible), a free app that lets anyone print Scripture. The Lockman Foundation passed the request to the LSB's publisher, 316 Publishing, which declined almost eight months later: “due to restrictions in our agreement with the Lockman Foundation, we are unable to grant permission to use the LSB as part of paper.bible at this time.”",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked to include the LSB in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. The Lockman Foundation said “the publisher needs to grant permission,” but the publisher, 316 Publishing, declined almost eight months later: <blockquote>due to restrictions in our agreement with the Lockman Foundation, we are unable to grant permission to use the LSB as part of paper.bible at this time.</blockquote>",
+        "sources": []
     },
     {
         "id": "2023-tyndale-nlt-paper-bible",
@@ -214,8 +275,50 @@
         "owner_id": "tyndale_house_publishers",
         "translation_names": ["New Living Translation"],
         "translation_ids": ["ENGNLT"],
+        "rating_ids": ["nlt"],
         "date": "2023-09-29",
-        "summary": "Gracious Tech asked Tyndale House Publishers to include the NLT in Paper Bible (paper.bible), a free app that lets anyone print Scripture. Tyndale never responded.",
-        "evidence_url": ""
+        "summary": "Gracious Tech asked Tyndale to include the NLT in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app that lets anyone print Scripture. Tyndale never responded.",
+        "sources": []
+    },
+    {
+        "id": "2009-german-bible-society-na27-ubs4-open-scriptures",
+        "owner_name": "German Bible Society",
+        "owner_id": "german_bible_society",
+        "translation_names": [
+            "Novum Testamentum Graece (NA27)",
+            "UBS Greek New Testament (UBS4)"
+        ],
+        "translation_ids": ["dbl_faa224d7ea8141fc", "dbl_89caddd8d2e195ec"],
+        "rating_ids": ["na", "ubs"],
+        "date": "2009-03-06",
+        "summary": "The German Bible Society told Open Scriptures, a non-profit project building an open database of Scripture, to remove the NA27/UBS4 Greek text from its site: <blockquote>The German Bible Society holds the copyright of both texts. Please remove our texts from your site until 31st March, 2009 at the latest. Otherwise we are forced to take legal steps.</blockquote> Open Scriptures removed it the next day and asked how it could license the text. The society replied: <blockquote>Biblical research and translation work costs a lot of money. Therefore, according to the standing rules of our foundation, we have to earn money with our texts to enable further Bible translations worldwide. Please understand that as a matter of principle we don't license the NA27 or the UBS4 Bible text for open source projects.</blockquote> It also demanded Open Scriptures remove its copy of MorphGNT, a freely licensed Greek New Testament database, as “again a copyright infringement.” Zack Hubert then shut down his popular free Greek reader zhubert.com, which was built on MorphGNT. The society later added: <blockquote>the German Bible Society does not license the Greek New Testament for online use as a matter of principle. This does not only apply to your but to any website. However the Greek Bible text is available for free in our Bible portal www.bibelwissenschaft.de.</blockquote> In other words, it can be read online, but only on the society's own site.",
+        "sources": [
+            "https://groups.google.com/g/openscriptures/c/9XcB_4Ua6QU",
+            "https://groups.google.com/g/openscriptures/c/b2l_KXxKKW8/m/Xb5pTDtEhMAJ",
+            "https://openscriptures.org/blog/2009/07/open-scriptures-roundup-july-3-2009/",
+            "https://web.archive.org/web/20090331210106/http://openscriptures.org:80/",
+            "https://openscriptures.org/blog/2009/03/redeeming-the-ill-fated-regreek-project-a-call-for-participation/",
+            "https://web.archive.org/web/20141021151439/http://baylyblog.com:80/blog/2009/03/copyrighting-holy-spirits-words-then-living-profit",
+            "https://gentlewisdom.org/copyrighting-the-word-of-god-1/",
+            "https://gentlewisdom.org/copyrighting-the-word-of-god-2/",
+            "https://gentlewisdom.org/original-bible-text-cannot-be-copyrighted-us-copyright-attorney-says/",
+            "https://www.roger-pearse.com/weblog/2009/05/25/morphgnt-busted-by-copyright/",
+            "https://leitourgeia.com/2009/04/02/lauding-two-great-resources-and-mourning-another/"
+        ]
+    },
+    {
+        "id": "pre-1995-zondervan-niv-online-bible-mac",
+        "owner_name": "Biblica, Inc.",
+        "owner_id": "biblica",
+        "translation_names": ["New International Version"],
+        "translation_ids": ["ENGNIV"],
+        "rating_ids": ["niv"],
+        "date": "Pre-1995",
+        "summary": "Zondervan, the NIV's US publisher, refused to license the American NIV to Online Bible for the Mac, a free Bible program, while selling its own competing MacBible software. Pastor Tim Bayly, who tried to mediate, recalled: <blockquote>The correspondence was eye-opening. In my judgment, it was all about money and not a bit about serving the church.</blockquote> Online Bible had to use the British NIV instead.",
+        "sources": [
+            "https://baylyblog.com/blog/2009/03/copyrighting-holy-spirits-words-then-living-profit",
+            "https://baylyblog.com/blog/2016/11/crossways-500-esv-and-rupert-murdoch",
+            "https://forums.macrumors.com/threads/request-niv-bible-program-for-mac.144743/"
+        ]
     }
 ]

@@ -16,13 +16,18 @@ const DRY_RUN = args.has('--dry-run')
 
 // ---- small generic helpers ----
 
-export function save_json(name:string, data:unknown, dir = DATA_DIR):void{
-    // Write one of our own data (or cache) files, matching the repo's existing 4-space formatting
+export function save_text(name:string, text:string, dir = DATA_DIR):void{
+    // Write one of our own data (or cache) files as is, unless this is a dry run
     if (DRY_RUN){
         console.info(`[dry-run] would write ${name}`)
         return
     }
-    writeFileSync(new URL(name, dir), JSON.stringify(data, null, 4) + '\n')
+    writeFileSync(new URL(name, dir), text)
+}
+
+export function save_json(name:string, data:unknown, dir = DATA_DIR):void{
+    // Write one of our own data (or cache) files, matching the repo's existing 4-space formatting
+    save_text(name, JSON.stringify(data, null, 4) + '\n', dir)
 }
 
 export function sort_keys<T>(record:Record<string, T>):Record<string, T>{
@@ -514,14 +519,36 @@ export interface FetchCollectionIds {
     ebible?:string
 }
 
-// fetch.bible's translations, and the DBL/eBible ids its collection records for each
+// fetch.bible's translations, the DBL/eBible ids its collection records for each, and its
+// languages (keyed by ISO 639-3 code)
 export interface FetchBible {
     bibles:Record<string, FetchBibleEntry>
     collection_ids:Map<string, FetchCollectionIds>
+    languages:Record<string, {english:string}>
 }
 
 // fetch.bible's language code for a translation — its ids are always '<language>_<name>'
 export const fetch_language = (fb_id:string):string => fb_id.split('_')[0]!
+
+// A language in find.bible's languages.json
+export interface FindBibleLanguage {
+    iso:string  // ISO 639-3 code
+    tt:string  // English name
+}
+
+// The English name of each language code given, from find.bible's languages, else fetch.bible's —
+// codes neither knows (mostly retired ones) are left out, so the site shows the code itself
+export function language_names(codes:Iterable<string>, find_bible:FindBibleLanguage[],
+        fetch_bible:FetchBible['languages']):Record<string, string>{
+    const find_bible_names = new Map(find_bible.map(lang => [lang.iso, lang.tt.trim()]))
+    const names:Record<string, string> = {}
+    for (const code of [...new Set(codes)].sort()){
+        const name = find_bible_names.get(code) || fetch_bible[code]?.english
+        if (name)
+            names[code] = name
+    }
+    return names
+}
 
 // The dataset being built, plus the public sources already loaded
 export interface BuildState {

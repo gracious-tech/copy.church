@@ -16,6 +16,7 @@ table.translations(ref='table' :class='{advanced}'): tbody
             th Attribute
             th Commercial
             th Transparent
+        th(v-if='has_reports')
     tr(v-for='item of bibles' :key='item.id' :class='{selected: bible_id === item.id}'
             @click='() => change_text(item.id)')
         td {{ item.abbrev }}
@@ -33,6 +34,18 @@ table.translations(ref='table' :class='{advanced}'): tbody
             td(v-html='b(item.can.not_attribute)')
             td(v-html='b(item.can.use_commercially)')
             td(v-html='b(item.can.transparent)')
+        td.reports(v-if='has_reports')
+            WatchReportsButton(
+                v-if='response_log_by_rating_id[item.id]' @click.stop='show_reports(item)'
+                :count='response_log_by_rating_id[item.id].length'
+                :active='reports_open && reports_item?.id === item.id' compact
+            )
+
+//- The clicked item's reports, shown in a modal
+WatchReportsDialog(
+    v-model='reports_open' :title='`Reports for ${reports_item?.abbrev ?? ""}`'
+    :entries='reports_item ? response_log_by_rating_id[reports_item.id] ?? [] : []'
+)
 
 p.advanced-toggle
     input(v-model='advanced' type='checkbox' id='advanced')
@@ -53,6 +66,9 @@ import {computed, ref, nextTick} from 'vue'
 
 import CriticalRestrictionsItem from './CriticalRestrictionsItem.vue'
 import {CRITICALS} from './critical_texts'
+import WatchReportsButton from '../watch/WatchReportsButton.vue'
+import WatchReportsDialog from '../watch/WatchReportsDialog.vue'
+import {response_log_by_rating_id, use_reports_dialog} from '../watch/watch_utils'
 
 
 const bibles = Object.values(CRITICALS)
@@ -81,6 +97,13 @@ const change_text = id => {
 
 // Advanced info columns available when screen wide enough
 const advanced = ref(false)
+
+// The reports column only shows when at least one item has reports
+const has_reports = bibles.some(item => response_log_by_rating_id[item.id])
+
+// The critical text whose reports are shown in the dialog
+const {target: reports_item, open: reports_open, show: show_reports} =
+    use_reports_dialog<typeof bibles[0]>()
 
 </script>
 

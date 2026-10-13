@@ -1,7 +1,36 @@
 [
     {
+        "id": "202_association_nationale_pour_le_traduction_de_la_bible_et_l_alphabétisation",
+        "name": "202_ Association Nationale pour le Traduction de la Bible et l’Alphabétisation"
+    },
+    {
+        "id": "202_hosanna",
+        "name": "202_ Hosanna",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "aadharshila_sansthan",
+        "name": "Aadharshila Sansthan"
+    },
+    {
+        "id": "abs",
+        "name": "ABS"
+    },
+    {
         "id": "abtem",
         "name": "ABTem"
+    },
+    {
+        "id": "abtem_hosanna",
+        "name": "ABTem, Hosanna"
+    },
+    {
+        "id": "acatba",
+        "name": "ACATBA"
+    },
+    {
+        "id": "actoba_subo",
+        "name": "ACTOBA-SUBO"
     },
     {
         "id": "adi_media_s_r_l",
@@ -9,8 +38,13 @@
         "website": "https://www.adimedia.it/digital/"
     },
     {
+        "id": "afii",
+        "name": "AFII"
+    },
+    {
         "id": "africa_inland_mission",
-        "name": "Africa Inland Mission"
+        "name": "Africa Inland Mission",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=111873101"
     },
     {
         "id": "africa_inland_mission_aic_tanzania_africa_inland_church_of_tanzania",
@@ -29,21 +63,151 @@
         "name": "AIC Tanzania - Africa Inland Church of Tanzania"
     },
     {
+        "id": "aidia",
+        "name": "AIDIA"
+    },
+    {
+        "id": "al_kalima",
+        "name": "Al Kalima"
+    },
+    {
+        "id": "aldls",
+        "name": "ALDLS"
+    },
+    {
+        "id": "alliance_bibleque_de_cote_d_ivoire",
+        "name": "Alliance Bibleque de Cote d'Ivoire"
+    },
+    {
+        "id": "alliance_biblique_au_burkina_faso",
+        "name": "Alliance Biblique au Burkina Faso"
+    },
+    {
+        "id": "alliance_biblique_au_burkina_fasoburkina_faso",
+        "name": "Alliance Biblique au Burkina FasoBurkina Faso"
+    },
+    {
+        "id": "alliance_biblique_au_mali",
+        "name": "Alliance Biblique au Mali"
+    },
+    {
+        "id": "alliance_biblique_au_mali_boomu_old_testament_audio_bible",
+        "name": "Alliance Biblique au Mali Boomu Old Testament Audio Bible"
+    },
+    {
+        "id": "alliance_biblique_au_mali_première_édition",
+        "name": "Alliance Biblique au Mali, Première édition"
+    },
+    {
+        "id": "alliance_biblique_au_tchad",
+        "name": "Alliance Biblique au Tchad"
+    },
+    {
+        "id": "alliance_biblique_de_burkina_faso",
+        "name": "Alliance Biblique de Burkina Faso"
+    },
+    {
+        "id": "alliance_biblique_de_cote_d_ivoire",
+        "name": "Alliance Biblique de Cote d'Ivoire"
+    },
+    {
+        "id": "alliance_biblique_de_côte_d_ivoire",
+        "name": "Alliance Biblique de Côte d'Ivoire"
+    },
+    {
+        "id": "alliance_biblique_de_côte_d_ivoire_www_biblesociety_cotedivoire_org",
+        "name": "Alliance Biblique de Côte d’Ivoire, www.biblesociety-cotedivoire.org"
+    },
+    {
+        "id": "alliance_biblique_de_la_republique_democratique_du_congo",
+        "name": "Alliance Biblique de la Republique Democratique du Congo"
+    },
+    {
+        "id": "alliance_biblique_du_benin",
+        "name": "Alliance Biblique du Benin"
+    },
+    {
+        "id": "alliance_biblique_du_bénin",
+        "name": "Alliance Biblique du Bénin"
+    },
+    {
+        "id": "alliance_biblique_du_burkina_faso",
+        "name": "Alliance Biblique du Burkina Faso"
+    },
+    {
+        "id": "alliance_biblique_du_burkina_faso_jula_old_testament_audio_bible",
+        "name": "Alliance Biblique du Burkina Faso, , Jula Old Testament Audio Bible"
+    },
+    {
+        "id": "alliance_biblique_du_burkina_faso_lyélé_old_testament_audio_bible",
+        "name": "Alliance Biblique du Burkina Faso . Lyélé Old Testament Audio Bible"
+    },
+    {
+        "id": "alliance_biblique_du_burkina_faso_southern_bobo_madaré_old_testament_audio_bible",
+        "name": "Alliance Biblique du Burkina Faso . Southern Bobo Madaré Old Testament Audio Bible"
+    },
+    {
+        "id": "alliance_biblique_du_cameroun",
+        "name": "Alliance biblique du Cameroun"
+    },
+    {
+        "id": "alliance_biblique_du_cameroun_b_p_cameroon",
+        "name": "Alliance Biblique du Cameroun, B.P. , Cameroon"
+    },
+    {
+        "id": "alliance_biblique_du_tchad",
+        "name": "Alliance Biblique du Tchad"
+    },
+    {
+        "id": "alliance_biblique_du_togo",
+        "name": "Alliance Biblique du Togo"
+    },
+    {
+        "id": "alliance_biblique_en_centrafrique",
+        "name": "Alliance Biblique en Centrafrique"
+    },
+    {
         "id": "american_bible_society",
         "name": "American Bible Society",
-        "website": "http://www.americanbible.org/"
+        "website": "http://www.americanbible.org/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=131623885"
     },
     {
         "id": "amwan",
         "name": "AMWAN"
     },
     {
+        "id": "amwan_quechua_huaylla_wanca_old_testament_audio_bible",
+        "name": "AMWAN . -- Quechua Huaylla Wanca Old Testament Audio Bible"
+    },
+    {
         "id": "an_sagart",
         "name": "An Sagart"
     },
     {
+        "id": "antba",
+        "name": "ANTBA"
+    },
+    {
         "id": "antoni_bokun",
         "name": "Antoni Bokun"
+    },
+    {
+        "id": "apogée",
+        "name": "APOGÉE"
+    },
+    {
+        "id": "apogee_biblevivante",
+        "name": "APOGEE (BibleVivante)",
+        "website": "http://www.biblevivante.com/"
+    },
+    {
+        "id": "apostolos_vavylis",
+        "name": "Apostolos Vavylis"
+    },
+    {
+        "id": "arab_israeli_bible_society",
+        "name": "Arab Israeli Bible Society"
     },
     {
         "id": "aramaic_bible_translation",
@@ -69,12 +233,56 @@
         "name": "Asociación Bíblica Latinoamericana"
     },
     {
+        "id": "asociación_civil_capacitación_lingüística_antropológica_y_alfabetización_nativa",
+        "name": "Asociación Civil, Capacitación Lingüística, Antropológica y Alfabetización Nativa"
+    },
+    {
+        "id": "asociación_educativa_y_cultural_maya",
+        "name": "Asociación Educativa y Cultural Maya"
+    },
+    {
+        "id": "asociacion_interdenominacional_para_el_desarrollo_integral_de_apurímac",
+        "name": "Asociacion Interdenominacional para el Desarrollo Integral de Apurímac"
+    },
+    {
+        "id": "asociación_interdenominacional_para_el_desarrollo_integral_de_apurímac",
+        "name": "Asociación Interdenominacional para el Desarrollo Integral de Apurímac"
+    },
+    {
+        "id": "assessment",
+        "name": "Assessment"
+    },
+    {
+        "id": "assigned_to_kindred_press",
+        "name": "Assigned to Kindred Press"
+    },
+    {
+        "id": "associação_linguistica_evangélica_missionária",
+        "name": "Associação Linguistica Evangélica Missionária"
+    },
+    {
         "id": "association_bible_society_of_kazakhstan",
         "name": "Association Bible Society of Kazakhstan"
     },
     {
+        "id": "association_centrafricaine_pour_la_traduction_de_la_bible_et_lalphabetisation",
+        "name": "Association Centrafricaine pour la traduction de la Bible et lAlphabetisation"
+    },
+    {
         "id": "association_congolaise_de_traductions_de_la_bible",
         "name": "Association Congolaise de Traductions de la Bible"
+    },
+    {
+        "id": "association_congolaise_pour_la_traduction_de_la_bible_et_alphabetisation_sukisa_boyinga",
+        "name": "Association Congolaise Pour la Traduction de la Bible et Alphabetisation - Sukisa Boyinga"
+    },
+    {
+        "id": "association_dieu_n_est_pas_loin",
+        "name": "Association Dieu n’est pas Loin"
+    },
+    {
+        "id": "association_for_the_restoration_of_the_translation",
+        "name": "Association for the Restoration of the Translation"
     },
     {
         "id": "association_ivoirienne_pour_la_traduction_de_la_bible",
@@ -89,8 +297,20 @@
         "name": "Association pour la Promotion de la Langue Akébou"
     },
     {
+        "id": "association_pour_la_promotion_de_la_langue_gabri_darbé_dormon_en_coopération_avec",
+        "name": "Association pour la Promotion de la Langue Gabri Darbé-Dormon en coopération avec"
+    },
+    {
+        "id": "association_saxwegbe_na_yi",
+        "name": "Association Saxwegbe Na Yi"
+    },
+    {
         "id": "association_traduire_la_bible",
         "name": "Association Traduire la Bible"
+    },
+    {
+        "id": "ataltrab",
+        "name": "ATALTRAB"
     },
     {
         "id": "audiobiblia_org_irma_flores",
@@ -98,19 +318,24 @@
     },
     {
         "id": "avant_ministries",
-        "name": "Avant Ministries"
+        "name": "Avant Ministries",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=440594428"
     },
     {
         "id": "awal_n_arebbi",
         "name": "Awal n Arebbi"
     },
     {
-        "id": "bahnar_bible_association",
-        "name": "Bahnar Bible Association"
+        "id": "b_f_b_s",
+        "name": "B.F.B.S."
     },
     {
-        "id": "baker_publishing_group",
-        "name": "Baker Publishing Group"
+        "id": "baebol_sosieti_saot_pasific_i_copiraetem_baebol_ya_long",
+        "name": "Baebol Sosieti Saot Pasific I copiraetem Baebol ya long"
+    },
+    {
+        "id": "bahnar_bible_association",
+        "name": "Bahnar Bible Association"
     },
     {
         "id": "bangladesh_bible_society",
@@ -122,12 +347,21 @@
         "name": "Baptist Mission Australia"
     },
     {
+        "id": "barbour_publishing",
+        "name": "Barbour Publishing, Inc.",
+        "website": "http://www.barbourbooks.com/"
+    },
+    {
         "id": "bau_dang",
         "name": "Bau Dang"
     },
     {
         "id": "beyond_translation",
         "name": "Beyond Translation"
+    },
+    {
+        "id": "bfbs_heritage_texts",
+        "name": "BFBS Heritage texts"
     },
     {
         "id": "bfp_velberter_mission",
@@ -154,7 +388,12 @@
     {
         "id": "bible_league_international",
         "name": "Bible League International",
-        "website": "http://www.bibleleague.org/"
+        "website": "http://www.bibleleague.org/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=362037761"
+    },
+    {
+        "id": "bible_soceity_in_senegal",
+        "name": "Bible Soceity in Senegal"
     },
     {
         "id": "bible_society_australia",
@@ -162,12 +401,24 @@
         "website": "http://www.biblesociety.org.au"
     },
     {
+        "id": "bible_society_in_algeria",
+        "name": "Bible Society in Algeria"
+    },
+    {
         "id": "bible_society_in_angola",
         "name": "Bible Society in Angola"
     },
     {
+        "id": "bible_society_in_botswana",
+        "name": "Bible Society in Botswana"
+    },
+    {
         "id": "bible_society_in_cambodia",
         "name": "Bible Society in Cambodia"
+    },
+    {
+        "id": "bible_society_in_cote_d_ivoire",
+        "name": "Bible Society in Cote d'Ivoire"
     },
     {
         "id": "bible_society_in_gabon",
@@ -211,6 +462,10 @@
         "id": "bible_society_in_netherlands_antilles_and_aruba",
         "name": "Bible Society in Netherlands Antilles and Aruba",
         "website": "http://www.biblesocietynet.org/"
+    },
+    {
+        "id": "bible_society_in_new_zealand",
+        "name": "The Bible Society in New Zealand"
     },
     {
         "id": "bible_society_in_nicaragua",
@@ -263,6 +518,26 @@
         "website": "http://www.unitedbiblesocieties.org/society/bible-society-in-the-gambia/"
     },
     {
+        "id": "bible_society_in_the_republic_of_belarus",
+        "name": "Bible Society in the Republic of Belarus"
+    },
+    {
+        "id": "bible_society_in_the_seychelles",
+        "name": "Bible Society in the Seychelles"
+    },
+    {
+        "id": "bible_society_in_the_south_pacific",
+        "name": "Bible Society in the South Pacific"
+    },
+    {
+        "id": "bible_society_in_the_south_pacific_baebol_ya_hem_i_bislama_baebol_revised_version",
+        "name": "Bible Society in the South Pacific . Baebol ya hem I Bislama Baebol Revised version"
+    },
+    {
+        "id": "bible_society_in_the_south_pacific_www_bible_org_fj",
+        "name": "The Bible Society in the South Pacific www.bible.org.fj"
+    },
+    {
         "id": "bible_society_in_turkey",
         "name": "Bible Society in Turkey",
         "website": "http://www.kitabimukaddes.com/"
@@ -306,6 +581,10 @@
         "name": "Bible Society of Burundi"
     },
     {
+        "id": "bible_society_of_cambodia",
+        "name": "Bible Society of Cambodia"
+    },
+    {
         "id": "bible_society_of_cameroon",
         "name": "Bible Society of Cameroon",
         "website": "http://www.biblesociety-cameroon.org/"
@@ -343,6 +622,14 @@
         "website": "http://biblesociety-ethiopia.org"
     },
     {
+        "id": "bible_society_of_france",
+        "name": "Bible Society of France"
+    },
+    {
+        "id": "bible_society_of_gabon",
+        "name": "Bible Society of Gabon"
+    },
+    {
         "id": "bible_society_of_geneva",
         "name": "Bible Society of Geneva",
         "website": "https://www.bible-society.org/en"
@@ -351,6 +638,10 @@
         "id": "bible_society_of_ghana",
         "name": "Bible Society of Ghana",
         "website": "http://www.biblesociety-ghana.org/"
+    },
+    {
+        "id": "bible_society_of_guatemala",
+        "name": "Bible Society of Guatemala"
     },
     {
         "id": "bible_society_of_honduras",
@@ -362,9 +653,21 @@
         "website": "https://www.bsind.org/"
     },
     {
+        "id": "bible_society_of_indonesia",
+        "name": "Bible Society of Indonesia"
+    },
+    {
+        "id": "bible_society_of_jordan",
+        "name": "Bible Society of Jordan"
+    },
+    {
         "id": "bible_society_of_kenya",
         "name": "Bible Society of Kenya",
         "website": "http://www.biblesociety-kenya.org/"
+    },
+    {
+        "id": "bible_society_of_kenyawww_biblesociety_kenya_org",
+        "name": "Bible Society of Kenyawww.biblesociety-kenya.org"
     },
     {
         "id": "bible_society_of_kyrgyzstan",
@@ -428,6 +731,10 @@
         "website": "http://www.biblesociety-nigeria.org/"
     },
     {
+        "id": "bible_society_of_pakistan",
+        "name": "Bible Society of Pakistan"
+    },
+    {
         "id": "bible_society_of_papua_new_guinea",
         "name": "Bible Society of Papua New Guinea"
     },
@@ -435,6 +742,10 @@
         "id": "bible_society_of_portugal",
         "name": "Bible Society of Portugal",
         "website": "http://www.sociedade-biblica.pt/"
+    },
+    {
+        "id": "bible_society_of_russia",
+        "name": "Bible Society of Russia"
     },
     {
         "id": "bible_society_of_rwanda",
@@ -445,6 +756,10 @@
         "id": "bible_society_of_serbia",
         "name": "Bible Society of Serbia",
         "website": "http://www.biblijskodrustvo.org.rs"
+    },
+    {
+        "id": "bible_society_of_sierra_leone",
+        "name": "The Bible Society of Sierra Leone"
     },
     {
         "id": "bible_society_of_singapore",
@@ -466,6 +781,10 @@
         "website": "http://sociedadbiblica.org"
     },
     {
+        "id": "bible_society_of_suriname_www_surinamebiblesociety_org",
+        "name": "Bible Society of Suriname www.surinamebiblesociety.org"
+    },
+    {
         "id": "bible_society_of_tajikistan",
         "name": "Bible Society of Tajikistan"
     },
@@ -478,6 +797,10 @@
         "id": "bible_society_of_the_democratic_republic_of_congo",
         "name": "Bible Society of the Democratic Republic of Congo",
         "website": "http://biblesociety-cd.org/"
+    },
+    {
+        "id": "bible_society_of_the_republic_of_congo",
+        "name": "Bible Society of the Republic of Congo"
     },
     {
         "id": "bible_society_of_the_republic_of_macedonia",
@@ -518,12 +841,33 @@
         "website": "http://www.biblevietnam.org"
     },
     {
+        "id": "bible_socitety_botswana",
+        "name": "Bible Socitety Botswana"
+    },
+    {
         "id": "bible_students_fellowship_of_bangladesh",
         "name": "Bible Students Fellowship of Bangladesh"
     },
     {
         "id": "bible_translation_and_literacy",
         "name": "Bible Translation and Literacy"
+    },
+    {
+        "id": "bible_translation_and_literacy_east_africa",
+        "name": "Bible Translation and Literacy East Africa"
+    },
+    {
+        "id": "bible_translation_and_literacy_tharaka_audio_bible",
+        "name": "Bible Translation and Literacy . . Tharaka Audio Bible"
+    },
+    {
+        "id": "bible_translation_institute_at_zaoksky_russia",
+        "name": "Bible Translation Institute at Zaoksky, Russia",
+        "website": "http://www.russianbible.ru/"
+    },
+    {
+        "id": "bible_translations_on_tape",
+        "name": "Bible Translations on Tape, Inc."
     },
     {
         "id": "bible_translators_of_ukraine",
@@ -539,22 +883,52 @@
         "website": "http://www.biblesint.org/"
     },
     {
+        "id": "biblia_wayuu",
+        "name": "Biblia Wayuu"
+    },
+    {
         "id": "biblica",
         "name": "Biblica, Inc.",
-        "website": "http://www.Biblica.com/permissions"
+        "website": "http://www.Biblica.com/permissions",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=841194554"
     },
     {
         "id": "biblical_studies_press_l_l_c",
         "name": "Biblical Studies Press, L. L. C."
     },
     {
+        "id": "biblijan_kändmižen_institut_helsinki",
+        "name": "Biblijan kändmižen institut, Helsinki"
+    },
+    {
+        "id": "biblijsko_društvo_srbije",
+        "name": "Biblijsko društvo Srbije"
+    },
+    {
+        "id": "biblion_použito_se_svolením_nakladatele",
+        "name": "BIBLION. Použito se svolením nakladatele"
+    },
+    {
+        "id": "biblion_z_s",
+        "name": "Biblion, z. s.",
+        "website": "http://www.biblion.cz/"
+    },
+    {
         "id": "binoy_chacko_ministries",
         "name": "Binoy Chacko Ministries"
+    },
+    {
+        "id": "boelter_publishing",
+        "name": "Boelter Publishing"
     },
     {
         "id": "bolivian_bible_society",
         "name": "Bolivian Bible Society",
         "website": "http://sociedadbiblicaboliviana.org"
+    },
+    {
+        "id": "borneo_evangelical_mission",
+        "name": "Borneo Evangelical Mission"
     },
     {
         "id": "bridge_communications_systems",
@@ -575,6 +949,14 @@
         "website": "http://www.biblesociety.org.uk/"
     },
     {
+        "id": "bruce_johnson",
+        "name": "Bruce Johnson"
+    },
+    {
+        "id": "brunei",
+        "name": "Brunei"
+    },
+    {
         "id": "bsb_publishing",
         "name": "BSB Publishing, LLC",
         "website": "https://berean.bible/"
@@ -588,6 +970,14 @@
         "name": "Bulgarian Bible Society"
     },
     {
+        "id": "cahaya_foundation",
+        "name": "The Cahaya Foundation"
+    },
+    {
+        "id": "cambridge_university_press",
+        "name": "Cambridge University Press"
+    },
+    {
         "id": "cameroon_association_for_bible_translation_and_literacy",
         "name": "Cameroon Association for Bible Translation and Literacy"
     },
@@ -597,8 +987,25 @@
         "website": "http://www.biblesociety.ca"
     },
     {
+        "id": "cbase_solutions_pty",
+        "name": "Cbase Solutions Pty. Ltd."
+    },
+    {
+        "id": "cbb",
+        "name": "CBB"
+    },
+    {
+        "id": "central_asia_publishing",
+        "name": "Central Asia Publishing",
+        "website": "https://centralasiapublishing.com"
+    },
+    {
         "id": "central_asia_publishing_gsungrab",
         "name": "Central Asia Publishing, gSungrab"
+    },
+    {
+        "id": "centre_interconfessionnel_de_traduction_de_la_bible_et_d_alphabétisation",
+        "name": "Centre Interconfessionnel de Traduction de la Bible et d'Alphabétisation"
     },
     {
         "id": "centre_international_foi_agissante_par_la_charité",
@@ -610,6 +1017,10 @@
         "website": "http://www.ceylonbiblesociety.org/"
     },
     {
+        "id": "chen_embassy_international_christian_center",
+        "name": "Chen Embassy International Christian Center"
+    },
+    {
         "id": "chilean_bible_society",
         "name": "Chilean Bible Society",
         "website": "http://www.sbch.cl/"
@@ -619,18 +1030,42 @@
         "name": "Chinese Scripture Forum"
     },
     {
+        "id": "christelike_lektuur_maatskappy_npc",
+        "name": "Christelike Lektuur Maatskappy NPC"
+    },
+    {
         "id": "christelike_lektuurmaatskappy_npc",
         "name": "CHRISTELIKE LEKTUURMAATSKAPPY NPC",
         "website": "http://www.muapulamission.co.za/"
+    },
+    {
+        "id": "christian_education_movement_wales",
+        "name": "Christian Education Movement Wales"
+    },
+    {
+        "id": "christian_far_east_ministry",
+        "name": "Christian Far East Ministry"
     },
     {
         "id": "chutney_media_agency_limited",
         "name": "Chutney Media Agency Limited"
     },
     {
+        "id": "cieatlg",
+        "name": "CIEATLG"
+    },
+    {
         "id": "city_bible_foundation",
         "name": "City Bible Foundation",
         "website": "https://www.biblefactory.org"
+    },
+    {
+        "id": "clan",
+        "name": "CLAN"
+    },
+    {
+        "id": "clm_npc",
+        "name": "CLM NPC."
     },
     {
         "id": "cocelmpu",
@@ -642,12 +1077,24 @@
         "website": "http://www.sociedadbiblicacolombiana.com"
     },
     {
+        "id": "comann_bhìoball_na_h_alba",
+        "name": "Comann Bhìoball na h‑Alba"
+    },
+    {
+        "id": "comite_de_traduction_igo",
+        "name": "Comite de Traduction igo"
+    },
+    {
         "id": "common_english_bible",
         "name": "Common English Bible"
     },
     {
         "id": "communauté_des_eglises_travaillistes",
         "name": "Communauté des Eglises Travaillistes"
+    },
+    {
+        "id": "communauté_des_églises_travaillistes",
+        "name": "Communauté des Églises Travaillistes"
     },
     {
         "id": "confraternity_of_christian_doctrine",
@@ -660,6 +1107,10 @@
     {
         "id": "cornish_language_board",
         "name": "Cornish Language Board"
+    },
+    {
+        "id": "courage_for_life",
+        "name": "Courage for Life, Inc."
     },
     {
         "id": "covenant_christian_coalition",
@@ -676,7 +1127,25 @@
     },
     {
         "id": "crossway",
-        "name": "Crossway"
+        "name": "Crossway",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=361143987"
+    },
+    {
+        "id": "cru",
+        "name": "Cru",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=956006173"
+    },
+    {
+        "id": "cyber_kari_ña",
+        "name": "Cyber-Kari'ña"
+    },
+    {
+        "id": "cymdeithas_darllen_pethau_da",
+        "name": "Cymdeithas Darllen Pethau Da"
+    },
+    {
+        "id": "cymdeithas_y_beibl",
+        "name": "Cymdeithas Y Beibl"
     },
     {
         "id": "czech_bible_society",
@@ -693,12 +1162,28 @@
     },
     {
         "id": "davar_audio_bibles",
-        "name": "Davar Audio Bibles"
+        "name": "Davar Audio Bibles",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=270642468"
+    },
+    {
+        "id": "davar_partners",
+        "name": "Davar Partners",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=270642468"
     },
     {
         "id": "davar_partners_international",
         "name": "Davar Partners International",
-        "website": "https://davaraudiobibles.org"
+        "website": "https://davaraudiobibles.org",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=270642468"
+    },
+    {
+        "id": "davar_partners_international_for_following_ot_books_gen_deu_rut",
+        "name": "Davar Partners International for following OT books: Gen – Deu, Rut",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=270642468"
+    },
+    {
+        "id": "davar_partners_international_hosanna",
+        "name": "Davar Partners International, Hosanna"
     },
     {
         "id": "david_neil_nellis",
@@ -707,6 +1192,28 @@
     {
         "id": "david_p_barret",
         "name": "David P. Barret"
+    },
+    {
+        "id": "david_w_dyer",
+        "name": "David W. Dyer"
+    },
+    {
+        "id": "dbl_local_test",
+        "name": "DBL Local Test",
+        "website": "http://www.thedigitalbiblelibrary.org/#"
+    },
+    {
+        "id": "dbl_paratext_test_organization",
+        "name": "DBL ParaText Test Organization",
+        "website": "http://thedigitalbiblelibrary.org"
+    },
+    {
+        "id": "dbltest",
+        "name": "DBLTest"
+    },
+    {
+        "id": "df",
+        "name": "DF"
     },
     {
         "id": "dhankavi_mandli_khargon_raykhed_nandurbar",
@@ -721,12 +1228,45 @@
         "name": "Didayi Believers Assembly Kudumulugumma, Malkangiri, Odisha"
     },
     {
+        "id": "die_pad_van_waarheid_tot_die_lewe",
+        "name": "Die Pad van Waarheid tot die Lewe"
+    },
+    {
+        "id": "dinh_vinh_sang",
+        "name": "Dinh Vinh Sang"
+    },
+    {
         "id": "diocese_of_awori_church_of_nigeria_anglican_communion",
         "name": "Diocese of Awori, Church of Nigeria, Anglican Communion"
     },
     {
+        "id": "diocese_of_rēzekne_aglona",
+        "name": "Diocese of Rēzekne-Aglona"
+    },
+    {
+        "id": "dios_habla_hoy_cuarta_edición",
+        "name": "Dios habla hoy ®, Cuarta edición"
+    },
+    {
+        "id": "divinity_global_gospel_initiative",
+        "name": "Divinity Global Gospel Initiative"
+    },
+    {
+        "id": "division_of_christian_education_of_national_council_of_church_of_christ",
+        "name": "Division of Christian Education of National Council of Church of Christ"
+    },
+    {
         "id": "door43_world_missions_community",
-        "name": "Door43 World Missions Community"
+        "name": "Door43 World Missions Community",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=141888977"
+    },
+    {
+        "id": "dpi",
+        "name": "DPI"
+    },
+    {
+        "id": "dptll",
+        "name": "DPTLL"
     },
     {
         "id": "dr_humberto_gómez_caballero",
@@ -735,6 +1275,18 @@
     {
         "id": "dr_paul_w_esposito",
         "name": "Dr. Paul W. Esposito"
+    },
+    {
+        "id": "društvo_svetopisemska_družba_slovenije",
+        "name": "Društvo Svetopisemska družba Slovenije"
+    },
+    {
+        "id": "e_glise_e_vange_lique_mennonite_du_burkina_faso_et_sil_international",
+        "name": "Église Évangélique Mennonite du Burkina Faso et SIL International"
+    },
+    {
+        "id": "eagle_nest_bible_translation_initiative",
+        "name": "Eagle Nest Bible Translation Initiative"
     },
     {
         "id": "eastern_zone",
@@ -749,13 +1301,27 @@
         "name": "Editora Mundo Cristão"
     },
     {
+        "id": "editorial_evangelica",
+        "name": "Editorial Evangelica"
+    },
+    {
         "id": "editrice_elledici",
         "name": "Editrice Elledici"
     },
     {
+        "id": "eglise_luthérienne_du_sénégal",
+        "name": "Eglise luthérienne du Sénégal",
+        "website": "http://egliselutherienne-senegal.org"
+    },
+    {
+        "id": "egwanekerobibeli_lyanamibia",
+        "name": "Egwanekerobibeli Lyanamibia"
+    },
+    {
         "id": "elam_ministries",
         "name": "Elam Ministries",
-        "website": "http://www.elam.com/"
+        "website": "http://www.elam.com/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=582134253"
     },
     {
         "id": "ellis_w_deibler",
@@ -770,8 +1336,26 @@
         "name": "EMU International"
     },
     {
+        "id": "epi",
+        "name": "EPI"
+    },
+    {
+        "id": "ethiopian_kale_heywet_church_sim_a_d",
+        "name": "Ethiopian Kale Heywet Church / SIM, A.D."
+    },
+    {
+        "id": "ethnoarts_philippines",
+        "name": "Ethnoarts Philippines, Inc."
+    },
+    {
+        "id": "ethnos_360",
+        "name": "Ethnos 360",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=396024926"
+    },
+    {
         "id": "ethnos360",
-        "name": "Ethnos360"
+        "name": "Ethnos360",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=396024926"
     },
     {
         "id": "eugene_h_peterson",
@@ -782,16 +1366,31 @@
         "name": "The Evangelical Apostolos Ministry"
     },
     {
+        "id": "everest_audio_bible",
+        "name": "Everest Audio Bible",
+        "website": "http://www.everestaudiobible.org/"
+    },
+    {
         "id": "ewangeliczny_instytut_biblijny",
         "name": "Ewangeliczny Instytut Biblijny"
     },
     {
+        "id": "excellence_in_life_ministries",
+        "name": "Excellence In Life Ministries"
+    },
+    {
+        "id": "ezr_job_sng",
+        "name": "Ezr – Job, Sng"
+    },
+    {
         "id": "faith_comes_by_hearing",
-        "name": "Faith Comes By Hearing"
+        "name": "Faith Comes By Hearing",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
     },
     {
         "id": "far_east_broadcasting_company",
-        "name": "Far East Broadcasting Company"
+        "name": "Far East Broadcasting Company",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=951461574"
     },
     {
         "id": "faroese_bible_society",
@@ -802,9 +1401,17 @@
         "name": "FCBH - Malaysia"
     },
     {
+        "id": "fdpm_co",
+        "name": "FDPM-CO"
+    },
+    {
         "id": "finnish_bible_society",
         "name": "Finnish Bible Society",
         "website": "http://www.bible.fi/"
+    },
+    {
+        "id": "foreign_bible_society",
+        "name": "Foreign Bible Society"
     },
     {
         "id": "free_bible_foundation",
@@ -825,8 +1432,48 @@
         "website": "http://www.friendsbiblestudy.com/"
     },
     {
+        "id": "friends_missionary_prayer_band_bareli_pauri_new_testament_audio_bible",
+        "name": "Friends Missionary Prayer Band.. Bareli Pauri New Testament Audio Bible"
+    },
+    {
+        "id": "friends_missionary_prayer_band_varli_new_testament_audio_bible",
+        "name": "Friends Missionary Prayer Band. . Varli New Testament Audio Bible"
+    },
+    {
+        "id": "friends_study_bible",
+        "name": "Friends Study Bible"
+    },
+    {
+        "id": "fundación_para_el_desarrollo_de_los_pueblos_marginados",
+        "name": "Fundación para el desarrollo de los pueblos marginados"
+    },
+    {
+        "id": "fundación_socio_cultural_dhe_cwana",
+        "name": "Fundación Socio-cultural Dhe'cwana"
+    },
+    {
         "id": "fundacja_wrota_nadziei",
         "name": "Fundacja Wrota Nadziei"
+    },
+    {
+        "id": "genfer_bibelgesellschaft_deutsche_bibelgesellschaft_stuttgart",
+        "name": "Genfer Bibelgesellschaft / Deutsche Bibelgesellschaft, Stuttgart"
+    },
+    {
+        "id": "gereja_firman_allah",
+        "name": "Gereja Firman Allah"
+    },
+    {
+        "id": "gereja_injili_di_indonesia",
+        "name": "Gereja Injili di Indonesia"
+    },
+    {
+        "id": "gereja_kristen_sulawesi_tengah",
+        "name": "Gereja Kristen Sulawesi Tengah"
+    },
+    {
+        "id": "gereja_masehi_injili_di_timor_gmit_evangelical_church_of_timor",
+        "name": "Gereja Masehi Injili di Timor (GMIT Evangelical Church of Timor)"
     },
     {
         "id": "german_bible_society",
@@ -834,8 +1481,24 @@
         "website": "http://www.die-bibel.de"
     },
     {
+        "id": "ghana_institute_of_linguistics_literacy",
+        "name": "Ghana Institute of Linguistics, Literacy"
+    },
+    {
         "id": "ghana_institute_of_linguistics_literacy_and_bible_translation",
         "name": "Ghana Institute of Linguistics, Literacy and Bible Translation"
+    },
+    {
+        "id": "ghana_institute_of_linguistics_literacy_and_bible_translation_farefare_audio_bible",
+        "name": "Ghana Institute Of Linguistics, Literacy and Bible Translation , Farefare Audio Bible"
+    },
+    {
+        "id": "ghana_institute_of_linguistics_literacy_and_bible_translation_kasem_old_testament_audio_bible",
+        "name": "Ghana Institute Of Linguistics, Literacy and Bible Translation . Kasem Old Testament Audio Bible"
+    },
+    {
+        "id": "ghana_institute_of_linguistics_literacy_and_bible_translation_tampulma_old_testament_audio_bible",
+        "name": "Ghana Institute Of Linguistics, Literacy and Bible Translation . Tampulma Old Testament Audio Bible"
     },
     {
         "id": "gilak_media",
@@ -864,6 +1527,10 @@
         "website": "https://globalpartners.world/"
     },
     {
+        "id": "go_ye_translators_initiative",
+        "name": "Go Ye Translators Initiative"
+    },
+    {
         "id": "god_s_vision_ministries",
         "name": "God's Vision Ministries",
         "website": "http://www.gvm.website/"
@@ -874,13 +1541,37 @@
         "website": "https://godsword.org/"
     },
     {
+        "id": "good_news_translation",
+        "name": "Good News Translation®"
+    },
+    {
+        "id": "good_news_translation_with_deuterocanonicals_apocrypha",
+        "name": "Good News Translation® with Deuterocanonicals/Apocrypha"
+    },
+    {
+        "id": "graceland_church_of_beatitudes_translations",
+        "name": "Graceland Church of Beatitudes' Translations"
+    },
+    {
+        "id": "guyana_bible_society",
+        "name": "Guyana Bible Society"
+    },
+    {
         "id": "haitian_bible_society",
         "name": "Haitian Bible Society",
         "website": "http://societebiblique-haiti.org/"
     },
     {
+        "id": "halaba_audio_new_testament_dpi",
+        "name": "The Halaba Audio New Testament – DPI"
+    },
+    {
         "id": "harvest_mission_ethiopia",
         "name": "Harvest Mission Ethiopia"
+    },
+    {
+        "id": "harvest_seekers_mali",
+        "name": "Harvest Seekers Mali"
     },
     {
         "id": "hawaii_pidgin_bible_ministries",
@@ -890,6 +1581,14 @@
         "id": "hellenic_bible_society",
         "name": "Hellenic Bible Society",
         "website": "http://greek.bible"
+    },
+    {
+        "id": "her_audio_bible_uk",
+        "name": "Her Audio Bible UK."
+    },
+    {
+        "id": "here_is_life",
+        "name": "Here is Life"
     },
     {
         "id": "hermon_forlag_as",
@@ -906,6 +1605,45 @@
         "name": "Hong Kong Bible Society"
     },
     {
+        "id": "hosanna_201",
+        "name": "Hosanna 201_",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_hosanna",
+        "name": "Hosanna, Hosanna",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_i_produsem_rikoding_ya_long",
+        "name": "Hosanna i produsem rikoding ya long",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_le_texte_biblique_est_tir_eacute",
+        "name": "Hosanna Le texte biblique est tir&eacute",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_nt",
+        "name": "Hosanna, NT",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_nt_audio",
+        "name": "Hosanna NT Audio",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_rekoding_blong_bislama_revised_version",
+        "name": "Hosanna, Rekoding blong Bislama Revised version",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
+    },
+    {
+        "id": "hosanna_zeki_çiftçi",
+        "name": "Hosanna © Zeki Çiftçi"
+    },
+    {
         "id": "hungarian_bible_society",
         "name": "Hungarian Bible Society",
         "website": "http://www.bibliatarsulat.hu/"
@@ -915,13 +1653,33 @@
         "name": "İsmail Serinken"
     },
     {
+        "id": "ibt",
+        "name": "IBT"
+    },
+    {
         "id": "icelandic_bible_society",
         "name": "Icelandic Bible Society",
         "website": "http://www.biblian.is/"
     },
     {
+        "id": "ilmav",
+        "name": "ILMAV"
+    },
+    {
         "id": "imb_ertp",
         "name": "IMB-ERTP"
+    },
+    {
+        "id": "importantia_publishing",
+        "name": "Importantia Publishing"
+    },
+    {
+        "id": "indian_evangelical_mission",
+        "name": "Indian Evangelical Mission"
+    },
+    {
+        "id": "indonesia_bible_society",
+        "name": "Indonesia Bible Society"
     },
     {
         "id": "indonesian_bible_society",
@@ -933,9 +1691,21 @@
         "name": "Initiative for the Translation and Development of African Languages"
     },
     {
+        "id": "injango_yiitu_vhushindamu_wiitu",
+        "name": "Injango Yiitu Vhushindamu Wiitu"
+    },
+    {
         "id": "institute_for_bible_translation_finland",
         "name": "Institute for Bible Translation, Finland",
         "website": "http://www.rki.fi"
+    },
+    {
+        "id": "institute_for_bible_translation_helsinki",
+        "name": "Institute for Bible Translation, Helsinki"
+    },
+    {
+        "id": "institute_for_bible_translation_moscow",
+        "name": "Institute for Bible Translation, Moscow"
     },
     {
         "id": "institute_for_bible_translation_russia",
@@ -943,9 +1713,21 @@
         "website": "https://ibtrussia.org"
     },
     {
+        "id": "institute_for_bible_translation_stockholm_sweden",
+        "name": "Institute for Bible Translation, , , Stockholm, Sweden"
+    },
+    {
         "id": "institute_for_bible_translation_sweden",
         "name": "Institute for Bible Translation, Sweden",
         "website": "http://www.ifb.nu"
+    },
+    {
+        "id": "instituto_de_asistencia_teológica",
+        "name": "Instituto de Asistencia Teológica"
+    },
+    {
+        "id": "instituto_de_tradução_e_alfabetização",
+        "name": "Instituto de Tradução e Alfabetização"
     },
     {
         "id": "interconfessional_bible_society_in_romania",
@@ -958,6 +1740,11 @@
         "website": "http://albanianbiblesociety.com"
     },
     {
+        "id": "international_mission_board_of_the_southern_baptist_convention",
+        "name": "International Mission Board of the Southern Baptist Convention",
+        "website": "https://www.imb.org/"
+    },
+    {
         "id": "international_sharif_bible_society",
         "name": "International Sharif Bible Society",
         "website": "http://www.sharifbible.com"
@@ -966,6 +1753,14 @@
         "id": "internationaler_gideonbund_in_deutschland",
         "name": "Internationaler Gideonbund in Deutschland e.V.",
         "website": "https://gideons.de/"
+    },
+    {
+        "id": "isa_hos",
+        "name": "Isa – Hos"
+    },
+    {
+        "id": "isai_limbu_literature_association",
+        "name": "Isai Limbu Literature Association"
     },
     {
         "id": "isia_limbu_literature_association",
@@ -994,6 +1789,12 @@
         "website": "http://www.bible.or.jp/"
     },
     {
+        "id": "jesus_film_project",
+        "name": "The Jesus Film Project",
+        "website": "http://www.jesusfilm.org/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=956006173"
+    },
+    {
         "id": "jewish_publication_society",
         "name": "Jewish Publication Society",
         "website": "http://www.jps.org/"
@@ -1001,6 +1802,14 @@
     {
         "id": "john_the_forerunner_church_of_christians_of_evangelical_faith_of_minsk_city",
         "name": "John the Forerunner Church of Christians of Evangelical Faith of Minsk City"
+    },
+    {
+        "id": "jol_oba",
+        "name": "Jol - Oba."
+    },
+    {
+        "id": "jon_mal",
+        "name": "Jon – Mal."
     },
     {
         "id": "jonathan_gallagher",
@@ -1013,6 +1822,18 @@
     {
         "id": "jorai_bible_association",
         "name": "Jorai Bible Association"
+    },
+    {
+        "id": "kadi_timor",
+        "name": "Kadi Timor"
+    },
+    {
+        "id": "kanien_kehá_ka_aotióhkwa_tehatiwennaténie_s_kahiatonhseratokénhti",
+        "name": "Kanien'kehá:ka Aotióhkwa Tehatiwennaténie's Kahiatonhseratokénhti"
+    },
+    {
+        "id": "kartidaya",
+        "name": "Kartidaya"
     },
     {
         "id": "katholieke_bijbelstichting",
@@ -1028,8 +1849,28 @@
         "name": "KC Markose"
     },
     {
+        "id": "kesva_an_taves_kernewek",
+        "name": "Kesva an Taves Kernewek"
+    },
+    {
+        "id": "kevin_geoffrey",
+        "name": "Kevin Geoffrey"
+    },
+    {
         "id": "kindred_productions",
         "name": "Kindred Productions"
+    },
+    {
+        "id": "kinshasa_la_société_biblique_du_zaïre",
+        "name": "Kinshasa: La Société Biblique du Zaïre"
+    },
+    {
+        "id": "kitab_company",
+        "name": "Kitab Company"
+    },
+    {
+        "id": "kitabi_mukaddes_şirketi_ve_yeni_yaşam_yayinlari",
+        "name": "KitabI Mukaddes Şirketi ve Yeni Yaşam YayInlari"
     },
     {
         "id": "kjennichs_bibel_jesalschoft",
@@ -1044,9 +1885,21 @@
         "name": "Konda Tribal Development Foundation"
     },
     {
+        "id": "konta_new_testament",
+        "name": "The Konta New Testament"
+    },
+    {
         "id": "korean_bible_society",
         "name": "Korean Bible Society",
         "website": "http://www.bskorea.or.kr/"
+    },
+    {
+        "id": "korpu_company",
+        "name": "Korpu Company"
+    },
+    {
+        "id": "krstjanska_zajednica_u_bosni_i_hercegovini",
+        "name": "Krstjanska zajednica u Bosni i Hercegovini"
     },
     {
         "id": "kurdish_literature_association",
@@ -1054,8 +1907,60 @@
         "website": "http://kurdishliterature.org/"
     },
     {
+        "id": "kutu_audio_new_testament_dpi",
+        "name": "Kutu Audio New Testament, DPI"
+    },
+    {
+        "id": "l_alliance_biblique_au_mali",
+        "name": "L’Alliance Biblique au Mali"
+    },
+    {
+        "id": "l_alliance_biblique_de_la_république_démocratique_du_congo",
+        "name": "L’Alliance Biblique de la République Démocratique du Congo"
+    },
+    {
+        "id": "l_alliance_biblique_du_bénin",
+        "name": "L'Alliance Biblique du Bénin"
+    },
+    {
+        "id": "l_alliance_biblique_du_bénin_www_biblesociety_benin_org",
+        "name": "L’Alliance Biblique du Bénin www.biblesociety-benin.org"
+    },
+    {
+        "id": "l_alliance_biblique_du_tchad",
+        "name": "L’ Alliance Biblique du Tchad"
+    },
+    {
+        "id": "l_alliance_biblique_du_tchad_ngambay_audio_bible",
+        "name": "L'Alliance Biblique du Tchad , Ngambay Audio Bible"
+    },
+    {
+        "id": "l_alliance_biblique_du_togo",
+        "name": "L’Alliance Biblique du Togo"
+    },
+    {
         "id": "la_sociedad_bíblica_peruana",
         "name": "La Sociedad Bíblica Peruana"
+    },
+    {
+        "id": "la_societe_au_rwanda",
+        "name": "La Societe au Rwanda"
+    },
+    {
+        "id": "la_société_biblique_de_centrafrique_sango_old_testament_audio_bible",
+        "name": "La Société Biblique de Centrafrique. . Sango Old Testament Audio Bible"
+    },
+    {
+        "id": "la_société_biblique_malgache",
+        "name": "La Société Biblique Malgache"
+    },
+    {
+        "id": "lai",
+        "name": "LAI"
+    },
+    {
+        "id": "lai_www_alkitab_or_id",
+        "name": "LAI www.alkitab.or.id"
     },
     {
         "id": "language_developers_and_bible_translators",
@@ -1089,6 +1994,22 @@
         "name": "Lebenswasser"
     },
     {
+        "id": "lembaga_alkitab_indonesia",
+        "name": "Lembaga Alkitab Indonesia"
+    },
+    {
+        "id": "lembaga_alkitab_indonesia_jakarta",
+        "name": "Lembaga Alkitab Indonesia, Jakarta"
+    },
+    {
+        "id": "lembaga_alkitab_indonesia_www_alkitab_or_id",
+        "name": "Lembaga Alkitab Indonesia www.alkitab.or.id"
+    },
+    {
+        "id": "letra_paraguay",
+        "name": "LETRA Paraguay"
+    },
+    {
         "id": "lexihub",
         "name": "Lexihub"
     },
@@ -1097,8 +2018,28 @@
         "name": "Liebenzel Mission"
     },
     {
+        "id": "liên_hiệp_thánh_kinh_hội_bản_quyền_được_bảo_lưu_the_tay_new_testament",
+        "name": "Liên Hiệp Thánh Kinh Hội. Bản quyền được bảo lưu.The Tay New Testament"
+    },
+    {
+        "id": "liga_bíblica_del_peru",
+        "name": "Liga Bíblica del Peru"
+    },
+    {
         "id": "liga_del_sembrador_a_c",
         "name": "Liga del Sembrador, A.C."
+    },
+    {
+        "id": "liga_del_sembrador_ac",
+        "name": "Liga del Sembrador AC"
+    },
+    {
+        "id": "linguistics_and_bible_translation_impact_initiative",
+        "name": "Linguistics and Bible Translation Impact Initiative"
+    },
+    {
+        "id": "literacy_p_o_box_6_0_nairobi_kenya",
+        "name": "Literacy , P. O. Box 6,0, Nairobi, Kenya"
     },
     {
         "id": "lockman_foundation",
@@ -1108,6 +2049,10 @@
     {
         "id": "logos_bible_software",
         "name": "Logos Bible Software"
+    },
+    {
+        "id": "loukas_foundation",
+        "name": "Loukas Foundation ®"
     },
     {
         "id": "love_fellowship",
@@ -1121,6 +2066,14 @@
         "id": "lutheran_bible_translators_australia",
         "name": "Lutheran Bible Translators Australia",
         "website": "http://www.lca.org.au/"
+    },
+    {
+        "id": "lutheran_church_of_nigeria",
+        "name": "Lutheran Church of Nigeria"
+    },
+    {
+        "id": "maiwala_bible_translation",
+        "name": "Maiwala Bible Translation"
     },
     {
         "id": "malagasy_bible_society",
@@ -1149,8 +2102,20 @@
         "name": "Manna Harvest"
     },
     {
+        "id": "material_protegido",
+        "name": "Material protegido"
+    },
+    {
+        "id": "max_mclean",
+        "name": "Max McLean"
+    },
+    {
         "id": "mazanmedia",
         "name": "Mazanmedia"
+    },
+    {
+        "id": "mekane_yesus_church",
+        "name": "Mekane Yesus Church"
     },
     {
         "id": "messianic_jewish_family_bible_society",
@@ -1161,6 +2126,10 @@
         "name": "Messianic Jewish Publishers"
     },
     {
+        "id": "meva_alem",
+        "name": "MEVA/ALEM"
+    },
+    {
         "id": "michael_adeyemi_adegbola",
         "name": "Michael Adeyemi Adegbola"
     },
@@ -1169,14 +2138,46 @@
         "name": "Michael Paul Johnson"
     },
     {
+        "id": "mien_christian_mission_fellowship_aka_yesu_iu_mienh_dongh_hnyouv_gorn",
+        "name": "Mien Christian Mission Fellowship AKA YESU IU-MIENH DONGH HNYOUV GORN"
+    },
+    {
+        "id": "ministério_grão_de_trigo",
+        "name": "Ministério Grão de Trigo"
+    },
+    {
         "id": "misión_alemana_entre_los_nativos_del_paraguay",
         "name": "Misión Alemana entre los Nativos del Paraguay",
         "website": "https://www.facebook.com/pg/misionalemana/about/"
     },
     {
+        "id": "mision_nuevas_tribus",
+        "name": "Mision Nuevas Tribus"
+    },
+    {
+        "id": "misión_nuevas_tribus",
+        "name": "Misión Nuevas Tribus"
+    },
+    {
+        "id": "misión_nuevas_tribus_de_paraguay",
+        "name": "Misión Nuevas Tribus de Paraguay"
+    },
+    {
+        "id": "misiona_tonga_a_e_uikilifi",
+        "name": "Misiona Tonga 'a e Uikilifi"
+    },
+    {
         "id": "missão_novas_tribos_do_brasil",
         "name": "Missão Novas Tribos do Brasil",
         "website": "http://www.novastribosdobrasil.org.br/"
+    },
+    {
+        "id": "missão_novos_tribos_do_brasil",
+        "name": "Missão Novos Tribos do Brasil"
+    },
+    {
+        "id": "mission_evangelique",
+        "name": "Mission Evangelique"
     },
     {
         "id": "mission_evangélique_réformée_néerlandaise",
@@ -1185,7 +2186,11 @@
     },
     {
         "id": "mission_for_scripture_translation_and_language_development",
-        "name": "Mission for Scripture Translation and Language Development"
+        "name": "Mission For Scripture Translation and Language Development"
+    },
+    {
+        "id": "mission_internationale_roi_des_rois",
+        "name": "Mission Internationale Roi des Rois"
     },
     {
         "id": "missionassist",
@@ -1201,8 +2206,17 @@
         "name": "Mitla Studio"
     },
     {
+        "id": "mongolian_ab_audio_bible_davar_partners_international",
+        "name": "The Mongolian AB Audio Bible, Davar Partners International",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=270642468"
+    },
+    {
         "id": "mongolian_union_bible_society",
         "name": "Mongolian Union Bible Society"
+    },
+    {
+        "id": "mongolian_united_bible_society",
+        "name": "Mongolian United Bible Society"
     },
     {
         "id": "morocco_bible_society",
@@ -1214,8 +2228,28 @@
         "name": "Mother Tongue Translators Society"
     },
     {
+        "id": "mudiad_addysg_gristinogol_cymru",
+        "name": "Mudiad Addysg Gristinogol Cymru"
+    },
+    {
+        "id": "mudiad_efengylaidd_cymru",
+        "name": "Mudiad Efengylaidd Cymru"
+    },
+    {
         "id": "munda_believers_assembly_sdcu_sambalpur_odisha",
         "name": "Munda Believers Assembly, SDCU, Sambalpur, Odisha"
+    },
+    {
+        "id": "music_bible",
+        "name": "Music Bible"
+    },
+    {
+        "id": "mvh_solutions",
+        "name": "MVH Solutions"
+    },
+    {
+        "id": "myanmar_standard_bible",
+        "name": "MYANMAR STANDARD BIBLE"
     },
     {
         "id": "nahali_vishwaseen_mandli_toranmal_dhadgaon_nandurbar_maharashtra",
@@ -1224,6 +2258,14 @@
     {
         "id": "naskapi_development",
         "name": "Naskapi Development Corporation"
+    },
+    {
+        "id": "nathan_terrell",
+        "name": "Nathan Terrell"
+    },
+    {
+        "id": "national_association_for_bible_translation_and_literacy",
+        "name": "The National Association for Bible Translation and Literacy"
     },
     {
         "id": "national_bible_society_of_ireland",
@@ -1237,7 +2279,16 @@
     },
     {
         "id": "navpress",
-        "name": "NavPress"
+        "name": "NavPress",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=846007896"
+    },
+    {
+        "id": "nbtt",
+        "name": "NBTT"
+    },
+    {
+        "id": "nederlands_vlaams_bijbelgenootschap",
+        "name": "Nederlands Vlaams Bijbelgenootschap"
     },
     {
         "id": "neighborhood_bible_translation_initiative",
@@ -1253,12 +2304,32 @@
         "website": "https://www.bijbelgenootschap.nl/"
     },
     {
+        "id": "new_beginning_ministries",
+        "name": "New Beginning Ministries"
+    },
+    {
         "id": "new_harvest_global_ministries",
         "name": "New Harvest Global Ministries"
     },
     {
+        "id": "new_india_evangelistic_association_bajjika_audio_bible_portions",
+        "name": "New India Evangelistic Association. . Bajjika Audio Bible Portions"
+    },
+    {
         "id": "new_life_computer_institute",
         "name": "New Life Computer Institute"
+    },
+    {
+        "id": "new_life_literature",
+        "name": "New Life Literature"
+    },
+    {
+        "id": "new_life_literature_marwari_rajasthan_new_testament_audio_bible",
+        "name": "New Life Literature . Marwari Rajasthan New Testament Audio Bible"
+    },
+    {
+        "id": "new_life_publications",
+        "name": "New Life Publications"
     },
     {
         "id": "new_thai_version_foundation",
@@ -1267,12 +2338,26 @@
     },
     {
         "id": "new_tribes_mission",
-        "name": "New Tribes Mission"
+        "name": "New Tribes Mission",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=396024926"
+    },
+    {
+        "id": "new_tribes_missionsanford_fl_1_usa",
+        "name": "New Tribes MissionSanford, FL 1 USA",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=396024926"
+    },
+    {
+        "id": "nicoline_van_der_sijs",
+        "name": "Nicoline van der Sijs"
     },
     {
         "id": "nigeria_bible_translation_trust",
         "name": "The Nigeria Bible Translation Trust",
         "website": "http://wycliffe.net"
+    },
+    {
+        "id": "nlci",
+        "name": "NLCI"
     },
     {
         "id": "noor_e_kashmir",
@@ -1288,17 +2373,35 @@
         "website": "http://www.bibelselskapet.no/"
     },
     {
+        "id": "oasis_audio",
+        "name": "Oasis audio, LLC."
+    },
+    {
         "id": "omf_international",
         "name": "OMF International",
         "website": "http://www.omf.org/"
     },
     {
         "id": "operation_mobilization_international",
-        "name": "Operation Mobilization International"
+        "name": "Operation Mobilization International",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=222513811"
+    },
+    {
+        "id": "operation_snap_dragon",
+        "name": "Operation Snap Dragon"
+    },
+    {
+        "id": "organization_for_dbl_testing",
+        "name": "Organization for DBL Testing",
+        "website": "http://thedigitalbiblelibrary.org"
     },
     {
         "id": "orta_asia_baspasy",
         "name": "Orta Asia Baspasy"
+    },
+    {
+        "id": "orthodox_hasidic_yiddish_bibel",
+        "name": "Orthodox Hasidic Yiddish Bibel"
     },
     {
         "id": "oud_katholieke_kerk_van_nederland",
@@ -1310,6 +2413,10 @@
         "name": "The Our Language Bible Organization"
     },
     {
+        "id": "overseas_missionary_fellowship",
+        "name": "Overseas Missionary Fellowship"
+    },
+    {
         "id": "oxford_university_press_and_cambridge_university_press",
         "name": "Oxford University Press and Cambridge University Press"
     },
@@ -1317,6 +2424,15 @@
         "id": "pakistan_bible_society",
         "name": "Pakistan Bible Society",
         "website": "http://pbs.org.pk"
+    },
+    {
+        "id": "pakistan_bible_societywww_pbs_org_pk",
+        "name": "The Pakistan Bible Societywww.pbs.org.pk"
+    },
+    {
+        "id": "palestinian_bible_society",
+        "name": "Palestinian Bible Society",
+        "website": "http://www.pbs-web.com/"
     },
     {
         "id": "pamir_ministries",
@@ -1333,12 +2449,42 @@
         "website": "http://sbp.org.py"
     },
     {
+        "id": "paratext_team",
+        "name": "Paratext team"
+    },
+    {
+        "id": "partners_development_foundation",
+        "name": "Partners Development Foundation"
+    },
+    {
         "id": "partners_in_bible_translation_senga_bible_translation_and_literacy",
         "name": "Partners in Bible Translation, Senga Bible Translation and Literacy"
     },
     {
+        "id": "partners_in_development_foundation",
+        "name": "Partners in Development Foundation",
+        "website": "http://www.pidf.org/"
+    },
+    {
         "id": "paul_langham",
         "name": "Paul Langham"
+    },
+    {
+        "id": "pbs",
+        "name": "PBS."
+    },
+    {
+        "id": "pengepemung_irah_éh_suai_surat_tahun_tong_malaysia",
+        "name": "Pengepemung irah éh suai Surat Tahun tong Malaysia"
+    },
+    {
+        "id": "perfect_word_ministries",
+        "name": "Perfect Word Ministries, Inc.",
+        "website": "https://www.perfectword.org/"
+    },
+    {
+        "id": "pertubuhan_bible_malaysia",
+        "name": "Pertubuhan Bible Malaysia"
     },
     {
         "id": "peruvian_bible_society",
@@ -1346,8 +2492,20 @@
         "website": "http://www.sbp.org.pe/"
     },
     {
+        "id": "petar_evangelatov",
+        "name": "Petar Evangelatov"
+    },
+    {
         "id": "philip_pope",
         "name": "Philip Pope"
+    },
+    {
+        "id": "philippine_bible_society",
+        "name": "Philippine Bible Society"
+    },
+    {
+        "id": "philippine_bible_society_www_bible_org_ph",
+        "name": "Philippine Bible Society, www.bible.org.ph"
     },
     {
         "id": "philippines_bible_society",
@@ -1355,24 +2513,90 @@
         "website": "http://www.bible.org.ph/"
     },
     {
+        "id": "piedras_sobre_la_roca_a_c",
+        "name": "Piedras Sobre la Roca A.C."
+    },
+    {
         "id": "pierre_demers",
         "name": "Pierre deMers"
     },
     {
         "id": "pioneer_bible_translators",
-        "name": "Pioneer Bible Translators"
+        "name": "Pioneer Bible Translators",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=237433923"
+    },
+    {
+        "id": "porte_ouverte_de_la_grace",
+        "name": "Porte Ouverte de la Grace"
+    },
+    {
+        "id": "premiere_edition",
+        "name": "Premiere edition"
+    },
+    {
+        "id": "presbyterian_reformed_church_of_australia",
+        "name": "Presbyterian Reformed Church of Australia"
+    },
+    {
+        "id": "prm",
+        "name": "PRM, Inc."
+    },
+    {
+        "id": "prm_i",
+        "name": "PRM-I"
+    },
+    {
+        "id": "produccion_de_hosanna_en_nahuatl_de_la_huasteca",
+        "name": "Produccion de Hosanna en nahuatl de la Huasteca",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=850223225"
     },
     {
         "id": "producciones_cristianas_vina",
         "name": "Producciones Cristianas Vina"
     },
     {
+        "id": "producciones_cristianas_viña",
+        "name": "Producciones Cristianas Viña"
+    },
+    {
+        "id": "proel",
+        "name": "PROEL"
+    },
+    {
+        "id": "proyecto_ευαγγελιο_traducción_contemporánea_de_la_biblia",
+        "name": "Proyecto Ευαγγελιο Traducción contemporánea de la Biblia"
+    },
+    {
+        "id": "psalms_audio_bible",
+        "name": "Psalms Audio Bible"
+    },
+    {
         "id": "pyongyang_bible_institute",
         "name": "Pyongyang Bible Institute, Inc."
     },
     {
+        "id": "raamatunk_auml",
+        "name": "Raamatunk&auml"
+    },
+    {
+        "id": "raamatunkäännösinstituutti_ry",
+        "name": "Raamatunkäännösinstituutti ry"
+    },
+    {
+        "id": "recording_of_ndau_new_testament",
+        "name": "Recording of Ndau New Testament"
+    },
+    {
         "id": "rev_dr_allen_harry_hall_and_jollen_press",
         "name": "Rev. Dr. Allen Harry Hall and Jollen Press"
+    },
+    {
+        "id": "revival_foundation",
+        "name": "Revival Foundation"
+    },
+    {
+        "id": "rhema_for_the_nations",
+        "name": "Rhema for the Nations Inc"
     },
     {
         "id": "righthand_international_foundation",
@@ -1383,6 +2607,14 @@
         "name": "Robert Adam Boyd"
     },
     {
+        "id": "roca_do_salvacion_church",
+        "name": "Roca do Salvacion Church"
+    },
+    {
+        "id": "romanes_arbeit_marbug",
+        "name": "Romanes-Arbeit Marbug e.V."
+    },
+    {
         "id": "romanes_arbeit_marburg",
         "name": "Romanes-Arbeit Marburg e.V.",
         "website": "https://romanes-arbeit-marburg.de/"
@@ -1390,6 +2622,24 @@
     {
         "id": "ron_smith",
         "name": "Ron Smith"
+    },
+    {
+        "id": "roshan_productions_for_complete_nt_and_following_ot_books_jos_jud_1sa_2ch_psa_pro_ecc",
+        "name": "Roshan Productions for complete NT and following OT books: Jos, Jud, 1Sa – 2Ch, Psa, Pro, Ecc"
+    },
+    {
+        "id": "runyankole_rukiga_audio_bible",
+        "name": "The Runyankole-Rukiga Audio Bible"
+    },
+    {
+        "id": "rvcv_ngcè_kàru_gomidi_kristu_shvngø_mré",
+        "name": "Rvcv́ngcè Kàru Gomidi Kristu Shvngø̀mré"
+    },
+    {
+        "id": "samaritan_s_purse",
+        "name": "Samaritan’s Purse",
+        "website": "http://samaritanspurse.org/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=581437002"
     },
     {
         "id": "sanskritbible_in",
@@ -1407,12 +2657,33 @@
         "website": "http://www.scottishbiblesociety.org"
     },
     {
+        "id": "scripture_audio",
+        "name": "Scripture Audio"
+    },
+    {
+        "id": "scripture_partnerships_bangladesh_mru_old_testament",
+        "name": "Scripture Partnerships Bangladesh. . Mru Old Testament"
+    },
+    {
+        "id": "scripture_text",
+        "name": "Scripture Text"
+    },
+    {
+        "id": "scriptures_international",
+        "name": "Scriptures International"
+    },
+    {
         "id": "sdruzeni_pro_novou_bibli_kralickou",
         "name": "Sdruzeni pro Novou Bibli kralickou"
     },
     {
         "id": "seed_company",
-        "name": "The Seed Company"
+        "name": "The Seed Company",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=330838929"
+    },
+    {
+        "id": "sehatiprima_sejahtera",
+        "name": "Sehatiprima Sejahtera"
     },
     {
         "id": "senter_for_tro_og_medier",
@@ -1424,16 +2695,47 @@
         "name": "Seychelles Bible Society"
     },
     {
+        "id": "sharif_bible_society",
+        "name": "Sharif Bible Society"
+    },
+    {
         "id": "sihtasutus_piibel_kõigile",
         "name": "Sihtasutus Piibel Kõigile"
     },
     {
+        "id": "sil_americas_area",
+        "name": "Sil Americas Area"
+    },
+    {
+        "id": "sil_ethiopia",
+        "name": "SIL Ethiopia"
+    },
+    {
         "id": "sil_global",
-        "name": "SIL Global"
+        "name": "SIL Global",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=751840827"
+    },
+    {
+        "id": "sil_international",
+        "name": "_SIL International",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=751840827"
+    },
+    {
+        "id": "sil_international_publisher",
+        "name": "SIL International, Publisher",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=751840827"
+    },
+    {
+        "id": "sil_malaysia",
+        "name": "SIL - Malaysia"
     },
     {
         "id": "sil_papua_new_guinea",
         "name": "SIL Papua New Guinea"
+    },
+    {
+        "id": "sil_solomon_islands",
+        "name": "SIL Solomon Islands"
     },
     {
         "id": "sil_tanzania",
@@ -1444,21 +2746,115 @@
         "name": "SIL Uganda"
     },
     {
+        "id": "sil_usa",
+        "name": "SIL - USA",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=751840827"
+    },
+    {
+        "id": "sil_utb",
+        "name": "SIL-UTB"
+    },
+    {
+        "id": "silakkuagvik_communications",
+        "name": "Silakkuagvik Communications, Inc."
+    },
+    {
         "id": "sim_international",
-        "name": "SIM International"
+        "name": "SIM International",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=221512241"
     },
     {
         "id": "sim_niger",
         "name": "SIM Niger"
     },
     {
+        "id": "sim_nigeria",
+        "name": "SIM Nigeria"
+    },
+    {
         "id": "sinode_gereja_protestan_maluku",
         "name": "Sinode Gereja Protestan Maluku"
+    },
+    {
+        "id": "sitag",
+        "name": "SITAG"
+    },
+    {
+        "id": "skandalon",
+        "name": "Skandalon"
     },
     {
         "id": "slovak_bible_society",
         "name": "Slovak Bible Society",
         "website": "https://biblickaspolocnost.sk/podpora"
+    },
+    {
+        "id": "slovenská_biblická_spoločnosť",
+        "name": "Slovenská biblická spoločnosť"
+    },
+    {
+        "id": "sociedad_bíblica_boliviana",
+        "name": "Sociedad Bíblica Boliviana"
+    },
+    {
+        "id": "sociedad_bíblica_chilena",
+        "name": "Sociedad Bíblica Chilena"
+    },
+    {
+        "id": "sociedad_bíblica_de_argentina",
+        "name": "Sociedad Bíblica de Argentina"
+    },
+    {
+        "id": "sociedad_bíblica_de_costa_rica",
+        "name": "Sociedad Bíblica de Costa Rica"
+    },
+    {
+        "id": "sociedad_bíblica_de_méxico_a_c",
+        "name": "Sociedad Bíblica de México, A.C."
+    },
+    {
+        "id": "sociedad_bíblica_de_méxico_a_c_chol_old_testament_audio_bible",
+        "name": "Sociedad Bíblica de México A.C. . Chol Old Testament Audio Bible"
+    },
+    {
+        "id": "sociedad_bíblica_de_méxico_a_c_tzeltal_de_oxchuc_old_testament_audio_bible",
+        "name": "Sociedad Bíblica de México, A.C. Tzeltal de Oxchuc Old Testament Audio Bible"
+    },
+    {
+        "id": "sociedad_bíblica_de_méxico_a_c_www_sbm_org_mx",
+        "name": "Sociedad Bíblica de México, A.C., www.sbm.org.mx"
+    },
+    {
+        "id": "sociedad_bíblica_de_méxico_www_socbiblicademexico_com_mx",
+        "name": "Sociedad Bíblica de México, www.socbiblicademexico.com.mx"
+    },
+    {
+        "id": "sociedad_bíblica_de_nicaragua",
+        "name": "Sociedad Bíblica de Nicaragua"
+    },
+    {
+        "id": "sociedad_bíblica_guatemala_www_sbiblica_org",
+        "name": "Sociedad Bíblica Guatemala, www.sbiblica.org"
+    },
+    {
+        "id": "sociedad_bíblica_peruana_www_sbp_org_pe",
+        "name": "Sociedad Bíblica Peruana, www.sbp.org.pe"
+    },
+    {
+        "id": "sociedade_bíblica_de_moçambique",
+        "name": "Sociedade Bíblica de Moçambique"
+    },
+    {
+        "id": "sociedade_bíblica_de_mocambique_www_biblesociety_mozambique_org",
+        "name": "Sociedade Bíblica de Mocambique, www.biblesociety-mozambique.org"
+    },
+    {
+        "id": "sociedade_bíblica_de_moçambique_www_biblesociety_mozambique_org",
+        "name": "SOCIEDADE BÍBLICA DE MOÇAMBIQUE www.biblesociety-mozambique.org"
+    },
+    {
+        "id": "sociedade_bíblica_de_portugal",
+        "name": "Sociedade Bíblica de Portugal"
     },
     {
         "id": "sociedade_de_estudos_publicacións_e_traballos_sept",
@@ -1471,6 +2867,47 @@
         "website": "http://vidanova.com.br/"
     },
     {
+        "id": "sociedadebíblica_de_moçambique",
+        "name": "SociedadeBíblica de Moçambique"
+    },
+    {
+        "id": "sociedades_bíblicas_en_américa_latina",
+        "name": "Sociedades Bíblicas en América Latina"
+    },
+    {
+        "id": "sociedades_biblicas_unidas",
+        "name": "Sociedades Biblicas Unidas",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=980428633"
+    },
+    {
+        "id": "sociètè_biblique_de_la_r_c_congo",
+        "name": "Sociètè Biblique de la R.C. Congo"
+    },
+    {
+        "id": "société_biblique_de_la_r_d_congo",
+        "name": "Société Biblique de la R. D. Congo"
+    },
+    {
+        "id": "société_biblique_de_la_république_démocratique_du_congo",
+        "name": "Société Biblique de la République Démocratique du Congo"
+    },
+    {
+        "id": "société_biblique_du_tchad",
+        "name": "Société Biblique du Tchad"
+    },
+    {
+        "id": "société_biblique_française",
+        "name": "Société biblique française"
+    },
+    {
+        "id": "société_biblique_française_bibli_o",
+        "name": "Société biblique française – Bibli’O, _"
+    },
+    {
+        "id": "societé_biblique_haïtienne",
+        "name": "Societé Biblique Haïtienne"
+    },
+    {
         "id": "society_for_international_ministries",
         "name": "Society for International Ministries"
     },
@@ -1480,8 +2917,16 @@
         "website": "http://www.sbl-site.org/"
     },
     {
+        "id": "somali_bible_society",
+        "name": "Somali Bible Society"
+    },
+    {
         "id": "son_light_foundation",
         "name": "Son Light Foundation"
+    },
+    {
+        "id": "sosiedat_di_beibel_www_biblesocietynet_org",
+        "name": "Sosiedat di Beibel www.biblesocietynet.org"
     },
     {
         "id": "spanish_publishing_committee",
@@ -1489,15 +2934,33 @@
     },
     {
         "id": "spoken_worldwide",
-        "name": "Spoken Worldwide"
+        "name": "Spoken Worldwide",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=562544586"
+    },
+    {
+        "id": "stichting_cbb_christelijke_bibliotheek_voor_blinden_en_slechtzienden",
+        "name": "Stichting CBB, Christelijke Bibliotheek voor Blinden en Slechtzienden"
+    },
+    {
+        "id": "stichting_het_woord",
+        "name": "Stichting het Woord"
     },
     {
         "id": "stichting_hsv_en_royal_jongbloed",
         "name": "Stichting HSV en Royal Jongbloed"
     },
     {
+        "id": "stichting_surinaams_bijbelgenootschap",
+        "name": "Stichting Surinaams Bijbelgenootschap"
+    },
+    {
         "id": "stichting_twentse_bijbelvertaling",
         "name": "Stichting Twentse Bijbelvertaling"
+    },
+    {
+        "id": "stichting_vrijwilligersnetwerk_nederlandse_taal",
+        "name": "Stichting Vrijwilligersnetwerk Nederlandse Taal",
+        "website": "https://easy.dans.knaw.nl/ui/dms?command=AIP_info&aipId=twips.dans.knaw.nl--3805973175572775584-1285322067832"
     },
     {
         "id": "stiftelsen_svenska_folkbibeln",
@@ -1505,8 +2968,29 @@
         "website": "http://www.folkbibeln.se/"
     },
     {
+        "id": "strategic_resource_group",
+        "name": "Strategic Resource Group",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=330780945"
+    },
+    {
+        "id": "streetlights",
+        "name": "STREETLIGHTS"
+    },
+    {
+        "id": "štúdio_nádej_n_o",
+        "name": "ŠTÚDIO NÁDEJ, n.o."
+    },
+    {
         "id": "su_media",
         "name": "SU Media"
+    },
+    {
+        "id": "summer_institute_of_linguistics_ethiopia",
+        "name": "Summer Institute of Linguistics Ethiopia"
+    },
+    {
+        "id": "suomen_pipliaseura_fintiko_pipliako_staggos",
+        "name": "Suomen Pipliaseura, Fintiko Pipliako Staggos"
     },
     {
         "id": "suriname_bible_society",
@@ -1516,6 +3000,10 @@
         "id": "svenska_kärnbibeln",
         "name": "Svenska Kärnbibeln",
         "website": "http://www.karnbibeln.se/"
+    },
+    {
+        "id": "svetopisemska_družba_slovenije",
+        "name": "Svetopisemska družba Slovenije"
     },
     {
         "id": "sw_radio",
@@ -1537,6 +3025,18 @@
         "website": "http://www.die-bibel.ch/"
     },
     {
+        "id": "taiwan_gospel_book_room",
+        "name": "Taiwan Gospel Book Room"
+    },
+    {
+        "id": "tamazight",
+        "name": "Tamazight"
+    },
+    {
+        "id": "tap",
+        "name": "TAP"
+    },
+    {
         "id": "terence_p_noble",
         "name": "Terence P. Noble"
     },
@@ -1548,6 +3048,23 @@
         "id": "thailand_bible_society",
         "name": "Thailand Bible Society",
         "website": "http://www.thaibible.or.th/"
+    },
+    {
+        "id": "theovision_international",
+        "name": "Theovision International",
+        "website": "https://www.theovision.org/"
+    },
+    {
+        "id": "thimar_alqatif",
+        "name": "Thimar AlQatif"
+    },
+    {
+        "id": "third_edition",
+        "name": "Third Edition"
+    },
+    {
+        "id": "this_work_is",
+        "name": "This work is"
     },
     {
         "id": "thomas_nelson",
@@ -1569,6 +3086,27 @@
         "id": "tovrose",
         "name": "TovRose",
         "website": "http://www.tovrose.com/"
+    },
+    {
+        "id": "towarzystwo_biblijne_w_polsce_warszawa",
+        "name": "Towarzystwo Biblijne w Polsce, Warszawa"
+    },
+    {
+        "id": "traducción_bíblica_kanjobal_oriental",
+        "name": "Traducción bíblica: Kanjobal Oriental"
+    },
+    {
+        "id": "traduction_de_la_bible_moundang",
+        "name": "Traduction de la Bible : Moundang"
+    },
+    {
+        "id": "transform_iran",
+        "name": "Transform Iran",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=271714817"
+    },
+    {
+        "id": "translation_services_international",
+        "name": "Translation Services International Ltd."
     },
     {
         "id": "translators_association_of_the_philippines",
@@ -1594,6 +3132,18 @@
         "website": "https://www.tyndale.com/"
     },
     {
+        "id": "tyndale_society",
+        "name": "The Tyndale Society"
+    },
+    {
+        "id": "ubb",
+        "name": "UBB"
+    },
+    {
+        "id": "ubs",
+        "name": "UBS"
+    },
+    {
         "id": "ueeb_sim_au_benin",
         "name": "UEEB/SIM au Benin"
     },
@@ -1617,7 +3167,13 @@
     {
         "id": "united_bible_societies",
         "name": "United Bible Societies",
-        "website": "http://www.unitedbiblesocieties.org/"
+        "website": "http://www.unitedbiblesocieties.org/",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=980428633"
+    },
+    {
+        "id": "united_bible_societies_china_partnership",
+        "name": "United Bible Societies China Partnership",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=980428633"
     },
     {
         "id": "united_bible_societies_in_ecuador",
@@ -1628,8 +3184,21 @@
         "name": "United Bible Societies in Venezuela"
     },
     {
+        "id": "united_bible_societieswww_biblesociety_zambia_org",
+        "name": "United Bible Societieswww.biblesociety-zambia.org"
+    },
+    {
+        "id": "united_bible_society",
+        "name": "United Bible Society",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=980428633"
+    },
+    {
         "id": "uniting_church_of_australia",
         "name": "Uniting Church of Australia"
+    },
+    {
+        "id": "unti_mexico",
+        "name": "UNTI® Mexico"
     },
     {
         "id": "vagiri_nawa_jivan_kristi_madadi_telangana_india",
@@ -1643,6 +3212,22 @@
     {
         "id": "visão_integral",
         "name": "Visão Integral"
+    },
+    {
+        "id": "vita_vera",
+        "name": "Vita Vera"
+    },
+    {
+        "id": "voice_for_christ_ministries",
+        "name": "Voice for Christ Ministries"
+    },
+    {
+        "id": "voice_of_hope_trust",
+        "name": "Voice of Hope Trust"
+    },
+    {
+        "id": "voices_abs_music_hosanna",
+        "name": "Voices ABS, Music Hosanna"
     },
     {
         "id": "wartburg_project",
@@ -1662,8 +3247,24 @@
         "name": "Wilbur N. Pickering"
     },
     {
+        "id": "win",
+        "name": "WIN"
+    },
+    {
+        "id": "win_publication_trust",
+        "name": "WIN Publication Trust"
+    },
+    {
         "id": "win_publishing_trust",
         "name": "WIn Publishing Trust"
+    },
+    {
+        "id": "winfred_henson",
+        "name": "Winfred Henson"
+    },
+    {
+        "id": "wolio_translation_group",
+        "name": "Wolio Translation Group"
     },
     {
         "id": "word_biblical_ministries",
@@ -1671,36 +3272,81 @@
     },
     {
         "id": "word_for_the_world_international",
-        "name": "The Word for the World International"
+        "name": "The Word for the World International",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=841426685"
     },
     {
         "id": "world_bible_translation_center",
-        "name": "World Bible Translation Center"
+        "name": "World Bible Translation Center",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=362037761"
+    },
+    {
+        "id": "world_for_the_world_ethiopia",
+        "name": "The World for the World Ethiopia"
     },
     {
         "id": "worldventure",
-        "name": "WorldVenture"
+        "name": "WorldVenture",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=362216163"
     },
     {
         "id": "wps",
         "name": "WPS"
     },
     {
+        "id": "wpt",
+        "name": "WPT"
+    },
+    {
         "id": "wycliffe_benin",
         "name": "Wycliffe Benin"
     },
     {
+        "id": "wycliffe_bible_tarnslators",
+        "name": "Wycliffe Bible Tarnslators, Inc.",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=951831097"
+    },
+    {
         "id": "wycliffe_bible_translators",
         "name": "Wycliffe Bible Translators, Inc.",
-        "website": "http://www.wycliffe.org"
+        "website": "http://www.wycliffe.org",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=951831097"
+    },
+    {
+        "id": "wycliffe_bijbelvertalers",
+        "name": "Wycliffe Bijbelvertalers"
+    },
+    {
+        "id": "wycliffe_global_alliance",
+        "name": "Wycliffe Global Alliance"
     },
     {
         "id": "wycliffe_india",
         "name": "Wycliffe India"
     },
     {
+        "id": "wycliffe_indian",
+        "name": "Wycliffe Indian"
+    },
+    {
         "id": "wycliffe_philippines",
-        "name": "Wycliffe - Philippines"
+        "name": "Wycliffe Philippines"
+    },
+    {
+        "id": "wycliffe_russia",
+        "name": "Wycliffe - Russia"
+    },
+    {
+        "id": "wycliffe_south_africa",
+        "name": "Wycliffe - South Africa"
+    },
+    {
+        "id": "wycliffe_suisse_bienne_suisse",
+        "name": "Wycliffe Suisse, Bienne, Suisse"
+    },
+    {
+        "id": "wycliffe_thai_foundation",
+        "name": "Wycliffe Thai Foundation"
     },
     {
         "id": "wycliffe_togo",
@@ -1708,7 +3354,24 @@
     },
     {
         "id": "wycliffe_usa",
-        "name": "Wycliffe - USA"
+        "name": "Wycliffe USA",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=951831097"
+    },
+    {
+        "id": "y_all_version_bible_society",
+        "name": "Y'all Version Bible Society"
+    },
+    {
+        "id": "yasuma",
+        "name": "YASUMA"
+    },
+    {
+        "id": "yattenciy_bonilla",
+        "name": "Yattenciy Bonilla"
+    },
+    {
+        "id": "yayasan_alkitab_bahasa_kita",
+        "name": "Yayasan Alkitab Bahasa Kita"
     },
     {
         "id": "yayasan_kartidaya_sahabat_indonesia",
@@ -1723,8 +3386,20 @@
         "name": "Yayasan Pemberdayaan Masyarakat Desa"
     },
     {
+        "id": "yayasan_pengembangan_sar_abil",
+        "name": "Yayasan Pengembangan Sar Abil"
+    },
+    {
+        "id": "yayasan_sumber_dejahtera",
+        "name": "Yayasan Sumber Dejahtera"
+    },
+    {
         "id": "yayasan_sumber_sejahtera",
         "name": "Yayasan Sumber Sejahtera"
+    },
+    {
+        "id": "yeni_yaşam_yayınları_istanbul",
+        "name": "Yeni Yaşam Yayınları , Istanbul"
     },
     {
         "id": "yisu_por_bherho_karanya_paliya_mandli_rajpur_barwani_mp",
@@ -1735,11 +3410,89 @@
         "name": "Yisu Por Bherho Karanya Palya Mandli, Rajpur, Barwani"
     },
     {
+        "id": "yn_cheshaght_ghailckagh",
+        "name": "Yn Cheshaght Ghailckagh"
+    },
+    {
+        "id": "youth_with_a_mission",
+        "name": "Youth With A Mission",
+        "website": "http://www.ywam.org/"
+    },
+    {
+        "id": "ywam_morelia",
+        "name": "YWAM Morelia"
+    },
+    {
+        "id": "ywam_nepal",
+        "name": "YWAM - Nepal"
+    },
+    {
         "id": "ywam_togo",
         "name": "YWAM - Togo"
     },
     {
+        "id": "библијско_друштво_србијe",
+        "name": "Библијско друштво Србијe"
+    },
+    {
+        "id": "библиско_здружение_на_р_македонија",
+        "name": "Библиско Здружение на Р. Македонија"
+    },
+    {
+        "id": "бунёди_калом_ҳамаи_ҳуқуқҳо_ҳифз_карда_шудаанд",
+        "name": "Бунёди «Калом». Ҳамаи ҳуқуқҳо ҳифз карда шудаанд"
+    },
+    {
+        "id": "българско_библейско_дружество",
+        "name": "Българско библейско дружество"
+    },
+    {
+        "id": "мхрб_біблейскае_таварыства_ў_рэспубліцы_беларусь",
+        "name": "МХРБ «Біблейскае таварыства ў Рэспубліцы Беларусь»"
+    },
+    {
+        "id": "новы_запавет_пер_на_бел_мову_ул_чарняўскага",
+        "name": "Новы Запавет/ пер. на бел. мову Ул. Чарняўскага"
+    },
+    {
+        "id": "российское_библейское_общество",
+        "name": "Российское Библейское общество"
+    },
+    {
+        "id": "фондация_съживление_използвани_с_разрешение",
+        "name": "Фондация „Съживление“ . Използвани с разрешение"
+    },
+    {
         "id": "фонди_калом",
         "name": "Фонди «Калом»"
+    },
+    {
+        "id": "החברה_לכתבי_הקודש_בישראל_biblesocietyinisrael_comhaktuvim_co_il",
+        "name": "החברה לכתבי הקודש בישראל biblesocietyinisrael.comhaktuvim.co.il"
+    },
+    {
+        "id": "በbiblica",
+        "name": "በBiblica, Inc.",
+        "ministry_watch_url": "https://db.ministrywatch.com/ministry.php?ein=841194554"
+    },
+    {
+        "id": "ཀལ_ཏ_ས_བ_ས_ཏ_ཡ_ད_ན_མན_ན_འ_བ_ས_ཁན_དང_ས_ལ_ཁན_ཚང_མའ",
+        "name": "ཀལ༌ཏེས༌ བྲིས༌ཏེ༌ ཡོད༌ན༌ མན༌ནེ༌ འི༌ བྲིས༌ཁན༌ དང༌ སིལ༌ཁན༌ ཚང༌མའེ༌"
+    },
+    {
+        "id": "대한성서공회_common_translation",
+        "name": "대한성서공회 , . Common Translation"
+    },
+    {
+        "id": "대한성서공회_korean_revised_version",
+        "name": "대한성서공회 . Korean Revised Version"
+    },
+    {
+        "id": "台灣聖經公會版權所有",
+        "name": "台灣聖經公會版權所有"
+    },
+    {
+        "id": "香港圣经公会版权所有",
+        "name": "，香港圣经公会版权所有"
     }
 ]

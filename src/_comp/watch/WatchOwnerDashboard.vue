@@ -11,7 +11,7 @@ div.watch_dashboard_wrap
         input.search(v-model='query' type='text' placeholder="Search by org name…")
         label.cases_only
             input(v-model='cases_only' type='checkbox')
-            | Orgs with cases only
+            | Orgs with reports only
         div.sort_toggle
             span.sort_label Sort by
             button(:class='{active: sort_mode === "total"}' @click='sort_mode = "total"')
@@ -29,10 +29,6 @@ div.watch_dashboard_wrap
                 div.cell.rank {{ format_num(i + 1) }}
                 div.cell.name
                     span.owner_name {{ owner.name }}
-                    a.ministry_watch(
-                        v-if='owner.ministry_watch_url' :href='owner.ministry_watch_url'
-                        target='_blank' rel='noreferrer' title='View on Ministry Watch'
-                    ) MW
                 div.cell.total.num {{ format_num(owner.tracked) }}
                 div.cell.bar
                     WatchMeter(:counts='owner')
@@ -44,13 +40,18 @@ div.watch_dashboard_wrap
                         span.cell_label {{ tier.label }}
                         span.pct_value(:class='tier.key') {{ tier_pct_text(owner, tier.key) }}
                 div.cell.responses
-                    button.responses_btn(
-                        v-if='response_log_by_owner[owner.id]' @click='toggle_responses(owner.id)'
-                        :class='{active: expanded.has(owner.id)}'
+                    WatchReportsButton(
+                        v-if='response_log_by_owner[owner.id]' @click='show_reports(owner)'
+                        :count='response_log_by_owner[owner.id].length'
+                        :active='reports_open && reports_owner?.id === owner.id'
                     )
-                        | Cases ({{ format_num(response_log_by_owner[owner.id].length) }})
-            div.responses_panel(v-if='expanded.has(owner.id)')
-                WatchCases(:entries='response_log_by_owner[owner.id] ?? []')
+
+    //- The clicked org's reports, shown in a modal
+    WatchReportsDialog(
+        v-model='reports_open' :title='`Reports for ${reports_owner?.name ?? ""}`'
+        :entries='reports_owner ? response_log_by_owner[reports_owner.id] ?? [] : []'
+        :link='reports_owner ? owner_url(reports_owner) : undefined'
+    )
 
 </template>
 
@@ -65,17 +66,16 @@ import translations from '@/_data/watch/translations.json'
 import license_terms from '@/_data/watch/license_terms.json'
 
 import WatchStats from './WatchStats.vue'
-import WatchCases from './WatchCases.vue'
 import WatchMeter from './WatchMeter.vue'
-import {license_tier, response_log_by_owner, format_num} from './watch_utils'
+import WatchReportsButton from './WatchReportsButton.vue'
+import WatchReportsDialog from './WatchReportsDialog.vue'
+import {license_tier, response_log_by_owner, format_num, use_reports_dialog} from './watch_utils'
 
 
 // Tally each owner's tracked translations and how many carry a restricted license
 const owner_names:Record<string, string> = {}
-const owner_meta:Record<string, {ministry_watch_url?:string}> = {}
 for (const owner of owners){
     owner_names[owner.id] = owner.name
-    owner_meta[owner.id] = {ministry_watch_url: owner.ministry_watch_url}
 }
 
 // A translation with several rights holders (e.g. an audio recording's text and recording owners)
@@ -97,7 +97,6 @@ const owner_rows = Object.entries(tallies)
         return {
             id,
             name: owner_names[id] ?? id,
-            ministry_watch_url: owner_meta[id]?.ministry_watch_url,
             tracked: tally.tracked,
             open: tally.tracked - tally.semi_restricted - tally.restricted_only,
             restricted: tally.restricted_only,
@@ -145,7 +144,7 @@ const stat_tiles = computed(() => {
 
 // Most response log owners (Crossway, Zondervan, Lockman, ...) have no tracked/open-licensed
 // translations, so they're not otherwise in owner_rows at all. Add a zero-tracked row for those so
-// their Cases button still has somewhere to appear. display_rows is what the table ranks/shows —
+// their Reports button still has somewhere to appear. display_rows is what the table ranks/shows —
 // owner_rows itself stays untouched so the stat tiles above keep counting only owners with tracked
 // translations.
 const display_rows = [...owner_rows]
@@ -154,7 +153,6 @@ for (const [key, entries] of Object.entries(response_log_by_owner)){
         display_rows.push({
             id: key,
             name: owner_names[key] ?? entries[0]!.owner_name,
-            ministry_watch_url: owner_meta[key]?.ministry_watch_url,
             tracked: 0,
             open: 0,
             restricted: 0,
@@ -196,7 +194,7 @@ const sorters = {
         (b.restricted_pct - a.restricted_pct) || (b.restricted - a.restricted),
 }
 
-// Search box and cases checkbox — filter by org name and/or having cases before sorting/ranking
+// Search box and reports checkbox — filter by org name and/or having reports before sorting/ranking
 const query = ref('')
 const cases_only = ref(false)
 
@@ -211,19 +209,20 @@ const ranked = computed(() => {
     return rows.sort(sorters[sort_mode.value])
 })
 
-// Which owners' response log is currently expanded in the table
-const expanded = ref(new Set<string>())
-function toggle_responses(owner_id:string){
-    if (expanded.value.has(owner_id)) expanded.value.delete(owner_id)
-    else expanded.value.add(owner_id)
-    expanded.value = new Set(expanded.value)
+// The owner whose reports are shown in the dialog
+const {target: reports_owner, open: reports_open, show: show_reports} =
+    use_reports_dialog<typeof display_rows[0]>()
+
+// Link to an owner's own page, which lists its versions and reports
+function owner_url(owner:typeof display_rows[0]){
+    return `/watch/owner/#o=${owner.id}`
 }
 
-// Make the whole row open the owner's page, except for its own interactive children (the MW
-// badge, the Cases button) — those already do their own thing, so let their clicks through
+// Make the whole row open the owner's page, except for its own interactive children (the Reports
+// button) — those already do their own thing, so let their clicks through
 function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
     if ((event.target as HTMLElement).closest('a, button')) return
-    location.href = `/watch/owner/#o=${owner.id}`
+    location.href = owner_url(owner)
 }
 
 </script>
@@ -330,14 +329,6 @@ function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
     .name
         grid-area: name
 
-        .ministry_watch
-            margin-left: 6px
-            font-size: 0.75em
-            padding: 1px 5px
-            border: 1px solid var(--vp-c-divider)
-            border-radius: 4px
-            color: var(--vp-c-text-2)
-
     .total
         grid-area: total
 
@@ -381,29 +372,14 @@ function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
         &.restricted
             color: var(--vp-c-red-1)
 
-    .responses_btn
-        padding: 3px 10px
-        font-size: 0.75em
-        font-family: inherit
-        font-variant-numeric: tabular-nums
-        border: 1px solid var(--vp-c-yellow-2)
-        border-radius: 5px
-        background: var(--vp-c-yellow-soft)
-        color: var(--vp-c-yellow-1)
-        cursor: pointer
-
-        &:hover, &.active
-            border-color: var(--vp-c-yellow-1)
-            font-weight: 600
-
-    // Rows share the table's columns via subgrid, so the number and Cases columns fit their widest
+    // Rows share the table's columns via subgrid, so the number and Reports columns fit their widest
     // content across all rows (never wrapping), the bar has a set width, and the name takes the rest
     @media (min-width: 820px)
         display: grid
         grid-template-columns: auto minmax(90px, 1fr) auto 160px auto auto auto auto
         column-gap: 10px
 
-        .owner_row, .responses_panel
+        .owner_row
             grid-column: 1 / -1
 
         .owner_row
@@ -416,10 +392,5 @@ function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
         // Let each percentage be its own grid cell so they line up in columns across rows
         .pcts
             display: contents
-
-    .responses_panel
-        background: var(--vp-c-bg-alt)
-        padding: 10px 14px
-        border-bottom: 1px solid var(--vp-c-divider)
 
 </style>

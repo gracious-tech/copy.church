@@ -7,17 +7,17 @@ div.watch_translations_page(v-if='!owner_mode || owner_known')
     template(v-if='owner_mode')
         VPButton(class='back_link' text="← All Bible Orgs" href='/watch/' theme='alt')
         h1 Versions licensed by {{ owner_name }}
-        div.owner_links(v-if='owner?.website || owner?.ministry_watch_url')
-            VPButton(v-if='owner?.website' text="Website" :href='owner.website' theme='alt')
-            VPButton(
-                v-if='owner?.ministry_watch_url' text="Ministry Watch" :href='owner.ministry_watch_url'
-                theme='alt'
-            )
         template(v-if='base_rows.length')
             WatchStats(:stats='owner_stat_tiles')
             WatchMeter(class='owner_meter' :counts='owner_tier_counts')
+        div.owner_links(v-if='owner?.website || owner?.ministry_watch_url')
+            VPButton(v-if='owner?.website' text="Website" :href='owner.website' theme='alt')
+            VPButton(
+                v-if='owner?.ministry_watch_url' text="View Financials" :href='owner.ministry_watch_url'
+                theme='alt'
+            )
         template(v-if='owner_cases.length')
-            h2 Cases
+            h2 Reports
             WatchCases(:entries='owner_cases')
         h2 Versions
         p(v-if='!base_rows.length') No tracked versions.
@@ -42,7 +42,7 @@ div.watch_translations_page(v-if='!owner_mode || owner_known')
             tr(v-for='item of filtered' :key='item.id')
                 td.name.condensed: a(:href='item.info_url' target='_blank' rel='noreferrer')
                     | {{ item.display_name }}
-                td.language {{ item.language }}
+                td.language {{ item.language_name }}
                 td.license: span.license_pill(:class='license_tier(item.license, item.id)') {{ format_license(item.license) }}
                 td.owner.condensed(v-if='!owner_mode') {{ item.owner_names }}
 
@@ -57,6 +57,7 @@ import {ref, computed, onBeforeMount, watch} from 'vue'
 import translations from '@/_data/watch/translations.json'
 import owners_json from '@/_data/watch/owners.json'
 import license_terms from '@/_data/watch/license_terms.json'
+import languages_json from '@/_data/watch/languages.json'
 import type {Owner} from '@/_data/watch/types'
 
 import WatchStats from './WatchStats.vue'
@@ -72,21 +73,24 @@ const props = defineProps<{owner_mode?:boolean}>()
 // Typed so optional fields (website, ministry_watch_url) are known even when no entry has them yet
 const owners:Owner[] = owners_json
 
+// English name for each ISO 639-3 code — codes without one (mostly retired) show as the code
+const language_names:Record<string, string> = languages_json
+
 
 // A raw license value ('unknown', 'public', 'cc-by-nc-nd', ...) isn't fit for display as-is —
-// show a plain "None" for the unknown case, "Open" for open access without a known license,
+// show "Restricted" for the unknown case, "Open" for open access without a known license,
 // and drop a Creative Commons code's redundant "cc" prefix while keeping its hyphens
 // ("cc-by-nc-nd" -> "BY-NC-ND")
 function format_license(license:string):string{
-    if (license === 'unknown') return 'None'
+    if (license === 'unknown') return "Restricted"
     if (license === 'unknown_open') return 'Open'
     if (license === 'public') return 'Public domain'
     if (license === 'custom') return 'Custom'
     return license.split('-').filter(part => part !== 'cc').map(part => part.toUpperCase()).join('-')
 }
 
-// Many abbreviations redundantly lead with the language code already shown in its own column
-// ("AAHWBT" for aah) — drop that prefix, but only when something is left after it
+// Many abbreviations redundantly lead with the language code, its language being shown in its own
+// column ("AAHWBT" for aah) — drop that prefix, but only when something is left after it
 function format_abbrev(abbrev:string, language:string):string{
     if (abbrev.length > 3 && abbrev.slice(0, 3).toLowerCase() === language.toLowerCase())
         return abbrev.slice(3)
@@ -115,18 +119,20 @@ function format_name(item:{name:string, abbrev:string, language:string, medium:s
     return `${item.name}${abbrev}${item.medium === 'audio' ? " [audio]" : ''}`
 }
 
-// Attach display name, license, owner ids, and owner names to each row
+// Attach display name, language name, license, owner ids, and owner names to each row, ordered by
+// display name
 const rows = translations.map(item => {
     const terms = terms_by_translation[item.id]
     const owner_ids = terms?.owner_ids ?? []
     return {
         ...item,
         display_name: format_name(item),
+        language_name: language_names[item.language] ?? item.language,
         license: terms?.license ?? 'unknown',
         owner_ids,
         owner_names: owner_ids.map(id => owner_names[id] ?? "Unknown").join(", "),
     }
-})
+}).sort((a, b) => a.display_name.localeCompare(b.display_name))
 
 // Owners worth offering as a filter — only those with at least one tracked translation here
 const owner_tracked_counts:Record<string, number> = {}
@@ -196,7 +202,10 @@ const owner_stat_tiles = computed(() => {
     ]
 })
 
-const language_options = computed(() => [...new Set(base_rows.value.map(r => r.language))].sort())
+// Languages offered as a filter, by name — a name shared by several codes (e.g. a macrolanguage and
+// its main member, both "Arabic") is one option covering them all
+const language_options = computed(() =>
+    [...new Set(base_rows.value.map(r => r.language_name))].sort((a, b) => a.localeCompare(b)))
 
 watch([selected_owner, selected_language, query], () => {
     const params = new URLSearchParams()
@@ -223,7 +232,7 @@ const filtered = computed(() => {
     const q = query.value.trim().toLowerCase()
     return base_rows.value.filter(item =>
         (!selected_owner.value || item.owner_ids.includes(selected_owner.value))
-        && (!selected_language.value || item.language === selected_language.value)
+        && (!selected_language.value || item.language_name === selected_language.value)
         && (!q || item.display_name.toLowerCase().includes(q)
             || item.abbrev.toLowerCase().includes(q)))
 })
@@ -235,7 +244,7 @@ const filtered = computed(() => {
 
 .watch_translations_page
     .back_link
-        margin-bottom: 16px
+        margin-bottom: 28px
 
     h1
         margin-bottom: 16px
@@ -250,7 +259,7 @@ const filtered = computed(() => {
         height: 12px
         border-radius: 6px
         margin-top: -4px
-        margin-bottom: 16px
+        margin-bottom: 28px
 
     .filters
         display: flex
@@ -322,9 +331,9 @@ const filtered = computed(() => {
         white-space: nowrap
 
 // Below 640px a real <table> can't reflow without either an overflow scrollbar or losing
-// columns, so each row becomes a flex row instead — still one line per translation, with all
-// four fields sharing the row equally and wrapping their own text rather than pushing each
-// other down. The header (column names) is hidden rather than repeated per cell, relying on
+// columns, so each row becomes a flex row instead — still one line per translation, with the
+// language and license taking only what they need and the name and owner sharing the rest,
+// wrapping their own text rather than pushing each other down. The header (column names) is hidden rather than repeated per cell, relying on
 // the pill's color and each field's own styling (muted language/owner) to stay legible without
 // labels.
 @media (max-width: 640px)
@@ -337,13 +346,15 @@ const filtered = computed(() => {
             align-items: baseline
             gap: 8px
             padding: 8px 0
+            border-top: none
             border-bottom: 1px solid var(--vp-c-divider)
 
+        // Drop VitePress's per-cell borders so only the row's own divider shows
         td
             flex: 1 1 0
             min-width: 0
             padding: 0
-            border-bottom: none
+            border: none
 
         .name
             order: 1
@@ -363,12 +374,10 @@ const filtered = computed(() => {
             text-overflow: ellipsis
             white-space: nowrap
 
+        // The pill only needs its own width, leaving the rest of the row to the name and owner
         .license
             order: 3
-
-            .license_pill
-                white-space: normal
-                overflow-wrap: break-word
+            flex: 0 0 auto
 
         .owner
             order: 4
