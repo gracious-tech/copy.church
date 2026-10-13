@@ -1,11 +1,13 @@
 
-// Hand-curated rights-holder names for well-known translations that no other source exposes
-// ownership for (they're commercially restricted — ESV and NIV are the clearest examples).
+// Hand-curated owner names for well-known translations that no other source exposes ownership for
+// (they're commercially restricted — ESV and NIV are the clearest examples). The owners are the
+// copyright holder plus anyone else who makes licensing decisions for it (where a notice says
+// it's "used by permission of" another org, that org too).
 // Sourced from each translation's own published copyright notice — kept small and only added to
-// when confident, since
-// a wrong attribution here is worse than leaving a translation owner-less ('unknown').
-// translation_id -> owner display name (matched/created the same way as every other owner).
-export const major_translation_owners:Record<string, string> = {
+// when confident, since a wrong attribution here is worse than leaving a translation owner-less
+// ('unknown').
+// translation_id -> owner display name(s) (matched/created the same way as every other owner).
+export const major_translation_owners:Record<string, string|string[]> = {
     // English Standard Version
     ENGESV: 'Crossway',
 
@@ -33,11 +35,12 @@ export const major_translation_owners:Record<string, string> = {
     ENGCEVD: 'American Bible Society',
 
     // The Living Bible — Kenneth Taylor's paraphrase, copyright held by Tyndale House Foundation
-    // (the charitable foundation, distinct from Tyndale House Publishers)
-    ENGTLB: 'Tyndale House Foundation',
+    // (Tyndale House Publishers' charitable foundation, counted as the same org)
+    ENGTLB: 'Tyndale House Publishers',
 
-    // God's Word Translation
-    ENGGDW: "God's Word to the Nations Mission Society",
+    // God's Word Translation — copyright held by God's Word to the Nations, used by permission of
+    // Baker Publishing Group
+    ENGGDW: ["God's Word to the Nations Mission Society", 'Baker Publishing Group'],
 
     // International Standard Version
     ENGISV: 'ISV Foundation',
@@ -106,7 +109,8 @@ export const major_translation_owners:Record<string, string> = {
     SWENLB: 'Biblica, Inc.',
 
     // Foreign-language editions explicitly branded "New Living Translation" — that name is
-    // Tyndale's own trademark, distinct from the Living-Bibles-International lineage above
-    AFRNLV: 'Tyndale House Foundation',
-    CMNNLT: 'Tyndale House Foundation',
+    // Tyndale's own trademark, distinct from the Living-Bibles-International lineage above, and
+    // licensed like the TLB
+    AFRNLV: 'Tyndale House Publishers',
+    CMNNLT: 'Tyndale House Publishers',
 }

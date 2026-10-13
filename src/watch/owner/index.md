@@ -1,5 +1,6 @@
 ---
-description: Every Bible version owned by an organization tracked by Bible Org Watch.
+title: Bible Org Watch
+description: Explore who owns Bible translations and how restrictive they are with their licensing.
 aside: false
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/watch.png'}]]
 ---

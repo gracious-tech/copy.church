@@ -1,19 +1,21 @@
 
 <template lang='pug'>
 
-div.watch_translations_page
+//- Owner mode without a recognised owner renders nothing while it redirects to the main Watch page
+div.watch_translations_page(v-if='!owner_mode || owner_known')
     //- Owner mode gets its own heading and links in place of an owner filter
     template(v-if='owner_mode')
-        h1 Versions owned by {{ owner_name }}
-        div.owner_links
-            VPButton(text="← All owners" href='/watch/' theme='alt')
-            VPButton(text="All versions" href='/watch/translations/' theme='alt')
+        VPButton(class='back_link' text="← All Bible Orgs" href='/watch/' theme='alt')
+        h1 Versions licensed by {{ owner_name }}
+        div.owner_links(v-if='owner?.website || owner?.ministry_watch_url')
             VPButton(v-if='owner?.website' text="Website" :href='owner.website' theme='alt')
             VPButton(
                 v-if='owner?.ministry_watch_url' text="Ministry Watch" :href='owner.ministry_watch_url'
                 theme='alt'
             )
-        WatchStats(v-if='base_rows.length' :stats='owner_stat_tiles')
+        template(v-if='base_rows.length')
+            WatchStats(:stats='owner_stat_tiles')
+            WatchMeter(class='owner_meter' :counts='owner_tier_counts')
         template(v-if='owner_cases.length')
             h2 Cases
             WatchCases(:entries='owner_cases')
@@ -23,7 +25,7 @@ div.watch_translations_page
     template(v-if='base_rows.length')
         div.filters
             select(v-if='!owner_mode' v-model='selected_owner')
-                option(value='') All owners
+                option(value='') All orgs
                 option(v-for='o of owner_options' :key='o.id' :value='o.id') {{ o.name }} ({{ format_num(o.tracked) }})
             select(v-model='selected_language')
                 option(value='') All languages
@@ -36,15 +38,13 @@ div.watch_translations_page
                 th.name Version
                 th.language Language
                 th.license License
-                th.owner(v-if='!owner_mode') Owned by
-            tr(v-for='item of shown' :key='item.id')
+                th.owner(v-if='!owner_mode') Licensed by
+            tr(v-for='item of filtered' :key='item.id')
                 td.name.condensed: a(:href='item.info_url' target='_blank' rel='noreferrer')
                     | {{ item.display_name }}
                 td.language {{ item.language }}
                 td.license: span.license_pill(:class='license_tier(item.license, item.id)') {{ format_license(item.license) }}
                 td.owner.condensed(v-if='!owner_mode') {{ item.owner_names }}
-        p.more(v-if='filtered.length > shown.length')
-            | Showing first {{ format_num(shown.length) }} — narrow your search or filters to see more specific results.
 
 </template>
 
@@ -61,6 +61,7 @@ import type {Owner} from '@/_data/watch/types'
 
 import WatchStats from './WatchStats.vue'
 import WatchCases from './WatchCases.vue'
+import WatchMeter from './WatchMeter.vue'
 import {license_tier, response_log_by_owner, format_num} from './watch_utils'
 import type {LicenseTier} from './watch_utils'
 
@@ -108,10 +109,10 @@ for (const term of license_terms){
         terms.owner_ids.push(term.owner_id)
 }
 
-// Name shown for a translation — its abbreviation, then "(audio)" for an audio recording
+// Name shown for a translation — its abbreviation, then "[audio]" for an audio recording
 function format_name(item:{name:string, abbrev:string, language:string, medium:string}):string{
     const abbrev = item.abbrev ? ` (${format_abbrev(item.abbrev, item.language)})` : ''
-    return `${item.name}${abbrev}${item.medium === 'audio' ? ' (audio)' : ''}`
+    return `${item.name}${abbrev}${item.medium === 'audio' ? " [audio]" : ''}`
 }
 
 // Attach display name, license, owner ids, and owner names to each row
@@ -147,6 +148,12 @@ onBeforeMount(() => {
     if (params.has('o')) selected_owner.value = params.get('o')!
     if (params.has('l')) selected_language.value = params.get('l')!
     if (params.has('q')) query.value = params.get('q')!
+
+    // An owner page without a recognised owner has nothing to show, so go to the main Watch page
+    if (props.owner_mode && !owner_known.value){
+        self.location.replace('/watch/')
+        return
+    }
     if (props.owner_mode)
         document.title = `Versions owned by ${owner_name.value} | ${document.title}`
 })
@@ -159,23 +166,33 @@ const owner_cases = computed(() => response_log_by_owner[selected_owner.value] ?
 const owner_name = computed(() =>
     owner.value?.name ?? owner_cases.value[0]?.owner_name ?? selected_owner.value)
 
+// Whether the owner id from the URL matches an org in owners.json, the response log, or the data
+const owner_known = computed(() => !!(owner.value || owner_cases.value.length
+    || owner_tracked_counts[selected_owner.value]))
+
 // Rows in scope before any filtering — just the owner's in owner mode, else every translation
 const base_rows = computed(() =>
     props.owner_mode ? rows.filter(r => r.owner_ids.includes(selected_owner.value)) : rows)
 
-// Owner mode headline tiles — how the owner's translations split across license tiers
+// How the owner's translations split across license tiers, for the owner mode tiles and bar
+const owner_tier_counts = computed(() => {
+    const counts:Record<LicenseTier, number> = {open: 0, semi_restricted: 0, restricted: 0}
+    for (const row of base_rows.value)
+        counts[license_tier(row.license, row.id)] += 1
+    return counts
+})
+
+// Owner mode headline tiles — each tier's count and share of the owner's translations
 const owner_stat_tiles = computed(() => {
     const total = base_rows.value.length
-    const count = (tier:LicenseTier) =>
-        base_rows.value.filter(r => license_tier(r.license, r.id) === tier).length
     const tile = (tier:LicenseTier, label:string) => {
-        const n = count(tier)
+        const n = owner_tier_counts.value[tier]
         return {value: n, label: `${label} (${total ? Math.round((n / total) * 100) : 0}%)`, tier}
     }
     return [
         tile('open', "Open"),
-        tile('restricted', "Restricted"),
         tile('semi_restricted', "Semi-restricted"),
+        tile('restricted', "Restricted"),
     ]
 })
 
@@ -211,21 +228,26 @@ const filtered = computed(() => {
             || item.abbrev.toLowerCase().includes(q)))
 })
 
-// Cap rendered rows for performance — narrowing the search/filters reveals more
-const LIMIT = 200
-const shown = computed(() => filtered.value.slice(0, LIMIT))
-
 </script>
 
 
 <style lang='sass' scoped>
 
 .watch_translations_page
+    .back_link
+        margin-bottom: 16px
+
     .owner_links
         display: flex
         flex-wrap: wrap
         gap: 8px
         margin: 12px 0
+
+    .owner_meter
+        height: 12px
+        border-radius: 6px
+        margin-top: -4px
+        margin-bottom: 16px
 
     .filters
         display: flex
@@ -265,11 +287,6 @@ const shown = computed(() => filtered.value.slice(0, LIMIT))
         font-size: 0.8em
         opacity: 0.7
         margin: 0 0 8px
-
-    .more
-        font-size: 0.8em
-        opacity: 0.7
-        margin-top: 8px
 
 .watch_translations
     width: 100%

@@ -12,7 +12,7 @@ div.watch_dashboard_wrap
         div.sort_toggle
             span.sort_label Sort by
             button(:class='{active: sort_mode === "total"}' @click='sort_mode = "total"')
-                | Total owned
+                | Total versions
             button(:class='{active: sort_mode === "count"}' @click='sort_mode = "count"')
                 | Restricted (#)
             button(:class='{active: sort_mode === "pct"}' @click='sort_mode = "pct"')
@@ -26,21 +26,13 @@ div.watch_dashboard_wrap
                 div.cell.rank {{ format_num(i + 1) }}
                 div.cell.name
                     span.owner_name {{ owner.name }}
-                    a.website(
-                        v-if='owner.website' :href='owner.website' target='_blank' rel='noreferrer'
-                        title='Visit website'
-                    ) ↗
                     a.ministry_watch(
                         v-if='owner.ministry_watch_url' :href='owner.ministry_watch_url'
                         target='_blank' rel='noreferrer' title='View on Ministry Watch'
                     ) MW
                 div.cell.total.num {{ format_num(owner.tracked) }}
                 div.cell.bar
-                    div.meter
-                        div.meter_segment(
-                            v-for='tier of meter_tiers' :key='tier' :class='tier'
-                            :style='{flex: owner[tier]}'
-                        )
+                    WatchMeter(:counts='owner')
                 div.pcts
                     div.cell.num(
                         v-for='tier of pct_tiers' :key='tier.key' :class='tier.area'
@@ -71,15 +63,16 @@ import license_terms from '@/_data/watch/license_terms.json'
 
 import WatchStats from './WatchStats.vue'
 import WatchCases from './WatchCases.vue'
+import WatchMeter from './WatchMeter.vue'
 import {license_tier, response_log_by_owner, format_num} from './watch_utils'
 
 
 // Tally each owner's tracked translations and how many carry a restricted license
 const owner_names:Record<string, string> = {}
-const owner_meta:Record<string, {website?:string, ministry_watch_url?:string}> = {}
+const owner_meta:Record<string, {ministry_watch_url?:string}> = {}
 for (const owner of owners){
     owner_names[owner.id] = owner.name
-    owner_meta[owner.id] = {website: owner.website, ministry_watch_url: owner.ministry_watch_url}
+    owner_meta[owner.id] = {ministry_watch_url: owner.ministry_watch_url}
 }
 
 // A translation with several rights holders (e.g. an audio recording's text and recording owners)
@@ -101,7 +94,6 @@ const owner_rows = Object.entries(tallies)
         return {
             id,
             name: owner_names[id] ?? id,
-            website: owner_meta[id]?.website,
             ministry_watch_url: owner_meta[id]?.ministry_watch_url,
             tracked: tally.tracked,
             open: tally.tracked - tally.semi_restricted - tally.restricted_only,
@@ -155,7 +147,6 @@ for (const [key, entries] of Object.entries(response_log_by_owner)){
         display_rows.push({
             id: key,
             name: owner_names[key] ?? entries[0]!.owner_name,
-            website: owner_meta[key]?.website,
             ministry_watch_url: owner_meta[key]?.ministry_watch_url,
             tracked: 0,
             open: 0,
@@ -175,10 +166,6 @@ const pct_tiers:{key:TierKey, label:string, area:string}[] = [
     {key: 'semi_restricted', label: "Semi-restricted", area: 'semi_pct'},
     {key: 'restricted', label: "Restricted", area: 'restricted_pct'},
 ]
-
-// Bar segments, grown in proportion to their raw counts so they always fill the bar exactly
-// (rounded percentages can add up to 99 or 101)
-const meter_tiers:TierKey[] = ['open', 'semi_restricted', 'restricted']
 
 // A tier's share of an owner's versions, or a dash when they have none tracked
 function tier_pct_text(owner:typeof display_rows[0], key:TierKey){
@@ -225,8 +212,8 @@ function toggle_responses(owner_id:string){
     expanded.value = new Set(expanded.value)
 }
 
-// Make the whole row open the owner's page, except for its own interactive children (website/MW
-// badges, the Cases button) — those already do their own thing, so let their clicks through
+// Make the whole row open the owner's page, except for its own interactive children (the MW
+// badge, the Cases button) — those already do their own thing, so let their clicks through
 function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
     if ((event.target as HTMLElement).closest('a, button')) return
     location.href = `/watch/owner/#o=${owner.id}`
@@ -336,7 +323,7 @@ function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
     .name
         grid-area: name
 
-        .website, .ministry_watch
+        .ministry_watch
             margin-left: 6px
             font-size: 0.75em
             padding: 1px 5px
@@ -427,30 +414,5 @@ function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
         background: var(--vp-c-bg-alt)
         padding: 10px 14px
         border-bottom: 1px solid var(--vp-c-divider)
-
-    .meter
-        display: flex
-        width: 100%
-        height: 8px
-        border-radius: 4px
-        overflow: hidden
-        background: var(--vp-c-bg-alt)
-
-        .meter_segment
-            height: 100%
-
-            &.open
-                background: var(--vp-c-green-2)
-
-            // The theme's light yellow-2 is a dark brown next to green/red, so use a brighter
-            // amber there (dark theme's yellow-2 is already a proper amber)
-            &.semi_restricted
-                background: #f5a623
-
-                html.dark &
-                    background: var(--vp-c-yellow-2)
-
-            &.restricted
-                background: var(--vp-c-red-2)
 
 </style>

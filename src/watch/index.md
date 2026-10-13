@@ -1,6 +1,6 @@
 ---
 title: Bible Org Watch
-description: A registry of Bible versions, who owns them, and how they've responded when their work was shared.
+description: Explore who owns Bible translations and how restrictive they are with their licensing.
 aside: false
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/watch.png'}]]
 ---
@@ -40,19 +40,17 @@ h1
 
 # <span class="title_org">Bible Org</span><span class="title_watch">Watch</span> {#bible-org-watch}
 
-Bible Org Watch tracks which organizations hold the rights to God's Word, and what licenses they put it under.
+Bible Org Watch tracks which organizations control the licensing of God's Word, and how restrictive they are.
 
 - **Restricted**: You cannot share the Bible version without their permission
 - **Semi-restricted**: You cannot use the version as a base for a new Bible translation
   and/or sell printed copies (no derivatives / non-commercial)
 
-See also: [English Bible ratings](/initiatives/bibles/) &middot; [Critical Text ratings](/initiatives/critical-texts/)
+See also: [All Bible versions](/watch/translations/) &middot; [English Bible ratings](/initiatives/bibles/) &middot; [Critical Text ratings](/initiatives/critical-texts/)
 
 <WatchOwnerDashboard/>
 
 &nbsp;
-
-<VPButton text="All Bibles" href='/watch/translations/' theme='alt' />
 
 _Figures above exclude versions over 95 years old (public domain by age), except the KJV
 (perpetual Crown copyright)._

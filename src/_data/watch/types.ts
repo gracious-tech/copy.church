@@ -22,7 +22,8 @@ export interface Translation {
 }
 
 
-// A rights holder — organization or individual — that owns or publishes translations
+// A rights holder — organization or individual — that owns translations or makes licensing
+// decisions for them (e.g. a publisher or agency licensing on the copyright holder's behalf)
 export interface Owner {
     id: string
     name: string

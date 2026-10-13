@@ -30,12 +30,14 @@ export function sort_keys<T>(record:Record<string, T>):Record<string, T>{
     return Object.fromEntries(Object.entries(record).sort(([a], [b]) => a.localeCompare(b)))
 }
 
-// Fetch each key in `keys` into `cache` one at a time, to go easy on the source — a failed fetch
-// is left uncached, to retry next run. Returns how many failed.
+// Fetch each key in `keys` into `cache` one at a time (waiting `delay_ms` before each), to go easy
+// on the source — a failed fetch is left uncached, to retry next run. Returns how many failed.
 export async function fetch_into<T>(cache:Record<string, T>, keys:string[],
-        fetcher:(key:string) => Promise<T>):Promise<number>{
+        fetcher:(key:string) => Promise<T>, delay_ms = 0):Promise<number>{
     let failed = 0
     for (const key of keys){
+        if (delay_ms)
+            await new Promise(resolve => setTimeout(resolve, delay_ms))
         try {
             cache[key] = await fetcher(key)
         } catch (error){
@@ -71,7 +73,9 @@ export async function fetch_json<T>(url:string, headers:Record<string, string> =
 // Other names sources use for an org (short forms, typos, old names, translations), keyed by
 // slug, mapped to the one name it's listed under
 const ORG_ALIASES:Record<string, string> = {
-    hosanna: 'Hosanna/Faith Comes By Hearing',
+    hosanna: 'Faith Comes By Hearing',
+    hosanna_faith_comes_by_hearing: 'Faith Comes By Hearing',
+    tyndale_house_foundation: 'Tyndale House Publishers',  // Its charitable foundation
     twftw: 'The Word for the World International',
     twftw_international: 'The Word for the World International',
     word_for_the_world: 'The Word for the World International',
@@ -100,10 +104,78 @@ const ORG_ALIASES:Record<string, string> = {
     union_nacional_de_traductores_indigenas: 'Unión Nacional de Traductores Indígenas',
     институт_перевода_библии: 'Institute for Bible Translation, Russia',
     artist_for_israel_international: 'Artists for Israel International',
+    artists_for_israel_intl: 'Artists for Israel International',
     door_43_international_mission_community: 'Door43 World Missions Community',
     gilakmedia_com: 'Gilak Media',
     wilbur_n_pickering_thm_phd: 'Wilbur N. Pickering',
+    ellis_w_deibler_jr: 'Ellis W. Deibler',
     far_east_broadcasting_company: 'Far East Broadcasting Company',
+    son_light_sunshine_foundation: 'Son Light Foundation',
+    world_for_the_world_international: 'The Word for the World International',
+    wycliffe_bible_translator: 'Wycliffe Bible Translators, Inc.',
+    wycliffe_bible_translations: 'Wycliffe Bible Translators, Inc.',
+    tov_rose: 'TovRose',
+    schweizerische_bibelgesellschaft: 'Swiss Bible Society',
+    sociedad_bíblica_de_guatemala: 'Bible Society in Guatemala',
+    sociedade_bíblica_do_brasil: 'Bible Society of Brazil',
+    traducteurs_pionniers_de_la_bible: 'Pioneer Bible Translators',
+    gillbt_ghana_institute_of_linguistics_literacy_and_bible_translation:
+        'Ghana Institute of Linguistics, Literacy and Bible Translation',
+    nectar: 'North East Centre for Training and Research',
+    bukavu_archdiocese_of_bukavu: 'Archdiocese of Bukavu',
+    библийым_кусарыше_институт_ий: 'Institute for Bible Translation, Finland',
+    // Bible Societies' own names in their language, for the English name DBL lists them under
+    deutsche_bibelgesellschaft: 'German Bible Society',
+    det_danske_bibelselskab: 'Danish Bible Society',
+    det_norske_bibelselskap: 'Norwegian Bible Society',
+    nederlands_bijbelgenootschap: 'Netherlands Bible Society',
+    suomen_pipliaseura: 'Finnish Bible Society',
+    genfer_bibelgesellschaft: 'Bible Society of Geneva',
+    sociedades_bíblicas_unidas: 'United Bible Societies',
+    alliance_biblique_universelle: 'United Bible Societies',
+    sociedad_bíblica_argentina: 'Argentine Bible Society',
+    sociedad_bíblica_colombiana: 'Colombian Bible Society',
+    sociedad_bíblica_paraguaya: 'Paraguayan Bible Society',
+    alliance_biblique_du_congo: 'Bible Society of Congo (Republic)',
+    українське_біблійне_товариство: 'Ukrainian Bible Society',
+    surinaams_bijbelgenootschap: 'Suriname Bible Society',
+    føroyska_bíbliufelagið: 'Faroese Bible Society',
+    british_and_foreign_bible_society: 'British & Foreign Bible Society',
+    мукаддес_китап_терҗиме_институты: 'Institute for Bible Translation, Russia',
+    // Joint notices in other languages ("X et les Y"), where the other holder is credited anyway
+    traducteurs_pionniers_de_la_bible_et_alliance_biblique_en_guinée: 'Pioneer Bible Translators',
+    mission_evangélique_reformée_néerlandaise_et_les_traducteurs_pionniers_de_la_bible:
+        'Mission Evangélique Réformée Néerlandaise',
+    // Notices in other languages that a parse left a word of prose on ("made by", "of the")
+    yenziwe_yibiblica: 'Biblica, Inc.',
+    von_de_kjennichs_bibel_jesalschoft: 'Kjennichs-Bibel Jesalschoft',
+    // Names given with a location or description
+    ethnos360_sanford_florida: 'Ethnos360',
+    missão_novas_tribos_sanford_fl: 'Missão Novas Tribos do Brasil',
+    royal_jongbloed_heerenveen_the_netherlands: 'Jongbloed Uitgeverij',
+    katholieke_bijbelstichting_breda: 'Katholieke Bijbelstichting',
+    katholieke_bijbelstichting_hoeven: 'Katholieke Bijbelstichting',
+    crossway_bibles_a_publishing_ministry_of_good_news_publishers: 'Crossway',
+    crossway_a_publishing_ministry_of_good_news_publishers: 'Crossway',
+    crossway_good_news_publishers: 'Crossway',
+    theologischer_verlag_zürich: 'TVZ Theologischer Verlag Zürich AG',
+    bibe_translation_and_literacy: 'Bible Translation and Literacy',
+    // Acronyms and short or translated forms of names listed elsewhere
+    itdal: 'Initiative for the Translation and Development of African Languages',
+    bspng: 'Bible Society of Papua New Guinea',
+    mern: 'Mission Evangélique Réformée Néerlandaise',
+    acotba: 'Association Congolaise de Traductions de la Bible',
+    acotba_subo: 'Association Congolaise de Traductions de la Bible',
+    la_liga_bíblica: 'Bible League International',
+    liga_bíblica_internacional: 'Bible League International',
+    royal_jongbloed: 'Jongbloed Uitgeverij',
+    edições_vida_nova: 'Sociedade Religiosa Edições Vida Nova',
+    ahirani_christi_iswari_mandli_sakri_dhule:
+        'Ahirani Christi Iswari Mandli, Sakri, Dhule, Maharashtra',
+    nahali_vishwaseen_mandli_toranmal_nandurbar:
+        'Nahali Vishwaseen Mandli, Toranmal, Dhadgaon, Nandurbar, Maharashtra',
+    initiative_for_translation_and_development_of_african_languages:
+        'Initiative for the Translation and Development of African Languages',
     // Whole notices a parse couldn't reduce to a name
     malayalam_bible_binoy_chacko_audio_bible_nt_ot_binoy_chacko_ministries:
         'Binoy Chacko Ministries',
@@ -113,7 +185,7 @@ const ORG_ALIASES:Record<string, string> = {
 function clean_owner_name(name:string):string{
     // Drop punctuation left dangling at the end of a name ("Barwani, .", "Odisha.") — but not
     // the period of an abbreviation ("Inc.", "Jr.", "e.V.", "Corp.")
-    let cleaned = name.replace(/\s+/g, ' ').replace(/(?:\s*[,;:]\s*\.?|\s+\.)+\s*$/, '').trim()
+    let cleaned = name.replace(/\s+/g, ' ').replace(/(?:\s*[,;:\-–]\s*\.?|\s+\.)+\s*$/, '').trim()
     const last_word = /(?:^|[^\p{L}.])(\p{L}+)\.$/u.exec(cleaned)?.[1]
     if (last_word && last_word.length >= 4 && last_word.toLowerCase() !== 'corp')
         cleaned = cleaned.slice(0, -1)
@@ -153,14 +225,60 @@ export function strip_copyright_notice(text:string):string{
 // translations it didn't produce and has no rights over. A source can add its own (lowercased).
 export const AGGREGATOR_NAMES = new Set(['ebible.org'])
 
+// Whether a name is just a hosting/aggregation platform (see AGGREGATOR_NAMES)
+export const is_aggregator = (name:string):boolean =>
+    AGGREGATOR_NAMES.has(strip_copyright_notice(name).toLowerCase())
+
+// Names that copyright notices give as a holder, but that aren't really a rights holder — a
+// translation project rather than a legal entity, or prose a notice parse left behind
+const NON_HOLDERS = new Set([
+    'Urdu Geo Version', 'Sehwi Bible Sefwi Wiawso',
+    'Mpoto Language Translation', 'Powari Madhya Pradesh', 'Obedience', 'Biel – Bienne',
+    'UBB &WBT', 'M.B.S.: N.I.N.E.A. C9', 'Bible Translation', 'Literacy', '#ti',
+    'ADI-Media, Via della Formica 23, 5 Roma, Italy',
+    'Киелі Кітап, Қазақша аудармасы және көркемделуі «Орта Азия баспасы ЖШС»',
+].map(name => slugify(name)))
+
+// Kinds of name that are always a translation project or committee rather than a legal entity
+// ("Santhali Translation Project", "Koya Translation Samithi" — samiti being Hindi for committee),
+// or rights boilerplate from a notice (often in another language) rather than a name
+const NON_HOLDER_RE = new RegExp([
+    '\\b(?:translation|language)\\s+(?:project|team|committee)\\b', '\\bsamit?h?i\\b',
+    '\\bcommittee of\\b', '\\btrademark office\\b', 'reserv', 'derechos', 'direitos', '\\bregte\\b',
+    'zimehifadhiwa', '\\bact\\b', '§', 'weergawe', 'toestemming', '^holder$', '^publicado\\b',
+].join('|'), 'i')
+
 export function owner_id_for(owners:Owner[], attribution:string):string{
     // "public domain" (or a blank attribution) isn't a rights holder — don't invent a fake owner
     // for it, just leave the license terms owner as 'unknown'. Same for a bare hosting platform.
     const name = strip_copyright_notice(attribution)
-    if (!name || /^(?:public domain|anonymous)$/i.test(name)
-            || AGGREGATOR_NAMES.has(name.toLowerCase()))
+    // A name starting in lowercase is left-over prose ("der deutschen Ausgabe und")
+    if (!name || /^(?:public domain|anonymous)$/i.test(name) || is_aggregator(name)
+            || NON_HOLDERS.has(slugify(clean_owner_name(name))) || NON_HOLDER_RE.test(name)
+            || /^\p{Ll}/u.test(name.replace(/^the\s+/i, '')))
         return 'unknown'
     return get_or_create_owner(owners, name)
+}
+
+// The owner ids for a list of owner names, without duplicates or 'unknown'
+export function owner_ids_for(owners:Owner[], names:string[]):string[]{
+    return [...new Set(names.map(name => owner_id_for(owners, name)))]
+        .filter(owner_id => owner_id !== 'unknown')
+}
+
+// Add one text license terms entry per owner, or a single 'unknown' one where none are known
+export function push_terms(license_terms:LicenseTerms[], translation_id:string,
+        owner_ids:string[], license:string, url:string):void{
+    for (const owner_id of owner_ids.length ? owner_ids : ['unknown']){
+        license_terms.push({
+            translation_id,
+            owner_id,
+            roles: ['text'],
+            license,
+            url,
+            last_verified: today(),
+        })
+    }
 }
 
 export const today = ():string => new Date().toISOString().slice(0, 10)
@@ -243,6 +361,7 @@ const HOLDER_END_RE = new RegExp([
     'used (?:by|with) permission', 'must appear', 'is a trademark', 'original publication',
     'current version', 'grabad\\w* por', 'recorded by', 'under\\s+cc',
     'in (?:cooperation|collaboration|partnership) with', 'audio:', 'text:', ';', '\\n',
+    'for the audio', 'but has been', 'info at',
 ].join('|'), 'i')
 
 export function clean_holder(segment:string):string{
@@ -250,13 +369,19 @@ export function clean_holder(segment:string):string{
     // reserved.") down to just the holder's name ("Wycliffe Bible Translators, Inc.")
     // Some statements run sentences together with no space ("...Davar Partners
     // InternationalBiblica® Open..."), so a trademarked title glued onto a name also ends it
-    let name = segment.replace(/&amp;/g, '&')
+    // A sentence break ("Michael Adeyemi Adegbola. This Scripture text is...") also ends it, but
+    // not an abbreviation's period ("Inc.", "Jr.", "W.")
+    let name = segment.replace(/&amp;|\bamp\b/g, '&').replace(/<[^>]*>?/g, ' ')
+        .replace(/️|(?<=\p{Nd})\p{M}+/gu, '')
         .replace(/(\p{Ll})(?=\p{Lu}\S*[®™])/gu, '$1\n')
         .replace(/(?:scripture\s+)?text\s+used\s+by\s+permission\s+of\s+/i, '')
+    name = name.split(/(?<=\p{Ll}{3})\.\s+(?=\p{Lu})/u)[0]!
     name = name.split(HOLDER_END_RE)[0]!
-    name = name.replace(/\([^)]*\)|[[\]\\"*]/g, '').replace(/\p{Nd}{4}|\b20__\b|\byear\b/giu, '')
-    name = name.replace(/^[\s:,.\-–/&]*(?:(?:audio|text|by)\b\s*)*/i, '')
-        .replace(/(?:[\s,;:\-–/&]|\band\b)+$/i, '')
+    // Links and parenthesised asides aren't part of a name, nor are any brackets they leave behind
+    name = name.replace(/https?:\/\/\S+/g, '').replace(/\([^)]*\)|[[\]\\"*()]/g, '')
+        .replace(/\p{Nd}{4}|\b20__\b|\byear\b/giu, '')
+    name = name.replace(/^[\s:,.\-–—/&]*(?:(?:audio|text|by|por|von|par)\b\s*)*/i, '')
+        .replace(/(?:[\s,;:\-–/&]|\b(?:and|et|und)\b)+$/i, '')
     name = name.replace(/\s+/g, ' ').trim()
     // Anything left without a single letter isn't a name
     return /\p{L}/u.test(name) ? name : ''
@@ -413,11 +538,14 @@ export interface DblSteps {
     refresh_catalog():Promise<void>
     // List text entries, returning the find.bible ids they supersede
     add_text(state:BuildState):Set<string>
-    // Add terms to listed versions, before other sources fill in the rest
-    add_terms(state:BuildState):void
+    // Add terms to listed versions (and list any versions only it knows of), before other
+    // sources fill in the rest — may prompt
+    add_terms(state:BuildState):Promise<void>
     // List audio recordings
     add_audio(state:BuildState):void
     // Resolve whatever can still be resolved, after translations too old to track are dropped
     resolve_remaining(state:BuildState):Promise<void>
+    // Fill in owner details (websites), once every source has added its owners
+    add_owner_websites(state:BuildState):void
 }
 

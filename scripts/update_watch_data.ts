@@ -40,12 +40,14 @@
 
 import {existsSync} from 'node:fs'
 
-import type {Translation, Owner, LicenseTerms} from '../src/_data/watch/types.ts'
+import type {Translation, Owner, LicenseTerms, ResponseLogEntry} from '../src/_data/watch/types.ts'
 import type {BuildState, DblSteps, FetchBible, FetchBibleEntry, FetchCollectionIds, FindBible,
     FindBibleIndex} from './watch_common.ts'
-import {build_org_index, fetch_into, fetch_json, fetch_language, license_from_text, owner_id_for,
-    save_json, sort_keys, split_holders, strip_copyright_notice, today} from './watch_common.ts'
+import {args, build_org_index, fetch_into, fetch_json, fetch_language, license_from_text,
+    owner_id_for, owner_ids_for, push_terms, save_json, sort_keys, split_holders,
+    strip_copyright_notice, today} from './watch_common.ts'
 import ebible_cache_json from './ebible_cache.json' with {type: 'json'}
+import response_log from '../src/_data/watch/response_log.json' with {type: 'json'}
 import {major_translation_owners} from './major_translation_owners.ts'
 
 
@@ -322,18 +324,12 @@ function apply_major_translation_owners(
     const by_id = new Set(translations.map(t => t.id))
 
     let matched = 0
-    for (const [translation_id, owner_name] of Object.entries(overrides)){
+    for (const [translation_id, owner_names] of Object.entries(overrides)){
         if (!by_id.has(translation_id)) continue
         if (license_terms.some(lt => lt.translation_id === translation_id))
             continue
-        license_terms.push({
-            translation_id,
-            owner_id: owner_id_for(owners, owner_name),
-            roles: ['text'],
-            license: 'unknown',
-            url: '',
-            last_verified: today(),
-        })
+        const names = typeof owner_names === 'string' ? [owner_names] : owner_names
+        push_terms(license_terms, translation_id, owner_ids_for(owners, names), 'unknown', '')
         matched += 1
     }
     console.info(`major_translation_owners: matched ${matched} translations`)
@@ -467,20 +463,11 @@ async function pull_ebible(translations:Translation[], owners:Owner[],
         // Some pages link a license with a malformed URL
         const detected = license_from_text(page.replaceAll('/by4.0/', '/by/4.0/'))
         const holders = split_holders(strip_copyright_notice(row['Copyright'] ?? ''), [], orgs)
-        const owner_ids = [...new Set(holders.map(name => owner_id_for(owners, name)))]
-            .filter(owner_id => owner_id !== 'unknown')
+        const owner_ids = owner_ids_for(owners, holders)
         if (!owner_ids.length && !detected)
             continue
-        for (const owner_id of owner_ids.length ? owner_ids : ['unknown']){
-            license_terms.push({
-                translation_id,
-                owner_id,
-                roles: ['text'],
-                license: detected?.license ?? 'unknown',
-                url: detected?.url || ebible_page_url(ebible_id),
-                last_verified: today(),
-            })
-        }
+        push_terms(license_terms, translation_id, owner_ids, detected?.license ?? 'unknown',
+            detected?.url || ebible_page_url(ebible_id))
         matched += 1
     }
     console.info(`eBible: added license terms to ${matched} find.bible versions not in DBL`)
@@ -567,6 +554,182 @@ function drop_superseded_closed(translations:Translation[], license_terms:Licens
 }
 
 
+// ---- editions of the same translation ----
+
+// Words that make a bracketed part of a name an edition qualifier — a script, an orthography, a
+// regional or canon edition, a recording style — rather than a dialect, place or translator, which
+// tell different translations apart ("Mazatec (San Antonio)", "Irish New Testament (Joynt)")
+const EDITION_QUALIFIER_RE = new RegExp([
+    'scripts?', 'orthography', 'alphabet', 'type', 'edition', 'editie', 'uitgawe', 'simplified',
+    'traditional', 'latin', 'arabic', 'cyrillic', 'roman', 'romani[sz]ed', 'syllabic', 'ethiopic',
+    'devanagari', 'nagri', 'bangla', 'unicode', 'anglici[sz]ed', 'castellano', 'catholic',
+    'protestant', 'apokryfer', 'deuterocanon\\w*', 'nt', 'portions', 'dbl', 'enhanced', 'base text',
+].map(word => `\\b${word}\\b`).join('|'), 'i')
+
+// A recording's style as its name labels it — "non drama" for a single reader ("Non-Drama",
+// "Non Drama", "NonDrama"), "drama" for several voices, or '' where it doesn't say
+function recording_style(name:string):string{
+    if (/\bnon[\s-]?drama\b/i.test(name))
+        return 'non drama'
+    return /\bdrama\b/i.test(name) ? 'drama' : ''
+}
+
+// Whether a name's bracketed part is only an edition qualifier — one of the words above, nothing
+// but a year, or the name's own abbreviation ("New American Standard Bible (NASB)"), as opposed
+// to another one, which tells a different translation apart ("Amharic Bible (CLT)")
+function is_edition_qualifier(part:string, name:string):boolean{
+    const text = part.replace(/\b\d{4}\b/g, '').trim()
+    const initials = name.replace(/\([^)]*\)|\[[^\]]*\]/g, ' ').match(/\b\p{Lu}/gu)?.join('') ?? ''
+    return !text || EDITION_QUALIFIER_RE.test(text)
+        || (/^\p{Lu}{3,}$/u.test(text) && initials.startsWith(text))
+}
+
+// A version's name reduced to the translation it's an edition of — on top of edition_key()'s
+// reductions, without edition qualifiers in brackets, regional spellings ("Anglicised",
+// "British"), canon editions ("Catholic Edition", "with Apocrypha"), a trailing "Updated", or
+// study aids ("with Strong's numbers"), so e.g. "English Standard Version (ESV) Anglicised 2016"
+// and "English Standard Version®" match, as do "Revised Standard Version Catholic Edition" and
+// "Revised Standard Version". "Interconfessional" and "Ecumenical" usually name a translation of
+// their own ("Albanian Interconfessional Version"), so stay. Drama, non-drama and unlabelled
+// recordings are never editions of each other, so however a name labels its style, the key ends
+// in it.
+function translation_key(name:string):string{
+    const unbracketed = name.replace(/\(([^)]*)\)|\[([^\]]*)\]/g,
+        (part, round?:string, square?:string) =>
+            is_edition_qualifier(round ?? square ?? '', name) ? ' ' : part)
+    const key = edition_key(unbracketed.replace(new RegExp([
+        'anglici[sz]ed', 'british', 'american', 'uk', 'us', 'usa', '(?<=.)updated', 'unicode',
+        'script', 'text', 'with(?:out)?\\s+strong\'?s(?:\\s+numbers)?',
+        'catholic(?:\\s+interconfessional)?', 'protestant',
+        'with(?:\\s+the)?\\s+(?:apocrypha|deuterocanon\\w*)(?:\\s+books)?', 'non[\\s-]?drama',
+        'drama',
+    ].map(word => `\\b${word}\\b`).join('|'), 'gi'), ' '))
+    const style = recording_style(name)
+    return key && style ? `${key} ${style}` : key
+}
+
+// Whether a version's name marks it as a regional or canon edition, which is never the one listed
+// where there's another
+const is_variant = (name:string):boolean => new RegExp([
+    'anglici[sz]ed', 'british', '\\buk\\b', 'catholic', 'protestant', 'interconfessional',
+    'ecumenical', 'apocrypha', 'deuterocanon',
+].join('|'), 'i').test(name)
+
+// The year of the edition a version is — the latest year in its name where it gives one
+// ("Lutherbibel 1545", whose DBL entry was only finished recently), else its latest year
+function edition_year(translation:Translation):number{
+    const this_year = new Date().getFullYear()
+    const years = [...translation.name.matchAll(/\b(1[4-9]\d\d|20\d\d)\b/g)]
+        .map(match => parseInt(match[1]!)).filter(year => year <= this_year)
+    return years.length ? Math.max(...years) : translation.latest_year
+}
+
+// List each translation once, as its latest edition. Editions are versions of the same name once
+// their edition qualifiers are dropped (see translation_key), in the same language and medium,
+// that share a rights holder (so a same-named but unrelated version is never merged) — or have no
+// known rights holder, where only one translation has that name. The one kept is the latest
+// edition — never a regional or canon one where there's another, and preferring one find.bible
+// has a page for — with every edition's rights holders, and the latest edition's license (else
+// the latest known one).
+function merge_editions(translations:Translation[], license_terms:LicenseTerms[]):void{
+    const terms_by_id = new Map<string, LicenseTerms[]>()
+    for (const terms of license_terms)
+        terms_by_id.set(terms.translation_id, [...terms_by_id.get(terms.translation_id) ?? [], terms])
+    const owners_of = (t:Translation) => new Set((terms_by_id.get(t.id) ?? [])
+        .map(terms => terms.owner_id).filter(owner_id => owner_id !== 'unknown'))
+
+    // Group by medium, language and translation, then split each group into sets of editions
+    // linked by a shared rights holder
+    const groups = new Map<string, Translation[]>()
+    for (const translation of translations){
+        const key = translation_key(translation.name)
+        if (!key)
+            continue
+        const full_key = `${translation.medium}|${translation.language}|${key}`
+        groups.set(full_key, [...groups.get(full_key) ?? [], translation])
+    }
+    const edition_sets:Translation[][] = []
+    for (const group of groups.values()){
+        let sets:{editions:Translation[], owners:Set<string>}[] = []
+        const unowned:Translation[] = []
+        for (const translation of group){
+            const owners = owners_of(translation)
+            if (!owners.size){
+                unowned.push(translation)
+                continue
+            }
+            const linked = sets.filter(set => [...owners].some(owner => set.owners.has(owner)))
+            sets = sets.filter(set => !linked.includes(set))
+            sets.push({
+                editions: [...linked.flatMap(set => set.editions), translation],
+                owners: new Set([...linked.flatMap(set => [...set.owners]), ...owners]),
+            })
+        }
+        // An edition with no known rights holder belongs with the others of its name, but only
+        // where they're all one translation — with two unrelated ones, there's no telling which
+        if (sets.length <= 1 && unowned.length)
+            sets = [{editions: [...sets[0]?.editions ?? [], ...unowned], owners: new Set()}]
+        edition_sets.push(...sets.map(set => set.editions).filter(editions => editions.length > 1))
+    }
+
+    // Merge each set into the one kept
+    const dropped = new Set<string>()
+    for (const editions of edition_sets){
+        const latest_first = [...editions].sort((a, b) =>
+            Number(is_variant(a.name)) - Number(is_variant(b.name))
+            || edition_year(b) - edition_year(a)
+            || Number(!!b.external_ids.find_bible) - Number(!!a.external_ids.find_bible))
+        const kept = latest_first[0]!
+
+        // Link to find.bible's page for the translation where the kept edition has none of its own
+        if (!kept.external_ids.find_bible)
+            kept.info_url = editions.find(t => t.external_ids.find_bible)?.info_url ?? kept.info_url
+        const first_terms = latest_first.map(t => terms_by_id.get(t.id)?.[0])
+        const license_from = first_terms.find(terms => terms && terms.license !== 'unknown')
+            ?? first_terms.find(terms => terms)
+
+        // Every edition's holders, each with the roles they hold in any edition
+        const roles_by_owner = new Map<string, Set<'text' | 'recording'>>()
+        for (const terms of editions.flatMap(t => terms_by_id.get(t.id) ?? [])){
+            if (terms.owner_id !== 'unknown')
+                roles_by_owner.set(terms.owner_id,
+                    new Set([...roles_by_owner.get(terms.owner_id) ?? [], ...terms.roles]))
+        }
+        for (const t of editions){
+            if (t !== kept)
+                dropped.add(t.id)
+        }
+        // No edition with terms leaves it without any, and none with a known holder keeps the
+        // license under an 'unknown' one
+        if (!roles_by_owner.size && license_from)
+            roles_by_owner.set('unknown', new Set(license_from.roles))
+        terms_by_id.set(kept.id, !license_from ? [] : [...roles_by_owner].map(([owner_id, roles]) => ({
+            ...license_from,
+            translation_id: kept.id,
+            owner_id,
+            roles: (['text', 'recording'] as const).filter(role => roles.has(role)),
+        })))
+        if (args.has('--review-editions'))
+            console.info(`${kept.name} (${kept.id})  <=  `
+                + editions.filter(t => t !== kept).map(t => `${t.name} (${t.id})`).join(' ; '))
+    }
+
+    // Replace the dataset's versions and terms with the merged ones
+    const kept_ids = new Set(edition_sets.flat().map(t => t.id).filter(id => !dropped.has(id)))
+    for (let i = translations.length - 1; i >= 0; i--){
+        if (dropped.has(translations[i]!.id))
+            translations.splice(i, 1)
+    }
+    for (let i = license_terms.length - 1; i >= 0; i--){
+        const id = license_terms[i]!.translation_id
+        if (dropped.has(id) || kept_ids.has(id))
+            license_terms.splice(i, 1)
+    }
+    license_terms.push(...[...kept_ids].flatMap(id => terms_by_id.get(id)!))
+    console.info(`Merged ${dropped.size} older or regional editions into ${kept_ids.size} versions`)
+}
+
+
 // ---- main ----
 
 async function main():Promise<void>{
@@ -588,7 +751,7 @@ async function main():Promise<void>{
     // private steps' first, then fetch.bible and major owners for whatever is still left.
     const superseded = dbl?.add_text(state) ?? new Set<string>()
     add_find_bible(translations, find_bible, superseded)
-    dbl?.add_terms(state)
+    await dbl?.add_terms(state)
     pull_fetch_bible(translations, owners, license_terms, find_bible.index, fetch_bible)
     apply_major_translation_owners(translations, owners, license_terms)
     dbl?.add_audio(state)
@@ -612,6 +775,7 @@ async function main():Promise<void>{
 
     // Only once every source has had its say on licenses, so open editions are all known
     drop_superseded_closed(translations, license_terms)
+    merge_editions(translations, license_terms)
 
     // Drop owners left with no license terms (e.g. all their translations were too old)
     const used_owners = new Set(license_terms.map(lt => lt.owner_id))
@@ -619,6 +783,7 @@ async function main():Promise<void>{
         if (!used_owners.has(owners[i]!.id))
             owners.splice(i, 1)
     }
+    dbl?.add_owner_websites(state)
 
     translations.sort((a, b) => a.id.localeCompare(b.id))
     owners.sort((a, b) => a.id.localeCompare(b.id))
@@ -627,9 +792,24 @@ async function main():Promise<void>{
     save_json('translations.json', translations)
     save_json('owners.json', owners)
     save_json('license_terms.json', license_terms)
+    check_response_log(translations, owners)
 
     console.info(`Done: ${translations.length} translations, ${owners.length} owners, `
         + `${license_terms.length} license terms`)
+}
+
+// Warn about any hand-curated response log entry pointing at an owner or translation the rebuilt
+// dataset no longer has (e.g. after an owner's name was merged into another by an alias) — the
+// site would otherwise show its cases under a separate, empty owner
+function check_response_log(translations:Translation[], owners:Owner[]):void{
+    const owner_ids = new Set(owners.map(o => o.id))
+    const translation_ids = new Set(translations.map(t => t.id))
+    for (const entry of response_log as ResponseLogEntry[]){
+        if (entry.owner_id && !owner_ids.has(entry.owner_id))
+            console.warn(`response_log.json: ${entry.id} has unknown owner_id ${entry.owner_id}`)
+        for (const id of entry.translation_ids.filter(id => !translation_ids.has(id)))
+            console.warn(`response_log.json: ${entry.id} has unknown translation id ${id}`)
+    }
 }
 
 main().catch(err => {

@@ -1,5 +1,6 @@
 ---
-description: Every known Bible version tracked by Bible Org Watch, filterable by owner and language.
+title: Bible Org Watch
+description: Every known Bible version tracked by Bible Org Watch.
 aside: false
 head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/social/watch.png'}]]
 ---
@@ -8,8 +9,8 @@ head: [[meta, {property: 'og:image', content: 'https://copy.church/_assets/socia
 import WatchTranslationsPage from '@/_comp/watch/WatchTranslationsPage.vue'
 </script>
 
-# Bible Version Ownership
+<VPButton text="← Bible Org Watch" href='/watch/' theme='alt' style='margin-bottom: 16px' />
 
-<VPButton text="← All owners" href='/watch/' theme='alt' style='margin: 12px 0' />
+# All Bible Versions
 
-<ClientOnly><WatchTranslationsPage/></ClientOnly>
+<ClientOnly><WatchTranslationsPage style='margin-top: 16px'/></ClientOnly>

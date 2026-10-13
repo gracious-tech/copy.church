@@ -2,9 +2,9 @@
     {
         "id": "2021-crossway-esv-randall-house",
         "owner_name": "Crossway",
-        "owner_id": "crossway_good_news_publishers",
+        "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["ENGESV"],
+        "translation_ids": ["dbl_f421fe261da7624f"],
         "date": "2021-02-01",
         "summary": "Crossway declined to license the ESV to Randall House (publishing arm of the National Association of Free Will Baptists) for a planned study Bible, reportedly because Crossway was reluctant to have an Arminian set of study notes accompany the ESV text — while a Catholic Edition of the ESV had been approved.",
         "evidence_url": "https://puritanboard.com/threads/crossway-denies-arminians-use-of-esv-but-permits-catholics.105168/"
@@ -12,9 +12,9 @@
     {
         "id": "2019-crossway-esv-crosswire",
         "owner_name": "Crossway",
-        "owner_id": "crossway_good_news_publishers",
+        "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["ENGESV"],
+        "translation_ids": ["dbl_f421fe261da7624f"],
         "date": "2019-06-06",
         "summary": "After years of free ESV distribution to the open-source SWORD project, Crossway demanded CrossWire stop distributing the ESV module from its own servers and billed $1,400 in back licensing fees. Open-source Bible apps built on SWORD (e.g. AndBible) had to remove the ESV, drawing negative user reviews from people unaware of the licensing change.",
         "evidence_url": "https://www.crosswire.org/pipermail/sword-devel/2019-June/047095.html"
@@ -42,9 +42,9 @@
     {
         "id": "2014-crossway-esv-churchsw",
         "owner_name": "Crossway",
-        "owner_id": "crossway_good_news_publishers",
+        "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["ENGESV"],
+        "translation_ids": ["dbl_f421fe261da7624f"],
         "date": "",
         "summary": "In 2014, Good News Publishers (the not-for-profit that publishes as Crossway) sent a removal notice to churchsw.org, an Australian website offering free downloads of Bible translations including the ESV. The site's owner, who argued that Bible translations can't be copyrighted, publicly listed Good News Publishers on its Bibles page alongside a link to the notice. The notice itself is no longer online.",
         "evidence_url": "https://web.archive.org/web/20141215181337/http://www.churchsw.org/p/bibles.html"
@@ -69,7 +69,7 @@
             "New International Reader's Version",
             "Today's New International Version"
         ],
-        "translation_ids": ["ENGNIV", "ENGNIVUK", "ENGNIRV", "ENGTNIV"],
+        "translation_ids": ["ENGNIV", "ENGNIRV", "ENGTNIV"],
         "date": "2016-04-13",
         "summary": "As part of an ECPA-led coalition (via Flagler Law Group), HarperCollins Christian Publishers (whose Zondervan imprint is Biblica's US publisher of the NIV) was among the publishers who forced an Australian website (churchsw.org) to remove more than 50 unauthorized Bible translations it had offered for free download since at least December 2015. The site's archived English Bible listing included Biblica's NIV (US and UK editions), NIrV and TNIV. The site operator signed a settlement agreeing not to infringe any ECPA member's rights again.",
         "evidence_url": "https://www.ecpa.org/news/284382/ECPA-Stops-Infringement-of-Bible-Translations.htm"
@@ -151,9 +151,9 @@
     {
         "id": "2023-crossway-esv-paper-bible",
         "owner_name": "Crossway",
-        "owner_id": "crossway_good_news_publishers",
+        "owner_id": "crossway",
         "translation_names": ["English Standard Version"],
-        "translation_ids": ["ENGESV"],
+        "translation_ids": ["dbl_f421fe261da7624f"],
         "date": "2023-10-16",
         "summary": "Gracious Tech asked through the Digital Bible Library to include the ESV in Paper Bible (paper.bible), a free app that lets anyone print Scripture. Crossway declined: “We have a formal licensing process for allowing trusted bible publishers to print the ESV text. We do not however grant licenses for end-users to print their own editions, regardless of the amount of text they're printing.”",
         "evidence_url": ""
