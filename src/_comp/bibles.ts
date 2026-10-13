@@ -416,7 +416,7 @@ const bibles_raw = {
         credit: "Berean Standard Bible",  // Name since many users won't know what BSB stands for
         can: {
             read_for_free: true,
-            read_anonymously: true,
+            read_anonymously: false,  // Last checked 13 Oct 2026
             quote: true,
             quote_ratio: true,
             quote_book: true,
