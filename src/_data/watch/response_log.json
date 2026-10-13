@@ -239,23 +239,14 @@
         "sources": []
     },
     {
-        "id": "2023-sil-paper-bible",
-        "owner_name": "SIL Global",
-        "owner_id": "sil_global",
-        "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
-        "translation_ids": [],
-        "date": "2023-10-06",
-        "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. SIL (on behalf of Wycliffe) denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
-        "sources": []
-    },
-    {
         "id": "2023-wycliffe-paper-bible",
         "owner_name": "Wycliffe Bible Translators, Inc.",
         "owner_id": "wycliffe_bible_translators",
+        "other_owner_ids": ["sil_global"],
         "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
         "translation_ids": [],
         "date": "2023-10-06",
-        "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. SIL (on behalf of Wycliffe) denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
+        "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. They denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
         "sources": []
     },
     {
@@ -320,6 +311,51 @@
             "https://baylyblog.com/blog/2016/11/crossways-500-esv-and-rupert-murdoch",
             "https://forums.macrumors.com/threads/request-niv-bible-program-for-mac.144743/"
         ]
+    },
+    {
+        "id": "2020-crossway-esv-instant-bible",
+        "owner_name": "Crossway",
+        "owner_id": "crossway",
+        "translation_names": ["English Standard Version"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2020-11-17",
+        "summary": "A developer asked to include the ESV in <a href='https://instant.bible' target='_blank'>instant.bible</a>, a free, open-source app that searches the Bible as you type, where it would only appear as individual verses in search results. Crossway declined: <blockquote>Unfortunately our Licensing Team did not approve your formal license request as you did not list a formal organization, and we do not license to individuals. If you do set up an LLC in the future, please feel free to contact us as we'd be more open to granting a license for this project.</blockquote>",
+        "sources": []
+    },
+    {
+        "id": "2023-wycliffe-hawaii-pidgin-revoked",
+        "owner_name": "Wycliffe Bible Translators, Inc.",
+        "owner_id": "wycliffe_bible_translators",
+        "other_owner_ids": ["hawaii_pidgin_bible_ministries"],
+        "translation_names": ["Hawaii Pidgin Bible"],
+        "translation_ids": ["HWCPGN"],
+        "date": "2023-01-20",
+        "summary": "SIL/Wycliffe told everyone who had licensed the Hawaii Pidgin Bible through the Digital Bible Library to stop using it: <blockquote>After much consideration, SIL/WBT has agreed to hand over the rights to the Hawaii Pidgin Bible to Hawaii Pidgin Bible Ministries (HPBM), the rightful owners. This means that all contracts WBT has had with DBL Library Card Holders are now null and void. As such, we ask you to please remove this text from your apps.</blockquote> The handover was presumably prompted by Hawaii Pidgin Bible Ministries claiming the rights as their own, and anyone who wanted to keep using the text had to start over with a new request to them. Even if SIL/Wycliffe weren't to blame, it shows the risk of licensing Scripture at all: one dispute over ownership was enough to pull a Bible from everywhere it had been shared, the opposite of these organisations' mission to spread God's word.",
+        "sources": []
+    },
+    {
+        "id": "2023-crossway-esv-memorization-app",
+        "owner_name": "Crossway",
+        "owner_id": "crossway",
+        "translation_names": ["English Standard Version"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2023-05-15",
+        "summary": "A college student building a free Scripture memorization web app asked Crossway how he could use the ESV, and why his application for their free API had been rejected. Crossway then approved the API, which limits how much text can be requested and doesn't allow storing it, but said anything beyond that needed a paid license, which they only grant to organisations: <blockquote>We offer a formal ministry license to organizations which offers the full ESV XML files to store on a noncommercial website/app, and is free of the API restrictions. This comes with an annual fee of $100-250 depending on how the text is distributed, per platform. ... We only license to formal organizations or ministries rather than to individuals ... Crossway is selective in which platforms we license the ESV for, so we ask that you include detailed information and unique features that set your platform apart from existing bible platforms.</blockquote>",
+        "sources": []
+    },
+    {
+        "id": "2023-crossway-esv-permissions-questions",
+        "owner_name": "Crossway",
+        "owner_id": "crossway",
+        "translation_names": ["English Standard Version"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2023-07-20",
+        "summary": "Someone asked Crossway to explain two rules on their permissions page: <blockquote>The ESV may not be translated in whole or in part into any other language.</blockquote><blockquote>The ESV text may not be quoted in any publication made available to the public by a Creative Commons license.</blockquote> The requester asked on behalf of ESV readers doing missionary work in other countries, and developers of open-source Bible software who couldn't use the ESV. Crossway never replied, even after the questions were sent again.",
+        "sources": []
+    },
     {
         "id": "2025-logos-leb-freely-given",
         "owner_name": "Logos Bible Software",
@@ -331,5 +367,29 @@
         "summary": "A Bible software developer found that their copy of the LEB was missing text in Genesis 6:4. They asked Logos, which promotes the LEB as “one of the most generously licensed modern English Bibles,” for an up-to-date source file. After two weeks of support staff misunderstanding the request, Logos replied: <blockquote>We no longer distribute the LEB in standalone file formats like USFM, OSIS, or the custom XML you referred to. The team members involved in the initial distribution of those files are no longer with the company, and the infrastructure for sharing those specific file types is not something we currently maintain for public distribution.</blockquote> There are currently no official ways to access the LEB text aside from Logos' proprietary software.",
         "sources": []
     },
+    {
+        "id": "2026-crossway-esv-api-ai",
+        "owner_name": "Crossway",
+        "owner_id": "crossway",
+        "translation_names": ["English Standard Version"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2026-09-30",
+        "summary": "A developer applied to use Crossway's free ESV API in an app showing the passages for upcoming Sunday sermons. Crossway declined: <blockquote>Our Licensing team is not currently approving the pairing of the ESV text with AI-generated text.</blockquote> He explained that he had only used AI to help write the app's code, and that it simply displayed the ESV text with no AI-generated content, then asked Crossway to reconsider. Crossway never replied, even after a polite follow-up several days later.",
+        "sources": []
+    },
+    {
+        "id": "2026-crossway-esv-rhythm-and-bible",
+        "owner_name": "Crossway",
+        "owner_id": "crossway",
+        "translation_names": ["English Standard Version"],
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2026-04",
+        "summary": "<a href='https://www.youtube.com/@rhythmandbible' target='_blank'>Rhythm and Bible</a>, a YouTube channel setting books of the Bible to AI-generated music, with lyrics that are the Scripture text word for word, asked Crossway for permission to use the ESV before releasing their songs on streaming platforms. The channel posted: <blockquote>Before we go live on streaming platforms we've hit a wall regarding the ESV and copyright. We've applied for permission and we're trusting that comes through</blockquote> Crossway refused and told them to stop. When the channel asked what this meant for the songs already published, Crossway had those taken down too, as the channel later posted: <blockquote>We've been advised to remove every video featuring ESV</blockquote>",
+        "sources": [
+            "https://www.youtube.com/post/UgkxRU6T1gO-HC15NstT_rLIYqViJyyvnSsc",
+            "https://www.youtube.com/@rhythmandbible/posts"
+        ]
     }
 ]

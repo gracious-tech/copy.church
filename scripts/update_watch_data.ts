@@ -960,8 +960,10 @@ function link_response_log(translations:Translation[], owners:Owner[],
     const moved = new Map<string, string>()
     for (const entry of response_log as ResponseLogEntry[]){
         // Owners and rating ids
-        if (entry.owner_id && !owner_ids.has(entry.owner_id))
-            console.warn(`response_log.json: ${entry.id} has unknown owner_id ${entry.owner_id}`)
+        for (const id of [entry.owner_id, ...entry.other_owner_ids ?? []]){
+            if (id && !owner_ids.has(id))
+                console.warn(`response_log.json: ${entry.id} has unknown owner id ${id}`)
+        }
         for (const id of (entry.rating_ids ?? []).filter(id => !(id in BIBLES || id in CRITICALS)))
             console.warn(`response_log.json: ${entry.id} has unknown rating id ${id}`)
         if (entry.rating_ids?.length && !entry.translation_ids.length){

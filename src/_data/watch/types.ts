@@ -57,6 +57,8 @@ export interface ResponseLogEntry {
     id: string
     owner_name: string  // Display name of the rights holder
     owner_id?: string  // References an Owner's `id`, once matched
+    other_owner_ids?: string[]  // Other owners the report also appears under (e.g. one the
+        // rights were handed over to)
     translation_names: string[]  // Display name(s) of the translation(s) involved
     translation_ids: string[]  // References to Translation `id`s, for the ones that are matched
     rating_ids?: string[]  // Ids on the English Bible/critical text rating pages (bibles.ts,

@@ -77,7 +77,8 @@ function slugify(name:string):string{
 
 // Response log entries grouped by owner_id when matched, else by a slugified owner_name — most of
 // these owners (Crossway, Zondervan, Lockman, ...) have no tracked/open-licensed translations, so
-// they're not otherwise in owners.json at all. Most recent first (undated sort last).
+// they're not otherwise in owners.json at all. An entry also appears under each of its
+// other_owner_ids. Most recent first (undated sort last).
 export const response_log_by_owner:Record<string, ResponseLogEntry[]> = {}
 
 // "Pre-1996" sorts as bare "1996", which falls after any full 1996 date and before 1995
@@ -85,8 +86,10 @@ const date_sort_key = (date:string) => date.replace(/^Pre-/, '')
 const sorted_log = [...response_log as ResponseLogEntry[]]
     .sort((a, b) => date_sort_key(b.date).localeCompare(date_sort_key(a.date)))
 for (const entry of sorted_log){
-    const key = entry.owner_id ?? slugify(entry.owner_name)
-    ;(response_log_by_owner[key] ??= []).push(entry)
+    const keys = [entry.owner_id ?? slugify(entry.owner_name), ...entry.other_owner_ids ?? []]
+    for (const key of keys){
+        (response_log_by_owner[key] ??= []).push(entry)
+    }
 }
 
 
