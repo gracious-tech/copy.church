@@ -320,5 +320,16 @@
             "https://baylyblog.com/blog/2016/11/crossways-500-esv-and-rupert-murdoch",
             "https://forums.macrumors.com/threads/request-niv-bible-program-for-mac.144743/"
         ]
+    {
+        "id": "2025-logos-leb-freely-given",
+        "owner_name": "Logos Bible Software",
+        "owner_id": "logos_bible_software",
+        "translation_names": ["Lexham English Bible"],
+        "translation_ids": ["ENGLEB"],
+        "rating_ids": ["leb"],
+        "date": "2025-05-20",
+        "summary": "A Bible software developer found that their copy of the LEB was missing text in Genesis 6:4. They asked Logos, which promotes the LEB as “one of the most generously licensed modern English Bibles,” for an up-to-date source file. After two weeks of support staff misunderstanding the request, Logos replied: <blockquote>We no longer distribute the LEB in standalone file formats like USFM, OSIS, or the custom XML you referred to. The team members involved in the initial distribution of those files are no longer with the company, and the infrastructure for sharing those specific file types is not something we currently maintain for public distribution.</blockquote> There are currently no official ways to access the LEB text aside from Logos' proprietary software.",
+        "sources": []
+    },
     }
 ]
