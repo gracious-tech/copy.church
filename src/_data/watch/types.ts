@@ -50,17 +50,12 @@ export interface LicenseTerms {
 
 // A dated, evidenced record of how an owner has responded to sharing/copying
 // This is the genuinely novel part of the feature — the accountability log
-// owner_name/translation_names are always set (for display) even when the owner or translation
-// isn't yet in owners.json/translations.json — owner_id/translation_ids fill in once matched, so
-// a case doesn't have to wait on a clean data match before it can be recorded
 export interface ResponseLogEntry {
     id: string
-    owner_name: string  // Display name of the rights holder
-    owner_id?: string  // References an Owner's `id`, once matched
+    owner_id: string  // References an Owner's `id`
     other_owner_ids?: string[]  // Other owners the report also appears under (e.g. one the
         // rights were handed over to)
-    translation_names: string[]  // Display name(s) of the translation(s) involved
-    translation_ids: string[]  // References to Translation `id`s, for the ones that are matched
+    translation_ids: string[]  // References to Translation `id`s of the translations involved
     rating_ids?: string[]  // Ids on the English Bible/critical text rating pages (bibles.ts,
         // critical_texts.ts) of the translations involved, so the report shows on those pages too
     date: string  // ISO 8601 date, or "Pre-YYYY" when only an upper bound is known

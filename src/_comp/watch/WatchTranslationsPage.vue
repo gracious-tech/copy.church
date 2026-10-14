@@ -168,13 +168,11 @@ onBeforeMount(() => {
 const owner = computed(() => owners.find(o => o.id === selected_owner.value))
 const owner_cases = computed(() => response_log_by_owner[selected_owner.value] ?? [])
 
-// Owners only known from the response log have no owners.json entry, so take their name from there
-const owner_name = computed(() =>
-    owner.value?.name ?? owner_cases.value[0]?.owner_name ?? selected_owner.value)
+// The owner's display name, falling back to the id from the URL
+const owner_name = computed(() => owner.value?.name ?? selected_owner.value)
 
-// Whether the owner id from the URL matches an org in owners.json, the response log, or the data
-const owner_known = computed(() => !!(owner.value || owner_cases.value.length
-    || owner_tracked_counts[selected_owner.value]))
+// Whether the owner id from the URL matches an org in owners.json or the data
+const owner_known = computed(() => !!(owner.value || owner_tracked_counts[selected_owner.value]))
 
 // Rows in scope before any filtering — just the owner's in owner mode, else every translation
 const base_rows = computed(() =>

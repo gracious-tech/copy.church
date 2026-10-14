@@ -1,9 +1,7 @@
 [
     {
         "id": "2021-crossway-esv-randall-house",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2021-02-01",
@@ -17,9 +15,7 @@
     },
     {
         "id": "2019-crossway-esv-crosswire",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2019-06-06",
@@ -36,9 +32,7 @@
     },
     {
         "id": "2024-lockman-lsb-gabriel-hughes-podcast",
-        "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
-        "translation_names": ["Legacy Standard Bible"],
         "translation_ids": ["dbl_8011347e1aa60e8a"],
         "rating_ids": ["lsb"],
         "date": "2024",
@@ -52,9 +46,7 @@
     },
     {
         "id": "1970-1992-lockman-team-domei-japanese-bible",
-        "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
-        "translation_names": ["New Japanese Bible"],
         "translation_ids": ["JPNNJB"],
         "date": "1992-10-01",
         "summary": "The Lockman Foundation and their Japanese partners translated the New Japanese Bible together, then disputed who owned it. Lockman claimed it as “work-for-hire” for having funded the project, though their partners put Lockman's funding at only “perhaps 15 percent.” Lockman's lawyers also argued the translation was derived from their English NASB. The partners' field chairman responded: <blockquote>This, of course, is ridiculous on the face of it, because Lockman exists to promote translations of the Bible from the original languages.</blockquote> The translators kept the copyright in Japan, reportedly paying Lockman a large settlement in 1996.",
@@ -69,9 +61,7 @@
     },
     {
         "id": "2014-crossway-esv-churchsw",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2014",
@@ -83,9 +73,7 @@
     },
     {
         "id": "2016-ecpa-tyndale-churchsw",
-        "owner_name": "Tyndale House Publishers",
         "owner_id": "tyndale_house_publishers",
-        "translation_names": ["New Living Translation"],
         "translation_ids": ["ENGNLT"],
         "rating_ids": ["nlt"],
         "date": "2016-04-13",
@@ -100,14 +88,7 @@
     },
     {
         "id": "2016-ecpa-biblica-churchsw",
-        "owner_name": "Biblica, Inc.",
         "owner_id": "biblica",
-        "translation_names": [
-            "New International Version",
-            "New International Version - UK",
-            "New International Reader's Version",
-            "Today's New International Version"
-        ],
         "translation_ids": ["ENGNIV", "ENGNIRV", "ENGTNIV"],
         "rating_ids": ["niv"],
         "date": "2016-04-13",
@@ -122,9 +103,7 @@
     },
     {
         "id": "2016-ecpa-thomas-nelson-churchsw",
-        "owner_name": "Thomas Nelson",
         "owner_id": "thomas_nelson",
-        "translation_names": ["New King James Version", "New Century Version"],
         "translation_ids": ["ENGNKJV", "ENGNCV"],
         "rating_ids": ["nkjv"],
         "date": "2016-04-13",
@@ -139,9 +118,7 @@
     },
     {
         "id": "2016-ecpa-abs-churchsw",
-        "owner_name": "American Bible Society",
         "owner_id": "american_bible_society",
-        "translation_names": ["Good News Bible", "Contemporary English Version"],
         "translation_ids": ["ENGGNB", "ENGCEV"],
         "rating_ids": ["gnt"],
         "date": "2016-04-13",
@@ -156,9 +133,7 @@
     },
     {
         "id": "1996-biblica-niv-software-sales-quota",
-        "owner_name": "Biblica, Inc.",
         "owner_id": "biblica",
-        "translation_names": ["New International Version"],
         "translation_ids": ["ENGNIV"],
         "rating_ids": ["niv"],
         "date": "Pre-1996",
@@ -171,13 +146,7 @@
     },
     {
         "id": "1996-abs-rainbow-missions-electronic-rights",
-        "owner_name": "American Bible Society",
         "owner_id": "american_bible_society",
-        "translation_names": [
-            "Good News Bible",
-            "Contemporary English Version",
-            "Dios Habla Hoy (Versión Popular)"
-        ],
         "translation_ids": ["ENGGNB", "ENGCEV"],
         "rating_ids": ["gnt"],
         "date": "Pre-1997",
@@ -186,9 +155,7 @@
     },
     {
         "id": "1996-abs-cev-radio-public-reading",
-        "owner_name": "American Bible Society",
         "owner_id": "american_bible_society",
-        "translation_names": ["Contemporary English Version"],
         "translation_ids": ["ENGCEV"],
         "date": "Pre-1997",
         "summary": "A Christian radio DJ planned an event where 300 people would read the whole Bible aloud in 15 minutes, each reading a different portion. American Bible Society refused permission to use the CEV, so he used the public domain KJV instead.",
@@ -196,9 +163,7 @@
     },
     {
         "id": "2023-holman-csb-paper-bible",
-        "owner_name": "Holman Bible Publishers",
         "owner_id": "holman_bible_publishers",
-        "translation_names": ["Christian Standard Bible"],
         "translation_ids": ["ENGHCSB"],
         "rating_ids": ["csb"],
         "date": "2023-10-03",
@@ -207,9 +172,7 @@
     },
     {
         "id": "2023-crossway-esv-paper-bible",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2023-10-16",
@@ -218,9 +181,7 @@
     },
     {
         "id": "2023-biblica-niv-paper-bible",
-        "owner_name": "Biblica, Inc.",
         "owner_id": "biblica",
-        "translation_names": ["New International Version"],
         "translation_ids": ["ENGNIV"],
         "rating_ids": ["niv"],
         "date": "2023-10-19",
@@ -229,9 +190,7 @@
     },
     {
         "id": "2023-ncc-nrsvue-paper-bible",
-        "owner_name": "National Council of the Churches of Christ",
         "owner_id": "national_council_of_the_churches_of_christ",
-        "translation_names": ["New Revised Standard Version Updated Edition"],
         "translation_ids": ["dbl_aac4eb6dbeb23c74"],
         "rating_ids": ["nrsv"],
         "date": "2023-10-04",
@@ -239,11 +198,47 @@
         "sources": []
     },
     {
+        "id": "2009-ncc-rsv-nrsv-crosswire",
+        "owner_id": "national_council_of_the_churches_of_christ",
+        "translation_ids": ["ENGRSV", "ENGNRSV"],
+        "rating_ids": ["rsv", "nrsv"],
+        "date": "2009-08-22",
+        "summary": "CrossWire, whose free SWORD project powers many open-source Bible apps, asked to include the RSV and NRSV. The NCC had them fill out a detailed form about their organisation and products, then replied: <blockquote>We appreciate your interest in making the RSV/NRSV available as modules for the Sword Project. However, at this time, we do not authorize any open source uses of the RSV/NRSV. God's blessings on your ministry.</blockquote>",
+        "sources": [
+            "https://wiki.crosswire.org/Rejected_or_ignored_copyright_requests",
+            "https://www.crosswire.org/pipermail/sword-devel/2009-April/031751.html"
+        ]
+    },
+    {
+        "id": "2007-ncc-rsv-university-of-virginia",
+        "owner_id": "national_council_of_the_churches_of_christ",
+        "translation_ids": ["ENGRSV"],
+        "rating_ids": ["rsv"],
+        "date": "2007",
+        "summary": "The University of Virginia had offered the RSV free on its website for about a decade, including side by side with the KJV for easy comparison. The NCC had it taken down, and the university explained: <blockquote>We were recently contacted by the National Council of Churches of Christ, who own the copyright for the Revised Standard Version of the Bible in the USA. They have asked us to remove the text from our website, and we have complied with their request.</blockquote>",
+        "sources": [
+            "https://web.archive.org/web/20070805014851/http://etext.virginia.edu:80/rsv.browse.html",
+            "https://web.archive.org/web/20061207211428/http://etext.virginia.edu:80/rsv.browse.html",
+            "https://the-hermeneutic-of-continuity.blogspot.com/2007/07/copyrighting-bible.html"
+        ]
+    },
+    {
+        "id": "2011-cambridge-kjv-shakespeares-globe",
+        "owner_id": "cambridge_university_press",
+        "translation_ids": ["ENGKJV"],
+        "rating_ids": ["kjv"],
+        "date": "2011-04",
+        "summary": "Shakespeare's Globe in London marked the KJV's 400th anniversary by having actors read the whole Bible aloud on stage from Palm Sunday to Easter. A few days before it began, the director reportedly received a bill from Cambridge University Press, who administer the Crown's rights to the KJV in the UK, for “a substantial royalty fee for the privilege of reading it publicly.”",
+        "sources": [
+            "https://baptiststandard.com/opinion/other-opinions/the-bible-lives-forever-even-if-the-kjv-is-copyrighted/",
+            "https://up-ship.com/blog/?p=12205",
+            "https://www.huffpost.com/entry/shakespeares-globe-theatr_n_842765"
+        ]
+    },
+    {
         "id": "2023-wycliffe-paper-bible",
-        "owner_name": "Wycliffe Bible Translators, Inc.",
         "owner_id": "wycliffe_bible_translators",
         "other_owner_ids": ["sil_global"],
-        "translation_names": ["SIL/Wycliffe translations in the Digital Bible Library"],
         "translation_ids": [],
         "date": "2023-10-06",
         "summary": "Gracious Tech asked SIL/Wycliffe for permission to use their Bible translations in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, a free app for printing Scripture. They denied the request, having already given other organisations exclusive rights: <blockquote>In many cases/languages it would conflict with other license agreements we have with other organisations.</blockquote> They were still willing to look at specific translations: <blockquote>if there are no conflicting agreements in place, we will consider your request favourably.</blockquote> But with over 1,000 translations, going case by case wasn't a realistic option. No translations have been licensed for Paper Bible since.",
@@ -251,9 +246,7 @@
     },
     {
         "id": "2024-lockman-lsb-paper-bible",
-        "owner_name": "The Lockman Foundation",
         "owner_id": "lockman_foundation",
-        "translation_names": ["Legacy Standard Bible"],
         "translation_ids": ["dbl_8011347e1aa60e8a"],
         "rating_ids": ["lsb"],
         "date": "2024-05-31",
@@ -262,9 +255,7 @@
     },
     {
         "id": "2023-tyndale-nlt-paper-bible",
-        "owner_name": "Tyndale House Publishers",
         "owner_id": "tyndale_house_publishers",
-        "translation_names": ["New Living Translation"],
         "translation_ids": ["ENGNLT"],
         "rating_ids": ["nlt"],
         "date": "2023-09-29",
@@ -273,12 +264,7 @@
     },
     {
         "id": "2009-german-bible-society-na27-ubs4-open-scriptures",
-        "owner_name": "German Bible Society",
         "owner_id": "german_bible_society",
-        "translation_names": [
-            "Novum Testamentum Graece (NA27)",
-            "UBS Greek New Testament (UBS4)"
-        ],
         "translation_ids": ["dbl_faa224d7ea8141fc", "dbl_89caddd8d2e195ec"],
         "rating_ids": ["na", "ubs"],
         "date": "2009-03-06",
@@ -299,9 +285,7 @@
     },
     {
         "id": "pre-1995-zondervan-niv-online-bible-mac",
-        "owner_name": "Biblica, Inc.",
         "owner_id": "biblica",
-        "translation_names": ["New International Version"],
         "translation_ids": ["ENGNIV"],
         "rating_ids": ["niv"],
         "date": "Pre-1995",
@@ -313,10 +297,17 @@
         ]
     },
     {
+        "id": "2020-biblica-niv-instant-bible",
+        "owner_id": "biblica",
+        "translation_ids": ["ENGNIV"],
+        "rating_ids": ["niv"],
+        "date": "2020-11-11",
+        "summary": "A developer asked to include the NIV in <a href='https://instant.bible' target='_blank'>instant.bible</a>, a free, open-source app that searches the Bible as you type. Before considering it, Biblica asked him to answer questions including: <blockquote>Describe what is unique or innovative about your new product(s) proposal?<br>Is the product(s) already operational with a significant, stable distribution?<br>Please explain how the project is funded if it is distributed free of charge.<br>Is the organization behind the product financially sustainable and stable?</blockquote> After he answered, Biblica said the request would be discussed at their next team meeting and “You will hear from someone shortly.” He never heard back.",
+        "sources": []
+    },
+    {
         "id": "2020-crossway-esv-instant-bible",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2020-11-17",
@@ -325,10 +316,8 @@
     },
     {
         "id": "2023-wycliffe-hawaii-pidgin-revoked",
-        "owner_name": "Wycliffe Bible Translators, Inc.",
         "owner_id": "wycliffe_bible_translators",
         "other_owner_ids": ["hawaii_pidgin_bible_ministries"],
-        "translation_names": ["Hawaii Pidgin Bible"],
         "translation_ids": ["HWCPGN"],
         "date": "2023-01-20",
         "summary": "SIL/Wycliffe told everyone who had licensed the Hawaii Pidgin Bible through the Digital Bible Library to stop using it: <blockquote>After much consideration, SIL/WBT has agreed to hand over the rights to the Hawaii Pidgin Bible to Hawaii Pidgin Bible Ministries (HPBM), the rightful owners. This means that all contracts WBT has had with DBL Library Card Holders are now null and void. As such, we ask you to please remove this text from your apps.</blockquote> The handover was presumably prompted by Hawaii Pidgin Bible Ministries claiming the rights as their own, and anyone who wanted to keep using the text had to start over with a new request to them. Even if SIL/Wycliffe weren't to blame, it shows the risk of licensing Scripture at all: one dispute over ownership was enough to pull a Bible from everywhere it had been shared, the opposite of these organisations' mission to spread God's word.",
@@ -336,9 +325,7 @@
     },
     {
         "id": "2023-crossway-esv-memorization-app",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2023-05-15",
@@ -347,9 +334,7 @@
     },
     {
         "id": "2023-crossway-esv-permissions-questions",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2023-07-20",
@@ -358,9 +343,7 @@
     },
     {
         "id": "2025-logos-leb-freely-given",
-        "owner_name": "Logos Bible Software",
         "owner_id": "logos_bible_software",
-        "translation_names": ["Lexham English Bible"],
         "translation_ids": ["ENGLEB"],
         "rating_ids": ["leb"],
         "date": "2025-05-20",
@@ -369,9 +352,7 @@
     },
     {
         "id": "2026-crossway-esv-api-ai",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2026-09-30",
@@ -380,9 +361,7 @@
     },
     {
         "id": "2026-crossway-esv-rhythm-and-bible",
-        "owner_name": "Crossway",
         "owner_id": "crossway",
-        "translation_names": ["English Standard Version"],
         "translation_ids": ["dbl_0a8c5612ed1cb866"],
         "rating_ids": ["esv"],
         "date": "2026-04",
@@ -391,5 +370,30 @@
             "https://www.youtube.com/post/UgkxRU6T1gO-HC15NstT_rLIYqViJyyvnSsc",
             "https://www.youtube.com/@rhythmandbible/posts"
         ]
+    },
+    {
+        "id": "2023-bible-org-net-fetch-bible",
+        "owner_id": "biblical_studies_press_l_l_c",
+        "translation_ids": ["ENGNET"],
+        "rating_ids": ["net"],
+        "date": "2023-02-17",
+        "summary": "Gracious Tech noticed that only the first edition of the NET was available in a format easily integrated into software. They asked the owners for the latest edition, to distribute non-commercially within the NET's existing terms. Permission was granted and the required format was provided, but when asked whether those files could be made available for other developers to use, the permissions director suggested: <blockquote>I want to add something in the text that we can find if the text you distribute makes it into a commercial venture. Put your thinking cap on on [sic] what we may do.. Maybe we repeat a word in a verse in Eccleslastes [sic] or we misspell a word in John</blockquote> The idea was never acted on, but the file contained unrelated formatting errors, and the latest edition of the NET is still not available in a format that can be easily integrated into software.",
+        "sources": []
+    },
+    {
+        "id": "2022-bible-society-vietnam",
+        "owner_id": "bible_society_vietnam",
+        "translation_ids": ["VIEVRV"],
+        "date": "2022-11-13",
+        "summary": "An app developer asked the Vietnamese Bible Society for permission to use their Vietnamese translation in their free Bible apps. They declined: <blockquote>As we do not currently have a policy for providing the text to software applications, we are not able to help you yet. Perhaps from June next year we may be able to discuss this matter with you, so we will plan to get back in touch with you at that time. [translation]</blockquote> This is despite the translation already being available in some other apps like YouVersion. They never got back to the developer.",
+        "sources": []
+    },
+    {
+        "id": "2026-bible-society-myanmar-hakha-chin-cc-by",
+        "owner_id": "bible_society_of_myanmar",
+        "translation_ids": ["CNHBSM"],
+        "date": "2026-03-27",
+        "summary": "After a user requested the Hakha Chin Bible for use in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, Gracious Tech asked the Bible Society of Myanmar to license it under CC BY 4.0 so it could legally be included in the app. They never responded.",
+        "sources": []
     }
 ]

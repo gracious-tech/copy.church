@@ -142,28 +142,6 @@ const stat_tiles = computed(() => {
     ]
 })
 
-// Most response log owners (Crossway, Zondervan, Lockman, ...) have no tracked/open-licensed
-// translations, so they're not otherwise in owner_rows at all. Add a zero-tracked row for those so
-// their Reports button still has somewhere to appear. display_rows is what the table ranks/shows —
-// owner_rows itself stays untouched so the stat tiles above keep counting only owners with tracked
-// translations.
-const display_rows = [...owner_rows]
-for (const [key, entries] of Object.entries(response_log_by_owner)){
-    if (!display_rows.some(o => o.id === key)){
-        display_rows.push({
-            id: key,
-            name: owner_names[key] ?? entries[0]!.owner_name,
-            tracked: 0,
-            open: 0,
-            restricted: 0,
-            semi_restricted: 0,
-            restricted_pct: 0,
-            semi_restricted_pct: 0,
-            open_pct: 0,
-        })
-    }
-}
-
 // The per-tier percentage cells shown to the right of each owner's bar
 type TierKey = 'open' | 'restricted' | 'semi_restricted'
 const pct_tiers:{key:TierKey, label:string, area:string}[] = [
@@ -172,25 +150,25 @@ const pct_tiers:{key:TierKey, label:string, area:string}[] = [
     {key: 'restricted', label: "Restricted", area: 'restricted_pct'},
 ]
 
-// A tier's share of an owner's versions, or a dash when they have none tracked
-function tier_pct_text(owner:typeof display_rows[0], key:TierKey){
-    return owner.tracked ? `${owner[`${key}_pct`]}%` : "–"
+// A tier's share of an owner's versions
+function tier_pct_text(owner:typeof owner_rows[0], key:TierKey){
+    return `${owner[`${key}_pct`]}%`
 }
 
 // Raw count behind a tier's percentage, shown on hover
-function tier_count_text(owner:typeof display_rows[0], key:TierKey){
-    return owner.tracked ? `${format_num(owner[key])} of ${format_num(owner.tracked)}` : undefined
+function tier_count_text(owner:typeof owner_rows[0], key:TierKey){
+    return `${format_num(owner[key])} of ${format_num(owner.tracked)}`
 }
 
 // Ranking control — by total tracked, by raw restricted count, or by restricted share
 const sort_mode = ref<'total' | 'count' | 'pct'>('total')
 
 const sorters = {
-    total: (a:typeof display_rows[0], b:typeof display_rows[0]) =>
+    total: (a:typeof owner_rows[0], b:typeof owner_rows[0]) =>
         (b.tracked - a.tracked) || (b.restricted - a.restricted),
-    count: (a:typeof display_rows[0], b:typeof display_rows[0]) =>
+    count: (a:typeof owner_rows[0], b:typeof owner_rows[0]) =>
         (b.restricted - a.restricted) || (b.restricted_pct - a.restricted_pct),
-    pct: (a:typeof display_rows[0], b:typeof display_rows[0]) =>
+    pct: (a:typeof owner_rows[0], b:typeof owner_rows[0]) =>
         (b.restricted_pct - a.restricted_pct) || (b.restricted - a.restricted),
 }
 
@@ -200,7 +178,7 @@ const cases_only = ref(false)
 
 const ranked = computed(() => {
     const q = query.value.trim().toLowerCase()
-    const rows = display_rows.filter(o => {
+    const rows = owner_rows.filter(o => {
         if (q && !o.name.toLowerCase().includes(q)){
             return false
         }
@@ -211,16 +189,16 @@ const ranked = computed(() => {
 
 // The owner whose reports are shown in the dialog
 const {target: reports_owner, open: reports_open, show: show_reports} =
-    use_reports_dialog<typeof display_rows[0]>()
+    use_reports_dialog<typeof owner_rows[0]>()
 
 // Link to an owner's own page, which lists its versions and reports
-function owner_url(owner:typeof display_rows[0]){
+function owner_url(owner:typeof owner_rows[0]){
     return `/watch/owner/#o=${owner.id}`
 }
 
 // Make the whole row open the owner's page, except for its own interactive children (the Reports
 // button) — those already do their own thing, so let their clicks through
-function handle_row_click(owner:typeof display_rows[0], event:MouseEvent){
+function handle_row_click(owner:typeof owner_rows[0], event:MouseEvent){
     if ((event.target as HTMLElement).closest('a, button')) return
     location.href = owner_url(owner)
 }
