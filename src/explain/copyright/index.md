@@ -34,7 +34,7 @@ Almost all copyright eventually expires 50-70 years after the death of the autho
 ## Public licensing
 An alternative to disabling copyright completely is licencing, where you give someone permission to do something with the resource that they wouldn't normally be allowed to do. When done commercially, this is usually a private agreement with individuals or organizations. But licenses don't have to be private, instead they can be granted to the public to allow anyone to do certain things with the resource.
 
-"Public licensing" refers to granting broad permissions to the public to use a resource without having to ask the owner for permission. Public licenses will allow anyone to use a resource as they wish, but the owner can still enforce some conditions on the use such as requiring it to be non-commercial or preventing the resource from being modified. Public licenses that only require you to attribute the creator and have no other conditions are called "open licenses".
+"Public licensing" refers to granting broad permissions to the public to use a resource without having to ask the owner for permission. Public licenses will allow anyone to use a resource as they wish, but the owner can still enforce some conditions on the use such as requiring it to be non-commercial or preventing the resource from being modified. Public licenses that allow any use, only requiring attribution or sharing alike, are called "open licenses".
 
 A public license is legally binding but there are no formalities to it, you can write your own as long as it is clear what permissions are being given. However, to avoid mistakes and misunderstandings it is almost always best to use a license that has been created by legal experts.
 
@@ -46,6 +46,6 @@ However, intellectual property is inherently different to physical property in t
  * It can be infinitely reproduced without directly affecting the original work
  * The Bible does not directly address it
  * For most of human history there was no copyright
- * And copyright all expires after a mostly arbitrary duration of 50-70 years
+ * And copyright expires after a mostly arbitrary duration of 50-70 years after the author's death
 
 These factors should prevent us from directly equating intellectual theft with material theft to the same degree. As to whether Christians should make use of copyright for ministry resources, read on!

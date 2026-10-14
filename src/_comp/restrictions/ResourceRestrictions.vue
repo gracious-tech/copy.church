@@ -66,7 +66,7 @@ table(v-if='choice_payment && choice_license'): tbody
             div(v-html='b(checks.distribute)')
             img(src='@/_assets/restrictions/ill_distribute.svg')
         td
-            p This resource #[span(v-html='can(checks.distribute)')] can be copied and shared.
+            p This resource #[span(v-html='can(checks.distribute)')] be copied and shared.
             ul
                 li Freely sharing a resource allows it to reach far more people than it would if it were limited to paying customers only
                 li Forcing people to download a resource from a specific site severly limits how the resource can be used, such as embedding it within another resource or app

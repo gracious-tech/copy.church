@@ -43,7 +43,7 @@ In addition to Scripture's clear teaching on freely giving, here are more reason
 Christians have become so used to paying for resources, and so trusting of resource creators, that we have barely noticed how commercialized ministry has become. Consider the following realities:
 
  * Scripture does not belong to all believers but to [a group of organizations](/watch/) who [highly restrict its use](/initiatives/bibles/)
- * Most of the world has a Bible translation, but [less than half have one they can legally share](https://fetch.bible/content/need/)
+ * Most of the world has a Bible translation, but [only about half have one they can legally share](https://fetch.bible/content/need/)
  * English-speaking nations have easy access to a bountiful collection of Christian resources, where as other languages have little and are forbidden from translating English ones
  * Hundreds of thousands of quality books are restricted to only paying customers, even though it would cost nothing to release them for free online
  * Churches cannot sing to God without paying royalties, and still pay even when some songs are public domain
@@ -95,7 +95,7 @@ Most Christian resources are reasonably priced and easily accessible in Western 
 
 Take for example the numerous Christian worship songs that have been (often illegally) translated into other languages and used in churches. Many resource owners won't mind that such things are taking place, but legally speaking, by retaining copyright, millions of brothers and sisters around the world are being made unintentional law breakers.
 
-Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also letting ourselves be wronged (1 Cor 6:7) rather than making other believers criminals in the sight of secular law.
+Creators of resources should instead rely on Christian accountability rather than secular law, rebuking brothers and sisters who act inappropriately but also letting ourselves be wronged (1 Cor 6:7) rather than making other believers lawbreakers in the sight of secular law.
 
 ---
 

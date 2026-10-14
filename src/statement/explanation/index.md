@@ -91,7 +91,7 @@ No, it is permissible to charge for paper and ink. The issue this statement addr
 This statement retains the use of “lawful” from historic confessions (such as the Westminster Confession of Faith) to refer to that which is consistent with God’s will. It refers to God’s authority, not merely human law. This may align with civil law, but it is not bound by it.
 
 ### Why does this declaration permit adaptations of Scripture?
-“Adaptations” is a technical term to refer to the creation of any derivative work. This includes translation, digitization, musical arrangements, etc. These are permissible provided they are _lawful_ in the sight of God. The declaration affirms the _liberty_ to make such adaptations; it does not itself determine which adaptations are lawful. It does not condone distortions of Scripture or misleading renderings.
+“Adaptations” is a technical term to refer to the creation of any derivative work. This includes translation, musical arrangements, etc. These are permissible provided they are _lawful_ in the sight of God. The declaration affirms the _liberty_ to make such adaptations; it does not itself determine which adaptations are lawful. It does not condone distortions of Scripture or misleading renderings.
 
 ### Shouldn’t this apply only to Scripture in its original form?
 No, Scripture affirms that faithful copies and translations are still the Word of God. The New Testament translates Old Testament Hebrew passages into Greek, demonstrating that the divine meaning and authority are preserved in faithful translations. The Chicago Statement on Biblical Inerrancy likewise affirms that “copies and translations of Scripture are the Word of God to the extent that they faithfully represent the original” (Article X).

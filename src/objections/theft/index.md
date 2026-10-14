@@ -22,7 +22,7 @@ Intellectual property is inherently different to physical property in that:
  1. It can be infinitely reproduced without directly affecting the original work
  2. The Bible does not directly address it
  3. For most of human history there was no copyright (until 1710), including during the Reformation
- 4. The duration of copyright is arbitrary and subjective (50-70 years after the death of the owner)
+ 4. The duration of copyright is arbitrary and subjective (50-70 years after the death of the author)
 
 These factors should prevent us from directly equating intellectual property theft with material theft to the same degree. Copyright is all about ensuring works can be monetized rather than just protecting the property of the original owner.
 
