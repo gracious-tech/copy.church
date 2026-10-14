@@ -11,9 +11,10 @@ div.watch_cases
                 | Source ↗
         //- Summaries are trusted HTML, which may contain links and block quotes
         div.response_summary(v-html='entry.summary')
-    //- Reported cases understate how often requests are refused
+    //- Reported cases understate how often requests are refused, so invite readers to share more
     p.response_disclaimer(v-if='entries.length')
         | There are likely many more cases than those listed here, as most are never shared publicly.
+        | #[a(href='https://gracious.tech/contact' target='_blank') Report cases ] to Gracious Tech.
 
 </template>
 
