@@ -137,8 +137,8 @@ const stat_tiles = computed(() => {
             desc: "You cannot share the Bible version without their permission"},
         {value: `${pct(semi_restricted_or_worse)}%`, label: "Semi-restricted / Restricted",
             tier: 'semi_restricted' as const,
-            desc: "You cannot use the version as a base for a new Bible translation and/or sell"
-                + " printed copies (no derivatives / non-commercial)"},
+            desc: "You cannot base a new translation on it and/or charge to cover printing costs"
+                + " (no derivatives / non-commercial)"},
     ]
 })
 
