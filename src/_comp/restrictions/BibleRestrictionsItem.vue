@@ -9,6 +9,19 @@ p
 
 p(v-if='bible.id === "kjv"' class='mixed') Copyright of the KJV should have expired a long time ago, however the British Crown is the owner and the KJV is exempt from common copyright law #[a(href='https://en.wikipedia.org/wiki/King_James_Version#Copyright_status' target='_blank') by royal prerogative], so it is only in the public domain outside of the UK. This site ranks translations based on the intent of the publisher and the license they declare. It's not good enough for a translation to be free in some countries, it must be worldwide, noting that the crown still has control of this and could relinquish its rights if it wished to.
 
+//- Crossway has narrowed the ESV's terms several times, so show how they've changed
+div(v-if='bible.id === "esv"' class='custom-block info esv_history')
+    p(class='custom-block-title') The ESV's terms keep getting stricter
+    ul
+        li #[strong Until 2015:] up to 1,000 verses, under 50% of the work, not a complete book
+        li #[strong By 2017:] cut to 500 verses, under 25% of the work
+        li #[strong Late 2017:] no more than half of any one book
+        li #[strong 2022:] can't be translated, or quoted in Creative Commons works
+        li #[strong 2025:] can't be quoted in commentaries or other biblical reference works
+    p(class='evidence')
+        | History:
+        a(v-for='[label, url] of esv_evidence' :key='label' :href='url' target='_blank') {{ label }}
+
 table: tbody
 
     tr
@@ -203,11 +216,27 @@ const b = bool => bool === true ? '<span class=good>✓</span>' : `<span class=b
 
 const can = val => val === true ? `You <strong class=good>can</strong>:` : `You <strong class=bad>can&apos;t</strong>:`
 
+// Archived copies of Crossway's permissions page showing each state of the ESV's terms
+const esv_evidence:[string, string][] = [
+    ['2015', 'https://web.archive.org/web/20150309024309/http://www.crossway.org/rights-permissions/esv/'],
+    ['Early 2017', 'https://web.archive.org/web/20170325211000/https://www.crossway.org/permissions/'],
+    ['Late 2017', 'https://web.archive.org/web/20171207233101/https://www.crossway.org/permissions/'],
+    ['2022', 'https://web.archive.org/web/20220520143740/https://www.crossway.org/permissions/'],
+    ['2025', 'https://web.archive.org/web/20250706085134/https://www.crossway.org/permissions/'],
+]
+
 </script>
 
 
 <style lang='sass' scoped>
 
 @use 'restrictions_item'
+
+// Small, unobtrusive links to the archived evidence
+.esv_history .evidence
+    font-size: 12px
+
+    a
+        margin-left: 8px
 
 </style>
