@@ -395,5 +395,23 @@
         "date": "2026-03-27",
         "summary": "After a user requested the Hakha Chin Bible for use in <a href='https://paper.bible' target='_blank'>Paper Bible</a>, Gracious Tech asked the Bible Society of Myanmar to license it under CC BY 4.0 so it could legally be included in the app. They never responded.",
         "sources": []
+    },
+    {
+        "id": "2025-crossway-esv-new-testament-recitation",
+        "owner_id": "crossway",
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2025-01-23",
+        "summary": "A Christian who had memorized the ESV New Testament asked Crossway for permission to post free videos of himself reciting it, one chapter each weekday, to inspire others to memorize Scripture. He offered to pay any license fee himself, but Crossway declined: <blockquote>we have strict audio licensing guidelines that prohibit us from granting permissions for recordings where the ESV would make up 50% or more of the content. Part of the reasoning behind this is that we make the ESV audio freely available on many different platforms, and we prefer to ensure any new audio recordings are done at a high quality by reputable audio publishers.</blockquote> He replied that he would hire a professional videographer, and even offered to make it a Crossway product for their own channels. Crossway said they were “unable to partner with you on this project,” and would only reconsider if he added enough other material to bring the ESV below half of each video. He worried the extra material would become “filler”: <blockquote>just content that is added for the purpose of padding the length of something to hit a specific requirement.</blockquote> Unable to meet Crossway's conditions without compromising the project, he abandoned the idea of reciting the ESV.",
+        "sources": []
+    },
+    {
+        "id": "2023-crossway-esv-recitation-livestream",
+        "owner_id": "crossway",
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2023-02-01",
+        "summary": "A Christian memorizing the ESV New Testament asked Crossway whether he could recite whole books, such as Philippians, from memory at churches. Crossway said reciting live was fine, but that recording it needed permission, “as we see this as a creation of an audio product.” Even a church's own livestream couldn't stay up for long: <blockquote>We typically would ask that these recordings not be available in perpetuity, but again we would be open to considering them case by case. Usually there is no fee as we would not allow the audio/ video to be available in perpetuity, rather we would allow the church's livestream to be available for about a week then taken down if the recitation of the ESV makes up the majority of the content of the video.</blockquote>",
+        "sources": []
     }
 ]
