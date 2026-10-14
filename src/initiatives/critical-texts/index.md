@@ -14,3 +14,7 @@ import CriticalRestrictions from '@/_comp/restrictions/CriticalRestrictions.vue'
 Critical Texts are reconstructions of the original writings of the Old & New Testaments. Here's how they rate for legal accessibility.
 
 <CriticalRestrictions/>
+
+&nbsp;
+
+See also &nbsp; <VPButton text="Bible Org Watch" href='/watch/' theme='alt' /> &nbsp; <VPButton text="English Bible ratings" href='/initiatives/bibles/' theme='alt' />

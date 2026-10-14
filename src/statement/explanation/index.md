@@ -176,6 +176,7 @@ For statistics, see:
 
 * [How much of the world has Scripture that can be freely shared](https://fetch.bible/content/need/)
 * [Compare the licenses of English translations](https://copy.church/initiatives/bibles/)
+* [See which organizations control Bible licensing worldwide](https://copy.church/watch/)
 
 See also the following websites:
 
