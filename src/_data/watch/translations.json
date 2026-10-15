@@ -6673,19 +6673,6 @@
         "info_url": "https://find.bible/bibles/CAAWBT/"
     },
     {
-        "id": "CABBSH",
-        "medium": "text",
-        "name": "Biblia en Garífuna",
-        "abbrev": "CABBSH",
-        "language": "cab",
-        "latest_year": 2014,
-        "external_ids": {
-            "find_bible": "CABBSH",
-            "dbl": "1e17221e3aa011e5"
-        },
-        "info_url": "https://find.bible/bibles/CABBSH/"
-    },
-    {
         "id": "CABNVS",
         "medium": "text",
         "name": "Garifuna NT",
@@ -10406,18 +10393,6 @@
             "dbl": "01c25b8715dbb632"
         },
         "info_url": "https://app.library.bible/content/01c25b8715dbb632"
-    },
-    {
-        "id": "dbl_01cdb509c584631d",
-        "medium": "text",
-        "name": "Project for Abel Tester to upload to DBL Next",
-        "abbrev": "ghi",
-        "language": "alt",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "01cdb509c584631d"
-        },
-        "info_url": "https://app.library.bible/content/01cdb509c584631d"
     },
     {
         "id": "dbl_01ebf1a8413ece09",
@@ -20090,18 +20065,6 @@
             "dbl": "287fd486d73a894e"
         },
         "info_url": "https://app.library.bible/content/287fd486d73a894e"
-    },
-    {
-        "id": "dbl_2881c78491b2f8cf",
-        "medium": "text",
-        "name": "DBL Unit Test Gospels",
-        "abbrev": "DBLUTG",
-        "language": "eng",
-        "latest_year": 2017,
-        "external_ids": {
-            "dbl": "2881c78491b2f8cf"
-        },
-        "info_url": "https://app.library.bible/content/2881c78491b2f8cf"
     },
     {
         "id": "dbl_28a083c51cbe03aa",
@@ -32557,7 +32520,7 @@
         "external_ids": {
             "dbl": "54f5d36e29a48eaf"
         },
-        "info_url": "https://app.library.bible/content/54f5d36e29a48eaf"
+        "info_url": "https://find.bible/bibles/GSOGSO/"
     },
     {
         "id": "dbl_55016ef1e5184f2f",
@@ -39400,18 +39363,6 @@
         "info_url": "https://find.bible/bibles/ZMBZZZP/"
     },
     {
-        "id": "dbl_6e0d81a24efbb679",
-        "medium": "audio",
-        "name": "TEST Audio Bible",
-        "abbrev": "DBLTD",
-        "language": "eng",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "6e0d81a24efbb679"
-        },
-        "info_url": "https://app.library.bible/content/6e0d81a24efbb679"
-    },
-    {
         "id": "dbl_6e2035a5755adb6f",
         "medium": "audio",
         "name": "Bhojpuri NT (BSI)",
@@ -45052,18 +45003,6 @@
         "info_url": "https://find.bible/bibles/AIWDPI/"
     },
     {
-        "id": "dbl_85ddc3bf5a7c4509",
-        "medium": "audio",
-        "name": "TEST Tongan Book of Habakkuk",
-        "abbrev": "HABTEST",
-        "language": "toi",
-        "latest_year": 2021,
-        "external_ids": {
-            "dbl": "85ddc3bf5a7c4509"
-        },
-        "info_url": "https://app.library.bible/content/85ddc3bf5a7c4509"
-    },
-    {
         "id": "dbl_85f217246dc740b5",
         "medium": "text",
         "name": "Elomwe Piipiliya Piipiliya",
@@ -48772,18 +48711,6 @@
         "info_url": "https://app.library.bible/content/94cb2f456dfb8253"
     },
     {
-        "id": "dbl_94d4ed29ff80fd29",
-        "medium": "audio",
-        "name": "TEST Audio Bible - No Text",
-        "abbrev": "",
-        "language": "eng",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "94d4ed29ff80fd29"
-        },
-        "info_url": "https://app.library.bible/content/94d4ed29ff80fd29"
-    },
-    {
         "id": "dbl_94ef48b1d0ae46da",
         "medium": "audio",
         "name": "Kaili Ledo - 1999 LAI (NT) Non Drama",
@@ -49321,7 +49248,7 @@
         "external_ids": {
             "dbl": "96f8b3b31d942392"
         },
-        "info_url": "https://app.library.bible/content/96f8b3b31d942392"
+        "info_url": "https://find.bible/bibles/LEFTBL/"
     },
     {
         "id": "dbl_97010166ad3a4c32",
@@ -59620,18 +59547,6 @@
         "info_url": "https://app.library.bible/content/c0232fa3c1425cb4"
     },
     {
-        "id": "dbl_c02411e388ec647a",
-        "medium": "audio",
-        "name": "Javanese, Caribbean - 1999 Edition (NT)",
-        "abbrev": "jvnNT",
-        "language": "jvn",
-        "latest_year": 2010,
-        "external_ids": {
-            "dbl": "c02411e388ec647a"
-        },
-        "info_url": "https://find.bible/bibles/JVNTBL/"
-    },
-    {
         "id": "dbl_c0282ac5a36ecc73",
         "medium": "text",
         "name": "Gabri Maja NT",
@@ -61958,18 +61873,6 @@
             "dbl": "c8e7854a534911e6"
         },
         "info_url": "https://find.bible/bibles/HUBWBT/"
-    },
-    {
-        "id": "dbl_c90229cc2eb811e7",
-        "medium": "audio",
-        "name": "Chuj, San Mateo Ixtatan - 1993 Edition (NT)",
-        "abbrev": "ChujNT93",
-        "language": "cac",
-        "latest_year": 2010,
-        "external_ids": {
-            "dbl": "c90229cc2eb811e7"
-        },
-        "info_url": "https://find.bible/bibles/CACC93/"
     },
     {
         "id": "dbl_c93a9a73a85c4905",
@@ -68080,18 +67983,6 @@
         "info_url": "https://app.library.bible/content/df90c0ba3c74984c"
     },
     {
-        "id": "dbl_df924c87870bbb63",
-        "medium": "text",
-        "name": "Project to test change of DBL id",
-        "abbrev": "PfrtD",
-        "language": "rus",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "df924c87870bbb63"
-        },
-        "info_url": "https://app.library.bible/content/df924c87870bbb63"
-    },
-    {
         "id": "dbl_df9278ac1bb146f3",
         "medium": "audio",
         "name": "Kasem (Burkina Faso) Bible",
@@ -72985,7 +72876,7 @@
         "external_ids": {
             "dbl": "f187d7f7786a7cd1"
         },
-        "info_url": "https://app.library.bible/content/f187d7f7786a7cd1"
+        "info_url": "https://find.bible/bibles/CABBSH/"
     },
     {
         "id": "dbl_f187d800343611e7",
@@ -73970,18 +73861,6 @@
             "dbl": "f527db22a05b11e7"
         },
         "info_url": "https://find.bible/bibles/NEQWBT/"
-    },
-    {
-        "id": "dbl_f5411a46fd064c8b",
-        "medium": "audio",
-        "name": "TEST Audio Portion Book of Titus",
-        "abbrev": "TitusDBL",
-        "language": "dan",
-        "latest_year": 2021,
-        "external_ids": {
-            "dbl": "f5411a46fd064c8b"
-        },
-        "info_url": "https://app.library.bible/content/f5411a46fd064c8b"
     },
     {
         "id": "dbl_f5434d8fc87b4244",
@@ -82627,19 +82506,6 @@
             "find_bible": "GSOCAR"
         },
         "info_url": "https://find.bible/bibles/GSOCAR/"
-    },
-    {
-        "id": "GSOGSO",
-        "medium": "text",
-        "name": "Gbaya South West New Testament",
-        "abbrev": "GSOGSO",
-        "language": "gso",
-        "latest_year": 2015,
-        "external_ids": {
-            "find_bible": "GSOGSO",
-            "dbl": "be63d3ca371a11e7"
-        },
-        "info_url": "https://find.bible/bibles/GSOGSO/"
     },
     {
         "id": "GUCUBS",
@@ -91554,19 +91420,6 @@
             "find_bible": "LEEWBT"
         },
         "info_url": "https://find.bible/bibles/LEEWBT/"
-    },
-    {
-        "id": "LEFTBL",
-        "medium": "text",
-        "name": "Lelemi 1995 Edition",
-        "abbrev": "LEFTBL",
-        "language": "lef",
-        "latest_year": 1995,
-        "external_ids": {
-            "find_bible": "LEFTBL",
-            "dbl": "60ae8b26a03811e7"
-        },
-        "info_url": "https://find.bible/bibles/LEFTBL/"
     },
     {
         "id": "LEGLSNT",

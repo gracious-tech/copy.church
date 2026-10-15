@@ -28,35 +28,10 @@ const OTHER_NAMES:Record<string, string[]> = {
     '111873101': ['africa_inland_mission'],
     // Bible League International (World Bible Translation Center merged into it)
     '362037761': ['world_bible_translation_center'],
-    // Biblica
-    '841194554': ['በbiblica'],
     // Cru (the Jesus Film Project is one of its ministries)
     '956006173': ['jesus_film_project'],
-    // Davar Audio Bibles (formerly Davar Partners International)
-    '270642468': [
-        'davar_partners',
-        'davar_partners_international',
-        'davar_partners_international_for_following_ot_books_gen_deu_rut',
-        'mongolian_ab_audio_bible_davar_partners_international',
-    ],
-    // Ethnos360 (formerly New Tribes Mission)
-    '396024926': ['ethnos_360', 'new_tribes_mission', 'new_tribes_missionsanford_fl_1_usa'],
-    // Faith Comes By Hearing / Hosanna Ministries
-    '850223225': [
-        '202_hosanna',
-        'hosanna_201',
-        'hosanna_hosanna',
-        'hosanna_i_produsem_rikoding_ya_long',
-        'hosanna_le_texte_biblique_est_tir_eacute',
-        'hosanna_nt',
-        'hosanna_nt_audio',
-        'hosanna_rekoding_blong_bislama_revised_version',
-        'produccion_de_hosanna_en_nahuatl_de_la_huasteca',
-    ],
     // Operation Mobilization
     '222513811': ['operation_mobilization_international'],
-    // SIL Global (formerly SIL International)
-    '751840827': ['sil_international', 'sil_international_publisher', 'sil_usa'],
     // SIM USA
     '221512241': ['sim_international'],
     // The Navigators (NavPress is its publishing ministry)
@@ -64,15 +39,9 @@ const OTHER_NAMES:Record<string, string[]> = {
     // UnfoldingWord (the Door43 World Missions Community is the community around its platform)
     '141888977': ['door43_world_missions_community'],
     // United Bible Societies
-    '980428633': [
-        'sociedades_biblicas_unidas',
-        'united_bible_societies_china_partnership',
-        'united_bible_society',
-    ],
+    '980428633': ['united_bible_societies_china_partnership'],
     // Word for the World USA
     '841426685': ['word_for_the_world_international'],
-    // Wycliffe Bible Translators
-    '951831097': ['wycliffe_bible_tarnslators', 'wycliffe_usa'],
 }
 
 

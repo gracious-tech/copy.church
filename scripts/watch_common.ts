@@ -55,8 +55,8 @@ export async function fetch_into<T>(cache:Record<string, T>, keys:string[],
 
 // Legal-entity suffixes to ignore when turning an owner name into an id, so e.g. "Bridge
 // Connectivity Solutions" and "Bridge Connectivity Solutions Pvt. Ltd." collapse to one owner
-const ORG_SUFFIX_RE =
-    /,?\s*\b(pvt\.?\s*ltd\.?|ltd\.?|llc\.?|inc\.?|corp\.?|corporation|gmbh|plc\.?|s\.a\.?|e\.?\s*v\.?)\s*$/i
+const ORG_SUFFIX_RE = new RegExp(String.raw`,?\s*\b(pvt\.?\s*ltd\.?|ltd\.?|llc\.?|inc\.?|corp\.?|`
+    + String.raw`corporation|gmbh|plc\.?|s\.a\.?|a\.\s*c\.|e\.?\s*v\.?)\s*$`, 'i')
 
 export function slugify(name:string):string{
     // Turn an owner display name into a stable, url-safe id — also drops a leading "The" so
@@ -66,6 +66,20 @@ export function slugify(name:string):string{
     // collapsing to the same empty string and silently merging into one fake shared owner.
     const stripped = name.replace(ORG_SUFFIX_RE, '').replace(/^the\s+/i, '').trim()
     return stripped.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '_').replace(/^_+|_+$/g, '')
+}
+
+// Each id's folded form (see fold), as worked out so far
+const folded_ids = new Map<string, string>()
+
+export function fold(id:string):string{
+    // An id with the accents on its Latin letters dropped, for matching names that differ only in
+    // accents ("Alliance Biblique du Benin", "Alliance Biblique du Bénin") — ids keep their accents
+    let folded = folded_ids.get(id)
+    if (folded === undefined){
+        folded = id.normalize('NFD').replace(/(?<=\p{Script=Latin})\p{M}+/gu, '').normalize('NFC')
+        folded_ids.set(id, folded)
+    }
+    return folded
 }
 
 export async function fetch_json<T>(url:string, headers:Record<string, string> = {}):Promise<T>{
@@ -104,6 +118,8 @@ const ORG_ALIASES:Record<string, string> = {
     sil_png: 'SIL Papua New Guinea',
     l_assoc_nationale_traduction_bible_et_l_alphabt:
         'Association Nationale pour la Traduction de la Bible et l’Alphabétisation',
+    association_nationale_pour_le_traduction_de_la_bible_et_l_alphabétisation:
+        'Association Nationale pour la Traduction de la Bible et l’Alphabétisation',
     coordination_inter_eglises_pour_la_traduction_et_l_alphabetisation_en_langue_gabonaise:
         'Coordination Inter-Eglises pour la Traduction et l\'alphabétisation en Langue Gabonaise',
     union_nacional_de_traductores_indigenas: 'Unión Nacional de Traductores Indígenas',
@@ -129,6 +145,51 @@ const ORG_ALIASES:Record<string, string> = {
     nectar: 'North East Centre for Training and Research',
     bukavu_archdiocese_of_bukavu: 'Archdiocese of Bukavu',
     библийым_кусарыше_институт_ий: 'Institute for Bible Translation, Finland',
+    ethnos_360: 'Ethnos360',
+    new_tribes_mission: 'Ethnos360',  // Its former name
+    missão_novos_tribos_do_brasil: 'Missão Novas Tribos do Brasil',
+    sil_international: 'SIL Global',  // Its former name
+    sil_usa: 'SIL Global',
+    wycliffe_usa: 'Wycliffe Bible Translators, Inc.',
+    wycliffe_bible_tarnslators: 'Wycliffe Bible Translators, Inc.',
+    wycliffe_indian: 'Wycliffe India',
+    davar_partners_international: 'Davar Audio Bibles',  // Its former name
+    davar_partners: 'Davar Audio Bibles',
+    bridge_connectivity_systems: 'Bridge Connectivity Solutions',
+    friends_study_bible: 'Friends Bible Study',
+    partners_development_foundation: 'Partners in Development Foundation',
+    institute_for_bible_translation_moscow: 'Institute for Bible Translation, Russia',
+    institute_for_bible_translation_helsinki: 'Institute for Bible Translation, Finland',
+    raamatunkäännösinstituutti_ry: 'Institute for Bible Translation, Finland',
+    united_bible_society: 'United Bible Societies',
+    // Other forms of a Bible Society's name ("in" or "of", word order, typos), for the one DBL
+    // lists it under
+    bible_society_in_botswana: 'The Bible Society of Botswana',
+    bible_socitety_botswana: 'The Bible Society of Botswana',
+    bible_society_of_cambodia: 'Bible Society in Cambodia',
+    bible_society_in_cote_d_ivoire: 'Bible Society of Côte d\'Ivoire',
+    bible_society_of_france: 'French Bible Society',
+    bible_society_of_gabon: 'Bible Society in Gabon',
+    bible_society_of_guatemala: 'Bible Society in Guatemala',
+    bible_society_of_indonesia: 'Indonesian Bible Society',
+    indonesia_bible_society: 'Indonesian Bible Society',
+    bible_society_in_new_zealand: 'Bible Society New Zealand Charitable Trust',
+    bible_society_of_pakistan: 'Pakistan Bible Society',
+    philippine_bible_society: 'Philippines Bible Society',
+    bible_society_of_the_republic_of_congo: 'Bible Society of Congo (Republic)',
+    bible_society_in_the_republic_of_belarus: 'Bible Society of Belarus (the Republic of)',
+    bible_society_of_russia: 'Bible Society in Russia',
+    bible_soceity_in_senegal: 'Bible Society in Senegal',
+    bible_society_in_the_seychelles: 'Seychelles Bible Society',
+    bible_society_of_sierra_leone: 'Bible Society in Sierra Leone',
+    bible_society_in_the_south_pacific: 'Bible Society of the South Pacific',
+    bible_society_of_suriname: 'Suriname Bible Society',
+    thai_bible_society: 'Thailand Bible Society',
+    mongolian_united_bible_society: 'Mongolian Union Bible Society',
+    sharif_bible_society: 'International Sharif Bible Society',
+    // Names with "&" in them, which would otherwise be split into two holders
+    cambridge_university_press_assessment: 'Cambridge University Press',  // Its current name
+    bible_society_of_singapore_malaysia_brunei: 'Bible Society of Singapore, Malaysia and Brunei',
     // Bible Societies' own names in their language, for the English name DBL lists them under
     deutsche_bibelgesellschaft: 'German Bible Society',
     det_danske_bibelselskab: 'Danish Bible Society',
@@ -147,6 +208,70 @@ const ORG_ALIASES:Record<string, string> = {
     føroyska_bíbliufelagið: 'Faroese Bible Society',
     british_and_foreign_bible_society: 'British & Foreign Bible Society',
     мукаддес_китап_терҗиме_институты: 'Institute for Bible Translation, Russia',
+    alliance_biblique_au_burkina_faso: 'Bible Society of Burkina Faso',
+    alliance_biblique_au_burkina_fasoburkina_faso: 'Bible Society of Burkina Faso',
+    alliance_biblique_de_burkina_faso: 'Bible Society of Burkina Faso',
+    alliance_biblique_du_burkina_faso: 'Bible Society of Burkina Faso',
+    alliance_biblique_du_bénin: 'Bible Society of Benin',
+    l_alliance_biblique_du_bénin: 'Bible Society of Benin',
+    alliance_biblique_du_cameroun: 'Bible Society of Cameroon',
+    alliance_biblique_en_centrafrique: 'Bible Society in the Central African Republic',
+    la_société_biblique_de_centrafrique: 'Bible Society in the Central African Republic',
+    alliance_biblique_de_côte_d_ivoire: 'Bible Society of Côte d\'Ivoire',
+    alliance_bibleque_de_côte_d_ivoire: 'Bible Society of Côte d\'Ivoire',
+    alliance_biblique_de_la_république_démocratique_du_congo:
+        'Bible Society of the Democratic Republic of Congo',
+    l_alliance_biblique_de_la_république_démocratique_du_congo:
+        'Bible Society of the Democratic Republic of Congo',
+    société_biblique_de_la_république_démocratique_du_congo:
+        'Bible Society of the Democratic Republic of Congo',
+    société_biblique_de_la_r_d_congo: 'Bible Society of the Democratic Republic of Congo',
+    société_biblique_de_la_r_c_congo: 'Bible Society of the Democratic Republic of Congo',
+    // Its name when the country was Zaïre
+    kinshasa_la_société_biblique_du_zaïre: 'Bible Society of the Democratic Republic of Congo',
+    alliance_biblique_au_mali: 'Bible Society of Mali',
+    l_alliance_biblique_au_mali: 'Bible Society of Mali',
+    alliance_biblique_au_tchad: 'Bible Society of Chad',
+    alliance_biblique_du_tchad: 'Bible Society of Chad',
+    l_alliance_biblique_du_tchad: 'Bible Society of Chad',
+    société_biblique_du_tchad: 'Bible Society of Chad',
+    alliance_biblique_du_togo: 'Bible Society of Togo',
+    l_alliance_biblique_du_togo: 'Bible Society of Togo',
+    société_biblique_française: 'French Bible Society',
+    société_biblique_française_bibli_o: 'French Bible Society',  // Bibli'O is its publisher
+    société_biblique_haïtienne: 'Haitian Bible Society',
+    la_société_biblique_malgache: 'Malagasy Bible Society',
+    sociedad_bíblica_de_argentina: 'Argentine Bible Society',
+    sociedade_bíblica_em_angola: 'Bible Society in Angola',
+    sociedad_bíblica_ecuatoriana: 'United Bible Societies in Ecuador',
+    sociedad_bíblica_de_españa: 'Bible Society of Spain',
+    sociedad_bíblica_de_honduras: 'Bible Society of Honduras',
+    sociedad_bíblica_boliviana: 'Bolivian Bible Society',
+    sociedad_bíblica_chilena: 'Chilean Bible Society',
+    sociedad_bíblica_de_costa_rica: 'Bible Society of Costa Rica',
+    sociedad_bíblica_guatemala: 'Bible Society in Guatemala',
+    sociedad_bíblica_de_méxico: 'Bible Society of Mexico',
+    sociedad_bíblica_de_nicaragua: 'Bible Society in Nicaragua',
+    sociedad_bíblica_peruana: 'Peruvian Bible Society',
+    la_sociedad_bíblica_peruana: 'Peruvian Bible Society',
+    sociedade_bíblica_de_moçambique: 'Bible Society of Mozambique',
+    sociedadebíblica_de_moçambique: 'Bible Society of Mozambique',
+    sociedade_bíblica_de_portugal: 'Bible Society of Portugal',
+    lembaga_alkitab_indonesia: 'Indonesian Bible Society',
+    lai: 'Indonesian Bible Society',
+    nederlands_vlaams_bijbelgenootschap: 'Netherlands Bible Society',
+    stichting_surinaams_bijbelgenootschap: 'Suriname Bible Society',
+    sosiedat_di_beibel: 'Bible Society in Netherlands Antilles and Aruba',
+    suomen_pipliaseura_fintiko_pipliako_staggos: 'Finnish Bible Society',
+    towarzystwo_biblijne_w_polsce: 'Bible Society in Poland',
+    biblijsko_društvo_srbije: 'Bible Society of Serbia',
+    библијско_друштво_србијe: 'Bible Society of Serbia',
+    библиско_здружение_на_р_македонија: 'Bible Society of the Republic of Macedonia',
+    българско_библейско_дружество: 'Bulgarian Bible Society',
+    российское_библейское_общество: 'Bible Society in Russia',
+    台灣聖經公會: 'Bible Society in Taiwan',
+    香港圣经公会: 'Hong Kong Bible Society',
+    baebol_sosieti_saot_pasific_i_copiraetem_baebol_ya_long: 'Bible Society of the South Pacific',
     // Joint notices in other languages ("X et les Y"), where the other holder is credited anyway
     traducteurs_pionniers_de_la_bible_et_alliance_biblique_en_guinée: 'Pioneer Bible Translators',
     mission_evangélique_reformée_néerlandaise_et_les_traducteurs_pionniers_de_la_bible:
@@ -156,7 +281,13 @@ const ORG_ALIASES:Record<string, string> = {
     von_de_kjennichs_bibel_jesalschoft: 'Kjennichs-Bibel Jesalschoft',
     // Names given with a location or description
     ethnos360_sanford_florida: 'Ethnos360',
+    new_tribes_missionsanford_fl_1_usa: 'Ethnos360',
     missão_novas_tribos_sanford_fl: 'Missão Novas Tribos do Brasil',
+    sil_international_publisher: 'SIL Global',
+    institute_for_bible_translation_stockholm_sweden: 'Institute for Bible Translation, Sweden',
+    lembaga_alkitab_indonesia_jakarta: 'Indonesian Bible Society',
+    towarzystwo_biblijne_w_polsce_warszawa: 'Bible Society in Poland',
+    bible_translation_and_literacy_east_africa: 'Bible Translation and Literacy',
     royal_jongbloed_heerenveen_the_netherlands: 'Jongbloed Uitgeverij',
     katholieke_bijbelstichting_breda: 'Katholieke Bijbelstichting',
     katholieke_bijbelstichting_hoeven: 'Katholieke Bijbelstichting',
@@ -171,7 +302,16 @@ const ORG_ALIASES:Record<string, string> = {
     mern: 'Mission Evangélique Réformée Néerlandaise',
     acotba: 'Association Congolaise de Traductions de la Bible',
     acotba_subo: 'Association Congolaise de Traductions de la Bible',
+    ubs: 'United Bible Societies',
+    nbtt: 'The Nigeria Bible Translation Trust',
+    kartidaya: 'Yayasan Kartidaya Sahabat Indonesia',
+    uitgeverij_skandalon: 'Skandalon',  // "Skandalon Publishing"
+    kitabı_mukaddes_şirketi: 'Bible Society in Turkey',
+    sociedades_bíblicas_unidas_en_venezuela: 'United Bible Societies in Venezuela',
+    በbiblica: 'Biblica, Inc.',  // Amharic "by"
     la_liga_bíblica: 'Bible League International',
+    liga_bíblica: 'Bible League International',
+    liga_bíblica_mundial_del_hogar: 'Bible League International',  // World Home Bible League
     liga_bíblica_internacional: 'Bible League International',
     royal_jongbloed: 'Jongbloed Uitgeverij',
     edições_vida_nova: 'Sociedade Religiosa Edições Vida Nova',
@@ -185,6 +325,42 @@ const ORG_ALIASES:Record<string, string> = {
     malayalam_bible_binoy_chacko_audio_bible_nt_ot_binoy_chacko_ministries:
         'Binoy Chacko Ministries',
     yenziwe_yibiblica_inc_kanye_le_davar_partners_international: 'Biblica, Inc.',
+    sociedad_bíblica_de_méxico_a_c_tzeltal_de_oxchuc_old_testament_audio_bible:
+        'Bible Society of Mexico',
+    nt_in_tamazight_of_the_middle_central_atlas_in_audio_published_by_bible_society_in_morocco:
+        'Morocco Bible Society',
+    mongolian_ab_audio_bible_davar_partners_international: 'Davar Audio Bibles',
+    davar_partners_international_hosanna: 'Davar Audio Bibles',
+    hosanna_hosanna: 'Faith Comes By Hearing',
+    hosanna_nt: 'Faith Comes By Hearing',
+    hosanna_nt_audio: 'Faith Comes By Hearing',
+    hosanna_zeki_çiftçi: 'Faith Comes By Hearing',  // Zeki Çiftçi only holds the music
+    hosanna_i_produsem_rikoding_ya_long: 'Faith Comes By Hearing',
+    hosanna_rekoding_blong_bislama_revised_version: 'Faith Comes By Hearing',
+    produccion_de_hosanna_en_nahuatl_de_la_huasteca: 'Faith Comes By Hearing',
+    החברה_לכתבי_הקודש_בישראל_biblesocietyinisrael_comhaktuvim_co_il: 'Bible Society in Israel',
+}
+
+// ORG_ALIASES by folded slug, so an alias matches however the name is accented
+const ALIASES = new Map(Object.entries(ORG_ALIASES).map(([slug, name]) => [fold(slug), name]))
+
+// The name an org is listed under, where this is one of its other names
+const alias_of = (name:string):string|undefined => ALIASES.get(fold(slugify(name)))
+
+// The folded slugs of the names aliases are listed under, so a whole name can be checked against
+// both
+const ALIAS_TARGETS = new Set(Object.values(ORG_ALIASES).map(name => fold(slugify(name))))
+
+// A website given after a name ("Lembaga Alkitab Indonesia www.alkitab.or.id"), sometimes with no
+// space before it ("Bible Society of Kenyawww.biblesociety-kenya.org")
+const TRAILING_WEBSITE_RE = /[\s,]*(www\.[\w.-]+\.[a-z]{2,})\/?$/i
+
+function split_website(name:string):[string, string|undefined]{
+    // Separate a website given after a name from the name itself
+    const match = TRAILING_WEBSITE_RE.exec(name)
+    if (!match || !match.index)
+        return [name, undefined]
+    return [name.slice(0, match.index), `https://${match[1]!.toLowerCase()}`]
 }
 
 function clean_owner_name(name:string):string{
@@ -198,13 +374,19 @@ function clean_owner_name(name:string):string{
 }
 
 function get_or_create_owner(owners:Owner[], raw_name:string):string{
-    // Find an existing owner by name (or one of its aliases), or add a new one — returns its id
-    const cleaned = clean_owner_name(raw_name)
-    const name = ORG_ALIASES[slugify(cleaned)] ?? cleaned
+    // Find an existing owner by name (or one of its aliases), however accented, or add a new one —
+    // returns its id. A website given after the name becomes the owner's website, if it has none.
+    const [cleaned, website] = split_website(clean_owner_name(raw_name))
+    const name = alias_of(cleaned) ?? cleaned
     const id = slugify(name)
-    if (!owners.some(o => o.id === id))
-        owners.push({id, name})
-    return id
+    let owner = owners.find(o => fold(o.id) === fold(id))
+    if (!owner){
+        owner = {id, name}
+        owners.push(owner)
+    }
+    if (website && !owner.website)
+        owner.website = website
+    return owner.id
 }
 
 // Many fetch.bible attributions are full copyright notices ("Copyright © 1927, 2009 Wycliffe
@@ -242,6 +424,8 @@ const NON_HOLDERS = new Set([
     'UBB &WBT', 'M.B.S.: N.I.N.E.A. C9', 'Bible Translation', 'Literacy', '#ti',
     'ADI-Media, Via della Formica 23, 5 Roma, Italy',
     'Киелі Кітап, Қазақша аудармасы және көркемделуі «Орта Азия баспасы ЖШС»',
+    'ཀལ༌ཏེས༌ བྲིས༌ཏེ༌ ཡོད༌ན༌ མན༌ནེ༌ འི༌ བྲིས༌ཁན༌ དང༌ སིལ༌ཁན༌ ཚང༌མའེ༌',
+    'The Runyankole-Rukiga Audio Bible',
 ].map(name => slugify(name)))
 
 // Kinds of name that are always a translation project or committee rather than a legal entity
@@ -251,6 +435,7 @@ const NON_HOLDER_RE = new RegExp([
     '\\b(?:translation|language)\\s+(?:project|team|committee)\\b', '\\bsamit?h?i\\b',
     '\\bcommittee of\\b', '\\btrademark office\\b', 'reserv', 'derechos', 'direitos', '\\bregte\\b',
     'zimehifadhiwa', '\\bact\\b', '§', 'weergawe', 'toestemming', '^holder$', '^publicado\\b',
+    '^good news translation\\b',
 ].join('|'), 'i')
 
 export function owner_id_for(owners:Owner[], attribution:string):string{
@@ -365,26 +550,43 @@ const HOLDER_END_RE = new RegExp([
     'creative commons', 'attribution', 'cc[\\s-]*by', 'cc0', 'for church use only',
     'used (?:by|with) permission', 'must appear', 'is a trademark', 'original publication',
     'current version', 'grabad\\w* por', 'recorded by', 'under\\s+cc',
-    'in (?:cooperation|collaboration|partnership) with', 'audio:', 'text:', ';', '\\n',
+    'in (?:co-?operation|collaboration|partnership) with', 'audio:', 'text:', ';', '\\n',
     'for the audio', 'but has been', 'info at',
+    '\\b(?:first|second|third|fourth|fifth|premi[eè]re|deuxi[eè]me|troisi[eè]me)\\s+[ée]dition',
+    '\\bfor\\s+(?:complete|following)\\b', '\\bthis work\\b', '\\(text\\)',
+    '\\ble texte biblique\\b',
+    // A postal address ("B.P. 1133", "P.O. Box 790")
+    '\\b(?:b\\.\\s?p\\.|p\\.\\s?o\\.\\s?box)\\s*\\d',
 ].join('|'), 'i')
+
+// HTML entities for accented letters ("&auml;"), by name, as the combining mark they add
+const ENTITY_MARKS:Record<string, string> = {
+    acute: '́', grave: '̀', uml: '̈', circ: '̂', cedil: '̧', tilde: '̃',
+}
 
 export function clean_holder(segment:string):string{
     // Reduce one ©/℗ notice segment ("2005, Wycliffe Bible Translators, Inc. All rights
     // reserved.") down to just the holder's name ("Wycliffe Bible Translators, Inc.")
     // Some statements run sentences together with no space ("...Davar Partners
     // InternationalBiblica® Open..."), so a trademarked title glued onto a name also ends it
-    // A sentence break ("Michael Adeyemi Adegbola. This Scripture text is...") also ends it, but
-    // not an abbreviation's period ("Inc.", "Jr.", "W.")
+    // A sentence break ("Michael Adeyemi Adegbola. This Scripture text is...", or after a year or
+    // an aside following the name: "Davar Partners International, 2022. Kasem Audio Bible") also
+    // ends it, but not an abbreviation's period ("Inc.", "Jr.", "W.")
     let name = segment.replace(/&amp;|\bamp\b/g, '&').replace(/<[^>]*>?/g, ' ')
+        .replace(/&([a-z])(acute|grave|uml|circ|cedil|tilde);/gi, (_, letter:string, mark:string) =>
+            (letter + ENTITY_MARKS[mark.toLowerCase()]).normalize('NFC'))
         .replace(/️|(?<=\p{Nd})\p{M}+/gu, '')
+        // "Copyright owned by" in Chinese, which can come before or after the name
+        .replace(/版[權权]所有[：:]?/g, ' ')
         .replace(/(\p{Ll})(?=\p{Lu}\S*[®™])/gu, '$1\n')
-        .replace(/(?:scripture\s+)?text\s+used\s+by\s+permission\s+of\s+/i, '')
-    name = name.split(/(?<=\p{Ll}{3})\.\s+(?=\p{Lu})/u)[0]!
+        .replace(/(?:scripture\s+)?(?:text|audio)\s+used\s+by\s+permission(?:\s+of\s+)?/i, '')
+    name = name.split(
+        /(?<=\p{Ll}{3}|\p{L}[\s,]+\p{Nd}{4}|\p{L}[^(]*\([^)]*\))\.\s+(?=\p{Lu})/u)[0]!
     name = name.split(HOLDER_END_RE)[0]!
-    // Links and parenthesised asides aren't part of a name, nor are any brackets they leave behind
+    // Links and parenthesised asides aren't part of a name, nor are any brackets they leave behind,
+    // nor years (or placeholders for one, "202_"), nor markdown emphasis ("_SIL International._")
     name = name.replace(/https?:\/\/\S+/g, '').replace(/\([^)]*\)|[[\]\\"*()]/g, '')
-        .replace(/\p{Nd}{4}|\b20__\b|\byear\b/giu, '')
+        .replace(/\p{Nd}{4}|\b20[\p{Nd}_]{2}\b|\byear\b|_/giu, '')
     name = name.replace(/^[\s:,.\-–—/&]*(?:(?:audio|text|by|por|von|par)\b\s*)*/i, '')
         .replace(/(?:[\s,;:\-–/&]|\b(?:and|et|und)\b)+$/i, '')
     name = name.replace(/\s+/g, ' ').trim()
@@ -398,23 +600,31 @@ function strip_acronym(name:string):string{
     return name.replace(/^[\p{L}.]{2,8}\s+[-–]\s+(?=\S+\s+\S+\s+\S)/u, '')
 }
 
+// The initials of an org's name, less any location after a comma and any lowercase words ("ibt"
+// for "Institute for Bible Translation, Russia")
+const initials = (name:string):string => name.split(',')[0]!.split(/[\s/-]+/)
+    .filter(word => /^\p{Lu}/u.test(word)).map(word => word[0]!.toLowerCase()).join('')
+
 function resolve_org_name(name:string, entry_orgs:string[]):string{
     // Map a notice's short form of a name onto the org's full name — either a known alias, or
     // one of the entry's own orgs that it abbreviates ("Hosanna" for "Hosanna/Faith Comes By
-    // Hearing", "Wycliffe" for "Wycliffe Bible Translators, Inc.")
-    const slug = slugify(name)
-    if (slug in ORG_ALIASES)
-        return ORG_ALIASES[slug]!
+    // Hearing", "Wycliffe" for "Wycliffe Bible Translators, Inc.", "IBT" for "Institute for Bible
+    // Translation, Sweden")
+    const alias = alias_of(name)
+    if (alias)
+        return alias
+    const slug = fold(slugify(name))
     for (const org of entry_orgs){
-        const org_slug = slugify(org)
-        if (slug && (org_slug === slug || org_slug.startsWith(`${slug}_`)))
+        const org_slug = fold(slugify(org))
+        if (slug && (org_slug === slug || org_slug.startsWith(`${slug}_`)
+                || (/^\p{Lu}{3,}$/u.test(name) && slug === initials(org))))
             return org
     }
     return name
 }
 
-// Org names already known, by slug — `embeddable` is the subset specific enough to be picked out
-// from inside a longer name (a source's own orgs, and names of 3+ words), so a short name like
+// Org names already known, by folded slug — `embeddable` is the subset specific enough to be picked
+// out from inside a longer name (a source's own orgs, and names of 3+ words), so a short name like
 // "Wycliffe" doesn't swallow "Wycliffe India"
 export interface OrgIndex {
     known:Map<string, string>
@@ -426,10 +636,14 @@ function known_orgs_in(name:string, entry_orgs:string[], orgs:OrgIndex):string[]
     // entry's own orgs), else any known org names embedded in it, e.g. from a notice in another
     // language ("Biblica, Inc. і Davar Partners International")
     const resolved = resolve_org_name(name, entry_orgs)
-    if (resolved !== name || orgs.known.has(slugify(name)))
+    if (resolved !== name || orgs.known.has(fold(slugify(name))))
         return [resolved]
-    const padded = `_${slugify(name)}_`
-    const found = orgs.embeddable.filter(slug => padded.includes(`_${slug}_`))
+    // A one-word name only counts at the start, or after "by" or a word in another script ("על ידי
+    // Biblica"), so "Biblica" isn't found in "Sociedad Biblica de Guatemala"
+    const padded = `_${fold(slugify(name))}_`
+    const found = orgs.embeddable.filter(slug => padded.includes(`_${slug}_`)
+        && (slug.includes('_') || padded.startsWith(`_${slug}_`)
+            || new RegExp(`_(?:by|[^_\\p{Script=Latin}]+)_${slug}_`, 'u').test(padded)))
     // Only the longest match counts where one known name contains another
     return found.filter(slug => !found.some(other => other !== slug && other.includes(slug)))
         .map(slug => orgs.known.get(slug)!)
@@ -442,6 +656,13 @@ export function split_holders(name:string, entry_orgs:string[], orgs:OrgIndex):s
     // Translators and Hosanna" is two holders, not three)
     const holders:string[] = []
     for (const listed of name.split(/,\s*(?=[\p{L}.]{2,8}\s+[-–]\s)/u)){
+        // A whole name that's a known alias is one holder, even with an "and"/"&" in it
+        // ("Cambridge University Press & Assessment", "British and Foreign Bible Society")
+        const whole = clean_holder(listed)
+        if (alias_of(whole) || ALIAS_TARGETS.has(fold(slugify(whole)))){
+            holders.push(resolve_org_name(whole, entry_orgs))
+            continue
+        }
         let pending:string[] = []
         const flush = () => {
             if (pending.length)
@@ -466,15 +687,15 @@ export function split_holders(name:string, entry_orgs:string[], orgs:OrgIndex):s
 export function build_org_index(owners:Owner[], source_orgs:string[]):OrgIndex{
     // Every org name already known, for picking org names out of messy notices — a source's own
     // orgs are always specific enough to be embeddable
-    const known = new Map(owners.map(o => [o.id, o.name]))
-    for (const [alias, name] of Object.entries(ORG_ALIASES)){
+    const known = new Map(owners.map(o => [fold(o.id), o.name]))
+    for (const [alias, name] of ALIASES){
         known.set(alias, name)
-        known.set(slugify(name), name)
+        known.set(fold(slugify(name)), name)
     }
     const source_slugs = new Set<string>()
     for (const org of source_orgs.filter(Boolean)){
-        known.set(slugify(org), org)
-        source_slugs.add(slugify(org))
+        known.set(fold(slugify(org)), org)
+        source_slugs.add(fold(slugify(org)))
     }
     return {
         known,
