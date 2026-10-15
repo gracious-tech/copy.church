@@ -421,5 +421,14 @@
         "date": "2024-04-04",
         "summary": "A Bible translation worker in Nepal reported: <blockquote>Nepal Bible Society refuses to give permission for OT Scripture audio distribution on apps, as they have reserved the OT audio version “for sale only,” selling on cd and usb drives—robbing the mostly illiterate country of Nepal the opportunity of accessing full Scripture. We have been reaching out to them for over a decade regarding this, and still no change.</blockquote>",
         "sources": []
+    },
+    {
+        "id": "2025-crossway-esv-open-license-reasons",
+        "owner_id": "crossway",
+        "translation_ids": ["dbl_0a8c5612ed1cb866"],
+        "rating_ids": ["esv"],
+        "date": "2025-05-16",
+        "summary": "A translation consultant researching how Bible publishers approach copyright asked Crossway why the ESV can't be quoted in openly licensed publications, or translated into other languages. Crossway's licensing team replied only: <blockquote>Crossway's Board of Directors has established guidelines for stewardship of the ESV Bible, including both of the aspects that you mentioned.</blockquote> When the consultant explained that the question was <em>why</em> the Board had decided this, Crossway's VP of Licensing said: <blockquote>I don't know the particulars of the Board's decision and am not privy to the internal discussions that took place, so I'm unable to go into the details of <em>why</em> this decision was made.</blockquote> The consultant then asked to be put in touch with someone who could explain. After repeated follow-ups, the reply was: <blockquote>I'm afraid I don't have anything more to share regarding open licenses.</blockquote> A further request for a contact the next year went unanswered. Crossway had also never answered the same questions when someone else asked them in 2023.",
+        "sources": []
     }
 ]
