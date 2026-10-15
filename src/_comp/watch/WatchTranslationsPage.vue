@@ -8,7 +8,7 @@ div.watch_translations_page(v-if='!owner_mode || owner_known')
         VPButton(class='back_link' text="← All Bible Orgs" href='/watch/' theme='alt')
         h1 Versions licensed by {{ owner_name }}
         template(v-if='base_rows.length')
-            WatchStats(:stats='owner_stat_tiles')
+            WatchStats(:stats='owner_stat_tiles' explain)
             WatchMeter(class='owner_meter' :counts='owner_tier_counts')
         div.owner_links(v-if='owner?.website || owner?.ministry_watch_url')
             VPButton(v-if='owner?.website' text="Website" :href='owner.website' theme='alt')
@@ -63,7 +63,7 @@ import type {Owner} from '@/_data/watch/types'
 import WatchStats from './WatchStats.vue'
 import WatchCases from './WatchCases.vue'
 import WatchMeter from './WatchMeter.vue'
-import {license_tier, response_log_by_owner, format_num} from './watch_utils'
+import {license_tier, response_log_by_owner, format_num, tier_descs} from './watch_utils'
 import type {LicenseTier} from './watch_utils'
 
 
@@ -191,7 +191,12 @@ const owner_stat_tiles = computed(() => {
     const total = base_rows.value.length
     const tile = (tier:LicenseTier, label:string) => {
         const n = owner_tier_counts.value[tier]
-        return {value: n, label: `${label} (${total ? Math.round((n / total) * 100) : 0}%)`, tier}
+        return {
+            value: n,
+            label: `${label} (${total ? Math.round((n / total) * 100) : 0}%)`,
+            tier,
+            desc: tier_descs[tier],
+        }
     }
     return [
         tile('open', "Open"),

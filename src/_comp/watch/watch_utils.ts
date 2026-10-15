@@ -10,6 +10,15 @@ import type {ResponseLogEntry} from '../../_data/watch/types'
 export type LicenseTier = 'open' | 'semi_restricted' | 'restricted'
 
 
+// A short explanation of each tier, shown under its stat tile
+export const tier_descs:Record<LicenseTier, string> = {
+    open: "Anyone can share, translate and improve it without needing permission",
+    semi_restricted: "You cannot base a new translation on it and/or charge to cover printing costs"
+        + " (no derivatives / non-commercial)",
+    restricted: "You cannot share the Bible version without their permission",
+}
+
+
 // Display a count with a comma thousand separator (e.g. 1,234)
 export function format_num(n:number):string{
     return n.toLocaleString('en-US')

@@ -2,7 +2,7 @@
 <template lang='pug'>
 
 div.watch_dashboard_wrap
-    WatchStats(:stats='stat_tiles')
+    WatchStats(:stats='stat_tiles' explain)
 
     //- Page-supplied content (e.g. related links) placed between the stats and the table
     slot
@@ -69,7 +69,8 @@ import WatchStats from './WatchStats.vue'
 import WatchMeter from './WatchMeter.vue'
 import WatchReportsButton from './WatchReportsButton.vue'
 import WatchReportsDialog from './WatchReportsDialog.vue'
-import {license_tier, response_log_by_owner, format_num, use_reports_dialog} from './watch_utils'
+import {license_tier, response_log_by_owner, format_num, use_reports_dialog, tier_descs}
+    from './watch_utils'
 
 
 // Tally each owner's tracked translations and how many carry a restricted license
@@ -134,11 +135,9 @@ const stat_tiles = computed(() => {
         {value: total, label: "Total Bible versions",
             desc: "Includes both text and audio versions which are often licensed separately"},
         {value: `${pct(restricted)}%`, label: "Restricted", tier: 'restricted' as const,
-            desc: "You cannot share the Bible version without their permission"},
+            desc: tier_descs.restricted},
         {value: `${pct(semi_restricted_or_worse)}%`, label: "Semi-restricted / Restricted",
-            tier: 'semi_restricted' as const,
-            desc: "You cannot base a new translation on it and/or charge to cover printing costs"
-                + " (no derivatives / non-commercial)"},
+            tier: 'semi_restricted' as const, desc: tier_descs.semi_restricted},
     ]
 })
 
