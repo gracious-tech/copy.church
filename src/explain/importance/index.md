@@ -68,7 +68,7 @@ In the time of the early church, sharing and distributing Christian resources wa
 
 Things couldn't be more different between now and then. Sharing resources can now almost always be done (1) freely, (2) instantaneously, and (3) worldwide. There is still often substantial costs involved in creating resources, but once they have been created they can be shared more freely and widely than has ever been possible before. We should surely take this into account when we consider the kind of compensation the Bible justifies.
 
-On the flip side, Christian resources for thousands of years were never copyrighted. Though it was difficult to make copies, it was only difficult physically, not legally. Now almost everything is copyrighted, and instead of physical barriers we now have legal ones.
+On the flip side, Christian resources for thousands of years were never copyrighted. Though it was difficult to make copies, the barriers were mostly physical rather than legal. Now almost everything is copyrighted, and instead of physical barriers we now have legal ones.
 
 
 ## Blocking potential users
