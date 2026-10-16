@@ -243,11 +243,6 @@
         "name": "BGCMC"
     },
     {
-        "id": "bib_sen_an",
-        "name": "Bib Sen An",
-        "website": "https://www.bibsenan.com/"
-    },
-    {
         "id": "bible_and_literature_translation_association",
         "name": "Bible and Literature Translation Association"
     },
@@ -666,10 +661,6 @@
         "website": "http://www.biblesint.org/"
     },
     {
-        "id": "biblia_wayuu",
-        "name": "Biblia Wayuu"
-    },
-    {
         "id": "biblica",
         "name": "Biblica, Inc.",
         "website": "http://www.Biblica.com/permissions",
@@ -1024,6 +1015,11 @@
     {
         "id": "eastern_zone",
         "name": "Eastern Zone"
+    },
+    {
+        "id": "ebible_org",
+        "name": "eBible.org",
+        "website": "http://eBible.org"
     },
     {
         "id": "ecclesia_bible_society",
@@ -1497,10 +1493,6 @@
     {
         "id": "konda_tribal_development_foundation",
         "name": "Konda Tribal Development Foundation"
-    },
-    {
-        "id": "konta_new_testament",
-        "name": "The Konta New Testament"
     },
     {
         "id": "korean_bible_society",

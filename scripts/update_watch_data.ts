@@ -54,9 +54,10 @@ import {existsSync, readFileSync} from 'node:fs'
 import type {Translation, Owner, LicenseTerms, ResponseLogEntry} from '../src/_data/watch/types.ts'
 import type {BuildState, DblSteps, FetchBible, FetchBibleEntry, FetchCollectionIds, FindBible,
     FindBibleIndex, FindBibleLanguage} from './watch_common.ts'
-import {args, build_org_index, DATA_DIR, fetch_into, fetch_json, fetch_language,
-    language_names, license_from_text, owner_id_for, owner_ids_for, push_terms, save_json, save_text, sort_keys,
-    split_holders, strip_copyright_notice, today} from './watch_common.ts'
+import {AGGREGATOR_OWN_WORKS, args, build_org_index, DATA_DIR, fetch_into, fetch_json,
+    fetch_language, get_or_create_owner, language_names, license_from_text, owner_id_for,
+    owner_ids_for, push_terms, save_json, save_text, sort_keys, split_holders,
+    strip_copyright_notice, today} from './watch_common.ts'
 import ebible_cache_json from './ebible_cache.json' with {type: 'json'}
 import response_log from '../src/_data/watch/response_log.json' with {type: 'json'}
 import {major_translation_owners} from './major_translation_owners.ts'
@@ -535,9 +536,12 @@ function edition_key(name:string):string{
 // series especially), leaving the old closed listing alongside it. Drop the closed one when an
 // open edition of it exists in the same language and medium — only where the open one's name says
 // "Open", or the two share an owner, so a same-named but unrelated version is never dropped. The
-// open edition's parenthesised qualifier ("(Simplified)") is ignored, but the closed one's isn't,
-// so e.g. "Open English Bible (British Spelling)" isn't taken for "Open English Bible". A version
-// only find.bible lists never supersedes one DBL lists, as DBL's are always preferred.
+// open edition's parenthesised qualifier ("(Simplified)") is ignored, but the closed one's only is
+// where the open one's name says "Open" and the closed one's doesn't (an "Open" re-release often
+// drops it: "Bengali Contemporary Version 2019 (Updated 2021)"), so e.g. "Open English Bible
+// (British Spelling)" isn't taken for "Open English Bible", nor "Sesotho 1989 (Lesotho
+// Orthography)" for "Sesotho 1909 (Lesotho Orthography)". A version only find.bible lists never
+// supersedes one DBL lists, as DBL's are always preferred.
 function drop_superseded_closed(translations:Translation[], license_terms:LicenseTerms[],
         from_find_bible:Set<string>):void{
     // Each version's licenses and known owners
@@ -572,10 +576,15 @@ function drop_superseded_closed(translations:Translation[], license_terms:Licens
             continue
         const owners = owner_ids.get(translation.id) ?? new Set()
         const from_dbl = !from_find_bible.has(translation.id)
-        const open = open_editions.get(`${translation.medium}|${translation.language}|${key}`)
-            ?.filter(o => !from_dbl || !from_find_bible.has(o.id))
-            .find(o => /\bopen\b/i.test(o.name)
+        const editions_of = (name_key:string):Translation[] => (open_editions
+            .get(`${translation.medium}|${translation.language}|${name_key}`) ?? [])
+            .filter(o => !from_dbl || !from_find_bible.has(o.id))
+        const is_open_release = (o:Translation):boolean => /\bopen\b/i.test(o.name)
+        const open = editions_of(key).find(o => is_open_release(o)
                 || [...owner_ids.get(o.id) ?? []].some(owner => owners.has(owner)))
+            ?? (is_open_release(translation) ? undefined
+                : editions_of(edition_key(translation.name.replace(/\([^)]*\)/g, '')))
+                    .find(is_open_release))
         if (open){
             superseded.set(translation.id, open)
             replaced_by.set(translation.id, open.id)
@@ -697,9 +706,11 @@ function edition_year(translation:Translation):number{
 // is never merged) — or have no known rights holder, where only one translation has that name (or
 // only one has exactly its name). DBL's data is always preferred, find.bible's only supplementing
 // it: the one kept is the latest edition DBL lists (find.bible's only where DBL lists none) —
-// never a regional or canon one where there's another, and preferring one find.bible has a page
-// for — with every such edition's rights holders, and the latest one's license (else the latest
-// known one).
+// never a regional or canon one where there's another, and of those the latest, preferring one
+// with a known license and then one find.bible has a page for — with every such edition's rights
+// holders, and the kept one's own license where DBL lists it (else the latest known one). A closed
+// DBL edition with no license is restricted, so it never takes the license of an older edition
+// (e.g. a public domain one it revised).
 function merge_editions(translations:Translation[], license_terms:LicenseTerms[],
         from_find_bible:Set<string>):void{
     const terms_by_id = new Map<string, LicenseTerms[]>()
@@ -780,6 +791,11 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
         edition_sets.push(...sets.map(set => set.editions).filter(editions => editions.length > 1))
     }
 
+    // Whether a version has a known license, so of two copies of one edition (e.g. DBL entries of
+    // the same name, only one of them open access) the one its owner licensed is kept
+    const has_license = (t:Translation):boolean =>
+        (terms_by_id.get(t.id) ?? []).some(terms => terms.license !== 'unknown')
+
     // Merge each set into the one kept
     const dropped = new Set<string>()
     for (const editions of edition_sets){
@@ -787,6 +803,7 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
             Number(from_find_bible.has(a.id)) - Number(from_find_bible.has(b.id))
             || Number(is_variant(a.name)) - Number(is_variant(b.name))
             || edition_year(b) - edition_year(a)
+            || Number(has_license(b)) - Number(has_license(a))
             || Number(!!b.external_ids.find_bible) - Number(!!a.external_ids.find_bible))
         const kept = latest_first[0]!
 
@@ -800,7 +817,9 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
         const from_dbl = latest_first.filter(t => !from_find_bible.has(t.id))
         const term_sources = from_dbl.length ? from_dbl : latest_first
         const first_terms = term_sources.map(t => terms_by_id.get(t.id)?.[0])
-        const license_from = first_terms.find(terms => terms && terms.license !== 'unknown')
+        const own_terms = from_find_bible.has(kept.id) ? undefined : terms_by_id.get(kept.id)?.[0]
+        const license_from = own_terms
+            ?? first_terms.find(terms => terms && terms.license !== 'unknown')
             ?? first_terms.find(terms => terms)
 
         // Every such edition's holders, each with the roles they hold in any of them
@@ -844,6 +863,33 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
     }
     license_terms.push(...[...kept_ids].flatMap(id => terms_by_id.get(id)!))
     console.info(`Merged ${dropped.size} older or regional editions into ${kept_ids.size} versions`)
+}
+
+
+// ---- hosting platforms' own translations ----
+
+// Credit each hosting platform as a rights holder of the translations it owns itself (see
+// AGGREGATOR_OWN_WORKS), in place of an unknown holder, else alongside the known ones
+function credit_aggregator_own_works(translations:Translation[], owners:Owner[],
+        license_terms:LicenseTerms[]):void{
+    let credited = 0
+    for (const [name, own_works] of Object.entries(AGGREGATOR_OWN_WORKS)){
+        const owner_id = get_or_create_owner(owners, name)
+        for (const translation of translations.filter(t => own_works.test(t.name))){
+            const terms = license_terms.filter(lt => lt.translation_id === translation.id)
+            if (terms.some(lt => lt.owner_id === owner_id))
+                continue
+            const unknown = terms.find(lt => lt.owner_id === 'unknown')
+            if (unknown)
+                unknown.owner_id = owner_id
+            else if (terms[0])
+                license_terms.push({...terms[0], owner_id, roles: ['text']})
+            else
+                push_terms(license_terms, translation.id, [owner_id], 'unknown', '')
+            credited += 1
+        }
+    }
+    console.info(`Credited hosting platforms with ${credited} translations they own`)
 }
 
 
@@ -893,6 +939,7 @@ async function main():Promise<void>{
     // Only once every source has had its say on licenses, so open editions are all known
     drop_superseded_closed(translations, license_terms, from_find_bible)
     merge_editions(translations, license_terms, from_find_bible)
+    credit_aggregator_own_works(translations, owners, license_terms)
 
     // Drop owners left with no license terms (e.g. all their translations were too old)
     const used_owners = new Set(license_terms.map(lt => lt.owner_id))

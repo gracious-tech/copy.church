@@ -2471,19 +2471,6 @@
         "info_url": "https://find.bible/bibles/ARBMAT/"
     },
     {
-        "id": "ARBNAV",
-        "medium": "text",
-        "name": "New Arabic Version (Ketab El Hayat)",
-        "abbrev": "NAV",
-        "language": "arb",
-        "latest_year": 2012,
-        "external_ids": {
-            "dbl": "24722a3b9010fa47",
-            "find_bible": "ARBNAV"
-        },
-        "info_url": "https://find.bible/bibles/ARBNAV/"
-    },
-    {
         "id": "ARBNVD",
         "medium": "text",
         "name": "New Van Dyke Version",
@@ -4073,19 +4060,6 @@
             "find_bible": "BENBAC"
         },
         "info_url": "https://find.bible/bibles/BENBAC/"
-    },
-    {
-        "id": "BENBCV",
-        "medium": "text",
-        "name": "Bengali Contemporary Version 2019 (Updated 2021)",
-        "abbrev": "BCV",
-        "language": "ben",
-        "latest_year": 2019,
-        "external_ids": {
-            "dbl": "5db9120936999614",
-            "find_bible": "BENBCV"
-        },
-        "info_url": "https://find.bible/bibles/BENBCV/"
     },
     {
         "id": "BENCHI",
@@ -7303,19 +7277,6 @@
         "info_url": "https://find.bible/bibles/CEBULB/"
     },
     {
-        "id": "CEBWOG",
-        "medium": "text",
-        "name": "Cebuano Contemporary Bible (Ang Pulong sa Dios) 2014",
-        "abbrev": "CCB",
-        "language": "ceb",
-        "latest_year": 2014,
-        "external_ids": {
-            "dbl": "39739f1a7dcfe810",
-            "find_bible": "CEBWOG"
-        },
-        "info_url": "https://find.bible/bibles/CEBWOG/"
-    },
-    {
         "id": "CEGWBT",
         "medium": "text",
         "name": "Chamacoco 1997 Edition",
@@ -7425,19 +7386,6 @@
             "find_bible": "CESNKB"
         },
         "info_url": "https://find.bible/bibles/CESNKB/"
-    },
-    {
-        "id": "CESSNC",
-        "medium": "text",
-        "name": "Slovo na cestu (Czech Living New Testament) 2012",
-        "abbrev": "SNC",
-        "language": "ces",
-        "latest_year": 2006,
-        "external_ids": {
-            "dbl": "d26ef201ef9cf3f2",
-            "find_bible": "CESSNC"
-        },
-        "info_url": "https://find.bible/bibles/CESSNC/"
     },
     {
         "id": "CFMBIV",
@@ -16683,18 +16631,6 @@
         "info_url": "https://app.library.bible/content/1aa473745dfe4cd4"
     },
     {
-        "id": "dbl_1aaa080d00773908",
-        "medium": "text",
-        "name": "Kiswahili Contemporary Version (Neno)",
-        "abbrev": "NEN",
-        "language": "swh",
-        "latest_year": 2025,
-        "external_ids": {
-            "dbl": "1aaa080d00773908"
-        },
-        "info_url": "https://app.library.bible/content/1aaa080d00773908"
-    },
-    {
         "id": "dbl_1aad0a8ff32fcc5a",
         "medium": "text",
         "name": "Agricola NT 1548",
@@ -19693,18 +19629,6 @@
             "dbl": "26b7a1cd2f8f4878"
         },
         "info_url": "https://app.library.bible/content/26b7a1cd2f8f4878"
-    },
-    {
-        "id": "dbl_26b7f37588f4c5ce",
-        "medium": "text",
-        "name": "Nova Bíblia Viva (Portuguese New Living Bible)",
-        "abbrev": "NBV",
-        "language": "por",
-        "latest_year": 2007,
-        "external_ids": {
-            "dbl": "26b7f37588f4c5ce"
-        },
-        "info_url": "https://app.library.bible/content/26b7f37588f4c5ce"
     },
     {
         "id": "dbl_26c855997ddf44b9",
@@ -26571,18 +26495,6 @@
         "info_url": "https://find.bible/bibles/BBCWBT/"
     },
     {
-        "id": "dbl_3f67e6d09c94c02e",
-        "medium": "text",
-        "name": "Tagalog Contemporary Bible (Ang Salita ng Diyos) 2025",
-        "abbrev": "ASD",
-        "language": "tgl",
-        "latest_year": 2025,
-        "external_ids": {
-            "dbl": "3f67e6d09c94c02e"
-        },
-        "info_url": "https://app.library.bible/content/3f67e6d09c94c02e"
-    },
-    {
         "id": "dbl_3f6b54c3e2bf40a5",
         "medium": "audio",
         "name": "Kwara'ae - WBT (NT) Drama",
@@ -26869,18 +26781,6 @@
             "dbl": "40c19100571c4504"
         },
         "info_url": "https://app.library.bible/content/40c19100571c4504"
-    },
-    {
-        "id": "dbl_40d3d5509b45d467",
-        "medium": "text",
-        "name": "Good News Arabic 2025",
-        "abbrev": "GNA2025",
-        "language": "arb",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "40d3d5509b45d467"
-        },
-        "info_url": "https://app.library.bible/content/40d3d5509b45d467"
     },
     {
         "id": "dbl_40d98e98134138dc",
@@ -28575,18 +28475,6 @@
         "info_url": "https://app.library.bible/content/46d2bf3467933cc0"
     },
     {
-        "id": "dbl_46dcfac1927c24c5",
-        "medium": "text",
-        "name": "Slovak Hope for All New Testament (Nádej pre každého)",
-        "abbrev": "NPK",
-        "language": "slk",
-        "latest_year": 2023,
-        "external_ids": {
-            "dbl": "46dcfac1927c24c5"
-        },
-        "info_url": "https://app.library.bible/content/46dcfac1927c24c5"
-    },
-    {
         "id": "dbl_46e126b38a594801",
         "medium": "audio",
         "name": "Lugwere - 2017 WBT (NT) Non-Drama",
@@ -28777,18 +28665,6 @@
             "dbl": "4783d7273307d267"
         },
         "info_url": "https://app.library.bible/content/4783d7273307d267"
-    },
-    {
-        "id": "dbl_478e0fa895a0cfde",
-        "medium": "text",
-        "name": "Chinese Contemporary Bible 2023 (Traditional)",
-        "abbrev": "CCBT",
-        "language": "cmn",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "478e0fa895a0cfde"
-        },
-        "info_url": "https://find.bible/bibles/CMNTEM/"
     },
     {
         "id": "dbl_47a57c949fe711e7",
@@ -35809,6 +35685,18 @@
             "dbl": "611e45649ff311e7"
         },
         "info_url": "https://find.bible/bibles/BQCSIM/"
+    },
+    {
+        "id": "dbl_611f8eb23aec8f13",
+        "medium": "text",
+        "name": "Biblica® Open Kiswahili Contemporary Version (Neno) 2015",
+        "abbrev": "ONEN",
+        "language": "swh",
+        "latest_year": 2018,
+        "external_ids": {
+            "dbl": "611f8eb23aec8f13"
+        },
+        "info_url": "https://app.library.bible/content/611f8eb23aec8f13"
     },
     {
         "id": "dbl_613c46559d5d4177",
@@ -53091,6 +52979,18 @@
         "info_url": "https://find.bible/bibles/CRKAMR/"
     },
     {
+        "id": "dbl_a6e06d2c5b90ad89",
+        "medium": "text",
+        "name": "Biblica® Open Chinese Contemporary Bible 2023 (Traditional)",
+        "abbrev": "OCCB",
+        "language": "cmn",
+        "latest_year": 2023,
+        "external_ids": {
+            "dbl": "a6e06d2c5b90ad89"
+        },
+        "info_url": "https://app.library.bible/content/a6e06d2c5b90ad89"
+    },
+    {
         "id": "dbl_a6eb752ca973fcd2",
         "medium": "text",
         "name": "Ogbia Bible Translation Project",
@@ -59535,6 +59435,18 @@
         "info_url": "https://app.library.bible/content/c017a0e6b1d74fac"
     },
     {
+        "id": "dbl_c0209b58481727a2",
+        "medium": "text",
+        "name": "Biblica® Open Slovo na cestu (Czech Living New Testament)",
+        "abbrev": "OSNC",
+        "language": "ces",
+        "latest_year": 2012,
+        "external_ids": {
+            "dbl": "c0209b58481727a2"
+        },
+        "info_url": "https://app.library.bible/content/c0209b58481727a2"
+    },
+    {
         "id": "dbl_c0232fa3c1425cb4",
         "medium": "text",
         "name": "Dzando Bible",
@@ -61609,18 +61521,6 @@
             "dbl": "c7eb32ae41dea051"
         },
         "info_url": "https://find.bible/bibles/MBLWBT/"
-    },
-    {
-        "id": "dbl_c7fb049f55b09353",
-        "medium": "text",
-        "name": "Lao Contemporary Version 2023 (New Testament)",
-        "abbrev": "LCV",
-        "language": "lao",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "c7fb049f55b09353"
-        },
-        "info_url": "https://app.library.bible/content/c7fb049f55b09353"
     },
     {
         "id": "dbl_c7fcb6248d824f41",
@@ -65521,18 +65421,6 @@
             "dbl": "d63894c8d9a7a503"
         },
         "info_url": "https://app.library.bible/content/d63894c8d9a7a503"
-    },
-    {
-        "id": "dbl_d6396000dbd84e89",
-        "medium": "text",
-        "name": "Indonesian Contemporary New Testament (Kitab Kehidupan Perjanjian Baru) 2025",
-        "abbrev": "KKH",
-        "language": "ind",
-        "latest_year": 0,
-        "external_ids": {
-            "dbl": "d6396000dbd84e89"
-        },
-        "info_url": "https://app.library.bible/content/d6396000dbd84e89"
     },
     {
         "id": "dbl_d646bc234dfd41fe",
@@ -72423,6 +72311,18 @@
         "info_url": "https://find.bible/bibles/RUSCRV/"
     },
     {
+        "id": "dbl_efd8a351a07d4264",
+        "medium": "text",
+        "name": "Biblica® Open Bengali Contemporary Version 2019",
+        "abbrev": "OBCV",
+        "language": "ben",
+        "latest_year": 2022,
+        "external_ids": {
+            "dbl": "efd8a351a07d4264"
+        },
+        "info_url": "https://app.library.bible/content/efd8a351a07d4264"
+    },
+    {
         "id": "dbl_efe6fa030da3403f",
         "medium": "audio",
         "name": "Gulmancema - 2003 BRK (NT) Drama",
@@ -75387,18 +75287,6 @@
         "info_url": "https://app.library.bible/content/fb2b94183c1cd96a"
     },
     {
-        "id": "dbl_fb38e5057585f127",
-        "medium": "text",
-        "name": "Kiswahili Contemporary Scriptures (Neno TAZI) 2024",
-        "abbrev": "NMM24",
-        "language": "swh",
-        "latest_year": 2024,
-        "external_ids": {
-            "dbl": "fb38e5057585f127"
-        },
-        "info_url": "https://find.bible/bibles/SWHBIB/"
-    },
-    {
         "id": "dbl_fb498b56edb5d0ab",
         "medium": "text",
         "name": "Bekwarra Bible",
@@ -75961,6 +75849,18 @@
             "dbl": "fd45de398eaa62e4"
         },
         "info_url": "https://find.bible/bibles/TUOWBT/"
+    },
+    {
+        "id": "dbl_fd5704b4b8ddef79",
+        "medium": "text",
+        "name": "Good News Arabic 2025",
+        "abbrev": "GNA2025",
+        "language": "arb",
+        "latest_year": 2026,
+        "external_ids": {
+            "dbl": "fd5704b4b8ddef79"
+        },
+        "info_url": "https://app.library.bible/content/fd5704b4b8ddef79"
     },
     {
         "id": "dbl_fd5b2ad63c464fd1",
@@ -91675,17 +91575,16 @@
         "info_url": "https://find.bible/bibles/LIDWBT/"
     },
     {
-        "id": "LIFDEV",
+        "id": "LIFWBT",
         "medium": "text",
-        "name": "Limbu New Testament (Devanagari Script)",
-        "abbrev": "LIFDEV",
+        "name": "Limbu New Testament (Limbu Script)",
+        "abbrev": "LIFWBT",
         "language": "lif",
         "latest_year": 2009,
         "external_ids": {
-            "find_bible": "LIFDEV",
-            "dbl": "1976de9af1eb11e5"
+            "find_bible": "LIFWBT"
         },
-        "info_url": "https://find.bible/bibles/LIFDEV/"
+        "info_url": "https://find.bible/bibles/LIFWBT/"
     },
     {
         "id": "LIKWBT",
@@ -110052,19 +109951,6 @@
         "info_url": "https://find.bible/bibles/TGLULB/"
     },
     {
-        "id": "TGLWOG",
-        "medium": "text",
-        "name": "Tagalog Contemporary Bible (Ang Salita ng Dios) 2015",
-        "abbrev": "TCB",
-        "language": "tgl",
-        "latest_year": 2015,
-        "external_ids": {
-            "dbl": "5542a8cd0429163d",
-            "find_bible": "TGLWOG"
-        },
-        "info_url": "https://find.bible/bibles/TGLWOG/"
-    },
-    {
         "id": "TGOWBT",
         "medium": "text",
         "name": "Sudest NT+",
@@ -113347,19 +113233,6 @@
             "find_bible": "VIETBD"
         },
         "info_url": "https://find.bible/bibles/VIETBD/"
-    },
-    {
-        "id": "VIEVCB",
-        "medium": "text",
-        "name": "Vietnamese Contemporary Bible (Kinh Thánh Hiện Đại) 2015",
-        "abbrev": "VCB",
-        "language": "vie",
-        "latest_year": 2015,
-        "external_ids": {
-            "dbl": "ed484deed765564d",
-            "find_bible": "VIEVCB"
-        },
-        "info_url": "https://find.bible/bibles/VIEVCB/"
     },
     {
         "id": "VIEVRV",

@@ -130,6 +130,7 @@ const ORG_ALIASES:Record<string, string> = {
     gilakmedia_com: 'Gilak Media',
     wilbur_n_pickering_thm_phd: 'Wilbur N. Pickering',
     ellis_w_deibler_jr: 'Ellis W. Deibler',
+    bib_sen_an: 'Ron Smith',  // His own DBL account, named after his translation
     far_east_broadcasting_company: 'Far East Broadcasting Company',
     son_light_sunshine_foundation: 'Son Light Foundation',
     world_for_the_world_international: 'The Word for the World International',
@@ -373,7 +374,7 @@ function clean_owner_name(name:string):string{
     return cleaned
 }
 
-function get_or_create_owner(owners:Owner[], raw_name:string):string{
+export function get_or_create_owner(owners:Owner[], raw_name:string):string{
     // Find an existing owner by name (or one of its aliases), however accented, or add a new one —
     // returns its id. A website given after the name becomes the owner's website, if it has none.
     const [cleaned, website] = split_website(clean_owner_name(raw_name))
@@ -416,8 +417,17 @@ export const AGGREGATOR_NAMES = new Set(['ebible.org'])
 export const is_aggregator = (name:string):boolean =>
     AGGREGATOR_NAMES.has(strip_copyright_notice(name).toLowerCase())
 
+// The translations a hosting platform does own itself, by name, credited to it once every source
+// has had its say — eBible.org made the World English Bible (the World Messianic Bible is an
+// edition of it), and is named as a co-holder of the Yorumsuz Türkçe Çeviri
+export const AGGREGATOR_OWN_WORKS:Record<string, RegExp> = {
+    'eBible.org':
+        /\bworld (?:english|messianic) bible\b|\byorumsuz türkçe çeviri\b|\bturkish ytc\b/i,
+}
+
 // Names that copyright notices give as a holder, but that aren't really a rights holder — a
-// translation project rather than a legal entity, or prose a notice parse left behind
+// translation project rather than a legal entity, the translation's own title, or prose a notice
+// parse left behind
 const NON_HOLDERS = new Set([
     'Urdu Geo Version', 'Sehwi Bible Sefwi Wiawso',
     'Mpoto Language Translation', 'Powari Madhya Pradesh', 'Obedience', 'Biel – Bienne',
@@ -425,7 +435,7 @@ const NON_HOLDERS = new Set([
     'ADI-Media, Via della Formica 23, 5 Roma, Italy',
     'Киелі Кітап, Қазақша аудармасы және көркемделуі «Орта Азия баспасы ЖШС»',
     'ཀལ༌ཏེས༌ བྲིས༌ཏེ༌ ཡོད༌ན༌ མན༌ནེ༌ འི༌ བྲིས༌ཁན༌ དང༌ སིལ༌ཁན༌ ཚང༌མའེ༌',
-    'The Runyankole-Rukiga Audio Bible',
+    'The Runyankole-Rukiga Audio Bible', 'Biblia Wayuu', 'The Konta New Testament',
 ].map(name => slugify(name)))
 
 // Kinds of name that are always a translation project or committee rather than a legal entity
@@ -527,13 +537,17 @@ function license_from_cc_name(text:string):string|null{
 }
 
 export function license_from_text(text:string):{license:string, url:string}|null{
+    // A license the notice names in its own words wins over a link to a different one, as the
+    // words are what readers see ("[CC-BY-NC-ND](https://creativecommons.org/licenses/by-sa/4.0/)")
+    const named = license_from_cc_name(text.replace(/https?:\/\/\S+/g, ' '))
     const url_match =
         /https?:\/\/creativecommons\.org\/(?:licenses|publicdomain)\/[^\s"'<>()]+/i.exec(text)
     if (url_match){
         const detected = license_from_url(url_match[0])
-        if (detected) return detected
+        if (detected && (!named || named === detected.license))
+            return detected
     }
-    const cc_license = license_from_cc_name(text)
+    const cc_license = named ?? license_from_cc_name(text)
     if (cc_license)
         return {license: cc_license, url: ''}
     if (/public domain/i.test(text) && !/not public domain/i.test(text))
