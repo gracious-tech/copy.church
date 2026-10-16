@@ -55,9 +55,9 @@ import type {Translation, Owner, LicenseTerms, ResponseLogEntry} from '../src/_d
 import type {BuildState, DblSteps, FetchBible, FetchBibleEntry, FetchCollectionIds, FindBible,
     FindBibleIndex, FindBibleLanguage} from './watch_common.ts'
 import {AGGREGATOR_OWN_WORKS, args, build_org_index, DATA_DIR, fetch_into, fetch_json,
-    fetch_language, get_or_create_owner, language_names, license_from_text, owner_id_for,
-    owner_ids_for, push_terms, save_json, save_text, sort_keys, split_holders,
-    strip_copyright_notice, today} from './watch_common.ts'
+    fetch_language, get_or_create_owner, language_key, language_names, license_from_text,
+    owner_id_for, owner_ids_for, push_terms, related_languages, same_language, save_json,
+    save_text, sort_keys, split_holders, strip_copyright_notice, today} from './watch_common.ts'
 import ebible_cache_json from './ebible_cache.json' with {type: 'json'}
 import response_log from '../src/_data/watch/response_log.json' with {type: 'json'}
 import {major_translation_owners} from './major_translation_owners.ts'
@@ -210,10 +210,25 @@ async function pull_find_bible():Promise<FindBible>{
     return {versions, index, dbl_uids}
 }
 
+// find.bible versions that are a DBL entry find.bible doesn't link them to, by that entry's DBL
+// uid — judged by hand
+const UNLINKED_DBL_ENTRIES:Record<string, string> = {
+    TWIOCBA: 'b6aee081108c0bc6',  // Open Akuapem Twi Bible: Biblica® Open Akuapem Twi Contemporary
+}
+
 // List every find.bible version that isn't already listed by the private steps, returning their
 // ids — they only supplement DBL's, so DBL's are preferred wherever the two are merged
 function add_find_bible(translations:Translation[], find_bible:FindBible,
         superseded:Set<string>):Set<string>{
+    // Supersede the versions find.bible doesn't link to their DBL entry, where that's listed
+    for (const [fb_id, uid] of Object.entries(UNLINKED_DBL_ENTRIES)){
+        const listed = translations.find(t => t.external_ids.dbl === uid)
+        if (!listed)
+            continue
+        superseded.add(fb_id)
+        replaced_by.set(fb_id, listed.id)
+    }
+
     // Note which DBL entry stands in for each superseded version
     for (const translation of translations){
         const fb_id = translation.external_ids.find_bible
@@ -301,10 +316,10 @@ function match_fetch_to_find(
                 scores.set(id, (scores.get(id) ?? 0) + 1)
         }
 
-        // Keep only candidates that exist and share fetch.bible's language code
+        // Keep only candidates that exist and share fetch.bible's language
         const language = fetch_language(fb_id)
         for (const [translation_id, score] of scores){
-            if (by_id.get(translation_id)?.language === language)
+            if (same_language(by_id.get(translation_id)?.language ?? '', language))
                 candidates.push({fb_id, translation_id, score})
         }
     }
@@ -474,7 +489,7 @@ async function pull_ebible(translations:Translation[], owners:Owner[],
                 || find_bible.dbl_uids.get(fb_id)?.length)
             continue
         const row = (ebible_ids.get(fb_id) ?? []).map(id => by_ebible_id.get(id))
-            .find(r => r?.['languageCode'] === translation.language)
+            .find(r => same_language(r?.['languageCode'] ?? '', translation.language))
         if (row)
             pairs.push({translation_id: translation.id, row})
     }
@@ -532,16 +547,26 @@ function edition_key(name:string):string{
         .trim()
 }
 
+// A name without its parenthesised parts
+const unbracketed = (name:string):string => name.replace(/\([^)]*\)/g, ' ')
+
 // Some owners re-publish a closed translation as an open edition (Biblica's "Biblica® Open ..."
-// series especially), leaving the old closed listing alongside it. Drop the closed one when an
-// open edition of it exists in the same language and medium — only where the open one's name says
-// "Open", or the two share an owner, so a same-named but unrelated version is never dropped. The
-// open edition's parenthesised qualifier ("(Simplified)") is ignored, but the closed one's only is
-// where the open one's name says "Open" and the closed one's doesn't (an "Open" re-release often
-// drops it: "Bengali Contemporary Version 2019 (Updated 2021)"), so e.g. "Open English Bible
-// (British Spelling)" isn't taken for "Open English Bible", nor "Sesotho 1989 (Lesotho
-// Orthography)" for "Sesotho 1909 (Lesotho Orthography)". A version only find.bible lists never
-// supersedes one DBL lists, as DBL's are always preferred.
+// series especially), meaning to replace it. Drop each closed version that an open edition in the
+// same language (see same_language) and medium replaces:
+//   - one of the same name, where the open one's name says "Open" or it's the owner's own — the
+//     open one's parenthesised qualifier ("(Simplified)") ignored, but not the closed one's, so
+//     e.g. "Open English Bible (British Spelling)" isn't taken for "Open English Bible"
+//   - for texts, the owner's own, named the same but for any bracketed parts or scope, as long as
+//     it's a whole Bible or the same scope — so their open Bible replaces the closed New
+//     Testament it grew from ("Asante Twi Contemporary Version NT"), and their "Open" re-release
+//     the closed edition it dropped a qualifier from ("Bengali Contemporary Version 2019 (Updated
+//     2021)").
+//     Not for recordings, whose owners include the studio, which records other translations too.
+// An owner's open edition only replaces a later closed one of theirs where it's an "Open"
+// re-release, so e.g. their public domain "Sesotho 1909" doesn't replace their "Sesotho 1989". A
+// version only find.bible lists never supersedes one DBL lists, as DBL's are always preferred.
+// Where no edition is open, a closed New Testament and a later closed Bible both stay listed.
+// A dropped version's editions with no known owner (e.g. find.bible's copy of it) go with it.
 function drop_superseded_closed(translations:Translation[], license_terms:LicenseTerms[],
         from_find_bible:Set<string>):void{
     // Each version's licenses and known owners
@@ -557,37 +582,73 @@ function drop_superseded_closed(translations:Translation[], license_terms:Licens
     const all_in = (id:string, allowed:Set<string>):boolean =>
         [...licenses.get(id) ?? []].every(license => allowed.has(license))
 
-    // Index the open editions by medium, language, and name key
+    // Index the open editions by medium, language, and both keys they can be matched on — their
+    // name, and their name without bracketed parts or scope
     const open_editions = new Map<string, Translation[]>()
+    const add_open = (key:string, translation:Translation):void => {
+        open_editions.set(key, [...open_editions.get(key) ?? [], translation])
+    }
     for (const translation of translations){
-        const key = edition_key(translation.name.replace(/\([^)]*\)/g, ''))
-        if (!key || !licenses.has(translation.id)
-                || !all_in(translation.id, OPEN_EDITION_LICENSES))
+        if (!licenses.has(translation.id) || !all_in(translation.id, OPEN_EDITION_LICENSES))
             continue
-        const full_key = `${translation.medium}|${translation.language}|${key}`
-        open_editions.set(full_key, [...open_editions.get(full_key) ?? [], translation])
+        const prefix = `${translation.medium}|${translation.language}`
+        const name_key = edition_key(unbracketed(translation.name))
+        const release_key = scope_free_key(unbracketed(translation.name))
+        if (name_key)
+            add_open(`name|${prefix}|${name_key}`, translation)
+        if (release_key)
+            add_open(`release|${prefix}|${release_key}`, translation)
     }
 
     // Find each closed version with an open edition that supersedes it
+    const is_open_release = (t:Translation):boolean => /\bopen\b/i.test(t.name)
     const superseded = new Map<string, Translation>()
     for (const translation of translations){
-        const key = edition_key(translation.name)
-        if (!key || !all_in(translation.id, CLOSED_LICENSES))
+        if (!all_in(translation.id, CLOSED_LICENSES))
             continue
         const owners = owner_ids.get(translation.id) ?? new Set()
         const from_dbl = !from_find_bible.has(translation.id)
-        const editions_of = (name_key:string):Translation[] => (open_editions
-            .get(`${translation.medium}|${translation.language}|${name_key}`) ?? [])
-            .filter(o => !from_dbl || !from_find_bible.has(o.id))
-        const is_open_release = (o:Translation):boolean => /\bopen\b/i.test(o.name)
-        const open = editions_of(key).find(o => is_open_release(o)
-                || [...owner_ids.get(o.id) ?? []].some(owner => owners.has(owner)))
-            ?? (is_open_release(translation) ? undefined
-                : editions_of(edition_key(translation.name.replace(/\([^)]*\)/g, '')))
-                    .find(is_open_release))
+        const editions_of = (kind:string, key:string):Translation[] => !key ? [] :
+            related_languages(translation.language)
+                .flatMap(language =>
+                    open_editions.get(`${kind}|${translation.medium}|${language}|${key}`) ?? [])
+                .filter(o => !from_dbl || !from_find_bible.has(o.id))
+        const replaces = (o:Translation):boolean =>
+            [...owner_ids.get(o.id) ?? []].some(owner => owners.has(owner))
+            && (is_open_release(o) || edition_year(o) >= edition_year(translation))
+        const scope = scope_of(translation.name)
+        const covers = (o:Translation):boolean => !scope_of(o.name) || scope_of(o.name) === scope
+        const open = editions_of('name', edition_key(translation.name))
+                .find(o => is_open_release(o) || replaces(o))
+            ?? (translation.medium !== 'text' ? undefined
+                : editions_of('release', scope_free_key(unbracketed(translation.name)))
+                    .find(o => replaces(o) && covers(o)))
         if (open){
             superseded.set(translation.id, open)
             replaced_by.set(translation.id, open.id)
+        }
+    }
+
+    // A dropped version's editions with no known owner go with it, as merge_editions would have
+    // merged them into it — but only where every owned version of their name was dropped
+    const by_name = new Map<string, Translation[]>()
+    for (const translation of translations){
+        const name_key = translation_key(translation.name)
+        if (!name_key)
+            continue
+        const key = `${translation.medium}|${language_key(translation.language)}|${name_key}`
+        by_name.set(key, [...by_name.get(key) ?? [], translation])
+    }
+    for (const editions of by_name.values()){
+        const owned = editions.filter(t => owner_ids.has(t.id))
+        const open = owned.map(t => superseded.get(t.id)).find(o => o)
+        if (!open || !owned.every(t => superseded.has(t.id)))
+            continue
+        for (const t of editions.filter(t => !owner_ids.has(t.id))){
+            if (all_in(t.id, CLOSED_LICENSES)){
+                superseded.set(t.id, open)
+                replaced_by.set(t.id, open.id)
+            }
         }
     }
 
@@ -673,10 +734,16 @@ function translation_key(name:string):string{
     return key && style ? `${key} ${style}` : key
 }
 
-// A translation key without the scope it names, so a find.bible "Xyz 2008 Edition" (which names
-// none) can be matched to DBL's "Xyz NT" of the same year
+// A translation key without the scope it names ("NT and Psalms"), so a find.bible "Xyz 2008
+// Edition" (which names none) can be matched to DBL's "Xyz NT" of the same year, and an open Bible
+// to the New Testament it grew from
 const scope_free_key = (name:string):string => translation_key(name)
-    .replace(/\b(?:nt|ot|portions|selections)\b/g, ' ').replace(/\s+/g, ' ').trim()
+    .replace(/\b(?:nt|ot|portions|selections|psalms|proverbs|and|with)\b/g, ' ')
+    .replace(/\s+/g, ' ').trim()
+
+// The scope a name gives ("nt psalms"), or '' for none, as a whole Bible's usually doesn't
+const scope_of = (name:string):string => translation_key(unbracketed(name)).split(' ')
+    .filter(word => /^(?:nt|ot|portions|selections|psalms|proverbs)$/.test(word)).join(' ')
 
 // A name with only its case, accents and punctuation dropped — to tell which of two translations
 // of similar names a version is exactly named after
@@ -735,8 +802,8 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
     const first_by_key = new Map<string, Translation>()
     for (const translation of keyed){
         group_of.set(translation, [translation])
-        const key = [translation.medium, translation.language, translation_key(translation.name)]
-            .join('|')
+        const key = [translation.medium, language_key(translation.language),
+            translation_key(translation.name)].join('|')
         const first = first_by_key.get(key)
         if (first)
             join(first, translation)
@@ -747,7 +814,7 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
     // find.bible names many texts just "Xyz 2008 Edition", naming no scope — join each with the
     // other texts of its year named the same but for their scope (e.g. DBL's "Xyz NT")
     const year_key = (t:Translation):string =>
-        `${t.language}|${scope_free_key(t.name)}|${edition_year(t)}`
+        `${language_key(t.language)}|${scope_free_key(t.name)}|${edition_year(t)}`
     const texts = keyed.filter(t =>
         t.medium === 'text' && edition_year(t) && scope_free_key(t.name))
     const dated_editions = new Map(texts.filter(t => /\b\d{4} edition$/i.test(t.name.trim()))

@@ -765,6 +765,30 @@ export interface FetchBible {
 // fetch.bible's language code for a translation — its ids are always '<language>_<name>'
 export const fetch_language = (fb_id:string):string => fb_id.split('_')[0]!
 
+// Individual languages that sources sometimes code by their macrolanguage instead, by code (DBL
+// codes one Asante Twi Bible 'aka', for Akan, but the rest 'twi') — only those seen to split one
+// translation's entries
+const MACROLANGUAGES:Record<string, string> = {
+    twi: 'aka', fat: 'aka', nno: 'nor', nob: 'nor', azb: 'aze', azj: 'aze', ike: 'iku', lvs: 'lav',
+    uzn: 'uzb',
+}
+
+export function related_languages(code:string):string[]{
+    // The codes that are the same language as `code` — itself, the macrolanguage it's also coded
+    // by, or the individual languages it's coding — but never two individual languages of one
+    // macrolanguage (e.g. Northern and Southern Azerbaijani)
+    const macro = MACROLANGUAGES[code]
+    return [code, ...macro ? [macro] : [],
+        ...Object.keys(MACROLANGUAGES).filter(member => MACROLANGUAGES[member] === code)]
+}
+
+// Whether two language codes are the same language (see related_languages)
+export const same_language = (a:string, b:string):boolean => related_languages(a).includes(b)
+
+// The code to group a language under where versions are keyed by language — its macrolanguage's,
+// if it's sometimes coded by that (see MACROLANGUAGES)
+export const language_key = (code:string):string => MACROLANGUAGES[code] ?? code
+
 // A language in find.bible's languages.json
 export interface FindBibleLanguage {
     iso:string  // ISO 639-3 code

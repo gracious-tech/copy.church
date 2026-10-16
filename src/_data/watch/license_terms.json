@@ -1450,6 +1450,16 @@
         "last_verified": "2026-10-16"
     },
     {
+        "translation_id": "AZBIAB",
+        "owner_id": "elam_ministries",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/bd9a8212895d8408",
+        "last_verified": "2026-10-16"
+    },
+    {
         "translation_id": "AZGTBL",
         "owner_id": "wycliffe_bible_translators",
         "roles": [
@@ -5593,16 +5603,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "dbl_03bd851e43efeaeb",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/03bd851e43efeaeb",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "dbl_03d2ea6f8f7c4a19",
         "owner_id": "biblica",
         "roles": [
@@ -8352,16 +8352,6 @@
         ],
         "license": "cc-by-sa",
         "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_0b8aa752ac59ff72",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/0b8aa752ac59ff72",
         "last_verified": "2026-10-16"
     },
     {
@@ -17835,16 +17825,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "dbl_27a979e345ebfdb3",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/27a979e345ebfdb3",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "dbl_27b1393b7176ac27",
         "owner_id": "wycliffe_bible_translators",
         "roles": [
@@ -21465,16 +21445,6 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/3057cfa8f29a404b",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_305ebd10f3d3d11d",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/305ebd10f3d3d11d",
         "last_verified": "2026-10-16"
     },
     {
@@ -28115,16 +28085,6 @@
         ],
         "license": "cc-by-sa",
         "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_43f5340f5fa21fe9",
-        "owner_id": "norwegian_bible_society",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/43f5340f5fa21fe9",
         "last_verified": "2026-10-16"
     },
     {
@@ -35261,16 +35221,6 @@
         ],
         "license": "cc-by-sa",
         "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_56627b4580f64fcf",
-        "owner_id": "canadian_bible_society",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/56627b4580f64fcf",
         "last_verified": "2026-10-16"
     },
     {
@@ -44120,16 +44070,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "dbl_6dccfcd4bd7bf4df",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/6dccfcd4bd7bf4df",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "dbl_6dcebecf719f4964",
         "owner_id": "rhema_for_the_nations",
         "roles": [
@@ -44824,16 +44764,6 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/704348a625f34f4b",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_704b305137c6e928",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/704b305137c6e928",
         "last_verified": "2026-10-16"
     },
     {
@@ -47383,16 +47313,6 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/791c13310c8b459b",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_792e3f09b7135a2b",
-        "owner_id": "latvijas_bībeles_savienība_latvian_bible_union",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/792e3f09b7135a2b",
         "last_verified": "2026-10-16"
     },
     {
@@ -70362,16 +70282,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "dbl_bd9a8212895d8408",
-        "owner_id": "elam_ministries",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/bd9a8212895d8408",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "dbl_bdaf6e1589a94ac8",
         "owner_id": "wycliffe_bible_translators",
         "roles": [
@@ -73632,6 +73542,26 @@
         "last_verified": "2026-10-16"
     },
     {
+        "translation_id": "dbl_c67d4b5e9d255184",
+        "owner_id": "bible_society_of_uganda",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/c67d4b5e9d255184",
+        "last_verified": "2026-10-16"
+    },
+    {
+        "translation_id": "dbl_c67d4b5e9d255184",
+        "owner_id": "united_bible_societies",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/c67d4b5e9d255184",
+        "last_verified": "2026-10-16"
+    },
+    {
         "translation_id": "dbl_c6827090a00411e7",
         "owner_id": "wycliffe_bible_translators",
         "roles": [
@@ -74591,16 +74521,6 @@
         ],
         "license": "cc-by-nc-sa",
         "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_c97c5e017bdf893c",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/c97c5e017bdf893c",
         "last_verified": "2026-10-16"
     },
     {
@@ -86622,16 +86542,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "dbl_ea36d183295f766d",
-        "owner_id": "norwegian_bible_society",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/ea36d183295f766d",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "dbl_ea3927e312bd63d8",
         "owner_id": "cameroon_association_for_bible_translation_and_literacy",
         "roles": [
@@ -87086,16 +86996,6 @@
         ],
         "license": "cc-by-sa",
         "url": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "dbl_eb5a5625be79d728",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/eb5a5625be79d728",
         "last_verified": "2026-10-16"
     },
     {
@@ -97547,16 +97447,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "IBBNAAM",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/1c28697f4b307dfd",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "IBLWBT",
         "owner_id": "wycliffe_bible_translators",
         "roles": [
@@ -97564,16 +97454,6 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/252df8806fdbf560",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "IBOILB",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/5a8a79e309165aa5",
         "last_verified": "2026-10-16"
     },
     {
@@ -97794,6 +97674,16 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/40a47749a9bdcbee",
+        "last_verified": "2026-10-16"
+    },
+    {
+        "translation_id": "IKURLB",
+        "owner_id": "canadian_bible_society",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/56627b4580f64fcf",
         "last_verified": "2026-10-16"
     },
     {
@@ -101117,6 +101007,16 @@
         "last_verified": "2026-10-16"
     },
     {
+        "translation_id": "LVSLG8",
+        "owner_id": "latvijas_bībeles_savienība_latvian_bible_union",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/792e3f09b7135a2b",
+        "last_verified": "2026-10-16"
+    },
+    {
         "translation_id": "LWGBSK",
         "owner_id": "bible_society_of_kenya",
         "roles": [
@@ -104167,6 +104067,26 @@
         "last_verified": "2026-10-16"
     },
     {
+        "translation_id": "NNON11",
+        "owner_id": "norwegian_bible_society",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/43f5340f5fa21fe9",
+        "last_verified": "2026-10-16"
+    },
+    {
+        "translation_id": "NNON85",
+        "owner_id": "norwegian_bible_society",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/ea36d183295f766d",
+        "last_verified": "2026-10-16"
+    },
+    {
         "translation_id": "NNPBSI",
         "owner_id": "bible_society_of_india",
         "roles": [
@@ -104284,6 +104204,16 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/182766624860673f",
+        "last_verified": "2026-10-16"
+    },
+    {
+        "translation_id": "NORNCB",
+        "owner_id": "biblica",
+        "roles": [
+            "text"
+        ],
+        "license": "unknown",
+        "url": "https://app.library.bible/content/faaa7ebd3b3641a0",
         "last_verified": "2026-10-16"
     },
     {
@@ -104674,26 +104604,6 @@
         ],
         "license": "unknown",
         "url": "https://app.library.bible/content/c7ed39d24e32d771",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "NYNBSU",
-        "owner_id": "united_bible_societies",
-        "roles": [
-            "text"
-        ],
-        "license": "public",
-        "url": "https://app.library.bible/content/9bf4c154bb6029f7",
-        "last_verified": "2026-10-16"
-    },
-    {
-        "translation_id": "NYNBSU",
-        "owner_id": "bible_society_of_uganda",
-        "roles": [
-            "text"
-        ],
-        "license": "public",
-        "url": "https://app.library.bible/content/9bf4c154bb6029f7",
         "last_verified": "2026-10-16"
     },
     {
@@ -109857,16 +109767,6 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "TWIOCB",
-        "owner_id": "biblica",
-        "roles": [
-            "text"
-        ],
-        "license": "unknown",
-        "url": "https://app.library.bible/content/da58b3ebec7d3eb6",
-        "last_verified": "2026-10-16"
-    },
-    {
         "translation_id": "TWITWI",
         "owner_id": "bible_society_of_ghana",
         "roles": [
@@ -110387,13 +110287,13 @@
         "last_verified": "2026-10-16"
     },
     {
-        "translation_id": "UZBIB2",
+        "translation_id": "UZNUZBL",
         "owner_id": "institute_for_bible_translation_russia",
         "roles": [
             "text"
         ],
         "license": "unknown",
-        "url": "https://app.library.bible/content/9712485bf806c636",
+        "url": "https://app.library.bible/content/2647669d5b9c3f63",
         "last_verified": "2026-10-16"
     },
     {

@@ -3254,12 +3254,12 @@
         "id": "AZBIAB",
         "medium": "text",
         "name": "Iranian Azeri Bible",
-        "abbrev": "AZBIAB",
-        "language": "aze",
-        "latest_year": 2013,
+        "abbrev": "IAB",
+        "language": "azb",
+        "latest_year": 2017,
         "external_ids": {
-            "find_bible": "AZBIAB",
-            "dbl": "bd9a8212895d8408"
+            "dbl": "bd9a8212895d8408",
+            "find_bible": "AZBIAB"
         },
         "info_url": "https://find.bible/bibles/AZBIAB/"
     },
@@ -10775,18 +10775,6 @@
         "info_url": "https://find.bible/bibles/SMLWBT/"
     },
     {
-        "id": "dbl_03bd851e43efeaeb",
-        "medium": "text",
-        "name": "Urdu Contemporary Version New Testament (Devanagari Edition) 2022",
-        "abbrev": "UCVD",
-        "language": "urd",
-        "latest_year": 2022,
-        "external_ids": {
-            "dbl": "03bd851e43efeaeb"
-        },
-        "info_url": "https://find.bible/bibles/URDZZZP/"
-    },
-    {
         "id": "dbl_03d2ea6f8f7c4a19",
         "medium": "audio",
         "name": "Biblica® Open Asante Twi Contemporary Bible™, Audio Edition",
@@ -12885,18 +12873,6 @@
             "dbl": "0b869355f930f554"
         },
         "info_url": "https://app.library.bible/content/0b869355f930f554"
-    },
-    {
-        "id": "dbl_0b8aa752ac59ff72",
-        "medium": "text",
-        "name": "Punjabi Contemporary Version  2022, New Testament",
-        "abbrev": "PCV",
-        "language": "pan",
-        "latest_year": 2022,
-        "external_ids": {
-            "dbl": "0b8aa752ac59ff72"
-        },
-        "info_url": "https://find.bible/bibles/PANZZZP/"
     },
     {
         "id": "dbl_0ba85313b5f809e6",
@@ -19859,18 +19835,6 @@
         "info_url": "https://find.bible/bibles/FFMWBT/"
     },
     {
-        "id": "dbl_27a979e345ebfdb3",
-        "medium": "text",
-        "name": "Hausa Contemporary New Testament 2009",
-        "abbrev": "HCB",
-        "language": "hau",
-        "latest_year": 2009,
-        "external_ids": {
-            "dbl": "27a979e345ebfdb3"
-        },
-        "info_url": "https://app.library.bible/content/27a979e345ebfdb3"
-    },
-    {
         "id": "dbl_27b1393b7176ac27",
         "medium": "text",
         "name": "Warlpiri Short Bible",
@@ -22533,18 +22497,6 @@
             "dbl": "3057cfa8f29a404b"
         },
         "info_url": "https://app.library.bible/content/3057cfa8f29a404b"
-    },
-    {
-        "id": "dbl_305ebd10f3d3d11d",
-        "medium": "text",
-        "name": "Akuapem Twi Contemporary Version NT and Psalms",
-        "abbrev": "NAAK",
-        "language": "twi",
-        "latest_year": 2000,
-        "external_ids": {
-            "dbl": "305ebd10f3d3d11d"
-        },
-        "info_url": "https://app.library.bible/content/305ebd10f3d3d11d"
     },
     {
         "id": "dbl_30605e6ef0e515a0",
@@ -27525,18 +27477,6 @@
             "dbl": "43f30f4ecd1c3672"
         },
         "info_url": "https://app.library.bible/content/43f30f4ecd1c3672"
-    },
-    {
-        "id": "dbl_43f5340f5fa21fe9",
-        "medium": "text",
-        "name": "NO2011 nynorsk",
-        "abbrev": "N11NN",
-        "language": "nno",
-        "latest_year": 2011,
-        "external_ids": {
-            "dbl": "43f5340f5fa21fe9"
-        },
-        "info_url": "https://app.library.bible/content/43f5340f5fa21fe9"
     },
     {
         "id": "dbl_441b4b89054c19e7",
@@ -32747,18 +32687,6 @@
         "info_url": "https://app.library.bible/content/565b0b64938c2785"
     },
     {
-        "id": "dbl_56627b4580f64fcf",
-        "medium": "text",
-        "name": "Labrador Inuttitut Heritage Bible",
-        "abbrev": "LIHB08",
-        "language": "ike",
-        "latest_year": 2008,
-        "external_ids": {
-            "dbl": "56627b4580f64fcf"
-        },
-        "info_url": "https://app.library.bible/content/56627b4580f64fcf"
-    },
-    {
         "id": "dbl_56679ee8b84211e6",
         "medium": "audio",
         "name": "Tuma-Irumu - 2011 Edition (NT + Pslams) Non Drama",
@@ -35636,7 +35564,7 @@
         "external_ids": {
             "dbl": "60f5b338342811e7"
         },
-        "info_url": "https://app.library.bible/content/60f5b338342811e7"
+        "info_url": "https://find.bible/bibles/UZBIB2/"
     },
     {
         "id": "dbl_61011e86542611e6",
@@ -39179,18 +39107,6 @@
         "info_url": "https://app.library.bible/content/6dc5759b79d44960"
     },
     {
-        "id": "dbl_6dccfcd4bd7bf4df",
-        "medium": "text",
-        "name": "Asante Twi Contemporary Version NT",
-        "abbrev": "NAT",
-        "language": "twi",
-        "latest_year": 1992,
-        "external_ids": {
-            "dbl": "6dccfcd4bd7bf4df"
-        },
-        "info_url": "https://app.library.bible/content/6dccfcd4bd7bf4df"
-    },
-    {
         "id": "dbl_6dcebecf719f4964",
         "medium": "audio",
         "name": "Darmiya NT-Non Drama",
@@ -39729,18 +39645,6 @@
             "dbl": "704348a625f34f4b"
         },
         "info_url": "https://app.library.bible/content/704348a625f34f4b"
-    },
-    {
-        "id": "dbl_704b305137c6e928",
-        "medium": "text",
-        "name": "Contemporary Kirundi Bible, New Testament 2021",
-        "abbrev": "CKB",
-        "language": "run",
-        "latest_year": 2021,
-        "external_ids": {
-            "dbl": "704b305137c6e928"
-        },
-        "info_url": "https://find.bible/bibles/RUNZZZP/"
     },
     {
         "id": "dbl_706195f63b1518a8",
@@ -41709,18 +41613,6 @@
             "dbl": "791c13310c8b459b"
         },
         "info_url": "https://app.library.bible/content/791c13310c8b459b"
-    },
-    {
-        "id": "dbl_792e3f09b7135a2b",
-        "medium": "text",
-        "name": "Latvian Gluck 8th edition",
-        "abbrev": "LG8",
-        "language": "lav",
-        "latest_year": 2019,
-        "external_ids": {
-            "dbl": "792e3f09b7135a2b"
-        },
-        "info_url": "https://app.library.bible/content/792e3f09b7135a2b"
     },
     {
         "id": "dbl_79301eebdc28f621",
@@ -58775,18 +58667,6 @@
         "info_url": "https://app.library.bible/content/bd82062c7c594eaf"
     },
     {
-        "id": "dbl_bd9a8212895d8408",
-        "medium": "text",
-        "name": "Iranian Azeri Bible",
-        "abbrev": "IAB",
-        "language": "azb",
-        "latest_year": 2017,
-        "external_ids": {
-            "dbl": "bd9a8212895d8408"
-        },
-        "info_url": "https://app.library.bible/content/bd9a8212895d8408"
-    },
-    {
         "id": "dbl_bdaf6e1589a94ac8",
         "medium": "audio",
         "name": "Mango - WBT Edition (NT) Drama",
@@ -61127,6 +61007,18 @@
         "info_url": "https://find.bible/bibles/LUGBSU/"
     },
     {
+        "id": "dbl_c67d4b5e9d255184",
+        "medium": "text",
+        "name": "Runyankore-Rukiga Bible",
+        "abbrev": "RKK2008",
+        "language": "nyn",
+        "latest_year": 2008,
+        "external_ids": {
+            "dbl": "c67d4b5e9d255184"
+        },
+        "info_url": "https://find.bible/bibles/NYNBSU/"
+    },
+    {
         "id": "dbl_c6827090a00411e7",
         "medium": "audio",
         "name": "Didinga - WBT Version (Drama NT)",
@@ -61857,18 +61749,6 @@
             "dbl": "c963c874103249a8"
         },
         "info_url": "https://app.library.bible/content/c963c874103249a8"
-    },
-    {
-        "id": "dbl_c97c5e017bdf893c",
-        "medium": "text",
-        "name": "Asante Twi Contemporary Bible 2020",
-        "abbrev": "ASCB",
-        "language": "aka",
-        "latest_year": 2020,
-        "external_ids": {
-            "dbl": "c97c5e017bdf893c"
-        },
-        "info_url": "https://app.library.bible/content/c97c5e017bdf893c"
     },
     {
         "id": "dbl_c97e5a0b00f01244",
@@ -70703,18 +70583,6 @@
         "info_url": "https://app.library.bible/content/ea0f0d58bb2145a0"
     },
     {
-        "id": "dbl_ea36d183295f766d",
-        "medium": "text",
-        "name": "The Bible in Norwegian 1978 Nynorsk (edited in 1985)",
-        "abbrev": "NO7885NN",
-        "language": "nno",
-        "latest_year": 1978,
-        "external_ids": {
-            "dbl": "ea36d183295f766d"
-        },
-        "info_url": "https://app.library.bible/content/ea36d183295f766d"
-    },
-    {
         "id": "dbl_ea3927e312bd63d8",
         "medium": "text",
         "name": "Numala2",
@@ -71073,18 +70941,6 @@
             "dbl": "eb54500e347f4ee4"
         },
         "info_url": "https://app.library.bible/content/eb54500e347f4ee4"
-    },
-    {
-        "id": "dbl_eb5a5625be79d728",
-        "medium": "text",
-        "name": "Telugu Contemporary Version 2020, New Testament",
-        "abbrev": "TCV",
-        "language": "tel",
-        "latest_year": 2021,
-        "external_ids": {
-            "dbl": "eb5a5625be79d728"
-        },
-        "info_url": "https://find.bible/bibles/TELZZZP/"
     },
     {
         "id": "dbl_eb6cb2a0426e4b6a",
@@ -75080,7 +74936,7 @@
         "external_ids": {
             "dbl": "faaa7ebd3b3641a0"
         },
-        "info_url": "https://app.library.bible/content/faaa7ebd3b3641a0"
+        "info_url": "https://find.bible/bibles/NORNCB/"
     },
     {
         "id": "dbl_faab24d81ad843d0",
@@ -84664,19 +84520,6 @@
         "info_url": "https://find.bible/bibles/IBATIV/"
     },
     {
-        "id": "IBBNAAM",
-        "medium": "text",
-        "name": "Ibibio Contemporary Bible 2020, New Testament",
-        "abbrev": "ICB",
-        "language": "ibb",
-        "latest_year": 2020,
-        "external_ids": {
-            "dbl": "1c28697f4b307dfd",
-            "find_bible": "IBBNAAM"
-        },
-        "info_url": "https://find.bible/bibles/IBBNAAM/"
-    },
-    {
         "id": "IBGACT",
         "medium": "text",
         "name": "Ibanag New Testament & Psalms",
@@ -84700,19 +84543,6 @@
             "find_bible": "IBLWBT"
         },
         "info_url": "https://find.bible/bibles/IBLWBT/"
-    },
-    {
-        "id": "IBOILB",
-        "medium": "text",
-        "name": "Igbo Contemporary Bible, New Testament 2019",
-        "abbrev": "ICB",
-        "language": "ibo",
-        "latest_year": 1988,
-        "external_ids": {
-            "dbl": "5a8a79e309165aa5",
-            "find_bible": "IBOILB"
-        },
-        "info_url": "https://find.bible/bibles/IBOILB/"
     },
     {
         "id": "IDANEW",
@@ -85122,12 +84952,12 @@
         "id": "IKURLB",
         "medium": "text",
         "name": "Labrador Inuttitut Heritage Bible",
-        "abbrev": "IKURLB",
-        "language": "iku",
+        "abbrev": "LIHB08",
+        "language": "ike",
         "latest_year": 2008,
         "external_ids": {
-            "find_bible": "IKURLB",
-            "dbl": "56627b4580f64fcf"
+            "dbl": "56627b4580f64fcf",
+            "find_bible": "IKURLB"
         },
         "info_url": "https://find.bible/bibles/IKURLB/"
     },
@@ -92746,12 +92576,12 @@
         "id": "LVSLG8",
         "medium": "text",
         "name": "Latvian Gluck 8th edition",
-        "abbrev": "LVSLG8",
-        "language": "lvs",
+        "abbrev": "LG8",
+        "language": "lav",
         "latest_year": 2019,
         "external_ids": {
-            "find_bible": "LVSLG8",
-            "dbl": "792e3f09b7135a2b"
+            "dbl": "792e3f09b7135a2b",
+            "find_bible": "LVSLG8"
         },
         "info_url": "https://find.bible/bibles/LVSLG8/"
     },
@@ -99592,26 +99422,26 @@
     {
         "id": "NNON11",
         "medium": "text",
-        "name": "2011 Nynorsk Norwegian Bible",
-        "abbrev": "NNON11",
-        "language": "nor",
+        "name": "NO2011 nynorsk",
+        "abbrev": "N11NN",
+        "language": "nno",
         "latest_year": 2011,
         "external_ids": {
-            "find_bible": "NNON11",
-            "dbl": "43f5340f5fa21fe9"
+            "dbl": "43f5340f5fa21fe9",
+            "find_bible": "NNON11"
         },
         "info_url": "https://find.bible/bibles/NNON11/"
     },
     {
         "id": "NNON85",
         "medium": "text",
-        "name": "1985 Revision of the 1978 Nynorsk Norwegian Bible",
-        "abbrev": "NNON85",
-        "language": "nor",
-        "latest_year": 1985,
+        "name": "The Bible in Norwegian 1978 Nynorsk (edited in 1985)",
+        "abbrev": "NO7885NN",
+        "language": "nno",
+        "latest_year": 1978,
         "external_ids": {
-            "find_bible": "NNON85",
-            "dbl": "ea36d183295f766d"
+            "dbl": "ea36d183295f766d",
+            "find_bible": "NNON85"
         },
         "info_url": "https://find.bible/bibles/NNON85/"
     },
@@ -99705,18 +99535,6 @@
             "find_bible": "NOBB85"
         },
         "info_url": "https://find.bible/bibles/NOBB85/"
-    },
-    {
-        "id": "NOBB88",
-        "medium": "text",
-        "name": "1988 Norwegian Bible",
-        "abbrev": "NOBB88",
-        "language": "nob",
-        "latest_year": 1988,
-        "external_ids": {
-            "find_bible": "NOBB88"
-        },
-        "info_url": "https://find.bible/bibles/NOBB88/"
     },
     {
         "id": "NOBBGO",
@@ -100599,19 +100417,6 @@
             "find_bible": "NYMBST"
         },
         "info_url": "https://find.bible/bibles/NYMBST/"
-    },
-    {
-        "id": "NYNBSU",
-        "medium": "text",
-        "name": "Runyankore - Rukiga Bible 1964",
-        "abbrev": "B64",
-        "language": "nyn",
-        "latest_year": 1964,
-        "external_ids": {
-            "dbl": "9bf4c154bb6029f7",
-            "find_bible": "NYNBSU"
-        },
-        "info_url": "https://find.bible/bibles/NYNBSU/"
     },
     {
         "id": "NYOBRR",
@@ -111987,31 +111792,6 @@
         "info_url": "https://find.bible/bibles/TWINTP/"
     },
     {
-        "id": "TWIOCB",
-        "medium": "text",
-        "name": "Open Asante Twi Bible",
-        "abbrev": "TWIOCB",
-        "language": "twi",
-        "latest_year": 1996,
-        "external_ids": {
-            "find_bible": "TWIOCB",
-            "dbl": "da58b3ebec7d3eb6"
-        },
-        "info_url": "https://find.bible/bibles/TWIOCB/"
-    },
-    {
-        "id": "TWIOCBA",
-        "medium": "text",
-        "name": "Open Akuapem Twi Bible",
-        "abbrev": "TWIOCBA",
-        "language": "twi",
-        "latest_year": 1996,
-        "external_ids": {
-            "find_bible": "TWIOCBA"
-        },
-        "info_url": "https://find.bible/bibles/TWIOCBA/"
-    },
-    {
         "id": "TWITWI",
         "medium": "text",
         "name": "Asante-Twi Bible With Deutero-Canons",
@@ -113011,19 +112791,6 @@
         "info_url": "https://find.bible/bibles/UVLUVL/"
     },
     {
-        "id": "UZBIB2",
-        "medium": "text",
-        "name": "Uzbek Bible (Cyrillic)",
-        "abbrev": "UzbC",
-        "language": "uzb",
-        "latest_year": 2016,
-        "external_ids": {
-            "dbl": "9712485bf806c636",
-            "find_bible": "UZBIB2"
-        },
-        "info_url": "https://find.bible/bibles/UZBIB2/"
-    },
-    {
         "id": "UZBIBL",
         "medium": "text",
         "name": "Uzbek New Testament, Genesis, and Psalms (Latin)",
@@ -113062,13 +112829,13 @@
     {
         "id": "UZNUZBL",
         "medium": "text",
-        "name": "Bible in Oʻzbekcha Uzbek",
-        "abbrev": "UZNUZBL",
-        "language": "uzn",
+        "name": "Uzbek Bible (Latin)",
+        "abbrev": "UzbL",
+        "language": "uzb",
         "latest_year": 2016,
         "external_ids": {
-            "find_bible": "UZNUZBL",
-            "dbl": "2647669d5b9c3f63"
+            "dbl": "2647669d5b9c3f63",
+            "find_bible": "UZNUZBL"
         },
         "info_url": "https://find.bible/bibles/UZNUZBL/"
     },
