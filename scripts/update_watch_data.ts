@@ -96,6 +96,19 @@ const CASE_TRANSLATION_IDS = new Set(
 // response log can follow a case's translation to the version now listed
 const replaced_by = new Map<string, string>()
 
+// Drop the given versions from the listing, along with their terms
+function drop_versions(ids:Set<string>, translations:Translation[],
+        license_terms:LicenseTerms[]):void{
+    for (let i = translations.length - 1; i >= 0; i--){
+        if (ids.has(translations[i]!.id))
+            translations.splice(i, 1)
+    }
+    for (let i = license_terms.length - 1; i >= 0; i--){
+        if (ids.has(license_terms[i]!.translation_id))
+            license_terms.splice(i, 1)
+    }
+}
+
 // Translations no source gives a year for, but known to be old enough to trip the age filter (or
 // ancient source texts rather than translations) — judged by hand from what each one is
 const KNOWN_OLD = new Set([
@@ -656,19 +669,36 @@ function drop_superseded_closed(translations:Translation[], license_terms:Licens
     }
 
     // Drop them along with their terms
-    for (let i = translations.length - 1; i >= 0; i--){
-        if (superseded.has(translations[i]!.id))
-            translations.splice(i, 1)
-    }
-    for (let i = license_terms.length - 1; i >= 0; i--){
-        if (superseded.has(license_terms[i]!.translation_id))
-            license_terms.splice(i, 1)
-    }
+    drop_versions(new Set(superseded.keys()), translations, license_terms)
     console.info(`Dropped ${superseded.size} closed versions superseded by an open edition`)
 }
 
 
 // ---- editions of the same translation ----
+
+// Versions that are another version's text under a name merge_editions can't match it by, by the
+// id of the version listed instead — judged by hand
+const DUPLICATE_VERSIONS:Record<string, string> = {
+    dbl_32664dc3288a28df: 'ENGWEB',  // World English Bible USA Classic (without Strong's numbers)
+    ENGWEBBM: 'ENGWEBM',  // World Messianic Bible British Edition — only its spelling differs
+}
+
+// Drop each duplicate version (see DUPLICATE_VERSIONS) along with its terms, once editions are
+// merged — each side followed to the version now listed for it, so a duplicate's editions go too
+function drop_duplicates(translations:Translation[], license_terms:LicenseTerms[]):void{
+    const listed = new Set(translations.map(t => t.id))
+    const duplicates = new Set<string>()
+    for (const [id, of_id] of Object.entries(DUPLICATE_VERSIONS)){
+        const duplicate = listed_version(id, listed)
+        const original = listed_version(of_id, listed)
+        if (!duplicate || !original || duplicate === original)
+            continue
+        duplicates.add(duplicate)
+        replaced_by.set(duplicate, original)
+    }
+    drop_versions(duplicates, translations, license_terms)
+    console.info(`Dropped ${duplicates.size} versions duplicating another listed version`)
+}
 
 // Words that make a bracketed part of a name an edition qualifier — a script, an orthography, a
 // regional or canon edition, a recording style — rather than a dialect, place or translator, which
@@ -992,12 +1022,7 @@ async function main():Promise<void>{
     // Drop translations too old to have a live rights holder (see PUBLIC_DOMAIN_AGE_YEARS above)
     const excluded_ids = new Set(
         translations.filter(too_old_for_copyright).map(t => t.id))
-    for (let i = translations.length - 1; i >= 0; i--){
-        if (excluded_ids.has(translations[i]!.id)) translations.splice(i, 1)
-    }
-    for (let i = license_terms.length - 1; i >= 0; i--){
-        if (excluded_ids.has(license_terms[i]!.translation_id)) license_terms.splice(i, 1)
-    }
+    drop_versions(excluded_ids, translations, license_terms)
     console.info(`Excluded ${excluded_ids.size} translations too old for copyright `
         + `(published more than ${PUBLIC_DOMAIN_AGE_YEARS} years ago)`)
 
@@ -1009,6 +1034,7 @@ async function main():Promise<void>{
     // Only once every source has had its say on licenses, so open editions are all known
     drop_superseded_closed(translations, license_terms, from_find_bible)
     merge_editions(translations, license_terms, from_find_bible)
+    drop_duplicates(translations, license_terms)
     credit_aggregator_own_works(translations, owners, license_terms)
 
     // Drop owners left with no license terms (e.g. all their translations were too old)

@@ -22991,18 +22991,6 @@
         "info_url": "https://app.library.bible/content/3261addb4f8b476f"
     },
     {
-        "id": "dbl_32664dc3288a28df",
-        "medium": "text",
-        "name": "World English Bible USA Classic (without Strong's numbers)",
-        "abbrev": "engWEBUS",
-        "language": "eng",
-        "latest_year": 2022,
-        "external_ids": {
-            "dbl": "32664dc3288a28df"
-        },
-        "info_url": "https://app.library.bible/content/32664dc3288a28df"
-    },
-    {
         "id": "dbl_32921070c9ddde8c",
         "medium": "text",
         "name": "Kreol Morisien Bible",
@@ -79377,19 +79365,6 @@
             "find_bible": "ENGWEB"
         },
         "info_url": "https://find.bible/bibles/ENGWEB/"
-    },
-    {
-        "id": "ENGWEBBM",
-        "medium": "text",
-        "name": "World Messianic Bible British Edition",
-        "abbrev": "engWMBBE",
-        "language": "eng",
-        "latest_year": 2016,
-        "external_ids": {
-            "dbl": "04da588535d2f823",
-            "find_bible": "ENGWEBBM"
-        },
-        "info_url": "https://find.bible/bibles/ENGWEBBM/"
     },
     {
         "id": "ENGWEBM",

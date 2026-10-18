@@ -22058,16 +22058,6 @@
         "last_verified": "2026-10-18"
     },
     {
-        "translation_id": "dbl_32664dc3288a28df",
-        "owner_id": "ebible_org",
-        "roles": [
-            "text"
-        ],
-        "license": "public",
-        "url": "https://app.library.bible/content/32664dc3288a28df",
-        "last_verified": "2026-10-18"
-    },
-    {
         "translation_id": "dbl_32921070c9ddde8c",
         "owner_id": "bible_society_of_mauritius",
         "roles": [
@@ -95334,16 +95324,6 @@
         ],
         "license": "public",
         "url": "https://app.library.bible/content/9879dbb7cfe39e4d",
-        "last_verified": "2026-10-18"
-    },
-    {
-        "translation_id": "ENGWEBBM",
-        "owner_id": "ebible_org",
-        "roles": [
-            "text"
-        ],
-        "license": "public",
-        "url": "https://app.library.bible/content/04da588535d2f823",
         "last_verified": "2026-10-18"
     },
     {
