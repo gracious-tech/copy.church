@@ -407,22 +407,24 @@ export function strip_copyright_notice(text:string):string{
     return name.trim()
 }
 
-// Names that show up as an "attribution" or "rights holder" in source data but are really just a
-// hosting/aggregation platform for texts they don't themselves hold rights to (most often public
-// domain ones) — crediting them as the owner would be wrong, e.g. eBible.org mirrors plenty of
-// translations it didn't produce and has no rights over. A source can add its own (lowercased).
+// Hosting/aggregation platforms that sources often give as a translation's licensor or attribution
+// without holding any rights to it (most often public domain ones), e.g. eBible.org is DBL's
+// licensor for plenty of translations it didn't produce. So a platform is only credited as a
+// holder where a copyright statement names it ("Copyright © 2023 İsmail Serinken and eBible.org"),
+// or for its own works (see AGGREGATOR_OWN_WORKS), never as a bare licensor or attribution. A
+// source can add its own (lowercased).
 export const AGGREGATOR_NAMES = new Set(['ebible.org'])
 
-// Whether a name is just a hosting/aggregation platform (see AGGREGATOR_NAMES)
+// Whether a bare licensor or attribution (not a copyright statement) is just a hosting platform
+// (see AGGREGATOR_NAMES)
 export const is_aggregator = (name:string):boolean =>
-    AGGREGATOR_NAMES.has(strip_copyright_notice(name).toLowerCase())
+    AGGREGATOR_NAMES.has(name.trim().toLowerCase())
 
-// The translations a hosting platform does own itself, by name, credited to it once every source
-// has had its say — eBible.org made the World English Bible (the World Messianic Bible is an
-// edition of it), and is named as a co-holder of the Yorumsuz Türkçe Çeviri
+// The translations a hosting platform made itself but which no copyright statement names it for
+// (as they're public domain), by name, credited to it once every source has had its say —
+// eBible.org made the World English Bible (the World Messianic Bible is an edition of it)
 export const AGGREGATOR_OWN_WORKS:Record<string, RegExp> = {
-    'eBible.org':
-        /\bworld (?:english|messianic) bible\b|\byorumsuz türkçe çeviri\b|\bturkish ytc\b/i,
+    'eBible.org': /\bworld (?:english|messianic) bible\b/i,
 }
 
 // Names that copyright notices give as a holder, but that aren't really a rights holder — a
@@ -450,12 +452,13 @@ const NON_HOLDER_RE = new RegExp([
 
 export function owner_id_for(owners:Owner[], attribution:string):string{
     // "public domain" (or a blank attribution) isn't a rights holder — don't invent a fake owner
-    // for it, just leave the license terms owner as 'unknown'. Same for a bare hosting platform.
+    // for it, just leave the license terms owner as 'unknown'
     const name = strip_copyright_notice(attribution)
-    // A name starting in lowercase is left-over prose ("der deutschen Ausgabe und")
-    if (!name || /^(?:public domain|anonymous)$/i.test(name) || is_aggregator(name)
+    // A name starting in lowercase is left-over prose ("der deutschen Ausgabe und"), unless it's a
+    // hosting platform's ("eBible.org")
+    if (!name || /^(?:public domain|anonymous)$/i.test(name)
             || NON_HOLDERS.has(slugify(clean_owner_name(name))) || NON_HOLDER_RE.test(name)
-            || /^\p{Ll}/u.test(name.replace(/^the\s+/i, '')))
+            || /^\p{Ll}/u.test(name.replace(/^the\s+/i, '')) && !is_aggregator(name))
         return 'unknown'
     return get_or_create_owner(owners, name)
 }

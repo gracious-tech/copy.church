@@ -55,9 +55,10 @@ import type {Translation, Owner, LicenseTerms, ResponseLogEntry} from '../src/_d
 import type {BuildState, DblSteps, FetchBible, FetchBibleEntry, FetchCollectionIds, FindBible,
     FindBibleIndex, FindBibleLanguage} from './watch_common.ts'
 import {AGGREGATOR_OWN_WORKS, args, build_org_index, DATA_DIR, fetch_into, fetch_json,
-    fetch_language, get_or_create_owner, language_key, language_names, license_from_text,
-    owner_id_for, owner_ids_for, push_terms, related_languages, same_language, save_json,
-    save_text, sort_keys, split_holders, strip_copyright_notice, today} from './watch_common.ts'
+    fetch_language, get_or_create_owner, is_aggregator, language_key, language_names,
+    license_from_text, owner_id_for, owner_ids_for, push_terms, related_languages, same_language,
+    save_json, save_text, sort_keys, split_holders, strip_copyright_notice, today}
+    from './watch_common.ts'
 import ebible_cache_json from './ebible_cache.json' with {type: 'json'}
 import response_log from '../src/_data/watch/response_log.json' with {type: 'json'}
 import {major_translation_owners} from './major_translation_owners.ts'
@@ -352,9 +353,11 @@ function pull_fetch_bible(translations:Translation[], owners:Owner[],
         if (!license || !translation_id || has_terms.has(translation_id))
             continue
 
+        // A bare hosting platform attribution ("eBible.org") isn't a copyright statement
+        const attribution = entry.copyright.attribution
         license_terms.push({
             translation_id,
-            owner_id: owner_id_for(owners, entry.copyright.attribution),
+            owner_id: is_aggregator(attribution) ? 'unknown' : owner_id_for(owners, attribution),
             roles: ['text'],
             license: typeof license.license === 'string' ? license.license : 'custom',
             url: license.url,
@@ -935,7 +938,7 @@ function merge_editions(translations:Translation[], license_terms:LicenseTerms[]
 
 // ---- hosting platforms' own translations ----
 
-// Credit each hosting platform as a rights holder of the translations it owns itself (see
+// Credit each hosting platform as a rights holder of the translations it made itself (see
 // AGGREGATOR_OWN_WORKS), in place of an unknown holder, else alongside the known ones
 function credit_aggregator_own_works(translations:Translation[], owners:Owner[],
         license_terms:LicenseTerms[]):void{
@@ -956,7 +959,7 @@ function credit_aggregator_own_works(translations:Translation[], owners:Owner[],
             credited += 1
         }
     }
-    console.info(`Credited hosting platforms with ${credited} translations they own`)
+    console.info(`Credited hosting platforms with ${credited} translations they made`)
 }
 
 
