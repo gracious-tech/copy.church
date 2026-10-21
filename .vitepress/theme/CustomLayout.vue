@@ -2,6 +2,8 @@
 <template lang='pug'>
 
 Layout(:class='page_id')
+    template(#nav-bar-content-before)
+        SearchPalette
     template(#nav-bar-content-after)
         ClientOnly
             TranslateButton.translate-nav
@@ -24,6 +26,7 @@ import DefaultTheme from 'vitepress/theme'
 import {computed} from 'vue'
 import {useRoute} from 'vitepress'
 
+import SearchPalette from './SearchPalette.vue'
 import TranslateButton from '../../src/_comp/TranslateButton.vue'
 import CountDown from '../../src/_comp/CountDown.vue'
 

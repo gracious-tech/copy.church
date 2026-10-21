@@ -1,16 +1,53 @@
 
+import fs from 'fs'
 import path from 'path'
 
 import {defineConfig} from 'vitepress'
 import MarkdownPluginFootnote from 'markdown-it-footnote'
+
+import {build_search, search_dir} from './search'
+
+
+const site_title = "Let's copy, church"
+const site_desc = "A call to freely share Christian resources to further God's kingdom"
+
+
+// Changes every build so search data can be cached forever (see theme/SearchPalette.vue)
+// NOTE Must be evaluated once per build so every page requests the same urls
+const search_version = Date.now().toString(36)
+
+
+// Search data only exists after a build, so serve the last build's while developing
+const search_dev_route = {
+    name: 'search-dev-route',
+    configureServer(server:{middlewares:{use:(fn:(req:{url?:string},
+            res:{setHeader:(k:string, v:string) => void, end:(body:Buffer|string) => void},
+            next:() => void) => void) => void}}){
+        server.middlewares.use((req, res, next) => {
+            const url = req.url?.split('?')[0]
+            if (!url?.startsWith(`/${search_dir}/`)){
+                next()
+                return
+            }
+            const file = path.resolve(__dirname, `../dist${url}`)
+            res.setHeader('Content-Type', 'application/json')
+            if (fs.existsSync(file)){
+                res.end(fs.readFileSync(file))
+            } else {
+                console.warn(`[search] ${file} doesn't exist, run a build for search to work in dev`)
+                res.end('[]')
+            }
+        })
+    },
+}
 
 
 export default defineConfig({
     cleanUrls: true,  // Don't force `.html` on urls
     outDir: 'dist',
     srcDir: 'src',
-    title: "Let's copy, church",
-    description: "A call to freely share Christian resources to further God's kingdom",
+    title: site_title,
+    description: site_desc,
     head: [
         ['link', {rel: 'icon', href: '/_assets/icon.png'}],
         // Required for Twitter to show any image at all
@@ -25,6 +62,10 @@ export default defineConfig({
     ],
     vite: {
         publicDir: '_public',
+        plugins: [search_dev_route],
+        define: {
+            __SEARCH_VERSION__: JSON.stringify(search_version),
+        },
         resolve: {
             alias: [
                 {find: '@', replacement: path.resolve(__dirname, '../src')},
@@ -54,9 +95,6 @@ export default defineConfig({
             {text: "Memes", link: '/share/'},
             {text: "About", link: '/about/'},
         ],
-        search: {
-            provider: 'local',
-        },
         sidebar: {
             '/objections/': [
                 {
@@ -153,6 +191,11 @@ export default defineConfig({
                 },
             ],
         },
+    },
+
+    async buildEnd(site_config){
+        await build_search(site_config.outDir, site_title, site_desc,
+            site_config.site.themeConfig.sidebar)
     },
 
     transformHead(ctx){

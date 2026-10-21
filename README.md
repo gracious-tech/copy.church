@@ -4,6 +4,11 @@
 The source code for [copy.church](https://copy.church)
 
 
+## Site search
+
+Search (Ctrl/⌘ K) covers the full text of every page, plus every owner and Bible version in Bible Org Watch. Its data is generated from the built pages at the end of each build (`.vitepress/search.ts`), so run `.bin/build` once for search to work under `.bin/serve`. To make a page come up for a search term it doesn't feature prominently, add it to `keywords` in that file.
+
+
 ## Rationale for wording of dedications
 
 This site aims to make it easy to dedicate something to the public domain, in the most simple and succinct way possible. So it does not recommend writing verbose text as part of the dedication, like some examples from Creative Commons are done.
