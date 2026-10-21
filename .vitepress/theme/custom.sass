@@ -54,6 +54,28 @@ html.dark
         background-color: var(--vp-c-brand-soft)
 
 
+// VitePress leaves room for its own search box, which isn't used (see theme/SearchPalette.vue)
+.VPNavBarSearch
+    display: none
+
+// Navbar links are long, so space them less where they only just fit
+@media (min-width: 768px) and (max-width: 1099px)
+    .VPNavBarMenu .VPNavBarMenuLink
+        padding: 0 8px
+
+    // Once translation is on, Elfsight's language menu replaces the icon and is wider, so make
+    // more room still
+    .VPNavBar:has(.translate-nav:not(.inactive))
+        .VPNavBarMenu .VPNavBarMenuLink
+            padding: 0 4px
+        .VPNavBarMenu .VPNavBarMenuLink.vp-external-link-icon::after
+            display: none
+        .nav-search
+            padding-left: 0
+        .translate-nav
+            margin-left: 4px
+
+
 .good
     color: hsla(120, 50%, 50%)
 .bad
