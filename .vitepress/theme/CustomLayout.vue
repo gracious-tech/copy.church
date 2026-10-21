@@ -2,9 +2,11 @@
 <template lang='pug'>
 
 Layout(:class='page_id')
+    template(#nav-bar-content-before)
+        SearchPalette
     template(#nav-bar-content-after)
         ClientOnly
-            TranslateButton.translate-nav
+            TranslateButton.translate-nav(title="Language (AI)")
             CountDown
     template(#nav-screen-content-after)
         ClientOnly
@@ -24,6 +26,7 @@ import DefaultTheme from 'vitepress/theme'
 import {computed} from 'vue'
 import {useRoute} from 'vitepress'
 
+import SearchPalette from './SearchPalette.vue'
 import TranslateButton from '../../src/_comp/TranslateButton.vue'
 import CountDown from '../../src/_comp/CountDown.vue'
 
@@ -60,6 +63,14 @@ const page_id = computed(() => {
     margin-left: 16px
     @media (max-width: 767px)
         display: none
+    // Just the icon until there's room for the label beside the nav links
+    // NOTE Only before translation is activated, as the widget it's replaced by is Elfsight's
+    @media (max-width: 1099px)
+        &.inactive
+            margin-left: 8px
+            min-width: 0
+            padding: 8px
+            font-size: 0  // Hides the label (a text node) but not the icon, which has its own size
 
 .translate-menu
     margin: 12px auto
