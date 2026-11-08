@@ -74,7 +74,7 @@ export async function notify_new_signing(webhook:string, notice:SigningNotice):P
         const content = [
             `New signing (${notice.type}): **${clip(notice.name) || '[unpublished]'}**`,
             `Position: ${clip(notice.position)}`,
-            `Country: ${notice.country}`,
+            `Country: ${clip(notice.country)}`,
             `Email: ${clip(notice.email)}`,
             `IP: ${notice.ip} (${same_ip.data().count} signings from this IP)`,
             // NOTE Angle brackets stop Discord from previewing the link

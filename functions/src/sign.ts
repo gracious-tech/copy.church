@@ -10,6 +10,9 @@ import {notify_new_signing} from './review.js'
 const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
 const DISCORD_WEBHOOK_SIGNERS = defineSecret('DISCORD_WEBHOOK_SIGNERS')
 
+// Max length of text fields (WARN keep in sync with maxlength in SignPetition.vue)
+const MAX_LENGTH = 200
+
 
 // Main function
 export const save_signing = onCall({
@@ -32,15 +35,30 @@ export const save_signing = onCall({
         return {error: "Invalid signer type"}
     }
     // NOTE Storing email in lowercase so can search for uniqueness (won't send to most anyway)
-    const email = String(data['email']).trim().toLowerCase()
-    if (!/^[^\s@]+@[^\s@]+$/.test(email)){
+    const email = String(data['email'] ?? '').trim().toLowerCase()
+    if (email.length > MAX_LENGTH || !/^[^\s@]+@[^\s@]+$/.test(email)){
         return {error: "Invalid email address"}
     }
     // Unpub doesn't show name/country fields, so discard any old data (if prev entered in UI)
-    const name = type === 'unpub' ? '' : String(data['name']).trim()
-    const country = type === 'unpub' ? '' : String(data['country'])
+    const name = type === 'unpub' ? '' : String(data['name'] ?? '').trim()
+    if (type !== 'unpub' && !name){
+        return {error: "Name is required"}
+    }
+    const country = type === 'unpub' ? '' : String(data['country'] ?? '')
+    if (country && !/^[A-Z]{2}$/.test(country)){
+        return {error: "Invalid country"}
+    }
     // Likewise, only person shows position field
-    const position = type !== 'person' ? '' : String(data['position']).trim()
+    const position = type !== 'person' ? '' : String(data['position'] ?? '').trim()
+    if (name.length > MAX_LENGTH || position.length > MAX_LENGTH){
+        return {error: `Name and position must be under ${MAX_LENGTH} characters`}
+    }
+
+    // Check turnstile before any db lookups, so bots can't probe which emails have signed
+    // NOTE Token is invalidated once checked, so UI must reset turnstile after any server error
+    if (! await validate_turnstile(ip, String(data['turnstile'] ?? ''), TURNSTILE_SECRET.value())){
+        return {error: "Not sure if you're human (please try again or email support@gracious.tech)"}
+    }
 
     // If type is not 'org', email must be unique
     // NOTE Some may use same email address for multiple orgs, which is fine
@@ -50,13 +68,6 @@ export const save_signing = onCall({
         if (same_email.docs.filter(s => s.data()['type'] !== 'org').length){
             return {error: "Email address already used to sign."}
         }
-    }
-
-    // Check turnstile token last of all checks, as will invalidate it once used
-    // If checked earlier and some other problem, then user would have to redo each time
-    if (! await validate_turnstile(ip, String(data['turnstile']), TURNSTILE_SECRET.value())){
-        // WARN "human" string is looked for in form UI, so don't remove
-        return {error: "Not sure if you're human (please try again or email support@gracious.tech)"}
     }
 
     // Generate random id for signing, and a private token for the review link

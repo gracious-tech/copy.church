@@ -24,12 +24,12 @@ div.container
         template(v-if='input.type !== "unpub"')
             label
                 span {{ input.type === 'org' ? "Church / Organization" : "Full name" }}
-                input(type="text" v-model="input.name" required)
+                input(type="text" v-model="input.name" required maxlength="200")
             div(class='explain') This will appear publicly a day or so after submission.
 
         label
             span Email
-            input(type="email" v-model="input.email" required)
+            input(type="email" v-model="input.email" required maxlength="200")
         div(class='explain') Your email address will not be made public or used for marketing purposes. It is only collected to ensure signings are genuine and unique.
 
         label(v-if='input.type !== "unpub"')
@@ -40,7 +40,7 @@ div.container
 
         label(v-if="input.type === 'person'")
             span Position (optional)
-            input(type="text" v-model="input.position" placeholder="Pastor of..., Director of..., etc.")
+            input(type="text" v-model="input.position" maxlength="200" placeholder="Pastor of..., Director of..., etc.")
 
     div.turnstile
 
@@ -133,6 +133,13 @@ async function render_turnstile(){
 }
 
 
+// Get a fresh token, since server invalidates a token once it has been checked
+function reset_turnstile(){
+    input.value.turnstile = ''
+    render_turnstile()
+}
+
+
 onMounted(async () => {
     await load_turnstile()
     await render_turnstile()
@@ -180,20 +187,21 @@ const submit_inner = async () => {
 
     // Submit
     try {
-        // Submit
         const error = await save_signing(props.petition, input.value)
         if (error){
             error_msg.value = error
+            reset_turnstile()
             return
         }
     } catch (error){
         error_msg.value = "Something went wrong. Please try again or email your signing details to support@gracious.tech"
+        reset_turnstile()
         return
     }
 
     // Reset form and show success
     input.value = get_empty_input()
-    render_turnstile()
+    reset_turnstile()
     success.value = true
 }
 
