@@ -106,6 +106,9 @@ function render_page(body:string):string{
 <style>
 body{font-family:system-ui,sans-serif;max-width:500px;margin:32px auto;padding:0 16px}
 form{display:inline-block;margin-right:12px}
+form.edit{display:block;margin-bottom:24px}
+label{display:block;font-weight:bold;margin-bottom:12px}
+label input{display:block;width:100%;box-sizing:border-box;font-size:16px;padding:8px;font-weight:normal}
 button{font-size:18px;padding:12px 24px;border-radius:8px;border:none;cursor:pointer}
 .approve{background:#2a2;color:white}
 .reject{background:#c22;color:white}
@@ -119,20 +122,22 @@ button{font-size:18px;padding:12px 24px;border-radius:8px;border:none;cursor:poi
 export const review_signing = onRequest({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
 }, async (request, response) => {
-    const action = request.method === 'POST' ? String(request.body?.['action'] ?? '') : ''
+    const form = (request.method === 'POST' ? request.body : {}) as Record<string, unknown>
     const body = await review_signing_inner(
         String(request.query['petition'] ?? ''),
         String(request.query['id'] ?? ''),
         String(request.query['token'] ?? ''),
-        action,
+        String(form['action'] ?? ''),
+        String(form['name'] ?? '').trim(),
+        String(form['position'] ?? '').trim(),
     )
     response.status(200).send(render_page(body))
 })
 
 
 // Main logic for reviewing a signing (returns HTML body)
-async function review_signing_inner(petition:string, id:string, token:string, action:string)
-        :Promise<string>{
+async function review_signing_inner(petition:string, id:string, token:string, action:string,
+        name:string, position:string):Promise<string>{
 
     // Validate params before using them in db paths
     if (!petition_ids.includes(petition) || !/^[\w~-]+$/.test(id) || !token){
@@ -147,18 +152,37 @@ async function review_signing_inner(petition:string, id:string, token:string, ac
         return `<p>Signing not found (it may have already been rejected).</p>`
     }
 
-    // Summarise signing
+    // Get signing data
     const data = signing.data() as Record<string, string|boolean>
+    const type = String(data['type'])
+
+    // Approve, saving any edits to name/position (only for types that show those fields)
+    if (action === 'approve'){
+        const changes:Record<string, string|boolean> = {reviewed: true}
+        if (type !== 'unpub'){
+            if (!name){
+                return `<p>Name can't be empty. Go back and try again.</p>`
+            }
+            changes['name'] = name
+            data['name'] = name
+        }
+        if (type === 'person'){
+            changes['position'] = position
+            data['position'] = position
+        }
+        await doc_signing.update(changes)
+    }
+
+    // Summarise signing
     const summary = `
         <h2>${escape_html(String(data['name'])) || '[unpublished]'}</h2>
-        <p>Type: ${escape_html(String(data['type']))}<br>
+        <p>Type: ${escape_html(type)}<br>
         Position: ${escape_html(String(data['position']))}<br>
         Country: ${escape_html(String(data['country']))}<br>
         Email: ${escape_html(String(priv.data()?.['email']))}</p>`
 
-    // Approve
+    // Confirm approval
     if (action === 'approve'){
-        await doc_signing.update({reviewed: true})
         return summary + `<p><strong>Approved</strong> and now public.</p>`
     }
 
@@ -174,12 +198,24 @@ async function review_signing_inner(petition:string, id:string, token:string, ac
         return summary + `<p><strong>Rejected</strong> and deleted.</p>`
     }
 
+    // Editable fields, matching those the signing form shows for each type
+    let fields = ''
+    if (type !== 'unpub'){
+        fields += `<label>Name<input name="name" required
+            value="${escape_html(String(data['name']))}"></label>`
+    }
+    if (type === 'person'){
+        fields += `<label>Position<input name="position"
+            value="${escape_html(String(data['position']))}"></label>`
+    }
+
     // Show current status and action buttons
-    const status = data['reviewed'] ? "Already approved (public)" : "Awaiting review"
+    const reviewed = !!data['reviewed']
+    const status = reviewed ? "Already approved (public)" : "Awaiting review"
     return summary + `
         <p><em>${status}</em></p>
-        <form method="post"><input type="hidden" name="action" value="approve">
-            <button class="approve">Approve</button></form>
+        <form method="post" class="edit">${fields}<input type="hidden" name="action" value="approve">
+            <button class="approve">${reviewed && fields ? "Save" : "Approve"}</button></form>
         <form method="post"><input type="hidden" name="action" value="reject">
             <button class="reject">Reject</button></form>`
 }
