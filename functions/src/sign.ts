@@ -2,18 +2,20 @@
 import {onCall} from 'firebase-functions/v2/https'
 import {defineSecret} from 'firebase-functions/params'
 
-import {allowed_domains, fire_db, validate_turnstile} from './common.js'
+import {allowed_domains, fire_db, petition_ids, validate_turnstile} from './common.js'
 import {generate_token} from './utils.js'
+import {notify_new_signing} from './review.js'
 
 
 const TURNSTILE_SECRET = defineSecret('TURNSTILE_SECRET')
+const DISCORD_WEBHOOK_SIGNERS = defineSecret('DISCORD_WEBHOOK_SIGNERS')
 
 
 // Main function
 export const save_signing = onCall({
     serviceAccount: 'save-signing@copy-church.iam.gserviceaccount.com',
     cors: allowed_domains,
-    secrets: [TURNSTILE_SECRET],
+    secrets: [TURNSTILE_SECRET, DISCORD_WEBHOOK_SIGNERS],
 }, async (request):Promise<{error:string|null}> => {
 
     // Get signer's ip address
@@ -22,7 +24,7 @@ export const save_signing = onCall({
     // Extract and validate data
     const data = request.data as Record<string, unknown>
     const petition = String(data['petition'])
-    if (!['scripture'].includes(petition)){
+    if (!petition_ids.includes(petition)){
         return {error: "Invalid petition id"}
     }
     const type = String(data['type']) as 'person'|'org'|'unpub'
@@ -57,8 +59,9 @@ export const save_signing = onCall({
         return {error: "Not sure if you're human (please try again or email support@gracious.tech)"}
     }
 
-    // Generate random id for signing
+    // Generate random id for signing, and a private token for the review link
     const signing_id = generate_token()
+    const review_token = generate_token()
 
     // Get paths for each doc that will be saved
     const doc_petition = fire_db.doc(`petitions/${petition}`)
@@ -79,12 +82,17 @@ export const save_signing = onCall({
         reviewed: type === 'unpub',  // Auto-mark unpub'd signers as reviewed
     })
     // Save private data in subdoc
-    batch.set(doc_private, {email, ip})
+    batch.set(doc_private, {email, ip, review_token})
     // Save data relevant to uniqueness testing in separate collection
     // (since can't query email/ip across the private subdocs)
     // NOTE Only email is auto-tested for uniqueness, the rest is useful for manual inspection
     batch.set(doc_unique, {type, email, ip, name})
     await batch.commit()
+
+    // Notify admin so the signing can be reviewed
+    await notify_new_signing(DISCORD_WEBHOOK_SIGNERS.value(), {
+        petition, signing_id, review_token, type, name, position, country, email, ip,
+    })
 
     // Success
     return {error: null}

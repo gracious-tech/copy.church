@@ -8,6 +8,10 @@ const fire_app = initializeApp()
 export const fire_db = getFirestore(fire_app)
 
 
+// Ids of petitions that can be signed
+export const petition_ids = ['scripture']
+
+
 // CORS allowed domains
 export const allowed_domains = [
     'https://sellingjesus.org',

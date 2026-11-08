@@ -4,3 +4,4 @@ import 'firebase-functions/logger/compat'
 
 
 export {save_signing} from './sign.js'
+export {review_signing} from './review.js'
