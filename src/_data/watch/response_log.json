@@ -442,5 +442,16 @@
             "https://www.instagram.com/reels/DfVbEuTqNEM/",
             "https://www.crossway.org/permissions/"
         ]
+    },
+    {
+        "id": "2026-hkbs-cunp-church-app",
+        "owner_id": "hong_kong_bible_society",
+        "other_owner_ids": ["united_bible_societies"],
+        "translation_ids": ["dbl_c44765fbdfdb0ed9"],
+        "date": "2026-10-27",
+        "summary": "A Chinese church in New York asked the Hong Kong Bible Society for permission to show the Chinese Union Version with New Punctuation in its free church app, with proper attribution. This edition is the public-domain 1919 text with modern punctuation, paragraphs, section headings and some updated names. The Society referred them to existing online apps instead, in effect denying them permission to include it in their own. So the church had to settle for the 1919 text, without the modern punctuation.",
+        "sources": [
+            "https://github.com/New-York-Chinese-Seventh-day-Adventist/sda-church-app/issues/517"
+        ]
     }
 ]
