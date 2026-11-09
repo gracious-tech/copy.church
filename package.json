@@ -1,4 +1,5 @@
 {
+  "name": "copy.church",
   "private": true,
   "type": "module",
   "devDependencies": {
